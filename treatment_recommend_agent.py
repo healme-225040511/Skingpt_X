@@ -7,7 +7,6 @@ from prompt_template import *
 import json
 from utils import remove_json_markers
 
-
 class TreatmentRecommendAgent:
     def __init__(self, model, api_key):
         """
