@@ -10,8 +10,7 @@ from agno.models.openai import OpenAIChat
 from agno.media import Image as AgnoImage
 from utils import process_markdown
 from prompt_template import *
-# 替换为
-from agno.models.ollama import Ollama
+
 
 class RAGAgent:
     def __init__(self, model, api_key, domain, markdown_file_path):
@@ -63,9 +62,8 @@ class RAGAgent:
 
         # Initialize agent
         agent = Agent(
-            # model=OpenAIChat(id=self.model, api_key=self.api_key),
-            model=Ollama(id="llava:7b", host="http://localhost:11434"),
-            knowledge=knowledge_base,
+            model=OpenAIChat(id=self.model, api_key=self.api_key),
+            knowledge=knowledge_base, 
             search_knowledge=True,
             debug_mode=False, 
             show_tool_calls=True
