@@ -11,7 +11,7 @@ class WebSearchAgent:
     def __init__(self, model, api_key, domain):
         """
         Initialize the Medical Image Analyzer with an API key.
-        
+
         Args:
             model (str): The name of the model to use.
             api_key (str): The API key for accessing external services.
@@ -25,15 +25,15 @@ class WebSearchAgent:
             debug_mode=False
         )
         self.domain = domain
-    
+
     def analyze(self, query, image_path):
         """
         Process an image file and get its analysis.
-        
+
         Args:
             image_path (str): The path to the image file.
             query (str): The query to run on the image.
-            
+
         Returns:
             str: The analysis result or an error message.
         """
@@ -62,9 +62,9 @@ class WebSearchAgent:
 
 if __name__ == "__main__":
     model = "gpt-4o-mini"
-    api_key = ""  # Replace with your actual API key
+    api_key = "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"
     query = get_domain_expert_prompt("WebSearch")
     agent = WebSearchAgent(model=model, api_key=api_key, domain="WebSearch")
-    image_file_path = "D:\\Projects\\skinGPT4x\\skinCAD\\SkinCAP\\skincap\\167.png"  # Replace with your actual image file path
+    image_file_path = "/Users/macbook/Desktop/research project/Skingpt_X/data/images/1.png"  # Replace with your actual image file path
     analysis_result = agent.analyze(query, image_file_path)
     print(analysis_result)

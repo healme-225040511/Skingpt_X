@@ -26,6 +26,7 @@ class SkinGPTAgent:
             query (str): The query to run on the image
             image_path (str): The path to the image file.
 
+
         Returns:
             Optional[Dict]: A dictionary containing the diagnosis and treatment plan, or None if the request fails.
         """
@@ -37,7 +38,6 @@ class SkinGPTAgent:
                 "image": [image_path]
             }
         ]
-
         try:
             # Call the Ollama chat function
             response: ChatResponse = chat(model=self.model, messages=messages)
@@ -45,11 +45,11 @@ class SkinGPTAgent:
         except Exception as e:
             print(f"Error generating diagnosis and treatment plan: {e}")
             return None
-        
+
 
 if __name__ == "__main__":
     agent = SkinGPTAgent(model="llama3.2-vision", domain="SkinGPT")
-    image_file_path = "D:\\Projects\\skinGPT4x\\skinCAD\\SkinCAP\\skincap\\167.png"  # Replace with your actual image file path
+    image_file_path = "/Users/macbook/Desktop/research project/Skingpt_X/data/images/1.png"  # Replace with your actual image file path
     query = get_domain_expert_prompt("SkinGPT")
     analysis_result = agent.analyze(query, image_file_path)
     print(analysis_result)
