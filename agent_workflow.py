@@ -4,6 +4,7 @@ import argparse
 from rag_agent import RAGAgent
 from web_search_agent import WebSearchAgent
 from skingpt_agent import SkinGPTAgent
+from skingpt_openai_agent import SkinGPTOpenAIAgent
 from reasoning_agent import ReasoningAgent
 from case_review_agent import CaseReviewAgent
 from treatment_recommend_agent import TreatmentRecommendAgent
@@ -19,20 +20,22 @@ if __name__ == "__main__":
     parser.add_argument("--model_name", default="gpt-4o-mini")
     parser.add_argument("--image_folder", type=str, default="data/images/", help="Path to the folder containing images for analysis")
     parser.add_argument("--markdown_file_path", type=str, default="skin_handbook.md", help="Path to the markdown file for reference")
-    parser.add_argument("--output_folder", type=str, default="output/", help="Path to the folder to save JSON output files")
+    parser.add_argument("--output_folder", type=str, default="output/",
+                        help="Path to the folder to save JSON output files")
     args = parser.parse_args()
 
     neo4j_url = "neo4j://localhost:7687"
     neo4j_user = "neo4j"
     neo4j_password = "Czty100165188"
-    api_key = "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"
+    api_key = "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"
 
     # Ensure output folder exists
     os.makedirs(args.output_folder, exist_ok=True)
 
     # Initialize all agents
     all_agents = {}
-    skingpt_agent = SkinGPTAgent(model="llama3.2-vision", domain="SkinGPT")
+    # skingpt_agent = SkinGPTAgent(model="llama3.2-vision", domain="SkinGPT")
+    skingpt_agent = SkinGPTOpenAIAgent(model="gpt-4", domain="SkinGPT", api_key=api_key)
     all_agents["SkinGPT"] = skingpt_agent
     rag_agent = RAGAgent(
         model=args.model_name,
@@ -75,6 +78,7 @@ for image_name in tqdm(image_list, desc="Processing images"):
     # Perform analysis for each domain
     print("\nFirst round analyzing")
     for domain, agent in all_agents.items():
+        print('domain ' + domain)
         query = get_domain_expert_prompt(domain)
         analysis_result = agent.analyze(query, image_path)
 
