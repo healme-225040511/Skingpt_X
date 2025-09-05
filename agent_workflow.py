@@ -35,7 +35,7 @@ if __name__ == "__main__":
     # Initialize all agents
     all_agents = {}
     # skingpt_agent = SkinGPTAgent(model="llama3.2-vision", domain="SkinGPT")
-    skingpt_agent = SkinGPTOpenAIAgent(model="gpt-4", domain="SkinGPT", api_key=api_key)
+    skingpt_agent = SkinGPTOpenAIAgent(model="gpt-4o", domain="SkinGPT", api_key=api_key)
     all_agents["SkinGPT"] = skingpt_agent
     rag_agent = RAGAgent(
         model=args.model_name,
