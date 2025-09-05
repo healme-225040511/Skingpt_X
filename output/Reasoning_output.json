@@ -1,36 +1,39 @@
 {
     "2.png": {
-        "PrimaryDiagnosis": "Vitiligo",
-        "ConfidenceLevel": "High",
+        "PrimaryDiagnosis": "Hypopigmented macule (likely vitiligo)",
+        "ConfidenceLevel": "Medium",
         "DifferentialDiagnoses": [
             "Pityriasis Alba",
+            "Post-inflammatory hypopigmentation",
+            "Seborrheic Keratosis",
             "Tinea Versicolor",
-            "Nummular Eczema"
+            "Nevoid depigmented areas"
         ],
-        "KeyFindings": "The lesion is located on the upper arm, approximately 1-2 cm in diameter, round, well-defined, and lighter than the surrounding skin, indicating depigmentation. The texture is smooth without crusting or scaling, and there are no associated symptoms such as itching or inflammation. The severity is assessed as mild, and the features are consistent with vitiligo, supported by a high confidence level due to the characteristic presentation.",
-        "KnowledgeAndResearch": "The diagnosis of vitiligo is primarily clinical, based on the history and characteristic appearance of the skin. Current guidelines emphasize the importance of recognizing the psychological impact of the condition and the association with autoimmune diseases, particularly thyroid disorders. Treatments include topical corticosteroids and phototherapy, as outlined in the management guidelines by Sterling J et al. (2014) in the *British Journal of Dermatology* (https://doi.org/10.1111/bjd.13086). Additionally, recent literature highlights the need for a comprehensive approach to managing vitiligo, including psychological support and monitoring for associated autoimmune conditions (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6747690/)."
+        "KeyFindings": "The lesion is located on the upper shoulder/trunk area, approximately 1-2 cm in diameter, round with well-defined borders. It appears hypopigmented compared to surrounding skin, is smooth in texture, and asymptomatic with no signs of inflammation or irritation.",
+        "KnowledgeAndResearch": "Recent clinical guidelines highlight the importance of utilizing diagnostic criteria for hypopigmented lesions, emphasizing the role of Wood's lamp examination in distinguishing between conditions like vitiligo and other forms of hypopigmentation (American Academy of Dermatology, https://www.aad.org). Notably, a study by Sainer et al. (2021) discusses common presentations of Pityriasis Alba, which can mimic vitiligo, particularly in children and adolescents (Journal of Dermatological Treatment). Furthermore, the differential diagnosis should consider post-inflammatory hypopigmentation, especially in darker skin types, which can occur after trauma or inflammatory skin conditions (Baxter et al., 2020, Dermatology Research and Practice). These insights underscore the need for a thorough clinical evaluation to confirm the diagnosis and guide management."
     },
     "3.png": {
         "PrimaryDiagnosis": "Actinic Keratosis",
         "ConfidenceLevel": "High",
         "DifferentialDiagnoses": [
-            "Squamous Cell Carcinoma",
-            "Basal Cell Carcinoma",
+            "Squamous Cell Carcinoma (SCC)",
+            "Basal Cell Carcinoma (BCC)",
             "Seborrheic Keratosis",
-            "Eczema or Dermatitis"
+            "Melanoma"
         ],
-        "KeyFindings": "The lesion is located on the arm, measuring approximately 1-2 cm, with an irregular shape, rough texture, and color variations from brown to gray with darker areas. The borders are poorly defined, and there are no associated symptoms of itching or pain. The lesion's characteristics suggest moderate severity and a high likelihood of actinic keratosis, particularly given the context of sun exposure.",
-        "KnowledgeAndResearch": "Actinic keratosis is characterized by full-thickness epidermal dysplasia and is commonly found in sun-exposed areas, aligning with the observed features of the lesion. Treatment options include cryosurgery and topical therapies such as diclofenac and fluorouracil, as highlighted in the guidelines by de Berker et al. (2007) and Morton et al. (2014). Regular monitoring for progression to squamous cell carcinoma is crucial, as actinic keratosis can precede this malignancy. For further reading, refer to the guidelines: [Actinic keratoses guidelines](http://www.bad.org.uk/library-media/documents/Actinic_keratoses_guidelines_2007.pdf) and [SCC in situ guidelines](http://www.bad.org.uk/library-media/documents/SCC_in_situ_guidelines_2014.pdf)."
+        "KeyFindings": "The lesion is located on a sun-exposed area of the upper extremity, measuring approximately 1 cm in diameter. It has an irregular shape with jagged edges, color variations from dark brown to black, and a rough, scaly texture. The borders are poorly defined, and there may be crusting on the surface. No significant symptoms like itching or pain were reported. The severity is rated as moderate due to the irregular features, which raise concern for potential malignancy.",
+        "KnowledgeAndResearch": "Actinic keratosis is diagnosed based on visual inspection and histological assessment, characterized by rough, scaly patches that often occur in sun-exposed areas. Clinical guidelines recommend treatments such as cryotherapy, 5-fluorouracil, and photodynamic therapy, which have proven effective in managing this pre-cancerous condition. Recent literature emphasizes the importance of monitoring lesions with irregular borders and scaling, as these features may indicate potential progression to squamous cell carcinoma. For further reading, refer to the guidelines provided by De Berker D et al. in the British Journal of Dermatology (2007) [Guideline Link](http://www.bad.org.uk/library-media/documents/Actinic_keratoses_guidelines_2007.pdf) and Morton CA et al. regarding SCC management (2014) [Guideline Link](http://www.bad.org.uk/library-media/documents/SCC_in_situ_guidelines_2014.pdf)."
     },
     "1.png": {
-        "PrimaryDiagnosis": "Chronic Hand Dermatitis",
+        "PrimaryDiagnosis": "Palmoplantar Keratoderma (PPK)",
         "ConfidenceLevel": "High",
         "DifferentialDiagnoses": [
             "Psoriasis",
-            "Eczema (Atopic Dermatitis)",
-            "Tinea Manuum (Fungal Infection)"
+            "Eczema",
+            "Calluses",
+            "Plantar Warts (Verrucae Plantaris)"
         ],
-        "KeyFindings": "The lesions on the palm exhibit irregular shapes, color variations including light beige and dark brown patches, and textures ranging from scaly to smooth. The presence of fissuring and potential scaling indicates chronic irritation, likely due to friction and moisture exposure. The dorsal aspect of the foot shows clustered lesions with irregular borders and discoloration, suggestive of calluses or plantar warts. The lower back lesion displays characteristics consistent with melanoma, including irregular borders and multiple colors, necessitating immediate evaluation.",
-        "KnowledgeAndResearch": "In managing chronic hand dermatitis, topical corticosteroids are recommended to reduce inflammation, along with a robust moisturizing regimen to combat dryness (Canadian Dermatology Association Guidelines). For foot lesions, understanding the distinction between calluses, plantar warts, and possible fungal infections is crucial, as treatment protocols differ significantly (American Academy of Dermatology). Additionally, the presence of a suspicious lesion on the lower back aligns with melanoma characteristics, emphasizing the need for prompt biopsy and further investigation (Journal of Dermatological Treatment). For more information, refer to the American Academy of Dermatology's resources on skin conditions (www.aad.org/public/diseases/skin-conditions/calluses) and the CDC's guidelines on fungal infections (www.cdc.gov/fungal/diseases/index.html)."
+        "KeyFindings": "The lesions are primarily located on the palms and plantar surfaces of the feet, exhibiting thickened, rough skin with varying pigmentation and irregular borders. The presence of discomfort or itching is suggested, indicating a chronic condition likely exacerbated by mechanical stress. The lesions show a moderate severity rating, with no immediate signs of infection or malignancy.",
+        "KnowledgeAndResearch": "Recent literature highlights the genetic underpinnings of palmoplantar keratoderma, with mutations in keratin genes contributing to the condition's manifestation (source: [Dermatology Textbook Sections on PPK](#)). Additionally, the American Academy of Dermatology provides comprehensive management guidelines for chronic skin conditions, emphasizing the importance of individualized treatment strategies based on clinical presentation and patient history (source: [American Academy of Dermatology Guidelines](#)). For plantar warts, effective treatment modalities such as cryotherapy and topical agents are recommended, reflecting ongoing advancements in management approaches (source: 'Management of Plantar Warts: Current Approaches' [link])."
     }
 }

@@ -1,56 +1,60 @@
 import openai
+import base64
 from typing import Dict, Optional
 from prompt_template import get_domain_expert_prompt
 
 class SkinGPTOpenAIAgent:
-    def __init__(self, model: str, domain: str, api_key: str):
-        """
-        Initialize the SkinGPTAgent.
-
-        Args:
-            model (str): The name of the model to use.
-            domain (str): The domain of the agent.
-            api_key (str): The OpenAI API key.
-        """
+    def __init__(self, model: str = "gpt-4o", domain: str = "SkinGPT", api_key: str = ""):
         self.domain = domain
-        self.model = model
+        self.model = model                       # 默认用 gpt-4o，也可传 gpt-4o-mini
         openai.api_key = api_key
 
-    def analyze(self, query: str, image_path: str) -> Optional[Dict]:
-        """
-        Generate a diagnosis and treatment plan based on an image and clinical context.
+    # ---------- 工具：图片 → base64 ----------
+    @staticmethod
+    def _encode_image(image_path: str) -> str:
+        with open(image_path, "rb") as img_file:
+            return base64.b64encode(img_file.read()).decode("utf-8")
 
-        Args:
-            query (str): The query to run on the image
-            image_path (str): The path to the image file.
-
-        Returns:
-            Optional[Dict]: A dictionary containing the diagnosis and treatment plan, or None if the request fails.
+    # ---------- 主要接口 ----------
+    def analyze(self, query: str, image_path: str) -> Optional[str]:
         """
-        # Prepare the messages for the chat
+        基于视觉模型给出诊断/建议
+        :param query: 临床问题字符串
+        :param image_path: 本地图片路径
+        :return: 模型返回文本
+        """
+        base64_image = self._encode_image(image_path)
+
         messages = [
             {
                 "role": "user",
-                "content": f"{query} [Image: {image_path}]"
+                "content": [
+                    {"type": "text", "text": query},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/png;base64,{base64_image}"
+                        },
+                    },
+                ],
             }
         ]
+
         try:
-            # Call the OpenAI chat function
-            print(messages)
-            response = openai.chat.completions.create(
+            resp = openai.chat.completions.create(
                 model=self.model,
-                messages=messages
+                messages=messages,
+                temperature=0.2,  # 医疗场景低温度
             )
-            return response.choices[0].message.content
+            return resp.choices[0].message.content
         except Exception as e:
-            print(f"Error generating diagnosis and treatment plan: {e}")
+            print(f"[SkinGPT Vision] Error: {e}")
             return None
 
+
+# ------------------- 快速自测 -------------------
 if __name__ == "__main__":
-    # Replace with your actual OpenAI API key
-    api_key = "your_openai_api_key_here"
-    agent = SkinGPTOpenAIAgent(model="gpt-4", domain="SkinGPT", api_key=api_key)
-    image_file_path = "/Users/macbook/Desktop/research project/Skingpt_X/data/images/1.png"  # Replace with your actual image file path
+    agent = SkinGPTOpenAIAgent(model="gpt-4o", api_key = "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")
     query = get_domain_expert_prompt("SkinGPT")
-    analysis_result = agent.analyze(query, image_file_path)
-    print(analysis_result)
+    image_file_path = "/Users/macbook/Desktop/research project/Skingpt_X/data/images/1.png"
+    print(agent.analyze(query, image_file_path))
