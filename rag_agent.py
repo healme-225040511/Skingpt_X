@@ -1,4 +1,6 @@
 import os
+import torch
+import asyncio
 from llama_index.core import Settings
 from llama_index.vector_stores.lancedb import LanceDBVectorStore
 from llama_index.core.storage import StorageContext
@@ -9,14 +11,14 @@ from agno.knowledge.llamaindex import LlamaIndexKnowledgeBase
 from agno.models.openai import OpenAIChat
 from agno.media import Image as AgnoImage
 from utils import process_markdown
-from prompt_template import *
+from prompt_template import get_domain_expert_prompt
 
 
 class RAGAgent:
-    def __init__(self, model, api_key, domain, markdown_file_path):
+    def __init__(self, model, api_key, domain, markdown_file_path, use_gpu=False):
         """
         Initialize the Medical Agent Builder with an API key, domain, and markdown file path.
-        
+
         Args:
             model (str): The model to use for the agent.
             api_key (str): The API key for accessing external services.
@@ -29,9 +31,13 @@ class RAGAgent:
         self.markdown_file_path = markdown_file_path
         os.environ["OPENAI_API_KEY"] = self.api_key
 
-        # Initialize embedding model
+        # ★ 根据开关决定设备
+        device = "cuda" if use_gpu and torch.cuda.is_available() else "mps"
+        print(f"[RAGAgent] embedding device: {device}")
+
         Settings.embed_model = HuggingFaceEmbedding(
-            model_name="BAAI/bge-small-en-v1.5"
+            model_name="BAAI/bge-small-en-v1.5",
+            device=device
         )
 
         # Initialize vector stores
@@ -71,15 +77,14 @@ class RAGAgent:
 
         return agent
 
-    def analyze(self, query, image_file_path):
+    async def analyze(self, query, image_file_path):
         """
         Analyze an image using the configured agent.
-        
+
         Args:
-            agent (Agent): The configured agent instance.
             query (str): The query to run on the image.
             image_file_path (str): Path to the image file for analysis.
-            
+
         Returns:
             str: The analysis result.
         """
@@ -87,20 +92,27 @@ class RAGAgent:
         agno_image = AgnoImage(filepath=image_file_path)
 
         # Run analysis
-        response = self.agent.run(query, images=[agno_image])
+        # Use asyncio.to_thread to run the synchronous method in a separate thread
+        response = await asyncio.to_thread(self.agent.run, query, images=[agno_image])
         return response.content
 
 
 if __name__ == "__main__":
     # Build the agent
     model = "gpt-4o-mini"
-    api_key = ""
-    markdown_file_path = "D:\\Projects\\skinGPT4x\\awesome-llm-apps\\ai_agent_tutorials\\ai_medical_imaging_agent\\skin_handbook.md"
+    api_key = "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"
+    markdown_file_path = "./skin_handbook.md"
     domain = "RAG"
     builder = RAGAgent(model=model, api_key=api_key, domain=domain, markdown_file_path=markdown_file_path)
 
     # Run analysis
-    image_file_path = "D:\\Projects\\skinGPT4x\\skinCAD\\SkinCAP\\skincap\\167.png"
+    image_file_path = "./data/images/1.png"
     query = get_domain_expert_prompt(domain)
-    analysis_result = builder.analyze(query, image_file_path)
-    print(analysis_result)
+
+
+    async def main():
+        analysis_result = await builder.analyze(query, image_file_path)
+        print(analysis_result)
+
+
+    asyncio.run(main())

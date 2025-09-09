@@ -1,39 +1,40 @@
 {
     "2.png": {
-        "PrimaryDiagnosis": "Hypopigmented macule (likely vitiligo)",
-        "ConfidenceLevel": "Medium",
+        "PrimaryDiagnosis": "Granuloma annulare",
+        "ConfidenceLevel": "High",
         "DifferentialDiagnoses": [
-            "Pityriasis Alba",
-            "Post-inflammatory hypopigmentation",
-            "Seborrheic Keratosis",
+            "Pityriasis Versicolor",
             "Tinea Versicolor",
-            "Nevoid depigmented areas"
+            "Pityriasis Rosea",
+            "Nummular eczema",
+            "Seborrheic keratosis"
         ],
-        "KeyFindings": "The lesion is located on the upper shoulder/trunk area, approximately 1-2 cm in diameter, round with well-defined borders. It appears hypopigmented compared to surrounding skin, is smooth in texture, and asymptomatic with no signs of inflammation or irritation.",
-        "KnowledgeAndResearch": "Recent clinical guidelines highlight the importance of utilizing diagnostic criteria for hypopigmented lesions, emphasizing the role of Wood's lamp examination in distinguishing between conditions like vitiligo and other forms of hypopigmentation (American Academy of Dermatology, https://www.aad.org). Notably, a study by Sainer et al. (2021) discusses common presentations of Pityriasis Alba, which can mimic vitiligo, particularly in children and adolescents (Journal of Dermatological Treatment). Furthermore, the differential diagnosis should consider post-inflammatory hypopigmentation, especially in darker skin types, which can occur after trauma or inflammatory skin conditions (Baxter et al., 2020, Dermatology Research and Practice). These insights underscore the need for a thorough clinical evaluation to confirm the diagnosis and guide management."
+        "KeyFindings": "The lesion is a well-defined, circular area measuring approximately 1-2 cm in diameter, located on the skin of the forearm. It has a smooth texture, is slightly raised, and features a light pink center with a darker peripheral ring. There are no associated symptoms of itching or pain, and the lesion appears to be of mild severity.",
+        "KnowledgeAndResearch": "The primary diagnosis of granuloma annulare is supported by its characteristic presentation as a circular lesion with a well-defined border and smooth texture, typically found on sun-exposed areas. Recent studies indicate that granuloma annulare is usually self-limiting, and while treatment is often unnecessary, topical corticosteroids may be beneficial in persistent cases. For differential diagnoses, both pityriasis versicolor and tinea versicolor share similarities in appearance but typically present with more scaling and coloration changes. The American Academy of Dermatology provides guidelines on identifying and managing these conditions, emphasizing clinical evaluation and monitoring for changes in the lesions (see references: 'Diagnostic Criteria for Granuloma Annulare' and 'Clinical Evaluation of Skin Lesions'). Further literature can be found at [Granuloma Annulare Research](https://links.duckduckgo.com/d.js?q=Granuloma+annulare+recent+medical+literature+2018-2023) and [Pityriasis Rosea Insights](https://links.duckduckgo.com/d.js?q=Pityriasis+rosea+recent+medical+literature+2018-2023)."
     },
     "3.png": {
-        "PrimaryDiagnosis": "Actinic Keratosis",
-        "ConfidenceLevel": "High",
+        "PrimaryDiagnosis": "Actinic Keratosis or Squamous Cell Carcinoma",
+        "ConfidenceLevel": "Medium",
         "DifferentialDiagnoses": [
-            "Squamous Cell Carcinoma (SCC)",
-            "Basal Cell Carcinoma (BCC)",
             "Seborrheic Keratosis",
+            "Keratoacanthoma",
+            "Basal Cell Carcinoma",
             "Melanoma"
         ],
-        "KeyFindings": "The lesion is located on a sun-exposed area of the upper extremity, measuring approximately 1 cm in diameter. It has an irregular shape with jagged edges, color variations from dark brown to black, and a rough, scaly texture. The borders are poorly defined, and there may be crusting on the surface. No significant symptoms like itching or pain were reported. The severity is rated as moderate due to the irregular features, which raise concern for potential malignancy.",
-        "KnowledgeAndResearch": "Actinic keratosis is diagnosed based on visual inspection and histological assessment, characterized by rough, scaly patches that often occur in sun-exposed areas. Clinical guidelines recommend treatments such as cryotherapy, 5-fluorouracil, and photodynamic therapy, which have proven effective in managing this pre-cancerous condition. Recent literature emphasizes the importance of monitoring lesions with irregular borders and scaling, as these features may indicate potential progression to squamous cell carcinoma. For further reading, refer to the guidelines provided by De Berker D et al. in the British Journal of Dermatology (2007) [Guideline Link](http://www.bad.org.uk/library-media/documents/Actinic_keratoses_guidelines_2007.pdf) and Morton CA et al. regarding SCC management (2014) [Guideline Link](http://www.bad.org.uk/library-media/documents/SCC_in_situ_guidelines_2014.pdf)."
+        "KeyFindings": "The lesion is located on the forearm, measuring approximately 1-2 cm in diameter, with irregular shape and poorly defined borders. It exhibits dark brown and grayish color variations, rough texture, and crusting. The lesion's characteristics are consistent with actinic keratosis or squamous cell carcinoma, with moderate severity and potential for malignancy, warranting further evaluation and possibly a biopsy.",
+        "KnowledgeAndResearch": "The diagnostic criteria for actinic keratosis include the presence of rough, scaly patches on sun-exposed skin, which can progress to squamous cell carcinoma, a concern given the lesion's characteristics. According to the guidelines from the British Association of Dermatology, a thorough examination of lesions is essential for accurate diagnosis and management (source: [SCC Guidelines](http://www.bad.org.uk/library-media/documents/SCC_in_situ_guidelines_2014.pdf)). Recent literature emphasizes the importance of regular skin examinations for early detection of skin cancers, particularly in individuals with a history of sun exposure (source: [Cancer Research UK](http://www.cancerresearchuk.org/about-cancer/type/skin-cancer/)). The American Academy of Dermatology provides clinical guidelines on the management of skin lesions, highlighting the need for biopsy in cases of uncertainty (source: [AAD Guidelines](https://www.aad.org))."
     },
     "1.png": {
-        "PrimaryDiagnosis": "Palmoplantar Keratoderma (PPK)",
+        "PrimaryDiagnosis": "Plantar Warts (Verrucae Plantaris)",
         "ConfidenceLevel": "High",
         "DifferentialDiagnoses": [
+            "Dyshidrotic eczema",
+            "Contact dermatitis",
             "Psoriasis",
-            "Eczema",
-            "Calluses",
-            "Plantar Warts (Verrucae Plantaris)"
+            "Fungal infection (Tinea Pedis)",
+            "Calluses"
         ],
-        "KeyFindings": "The lesions are primarily located on the palms and plantar surfaces of the feet, exhibiting thickened, rough skin with varying pigmentation and irregular borders. The presence of discomfort or itching is suggested, indicating a chronic condition likely exacerbated by mechanical stress. The lesions show a moderate severity rating, with no immediate signs of infection or malignancy.",
-        "KnowledgeAndResearch": "Recent literature highlights the genetic underpinnings of palmoplantar keratoderma, with mutations in keratin genes contributing to the condition's manifestation (source: [Dermatology Textbook Sections on PPK](#)). Additionally, the American Academy of Dermatology provides comprehensive management guidelines for chronic skin conditions, emphasizing the importance of individualized treatment strategies based on clinical presentation and patient history (source: [American Academy of Dermatology Guidelines](#)). For plantar warts, effective treatment modalities such as cryotherapy and topical agents are recommended, reflecting ongoing advancements in management approaches (source: 'Management of Plantar Warts: Current Approaches' [link])."
+        "KeyFindings": "The lesions are primarily located on the dorsal and plantar surfaces of the foot, particularly around the metatarsal and heel areas. They present as multiple small, circular lesions with rough, scaly surfaces and brownish discoloration. The borders of the lesions are irregular but well-defined, indicating potential plantar warts. There is no significant pain or itching reported, but some discomfort may arise due to the location and friction exposure. The severity is rated as moderate.",
+        "KnowledgeAndResearch": "Recent literature emphasizes the importance of distinguishing between plantar warts and other conditions such as dyshidrotic eczema and contact dermatitis. The *Journal of the American Academy of Dermatology* discusses management strategies for warts, highlighting the role of topical therapies and cryotherapy as effective treatments (Dragon S, et al., 2021). Additionally, the American Academy of Dermatology provides a comprehensive overview of plantar warts, including diagnosis and treatment options, available at [AAD Plantar Warts Overview](https://www.aad.org/public/diseases/bumps/plantar-warts). Furthermore, the *Dermatologic Therapy* journal offers insights into emerging therapies for viral warts, reinforcing the need for tailored management approaches (Paolino G, et al., 2021)."
     }
 }

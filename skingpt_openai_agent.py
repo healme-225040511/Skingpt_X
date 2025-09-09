@@ -1,5 +1,6 @@
 import openai
 import base64
+import asyncio
 from typing import Dict, Optional
 from prompt_template import get_domain_expert_prompt
 
@@ -16,7 +17,7 @@ class SkinGPTOpenAIAgent:
             return base64.b64encode(img_file.read()).decode("utf-8")
 
     # ---------- 主要接口 ----------
-    def analyze(self, query: str, image_path: str) -> Optional[str]:
+    async def analyze(self, query: str, image_path: str) -> Optional[str]:
         """
         基于视觉模型给出诊断/建议
         :param query: 临床问题字符串
@@ -41,7 +42,9 @@ class SkinGPTOpenAIAgent:
         ]
 
         try:
-            resp = openai.chat.completions.create(
+            # Use asyncio.to_thread to run the synchronous openai.chat.completions.create in a separate thread
+            resp = await asyncio.to_thread(
+                openai.chat.completions.create,
                 model=self.model,
                 messages=messages,
                 temperature=0.2,  # 医疗场景低温度
@@ -51,10 +54,14 @@ class SkinGPTOpenAIAgent:
             print(f"[SkinGPT Vision] Error: {e}")
             return None
 
-
 # ------------------- 快速自测 -------------------
 if __name__ == "__main__":
-    agent = SkinGPTOpenAIAgent(model="gpt-4o", api_key = "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")
+    agent = SkinGPTOpenAIAgent(model="gpt-4o", api_key="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")
     query = get_domain_expert_prompt("SkinGPT")
-    image_file_path = "/Users/macbook/Desktop/research project/Skingpt_X/data/images/1.png"
-    print(agent.analyze(query, image_file_path))
+    image_file_path = "./data/images/1.png"
+
+    async def main():
+        analysis_result = await agent.analyze(query, image_file_path)
+        print(analysis_result)
+
+    asyncio.run(main())
