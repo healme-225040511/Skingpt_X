@@ -135,10 +135,16 @@ if __name__ == "__main__":
 
         # Treatment recommendation
         print("Treatment recommending")
-        treatment_recommend = json.loads(treatment_recommend_agent.analyze(review_report))
-        treatment_recommend_output[image_name] = treatment_recommend
-        end_time = time.time()
-        print("time using:" + (end_time-start_time).__str__()) #98.61296590169271->56.33194168408712s
+        try:
+            treatment_recommend_result = treatment_recommend_agent.analyze(review_report)
+            treatment_recommend = json.loads(treatment_recommend_result)
+            treatment_recommend_output[image_name] = treatment_recommend
+            end_time = time.time()
+            print(f"Raw treatment recommendation result:" + (end_time - start_time).__str__())
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
+            print(f"Invalid JSON received: {treatment_recommend_result}")
+            treatment_recommend_output[image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
 
         # Save results for the current image
         def save_output(output_data, agent_name):
