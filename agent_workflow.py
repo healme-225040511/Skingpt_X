@@ -148,6 +148,9 @@ if __name__ == "__main__":
 
         # Save results for the current image
         def save_output(output_data, agent_name):
+            # 1. 确保输出目录存在（没有就新建）
+            os.makedirs(args.output_folder, exist_ok=True)
+
             output_file_path = os.path.join(args.output_folder, f"{agent_name}_output.json")
 
             # Process Markdown-formatted outputs to convert escape characters
@@ -155,17 +158,20 @@ if __name__ == "__main__":
                 for key, value in output_data.items():
                     output_data[key] = unescape(value)  # Use html.unescape to handle escape characters
 
-            # Save the output to a JSON file
-            if os.path.exists(output_file_path):
+            # 3. 如果文件已存在则读取旧数据，否则用空 dict
+            if os.path.isfile(output_file_path):
                 with open(output_file_path, "r", encoding="utf-8") as f:
                     try:
-                        exsiting_data = json.load(f)
+                        existing_data = json.load(f)
                     except json.JSONDecodeError:
-                        exsiting_data = {}
-            exsiting_data.update(output_data)
+                        existing_data = {}
+            else:
+                existing_data = {}
+
+            # 4. 更新并写回
+            existing_data.update(output_data)
             with open(output_file_path, "w", encoding="utf-8") as f:
-                json.dump(exsiting_data, f, indent=4,
-                          ensure_ascii=False)  # ensure_ascii=False supports non-ASCII characters
+                json.dump(existing_data, f, indent=4, ensure_ascii=False)
 
 
         # Save outputs for each agent for the current image
