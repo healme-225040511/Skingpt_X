@@ -10,6 +10,7 @@ from agno.agent import Agent
 from agno.knowledge.llamaindex import LlamaIndexKnowledgeBase
 from agno.models.openai import OpenAIChat
 from agno.media import Image as AgnoImage
+from agno.models.google.gemini import Gemini
 from utils import process_markdown
 from prompt_template import get_domain_expert_prompt
 
@@ -29,11 +30,10 @@ class RAGAgent:
         self.api_key = api_key
         self.domain = domain
         self.markdown_file_path = markdown_file_path
-        os.environ["OPENAI_API_KEY"] = self.api_key
+        os.environ["GEMINI_APIKEY"] = self.api_key
 
         # ★ 根据开关决定设备
         device = "cuda" if use_gpu and torch.cuda.is_available() else "mps"
-        print(f"[RAGAgent] embedding device: {device}")
 
         Settings.embed_model = HuggingFaceEmbedding(
             model_name="BAAI/bge-small-en-v1.5",
@@ -64,11 +64,13 @@ class RAGAgent:
 
         # Set up retriever and knowledge base
         retriever = vector_index.as_retriever()
+        print(retriever.__sizeof__())
+
         knowledge_base = LlamaIndexKnowledgeBase(retriever=retriever)
 
         # Initialize agent
         agent = Agent(
-            model=OpenAIChat(id=self.model, api_key=self.api_key),
+            model=Gemini(id=self.model, api_key=self.api_key),
             knowledge=knowledge_base, 
             search_knowledge=True,
             debug_mode=False, 
@@ -99,20 +101,18 @@ class RAGAgent:
 
 if __name__ == "__main__":
     # Build the agent
-    model = "gpt-4o-mini"
-    api_key = "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"
+    model = "gemini-2.5-pro"
+    api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
     markdown_file_path = "./skin_handbook.md"
     domain = "RAG"
     builder = RAGAgent(model=model, api_key=api_key, domain=domain, markdown_file_path=markdown_file_path)
 
     # Run analysis
-    image_file_path = "./data/images/1.png"
+    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
     query = get_domain_expert_prompt(domain)
 
 
     async def main():
         analysis_result = await builder.analyze(query, image_file_path)
         print(analysis_result)
-
-
     asyncio.run(main())

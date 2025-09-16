@@ -1,20 +1,36 @@
+import pathlib
+import tempfile
+
 import openai
 import base64
 import asyncio
 from typing import Dict, Optional
+from google.genai import types
+
+from google import genai
+
 from prompt_template import get_domain_expert_prompt
 
 class SkinGPTOpenAIAgent:
     def __init__(self, model: str = "gpt-4o", domain: str = "SkinGPT", api_key: str = ""):
         self.domain = domain
         self.model = model                       # 默认用 gpt-4o，也可传 gpt-4o-mini
-        openai.api_key = api_key
+        self.api_key = api_key
 
     # ---------- 工具：图片 → base64 ----------
     @staticmethod
     def _encode_image(image_path: str) -> str:
         with open(image_path, "rb") as img_file:
             return base64.b64encode(img_file.read()).decode("utf-8")
+
+    # ---------- 工具：图片 → 临时文件 ----------
+    @staticmethod
+    def _image_to_temp_file(image_path: str) -> str:
+        """把任意本地图片转成一个临时 jpeg 文件，返回路径供 Gemini 使用"""
+        from PIL import Image
+        tmp = tempfile.NamedTemporaryFile(suffix=".jpg", delete=False)
+        Image.open(image_path).convert("RGB").save(tmp.name, "JPEG")
+        return tmp.name
 
     # ---------- 主要接口 ----------
     async def analyze(self, query: str, image_path: str) -> Optional[str]:
@@ -24,41 +40,31 @@ class SkinGPTOpenAIAgent:
         :param image_path: 本地图片路径
         :return: 模型返回文本
         """
-        base64_image = self._encode_image(image_path)
-
-        messages = [
-            {
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": query},
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"data:image/png;base64,{base64_image}"
-                        },
-                    },
-                ],
-            }
-        ]
-
+        tmp_path = self._image_to_temp_file(image_path)
+        with open(image_path, "rb") as f:
+            img_bytes = f.read()
+        img_part = types.Part.from_bytes(data=img_bytes, mime_type="image/jpeg")
         try:
-            # Use asyncio.to_thread to run the synchronous openai.chat.completions.create in a separate thread
+            client = genai.Client(api_key=self.api_key)
+            # 官方 SDK 是同步的，扔到线程池
             resp = await asyncio.to_thread(
-                openai.chat.completions.create,
+                client.models.generate_content,
                 model=self.model,
-                messages=messages,
-                temperature=0.2,  # 医疗场景低温度
+                contents=[img_part, query],
+                config=types.GenerateContentConfig(temperature=0.0)
             )
-            return resp.choices[0].message.content
+            return resp.text
         except Exception as e:
             print(f"[SkinGPT Vision] Error: {e}")
             return None
+        finally:
+            pathlib.Path(tmp_path).unlink(missing_ok=True)  # 清理临时文件
 
 # ------------------- 快速自测 -------------------
 if __name__ == "__main__":
-    agent = SkinGPTOpenAIAgent(model="gpt-4o", api_key="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")
+    agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key="AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do")
     query = get_domain_expert_prompt("SkinGPT")
-    image_file_path = "./data/images/1.png"
+    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
 
     async def main():
         analysis_result = await agent.analyze(query, image_file_path)

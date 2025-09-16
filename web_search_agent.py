@@ -3,6 +3,7 @@ import asyncio, os, time, aiohttp, io, base64
 from PIL import Image as PILImage
 from agno.agent import Agent
 from agno.models.openai import OpenAIChat
+from agno.models.google.gemini import Gemini
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.media import Image as AgnoImage
 from prompt_template import get_domain_expert_prompt
@@ -15,7 +16,7 @@ class WebSearchAgent:
         self.api_key = api_key
         self.domain = domain
         self.agent = Agent(
-            model=OpenAIChat(id=self.model, api_key=self.api_key),
+            model=Gemini(id=self.model, api_key=self.api_key, temperature=0.2),
             tools=[DuckDuckGoTools()],
             debug_mode=False
         )
@@ -94,10 +95,10 @@ class WebSearchAgent:
 
 # ------------------ 本地测试 ------------------
 if __name__ == "__main__":
-    model = "gpt-4o-mini"
-    api_key = "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"
+    model = "gemini-2.5-pro"
+    api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
     agent = WebSearchAgent(model=model, api_key=api_key)
-    image_file_path = "./data/images/1.png"
+    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/acne-pustular-21.jpg"
 
     async def main():
         result = await agent.analyze(get_domain_expert_prompt("WebSearch"), image_file_path)
