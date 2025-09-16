@@ -33,7 +33,7 @@ class RAGAgent:
         os.environ["GEMINI_APIKEY"] = self.api_key
 
         # ★ 根据开关决定设备
-        device = "cuda" if use_gpu and torch.cuda.is_available() else "mps"
+        device = "cuda" if use_gpu and torch.cuda.is_available() else "cpu"
 
         Settings.embed_model = HuggingFaceEmbedding(
             model_name="BAAI/bge-small-en-v1.5",
@@ -52,28 +52,32 @@ class RAGAgent:
     def _build_agent(self):
         """
         Build the medical agent by processing markdown files and setting up the knowledge base.
-        
+
         Returns:
             Agent: The configured agent instance.
         """
         # Process markdown file to extract nodes
         nodes = process_markdown(self.markdown_file_path)
-
+        embed_model = Settings.embed_model
+        for node in nodes:
+            node.embedding = embed_model.get_text_embedding(node.text)
+        self.text_store.add(nodes)
+        count = self.text_store._table.count_rows()  # ✅ 正确计数
+        print(f"【建索引导入完成】共写入 {count} 条向量")
         # Create MultiModalVectorStoreIndex
         vector_index = MultiModalVectorStoreIndex.from_vector_store(self.text_store)
 
         # Set up retriever and knowledge base
         retriever = vector_index.as_retriever()
-        print(retriever.__sizeof__())
 
         knowledge_base = LlamaIndexKnowledgeBase(retriever=retriever)
 
         # Initialize agent
         agent = Agent(
             model=Gemini(id=self.model, api_key=self.api_key),
-            knowledge=knowledge_base, 
+            knowledge=knowledge_base,
             search_knowledge=True,
-            debug_mode=False, 
+            debug_mode=False,
             show_tool_calls=True
         )
 
@@ -108,7 +112,7 @@ if __name__ == "__main__":
     builder = RAGAgent(model=model, api_key=api_key, domain=domain, markdown_file_path=markdown_file_path)
 
     # Run analysis
-    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
+    image_file_path = "./SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
     query = get_domain_expert_prompt(domain)
 
 

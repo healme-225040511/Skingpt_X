@@ -64,7 +64,7 @@ class SkinGPTOpenAIAgent:
 if __name__ == "__main__":
     agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key="AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do")
     query = get_domain_expert_prompt("SkinGPT")
-    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
+    image_file_path = "./SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
 
     async def main():
         analysis_result = await agent.analyze(query, image_file_path)
