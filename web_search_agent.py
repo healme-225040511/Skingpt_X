@@ -98,7 +98,7 @@ if __name__ == "__main__":
     model = "gemini-2.5-pro"
     api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
     agent = WebSearchAgent(model=model, api_key=api_key)
-    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/acne-pustular-21.jpg"
+    image_file_path = "./SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/acne-pustular-21.jpg"
 
     async def main():
         result = await agent.analyze(get_domain_expert_prompt("WebSearch"), image_file_path)

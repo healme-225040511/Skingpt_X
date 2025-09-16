@@ -4,7 +4,7 @@ import argparse
 import time
 
 from altair import DateTime
-
+import hashlib
 from rag_agent import RAGAgent
 from web_search_agent import WebSearchAgent
 from skingpt_agent import SkinGPTAgent
@@ -29,7 +29,7 @@ async def async_analyze(agent, query, image_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name", default="gpt-4o-mini")
+    parser.add_argument("--model_name", default="gemini-2.5-pro")
     parser.add_argument("--image_folder", type=str, default="data/images/",
                         help="Path to the folder containing images for analysis")
     parser.add_argument("--markdown_file_path", type=str, default="skin_handbook.md",
@@ -41,14 +41,36 @@ if __name__ == "__main__":
     neo4j_url = "neo4j://localhost:7687"
     neo4j_user = "neo4j"
     neo4j_password = "Czty100165188"
-    api_key = "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"
+    api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
+    openai_api_key = "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"
 
     # Ensure output folder exists
     os.makedirs(args.output_folder, exist_ok=True)
+    # ---------- 日志文件路径 ----------
+    LOG_FILE = os.path.join(args.output_folder, ".processed_log.json")
+
+
+    def load_log():
+        """返回已处理的 {文件名: md5} 字典"""
+        if os.path.isfile(LOG_FILE):
+            with open(LOG_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        return {}
+
+
+    def save_log(log_dict):
+        """原子写回日志"""
+        tmp = LOG_FILE + ".tmp"
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(log_dict, f, indent=2, ensure_ascii=False)
+        os.replace(tmp, LOG_FILE)
+
+
+    processed_log = load_log()
 
     # Initialize all agents
     all_agents = {}
-    skingpt_agent = SkinGPTOpenAIAgent(model="gpt-4o", domain="SkinGPT", api_key=api_key)
+    skingpt_agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", domain="SkinGPT", api_key=api_key)
     all_agents["SkinGPT"] = skingpt_agent
     rag_agent = RAGAgent(
         model=args.model_name,
@@ -63,16 +85,16 @@ if __name__ == "__main__":
         domain="WebSearch"
     )
     all_agents["WebSearch"] = web_search_agent
-    reasoning_agent = ReasoningAgent(model=args.model_name)
+    reasoning_agent = ReasoningAgent(model='gpt-4o-mini')
     case_review_agent = CaseReviewAgent(
-        model=args.model_name,
+        model='gpt-4o-mini',
         neo4j_uri=neo4j_url,
         neo4j_user=neo4j_user,
         neo4j_password=neo4j_password
     )
     treatment_recommend_agent = TreatmentRecommendAgent(
-        model=args.model_name, 
-        api_key=api_key
+        model='gpt-4o-mini',
+        api_key=openai_api_key
     )
 
     # Process each image in the specified folder
@@ -85,6 +107,20 @@ if __name__ == "__main__":
 
         image_path = os.path.join(args.image_folder, image_name)
 
+
+        # ---- 跳过已处理文件 ----
+        def file_md5(path, chunk_size=8192):
+            h = hashlib.md5()
+            with open(path, "rb") as f:
+                while chunk := f.read(chunk_size):
+                    h.update(chunk)
+            return h.hexdigest()
+
+
+        img_md5 = file_md5(image_path)
+        if processed_log.get(image_name) == img_md5:
+            tqdm.write(f"Skip processed image: {image_name}")
+            continue
         # Initialize output dictionaries for the current image
         web_search_output = {}
         rag_output = {}
@@ -181,3 +217,6 @@ if __name__ == "__main__":
         save_output(reasoning_output, "Reasoning")
         save_output(case_review_output, "CaseReview")
         save_output(treatment_recommend_output, "TreatmentRecommend")
+        # ---- 记录成功处理 ----
+        processed_log[image_name] = img_md5
+        save_log(processed_log)
