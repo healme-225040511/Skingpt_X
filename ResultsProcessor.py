@@ -30,203 +30,163 @@ import pandas as pd
 from pathlib import Path
 from openpyxl import Workbook
 from openpyxl.styles import Font
+import pandas as pd
+import json
+import os
+import re
+import pandas as pd
+from openpyxl import load_workbook
+from openpyxl.styles import PatternFill
 
-# ---------- 路径默认值 ----------
-OUTPUT_DIR = Path("/Users/macbook/Desktop/SkinGPT-X-EvaluationResults/DDI/output")
-DATA_DIR   = Path("/Users/macbook/Desktop/SkinGPT-X-Dataset/DDI")
+def safe_get_primary_diagnosis(data, img_name):
+    val = data.get(img_name, "")
+    if isinstance(val, dict):
+        return val.get("Primary Diagnosis", "")
+    elif isinstance(val, str):
+        match = re.search(r"Primary Diagnosis[:\s]*([^\n]*)", val, flags=re.I)
+        return match.group(1).strip() if match else val.strip()
+    return ""
 
-# ---------- 1. 合并 CSV + groundtruth + JSON ----------
-def prepare_csv(
-    output_dir: str | Path = OUTPUT_DIR,
-    data_dir: str | Path = DATA_DIR,
-) -> Path:
-    output_dir, data_dir = Path(output_dir), Path(data_dir)
 
-    # 1. 读取 4 个诊断 CSV
-    file_map = {
-        "RAG": output_dir / "RAG_diagnostic_assessment.csv",
-        "SkinGPT": output_dir / "SkinGPT_diagnostic_assessment.csv",
-        "WebSearch": output_dir / "WebSearch_diagnostic_assessment.csv",
-        "Treatment": output_dir / "treatmentRecommend_diagnostic_assessment.csv",
+def ClassificationResultSaveToCSV(RAG_output, SkinGPT_output, WebSearch_output, CaseReview_output, Reasoning_output,
+                                  TreatmentRecommend_output, output_csv_path):
+    # 定义JSON文件的路径
+    file_paths = {
+        "RAG_output": RAG_output,
+        "SkinGPT_output": SkinGPT_output,
+        "WebSearch_output": WebSearch_output,
+        "CaseReview_output": CaseReview_output,
+        "Reasoning_output": Reasoning_output,
+        "TreatmentRecommend_output": TreatmentRecommend_output,
     }
-    dfs = {k: pd.read_csv(v) for k, v in file_map.items()}
 
-    # 剔除失败
-    for k in ["RAG", "SkinGPT", "WebSearch"]:
-        df = dfs[k]
-        df.drop(df[df["DiagnosticAssessment"].str.contains("not success", na=False)].index, inplace=True)
-        df.rename(columns={"DiagnosticAssessment": f"{k}_diagnostic_assessment"}, inplace=True)
+    # 输出CSV文件的路径
+    output_csv_path = output_csv_path
 
-    dfs["Treatment"].rename(columns={"DiagnosticAssessment": "Treatment_diagnostic_assessment"}, inplace=True)
+    # 函数：加载JSON文件内容
+    def load_json_file(filepath):
+        """
+        加载指定路径的JSON文件。如果文件不存在，则打印警告并返回空字典。
+        """
+        if not os.path.exists(filepath):
+            print(f"警告：文件未找到：'{filepath}'。将跳过此文件。")
+            return {}
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except json.JSONDecodeError:
+            print(f"警告：文件 '{filepath}' 的JSON解码失败。可能为空或格式错误。将返回空字典。")
+            return {}
+        except Exception as e:
+            print(f"读取文件 '{filepath}' 时发生错误: {e}")
+            return {}
 
-    # 2. 合并
-    merged = dfs["RAG"].merge(dfs["SkinGPT"], on="image_name", how="outer")\
-                       .merge(dfs["WebSearch"], on="image_name", how="outer")\
-                       .merge(dfs["Treatment"], on="image_name", how="outer")
+    # 加载所有JSON数据
+    all_data = {key: load_json_file(path) for key, path in file_paths.items()}
 
-    # 3. groundtruth
-    gt_df = pd.read_csv(data_dir / "ddi_metadata.csv")[["DDI_file", "disease"]]\
-              .rename(columns={"DDI_file": "image_name", "disease": "groundtruth"})
-    merged = merged.merge(gt_df, on="image_name", how="left")
+    # 收集所有唯一的图像文件名
+    all_image_names = set()
+    for data_dict in all_data.values():
+        all_image_names.update(data_dict.keys())
 
-    # 4. JSON PrimaryDiagnosis
-    tx_json = output_dir / "TreatmentRecommend_output.json"
-    if tx_json.exists():
-        with tx_json.open(encoding="utf-8") as f:
-            tx_dict = json.load(f)
-        tx_df = pd.DataFrame([
-            {"image_name": k, "PrimaryDiagnosis": v.get("PrimaryDiagnosis", "")}
-            for k, v in tx_dict.items()
+    # 准备用于DataFrame的数据列表
+    csv_rows = []
+
+    # 遍历所有收集到的图像文件名，提取对应的值
+    for img_name in sorted(list(all_image_names)):
+        row = {"图像名": img_name}
+
+        # 从 RAG_output, SkinGPT_output, WebSearch_output 中提取 'Diagnostic Assessment' 后的值
+        # 这些文件中的"Diagnostic Assessment"键对应的值是一整个长的字符串，按要求直接提取该字符串
+        row["RAG_output_诊断评估值"] = safe_get_primary_diagnosis(all_data["RAG_output"], img_name)
+        row["SkinGPT_output_诊断评估值"] = safe_get_primary_diagnosis(all_data["SkinGPT_output"], img_name)
+        row["WebSearch_output_诊断评估值"] = safe_get_primary_diagnosis(all_data["WebSearch_output"], img_name)
+
+        # 从 CaseReview_output, Reasoning_output, TreatmentRecommend_output 中提取 'PrimaryDiagnosis' 的值
+        # 这些文件中的"PrimaryDiagnosis"键对应的值通常是直接的诊断字符串
+        row["CaseReview_output_PrimaryDiagnosis"] = all_data["CaseReview_output"].get(img_name, {}).get("PrimaryDiagnosis", "")
+        row["Reasoning_output_PrimaryDiagnosis"] = all_data["Reasoning_output"].get(img_name, {}).get("PrimaryDiagnosis", "")
+        row["TreatmentRecommend_output_PrimaryDiagnosis"] = all_data["TreatmentRecommend_output"].get(img_name, {}).get("PrimaryDiagnosis", "")
+
+        # 新增 'label' 列，值为图片名去掉 .jpg 后缀
+        row["label"] = os.path.splitext(img_name)[0]
+
+        csv_rows.append(row)
+
+    # 创建 Pandas DataFrame
+    df = pd.DataFrame(csv_rows)
+
+    # 确保“图像名”是第一列
+    cols = ["图像名"] + [col for col in df.columns if col not in ["图像名", "label"]] + ["label"]
+    df = df[cols]
+
+    # 将DataFrame写入CSV文件
+    df.to_csv(output_csv_path, index=False, encoding='utf-8')
+
+    print(f"数据已成功提取并写入到 '{output_csv_path}'")
+
+# ==================== 仅替换 HighLight() 函数 ====================
+def HighLight(INPUT_CSV, OUTPUT_XLSX, TARGET_COLS):
+    FILL_GREEN = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
+
+    # 近义词映射表：出现左侧任意词 → 统一成右侧
+    NORM_MAP = {
+        "dermatographia": "dermatographia",
+        "dermatographic": "dermatographia",
+        "dermagraphism": "dermatographia",
+        "dermographism": "dermatographia",
+        "puppp": "puppp",
+        "pep": "puppp",  # 如果想让 PEP 也算 PUPPP，就保留；否则删
+    }
+
+    def normalize(word: str) -> str:
+        return NORM_MAP.get(word, word)
+
+    def extract_words(text: str) -> set:
+        if pd.isna(text):
+            return set()
+        cleaned = re.sub(r"\([^)]*\)", " ", str(text))
+        return {normalize(w) for w in re.findall(r"[A-Za-z]+", cleaned.lower())}
+
+    df = pd.read_csv(INPUT_CSV)
+    df.to_excel(OUTPUT_XLSX, index=False)
+
+    wb  = load_workbook(OUTPUT_XLSX)
+    ws  = wb.active
+    col_name_to_letter = {cell.value: cell.column_letter for cell in ws[1]}
+
+    for row_idx in range(2, ws.max_row + 1):
+        label_cell  = ws.cell(row=row_idx, column=df.columns.get_loc("label") + 1)
+        label_words = {normalize(w) for w in label_cell.value.lower().split("-")}
+
+        for col_name in TARGET_COLS:
+            col_letter = col_name_to_letter[col_name]
+            cell       = ws[f"{col_letter}{row_idx}"]
+            content_words = extract_words(cell.value)
+
+            # 归一化后完全相等即命中
+            if content_words & label_words:
+                cell.fill = FILL_GREEN
+
+    wb.save(OUTPUT_XLSX)
+    print(f"✅ 近义词归一化高亮完成：{OUTPUT_XLSX}")
+# ==================== 替换结束 ====================
+if __name__=="__main__":
+    # ClassificationResultSaveToCSV('./SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output.json',
+    #                               './SkinGPT-X-EvaluationResults/Dermnet/test/SkinGPT_output.json',
+    #                               './SkinGPT-X-EvaluationResults/Dermnet/test/WebSearch_output.json',
+    #                               './SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output.json',
+    #                               './SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output.json',
+    #                               './SkinGPT-X-EvaluationResults/Dermnet/test/TreatmentRecommend_output.json',
+    #                               './SkinGPT-X-EvaluationResults/Dermnet/test/ClassificationResults.csv')
+    HighLight(
+        INPUT_CSV="./SkinGPT-X-EvaluationResults/Dermnet/test/ClassificationResults.csv",
+        OUTPUT_XLSX="./SkinGPT-X-EvaluationResults/Dermnet/test/ClassificationResults_highlighted.xlsx",
+        TARGET_COLS=[
+            "RAG_output_诊断评估值",
+            "SkinGPT_output_诊断评估值",
+            "WebSearch_output_诊断评估值",
+            "CaseReview_output_PrimaryDiagnosis",
+            "Reasoning_output_PrimaryDiagnosis",
+            "TreatmentRecommend_output_PrimaryDiagnosis",
         ])
-        merged = merged.merge(tx_df, on="image_name", how="left")
-
-    out_csv = output_dir / "merged_diagnostic_assessment_with_groundtruth.csv"
-    merged.to_csv(out_csv, index=False)
-    print(f"[prepare_csv] 合并完成 -> {out_csv}")
-    return out_csv
-
-# ---------- 2. 清洗空值 ----------
-def clean_nan(
-    in_csv: str | Path | None = None,
-    out_csv: str | Path | None = None,
-) -> Path:
-    if in_csv is None:
-        in_csv = OUTPUT_DIR / "merged_diagnostic_assessment_with_groundtruth.csv"
-    if out_csv is None:
-        out_csv = OUTPUT_DIR / "merged_diagnostic_assessment_with_groundtruth_clean.csv"
-
-    df = pd.read_csv(in_csv).replace("", pd.NA).dropna()
-    df.to_csv(out_csv, index=False)
-    print(f"[clean_nan] 清洗完成 -> {out_csv}，共删除 {pd.read_csv(in_csv).shape[0] - df.shape[0]} 行")
-    return out_csv
-
-# ---------- 3. 通用提取 DiagnosticAssessment ----------
-def extract_assessment(
-    json_file: str | Path,
-    agent_name: str | None = None,
-) -> Path:
-    json_file = Path(json_file)
-    agent_name = agent_name or json_file.stem.replace("_output", "")
-    out_csv = json_file.with_name(f"{agent_name}_diagnostic_assessment.csv")
-
-    with json_file.open(encoding="utf-8") as f:
-        data = json.load(f)
-
-    def _extract(text: str) -> str:
-        if not text:
-            return "not success"
-        m = re.search(r"### 3\. Diagnostic Assessment\s*[\r\n]+(.*?)(?=###|\Z)", text, flags=re.S)
-        return m.group(1).strip() if m else "not success"
-
-    rows = [{"image_name": k, "DiagnosticAssessment": _extract(v if isinstance(v, str) else str(v))}
-            for k, v in data.items()]
-
-    with out_csv.open("w", newline="", encoding="utf-8") as f:
-        csv.DictWriter(f, fieldnames=["image_name", "DiagnosticAssessment"]).writerows(rows)
-
-    fail = sum(r["DiagnosticAssessment"] == "not success" for r in rows)
-    print(f"[extract_assessment] {agent_name} -> {out_csv}，{fail} 条失败")
-    return out_csv
-
-# ---------- 4. 专用提取 Treatment PrimaryDiagnosis ----------
-def extract_treatment(
-    json_file: str | Path = OUTPUT_DIR / "TreatmentRecommend_output.json",
-) -> Path:
-    json_file = Path(json_file)
-    out_csv = json_file.with_name("Treatment_diagnostic_assessment.csv")
-
-    with json_file.open(encoding="utf-8") as f:
-        data = json.load(f)
-
-    rows = [{"image_name": k, "DiagnosticAssessment": v.get("PrimaryDiagnosis") or "not success"}
-            for k, v in data.items()]
-
-    with out_csv.open("w", newline="", encoding="utf-8") as f:
-        csv.DictWriter(f, fieldnames=["image_name", "DiagnosticAssessment"]).writerows(rows)
-
-    fail = sum(r["DiagnosticAssessment"] == "not success" for r in rows)
-    print(f"[extract_treatment] -> {out_csv}，{fail} 条失败")
-    return out_csv
-
-# ---------- 5. 高亮 Excel ----------
-def highlight_excel(
-    csv_file: str | Path | None = None,
-    excel_file: str | Path | None = None,
-) -> Path:
-    if csv_file is None:
-        csv_file = OUTPUT_DIR / "merged_diagnostic_assessment_with_groundtruth_clean.csv"
-    if excel_file is None:
-        excel_file = OUTPUT_DIR / "output_highlighted.xlsx"
-
-    df = pd.read_csv(csv_file)
-    wb, ws = Workbook(), Workbook().active
-    ws = wb.active
-    ws.title = "Results"
-    red = Font(color="FF0000")
-
-    # 表头
-    for col_idx, col_name in enumerate(df.columns, 1):
-        ws.cell(row=1, column=col_idx, value=col_name)
-
-    for row_idx, row in df.iterrows():
-        groundtruth = str(row["groundtruth"]).strip().lower()
-        keywords = [w.strip() for w in groundtruth.split("-") if w.strip()]
-        pattern = re.compile(r"\b(" + "|".join(map(re.escape, keywords)) + r")\b", flags=re.I) if keywords else None
-
-        # 固定列
-        ws.cell(row=row_idx + 2, column=1, value=str(row["image_name"]))
-        ws.cell(row=row_idx + 2, column=5, value=str(row["groundtruth"]))
-
-        # 比对列
-        for offset, col in enumerate(["RAG_diagnostic_assessment",
-                                      "SkinGPT_diagnostic_assessment",
-                                      "WebSearch_diagnostic_assessment",
-                                      "PrimaryDiagnosis"], start=2):
-            val = str(row[col])
-            cell = ws.cell(row=row_idx + 2, column=offset, value=val)
-            if pattern and pattern.search(val):
-                cell.font = red
-
-    wb.save(excel_file)
-    print(f"[highlight_excel] 高亮完成 -> {excel_file}")
-    return excel_file
-
-# ---------- CLI ----------
-def _cli():
-    parser = argparse.ArgumentParser(description="All-in-one 诊断结果后处理工具")
-    sub = parser.add_subparsers(dest="cmd", required=True)
-
-    p1 = sub.add_parser("prepare_csv", help="合并 CSV+groundtruth+JSON")
-    p1.add_argument("--output_dir", type=str, default=OUTPUT_DIR)
-    p1.add_argument("--data_dir", type=str, default=DATA_DIR)
-
-    p2 = sub.add_parser("clean_nan", help="去掉空值行")
-    p2.add_argument("--in_csv", type=str, default=None)
-    p2.add_argument("--out_csv", type=str, default=None)
-
-    p3 = sub.add_parser("extract_assessment", help="从任意 agent JSON 提取 DiagnosticAssessment")
-    p3.add_argument("--json", type=str, required=True)
-    p3.add_argument("--agent_name", type=str, default=None)
-
-    p4 = sub.add_parser("extract_treatment", help="专提 Treatment PrimaryDiagnosis")
-    p4.add_argument("--json", type=str, default=OUTPUT_DIR / "TreatmentRecommend_output.json")
-
-    p5 = sub.add_parser("highlight_excel", help="生成关键词高亮 Excel")
-    p5.add_argument("--csv", dest="csv_file", type=str, default=None)
-    p5.add_argument("--excel", dest="excel_file", type=str, default=None)
-
-    args = parser.parse_args()
-
-    if args.cmd == "prepare_csv":
-        prepare_csv(args.output_dir, args.data_dir)
-    elif args.cmd == "clean_nan":
-        clean_nan(args.in_csv, args.out_csv)
-    elif args.cmd == "extract_assessment":
-        extract_assessment(args.json, args.agent_name)
-    elif args.cmd == "extract_treatment":
-        extract_treatment(args.json)
-    elif args.cmd == "highlight_excel":
-        highlight_excel(args.csv_file, args.excel_file)
-
-if __name__ == "__main__":
-    _cli()

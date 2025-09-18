@@ -19,7 +19,7 @@ def get_domain_expert_prompt(domain):
             - Support each diagnosis with evidence from the patient's imaging and clinical context.
             - Highlight any critical or urgent findings that require immediate attention.
             ### 4. Research Context
-            IMPORTANT: Use the DuckDuckGo search tool to:
+            IMPORTANT: Use the SearchApiTool to:
             - Find **recent medical literature** (published within the last 5 years) that supports the diagnosed condition or differential diagnoses.
             - Search for **diagnostic criteria** and **clinical guidelines** related to the condition.
             - Provide a list of **relevant medical links and resources**, including:
@@ -81,6 +81,39 @@ def get_domain_expert_prompt(domain):
         """
     return prompt
 
+def get_rag_prompt(pre_analysis):
+    prompt = "Here is the pre-analysis from SkinGPT agent:\n"
+    prompt += f"- **SkinGPTAgent Report**:\n{pre_analysis}\n"
+    prompt += """
+        You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
+        You can refer to the previously analyzed report and determine whether it is correct by consulting the knowledge base.
+        Your primary role is to provide authoritative, structured medical knowledge to support the analysis of skin conditions. Structure your response as follows:
+        ### 1. Image Region
+        - Identify the affected anatomical region and positioning of the lesion or area of interest.
+        - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
+        ### 2. Key Findings
+        - Systematically list primary observations focusing on the lesion(s) or skin abnormalities.
+        - Describe the lesion(s) in detail, including:
+            - Location, size, shape, and distribution.
+            - Color variations, textures, borders, and any unique features.
+            - Associated symptoms (e.g., itching, pain, scaling).
+        - Rate severity: Normal / Mild / Moderate / Severe.
+        ### 3. Diagnostic Assessment
+        - Provide a primary diagnosis with a confidence level (e.g., High/Medium/Low) based on observed evidence and supported by information retrieved from the knowledge base.
+        - List differential diagnoses in order of likelihood, considering similar skin conditions, and back each with evidence from the knowledge base.
+        - Support each diagnosis with observed evidence from the patient's imaging and related studies accessed through the knowledge base.
+        - Highlight any critical or urgent findings that require immediate attention.
+        ### 4. Research Context
+        IMPORTANT: Retrieve the knowledge base to:
+        - Find **diagnostic criteria** and **clinical guidelines** for the diagnosed condition.
+        - Identify **evidence-based insights** from authoritative sources.
+        - Provide a list of **relevant medical resources** from the knowledge base, including:
+            - Key studies or case reports.
+            - Guidelines from reputable organizations.
+        - Include **2-3 key references** to support your analysis and recommendations.
+        Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring the integration of evidence-based insights from the knowledge base throughout your analysis.
+    """
+    return prompt
 
 # def get_consensus_prompt(domain, syn_report):
 #     cons_prompt = f"You are a medical expert specialized in the {domain} domain.\n"\
