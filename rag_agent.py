@@ -8,11 +8,19 @@ from llama_index.core.indices import MultiModalVectorStoreIndex
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from agno.agent import Agent
 from agno.knowledge.llamaindex import LlamaIndexKnowledgeBase
-from agno.models.openai import OpenAIChat
 from agno.media import Image as AgnoImage
 from agno.models.google.gemini import Gemini
 from utils import process_markdown
-from prompt_template import get_domain_expert_prompt
+from prompt_template import get_domain_expert_prompt, get_rag_prompt
+import logging, sys
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    stream=sys.stdout
+)
+# 让 llama-index 组件也输出
+logging.getLogger("llama_index").setLevel(logging.INFO)
+from llama_index.core.schema import NodeWithScore, QueryBundle  # 仅用于类型提示
 
 
 class RAGAgent:
@@ -49,6 +57,12 @@ class RAGAgent:
         # Build the agent during initialization
         self.agent = self._build_agent()
 
+    def retrieve_knowledge(self, query_text: str, top_k: int = 3):
+        """用任意文本去知识库检索，返回最相关的知识片段"""
+        retriever = self.agent.knowledge.retriever
+        nodes = retriever.retrieve(QueryBundle(query_text))
+        return "\n\n".join([n.node.text for n in nodes[:top_k]])
+
     def _build_agent(self):
         """
         Build the medical agent by processing markdown files and setting up the knowledge base.
@@ -69,7 +83,6 @@ class RAGAgent:
 
         # Set up retriever and knowledge base
         retriever = vector_index.as_retriever()
-
         knowledge_base = LlamaIndexKnowledgeBase(retriever=retriever)
 
         # Initialize agent
@@ -96,7 +109,6 @@ class RAGAgent:
         """
         # Load image
         agno_image = AgnoImage(filepath=image_file_path)
-
         # Run analysis
         # Use asyncio.to_thread to run the synchronous method in a separate thread
         response = await asyncio.to_thread(self.agent.run, query, images=[agno_image])
@@ -105,18 +117,16 @@ class RAGAgent:
 
 if __name__ == "__main__":
     # Build the agent
+    image_file_path = "./SkinGPT-X-Dataset/Dermnet/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-28.jpg"  # Replace with your actual image file path
     model = "gemini-2.5-pro"
     api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
     markdown_file_path = "./skin_handbook.md"
     domain = "RAG"
     builder = RAGAgent(model=model, api_key=api_key, domain=domain, markdown_file_path=markdown_file_path)
 
-    # Run analysis
-    image_file_path = "./SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/hidradenitis-suppurativa-99.jpg"
-    query = get_domain_expert_prompt(domain)
-
 
     async def main():
+        query = get_domain_expert_prompt('RAG')
         analysis_result = await builder.analyze(query, image_file_path)
         print(analysis_result)
     asyncio.run(main())

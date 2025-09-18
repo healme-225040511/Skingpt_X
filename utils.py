@@ -1,9 +1,12 @@
+import os
+
 import markdown
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from llama_index.core.schema import ImageNode, TextNode
 import re
-
+from pathlib import Path
+import aiofiles
 
 class CustomTreeProcessor(Treeprocessor):
     def __init__(self, *args, **kwargs):
@@ -78,3 +81,14 @@ def unescape_markdown(text):
     if isinstance(text, str):
         return text.encode().decode('unicode_escape')
     return text
+
+def load_set(path):
+    if not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8") as f:
+        return {line.rstrip("\n") for line in f if line.strip()}
+
+def mark_done(path, DONE_LOG):
+    """追加记录已处理路径"""
+    with open(DONE_LOG, "a", encoding="utf-8") as f:
+        f.write(path + "\n")

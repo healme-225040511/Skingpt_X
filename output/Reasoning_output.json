@@ -1,16 +1,14 @@
 {
     "2.png": {
-        "PrimaryDiagnosis": "Granuloma annulare",
+        "PrimaryDiagnosis": "Pityriasis Alba",
         "ConfidenceLevel": "High",
         "DifferentialDiagnoses": [
-            "Pityriasis Versicolor",
-            "Tinea Versicolor",
-            "Pityriasis Rosea",
-            "Nummular eczema",
-            "Seborrheic keratosis"
+            "Tinea Versicolor (Pityriasis Versicolor)",
+            "Post-Inflammatory Hypopigmentation",
+            "Vitiligo"
         ],
-        "KeyFindings": "The lesion is a well-defined, circular area measuring approximately 1-2 cm in diameter, located on the skin of the forearm. It has a smooth texture, is slightly raised, and features a light pink center with a darker peripheral ring. There are no associated symptoms of itching or pain, and the lesion appears to be of mild severity.",
-        "KnowledgeAndResearch": "The primary diagnosis of granuloma annulare is supported by its characteristic presentation as a circular lesion with a well-defined border and smooth texture, typically found on sun-exposed areas. Recent studies indicate that granuloma annulare is usually self-limiting, and while treatment is often unnecessary, topical corticosteroids may be beneficial in persistent cases. For differential diagnoses, both pityriasis versicolor and tinea versicolor share similarities in appearance but typically present with more scaling and coloration changes. The American Academy of Dermatology provides guidelines on identifying and managing these conditions, emphasizing clinical evaluation and monitoring for changes in the lesions (see references: 'Diagnostic Criteria for Granuloma Annulare' and 'Clinical Evaluation of Skin Lesions'). Further literature can be found at [Granuloma Annulare Research](https://links.duckduckgo.com/d.js?q=Granuloma+annulare+recent+medical+literature+2018-2023) and [Pityriasis Rosea Insights](https://links.duckduckgo.com/d.js?q=Pityriasis+rosea+recent+medical+literature+2018-2023)."
+        "KeyFindings": "The lesion is a single, well-circumscribed, hypopigmented patch with a slightly pinkish hue and fine scaling, located on darker skin. It lacks significant inflammation or associated symptoms such as itching, indicating a mild condition. The characteristics align well with pityriasis alba, which is commonly seen in individuals with a history of atopy.",
+        "KnowledgeAndResearch": "Pityriasis alba is characterized by pale oval patches with fine scaling, particularly noticeable in individuals with darker skin tones. Management is primarily reassurance, as the condition is benign and self-resolving, although it may take time for repigmentation. Emollients and sunscreen are recommended to protect the affected areas. For mild inflammation, low-potency topical corticosteroids or calcineurin inhibitors may be beneficial. For further reading, refer to the American Academy of Dermatology's guidelines on atopic dermatitis and related conditions at [AAD](https://www.aad.org/public/diseases/a-z/pityriasis-alba-overview) and the comprehensive review in StatPearls by Givler et al. (2023) at [StatPearls](https://www.ncbi.nlm.nih.gov/books/NBK570883/)."
     },
     "3.png": {
         "PrimaryDiagnosis": "Actinic Keratosis or Squamous Cell Carcinoma",
