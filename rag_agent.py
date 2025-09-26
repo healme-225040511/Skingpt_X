@@ -22,7 +22,10 @@ logging.basicConfig(
 logging.getLogger("llama_index").setLevel(logging.INFO)
 from llama_index.core.schema import NodeWithScore, QueryBundle  # 仅用于类型提示
 
+import ssl
 
+# 全局禁用 SSL 验证（影响整个 Python 进程）
+ssl._create_default_https_context = ssl._create_unverified_context
 class RAGAgent:
     def __init__(self, model, api_key, domain, markdown_file_path, use_gpu=False):
         """

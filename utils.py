@@ -92,3 +92,23 @@ def mark_done(path, DONE_LOG):
     """追加记录已处理路径"""
     with open(DONE_LOG, "a", encoding="utf-8") as f:
         f.write(path + "\n")
+import re, json
+
+def safe_load_json(text: str) -> dict:
+    fallback = {
+        "PrimaryDiagnosis": "Unable to parse model output",
+        "ConfidenceLevel": "Low",
+        "DifferentialDiagnoses": ["Parsing error"],
+        "KeyFindings": "Model returned non-JSON or empty",
+        "KnowledgeAndResearch": {}
+    }
+    text = text.strip()
+    if not text:
+        return fallback
+    # 去掉 ```json / ``` 围栏
+    text = re.sub(r'^```json\s*', '', text, flags=re.I)
+    text = re.sub(r'\s*```$', '', text)
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return fallback

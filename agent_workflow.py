@@ -18,8 +18,9 @@ from prompt_template import get_domain_expert_prompt
 
 async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name):
     tasks = []
+    prob_vec = all_agents['SkinGPT'].get_prob_vec(image_path=image_path)
     for domain, agent in all_agents.items():
-        query = get_domain_expert_prompt(domain)
+        query = get_domain_expert_prompt(domain, prob_vec=prob_vec)
         tasks.append(async_analyze(agent, query, image_path))
     results = await asyncio.gather(*tasks)
     for domain, result in zip(all_agents.keys(), results):

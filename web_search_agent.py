@@ -7,7 +7,7 @@ from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.media import Image as AgnoImage
 import logging
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s | %(levelname)s | %(message)s")
-from SearchAPITools import SearchApiTool
+from SearchAPITools import BochaSearchTool
 from prompt_template import *
 from agno.models.google.gemini import Gemini
 
@@ -28,8 +28,8 @@ class WebSearchAgent:
         # 替换工具
         self.agent = Agent(
             model=Gemini(id=self.model, api_key=self.api_key),
-            tools=[SearchApiTool(api_key=searchapi_key, engine="google")],  # ←这里
-            debug_mode=True
+            tools=[BochaSearchTool(api_key=searchapi_key)],  # ←这里
+            debug_mode=False
         )
 
     async def analyze(self, query, image_path):
