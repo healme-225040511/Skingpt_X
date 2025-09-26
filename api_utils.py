@@ -1,20 +1,47 @@
+from agno.models.google import Gemini
+from google import genai
+from google.genai import types
 from openai import OpenAI
 import time
 
-client = OpenAI(api_key="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")
+client = genai.Client(api_key="AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do")
+safety_settings = [
+    types.SafetySetting(
+        category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+        threshold=types.HarmBlockThreshold.BLOCK_NONE,
+    ),
+    types.SafetySetting(
+        category=types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+        threshold=types.HarmBlockThreshold.BLOCK_NONE,
+    ),
+    types.SafetySetting(
+        category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+        threshold=types.HarmBlockThreshold.BLOCK_NONE,
+    ),
+    types.SafetySetting(
+        category=types.HarmCategory.HARM_CATEGORY_HARASSMENT,
+        threshold=types.HarmBlockThreshold.BLOCK_NONE,
+    ),
+    types.SafetySetting(
+        category=types.HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY,
+        threshold=types.HarmBlockThreshold.BLOCK_NONE,
+    ),
+]
+
+
 def generate_response(engine, temperature, max_tokens, frequency_penalty, presence_penalty, stop, system_role, user_input):
-    response = client.chat.completions.create(
+    print(system_role+user_input)
+    response = client.models.generate_content(
                     model=engine, # engine is the name of the deployment
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                    top_p=1, # top_p的意思是选择概率质量值之和达到top_p的概率分布采样结果
-                    frequency_penalty=frequency_penalty,
-                    presence_penalty=presence_penalty,
-                    stop=stop,
-                    messages=[  
-                        {"role": "system", "content": system_role},
-                        {"role": "user", "content": user_input}
-                    ],
-                    response_format={"type": "json_object"}
+                    contents=[system_role+user_input],
+                    config=types.GenerateContentConfig(
+                        safety_settings=safety_settings,  # 放到 config 里
+                        temperature=temperature,  # 可选
+                        stop_sequences=stop,  # 可选
+                        top_p=1,
+                        max_output_tokens=max_tokens,
+                        frequency_penalty=frequency_penalty,
+                        presence_penalty=presence_penalty,
+                    ),
                 )
-    return response.choices[0].message.content
+    return response.text

@@ -11,6 +11,8 @@ from prompt_template import get_synthesized_report_prompt
 from llama_index.core.storage import StorageContext
 from llama_index.core.indices import VectorStoreIndex
 
+from utils import safe_load_json
+
 
 class ReasoningAgent:
     def __init__(self, model):
@@ -47,11 +49,10 @@ class ReasoningAgent:
             system_role=synthesizer, 
             user_input=prompt
         )
-        report = json.loads(response)
 
-        return report
+        return safe_load_json(response)
 
-    def _build_prompt(self, analyses) -> str:
+    def _build_prompt(self, analyses):
         """
         Build a prompt for OpenAI based on the current case.
         
@@ -68,7 +69,7 @@ class ReasoningAgent:
 
 if __name__ == "__main__":
     # Build the agent
-    model = "gpt-4o-mini"
+    model = "gemini-2.5-pro"
     reasoning_agent = ReasoningAgent(model=model)
 
     current_case = {

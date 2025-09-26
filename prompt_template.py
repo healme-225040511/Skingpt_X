@@ -1,4 +1,9 @@
-def get_domain_expert_prompt(domain):
+import os
+
+import torch
+
+
+def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
     if domain == "WebSearch":
         prompt = """
             You are a highly skilled dermatology expert and research scientist with access to the latest medical advancements and online resources. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
@@ -59,9 +64,60 @@ def get_domain_expert_prompt(domain):
             Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring the integration of evidence-based insights from the knowledge base throughout your analysis.
         """
     elif domain == "SkinGPT":
-        prompt = """
+        disease_name = ['Acne and Rosacea Photos',
+                        'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions',
+                        'Atopic Dermatitis Photos',
+                        'Bullous Disease Photos',
+                        'Cellulitis Impetigo and other Bacterial Infections',
+                        'Eczema Photos',
+                        'Exanthems and Drug Eruptions',
+                        'Hair Loss Photos Alopecia and other Hair Diseases',
+                        'Herpes HPV and other STDs Photos',
+                        'Light Diseases and Disorders of Pigmentation',
+                        'Lupus and other Connective Tissue diseases',
+                        'Melanoma Skin Cancer Nevi and Moles',
+                        'Nail Fungus and other Nail Disease',
+                        'Poison Ivy Photos and other Contact Dermatitis',
+                        'Psoriasis pictures Lichen Planus and related diseases',
+                        'Scabies Lyme Disease and other Infestations and Bites',
+                        'Seborrheic Keratoses and other Benign Tumors',
+                        'Systemic Disease',
+                        'Tinea Ringworm Candidiasis and other Fungal Infections',
+                        'Urticaria Hives',
+                        'Vascular Tumors',
+                        'Vasculitis Photos',
+                        'Warts Molluscum and other Viral Infections']
+
+
+        def build_prelimary_text(prob_vec: list[float]) -> str:
+            """
+            prob_vec: 长度为 22 的 softmax 概率列表，顺序与 IDX2DISEASE 严格对应
+            返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
+            """
+            prob_vec = torch.tensor(prob_vec)
+            top3 = torch.topk(prob_vec, k=3)
+            lines = ["### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
+            for idx, p in zip(top3.indices.tolist(), top3.values.tolist()):
+                lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
+            return "\n".join(lines)
+
+        pre = build_prelimary_text(prob_vec)
+        prompt = f"""
             You are a frontline medical professional specializing in performing initial patient assessments based on images. 
-            Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration. Structure your response as follows:
+            Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
+            Below you will find:
+            
+            1. A **preliminary AI probability vector** (already ranked) indicating the three most likely diagnoses.  
+            2. A **dermoscopy / clinical photograph** of the patient.
+            
+            Your task is to **critically integrate** the AI probabilities with your own visual analysis before reaching any conclusion.  
+            Do **not** simply repeat the AI ranking; instead, use it as prior evidence that you either confirm, refine, or refute based on image features.
+            
+            ---
+            
+            ## Pre-analysis (use as Bayesian prior)
+            {pre}
+            Please structure your response as follows:
             ### 1. Image Region
             - Identify the affected anatomical region and positioning of the lesion or area of interest.
             - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).

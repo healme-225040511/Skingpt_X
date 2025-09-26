@@ -28,9 +28,9 @@ def LoadLog(logFile):
 
 def EvaluationOnDermnet(
         model_name: str = "gemini-2.5-pro",
-        dataset_root: str = "./SkinGPT-X-Dataset/Dermnet/test",
-        markdown_file_path: str = "./skin_handbook.md",
-        output_root: str = "./SkinGPT-X-EvaluationResults/Dermnet/test",
+        dataset_root: str = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test",
+        markdown_file_path: str = "/Volumes/T7/Skingpt_X/skin_handbook.md",
+        output_root: str = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test",
         api_key: str = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do",
         openai_api_key: str = "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",
         neo4j_url: str = "neo4j://localhost:7687",
@@ -42,14 +42,14 @@ def EvaluationOnDermnet(
     """
     disease_dirs = [d for d in Path(dataset_root).iterdir() if d.is_dir()]
     all_agents = {
-        "SkinGPT": SkinGPTOpenAIAgent(model=model_name, domain="SkinGPT", api_key=api_key),
+        "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key="AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do", pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv'),
         "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
-        "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch")
+        "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch", searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
     }
-    reasoning_agent = ReasoningAgent(model='gpt-4o-mini')
-    case_review_agent = CaseReviewAgent(model='gpt-4o-mini', neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
+    reasoning_agent = ReasoningAgent(model="gemini-2.5-pro")
+    case_review_agent = CaseReviewAgent(model="gemini-2.5-pro", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
                                         neo4j_password=neo4j_password)
-    treatment_recommend_agent = TreatmentRecommendAgent(model='gpt-4o-mini', api_key=openai_api_key)
+    treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-pro", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
     if not disease_dirs:
         print("⚠️  数据集根目录下没有找到任何疾病文件夹")
         return
@@ -74,6 +74,7 @@ def EvaluationOnDermnet(
                     output_folder=output_root,
                     image_path=os.path.join(diseasePath, imgName),
                 )
+                print(f'{imgName}  处理完成')
                 mark_done(os.path.join(diseasePath, imgName), os.path.join(output_root, 'processed.log'))
             except Exception as e:
                 print(f"[WARN] 处理失败，跳过 ：{e}")

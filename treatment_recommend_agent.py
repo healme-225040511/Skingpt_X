@@ -1,14 +1,17 @@
 from PIL import Image as PILImage
 import os
 from agno.agent import Agent
+from agno.models.google import Gemini
 from agno.models.openai import OpenAIChat
 from agno.tools.duckduckgo import DuckDuckGoTools
+
+from SearchAPITools import BochaSearchTool
 from prompt_template import *
 import json
 from utils import remove_json_markers
 
 class TreatmentRecommendAgent:
-    def __init__(self, model, api_key):
+    def __init__(self, model, api_key, searchapi_key):
         """
         Initialize the Treatment Recommend Agent with an API key.
         
@@ -19,8 +22,8 @@ class TreatmentRecommendAgent:
         self.model = model
         self.api_key = api_key
         self.agent = Agent(
-            model=OpenAIChat(id=self.model, api_key=self.api_key),
-            tools=[DuckDuckGoTools()],
+            model=Gemini(id=self.model, api_key=self.api_key),
+            tools=[BochaSearchTool(api_key=searchapi_key)],  # ←这里
             debug_mode=False,
             structured_outputs=True
         )
@@ -43,8 +46,8 @@ class TreatmentRecommendAgent:
 
 
 if __name__ == "__main__":
-    model = "gpt-4o-mini"
-    api_key = ""  # Replace with your actual API key
+    model = "gemini-2.5-pro"
+    api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
     current_case = {
         "PrimaryDiagnosis": "Squamous Cell Carcinoma (SCC)",
         "ConfidenceLevel": "High",
@@ -61,6 +64,6 @@ if __name__ == "__main__":
         },
         "IdentifiedInconsistencies": []
     }
-    agent = TreatmentRecommendAgent(model=model, api_key=api_key)
+    agent = TreatmentRecommendAgent(model=model, api_key=api_key, searchapi_key="JZ2yaBjJXaPFK8jZ4DkNadHP")
     analysis_result = agent.analyze(current_case)
     print(analysis_result)

@@ -11,6 +11,8 @@ import re
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import numpy as np
 
+from utils import safe_load_json
+
 
 class CaseReviewAgent:
     def __init__(self, model: str, neo4j_uri: str, neo4j_user: str, neo4j_password: str):
@@ -82,7 +84,7 @@ class CaseReviewAgent:
                 system_role=reviewer, 
                 user_input=prompt
             )
-            report = json.loads(response)
+            report = safe_load_json(response)
         else:
             report = current_case
         return report
@@ -225,10 +227,10 @@ class CaseReviewAgent:
 
 if __name__ == "__main__":
     # 初始化 CaseReviewAgent
-    model = "gpt-4o-mini"
+    model = "gemini-2.5-pro"
     neo4j_uri = "bolt://localhost:7687"  
     neo4j_user = "neo4j"  
-    neo4j_password = "" 
+    neo4j_password = "Czty100165188"
     case_review_agent = CaseReviewAgent(
         model=model, 
         neo4j_uri=neo4j_uri,
