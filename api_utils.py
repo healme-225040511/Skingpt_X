@@ -30,7 +30,6 @@ safety_settings = [
 
 
 def generate_response(engine, temperature, max_tokens, frequency_penalty, presence_penalty, stop, system_role, user_input):
-    print(system_role+user_input)
     response = client.models.generate_content(
                     model=engine, # engine is the name of the deployment
                     contents=[system_role+user_input],
@@ -39,7 +38,6 @@ def generate_response(engine, temperature, max_tokens, frequency_penalty, presen
                         temperature=temperature,  # 可选
                         stop_sequences=stop,  # 可选
                         top_p=1,
-                        max_output_tokens=max_tokens,
                         frequency_penalty=frequency_penalty,
                         presence_penalty=presence_penalty,
                     ),

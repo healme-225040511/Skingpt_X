@@ -51,7 +51,7 @@ class BochaSearchTool(Toolkit):
             raise ValueError("请提供 api_key 或环境变量 BOCHA_API_KEY")
         self.register(self.bocha_search)
 
-    def bocha_search(self, query: str, max_results: int = 10) -> str:
+    def bocha_search(self, query: str, max_results: int = 5) -> str:
         """
         调用 Bocha 搜索，返回统一格式的 JSON 字符串。
         """

@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
 # Process each image in the specified folder
 image_list = os.listdir(args.image_folder)
-for image_name in tqdm(image_list, desc="Processing images"):
+for image_name in image_list:
     image_path = os.path.join(args.image_folder, image_name)
 
     # Initialize output dictionaries for the current image
@@ -118,7 +118,6 @@ for image_name in tqdm(image_list, desc="Processing images"):
     treatment_recommend = json.loads(treatment_recommend_agent.analyze(review_report))
     treatment_recommend_output[image_name] = treatment_recommend
     end_time = time.time()
-    print(f"Time elapsed: {end_time - start_time} seconds")
 
     # Save results for the current image
     def save_output(output_data, agent_name):
