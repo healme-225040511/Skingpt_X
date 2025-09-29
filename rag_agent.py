@@ -13,13 +13,6 @@ from agno.models.google.gemini import Gemini
 from utils import process_markdown
 from prompt_template import get_domain_expert_prompt, get_rag_prompt
 import logging, sys
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)s | %(message)s",
-    stream=sys.stdout
-)
-# 让 llama-index 组件也输出
-logging.getLogger("llama_index").setLevel(logging.INFO)
 from llama_index.core.schema import NodeWithScore, QueryBundle  # 仅用于类型提示
 
 import ssl

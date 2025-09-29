@@ -1,3 +1,6 @@
+import pathlib
+import uuid
+
 from PIL import Image as PILImage
 import os
 import asyncio
@@ -6,7 +9,6 @@ from agno.models.openai import OpenAIChat
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.media import Image as AgnoImage
 import logging
-logging.basicConfig(level=logging.DEBUG, format="%(asctime)s | %(levelname)s | %(message)s")
 from SearchAPITools import BochaSearchTool
 from prompt_template import *
 from agno.models.google.gemini import Gemini
@@ -71,8 +73,8 @@ if __name__ == "__main__":
     model = "gemini-2.5-pro"
     api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
     query = get_domain_expert_prompt("WebSearch")
-    agent = WebSearchAgent(model=model, api_key=api_key, domain="WebSearch", searchapi_key='JZ2yaBjJXaPFK8jZ4DkNadHP')
-    image_file_path = "/Volumes/T7/Skingpt_X/SkinGPT-X-Dataset/Dermnet/test/Urticaria Hives/PUPPP-18.jpg"  # Replace with your actual image file path
+    agent = WebSearchAgent(model=model, api_key=api_key, domain="WebSearch", searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
+    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Urticaria Hives/PUPPP-18.jpg"  # Replace with your actual image file path
 
     async def main():
         analysis_result = await agent.analyze(query, image_file_path)

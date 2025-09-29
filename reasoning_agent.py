@@ -36,19 +36,19 @@ class ReasoningAgent:
             Dict: The generated report.
         """
         # Prepare the prompt for OpenAI
+        print(current_case)
         synthesizer, prompt = self._build_prompt(current_case)
 
-        # Call OpenAI API to generate the report
         response = generate_response(
             engine=self.model, 
             temperature=0.5, 
-            max_tokens=2500, 
-            frequency_penalty=0, 
+            frequency_penalty=0,
             presence_penalty=0, 
             stop=None, 
             system_role=synthesizer, 
             user_input=prompt
         )
+        print(response)
 
         return safe_load_json(response)
 

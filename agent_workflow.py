@@ -16,7 +16,7 @@ from treatment_recommend_agent import TreatmentRecommendAgent
 from prompt_template import get_domain_expert_prompt
 
 
-async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name):
+async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name, output_folder):
     tasks = []
     prob_vec = all_agents['SkinGPT'].get_prob_vec(image_path=image_path)
     for domain, agent in all_agents.items():
@@ -26,10 +26,14 @@ async def analyze_image(all_agents, image_path, web_search_output, rag_output, s
     for domain, result in zip(all_agents.keys(), results):
         if domain == "WebSearch":
             web_search_output[image_name] = result
+            save_output(web_search_output, "WebSearch", output_folder)
         elif domain == "RAG":
             rag_output[image_name] = result
+            save_output(rag_output, "RAG", output_folder)
         elif domain == "SkinGPT":
             skin_gpt_output[image_name] = result
+            save_output(skin_gpt_output, "SkinGPT", output_folder)
+
 # 异步分析函数
 async def async_analyze(agent, query, image_path):
     return await agent.analyze(query, image_path)
@@ -52,23 +56,24 @@ def save_output(output_data, agent_name, output_folder):
 
 
 def WorkFlow(
-        all_agents,
-        treatment_recommend_agent,
-        reasoning_agent,
-        case_review_agent,
-        output_folder="output/",
-        image_path="",
+        all_agents,                    # 所有智能体的集合
+        treatment_recommend_agent,     # 治疗推荐智能体
+        reasoning_agent,               # 推理智能体
+        case_review_agent,             # 案例审查智能体
+        output_folder="output/",       # 输出文件夹路径，默认为"output/"
+        image_path="",                 # 图片路径，默认为空字符串
 
 ):
-    # 初始化 Agent
-    image_name = image_path.split("/")[-1]
-    web_search_output = {}
-    rag_output = {}
-    skin_gpt_output = {}
-    reasoning_output = {}
-    case_review_output = {}
-    treatment_recommend_output = {}
-    asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name))
+    # 初始化 Agent 和输出字典
+    image_name = image_path.split("/")[-1]    # 从图片路径中提取图片名称
+    web_search_output = {}      # 存储网络搜索结果
+    rag_output = {}            # 存储RAG（检索增强生成）结果
+    skin_gpt_output = {}       # 存储SkinGPT模型输出
+    reasoning_output = {}      # 存储推理结果
+    case_review_output = {}    # 存储案例审查结果
+    treatment_recommend_output = {}  # 存储治疗推荐结果
+    # 异步执行图像分析任务
+    asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name, output_folder))
 
     # Generate report
     print("Generating report")
@@ -78,15 +83,18 @@ def WorkFlow(
         "SkinGPT": skin_gpt_output.get(image_name, "")
     })
     reasoning_output[image_name] = report
+    save_output(reasoning_output, "Reasoning", output_folder)
 
     # Case review
     print("Case reviewing")
     review_report = case_review_agent.review_case(report)
+    print(review_report)
     case_review_output[image_name] = review_report
     # Update the case in the database
     ## !!!!!
     ## May need to be optimized, because only good cases could be added
     case_review_agent._add_case_to_knowledge_graph(review_report)
+    save_output(case_review_output, "CaseReview", output_folder)
     # Treatment recommendation
     print("Treatment recommending")
     try:
@@ -99,9 +107,4 @@ def WorkFlow(
         print(f"Invalid JSON received: {treatment_recommend_result}")
         treatment_recommend_output[image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
 
-    save_output(web_search_output, "WebSearch", output_folder)
-    save_output(rag_output, "RAG", output_folder)
-    save_output(skin_gpt_output, "SkinGPT", output_folder)
-    save_output(reasoning_output, "Reasoning", output_folder)
-    save_output(case_review_output, "CaseReview", output_folder)
     save_output(treatment_recommend_output, "TreatmentRecommend", output_folder)

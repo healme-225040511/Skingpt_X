@@ -1,6 +1,8 @@
 # AgentWorkflowEvaluator.py
+import argparse
 import os
 import json
+import time
 from pathlib import Path
 import ssl
 
@@ -46,26 +48,34 @@ def EvaluationOnDermnet(
         "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
         "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch", searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
     }
-    reasoning_agent = ReasoningAgent(model="gemini-2.5-pro")
-    case_review_agent = CaseReviewAgent(model="gemini-2.5-pro", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
-                                        neo4j_password=neo4j_password)
-    treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-pro", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
+    reasoning_agent = ReasoningAgent(model="gemini-2.5-flash")
+    case_review_agent = CaseReviewAgent(model="gemini-2.5-flash", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
+                                        neo4j_password=neo4j_password, clear_mode=False)
+    treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-flash", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
     if not disease_dirs:
         print("⚠️  数据集根目录下没有找到任何疾病文件夹")
         return
     logFilePath = os.path.join(output_root, "processed.log")
     logFilePathList = load_set(logFilePath)
-    for disease_dir in tqdm(disease_dirs, desc="Processing images"):
+
+    with open(os.path.join(output_root, 'SkinGPT_output.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    # 提取所有以 .jpg 结尾的键名
+    processedFiles = [key for key in data.keys() if key.endswith('.jpg')]
+
+    for disease_dir in disease_dirs:
         print('⏳ 正在处理疾病：', disease_dir.name)
         diseasePath = os.path.join(dataset_root, disease_dir.name)
         imgList = os.listdir(diseasePath)
 
-        for imgName in imgList:
-            if os.path.join(diseasePath, imgName) in logFilePathList:
-                print(f'已处理文件{os.path.join(diseasePath, imgName)}, 跳过')
+        for imgName in tqdm(imgList, desc='image name'):
+            if imgName in processedFiles:
+                print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
                 continue
             try:
                 # ② 单张模式调用
+                startTime = time.time()
                 WorkFlow(
                     all_agents=all_agents,
                     reasoning_agent=reasoning_agent,
@@ -74,11 +84,17 @@ def EvaluationOnDermnet(
                     output_folder=output_root,
                     image_path=os.path.join(diseasePath, imgName),
                 )
-                print(f'{imgName}  处理完成')
-                mark_done(os.path.join(diseasePath, imgName), os.path.join(output_root, 'processed.log'))
+                mark_done(os.path.join(os.path.join(dataset_root, disease_dir.name), imgName), os.path.join(output_root, 'processed.log'))
+                endTime = time.time()
+                print(f'{imgName}  处理完成，耗时{endTime-startTime}s')
             except Exception as e:
                 print(f"[WARN] 处理失败，跳过 ：{e}")
 
 
 if __name__ == "__main__":
-    EvaluationOnDermnet()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset_root", default="/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test")
+    parser.add_argument("--output_root", default="/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test")
+    parser.add_argument("--markdown_file_path", default="/Volumes/T7/Skingpt_X/skin_handbook.md")
+    args = parser.parse_args()
+    EvaluationOnDermnet(dataset_root=args.dataset_root, output_root=args.output_root, markdown_file_path=args.markdown_file_path)
