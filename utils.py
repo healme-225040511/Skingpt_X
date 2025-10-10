@@ -1,3 +1,4 @@
+import base64
 import os
 
 import markdown
@@ -112,3 +113,11 @@ def safe_load_json(text: str) -> dict:
         return json.loads(text)
     except json.JSONDecodeError:
         return fallback
+
+def encode_image_to_base64(image_path):
+
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"错误：找不到图片文件 '{image_path}'")
+
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')

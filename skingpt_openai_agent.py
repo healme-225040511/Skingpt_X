@@ -9,8 +9,12 @@ from typing import Dict, Optional
 from google.genai import types
 
 from google import genai
+from openai import OpenAI
+from slack_sdk.models.messages.message import message
 
 from prompt_template import get_domain_expert_prompt
+from utils import encode_image_to_base64
+
 
 class SkinGPTOpenAIAgent:
     def __init__(self, model: str = "gpt-4o", domain: str = "SkinGPT", api_key: str = "", pre_csv_path: str = "./Dermnet_predprob.csv"):
@@ -47,6 +51,38 @@ class SkinGPTOpenAIAgent:
             img_bytes = f.read()
         img_part = types.Part.from_bytes(data=img_bytes, mime_type="image/jpeg")
         try:
+            if self.api_key.startswith('sk-'):
+                client = OpenAI(api_key=self.api_key, base_url="https://hiapi.online/v1")
+                base64_image = encode_image_to_base64(image_path)
+
+                image_mime_type = "image/jpeg"
+                if image_path.lower().endswith(".png"):
+                    image_mime_type = "image/png"
+                elif image_path.lower().endswith(".gif"):
+                    image_mime_type = "image/gif"
+                elif image_path.lower().endswith(".webp"):
+                    image_mime_type = "image/webp"
+                messages = [
+                    {
+                        "role": "user",
+                        "content": [
+                            {
+                                "type": "text",
+                                "text": f"{query}"
+                            },
+                            {
+                                "type": "image_url",
+                                "image_url": dict(url=f"data:{image_mime_type};base64,{base64_image}")
+                            }
+                        ]
+                    }
+                ]
+                resp = await asyncio.to_thread(
+                    client.chat.completions.create,
+                    model=self.model,
+                    messages=messages,
+                )
+                return resp.choices[0].message.content
             client = genai.Client(api_key=self.api_key)
             # 官方 SDK 是同步的，扔到线程池
             resp = await asyncio.to_thread(
@@ -71,7 +107,6 @@ class SkinGPTOpenAIAgent:
         # 假设 csv 里存的都是“相对/xxx/yyy.jpg”形式，且目录层级固定
         # 这里简单取后两级，可按实际调整
         key = str(pathlib.Path(*path.parts[-2:])).replace("\\", "/")
-
         # 2. 读 csv 找行
         with open(self.pre_csv_path, newline='', encoding='utf-8') as f:
             reader = csv.DictReader(f)
@@ -84,11 +119,11 @@ class SkinGPTOpenAIAgent:
 
 # ------------------- 快速自测 -------------------
 if __name__ == "__main__":
-    agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key="AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do", pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv')
+    api_key = "sk-iCv69YeaJn8TXm9tk6ZUUAqftw51aB2yddvmstNNl7QjkIKB"
+    agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv')
     image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/acne-closed-comedo-36.jpg"  # Replace with your actual image file path
     prob_vec = agent.get_prob_vec(image_path=image_file_path)
     query = get_domain_expert_prompt("SkinGPT", prob_vec)
-
     async def main():
         analysis_result = await agent.analyze(query, image_file_path)
         print(analysis_result)

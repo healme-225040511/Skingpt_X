@@ -10,10 +10,11 @@ from agno.agent import Agent
 from agno.knowledge.llamaindex import LlamaIndexKnowledgeBase
 from agno.media import Image as AgnoImage
 from agno.models.google.gemini import Gemini
-from utils import process_markdown
+from utils import process_markdown, encode_image_to_base64
 from prompt_template import get_domain_expert_prompt, get_rag_prompt
 import logging, sys
 from llama_index.core.schema import NodeWithScore, QueryBundle  # 仅用于类型提示
+from agno.models.openai import OpenAIChat
 
 import ssl
 
@@ -82,6 +83,15 @@ class RAGAgent:
         knowledge_base = LlamaIndexKnowledgeBase(retriever=retriever)
 
         # Initialize agent
+        if self.api_key.startswith('sk-'):
+            agent = Agent(
+                model=OpenAIChat(base_url="https://hiapi.online/v1", api_key=self.api_key),
+                knowledge=knowledge_base,
+                search_knowledge=True,
+                debug_mode=False,
+                show_tool_calls=True
+            )
+            return agent
         agent = Agent(
             model=Gemini(id=self.model, api_key=self.api_key),
             knowledge=knowledge_base,
@@ -92,30 +102,58 @@ class RAGAgent:
 
         return agent
 
-    async def analyze(self, query, image_file_path):
+    async def analyze(self, query, image_path):
         """
         Analyze an image using the configured agent.
 
         Args:
             query (str): The query to run on the image.
-            image_file_path (str): Path to the image file for analysis.
+            image_path (str): Path to the image file for analysis.
 
         Returns:
             str: The analysis result.
         """
         # Load image
-        agno_image = AgnoImage(filepath=image_file_path)
+        agno_image = AgnoImage(filepath=image_path)
         # Run analysis
         # Use asyncio.to_thread to run the synchronous method in a separate thread
-        response = await asyncio.to_thread(self.agent.run, query, images=[agno_image])
-        return response.content
+        base64_image = encode_image_to_base64(image_path)
+        messages = query
+        if self.api_key.startswith('sk-'):
+            image_mime_type = "image/jpeg"
+            if image_path.lower().endswith(".png"):
+                image_mime_type = "image/png"
+            elif image_path.lower().endswith(".gif"):
+                image_mime_type = "image/gif"
+            elif image_path.lower().endswith(".webp"):
+                image_mime_type = "image/webp"
+            messages = [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": f"{query}"
+                        },
+                        {
+                            "type": "image_url",
+                            "image_url": dict(url=f"data:{image_mime_type};base64,{base64_image}")
+                        }
+                    ]
+                }
+            ]
+            response = await asyncio.to_thread(self.agent.run, messages=messages, images=[agno_image])
+            return response.content
+        else:
+            response = await asyncio.to_thread(self.agent.run, message=messages, images=[agno_image])
+            return response.content
 
 
 if __name__ == "__main__":
     # Build the agent
-    image_file_path = "./SkinGPT-X-Dataset/Dermnet/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-28.jpg"  # Replace with your actual image file path
+    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Urticaria Hives/PUPPP-18.jpg"  # Replace with your actual image file path
     model = "gemini-2.5-pro"
-    api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
+    api_key = "sk-iCv69YeaJn8TXm9tk6ZUUAqftw51aB2yddvmstNNl7QjkIKB"
     markdown_file_path = "./skin_handbook.md"
     domain = "RAG"
     builder = RAGAgent(model=model, api_key=api_key, domain=domain, markdown_file_path=markdown_file_path)

@@ -15,7 +15,7 @@ from utils import safe_load_json
 
 
 class ReasoningAgent:
-    def __init__(self, model):
+    def __init__(self, model, api_key):
         """
         Initialize the ReasoningAgent with an API key and optional historical cases file path.
         
@@ -24,6 +24,7 @@ class ReasoningAgent:
             api_key (str): The API key for accessing OpenAI services.
         """
         self.model = model
+        self.api_key = api_key
 
     def generate_report(self, current_case: Dict) -> Dict:
         """
@@ -36,19 +37,19 @@ class ReasoningAgent:
             Dict: The generated report.
         """
         # Prepare the prompt for OpenAI
-        print(current_case)
         synthesizer, prompt = self._build_prompt(current_case)
 
         response = generate_response(
             engine=self.model, 
-            temperature=0.5, 
+            temperature=0.5,
+            max_tokens=2500,
             frequency_penalty=0,
             presence_penalty=0, 
             stop=None, 
             system_role=synthesizer, 
-            user_input=prompt
+            user_input=prompt,
+            api_key=self.api_key
         )
-        print(response)
 
         return safe_load_json(response)
 
@@ -70,120 +71,138 @@ class ReasoningAgent:
 if __name__ == "__main__":
     # Build the agent
     model = "gemini-2.5-pro"
-    reasoning_agent = ReasoningAgent(model=model)
+    api_key = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do"
+    reasoning_agent = ReasoningAgent(model=model, api_key=api_key)
 
     current_case = {
-        "rag_diagnosis": """
-            ### 1. Image Region
-            - **Anatomical Region**: The lesion is located on the lower abdominal area.
-            - **Contextual Details**: This area is typically not sun-exposed and is less likely to experience friction compared to other parts, such as the inner thighs or underarms.
-
-            ### 2. Key Findings
-            - **Primary Observations**:
-            - **Location**: Lower abdominal area.
-            - **Size**: Approximately 5 mm, as indicated by the ruler.
-            - **Shape**: Oval/elongated.
-            - **Color Variations**: Dark brown/black.
-            - **Textures**: Smooth surface.
-            - **Borders**: Well-defined.
-            - **Associated Symptoms**: None observed or mentioned (e.g., no itching, pain, or scaling).
-            - **Severity**: Mild (if asymptomatic and stable over time).
-
-            ### 3. Diagnostic Assessment
-            - **Primary Diagnosis**: Melanocytic Nevus (Confidence Level: High).
-            - **Evidence**: The characteristics (size, shape, color, and well-defined borders) are consistent with common nevi.
-
-            - **Differential Diagnoses**:
-            - **Melanoma** (Medium): Considered due to similarities in color and size; requires dermatoscopic evaluation.
-            - **Seborrheic Keratosis** (Medium): Characterized by a similar appearance but typically has a more irregular surface and is often lighter.
-            - **Basal Cell Carcinoma** (Low): Unlikely due to the lack of nodularity and scaling usually associated with BCC.
-
-            - **Critical Findings**:
-            - None observed that require immediate attention; however, if the lesion changes in color, size, or symptoms arise, further investigation is warranted.
-
-            ### 4. Research Context
-            - **Diagnostic Criteria**:
-            - Melanocytic nevi diagnosis primarily relies on clinical assessment involving characteristics like size, shape, and color boundaries.
-            - Further evaluation through dermoscopy is recommended (e.g., checking for the pigment network correlating with malignancy).
-
-            - **Evidence-Based Insights**:
-            - Melanocytic nevi are common, benign growths often presenting in adults. Monitoring is critical for signs of change indicative of melanoma.
-
-            - **Relevant Medical Resources**:
-            - **Key Studies**:
-                - Morton CA et al. Br J Dermatol 2014;170:245-60. [Guidelines for melanoma recognition](https://www.bad.org.uk).
-                - Cancer Research UK. Melanoma skin cancer. [Information on melanoma](http://www.cancerresearchuk.org/about-cancer/type/melanoma/).
-
-            - **Guidelines**:
-            - Consider using dermatoscopy for clearer assessment of lesions as per recent protocols.
-
-            ### References
-            - National guidelines and clinical studies provide a framework for assessing skin lesions and managing suspected cases of melanoma. The integration of clinical history and dermatoscopic findings are crucial in distinguishing between benign lesions and malignancy.
-        """,
-        "web_search_diagnosis": """
-            ### 1. Image Region
-            - **Anatomical Region:** The lesion is located on the abdominal area, specifically in a central position between the ribs and the lower abdomen.
-            - **Context:** The area appears to be a sun-exposed region due to the general location, though there is no noticeable sun damage or signs of friction-related irritation.
-
-            ### 2. Key Findings
-            - **Primary Observations:**
-            - **Location:** Central abdomen.
-            - **Size:** Approximately 5 mm (based on scale).
-            - **Shape:** Oval.
-            - **Distribution:** Isolated lesion.
-            - **Color Variations:** The lesion is dark brown to black.
-            - **Textures:** Appears smooth without scaling.
-            - **Borders:** Well-defined edges.
-            - **Unique Features:** No notable irregularities in shape or color asymmetry.
-            - **Associated Symptoms:** No itching, pain, or any other associated symptoms are noted.
-            - **Severity:** Mild.
-
-            ### 3. Diagnostic Assessment
-            - **Primary Diagnosis:** Benign nevi (mole) with high confidence.
-            - **Differential Diagnoses:**
-            1. **Seborrheic Keratosis:** Common benign skin growth; typically appears raised and varies in color.
-                - **Evidence:** Comparatively irregular borders and a warty texture would not fit here.
-            2. **Melanoma:** Rarely presents as an isolated small dark lesion but must be ruled out, especially if there are changes.
-                - **Evidence:** Lack of asymmetry or irregular borders reduces likelihood.
-            3. **Lentigo:** Benign flat brown lesions; does not fit the profile due to lack of prominence.
-                - **Evidence:** Shape and borders are more characteristic of a nevus.
-            - **Urgent Findings:** None; the lesion appears stable and benign.
-
-            ### 4. Research Context
-            Searching for recent literature and guidelines related to benign nevi and differential diagnoses.
-
-            #### Relevant Literature and Guidelines
-            - **Recent Medical Literature:**
-            - Investigating the characteristics and management of skin lesions.
+        "RAG": """
+        ### 1. Image Region
+        - **Anatomical Region:** The image displays the right cheek, temple, and periorbital (around the eye) region of the face.
+        - **Contextual Details:** This is a seborrheic area with a high density of pilosebaceous units, making it a common site for inflammatory skin conditions like acne. The presence of fine vellus hair and early beard growth suggests a post-pubertal male.
+        
+        ### 2. Key Findings
+        - **Lesion Description:**
+            - **Location and Distribution:** Multiple, discrete, and some confluent erythematous papules and pustules are scattered across the cheek and temple.
+            - **Morphology:** The primary lesions are inflammatory papules (small, red bumps) and pustules (papules with a visible white or yellow center of pus). Some lesions appear to be resolving, while others are in an active inflammatory state. Open or closed comedones (blackheads/whiteheads) are not clearly visible but are presumed to be present. There is no evidence of deep nodules or cysts.
+            - **Color and Texture:** The lesions are predominantly erythematous (red) to pink. The surrounding skin shows mild inflammation.
+            - **Borders:** Individual lesions are well-demarcated.
+        - **Associated Symptoms:** Based on the inflammatory nature, associated symptoms would typically include mild tenderness or pruritus (itching).
+        - **Severity:** **Moderate**. The severity is graded as moderate due to the presence of numerous inflammatory papules and pustules, without the presence of more severe nodulocystic lesions.
+        
+        ### 3. Diagnostic Assessment
+        - **Primary Diagnosis:** **Acne Vulgaris** (Confidence: High)
+            - **Supporting Evidence:** The diagnosis is strongly supported by the clinical presentation of inflammatory papules and pustules distributed across a seborrheic area of the face in a pattern characteristic of this common condition. The morphology of the lesions is pathognomonic for inflammatory acne.
+        
+        - **Differential Diagnoses:**
+            1.  **Papulopustular Rosacea:** (Confidence: Low)
+                - **Supporting Evidence:** Can also present with erythematous papules and pustules on the face.
+                - **Distinguishing Features:** Rosacea is typically associated with a background of persistent erythema, flushing, and telangiectasias, and importantly, lacks comedones. The distribution in the image is more typical for acne than the central-facial pattern of rosacea.
+            2.  **Staphylococcal Folliculitis:** (Confidence: Low)
+                - **Supporting Evidence:** Presents as perifollicular pustules and papules.
+                - **Distinguishing Features:** While morphologically similar, bacterial folliculitis can occur anywhere on hair-bearing skin and is not typically associated with the comedonal component of acne. The polymorphic nature of the lesions in the image (various stages of development) is more indicative of acne vulgaris.
+            3.  **Drug-Induced Acne (Acneiform Eruption):** (Confidence: Low)
+                - **Supporting Evidence:** Certain medications (e.g., steroids, anticonvulsants) can trigger an acne-like eruption.
+                - **Distinguishing Features:** These eruptions are often monomorphic (lesions are all in the same stage of development) and can appear in atypical locations. A thorough patient history would be required to rule this out, but the presentation is classic for common acne vulgaris. The knowledge base suggests considering anabolic steroid use in refractory cases.
+        
+        - **Critical Findings:** There are no findings that suggest a medical emergency. However, moderate inflammatory acne can lead to scarring and significant psychosocial distress if not managed effectively.
+        
+        ### 4. Research Context
+        The diagnosis of acne vulgaris is primarily clinical, based on the presence of characteristic lesions (comedones, papules, pustules, nodules) in typical locations (face, neck, chest, back, and shoulders).
+        
+        - **Diagnostic Criteria and Clinical Guidelines:**
+            - The American Academy of Dermatology (AAD) guidelines emphasize diagnosis through a physical exam, identifying the type and severity of lesions to guide treatment.
+            - For moderate acne, as seen here, guidelines recommend topical combination therapy (e.g., topical retinoid and benzoyl peroxide) with or without an oral antibiotic.
+            - The knowledge base notes that in severe or refractory cases, clinicians should re-evaluate the patient history for exacerbating factors like medications or underlying endocrine conditions such as Polycystic Ovary Syndrome (PCOS) in females.
+        
+        - **Evidence-Based Insights:**
+            - Acne is a chronic inflammatory disease of the pilosebaceous unit. Its pathogenesis is multifactorial, involving follicular hyperkeratinization, increased sebum production, proliferation of *Cutibacterium acnes* (*C. acnes*), and inflammation.
+            - Treatment strategies are aimed at targeting these factors. Combination therapy is considered the standard of care as it addresses multiple pathogenic pathways and can reduce the risk of antibiotic resistance.
+        
+        - **Relevant Medical Resources:**
+            - **Key Studies:** Clinical trials consistently demonstrate that combination therapy is more effective than monotherapy for moderate acne. For example, studies comparing a fixed-dose combination of adapalene-benzoyl peroxide to either agent alone show superior efficacy.
             - **Guidelines:**
-            - Dermatoscopic criteria for assessing moles.
-
-            I'll conduct searches for recent medical literature and guidelines now.### 4. Research Context (Continued)
-
-            #### Relevant Literature
-            - **Studies on Benign Nevi:**
-            - **[The 2023 WHO updates on skin tumors: advances since the 2018 edition](https://pmc.ncbi.nlm.nih.gov/articles/PMC11460152/)**
-                - Focuses on the classification of melanocytic tumors, including benign nevi.
-            - **[Common Benign Melanocytic and Non-Melanocytic Skin Tumors - PubMed](https://pubmed.ncbi.nlm.nih.gov/36657431/)**
-                - Discusses various benign skin tumors and correlates their characteristics with factors like sun exposure.
-            - **[MPATH-Dx version 2.0 schema for melanocytic lesions](https://www.sciencedirect.com/science/article/pii/S0738081X24001767)**
-                - Outlines the latest diagnostic criteria for melanocytic lesions, aiding in distinguishing benign from malignant.
-
-            #### Relevant Guidelines and Resources
-            - **[Clinical Guidelines - American Academy of Dermatology](https://www.aad.org/practicecenter/quality/clinical-guidelines)**
-            - Guidelines regarding the diagnosis and management of skin conditions, essential for clinical practice.
-            - **[Melanocytic Nevi - StatPearls](https://www.ncbi.nlm.nih.gov/books/NBK470451/)**
-            - A comprehensive overview of pigmented lesions, including benign nevi and their characteristics.
-
-            #### Key References
-            1. **The 2023 WHO updates on skin tumors** - Important for understanding updates on diagnostic criteria.
-            2. **Common Benign Melanocytic and Non-Melanocytic Skin Tumors - PubMed** - Relevant for current understanding of benign skin tumors.
-            3. **MPATH-Dx version 2.0 schema for melanocytic lesions** - Crucial for accurate diagnosis and classification of melanocytic lesions.
-
-            This research supports the primary diagnosis of benign nevi and guides any further assessment or monitoring necessary for patient care.
-        """,
+                - Zaenglein, A. L., Pathy, A. L., Schlosser, B. J., Alikhan, A., Baldwin, H. E., Berson, D. S., ... & Keri, J. E. (2016). Guidelines of care for the management of acne vulgaris. *Journal of the American Academy of Dermatology*, 74(5), 945-973.
+                - Thiboutot, D. M., Dréno, B., Abanmi, A., et al. (2018). Practical management of acne for clinicians: An international consensus from the Global Alliance to Improve Outcomes in Acne. *Journal of the American Academy of Dermatology*, 78(2S), S1-S23.
+        
+        - **Key ReferThe image displays a sun-exposed area of the face, specifically the right lateral aspect, which includes the cheek, temple, and extending towards the hairline. The skin appears to be relatively healthy with minimal signs of redness or inflammation. However, there are several areas of concern that require further examination and treatment. The acne lesions, particularly the papules and pustules, are located on the cheeks and templesences:**
+            1.  James, W. D., Elston, D. M., Treat, J. R., Rosenbach, M. A., & Neuhaus, I. M. (2020). *Andrews' Diseases of the Skin: Clinical Dermatology*. (13th ed.). Elsevier.
+            2.  Bolognia, J. L., Schaffer, J. V., & Cerroni, L. (2017). *Dermatology*. (4th ed.). Elsevier.
+            3.  Zaenglein, A. L., et al. (2016). Guidelines of care for the management of acne vulgaris. *Journal of the American Academy of Dermatology*, 74(5), 945-973.        """,
+        "WebSearch": """
+           Based on a thorough analysis of the provided image, here is a detailed dermatological assessment.
+            ### 1. Image Region
+            - **Anatomical Region:** The image displays the right lateral aspect of the face, specifically the cheek, temple, and extending towards the hairline.
+            - **Contextual Details:** This is a sun-exposed area with a high concentration of pilosebaceous units (hair follicles and sebaceous glands), making it a very common site for acne.
+            
+            ### 2. Key Findings
+            - **Primary Observations:** The skin exhibits multiple scattered, discrete lesions against a background of normal skin tone.
+            - **Lesion Description:**
+                - **Location and Distribution:** Inflammatory lesions are spread across the cheek and temple.
+                - **Type and Shape:** The predominant lesions are erythematous (red) papules (small, raised bumps) and some pustules (pus-filled bumps). They are generally round to oval in shape.
+                - **Size and Color:** Lesions vary in size from approximately 2 to 5 mm in diameter. The color is primarily pink to red, indicative of active inflammation. Some lesions appear to be resolving, leaving faint red marks known as post-inflammatory erythema.
+                - **Borders and Texture:** The borders of the lesions are fairly well-defined. The texture is characterized by raised, inflamed bumps. There are no visible open comedones (blackheads) or cysts.
+            - **Associated Symptoms:** While not visible, this condition is often associated with mild soreness or tenderness upon palpation. It can also be asymptomatic.
+            - **Severity Rating:** **Moderate**. This classification is based on the presence of numerous inflammatory papules and pustules, without evidence of more severe nodular or cystic lesions.
+            
+            ### 3. Diagnostic Assessment
+            - **Primary Diagnosis:** **Moderate Inflammatory Acne Vulgaris** (Confidence: High)
+                - **Supporting Evidence:** The clinical presentation of inflammatory papules and pustules on the face of what appears to be a younger individual is classic for acne vulgaris. The density and type of lesions are consistent with a moderate severity level, as defined by major dermatological guidelines.
+            - **Differential Diagnoses:**
+                1.  **Papulopustular Rosacea:** This condition also presents with red papules and pustules. However, it is typically accompanied by persistent background redness (erythema), flushing, and telangiectasias (visible small blood vessels), none of which are clearly evident here. Rosacea also lacks comedones, which are the primary lesion of acne (though not visible here, they are presumed to be part of the underlying process).
+                2.  **Staphylococcal Folliculitis:** A bacterial infection of hair follicles can mimic inflammatory acne. However, folliculitis lesions are often more uniform in size, dome-shaped, and may have a central hair. The varied appearance of the lesions in the image makes acne more likely.
+            - **Critical Findings:** There are no critical or urgent findings that suggest a medical emergency. However, moderate acne warrants medical attention to prevent potential long-term effects such as scarring and post-inflammatory hyperpigmentation, as well as to mitigate the significant psychosocial impact it can have.
+            
+            ### 4. Research Context
+            Recent medical literature emphasizes the inflammatory nature of acne vulgaris, even at its earliest stages, and guidelines are continuously updated to reflect the best treatment practices.
+            
+            - **Diagnostic and Treatment Guidelines:**
+                The American Academy of Dermatology (AAD) provides the most widely recognized guidelines for acne management. The most recent update in 2024 continues to classify acne based on the type and number of lesions (comedonal, papulopustular, nodular) and overall severity. For moderate inflammatory acne, as seen here, guidelines typically recommend a combination of topical therapies (e.g., retinoids, benzoyl peroxide, topical antibiotics) and potentially oral antibiotics or hormonal agents for females.
+            
+            - **Pathophysiology Insights:**
+                Modern research highlights that acne is fundamentally an inflammatory disease. Inflammation is not just a consequence of bacterial growth (*Cutibacterium acnes*) but is involved from the very beginning of lesion formation. Factors such as the host's immune response to *C. acnes*, sebum composition, and genetic predispositions are key drivers of the inflammatory cascade that results in the visible papules and pustules.
+            
+            - **Relevant Medical Links and Key References:**
+                Here are key resources and peer-reviewed articles that support this assessment and provide further information on diagnosis and management:
+            
+                1.  **American Academy of Dermatology (AAD) Acne Clinical Guideline (2024):** This guideline is the cornerstone for evidence-based management of acne vulgaris in the United States and is influential globally.
+                    - **Reference:** Reynolds, R. V., et al. (2024). *Guidelines of care for the management of acne vulgaris*. Journal of the American Academy of Dermatology. (Note: The 2024 update provides the latest recommendations.)
+            
+                2.  **Review on Acne Pathophysiology and Treatment (2023):** This article provides a comprehensive overview of the inflammatory mechanisms underlying acne and discusses how current and future treatments target these pathways.
+                    - **Reference:** Tang, Y., et al. (2023). *Acne vulgaris: A review of the pathophysiology, treatment, and recent nanotechnology based advances*. International Journal of Pharmaceutics. This article discusses the complex interplay of factors leading to acne lesions.
+            
+                3.  **Article on Targeting Inflammation in Acne (2023):** This recent review focuses specifically on the role of inflammation and the therapeutic agents designed to control it, which is directly relevant to the patient's presentation.
+                    - **Reference:** Thiboutot, D. M., & Zaenglein, A. L. (2023). *Targeting Inflammation in Acne: Current Treatments and Future Prospects*. American Journal of Clinical Dermatology. This provides insight into the rationale for using anti-inflammatory treatments.
+             - Running: search_knowledge_base(query=acne vulgaris diagnostic criteria and clinical guidelines)
+           """,
+        "SkinGPT":
+        """  
+        ### 1. Image Region
+        - **Anatomical Location:** The images display the side of a person's face, including the cheek, temple, and jawline area.
+        - **Contextual Details:** This is a seborrheic area (oil-producing) and a common site for follicular-based skin conditions. The presence of facial hair (stubble/sideburns) is noted.
+        
+        ### 2. Key Findings
+        - **Lesion Description:** The skin exhibits multiple, scattered lesions of varying types.
+            - **Distribution:** The lesions are widespread across the cheek and temple in a follicular pattern (centered around hair follicles).
+            - **Primary Lesions:** The predominant lesions are inflammatory papules (small, red, raised bumps) and pustules (papules with a visible white/yellow pus-filled center). Some smaller, non-inflammatory bumps may represent closed comedones (whiteheads).
+            - **Color:** Lesions are erythematous (pink to red), with some showing a central purulent collection.
+            - **Texture:** The overall skin surface appears uneven and bumpy due to the numerous lesions.
+            - **Associated Signs:** There is localized erythema surrounding the inflammatory lesions. No significant scaling, erosions, or honey-colored crusting is apparent.
+        - **Severity:** Based on the number and type of inflammatory lesions, the condition is rated as **Moderate**. There are no visible nodules or cysts, which would indicate a more severe form.
+        
+        ### 3. Diagnostic Assessment
+        - **Primary Diagnosis:** **Acne Vulgaris** (Confidence: High)
+            - **Rationale:** The clinical presentation is classic for moderate inflammatory acne. The key supporting features are the patient's likely age demographic (adolescent or young adult), the location on the face, and the polymorphic nature of the lesions, including inflammatory papules and pustules, likely arising from comedones. This aligns strongly with the high prior probability (72.3%) provided by the AI.
+        
+        - **Differential Diagnoses:**
+            1.  **Papulopustular Rosacea:** This is a reasonable differential but less likely. Rosacea typically presents in an older age group (30+) and is characterized by a background of persistent facial erythema and telangiectasias (visible small blood vessels), which are not apparent here. Crucially, rosacea lacks comedones, which are the primary lesion of acne.
+            2.  **Bacterial Folliculitis:** This is an infection of the hair follicles, which can present with erythematous papules and pustules. However, folliculitis lesions are typically monomorphic (all appearing at the same stage of development), whereas the lesions in the image appear polymorphic (in various stages), which is more characteristic of acne. This diagnosis corresponds to the AI's second suggestion but is less likely than acne given the overall picture.
+            3.  **Pityrosporum (Malassezia) Folliculitis:** This fungal condition presents as monomorphic, often itchy, papules and pustules, typically on the upper trunk, but can affect the face. The polymorphic appearance here makes it less probable.
+        
+        - **Critical Findings:** There are no critical or urgent findings requiring immediate emergency attention. However, moderate acne can lead to permanent scarring and significant psychosocial distress. Therefore, a consultation with a dermatologist or primary care provider for appropriate treatment is recommended.
+        """
     }
 
     # generate report
     report = reasoning_agent.generate_report(current_case)
     print(json.dumps(report, indent=2))
+

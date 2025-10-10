@@ -21,12 +21,21 @@ class TreatmentRecommendAgent:
         """
         self.model = model
         self.api_key = api_key
-        self.agent = Agent(
-            model=Gemini(id=self.model, api_key=self.api_key),
-            tools=[BochaSearchTool(api_key=searchapi_key)],  # ←这里
-            debug_mode=False,
-            structured_outputs=True
-        )
+        if self.api_key.startswith('sk-'):
+            self.agent = Agent(
+                model=OpenAIChat(base_url="https://hiapi.online/v1", api_key=api_key),
+                tools=[BochaSearchTool(api_key=searchapi_key)],  # ←这里
+                debug_mode=False,
+                structured_outputs=True
+
+            )
+        else:
+            self.agent = Agent(
+                model=Gemini(id=self.model, api_key=self.api_key),
+                tools=[BochaSearchTool(api_key=searchapi_key)],  # ←这里
+                debug_mode=False,
+                structured_outputs=True
+            )
     
     def analyze(self, current_case):
         """
@@ -40,6 +49,20 @@ class TreatmentRecommendAgent:
         """
         # Run analysis
         query = get_treatment_recommend_prompt(current_case)
+        if self.api_key.startswith('sk-'):
+            messages = [
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": f"{query}"
+                        }
+                    ]
+                }
+            ]
+            response = self.agent.run(messages=messages)
+            return response.content
         response = self.agent.run(query)
         response = remove_json_markers(response.content)
         return response
