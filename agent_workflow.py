@@ -18,7 +18,9 @@ from prompt_template import get_domain_expert_prompt
 
 async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name, output_folder):
     tasks = []
-    prob_vec = all_agents['SkinGPT'].get_prob_vec(image_path=image_path)
+    prob_vec = []
+    if all_agents.get('SkinGPT'):
+        prob_vec = all_agents['SkinGPT'].get_prob_vec(image_path=image_path)
     for domain, agent in all_agents.items():
         query = get_domain_expert_prompt(domain, prob_vec=prob_vec)
         tasks.append(async_analyze(agent, query, image_path))
@@ -45,21 +47,21 @@ def save_output(output_data, agent_name, output_folder):
             output_data[key] = unescape(value)
     existing_data = {}
     if os.path.isfile(output_file_path):
-        with open(output_file_path, "r", encoding="utf-8") as f:
+        with open(output_file_path, "r", encoding="utf-8", errors='replace') as f:
             try:
                 existing_data = json.load(f)
             except json.JSONDecodeError:
                 existing_data = {}
     existing_data.update(output_data)
-    with open(output_file_path, "w", encoding="utf-8") as f:
+    with open(output_file_path, "w", encoding="utf-8", errors="replace") as f:
         json.dump(existing_data, f, indent=4, ensure_ascii=False)
 
 
 def WorkFlow(
         all_agents,                    # 所有智能体的集合
-        treatment_recommend_agent,     # 治疗推荐智能体
-        reasoning_agent,               # 推理智能体
-        case_review_agent,             # 案例审查智能体
+        treatment_recommend_agent=None,     # 治疗推荐智能体
+        reasoning_agent = None,               # 推理智能体
+        case_review_agent = None,             # 案例审查智能体
         output_folder="output/",       # 输出文件夹路径，默认为"output/"
         image_path="",                 # 图片路径，默认为空字符串
 
@@ -74,37 +76,43 @@ def WorkFlow(
     treatment_recommend_output = {}  # 存储治疗推荐结果
     # 异步执行图像分析任务
     asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name, output_folder))
-
     # Generate report
-    print("Generating report")
-    report = reasoning_agent.generate_report({
-        "WebSearch": web_search_output.get(image_name, ""),
-        "RAG": rag_output.get(image_name, ""),
-        "SkinGPT": skin_gpt_output.get(image_name, "")
-    })
-    reasoning_output[image_name] = report
-    save_output(reasoning_output, "Reasoning", output_folder)
+    if reasoning_agent is not None:
+        print("Generating report")
+        report = reasoning_agent.generate_report({
+            "WebSearch": web_search_output.get(image_name, ""),
+            "RAG": rag_output.get(image_name, ""),
+            "SkinGPT": skin_gpt_output.get(image_name, "")
+        })
+        reasoning_output[image_name] = report
+        save_output(reasoning_output, "Reasoning", output_folder)
+    else:
+        return
+    if case_review_agent is not None:
+        # Case review
+        print("Case reviewing")
+        review_report = case_review_agent.review_case(report)
+        # print(review_report)
+        case_review_output[image_name] = review_report
+        # Update the case in the database
+        ## !!!!!
+        ## May need to be optimized, because only good cases could be added
+        case_review_agent._add_case_to_knowledge_graph(review_report)
+        save_output(case_review_output, "CaseReview", output_folder)
+    else:
+        return
+    if treatment_recommend_agent is not None:
+        # Treatment recommendation
+        print("Treatment recommending")
+        try:
+            treatment_recommend_result = treatment_recommend_agent.analyze(review_report)
+            treatment_recommend = json.loads(treatment_recommend_result)
+            treatment_recommend_output[image_name] = treatment_recommend
+        except json.JSONDecodeError as e:
+            print(f"Error decoding JSON: {e}")
+            print(f"Invalid JSON received: {treatment_recommend_result}")
+            treatment_recommend_output[image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
 
-    # Case review
-    print("Case reviewing")
-    review_report = case_review_agent.review_case(report)
-    print(review_report)
-    case_review_output[image_name] = review_report
-    # Update the case in the database
-    ## !!!!!
-    ## May need to be optimized, because only good cases could be added
-    case_review_agent._add_case_to_knowledge_graph(review_report)
-    save_output(case_review_output, "CaseReview", output_folder)
-    # Treatment recommendation
-    print("Treatment recommending")
-    try:
-        treatment_recommend_result = treatment_recommend_agent.analyze(review_report)
-        treatment_recommend = json.loads(treatment_recommend_result)
-        treatment_recommend_output[image_name] = treatment_recommend
-        end_time = time.time()
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON: {e}")
-        print(f"Invalid JSON received: {treatment_recommend_result}")
-        treatment_recommend_output[image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
-
-    save_output(treatment_recommend_output, "TreatmentRecommend", output_folder)
+        save_output(treatment_recommend_output, "TreatmentRecommend", output_folder)
+    else:
+        return

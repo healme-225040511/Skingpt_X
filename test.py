@@ -1,15 +1,69 @@
-import re
+import base64
+from openai import OpenAI
+import os
+import sys
 
-text = """
-1.  **Syringomas:**
-        - **Rationale:** These are benign tumors of the sweat ducts that also present as small, skin-colored or yellowish papules, commonly in the periorbital area. They can be difficult to distinguish from milia visually but are often flatter and may coalesce into plaques.
-    2.  **Sebaceous Hyperplasia:**
-        - **Rationale:** This condition involves enlarged sebaceous (oil) glands, presenting as yellowish papules. However, they typically have a central depression or umbilication, which is not clearly visible on the lesions in the image. They are also more common on the forehead and nose.
-    3.  **Flat Warts (Verruca Plana):**
-        - **Rationale:** These are small, flat-topped papules caused by the human papillomavirus (HPV). They can be numerous on the face but usually have a flatter, rougher surface compared to the smooth, dome-shaped appearance of the lesions shown.
-"""
 
-# 使用正则表达式匹配**和****之间的疾病名
-pattern = re.compile(r'^\s*\d+\.\s*\*\*(.+?):\*\*', re.M)
-diseases = [m.strip() for m in pattern.findall(text)]
-print(diseases)
+client = OpenAI(api_key="sk-iCv69YeaJn8TXm9tk6ZUUAqftw51aB2yddvmstNNl7QjkIKB", base_url="https://hiapi.online/v1")
+
+
+
+
+
+def encode_image_to_base64(image_path):
+
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"错误：找不到图片文件 '{image_path}'")
+
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
+
+
+
+image_path = "./workflow.png"
+
+try:
+    base64_image = encode_image_to_base64(image_path)
+
+    image_mime_type = "image/jpeg"
+    if image_path.lower().endswith(".png"):
+        image_mime_type = "image/png"
+    elif image_path.lower().endswith(".gif"):
+        image_mime_type = "image/gif"
+    elif image_path.lower().endswith(".webp"):
+        image_mime_type = "image/webp"
+
+
+    completion_stream = client.chat.completions.create(
+        model="gemini-2.5-pro",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "describe this image"
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": dict(url=f"data:{image_mime_type};base64,{base64_image}")
+                    }
+                ]
+            }
+        ]
+    )
+
+
+    print("AI的回应: ", end="")
+    for chunk in completion_stream:
+        content = chunk.choices[0].delta.content
+        if content:
+            print(content, end="")
+            sys.stdout.flush()
+
+    print()
+
+except FileNotFoundError as e:
+    print(e)
+except Exception as e:
+    print(f"发生了一个错误: {e}")

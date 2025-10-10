@@ -15,7 +15,7 @@ from utils import safe_load_json
 
 
 class CaseReviewAgent:
-    def __init__(self, model: str, neo4j_uri: str, neo4j_user: str, neo4j_password: str, clear_mode: bool = True):
+    def __init__(self, model: str, neo4j_uri: str, neo4j_user: str, neo4j_password: str, clear_mode: bool = True, api_key=''):
         """
         Initialize the CaseReviewAgent with an API key and Neo4j connection details.
         
@@ -30,7 +30,7 @@ class CaseReviewAgent:
 
         # Initialize Neo4j driver
         self.driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
-
+        self.api_key = api_key
         # Clear all Case nodes in the Neo4j database
         if clear_mode:
             self.clear_all_case_nodes()
@@ -83,7 +83,8 @@ class CaseReviewAgent:
                 presence_penalty=0, 
                 stop=None, 
                 system_role=reviewer, 
-                user_input=prompt
+                user_input=prompt,
+                api_key=self.api_key
             )
             report = safe_load_json(response)
         else:
@@ -104,7 +105,6 @@ class CaseReviewAgent:
                 return
             confidence_level = new_case_data.get("ConfidenceLevel", "N/A")
             differential_diagnoses = new_case_data.get("DifferentialDiagnoses", [])
-            print(differential_diagnoses)
             key_findings = new_case_data.get("KeyFindings", "N/A")
             knowledge_and_research = new_case_data.get("KnowledgeAndResearch", "N/A")
 
