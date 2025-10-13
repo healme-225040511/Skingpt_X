@@ -1,4 +1,3 @@
-/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10 AgentWorkflowEvaluator.py --dataset_root /Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split2  --api_key AIzaSyDClRNJkcDgHv2wA90v6TODPvBlu8umIWU
-/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10 AgentWorkflowEvaluator.py --dataset_root /Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split2  --api_key AIzaSyDClRNJkcDgHv2wA90v6TODPvBlu8umIWU --is_single_agent True --agent_type 0
-
-python AgentWorkflowEvaluator.py --dataset_root /root/autodl-tmp/SkinGPT-X-Dataset/Dermnet/evaluation_split2 --output_root /root/autodl-tmp/SkinGPT-X-EvaluationResults/Dermnet/test --markdown_file_path /root/autodl-tmp/Skingpt_X/skin_handbook.md
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10 AgentWorkflowEvaluator.py --dataset_root /Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split1  --api_key AIzaSyDClRNJkcDgHv2wA90v6TODPvBlu8umIWU --is_single_agent True --agent_type 0
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10 AgentWorkflowEvaluator.py --dataset_root /Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split1  --api_key AIzaSyDClRNJkcDgHv2wA90v6TODPvBlu8umIWU --is_single_agent True --agent_type 1
+/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10 AgentWorkflowEvaluator.py --dataset_root /Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split1  --api_key AIzaSyDClRNJkcDgHv2wA90v6TODPvBlu8umIWU --is_single_agent True --agent_type 2

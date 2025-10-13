@@ -107,7 +107,8 @@ class WebSearchAgent:
                     os.remove(temp_path)
                     return response.content
             except Exception as e:
-                return f"Analysis error: {e}"
+                print(f"Websearch agent analysis error: {e}")
+                return None
         else:
             return "Please provide a valid image file path."
 
