@@ -4,6 +4,8 @@ import time
 import hashlib
 import asyncio
 from html import unescape
+from pathlib import Path
+
 from tqdm import tqdm
 
 # 假设以下模块已定义并可用
@@ -15,7 +17,10 @@ from case_review_agent import CaseReviewAgent
 from treatment_recommend_agent import TreatmentRecommendAgent
 from prompt_template import get_domain_expert_prompt
 
-
+WEB_SEARCH_AGENT_OUTPUT_PATH = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/WebSearch_output.json"
+RAG_AGENT_OUTPUT_PATH = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output.json"
+SKINGPT_AGENT_OUTPUT_PATH = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/SkinGPT_output.json"
+REASONING_AGENT_OUTPUT_PATH = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output.json"
 async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name, output_folder):
     tasks = []
     prob_vec = []
@@ -56,6 +61,41 @@ def save_output(output_data, agent_name, output_folder):
     with open(output_file_path, "w", encoding="utf-8", errors="replace") as f:
         json.dump(existing_data, f, indent=4, ensure_ascii=False)
 
+def getAgentOutputs(json_path):
+    """
+        把形如 {"file1.jpg": "诊断文本...", "file2.png": "诊断文本...", ...}
+        的 JSON 文件读进来，按文件名建立索引并返回 dict。
+
+        参数
+        ----
+        json_path : str | pathlib.Path
+            原始 JSON 文件路径。
+
+        返回
+        ----
+        dict[str, Any]
+            key -> 文件名（含后缀）
+            value -> 该文件对应的整个 value（字符串或嵌套结构均可）。
+        """
+    json_path = Path(json_path)  # 统一成 Path，兼容各种系统
+    with json_path.open(encoding="utf-8") as f:
+        data = json.load(f)  # data 就是顶层 dict
+
+    if not isinstance(data, dict):
+        raise ValueError("JSON 顶层必须是对象（dict）结构！")
+
+    # 直接返回，key 已经是文件名
+    return data
+def getReasoningReport(json_path):
+    json_path = Path(json_path)  # 统一成 Path，兼容各种系统
+    with json_path.open(encoding="utf-8") as f:
+        data = json.load(f)  # data 就是顶层 dict
+
+    if not isinstance(data, dict):
+        raise ValueError("JSON 顶层必须是对象（dict）结构！")
+
+    # 直接返回，key 已经是文件名
+    return data
 
 def WorkFlow(
         all_agents,                    # 所有智能体的集合
@@ -75,22 +115,25 @@ def WorkFlow(
     case_review_output = {}    # 存储案例审查结果
     treatment_recommend_output = {}  # 存储治疗推荐结果
     # 异步执行图像分析任务
-    asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name, output_folder))
+    asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
+                              output_folder))
     # Generate report
     if reasoning_agent is not None:
         print("Generating report")
         report = reasoning_agent.generate_report({
-            "WebSearch": web_search_output.get(image_name, ""),
-            "RAG": rag_output.get(image_name, ""),
-            "SkinGPT": skin_gpt_output.get(image_name, "")
+            "WebSearch": web_search_output.get(image_name, "") if any(web_search_output.values()) else
+            getAgentOutputs(WEB_SEARCH_AGENT_OUTPUT_PATH)[image_name],
+            "RAG": rag_output.get(image_name, "") if any(rag_output.values()) else
+            getAgentOutputs(RAG_AGENT_OUTPUT_PATH)[image_name],
+            "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
+            getAgentOutputs(SKINGPT_AGENT_OUTPUT_PATH)[image_name]
         })
         reasoning_output[image_name] = report
         save_output(reasoning_output, "Reasoning", output_folder)
-    else:
-        return
     if case_review_agent is not None:
         # Case review
         print("Case reviewing")
+        report = report if reasoning_agent is not None else getReasoningReport(REASONING_AGENT_OUTPUT_PATH)[image_name]
         review_report = case_review_agent.review_case(report)
         # print(review_report)
         case_review_output[image_name] = review_report
