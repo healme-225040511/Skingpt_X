@@ -47,6 +47,8 @@ def EvaluationOnDermnet(
     """
     disease_dirs = [d for d in Path(dataset_root).iterdir() if d.is_dir()]
     all_agents = {}
+    reasoning_agent = None
+    case_review_agent = None
     selected_agent = 'SkinGPT'
     if is_single_agent:
         if int(agent_type) == 0:
@@ -64,30 +66,29 @@ def EvaluationOnDermnet(
             }
             selected_agent = 'RAG'
     else:
-        all_agents = {
-            "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv'),
-            "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
-            "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
-                                        searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
-                                        temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
-        }
-    if not is_single_agent:
-        reasoning_agent = ReasoningAgent(model="gemini-2.5-flash", api_key=api_key)
+        # all_agents = {
+        #     "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv'),
+        #     "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
+        #     "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
+        #                                 searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
+        #                                 temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
+        # }
+        # reasoning_agent = ReasoningAgent(model="gemini-2.5-flash", api_key=api_key)
+        selected_agent = 'CaseReview'
         case_review_agent = CaseReviewAgent(model="gemini-2.5-flash", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
                                             neo4j_password=neo4j_password, clear_mode=False, api_key=api_key)
-        treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-flash", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
+        # treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-flash", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
     if not disease_dirs:
         print("⚠️  数据集根目录下没有找到任何疾病文件夹")
         return
-    logFilePath = os.path.join(output_root, "processed.log")
-    logFilePathList = load_set(logFilePath)
+    # logFilePath = os.path.join(output_root, "processed.log")
+    # logFilePathList = load_set(logFilePath)
 
     with open(os.path.join(output_root, f'{selected_agent}_output.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     # 提取所有以 .jpg 结尾的键名
     processedFiles = [key for key in data.keys() if key.endswith('.jpg')]
-
     for disease_dir in disease_dirs:
         print('⏳ 正在处理疾病：', disease_dir.name)
         diseasePath = os.path.join(dataset_root, disease_dir.name)
@@ -103,7 +104,7 @@ def EvaluationOnDermnet(
                 WorkFlow(
                     all_agents=all_agents,
                     # reasoning_agent=reasoning_agent,
-                    # case_review_agent=case_review_agent,
+                    case_review_agent=case_review_agent,
                     # treatment_recommend_agent=treatment_recommend_agent,
                     output_folder=output_root,
                     image_path=os.path.join(diseasePath, imgName),
