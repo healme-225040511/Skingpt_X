@@ -1,5 +1,6 @@
 import os
 import json
+import sys
 import time
 import hashlib
 import asyncio
@@ -57,6 +58,8 @@ def save_output(output_data, agent_name, output_folder):
                 existing_data = json.load(f)
             except json.JSONDecodeError:
                 existing_data = {}
+                print('open json file error')
+                sys.exit(1)
     existing_data.update(output_data)
     with open(output_file_path, "w", encoding="utf-8", errors="replace") as f:
         json.dump(existing_data, f, indent=4, ensure_ascii=False)
