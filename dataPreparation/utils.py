@@ -2,7 +2,7 @@ import json, csv
 import os
 import sys
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Any
 
 import pandas as pd
 
@@ -38,6 +38,7 @@ def get_label_from_filename(json_path, csv_path):
         writer.writerows(rows)
     return
 
+
 def modify_filename(dataset_dir: str, json_path: str, out_json: str):
     # 1. 读 json，拿到所有文件名
     with open(json_path, 'r', encoding='utf-8') as f:
@@ -65,12 +66,52 @@ def modify_filename(dataset_dir: str, json_path: str, out_json: str):
     print(f'Done！已生成 {out_json}')
 
 
+def build_filename_map(json_file: str, path_file: str) -> Dict[str, str]:
+    """同之前：裸文件名 → 完整路径"""
+    with open(json_file, encoding='utf-8') as fj, open(path_file, encoding='utf-8') as fp:
+        j_keys = json.load(fj).keys()
+        p_keys = json.load(fp).keys()
+    name_to_full = {Path(k).name: k for k in p_keys}
+    mapping = {}
+    for k in j_keys:
+        bare = Path(k).name
+        full = name_to_full.get(bare)
+        if full is None:
+            raise KeyError(f'在 path_file 中找不到文件名：{bare}')
+        mapping[bare] = full
+    return mapping
+
+
+def remap_to_new_file(src_json: str, path_json: str, dst_json: str) -> None:
+    """
+    把 src_json 的 key 按 path_json 的映射规则替换后，写入全新文件 dst_json
+    """
+    # 1. 计算映射
+    mapping = build_filename_map(src_json, path_json)
+
+    # 2. 读取原数据
+    with open(src_json, encoding='utf-8') as f:
+        old_data = json.load(f)
+
+    # 3. 替换 key
+    new_data = {mapping[Path(k).name]: v for k, v in old_data.items()}
+
+    # 4. 写入新文件
+    with open(dst_json, 'w', encoding='utf-8') as f:
+        json.dump(new_data, f, ensure_ascii=False, indent=4)
+
+
 if __name__ == '__main__':
-    base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
-    json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
-                                  '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_output.csv')
-    # get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
-    #                         '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels.csv')
+    # base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
+    # json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output_new.json',
+    #                               '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_output.csv')
+    get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output_new.json',
+                            '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels_CaseReview.csv')
     # modify_filename(json_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
     #                 out_json='/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
     #                 dataset_dir='/Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split2')
+    # ----------------- 用法示例 -----------------
+    # remap_to_new_file("/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output.json",
+    #                   "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json",
+    #                   "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output_new.json")
+    # print("已生成新文件：CaseReview_output_new.json")

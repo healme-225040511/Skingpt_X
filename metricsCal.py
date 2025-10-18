@@ -4,6 +4,7 @@
 
 import re
 from pathlib import Path
+from typing import Dict, List, Set
 
 import numpy as np
 import pandas as pd
@@ -48,7 +49,7 @@ def extractDiagnosisFromMedgamma(text: str) -> str:
 
 
 # ---------- 2. 读文件 (修改为读取原始标签，不进行预处理) ----------
-def read_pred_file_raw(path: str, using_re:bool = True) -> dict:
+def read_pred_file_raw(path: str, using_re: bool = True) -> dict:
     """
     返回 dict: filename -> raw_pred_disease
     """
@@ -197,38 +198,43 @@ def canonicalize_labels_fuzzy(
 
 # ---------- 4. 计算指标 (修改以使用规范化后的标签) ----------
 def calcMetrics(pred_file: str, label_file: str, similarity_threshold: int = 85,
-                base_image_directory: str = None, using_re: bool = False):
+                base_image_directory: str = None, using_re: bool = False,
+                output_fuzzy_csv_path: str = None):  # 新增 output_fuzzy_csv_path 参数
     """
     主函数：读文件 -> 对齐 -> 规范化 -> 算五个指标
+    并将每张图片的预测值和模糊匹配后的值写入一个CSV文件。
     Args:
         pred_file (str): 预测结果文件路径。
         label_file (str): 真实标签文件路径。
         similarity_threshold (int): 模糊匹配相似度阈值 (0-100)。
         base_image_directory (str): 包含疾病图片分类文件夹的根目录路径，用于提取文件夹名作为规范标签。
+        using_re (bool): 是否使用正则表达式从预测文本中提取诊断信息。
+        output_fuzzy_csv_path (str): 输出包含原始预测和模糊匹配后值的CSV文件的路径。
 
     Returns:
         dict: 包含计算出的各项指标。
     """
     preds_raw = read_pred_file_raw(pred_file, using_re)
     labels_raw = read_label_file_raw(label_file)
-    print(preds_raw)
-    print(labels_raw)
+    print("原始预测：", preds_raw)
+    print("原始标签：", labels_raw)
 
-    # 1. Image folder scanning (new)
-    # This dict maps image_basename -> folder_name (canonical)
+    # 1. Image folder scanning
     image_to_folder_canonical_map = {}
     if base_image_directory:
         image_to_folder_canonical_map = scan_image_folders(base_image_directory)
+        print("\n--- 图片文件名到文件夹映射 (预设规范标签) ---")
+        print(image_to_folder_canonical_map)
 
     # 2. Align data from prediction and label files
     filenames = sorted(set(preds_raw) & set(labels_raw))
-    y_true_raw_list = [labels_raw[f] for f in filenames]
-    y_pred_raw_list = [preds_raw[f] for f in filenames]
+    y_true_raw_list_ordered = [labels_raw[f] for f in filenames]
+    y_pred_raw_list_ordered = [preds_raw[f] for f in filenames]
 
     # 3. Aggregate all raw labels that need to be mapped (from files AND image names)
     all_raw_labels_for_processing = list(set(
-        y_true_raw_list +
-        y_pred_raw_list +
+        y_true_raw_list_ordered +
+        y_pred_raw_list_ordered +
         list(image_to_folder_canonical_map.keys())  # Add image base names as raw labels for processing
     ))
 
@@ -240,23 +246,42 @@ def calcMetrics(pred_file: str, label_file: str, similarity_threshold: int = 85,
     )
 
     # 5. Apply the final canonicalization map to true and predicted labels
-    # Use .get() with a fallback to raw_label itself if somehow not in mapping (shouldn't happen if processing is complete)
-    y_true = [final_canonical_mapping.get(raw_label, raw_label) for raw_label in y_true_raw_list]
-    y_pred = [final_canonical_mapping.get(raw_label, raw_label) for raw_label in y_pred_raw_list]
+    y_true_canonical = [final_canonical_mapping.get(raw_label, raw_label) for raw_label in y_true_raw_list_ordered]
+    y_pred_canonical = [final_canonical_mapping.get(raw_label, raw_label) for raw_label in y_pred_raw_list_ordered]
+
+    # 将原始预测、模糊匹配后的预测、原始标签、模糊匹配后的标签写入CSV (新增部分)
+    if output_fuzzy_csv_path:
+        fuzzy_output_data = []
+        for i, filename in enumerate(filenames):
+            raw_pred = y_pred_raw_list_ordered[i]
+            canonical_pred = y_pred_canonical[i]
+            raw_label = y_true_raw_list_ordered[i]
+            canonical_label = y_true_canonical[i]
+
+            fuzzy_output_data.append({
+                'filename': filename,
+                'raw_prediction': raw_pred,
+                'fuzzy_matched_prediction': canonical_pred,
+                'raw_ground_truth': raw_label,
+                'fuzzy_matched_ground_truth': canonical_label
+            })
+
+        df_fuzzy_output = pd.DataFrame(fuzzy_output_data)
+        df_fuzzy_output.to_csv(output_fuzzy_csv_path, index=False)
+        print(f"\n成功将原始预测、模糊匹配后的预测、原始标签和模糊匹配后的标签保存到 '{output_fuzzy_csv_path}'")
 
     # --- Debugging prints ---
     print("\n--- After Final Canonicalization ---")
     print("Full Canonical Mapping:\n", final_canonical_mapping)  # 打印完整的映射供调试
-    print("Canonicalized True Labels (mapped):", y_true)
-    print("Canonicalized Predicted Labels (mapped):", y_pred)
-
+    print("规范化后的真实标签:", y_true_canonical)
+    print("规范化后的预测标签:", y_pred_canonical)
     # --- End Debugging prints ---
 
     # 6. Encode labels and calculate metrics
-    all_labels = sorted(list(set(y_true) | set(y_pred)))
+    all_labels = sorted(list(set(y_true_canonical) | set(y_pred_canonical)))
     label2id = {l: i for i, l in enumerate(all_labels)}
-    y_true_id = np.array([label2id[l] for l in y_true])
-    y_pred_id = np.array([label2id[l] for l in y_pred])
+    y_true_id = np.array([label2id[l] for l in y_true_canonical])
+    y_pred_id = np.array([label2id[l] for l in y_pred_canonical])
 
     # --- Debugging prints ---
     print("\n--- Encoding for Metrics ---")
@@ -279,15 +304,112 @@ def calcMetrics(pred_file: str, label_file: str, similarity_threshold: int = 85,
         metrics["AUROC"] = np.nan
         metrics["AUPR"] = np.nan
     else:
-        y_true_bin = np.zeros((len(y_true), n_class))
-        y_true_bin[np.arange(len(y_true)), y_true_id] = 1
-        y_pred_bin = np.zeros((len(y_pred), n_class))
-        y_pred_bin[np.arange(len(y_pred)), y_pred_id] = 1
+        y_true_bin = np.zeros((len(y_true_canonical), n_class))
+        y_true_bin[np.arange(len(y_true_canonical)), y_true_id] = 1
+        y_pred_bin = np.zeros((len(y_pred_canonical), n_class))
+        y_pred_bin[np.arange(len(y_pred_canonical)), y_pred_id] = 1
 
         metrics["AUROC"] = roc_auc_score(y_true_bin, y_pred_bin, average="weighted", multi_class="ovr")
         metrics["AUPR"] = average_precision_score(y_true_bin, y_pred_bin, average="weighted")
 
     return metrics
+def _get_words(text: str) -> Set[str]:
+    """小写+拆词+去重"""
+    _WORD_RE = re.compile(r"[a-zA-Z]+")  # 仅保留字母
+    _STOP_WORDS = {
+        "and", "or", "the", "of", "in", "on", "at", "with",
+        "jpg", "jpeg", "png", "gif", "bmp", "tiff", "webp"
+    }
+    words = _WORD_RE.findall(text.lower())
+    return {w for w in words if w not in _STOP_WORDS}
+
+# 同义词典：key → set(同义/词形/形容词-名词等)
+SYNONYM_DICT = {
+    "vascular": {"vasculitis", "vascular", "vasculitic"},
+    "carcinoma": {"carcinoma"},
+    "acne": {"acne", "acneiform", "actinic cheilitis"},
+    "rosacea": {"rosacea", "rosaceous"},
+    "candidiasis": {"candidiasis", "candidal"},
+    "icththyosis": {"ichthyosis", "icththyosis"},
+    "kerpilarisflorid": {"keratosis","kerpilarisflorid"},
+    "dermatitis": {"dermatitis", "dermatomyositis", "dermatosis"},
+    "pemphigoid": {"pemphigoid", "pemphigus"},
+    "comedo": {"comedones"}
+}
+def _expand_synonyms(words: Set[str]) -> Set[str]:
+    """把同义词全部展开成一个大集合"""
+    expanded = set(words)
+    for w in words:
+        for key, syn_set in SYNONYM_DICT.items():
+            if w in syn_set:
+                expanded.update(syn_set)
+    return expanded
+def word_hit_metrics(
+        pred_file: str,
+        label_file: str,
+        img_dir: str = None,
+        out_csv: str = None,
+        using_re: bool = False,
+) -> Dict[str, float]:
+    preds = read_pred_file_raw(pred_file, using_re)
+    labels = read_label_file_raw(label_file)
+
+    filenames = sorted(preds.keys())
+    hit_list: List[int] = []
+    records = []
+
+    for f in filenames:
+        raw_pred = preds[f]
+        raw_label = labels[f]
+
+        # 拆词
+        pred_words = _get_words(raw_pred)
+        label_words = _get_words(raw_label)
+        filename_words = _get_words(f)
+        # print(pred_words, '\n', label_words, '\n', folder_words)
+
+        # 命中条件：pred 与 label 或 folder 有交集
+        pred_syn = pred_words
+        label_syn = _expand_synonyms(label_words)
+        file_syn = _expand_synonyms(filename_words)
+        print("label_syn",label_syn)
+        print("file_syn", file_syn)
+        print("pred_syn", pred_syn)
+
+        hit = int(bool(pred_syn & label_syn) or bool(pred_syn & file_syn))
+        print("hit", hit)
+        hit_list.append(hit)
+
+
+        records.append({
+            "filename": f,
+            "raw_prediction": raw_pred,
+            "raw_label": raw_label,
+            "pred_words": " ".join(sorted(pred_words)),
+            "label_words": " ".join(sorted(label_words)),
+            "filename_words": " ".join(sorted(filename_words)),
+            "hit": hit
+        })
+
+    if out_csv:
+        pd.DataFrame(records).to_csv(out_csv, index=False)
+        print(f"已导出命中详情 -> {out_csv}")
+
+    # 计算指标
+    y_true = np.ones(len(hit_list))          # 期望全部命中
+    y_pred = np.array(hit_list)              # 实际是否命中
+    acc = accuracy_score(y_true, y_pred)
+    bacc = balanced_accuracy_score(y_true, y_pred)
+    f1 = f1_score(y_true, y_pred, average="weighted", zero_division=0)
+
+    # AUROC / AUPR 在二分类下与 ACC 等价，但为兼容仍算一次
+    if len(np.unique(y_pred)) < 2:
+        auroc = aupr = np.nan
+    else:
+        auroc = roc_auc_score(y_true, y_pred)
+        aupr = average_precision_score(y_true, y_pred)
+
+    return {"ACC": acc, "BACC": bacc, "W_F1": f1, "AUROC": auroc, "AUPR": aupr}
 
 def test(FUZZY_THRESHOLD):
     # 创建一些虚拟文件用于演示
@@ -339,18 +461,29 @@ def test(FUZZY_THRESHOLD):
     os.remove("filename_to_medgamma_pred.csv")
     os.remove("filename_to_label.csv")
 
-MEDGAMMA_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Medgamma/filename_to_medgamma_pred.csv'
+
+MEDGAMMA_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/Medgamma/filename_to_medgamma_pred.csv'
 REASONINGLAYER_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_output.csv'
+CASEREVIEW_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_output.csv'
 MEDGAMMA_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/filename_to_label.csv'
-SKINGPTX_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels.csv'
+REASONING_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels.csv'
+CASEREVIEW_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels.csv'
 BASE_IMAGE_DIRECTORY = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
+
+MEDGAMMA_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/MEDGAMMA_word_hit.csv'
+CASEREVIEW_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_word_hit.csv'
+REASONING_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/REASONING_word_hit.csv'
+
 # ---------- 5. 用法示例 (修改以演示模糊匹配) ----------
 if __name__ == "__main__":
     # 示例用法：使用一个阈值来控制模糊匹配的宽松程度
-    FUZZY_THRESHOLD = 70  # 可以调整此阈值 (0-100)
+    # FUZZY_THRESHOLD = 70  # 可以调整此阈值 (0-100)
     # test(FUZZY_THRESHOLD)
-    metrics = calcMetrics(
-        pred_file=REASONINGLAYER_EVALUATION_PATH,
-        label_file=SKINGPTX_LABELS_PATH,
-        similarity_threshold=FUZZY_THRESHOLD, base_image_directory=BASE_IMAGE_DIRECTORY)
-    print(metrics)
+    # metrics = calcMetrics(
+    #     pred_file=REASONINGLAYER_EVALUATION_PATH,
+    #     label_file=SKINGPTX_LABELS_PATH,
+    #     similarity_threshold=FUZZY_THRESHOLD, base_image_directory=BASE_IMAGE_DIRECTORY, using_re=False,
+    #     output_fuzzy_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_fuzzy_output.csv')
+    # print(metrics)
+    scores = word_hit_metrics(MEDGAMMA_EVALUATION_PATH, MEDGAMMA_LABELS_PATH, img_dir=BASE_IMAGE_DIRECTORY, out_csv=MEDGAMMA_WORDHIT_OUTPUT, using_re=True)
+    print(scores)
