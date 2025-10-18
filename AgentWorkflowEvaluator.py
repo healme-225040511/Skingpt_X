@@ -95,7 +95,7 @@ def EvaluationOnDermnet(
         imgList = os.listdir(diseasePath)
 
         for imgName in tqdm(imgList, desc='image name'):
-            if imgName in processedFiles:
+            if (disease_dir.name + './' + imgName ) in processedFiles:
                 print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
                 continue
             try:
@@ -108,6 +108,7 @@ def EvaluationOnDermnet(
                     # treatment_recommend_agent=treatment_recommend_agent,
                     output_folder=output_root,
                     image_path=os.path.join(diseasePath, imgName),
+                    folder_name=disease_dir.name
                 )
                 mark_done(os.path.join(os.path.join(dataset_root, disease_dir.name), imgName),
                           os.path.join(output_root, 'processed.log'))
