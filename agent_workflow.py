@@ -36,15 +36,14 @@ async def analyze_image(all_agents, image_path, web_search_output, rag_output, s
     results = await asyncio.gather(*tasks)
     for domain, result in zip(all_agents.keys(), results):
         if domain == "WebSearch":
-            web_search_output[image_name] = result
-            print('Web_search')
-            save_output(web_search_output, "WebSearch", output_folder, folder_name)
+            web_search_output[folder_name + '/' + image_name] = result
+            save_output(web_search_output, "WebSearch", output_folder)
         elif domain == "RAG":
-            rag_output[image_name] = result
-            save_output(rag_output, "RAG", output_folder, folder_name)
+            rag_output[folder_name + '/' + image_name] = result
+            save_output(rag_output, "RAG", output_folder)
         elif domain == "SkinGPT":
-            skin_gpt_output[image_name] = result
-            save_output(skin_gpt_output, "SkinGPT", output_folder, folder_name)
+            skin_gpt_output[folder_name + '/' + image_name] = result
+            save_output(skin_gpt_output, "SkinGPT", output_folder)
 
 
 # 异步分析函数
@@ -52,7 +51,7 @@ async def async_analyze(agent, query, image_path):
     return await agent.analyze(query, image_path)
 
 
-def save_output(output_data, agent_name, output_folder, folder_name):
+def save_output(output_data, agent_name, output_folder):
     """
     将输出数据保存为JSON文件
     参数:
@@ -62,7 +61,7 @@ def save_output(output_data, agent_name, output_folder, folder_name):
         folder_name: 文件夹名称(当前函数中未使用)
     """
     # 构建输出文件的完整路径
-    output_file_path = os.path.join(output_folder, f"{agent_name}_output.json")
+    output_file_path = os.path.join(output_folder, f"{agent_name}_output_new.json")
     # 如果代理名称是WebSearch、RAG或SkinGPT，对输出数据进行HTML转义处理
     if agent_name in ["WebSearch", "RAG", "SkinGPT"]:
         for key, value in output_data.items():
@@ -145,6 +144,8 @@ def WorkFlow(
     # 异步执行图像分析任务
     asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
                               output_folder, folder_name))
+    # analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
+    #                           output_folder, folder_name)
     # Generate report
     if reasoning_agent is not None:
         print("Generating report")
@@ -156,20 +157,20 @@ def WorkFlow(
             "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
             getAgentOutputs(SKINGPT_AGENT_OUTPUT_PATH)[image_name]
         })
-        reasoning_output[image_name] = report
-        save_output(reasoning_output, "Reasoning", output_folder, folder_name)
+        reasoning_output[folder_name + '/' + image_name] = report
+        save_output(reasoning_output, "Reasoning", output_folder)
     if case_review_agent is not None:
         # Case review
         print("Case reviewing")
         report = report if reasoning_agent is not None else getReasoningReport(REASONING_AGENT_OUTPUT_PATH)[image_name]
         review_report = case_review_agent.review_case(report)
         # print(review_report)
-        case_review_output[image_name] = review_report
+        case_review_output[folder_name + '/' + image_name] = review_report
         # Update the case in the database
         ## !!!!!
         ## May need to be optimized, because only good cases could be added
         case_review_agent._add_case_to_knowledge_graph(review_report)
-        save_output(case_review_output, "CaseReview", output_folder, folder_name)
+        save_output(case_review_output, "CaseReview", output_folder,)
     else:
         return
     if treatment_recommend_agent is not None:
@@ -178,12 +179,12 @@ def WorkFlow(
         try:
             treatment_recommend_result = treatment_recommend_agent.analyze(review_report)
             treatment_recommend = json.loads(treatment_recommend_result)
-            treatment_recommend_output[image_name] = treatment_recommend
+            treatment_recommend_output[folder_name + '/' + image_name] = treatment_recommend
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON: {e}")
             print(f"Invalid JSON received: {treatment_recommend_result}")
-            treatment_recommend_output[image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
+            treatment_recommend_output[folder_name + '/' + image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
 
-        save_output(treatment_recommend_output, "TreatmentRecommend", output_folder, folder_name)
+        save_output(treatment_recommend_output, "TreatmentRecommend", output_folder)
     else:
         return
