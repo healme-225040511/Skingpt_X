@@ -2,12 +2,14 @@ import os
 
 import torch
 
+from Constants import DISEASE_NAME, ISIC_DISEASE_NAME
 
+ISIC_judge = 'And you should give a conclusion whether it is maligant or benign.'
 def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
     if domain == "WebSearch":
-        prompt = """
+        prompt = f"""
             You are a highly skilled dermatology expert and research scientist with access to the latest medical advancements and online resources. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
-            Your primary role is to analyze skin conditions by combining clinical expertise with up-to-date research findings. Structure your response as follows:
+            Your primary role is to analyze skin conditions by combining clinical expertise with up-to-date research findings. {ISIC_judge} Structure your response as follows:
             ### 1. Image Region
             - Identify the affected anatomical region and positioning of the lesion or area of interest.
             - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
@@ -35,9 +37,9 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
             Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring that your analysis is both evidence-based and patient-centered.
         """
     elif domain == "RAG":
-        prompt = """
+        prompt = f"""
             You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
-            Your primary role is to provide authoritative, structured medical knowledge to support the analysis of skin conditions. Structure your response as follows:
+            Your primary role is to provide authoritative, structured medical knowledge to support the analysis of skin conditions. {ISIC_judge} Structure your response as follows:
             ### 1. Image Region
             - Identify the affected anatomical region and positioning of the lesion or area of interest.
             - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
@@ -64,29 +66,7 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
             Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring the integration of evidence-based insights from the knowledge base throughout your analysis.
         """
     elif domain == "SkinGPT":
-        disease_name = ['Acne and Rosacea Photos',
-                        'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions',
-                        'Atopic Dermatitis Photos',
-                        'Bullous Disease Photos',
-                        'Cellulitis Impetigo and other Bacterial Infections',
-                        'Eczema Photos',
-                        'Exanthems and Drug Eruptions',
-                        'Hair Loss Photos Alopecia and other Hair Diseases',
-                        'Herpes HPV and other STDs Photos',
-                        'Light Diseases and Disorders of Pigmentation',
-                        'Lupus and other Connective Tissue diseases',
-                        'Melanoma Skin Cancer Nevi and Moles',
-                        'Nail Fungus and other Nail Disease',
-                        'Poison Ivy Photos and other Contact Dermatitis',
-                        'Psoriasis pictures Lichen Planus and related diseases',
-                        'Scabies Lyme Disease and other Infestations and Bites',
-                        'Seborrheic Keratoses and other Benign Tumors',
-                        'Systemic Disease',
-                        'Tinea Ringworm Candidiasis and other Fungal Infections',
-                        'Urticaria Hives',
-                        'Vascular Tumors',
-                        'Vasculitis Photos',
-                        'Warts Molluscum and other Viral Infections']
+        disease_name = ISIC_DISEASE_NAME
 
 
         def build_prelimary_text(prob_vec: list[float]) -> str:
@@ -95,13 +75,17 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
             返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
             """
             prob_vec = torch.tensor(prob_vec)
-            top3 = torch.topk(prob_vec, k=3)
+            top1 = torch.topk(prob_vec, k=1)
             lines = ["### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
-            for idx, p in zip(top3.indices.tolist(), top3.values.tolist()):
-                lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
+            for idx, p in zip(top1.indices.tolist(), top1.values.tolist()):
+                if p > 0.5:
+                    lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
+                else:
+                    lines.append(f"- {disease_name[idx+1]}: {(1-p) * 100:.1f}%")
             return "\n".join(lines)
 
         pre = build_prelimary_text(prob_vec)
+        print(pre)
         prompt = f"""
             You are a frontline medical professional specializing in performing initial patient assessments based on images. 
             Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
@@ -354,7 +338,6 @@ def get_treatment_recommend_prompt(current_case: dict) -> str:
 
     # Format the differential diagnoses as a comma-separated string
     differential_diagnoses_str = ", ".join(differential_diagnoses) if differential_diagnoses else "N/A"
-
     # Construct the prompt
     prompt = f"""
         You are a highly skilled pharmacologist and medical consultant with expertise in dermatology and access to the latest medical advancements and online resources. The current case is as follows:
@@ -365,7 +348,7 @@ def get_treatment_recommend_prompt(current_case: dict) -> str:
         - **Differential Diagnoses**: {differential_diagnoses_str}
         - **Key Findings**: {key_findings}
         - **Knowledge and Research**: {knowledge_and_research}
-        Your primary role is to provide comprehensive treatment plans for skin conditions by combining clinical expertise with up-to-date research findings. Follow these steps to generate your response:
+        Your primary role is to provide comprehensive treatment plans for skin conditions by combining clinical expertise with up-to-date research findings. {ISIC_judge} Follow these steps to generate your response:
         ### 1. Treatment Overview
         - Summarize the **primary diagnosis** and its clinical significance based on the input case.
         - Highlight the **severity** of the condition (e.g., Mild / Moderate / Severe) based on the provided key findings.

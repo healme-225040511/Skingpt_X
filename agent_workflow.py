@@ -36,13 +36,13 @@ async def analyze_image(all_agents, image_path, web_search_output, rag_output, s
     results = await asyncio.gather(*tasks)
     for domain, result in zip(all_agents.keys(), results):
         if domain == "WebSearch":
-            web_search_output[folder_name + '/' + image_name] = result
+            web_search_output[image_name] = result
             save_output(web_search_output, "WebSearch", output_folder)
         elif domain == "RAG":
-            rag_output[folder_name + '/' + image_name] = result
+            rag_output[image_name] = result
             save_output(rag_output, "RAG", output_folder)
         elif domain == "SkinGPT":
-            skin_gpt_output[folder_name + '/' + image_name] = result
+            skin_gpt_output[image_name] = result
             save_output(skin_gpt_output, "SkinGPT", output_folder)
 
 
@@ -61,7 +61,7 @@ def save_output(output_data, agent_name, output_folder):
         folder_name: 文件夹名称(当前函数中未使用)
     """
     # 构建输出文件的完整路径
-    output_file_path = os.path.join(output_folder, f"{agent_name}_output_new.json")
+    output_file_path = os.path.join(output_folder, f"{agent_name}_output.json")
     # 如果代理名称是WebSearch、RAG或SkinGPT，对输出数据进行HTML转义处理
     if agent_name in ["WebSearch", "RAG", "SkinGPT"]:
         for key, value in output_data.items():
@@ -134,7 +134,7 @@ def WorkFlow(
         folder_name=None
 ):
     # 初始化 Agent 和输出字典
-    image_name = image_path.split("/")[-1]  # 从图片路径中提取图片名称
+    image_name = image_path.split('/')[-2] + '/' + image_path.split('/')[-1]
     web_search_output = {}  # 存储网络搜索结果
     rag_output = {}  # 存储RAG（检索增强生成）结果
     skin_gpt_output = {}  # 存储SkinGPT模型输出
@@ -157,7 +157,7 @@ def WorkFlow(
             "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
             getAgentOutputs(SKINGPT_AGENT_OUTPUT_PATH)[image_name]
         })
-        reasoning_output[folder_name + '/' + image_name] = report
+        reasoning_output[image_name] = report
         save_output(reasoning_output, "Reasoning", output_folder)
     if case_review_agent is not None:
         # Case review
@@ -165,12 +165,12 @@ def WorkFlow(
         report = report if reasoning_agent is not None else getReasoningReport(REASONING_AGENT_OUTPUT_PATH)[image_name]
         review_report = case_review_agent.review_case(report)
         # print(review_report)
-        case_review_output[folder_name + '/' + image_name] = review_report
+        case_review_output[image_name] = review_report
         # Update the case in the database
         ## !!!!!
         ## May need to be optimized, because only good cases could be added
         case_review_agent._add_case_to_knowledge_graph(review_report)
-        save_output(case_review_output, "CaseReview", output_folder,)
+        save_output(case_review_output, "CaseReview", output_folder)
     else:
         return
     if treatment_recommend_agent is not None:
@@ -179,7 +179,7 @@ def WorkFlow(
         try:
             treatment_recommend_result = treatment_recommend_agent.analyze(review_report)
             treatment_recommend = json.loads(treatment_recommend_result)
-            treatment_recommend_output[folder_name + '/' + image_name] = treatment_recommend
+            treatment_recommend_output[image_name] = treatment_recommend
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON: {e}")
             print(f"Invalid JSON received: {treatment_recommend_result}")

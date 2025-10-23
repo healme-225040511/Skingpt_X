@@ -12,6 +12,7 @@ from google import genai
 from openai import OpenAI
 from slack_sdk.models.messages.message import message
 
+from Constants import ISIC_PRECSV_PATH
 from prompt_template import get_domain_expert_prompt
 from utils import encode_image_to_base64
 
@@ -113,14 +114,18 @@ class SkinGPTOpenAIAgent:
             for row in reader:
                 if row["filename"] == key:
                     # 3. 提取 prob_cls0 ... prob_cls22
-                    vec = [float(row[f"prob_cls{i}"]) for i in range(23)]
-                    return vec
+                    if self.pre_csv_path == ISIC_PRECSV_PATH:
+                        vec = [float(row[f"prob_cls"])]
+                        return vec
+                    else:
+                        vec = [float(row[f"prob_cls{i}"]) for i in range(23)]
+                        return vec
         return None
 
 # ------------------- 快速自测 -------------------
 if __name__ == "__main__":
     api_key = "sk-iCv69YeaJn8TXm9tk6ZUUAqftw51aB2yddvmstNNl7QjkIKB"
-    agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv')
+    agent = SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/ISIC/PanDerm_Base_LP_predprob.csv')
     image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/acne-closed-comedo-36.jpg"  # Replace with your actual image file path
     prob_vec = agent.get_prob_vec(image_path=image_file_path)
     query = get_domain_expert_prompt("SkinGPT", prob_vec)
