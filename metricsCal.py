@@ -10,11 +10,17 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import (
     accuracy_score, balanced_accuracy_score, f1_score,
-    roc_auc_score, average_precision_score
+    roc_auc_score, average_precision_score, precision_recall_fscore_support
 )
 # 导入 fuzzywuzzy 库
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+from sklearn.metrics import confusion_matrix, classification_report
+
+from Constants import DISEASE_NAME, REASONINGLAYER_EVALUATION_PATH, REASONING_LABELS_PATH, BASE_IMAGE_DIRECTORY, \
+    REASONING_WORDHIT_OUTPUT, MEDGAMMA_EVALUATION_PATH, MEDGAMMA_LABELS_PATH, MEDGAMMA_WORDHIT_OUTPUT, \
+    CASEREVIEW_LABELS_PATH, CASEREVIEW_WORDHIT_OUTPUT, CASEREVIEW_EVALUATION_PATH
+from dataPreparation.Panderm_Assessment import wCK_ci
 
 # ---------- 1. 工具：从一段预测文本里抽疾病名 ----------
 DIAGNOSE_RE = re.compile(
@@ -313,6 +319,8 @@ def calcMetrics(pred_file: str, label_file: str, similarity_threshold: int = 85,
         metrics["AUPR"] = average_precision_score(y_true_bin, y_pred_bin, average="weighted")
 
     return metrics
+
+
 def _get_words(text: str) -> Set[str]:
     """小写+拆词+去重"""
     _WORD_RE = re.compile(r"[a-zA-Z]+")  # 仅保留字母
@@ -323,6 +331,7 @@ def _get_words(text: str) -> Set[str]:
     words = _WORD_RE.findall(text.lower())
     return {w for w in words if w not in _STOP_WORDS}
 
+
 # 同义词典：key → set(同义/词形/形容词-名词等)
 SYNONYM_DICT = {
     "vascular": {"vasculitis", "vascular", "vasculitic"},
@@ -331,11 +340,13 @@ SYNONYM_DICT = {
     "rosacea": {"rosacea", "rosaceous"},
     "candidiasis": {"candidiasis", "candidal"},
     "icththyosis": {"ichthyosis", "icththyosis"},
-    "kerpilarisflorid": {"keratosis","kerpilarisflorid"},
+    "kerpilarisflorid": {"keratosis", "kerpilarisflorid"},
     "dermatitis": {"dermatitis", "dermatomyositis", "dermatosis"},
     "pemphigoid": {"pemphigoid", "pemphigus"},
     "comedo": {"comedones"}
 }
+
+
 def _expand_synonyms(words: Set[str]) -> Set[str]:
     """把同义词全部展开成一个大集合"""
     expanded = set(words)
@@ -344,6 +355,8 @@ def _expand_synonyms(words: Set[str]) -> Set[str]:
             if w in syn_set:
                 expanded.update(syn_set)
     return expanded
+
+
 def word_hit_metrics(
         pred_file: str,
         label_file: str,
@@ -358,6 +371,9 @@ def word_hit_metrics(
     hit_list: List[int] = []
     records = []
 
+    name2id = {name.lower(): i for i, name in enumerate(DISEASE_NAME)}
+    y_true_id = []  # 保证传入的是 DISEASE_NAME 里的字符串
+    y_pred_id = []
     for f in filenames:
         raw_pred = preds[f]
         raw_label = labels[f]
@@ -372,14 +388,16 @@ def word_hit_metrics(
         pred_syn = pred_words
         label_syn = _expand_synonyms(label_words)
         file_syn = _expand_synonyms(filename_words)
-        print("label_syn",label_syn)
-        print("file_syn", file_syn)
-        print("pred_syn", pred_syn)
+        y_pred_id.append(pred_to_class_id(pred_syn, DISEASE_NAME, file_syn, label_syn, name2id[raw_label]))
+        y_true_id.append(name2id[raw_label])
+        # print("label_syn",label_syn)
+        # print("file_syn", file_syn)
+        # print("pred_syn", pred_syn)
 
         hit = int(bool(pred_syn & label_syn) or bool(pred_syn & file_syn))
-        print("hit", hit)
+        if hit:
+            print(hit, pred_to_class_id(pred_syn, DISEASE_NAME, file_syn, label_syn, name2id[raw_label]), name2id[raw_label])
         hit_list.append(hit)
-
 
         records.append({
             "filename": f,
@@ -396,20 +414,127 @@ def word_hit_metrics(
         print(f"已导出命中详情 -> {out_csv}")
 
     # 计算指标
-    y_true = np.ones(len(hit_list))          # 期望全部命中
-    y_pred = np.array(hit_list)              # 实际是否命中
+
+    y_true = np.ones(len(hit_list))  # 期望全部命中
+    y_pred = np.array(hit_list)  # 实际是否命中
     acc = accuracy_score(y_true, y_pred)
     bacc = balanced_accuracy_score(y_true, y_pred)
-    f1 = f1_score(y_true, y_pred, average="weighted", zero_division=0)
+    M = confusion_matrix(y_true_id, y_pred_id)  # 24×24
+    PNR_NPV = calc_NPV_PNR(M)
 
-    # AUROC / AUPR 在二分类下与 ACC 等价，但为兼容仍算一次
-    if len(np.unique(y_pred)) < 2:
-        auroc = aupr = np.nan
-    else:
-        auroc = roc_auc_score(y_true, y_pred)
-        aupr = average_precision_score(y_true, y_pred)
+    wf1_point = f1_score(y_true_id, y_pred_id, average='weighted', zero_division=0)
+    wf1_ci = boot_ci(y_true_id, y_pred_id,
+                     lambda yt, yp: f1_score(yt, yp, average='weighted', zero_division=0))
 
-    return {"ACC": acc, "BACC": bacc, "W_F1": f1, "AUROC": auroc, "AUPR": aupr}
+    wCK_point = cohen_kappa_score(y_true_id, y_pred_id)
+    wCK_ci = boot_ci(y_true_id, y_pred_id, lambda yt, yp: cohen_kappa_score(yt, yp))
+
+    wNPV_point = PNR_NPV['NPV_weighted']
+    wNPV_ci = boot_ci(y_true_id, y_pred_id, lambda yt, yp: calc_NPV_PNR(confusion_matrix(yt, yp))['NPV_weighted'])
+
+    acc_point = accuracy_score(y_true_id, y_pred_id)
+    acc_point_ci = boot_ci(y_true_id, y_pred_id, lambda yt, yp: accuracy_score(yt, yp))
+    bacc_point = balanced_accuracy_score(y_true_id, y_pred_id)
+    bacc_ci = boot_ci(y_true_id, y_pred_id,
+                      lambda yt, yp: balanced_accuracy_score(yt, yp))
+    report = {"ACC": f'{acc_point:.3f} ({acc_point_ci[0]:.3f}, {acc_point_ci[1]:.3f})',
+              "BACC": f'{bacc_point:.3f} ({bacc_ci[0]:.3f}, {bacc_ci[1]:.3f})',
+              "Weighted_F1": f"{wf1_point:.3f} ({wf1_ci[0]:.3f}, {wf1_ci[1]:.3f})",
+              "Cohen_Kappa": f"{wCK_point:.3f} ({wCK_ci[0]:.3f}, {wCK_ci[1]:.3f})",
+              "Weighted_NPV": f"{wNPV_point:.3f} ({wNPV_ci[0]:.3f}, {wNPV_ci[1]:.3f})"}
+    return report
+
+
+def calc_NPV_PNR(M: np.ndarray):
+    """M: 24×24 int confusion matrix"""
+    TP_c = np.diag(M)
+    FP_c = M.sum(axis=0) - TP_c
+    FN_c = M.sum(axis=1) - TP_c
+    TN_c = M.sum() - (TP_c + FP_c + FN_c)
+
+    total_pos = TP_c + FN_c
+    total_neg = TN_c + FP_c
+    PNR = total_pos.sum() / total_neg.sum()
+
+    NPV_c = TN_c / (TN_c + FN_c)
+    NPV_macro = np.nanmean(NPV_c)
+    NPV_weighted = np.average(NPV_c, weights=total_pos + total_neg)
+
+    return {'PNR': PNR,
+            'NPV_macro': NPV_macro,
+            'NPV_weighted': NPV_weighted}
+
+
+from sklearn.metrics import f1_score, cohen_kappa_score, matthews_corrcoef
+import numpy as np
+
+
+def boot_ci(y_true, y_pred, metric_func, n_bootstrap=1000, rng_seed=42):
+    y_true = np.asarray(y_true)  # ← 新增
+    y_pred = np.asarray(y_pred)  # ← 新增
+    rng = np.random.default_rng(rng_seed)
+    n = len(y_true)
+    stats = []
+    for _ in range(n_bootstrap):
+        idx = rng.integers(0, n, size=n)  # 有放回采样
+        y_tr, y_pr = y_true[idx], y_pred[idx]
+        stats.append(metric_func(y_tr, y_pr))
+    return np.percentile(stats, [2.5, 97.5])
+
+
+def calculate_metrics(y_pred_id, y_true_id, out_csv=None):
+    from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score, cohen_kappa_score
+
+    # 1. 宏平均 —— 每类平等投票
+    macro_R = recall_score(y_true_id, y_pred_id, average='macro', zero_division=0)  # 整体召回
+    macro_P = precision_score(y_true_id, y_pred_id, average='macro', zero_division=0)
+    macro_F1 = f1_score(y_true_id, y_pred_id, average='macro', zero_division=0)
+
+    # 2. 加权平均 —— 按各类样本量加权
+    weighted_R = recall_score(y_true_id, y_pred_id, average='weighted', zero_division=0)
+    weighted_P = precision_score(y_true_id, y_pred_id, average='weighted', zero_division=0)
+    weighted_F1 = f1_score(y_true_id, y_pred_id, average='weighted', zero_division=0)
+
+    # 3. Micro —— 先把 TP、FP、FN 全部累加再算一次
+    micro_R = recall_score(y_true_id, y_pred_id, average='micro', zero_division=0)  # 同 micro_P 同 micro_F1
+    micro_F1 = f1_score(y_true_id, y_pred_id, average='micro', zero_division=0)
+
+    # 4. 多类 ROC-AUC（需概率，但这里只有硬标签 → 用 ovr 分解）
+    y_true_bin = np.eye(24)[y_true_id]  # one-hot 形状 (N,24)
+    y_pred_bin = np.eye(24)[y_pred_id]
+    macro_AUC = roc_auc_score(y_true_bin, y_pred_bin, average='macro', multi_class='ovr')
+    weighted_AUC = roc_auc_score(y_true_bin, y_pred_bin, average='weighted', multi_class='ovr')
+
+    # 5. 一致性指标
+    kappa = cohen_kappa_score(y_true_id, y_pred_id)
+    overall = {
+        'Macro_Recall': macro_R,
+        'Macro_Precision': macro_P,
+        'Macro_F1': macro_F1,
+        'Weighted_Recall': weighted_R,
+        'Weighted_Precision': weighted_P,
+        'Weighted_F1': weighted_F1,
+        'Micro_F1': micro_F1,
+        'Macro_AUC': macro_AUC,
+        'Weighted_AUC': weighted_AUC,
+        'Cohen_Kappa': kappa
+    }
+    return overall
+
+
+def pred_to_class_id(pred_words: Set[str], disease_names: list, filename_words: Set[str], label_words: Set[str],
+                     index: int) -> int:
+    """
+    返回 0-22 若命中某一疾病，否则返回 23 (Other)
+    """
+    if bool(pred_words & filename_words) or bool(pred_words & label_words):  # 非空交集 → 命中
+        return index
+    for idx, disease in enumerate(disease_names[:-1]):  # 跳过最后一个 "Other"
+        disease_words = _expand_synonyms(_get_words(disease))
+        if pred_words & disease_words:  # 非空交集 → 命中
+            return idx
+    return 23  # 无一命中 → Other
+
 
 def test(FUZZY_THRESHOLD):
     # 创建一些虚拟文件用于演示
@@ -461,19 +586,82 @@ def test(FUZZY_THRESHOLD):
     os.remove("filename_to_medgamma_pred.csv")
     os.remove("filename_to_label.csv")
 
+def cal_metrics_on_ISIC_Medgamma(df):
+    """
+    计算评估指标：ACC, BACC, Weighted_F1, Cohen_Kappa, Weighted_NPV
+    """
+    # 获取pred和true_label列
+    pred = df['pred'].values
+    true_label = df['true_label'].values
 
-MEDGAMMA_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/Medgamma/filename_to_medgamma_pred.csv'
-REASONINGLAYER_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_output.csv'
-CASEREVIEW_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_output.csv'
-MEDGAMMA_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/filename_to_label.csv'
-REASONING_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels.csv'
-CASEREVIEW_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels.csv'
-BASE_IMAGE_DIRECTORY = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
+    # 移除None值
+    mask = ~(pd.isna(pred) | pd.isna(true_label))
+    pred_clean = pred[mask]
+    true_label_clean = true_label[mask]
 
-MEDGAMMA_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/MEDGAMMA_word_hit.csv'
-CASEREVIEW_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_word_hit.csv'
-REASONING_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/REASONING_word_hit.csv'
+    print(f"有效样本数: {len(pred_clean)}")
+    print(f"pred分布: {np.bincount(pred_clean.astype(int))}")
+    print(f"true_label分布: {np.bincount(true_label_clean.astype(int))}")
 
+    # 1. ACC (Accuracy)
+    acc = accuracy_score(true_label_clean, pred_clean)
+
+    # 2. BACC (Balanced Accuracy)
+    bacc = balanced_accuracy_score(true_label_clean, pred_clean)
+
+    # 3. Weighted F1
+    weighted_f1 = f1_score(true_label_clean, pred_clean, average='weighted')
+
+    # 4. Cohen Kappa
+    cohen_kappa = cohen_kappa_score(true_label_clean, pred_clean)
+
+    # 5. Weighted NPV (Negative Predictive Value)
+    # 计算每个类别的precision, recall, f1, support
+    precision, recall, f1, support = precision_recall_fscore_support(
+        true_label_clean, pred_clean, average=None, zero_division=0
+    )
+
+    # 计算每个类别的NPV
+    cm = confusion_matrix(true_label_clean, pred_clean)
+    npv_per_class = []
+
+    for i in range(len(cm)):
+        # NPV = TN / (TN + FN)
+        tn = np.sum(cm) - (np.sum(cm[i, :]) + np.sum(cm[:, i]) - cm[i, i])
+        fn = np.sum(cm[:, i]) - cm[i, i]
+        npv = tn / (tn + fn) if (tn + fn) > 0 else 0
+        npv_per_class.append(npv)
+
+    # 计算加权NPV
+    weighted_npv = np.average(npv_per_class, weights=support)
+    acc_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: accuracy_score(yt, yp))
+    bacc_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: balanced_accuracy_score(yt, yp))
+    wf1_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: f1_score(yt, yp, average='weighted'))
+    wCK_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: cohen_kappa_score(yt, yp))
+    wNPV_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: calc_NPV_PNR(confusion_matrix(yt, yp))['NPV_weighted'])
+
+    # 输出结果
+    results = {"ACC": f'{acc:.3f} ({acc_ci[0]:.3f}, {acc_ci[1]:.3f})',
+              "BACC": f'{bacc:.3f} ({bacc_ci[0]:.3f}, {bacc_ci[1]:.3f})',
+              "Weighted_F1": f"{weighted_f1:.3f} ({wf1_ci[0]:.3f}, {wf1_ci[1]:.3f})",
+              "Cohen_Kappa": f"{cohen_kappa:.3f} ({wCK_ci[0]:.3f}, {wCK_ci[1]:.3f})",
+              "Weighted_NPV": f"{weighted_npv:.3f} ({wNPV_ci[0]:.3f}, {wNPV_ci[1]:.3f})"}
+
+    # print("\n=== 评估指标结果 ===")
+    # for metric, value in results.items():
+    #     print(f"{metric}: {value:.4f}")
+
+    # 显示混淆矩阵
+    print(f"\n=== 混淆矩阵 ===")
+    print(cm)
+
+    # 显示每个类别的详细指标
+    print(f"\n=== 各类别详细指标 ===")
+    print("类别\tPrecision\tRecall\tF1\tSupport\tNPV")
+    for i in range(len(precision)):
+        print(f"{i}\t{precision[i]:.4f}\t\t{recall[i]:.4f}\t{f1[i]:.4f}\t{support[i]}\t{npv_per_class[i]:.4f}")
+
+    return results
 # ---------- 5. 用法示例 (修改以演示模糊匹配) ----------
 if __name__ == "__main__":
     # 示例用法：使用一个阈值来控制模糊匹配的宽松程度
@@ -485,5 +673,15 @@ if __name__ == "__main__":
     #     similarity_threshold=FUZZY_THRESHOLD, base_image_directory=BASE_IMAGE_DIRECTORY, using_re=False,
     #     output_fuzzy_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_fuzzy_output.csv')
     # print(metrics)
-    scores = word_hit_metrics(MEDGAMMA_EVALUATION_PATH, MEDGAMMA_LABELS_PATH, img_dir=BASE_IMAGE_DIRECTORY, out_csv=MEDGAMMA_WORDHIT_OUTPUT, using_re=True)
-    print(scores)
+    # scores = word_hit_metrics(CASEREVIEW_EVALUATION_PATH, CASEREVIEW_LABELS_PATH, img_dir=BASE_IMAGE_DIRECTORY,
+    #                           out_csv=CASEREVIEW_WORDHIT_OUTPUT, using_re=False)
+    # print(scores)
+    df = pd.read_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/final_corrected_results_with_pred_and_true_label.xlsx')
+
+    # 计算指标
+    metrics = cal_metrics_on_ISIC_Medgamma(df)
+    print(metrics)
+    # 保存结果到文件
+    # results_df = pd.DataFrame([metrics])
+    # results_df.to_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/evaluation_metrics.xlsx', index=False)
+    # print(f"\n指标结果已保存到: evaluation_metrics.xlsx")

@@ -7,17 +7,8 @@ import ssl
 
 from tqdm import tqdm
 
-from case_review_agent import CaseReviewAgent
-from rag_agent import RAGAgent
-from reasoning_agent import ReasoningAgent
-from skingpt_openai_agent import SkinGPTOpenAIAgent
-from treatment_recommend_agent import TreatmentRecommendAgent
-from web_search_agent import WebSearchAgent
-
 ssl._create_default_https_context = ssl._create_unverified_context
-from utils import load_set, mark_done
 # ① 直接导入主流程函数
-from agent_workflow import WorkFlow
 
 
 def LoadLog(logFile):
@@ -26,6 +17,19 @@ def LoadLog(logFile):
             return json.load(f)
     return {}
 
+import re, json
+
+def load_set(path):
+    if not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8") as f:
+        return {line.rstrip("\n") for line in f if line.strip()}
+
+def mark_done(path, DONE_LOG):
+    """追加记录已处理路径"""
+    with open(DONE_LOG, "a", encoding="utf-8") as f:
+        f.write(path + "\n")
+        
 def MedgammaInference(imagePath):
     from transformers import pipeline
     from PIL import Image
@@ -36,26 +40,28 @@ def MedgammaInference(imagePath):
         model="google/medgemma-4b-it",
         torch_dtype=torch.bfloat16,
         device="cuda",
+        use_fast=True
     )
 
     # Image attribution: Stillwaterising, CC0, via Wikimedia Commons
     image = Image.open(imagePath).convert("RGB")
-
+    print(image)
     messages = [
         {
             "role": "system",
-            "content": [{"type": "text", "text": "You are an expert radiologist."}]
+            "content": [{"type": "text", "text": "You are an expert radiologist. There are some image, you have to give a conclusion what the skin disease it is and whether it is maligant or benign"}]
         },
         {
             "role": "user",
             "content": [
-                {"type": "text", "text": "What skin disease is this?"},
+                {"type": "text", "text": "What skin disease is this? And is it maligant or benign"},
                 {"type": "image", "image": image}
             ]
         }
     ]
 
     output = pipe(text=messages, max_new_tokens=200)
+    print(output)
     return output[0]["generated_text"][-1]["content"]
 def EvaluationOnDermnet(
         dataset_root: str = "./SkinGPT-X-Dataset/Dermnet/test",
@@ -73,12 +79,12 @@ def EvaluationOnDermnet(
     logFilePathList = load_set(logFilePath)
     csv_path = Path(output_root) / "results.csv"
     csv_path.parent.mkdir(parents=True, exist_ok=True)
-    for disease_dir in tqdm(disease_dirs, desc="Processing images"):
+    for disease_dir in disease_dirs:
         print('⏳ 正在处理疾病：', disease_dir.name)
         diseasePath = os.path.join(dataset_root, disease_dir.name)
         imgList = os.listdir(diseasePath)
 
-        for imgName in imgList:
+        for imgName in tqdm(imgList, desc='img'):
             if os.path.join(diseasePath, imgName) in logFilePathList:
                 print(f'已处理文件{os.path.join(diseasePath, imgName)}, 跳过')
                 continue
@@ -86,28 +92,28 @@ def EvaluationOnDermnet(
             if not csv_path.exists():
                 csv_path.write_text("image_path, medgamma_pred\n", encoding="utf-8")
 
-                # --------------------------------------------------
-                # 修改后的 try-except 块（替换你原来的 try-except）
-                # --------------------------------------------------
-                try:
-                    answer = MedgammaInference(os.path.join(diseasePath, imgName))
+            # --------------------------------------------------
+            # 修改后的 try-except 块（替换你原来的 try-except）
+            # --------------------------------------------------
+            try:
+                answer = MedgammaInference(os.path.join(diseasePath, imgName))
 
-                    # ① 原逻辑：标记已处理
-                    mark_done(os.path.join(diseasePath, imgName),
-                              os.path.join(output_root, 'processed.log'))
+                # ① 原逻辑：标记已处理
+                mark_done(os.path.join(diseasePath, imgName),
+                          os.path.join(output_root, 'processed.log'))
 
-                    # ② 新逻辑：追加结果到 csv
-                    with csv_path.open("a", newline='', encoding="utf-8") as f:
-                        writer = csv.writer(f)
-                        writer.writerow([os.path.join(diseasePath, imgName), answer])
+                # ② 新逻辑：追加结果到 csv
+                with csv_path.open("a", newline='', encoding="utf-8") as f:
+                    writer = csv.writer(f)
+                    writer.writerow([os.path.join(diseasePath, imgName), answer])
 
-                except Exception as e:
-                    print(f"[WARN] 处理失败，跳过 ：{e}")
-                    # 失败也写一行，预测列为空
-                    with csv_path.open("a", newline='', encoding="utf-8") as f:
-                        writer = csv.writer(f)
-                        writer.writerow([os.path.join(diseasePath, imgName), ""])
+            except Exception as e:
+                print(f"[WARN] 处理失败，跳过 ：{e}")
+                # 失败也写一行，预测列为空
+                with csv_path.open("a", newline='', encoding="utf-8") as f:
+                    writer = csv.writer(f)
+                    writer.writerow([os.path.join(diseasePath, imgName), ""])
 
 
 if __name__ == "__main__":
-    EvaluationOnDermnet(dataset_root='./autodl-tmp/SkinGPT-X-Dataset/Dermnet/test', output_root='./autodl-tmp/SkinGPT-X-Dataset/Dermnet')
+    EvaluationOnDermnet(dataset_root='./ISIC_2024_Resize224/test', output_root='./ISIC/test')

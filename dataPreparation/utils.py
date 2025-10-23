@@ -147,20 +147,53 @@ def update_file_parents(file_map, json_path: str, out_json: str):
 
     print(f'更新完成！已生成 {out_json}')
 
+def capitalize_first_segment(key: str) -> str:
+    """
+    把 key 按 '/' 分割，对 [0] 段做首字母大写，and/other 保持小写
+    """
+    if '/' not in key:
+        return key
+    parts = key.split('/')
+    segment = parts[0]
+
+    # 按空格切词，跳过 and/other
+    words = segment.split()
+    new_words = [
+        w.capitalize() if w.lower() not in {'and', 'other'} else w.lower()
+        for w in words
+    ]
+    parts[0] = ' '.join(new_words)
+    return '/'.join(parts)
+
+def UpperFirstWord(file_path: Path):
+    with file_path.open(encoding='utf-8') as f:
+        data = json.load(f)
+
+    # 假设顶层是 list[dict]；若是 dict，改成 data = {k: capitalize_first_segment(k): v ...}
+    if isinstance(data, list):
+        new_data = [{capitalize_first_segment(k): v for k, v in item.items()} for item in data]
+    else:
+        new_data = {capitalize_first_segment(k): v for k, v in data.items()}
+
+    with file_path.open('w', encoding='utf-8') as f:
+        json.dump(new_data, f, ensure_ascii=False, indent=2)
+    print(f'✅ 已覆盖保存 → {file_path}')
+
 if __name__ == '__main__':
-    # base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
-    # json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output_new.json',
-    #                               '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_output.csv')
-    # get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output_new.json',
-    #                         '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels_CaseReview.csv')
+    base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
+    # json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
+    #                               '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_output.csv')
+    get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
+                            '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels_Reasoning.csv')
     # modify_filename(json_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
     #                 out_json='/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
     #                 dataset_dir='/Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split2')
     # ----------------- 用法示例 -----------------
-    not_found_files = remap_to_new_file("/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output.json",
-                      "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json",
-                      "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output_new.json")
-    # print("已生成新文件：CaseReview_output_new.json")
-    base_directory = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
-    parent_directories = find_parent_directories(not_found_files, base_directory)
-    update_file_parents(parent_directories, '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output_new.json', '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output_new.json')
+    # not_found_files = remap_to_new_file("/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output.json",
+    #                   "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json",
+    #                   "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output_new.json")
+    # # print("已生成新文件：CaseReview_output_new.json")
+    # base_directory = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
+    # parent_directories = find_parent_directories(not_found_files, base_directory)
+    # update_file_parents(parent_directories, '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output_new.json', '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output_new.json')
+    # UpperFirstWord(Path('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json'))
