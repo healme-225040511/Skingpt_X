@@ -46,7 +46,10 @@ class RAGAgent:
         )
 
         # Initialize vector stores
-        self.text_store = LanceDBVectorStore(uri="lancedb", table_name="text_collection")
+        LOCAL_DB = "/content/lancedb"  # ← 本地可写路径
+        os.makedirs(LOCAL_DB, exist_ok=True)
+        self.text_store = LanceDBVectorStore(uri=LOCAL_DB, table_name="text_collection", mode="create")
+        # self.text_store = LanceDBVectorStore(uri="lancedb", table_name="text_collection")
         self.storage_context = StorageContext.from_defaults(
             vector_store=self.text_store
         )

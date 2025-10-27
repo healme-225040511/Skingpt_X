@@ -11,7 +11,6 @@ from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.media import Image as AgnoImage
 import logging
 
-from slack_sdk.models.messages.message import message
 
 from SearchAPITools import BochaSearchTool
 from prompt_template import *
