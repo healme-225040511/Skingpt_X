@@ -10,7 +10,6 @@ from google.genai import types
 
 from google import genai
 from openai import OpenAI
-from slack_sdk.models.messages.message import message
 
 from Constants import ISIC_PRECSV_PATH
 from prompt_template import get_domain_expert_prompt

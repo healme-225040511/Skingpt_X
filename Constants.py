@@ -26,7 +26,7 @@ ISIC_DISEASE_NAME = [
     'Malignant',
     'Benign'
 ]
-ISIC_PRECSV_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/ISIC/PanDerm_Base_LP_predprob.csv'
+ISIC_PRECSV_PATH = './PanDerm_ISIC_predprob.csv'
 
 MEDGAMMA_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/Medgamma/filename_to_medgamma_pred.csv'
 REASONINGLAYER_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_output.csv'
@@ -42,3 +42,4 @@ REASONING_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/
 
 DERMNET_DATASET_ROOT = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
 ISIC_DATASET_ROOT = '/Volumes/T7/SkinGPT-X-Dataset/ISIC_2024_Resize224/test'
+ISIC_EVALUATION_ROOT = '/Volumes/T7/SkinGPT-X-EvaluationResults/ISIC/test'

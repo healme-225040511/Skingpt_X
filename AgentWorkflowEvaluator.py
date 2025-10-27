@@ -3,10 +3,10 @@ import argparse
 import os
 import json
 import time
+import traceback
 from pathlib import Path
 import ssl
 
-from keras.src.backend import switch
 from tqdm import tqdm
 
 from case_review_agent import CaseReviewAgent
@@ -100,23 +100,22 @@ def EvaluationOnDermnet(
                 print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
                 continue
             try:
-                # ② 单张模式调用
                 startTime = time.time()
                 WorkFlow(
                     all_agents=all_agents,
                     reasoning_agent=reasoning_agent,
-                    # case_review_agent=case_review_agent,
-                    # treatment_recommend_agent=treatment_recommend_agent,
                     output_folder=output_root,
                     image_path=os.path.join(diseasePath, imgName),
                     folder_name=disease_dir.name
                 )
-                mark_done(os.path.join(os.path.join(dataset_root, disease_dir.name), imgName),
+                mark_done(os.path.join(diseasePath, imgName),
                           os.path.join(output_root, 'processed.log'))
                 endTime = time.time()
                 print(f'{imgName}  处理完成，耗时{endTime - startTime}s')
             except Exception as e:
-                print(f"[WARN] 处理失败，跳过 ：{e}")
+                # 原句换成下面两行
+                print(f"[WARN] 处理失败，跳过：{imgName}")
+                traceback.print_exc()      # ← 打印完整报错堆栈
 
 def EvaluationOnISIC(
         model_name: str = "gemini-2.5-pro",
@@ -147,7 +146,7 @@ def EvaluationOnISIC(
             selected_agent = 'WebSearch'
         if int(agent_type) == 1:
             all_agents = {
-                "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv'),
+                "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='./PanDerm_ISIC_predprob.csv'),
             }
         elif int(agent_type) == 2:
             all_agents = {
@@ -189,23 +188,22 @@ def EvaluationOnISIC(
                 print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
                 continue
             try:
-                # ② 单张模式调用
                 startTime = time.time()
                 WorkFlow(
                     all_agents=all_agents,
                     reasoning_agent=reasoning_agent,
-                    # case_review_agent=case_review_agent,
-                    # treatment_recommend_agent=treatment_recommend_agent,
                     output_folder=output_root,
                     image_path=os.path.join(diseasePath, imgName),
                     folder_name=disease_dir.name
                 )
-                mark_done(os.path.join(os.path.join(dataset_root, disease_dir.name), imgName),
+                mark_done(os.path.join(diseasePath, imgName),
                           os.path.join(output_root, 'processed.log'))
                 endTime = time.time()
                 print(f'{imgName}  处理完成，耗时{endTime - startTime}s')
             except Exception as e:
-                print(f"[WARN] 处理失败，跳过 ：{e}")
+                # 原句换成下面两行
+                print(f"[WARN] 处理失败，跳过：{imgName}")
+                traceback.print_exc()      # ← 打印完整报错堆栈
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset_root", default="/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test")
@@ -215,6 +213,6 @@ if __name__ == "__main__":
     parser.add_argument("--is_single_agent", default=False)
     parser.add_argument("--agent_type", default=0)
     args = parser.parse_args()
-    EvaluationOnDermnet(dataset_root=args.dataset_root, output_root=args.output_root,
+    EvaluationOnISIC(dataset_root=args.dataset_root, output_root=args.output_root,
                         markdown_file_path=args.markdown_file_path, api_key=args.api_key,
                         is_single_agent=args.is_single_agent, agent_type=args.agent_type)

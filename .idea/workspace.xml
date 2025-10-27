@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca57416d-001f-44df-9238-ec2e2efbed96" name="变更" comment="[Description:] 指标计算更新，ISIC数据集实验">
+      <change afterPath="$PROJECT_DIR$/PanDerm_ISIC_predprob.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AgentWorkflowEvaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentWorkflowEvaluator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agent_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent_workflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_evaluation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_evaluation.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skingpt_openai_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/skingpt_openai_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_search_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_search_agent.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Python Stub" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;healme-225040511&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/healme-225040511/Skingpt_X.git&quot;,
+    &quot;accountId&quot;: &quot;8d047157-fbd6-46c1-9ac6-d39678d12e84&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="31oEutwScOFiYpVWP4HWxbLYKjD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.AgentWorkflowEvaluator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.AliSkinDiseaseEvaluator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.MedgammaSkinDiseaseEvaluator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Panderm_Assessment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ResultsProcessor.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.SearchAPITools.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_workflow.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_workflow_gpu.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agent_workflow_sync.executor&quot;: &quot;Run&quot;,
+    &quot;Python.case_review_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.case_review_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.csv_highlight.executor&quot;: &quot;Run&quot;,
+    &quot;Python.csv_preparation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.delete_nan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_diagnostic_data_fixed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.metadata_preparation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.metricsCal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prompt_template.executor&quot;: &quot;Run&quot;,
+    &quot;Python.rag_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.reasoning_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.skingpt_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.skingpt_openai_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.treatment_recommend_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.web_search_agent.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;我会在意&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Volumes/T7/Skingpt_X&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/ComparisonExperiments" />
+      <recent name="$PROJECT_DIR$/ComparisonExperiment" />
+      <recent name="$PROJECT_DIR$/dataPreparation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.metricsCal">
+    <configuration name="MedgammaSkinDiseaseEvaluator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ComparisonExperiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MedgammaSkinDiseaseEvaluator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Panderm_Assessment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataPreparation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPreparation/Panderm_Assessment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="agent_workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/agent_workflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="metadata_preparation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dataPreparation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataPreparation/metadata_preparation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="metricsCal" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metricsCal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.metricsCal" />
+        <item itemvalue="Python.MedgammaSkinDiseaseEvaluator" />
+        <item itemvalue="Python.metadata_preparation" />
+        <item itemvalue="Python.Panderm_Assessment" />
+        <item itemvalue="Python.agent_workflow" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-1bde30d8e611-7b97d883f26b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.25557.130" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ca57416d-001f-44df-9238-ec2e2efbed96" name="变更" comment="" />
+      <created>1756182250600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756182250600</updated>
+      <workItem from="1756794799544" duration="239000" />
+      <workItem from="1756795088792" duration="656000" />
+      <workItem from="1756795769195" duration="53000" />
+      <workItem from="1756796370215" duration="10268000" />
+      <workItem from="1757056595555" duration="706000" />
+      <workItem from="1757066014370" duration="316000" />
+      <workItem from="1757066849399" duration="12616000" />
+    </task>
+    <task id="LOCAL-00001" summary="fortest">
+      <created>1756182497586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756182497586</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[Description:] change from ollam to OpenAI">
+      <created>1756736462835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756736462835</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[Description:] correct bugs when using SkinGptAgent. change from gpt-4 -&gt; gpt-4o">
+      <option name="closed" value="true" />
+      <created>1757070137926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757070137926</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Description:] correct bugs when using SkinGptAgent. change from gpt-4 -&gt; gpt-4o">
+      <option name="closed" value="true" />
+      <created>1757423887288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757423887288</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[Description:] change agent_workflow from sync to async">
+      <option name="closed" value="true" />
+      <created>1757425674472</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757425674472</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[Description:] 新增错误兜底，结果处理方法">
+      <option name="closed" value="true" />
+      <created>1758007853332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758007853332</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[Description:] 修复agent敏感图片拦截问题+result处理代码整改">
+      <option name="closed" value="true" />
+      <created>1758015241919</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758015241919</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[Description:] AgentWork自动调用数据集">
+      <option name="closed" value="true" />
+      <created>1758028498618</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1758028498618</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[Description:] 代码重构，原子化流水线">
+      <option name="closed" value="true" />
+      <created>1758184209993</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1758184209993</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[Description:] 代码重构，原子化流水线">
+      <option name="closed" value="true" />
+      <created>1758779860150</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1758779860150</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[Description:] 整体变更为 gemini-2.5-pro + 博查 API">
+      <option name="closed" value="true" />
+      <created>1758864435710</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758864435710</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[Description:] 整体变更为 gemini-2.5-pro + 博查 API">
+      <option name="closed" value="true" />
+      <created>1758877488818</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1758877488818</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[Description:] 修复bug，maxtoken问题">
+      <option name="closed" value="true" />
+      <created>1759153350953</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759153350953</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[Description:] 单线agent批跑">
+      <option name="closed" value="true" />
+      <created>1760106270351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760106270351</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[Description:] 合并three agent evaluation sh命令">
+      <option name="closed" value="true" />
+      <created>1760357015510</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1760357015510</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[Description:] reasoning, case_review agent 批量处理">
+      <option name="closed" value="true" />
+      <created>1760503981215</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1760503981215</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[Description:] 指标计算初版">
+      <option name="closed" value="true" />
+      <created>1760587025061</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1760587025061</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[Description:] 指标计算新增模糊匹配">
+      <option name="closed" value="true" />
+      <created>1760595892856</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1760595892856</updated>
+    </task>
+    <task id="LOCAL-00019" summary="[Description:] 指标计算新增模糊匹配扩展">
+      <option name="closed" value="true" />
+      <created>1760670256447</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1760670256447</updated>
+    </task>
+    <task id="LOCAL-00020" summary="[Description:] 指标计算wordhit">
+      <option name="closed" value="true" />
+      <created>1760759175870</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1760759175870</updated>
+    </task>
+    <task id="LOCAL-00021" summary="[Description:] filename变更">
+      <option name="closed" value="true" />
+      <created>1760879943294</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1760879943294</updated>
+    </task>
+    <task id="LOCAL-00022" summary="[Description:] 指标计算更新，ISIC数据集实验">
+      <option name="closed" value="true" />
+      <created>1761225302366</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1761225302366</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fortest" />
+    <MESSAGE value="[Description:] change from ollam to OpenAI" />
+    <MESSAGE value="[Description:] correct bugs when using SkinGptAgent. change from gpt-4 -&gt; gpt-4o" />
+    <MESSAGE value="[Description:] change agent_workflow from sync to async" />
+    <MESSAGE value="[Description:] 新增错误兜底，结果处理方法" />
+    <MESSAGE value="[Description:] 修复agent敏感图片拦截问题+result处理代码整改" />
+    <MESSAGE value="[Description:] AgentWork自动调用数据集" />
+    <MESSAGE value="[Description:] 代码重构，原子化流水线" />
+    <MESSAGE value="[Description:] 整体变更为 gemini-2.5-pro + 博查 API" />
+    <MESSAGE value="[Description:] 修复bug，maxtoken问题" />
+    <MESSAGE value="[Description:] 单线agent批跑" />
+    <MESSAGE value="[Description:] 合并three agent evaluation sh命令" />
+    <MESSAGE value="[Description:] reasoning, case_review agent 批量处理" />
+    <MESSAGE value="[Description:] 指标计算初版" />
+    <MESSAGE value="[Description:] 指标计算新增模糊匹配" />
+    <MESSAGE value="[Description:] 指标计算新增模糊匹配扩展" />
+    <MESSAGE value="[Description:] 指标计算wordhit" />
+    <MESSAGE value="[Description:] filename变更" />
+    <MESSAGE value="[Description:] 指标计算更新，ISIC数据集实验" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Description:] 指标计算更新，ISIC数据集实验" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Skingpt_X$skingpt_openai_agent.coverage" NAME="skingpt_openai_agent 覆盖结果" MODIFIED="1757068016839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Skingpt_X$agent_workflow.coverage" NAME="agent_workflow 覆盖结果" MODIFIED="1757069371285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
