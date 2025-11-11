@@ -4,7 +4,7 @@ import torch
 
 from Constants import DISEASE_NAME, ISIC_DISEASE_NAME
 
-ISIC_judge = 'And you should give a conclusion whether it is maligant or benign.'
+ISIC_judge = 'And you should give a conclusion whether the disease is malignant or benign. Add one line in your answer as "**Malignant/Benign:**".'
 def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
     if domain == "WebSearch":
         prompt = f"""
@@ -209,7 +209,7 @@ def get_synthesized_report_prompt(analyses):
     prompt += f"- **RAGAgent Report**:\n{rag_report}\n"
     prompt += f"- **WebSearchAgent Report**:\n{web_search_report}\n"
     prompt += f"- **SkinGPTAgent Report**:\n{skingpt_report}\n"
-    prompt += f"Your primary task is to **integrate and synthesize** these reports by leveraging the unique strengths of each agent. Follow these steps:\n" \
+    prompt += f"Your primary task is to **integrate and synthesize** these reports by leveraging the unique strengths of each agent. {ISIC_judge} Follow these steps:\n" \
               f"1. **Understand Each Agent's Contribution**:\n" \
               f"   - **RAGAgent**: Provides authoritative, evidence-based knowledge from trusted sources.\n" \
               f"   - **WebSearchAgent**: Offers the latest research findings and real-time updates from medical literature.\n" \

@@ -1,0 +1,436 @@
+仅在 Reasoning_output.json 中的样本 (共 433 个)
+================================================================================
+
+Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-face-43.jpg
+Cellulitis Impetigo and other Bacterial Infections/Balanitis-Bacterial-2.jpg
+Cellulitis Impetigo and other Bacterial Infections/Botryomycosis-Staph-1.jpg
+Cellulitis Impetigo and other Bacterial Infections/Cellulitis-10.jpg
+Cellulitis Impetigo and other Bacterial Infections/Cellulitis-12.jpg
+Cellulitis Impetigo and other Bacterial Infections/Folliculitis-15.jpg
+Cellulitis Impetigo and other Bacterial Infections/Furuncles-Carbuncles-8.jpg
+Cellulitis Impetigo and other Bacterial Infections/Leprosy-13.jpg
+Cellulitis Impetigo and other Bacterial Infections/Leprosy-8.jpg
+Cellulitis Impetigo and other Bacterial Infections/Pseudomonas-Cellulitis-9.jpg
+Cellulitis Impetigo and other Bacterial Infections/Staphylococcal-Folliculitis-14.jpg
+Cellulitis Impetigo and other Bacterial Infections/Staphylococcal-Folliculitis-28.jpg
+Cellulitis Impetigo and other Bacterial Infections/Staphylococcal-Folliculitis-4.jpg
+Cellulitis Impetigo and other Bacterial Infections/Staphylococcal-Folliculitis-7.jpg
+Cellulitis Impetigo and other Bacterial Infections/Sycosis-Barbae-20.jpg
+Cellulitis Impetigo and other Bacterial Infections/atypical-mycobacterium-13.jpg
+Cellulitis Impetigo and other Bacterial Infections/impetigo-32.jpg
+Eczema Photos/03DermatitisLeg.jpg
+Eczema Photos/03DermatitisLids1.jpg
+Eczema Photos/03dermatitisDrug112205.jpg
+Eczema Photos/05hyperkeratosis01010.jpg
+Eczema Photos/Dyshidrosis-14.jpg
+Eczema Photos/Dyshidrosis-2.jpg
+Eczema Photos/Dyshidrosis-3.jpg
+Eczema Photos/Dyshidrosis-31.jpg
+Eczema Photos/Dyshidrosis-35.jpg
+Eczema Photos/Dyshidrosis-47.jpg
+Eczema Photos/Dyshidrosis-5.jpg
+Eczema Photos/Dyshidrosis-8.jpg
+Eczema Photos/chapped-fissured-feet-13.jpg
+Eczema Photos/chapped-fissured-feet-2.jpg
+Eczema Photos/chapped-fissured-feet-27.jpg
+Eczema Photos/chapped-fissured-feet-33.jpg
+Eczema Photos/desquamation-4.jpg
+Eczema Photos/eczema-acute-4.jpg
+Eczema Photos/eczema-acute-5.jpg
+Eczema Photos/eczema-areola-13.jpg
+Eczema Photos/eczema-areola-18.jpg
+Eczema Photos/eczema-areola-21.jpg
+Eczema Photos/eczema-areola-5.jpg
+Eczema Photos/eczema-arms-10.jpg
+Eczema Photos/eczema-arms-4.jpg
+Eczema Photos/eczema-arms-5.jpg
+Eczema Photos/eczema-arms-6.jpg
+Eczema Photos/eczema-arms-8.jpg
+Eczema Photos/eczema-arms-9.jpg
+Eczema Photos/eczema-asteatotic-22.jpg
+Eczema Photos/eczema-asteatotic-24.jpg
+Eczema Photos/eczema-asteatotic-32.jpg
+Eczema Photos/eczema-asteatotic-34.jpg
+Eczema Photos/eczema-asteatotic-35.jpg
+Eczema Photos/eczema-asteatotic-37.jpg
+Eczema Photos/eczema-asteatotic-53.jpg
+Eczema Photos/eczema-axillae-1.jpg
+Eczema Photos/eczema-chronic-1.jpg
+Eczema Photos/eczema-chronic-15.jpg
+Eczema Photos/eczema-chronic-2.jpg
+Eczema Photos/eczema-chronic-20.jpg
+Eczema Photos/eczema-chronic-29.jpg
+Eczema Photos/eczema-chronic-35.jpg
+Eczema Photos/eczema-chronic-36.jpg
+Eczema Photos/eczema-chronic-39.jpg
+Eczema Photos/eczema-chronic-4.jpg
+Eczema Photos/eczema-chronic-42.jpg
+Eczema Photos/eczema-chronic-50.jpg
+Eczema Photos/eczema-face-8.jpg
+Eczema Photos/eczema-fingertips-101.jpg
+Eczema Photos/eczema-fingertips-104.jpg
+Eczema Photos/eczema-fingertips-109.jpg
+Eczema Photos/eczema-fingertips-114.jpg
+Eczema Photos/eczema-fingertips-117.jpg
+Eczema Photos/eczema-fingertips-122.jpg
+Eczema Photos/eczema-fingertips-129.jpg
+Eczema Photos/eczema-fingertips-136.jpg
+Eczema Photos/eczema-fingertips-144.jpg
+Eczema Photos/eczema-fingertips-25.jpg
+Eczema Photos/eczema-fingertips-27.jpg
+Eczema Photos/eczema-fingertips-29.jpg
+Eczema Photos/eczema-fingertips-30.jpg
+Eczema Photos/eczema-fingertips-31.jpg
+Eczema Photos/eczema-fingertips-37.jpg
+Eczema Photos/eczema-fingertips-42.jpg
+Eczema Photos/eczema-fingertips-50.jpg
+Eczema Photos/eczema-fingertips-56.jpg
+Eczema Photos/eczema-fingertips-58.jpg
+Eczema Photos/eczema-fingertips-65.jpg
+Eczema Photos/eczema-fingertips-67.jpg
+Eczema Photos/eczema-fingertips-71.jpg
+Eczema Photos/eczema-fingertips-72.jpg
+Eczema Photos/eczema-fingertips-73.jpg
+Eczema Photos/eczema-fingertips-84.jpg
+Eczema Photos/eczema-fingertips-91.jpg
+Eczema Photos/eczema-foot-101.jpg
+Eczema Photos/eczema-foot-102.jpg
+Eczema Photos/eczema-foot-23.jpg
+Eczema Photos/eczema-foot-32.jpg
+Eczema Photos/eczema-foot-33.jpg
+Eczema Photos/eczema-foot-38.jpg
+Eczema Photos/eczema-foot-41.jpg
+Eczema Photos/eczema-foot-42.jpg
+Eczema Photos/eczema-foot-56.jpg
+Eczema Photos/eczema-foot-58.jpg
+Eczema Photos/eczema-foot-65.jpg
+Eczema Photos/eczema-foot-66.jpg
+Eczema Photos/eczema-foot-91.jpg
+Eczema Photos/eczema-foot-99.jpg
+Eczema Photos/eczema-hand-107.jpg
+Eczema Photos/eczema-hand-116.jpg
+Eczema Photos/eczema-hand-12.jpg
+Eczema Photos/eczema-hand-125.jpg
+Eczema Photos/eczema-hand-138.jpg
+Eczema Photos/eczema-hand-139.jpg
+Eczema Photos/eczema-hand-145.jpg
+Eczema Photos/eczema-hand-147.jpg
+Eczema Photos/eczema-hand-150.jpg
+Eczema Photos/eczema-hand-152.jpg
+Eczema Photos/eczema-hand-157.jpg
+Eczema Photos/eczema-hand-177.jpg
+Eczema Photos/eczema-hand-181.jpg
+Eczema Photos/eczema-hand-192.jpg
+Eczema Photos/eczema-hand-195.jpg
+Eczema Photos/eczema-hand-87.jpg
+Eczema Photos/eczema-hand-89.jpg
+Eczema Photos/eczema-hand-94.jpg
+Eczema Photos/eczema-impetiginized-1.jpg
+Eczema Photos/eczema-impetiginized-11.jpg
+Eczema Photos/eczema-impetiginized-4.jpg
+Eczema Photos/eczema-impetiginized-6.jpg
+Eczema Photos/eczema-impetiginized-8.jpg
+Eczema Photos/eczema-impetiginized-9.jpg
+Eczema Photos/eczema-leg-14.jpg
+Eczema Photos/eczema-leg-21.jpg
+Eczema Photos/eczema-leg-3.jpg
+Eczema Photos/eczema-lids-13.jpg
+Eczema Photos/eczema-nummular-100.jpg
+Eczema Photos/eczema-nummular-102.jpg
+Eczema Photos/eczema-nummular-103.jpg
+Eczema Photos/eczema-nummular-112.jpg
+Eczema Photos/eczema-nummular-120.jpg
+Eczema Photos/eczema-nummular-127.jpg
+Eczema Photos/eczema-nummular-129.jpg
+Eczema Photos/eczema-nummular-133.jpg
+Eczema Photos/eczema-nummular-137.jpg
+Eczema Photos/eczema-nummular-140.jpg
+Eczema Photos/eczema-nummular-142.jpg
+Eczema Photos/eczema-nummular-147.jpg
+Eczema Photos/eczema-nummular-157.jpg
+Eczema Photos/eczema-nummular-179.jpg
+Eczema Photos/eczema-nummular-183.jpg
+Eczema Photos/eczema-nummular-195.jpg
+Eczema Photos/eczema-nummular-202.jpg
+Eczema Photos/eczema-nummular-81.jpg
+Eczema Photos/eczema-nummular-84.jpg
+Eczema Photos/eczema-nummular-99.jpg
+Eczema Photos/eczema-subacute-101.jpg
+Eczema Photos/eczema-subacute-15.jpg
+Eczema Photos/eczema-subacute-18.jpg
+Eczema Photos/eczema-subacute-2.jpg
+Eczema Photos/eczema-subacute-29.jpg
+Eczema Photos/eczema-subacute-30.jpg
+Eczema Photos/eczema-subacute-31.jpg
+Eczema Photos/eczema-subacute-34.jpg
+Eczema Photos/eczema-subacute-38.jpg
+Eczema Photos/eczema-subacute-39.jpg
+Eczema Photos/eczema-subacute-83.jpg
+Eczema Photos/eczema-subacute-84.jpg
+Eczema Photos/eczema-subacute-85.jpg
+Eczema Photos/eczema-subacute-90.jpg
+Eczema Photos/eczema-trunk-generalized-22.jpg
+Eczema Photos/eczema-trunk-generalized-33.jpg
+Eczema Photos/eczema-trunk-generalized-7.jpg
+Eczema Photos/eczema-vulva-1.jpg
+Eczema Photos/factitial-dermatitis-2.jpg
+Eczema Photos/factitial-dermatitis-3.jpg
+Eczema Photos/factitial-dermatitis-9.jpg
+Eczema Photos/fiberglass-dermatitis-6.jpg
+Eczema Photos/fissure-2.jpg
+Eczema Photos/fissure-4.jpg
+Eczema Photos/fissure-5.jpg
+Eczema Photos/heels-dry-cracked-4.jpg
+Eczema Photos/id-reaction-1.jpg
+Eczema Photos/id-reaction-10.jpg
+Eczema Photos/id-reaction-8.jpg
+Eczema Photos/iododerma-2.jpg
+Eczema Photos/keratolysis-exfoliativa-22.jpg
+Eczema Photos/keratolysis-exfoliativa-26.jpg
+Eczema Photos/keratolysis-exfoliativa-29.jpg
+Eczema Photos/keratolysis-exfoliativa-36.jpg
+Eczema Photos/keratolysis-exfoliativa-48.jpg
+Eczema Photos/keratolysis-exfoliativa-9.jpg
+Eczema Photos/lichen-simplex-chronicus-101.jpg
+Eczema Photos/lichen-simplex-chronicus-106.jpg
+Eczema Photos/lichen-simplex-chronicus-132.jpg
+Eczema Photos/lichen-simplex-chronicus-138.jpg
+Eczema Photos/lichen-simplex-chronicus-141.jpg
+Eczema Photos/lichen-simplex-chronicus-157.jpg
+Eczema Photos/lichen-simplex-chronicus-160.jpg
+Eczema Photos/lichen-simplex-chronicus-163.jpg
+Eczema Photos/lichen-simplex-chronicus-167.jpg
+Eczema Photos/lichen-simplex-chronicus-169.jpg
+Eczema Photos/lichen-simplex-chronicus-170.jpg
+Eczema Photos/lichen-simplex-chronicus-171.jpg
+Eczema Photos/lichen-simplex-chronicus-172.jpg
+Eczema Photos/lichen-simplex-chronicus-173.jpg
+Eczema Photos/lichen-simplex-chronicus-176.jpg
+Eczema Photos/lichen-simplex-chronicus-177.jpg
+Eczema Photos/lichen-simplex-chronicus-180.jpg
+Eczema Photos/lichen-simplex-chronicus-19.jpg
+Eczema Photos/lichen-simplex-chronicus-192.jpg
+Eczema Photos/lichen-simplex-chronicus-89.jpg
+Eczema Photos/lichen-simplex-chronicus-9.jpg
+Eczema Photos/lichen-simplex-chronicus-90.jpg
+Eczema Photos/lichen-simplex-chronicus-91.jpg
+Eczema Photos/lichen-simplex-chronicus-93.jpg
+Eczema Photos/lichen-simplex-chronicus-94.jpg
+Eczema Photos/maceration-2.jpg
+Eczema Photos/maceration-5.jpg
+Eczema Photos/milroy-disease-4.jpg
+Eczema Photos/milroy-disease-6.jpg
+Eczema Photos/neurotic-excoriations-1.jpg
+Eczema Photos/neurotic-excoriations-13.jpg
+Eczema Photos/neurotic-excoriations-19.jpg
+Eczema Photos/neurotic-excoriations-20.jpg
+Eczema Photos/neurotic-excoriations-22.jpg
+Eczema Photos/neurotic-excoriations-26.jpg
+Eczema Photos/neurotic-excoriations-27.jpg
+Eczema Photos/neurotic-excoriations-3.jpg
+Eczema Photos/neurotic-excoriations-31.jpg
+Eczema Photos/neurotic-excoriations-34.jpg
+Eczema Photos/neurotic-excoriations-41.jpg
+Eczema Photos/neurotic-excoriations-44.jpg
+Eczema Photos/neurotic-excoriations-51.jpg
+Eczema Photos/neurotic-excoriations-62.jpg
+Eczema Photos/neurotic-excoriations-63.jpg
+Eczema Photos/parasitosis-psychogenic-3.jpg
+Eczema Photos/parasitosis-psychogenic-4.jpg
+Eczema Photos/parasitosis-psychogenic-5.jpg
+Eczema Photos/phlebitis-superficial-2.jpg
+Eczema Photos/phlebitis-superficial-4.jpg
+Eczema Photos/pompholyx-14.jpg
+Eczema Photos/pompholyx-7.jpg
+Eczema Photos/pompholyx-9.jpg
+Eczema Photos/prurigo-nodularis-16.jpg
+Eczema Photos/prurigo-nodularis-26.jpg
+Eczema Photos/prurigo-nodularis-32.jpg
+Eczema Photos/prurigo-nodularis-40.jpg
+Eczema Photos/prurigo-nodularis-44.jpg
+Eczema Photos/prurigo-nodularis-50.jpg
+Eczema Photos/prurigo-nodularis-9.jpg
+Eczema Photos/stasis-dermatitis-101.jpg
+Eczema Photos/stasis-dermatitis-105.jpg
+Eczema Photos/stasis-dermatitis-113.jpg
+Eczema Photos/stasis-dermatitis-115.jpg
+Eczema Photos/stasis-dermatitis-122.jpg
+Eczema Photos/stasis-dermatitis-135.jpg
+Eczema Photos/stasis-dermatitis-144.jpg
+Eczema Photos/stasis-dermatitis-145.jpg
+Eczema Photos/stasis-dermatitis-146.jpg
+Eczema Photos/stasis-dermatitis-156.jpg
+Eczema Photos/stasis-dermatitis-163.jpg
+Eczema Photos/stasis-dermatitis-168.jpg
+Eczema Photos/stasis-dermatitis-170.jpg
+Eczema Photos/stasis-dermatitis-175.jpg
+Eczema Photos/stasis-dermatitis-183.jpg
+Eczema Photos/stasis-dermatitis-195.jpg
+Eczema Photos/stasis-dermatitis-196.jpg
+Eczema Photos/stasis-dermatitis-23.jpg
+Eczema Photos/stasis-dermatitis-79.jpg
+Eczema Photos/stasis-dermatitis-85.jpg
+Eczema Photos/stasis-dermatitis-92.jpg
+Exanthems and Drug Eruptions/cytomegalovirus-1.jpg
+Exanthems and Drug Eruptions/drug-eruptions-11.jpg
+Exanthems and Drug Eruptions/drug-eruptions-30.jpg
+Exanthems and Drug Eruptions/drug-eruptions-76.jpg
+Exanthems and Drug Eruptions/drug-eruptions-77.jpg
+Exanthems and Drug Eruptions/drug-eruptions-9.jpg
+Exanthems and Drug Eruptions/enterovirus-7.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-12.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-16.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-2.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-32.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-5.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-7.jpg
+Exanthems and Drug Eruptions/erythema-infectiosum-8.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-22.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-37.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-47.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-55.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-58.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-69.jpg
+Exanthems and Drug Eruptions/fixed-drug-eruption-70.jpg
+Exanthems and Drug Eruptions/hand-foot-mouth-disease-12.jpg
+Exanthems and Drug Eruptions/hand-foot-mouth-disease-5.jpg
+Exanthems and Drug Eruptions/hand-foot-mouth-disease-9.jpg
+Exanthems and Drug Eruptions/kawasaki-syndrome-20.jpg
+Exanthems and Drug Eruptions/kawasaki-syndrome-21.jpg
+Exanthems and Drug Eruptions/roseola-infantum-2.jpg
+Exanthems and Drug Eruptions/roseola-infantum-3.jpg
+Exanthems and Drug Eruptions/scarlet-fever-22.jpg
+Exanthems and Drug Eruptions/viral-exanthems-41.jpg
+Exanthems and Drug Eruptions/viral-exanthems-42.jpg
+Exanthems and Drug Eruptions/viral-exanthems-51.jpg
+Exanthems and Drug Eruptions/viral-exanthems-52.jpg
+Exanthems and Drug Eruptions/viral-exanthems-53.jpg
+Exanthems and Drug Eruptions/viral-exanthems-59.jpg
+Exanthems and Drug Eruptions/viral-exanthems-64.jpg
+Exanthems and Drug Eruptions/viral-exanthems-65.jpg
+Exanthems and Drug Eruptions/viral-exanthems-68.jpg
+Exanthems and Drug Eruptions/viral-exanthems-84.jpg
+Exanthems and Drug Eruptions/viral-exanthems-86.jpg
+Exanthems and Drug Eruptions/viral-exanthems-93.jpg
+Exanthems and Drug Eruptions/viral-exanthems-94.jpg
+Vascular Tumors/Hemangioma-Dermoscopy.jpg
+Vascular Tumors/angiokeratomas-1.jpg
+Vascular Tumors/angiokeratomas-24.jpg
+Vascular Tumors/angiokeratomas-29.jpg
+Vascular Tumors/angiokeratomas-44.jpg
+Vascular Tumors/angiokeratomas-5.jpg
+Vascular Tumors/angiokeratomas-6.jpg
+Vascular Tumors/cherry-angioma-1.jpg
+Vascular Tumors/cherry-angioma-10.jpg
+Vascular Tumors/cherry-angioma-16.jpg
+Vascular Tumors/cherry-angioma-17.jpg
+Vascular Tumors/cherry-angioma-18.jpg
+Vascular Tumors/cherry-angioma-21.jpg
+Vascular Tumors/cherry-angioma-23.jpg
+Vascular Tumors/cherry-angioma-24.jpg
+Vascular Tumors/cherry-angioma-26.jpg
+Vascular Tumors/cherry-angioma-3.jpg
+Vascular Tumors/cherry-angioma-4.jpg
+Vascular Tumors/hemangioma-11.jpg
+Vascular Tumors/hemangioma-17.jpg
+Vascular Tumors/hemangioma-20.jpg
+Vascular Tumors/hemangioma-22.jpg
+Vascular Tumors/hemangioma-23.jpg
+Vascular Tumors/hemangioma-26.jpg
+Vascular Tumors/hemangioma-28.jpg
+Vascular Tumors/hemangioma-33.jpg
+Vascular Tumors/hemangioma-44.jpg
+Vascular Tumors/hemangioma-5.jpg
+Vascular Tumors/hemangioma-54.jpg
+Vascular Tumors/hemangioma-56.jpg
+Vascular Tumors/hemangioma-57.jpg
+Vascular Tumors/hemangioma-764.jpg
+Vascular Tumors/hemangioma-899.jpg
+Vascular Tumors/hemangioma-infancy-16.jpg
+Vascular Tumors/hemangioma-infancy-21.jpg
+Vascular Tumors/hemangioma-infancy-23.jpg
+Vascular Tumors/hemangioma-infancy-26.jpg
+Vascular Tumors/hemangioma-infancy-27.jpg
+Vascular Tumors/hemangioma-infancy-3.jpg
+Vascular Tumors/hemangioma-infancy-36.jpg
+Vascular Tumors/hemangioma-infancy-39.jpg
+Vascular Tumors/hemangioma-infancy-4.jpg
+Vascular Tumors/hemangioma-infancy-41.jpg
+Vascular Tumors/hemangioma-infancy-45.jpg
+Vascular Tumors/hemangioma-infancy-47.jpg
+Vascular Tumors/hemangioma-infancy-52.jpg
+Vascular Tumors/hemangioma-infancy-59.jpg
+Vascular Tumors/hemangioma-infancy-6.jpg
+Vascular Tumors/hemangioma-infancy-60.jpg
+Vascular Tumors/kaposi-sarcoma-13.jpg
+Vascular Tumors/kaposi-sarcoma-14.jpg
+Vascular Tumors/kaposi-sarcoma-15.jpg
+Vascular Tumors/kaposi-sarcoma-26.jpg
+Vascular Tumors/kaposi-sarcoma-35.jpg
+Vascular Tumors/kaposi-sarcoma-41.jpg
+Vascular Tumors/kaposi-sarcoma-42.jpg
+Vascular Tumors/kaposi-sarcoma-6.jpg
+Vascular Tumors/kaposi-sarcoma-8.jpg
+Vascular Tumors/lymphangioma-circumscriptum-18.jpg
+Vascular Tumors/lymphangioma-circumscriptum-4.jpg
+Vascular Tumors/purpura-vomiting-3.jpg
+Vascular Tumors/pyogenic-granuloma-109.jpg
+Vascular Tumors/pyogenic-granuloma-112.jpg
+Vascular Tumors/pyogenic-granuloma-12.jpg
+Vascular Tumors/pyogenic-granuloma-2.jpg
+Vascular Tumors/pyogenic-granuloma-20.jpg
+Vascular Tumors/pyogenic-granuloma-30.jpg
+Vascular Tumors/pyogenic-granuloma-33.jpg
+Vascular Tumors/pyogenic-granuloma-35.jpg
+Vascular Tumors/pyogenic-granuloma-5.jpg
+Vascular Tumors/pyogenic-granuloma-56.jpg
+Vascular Tumors/pyogenic-granuloma-6.jpg
+Vascular Tumors/pyogenic-granuloma-76.jpg
+Vascular Tumors/pyogenic-granuloma-83.jpg
+Vascular Tumors/pyogenic-granuloma-84.jpg
+Vascular Tumors/pyogenic-granuloma-95.jpg
+Vascular Tumors/pyogenic-granuloma-96.jpg
+Vascular Tumors/spider-angioma-13.jpg
+Vascular Tumors/spider-angioma-14.jpg
+Vascular Tumors/spider-angioma-4.jpg
+Vascular Tumors/telangiectasias-10.jpg
+Vascular Tumors/telangiectasias-11.jpg
+Vascular Tumors/telangiectasias-19.jpg
+Vascular Tumors/telangiectasias-2.jpg
+Vascular Tumors/telangiectasias-21.jpg
+Vascular Tumors/telangiectasias-28.jpg
+Vascular Tumors/telangiectasias-31.jpg
+Vascular Tumors/telangiectasias-34.jpg
+Vascular Tumors/telangiectasias-49.jpg
+Vascular Tumors/telangiectasias-6.jpg
+Vascular Tumors/thrombosed-vein-1.jpg
+Vascular Tumors/unilateral-telangiectasia-1.jpg
+Vascular Tumors/vascular-anomaly-1.jpg
+Vascular Tumors/vascular-anomaly-3.jpg
+Vascular Tumors/vascular-anomaly-5.jpg
+Vascular Tumors/vascular-anomaly-6.jpg
+Vascular Tumors/venous-lake-10.jpg
+Vascular Tumors/venous-lake-15.jpg
+Vascular Tumors/venous-lake-18.jpg
+Vascular Tumors/venous-lake-2.jpg
+Vascular Tumors/venous-lake-20.jpg
+Vascular Tumors/venous-lake-22.jpg
+Vascular Tumors/venous-lake-24.jpg
+Vascular Tumors/venous-lake-28.jpg
+Vascular Tumors/venous-lake-29.jpg
+Vascular Tumors/venous-lake-35.jpg
+Vascular Tumors/venous-lake-44.jpg
+Vascular Tumors/venous-lake-48.jpg
+Vascular Tumors/venous-lake-8.jpg
+Vascular Tumors/venous-malformations-1.jpg
+Vascular Tumors/venous-malformations-34.jpg
+Vascular Tumors/venous-malformations-36.jpg
+Vascular Tumors/venous-malformations-40.jpg
+Vascular Tumors/venous-malformations-41.jpg
+Vascular Tumors/venous-malformations-43.jpg
+Vascular Tumors/venous-malformations-49.jpg
+Vascular Tumors/venous-malformations-5.jpg
+Vascular Tumors/venous-malformations-58.jpg
+Vascular Tumors/venous-malformations-61.jpg
+Vascular Tumors/venous-malformations-64.jpg
+Vascular Tumors/venous-malformations-78.jpg

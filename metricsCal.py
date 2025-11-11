@@ -340,10 +340,23 @@ SYNONYM_DICT = {
     "rosacea": {"rosacea", "rosaceous"},
     "candidiasis": {"candidiasis", "candidal"},
     "icththyosis": {"ichthyosis", "icththyosis"},
+    "icthyosis": {"icthyosis", "ichthyosis", "icththyosis"},
     "kerpilarisflorid": {"keratosis", "kerpilarisflorid"},
     "dermatitis": {"dermatitis", "dermatomyositis", "dermatosis"},
     "pemphigoid": {"pemphigoid", "pemphigus"},
-    "comedo": {"comedones"}
+    "palm": {"palms","palm"},
+    "urticaria": {"urticaria", "urticarial"},
+    "lesions": {"lesions", "lesion"},
+    "heels": {"heels", "heel"},
+    "eruptions": {"eruptions", "eruption"},
+    "infections": {"infection", "infections"},
+    "comedo": {"comedones"},
+    "actinic": {"ak", "actinic"},
+    "tumors": {"angiokeratomas", "tumors", "angiosarcoma", "angioma", "angiomas", "angiokeratoma", "melanoma"},
+    "steroidperioral": {"steroidperioral", "perioral"},
+    "exanthems": {"exanthems", "exabrgens", "rubra", "cutaneous", "larva", "migrans", "multiforme", "erythematosus",
+                  "exanthem", "zoster", "miliaria", "infectiosum", "syphilis"},
+    "eczema": {"eczematous", "eczema"}
 }
 
 
@@ -368,6 +381,7 @@ def word_hit_metrics(
     labels = read_label_file_raw(label_file)
 
     filenames = sorted(preds.keys())
+    print(filenames)
     hit_list: List[int] = []
     records = []
 
@@ -647,7 +661,7 @@ def cal_metrics_on_ISIC_Medgamma(df):
               "Cohen_Kappa": f"{cohen_kappa:.3f} ({wCK_ci[0]:.3f}, {wCK_ci[1]:.3f})",
               "Weighted_NPV": f"{weighted_npv:.3f} ({wNPV_ci[0]:.3f}, {wNPV_ci[1]:.3f})"}
 
-    # print("\n=== 评估指标结果 ===")
+    # print("\n=== 评估指标结果 ===") ACC BACC Weighted_F1 Cohen_Kappa Weighted_NPV
     # for metric, value in results.items():
     #     print(f"{metric}: {value:.4f}")
 
@@ -673,14 +687,14 @@ if __name__ == "__main__":
     #     similarity_threshold=FUZZY_THRESHOLD, base_image_directory=BASE_IMAGE_DIRECTORY, using_re=False,
     #     output_fuzzy_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_fuzzy_output.csv')
     # print(metrics)
-    # scores = word_hit_metrics(CASEREVIEW_EVALUATION_PATH, CASEREVIEW_LABELS_PATH, img_dir=BASE_IMAGE_DIRECTORY,
-    #                           out_csv=CASEREVIEW_WORDHIT_OUTPUT, using_re=False)
-    # print(scores)
-    df = pd.read_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/final_corrected_results_with_pred_and_true_label.xlsx')
+    scores = word_hit_metrics(CASEREVIEW_EVALUATION_PATH, CASEREVIEW_LABELS_PATH, img_dir=BASE_IMAGE_DIRECTORY,
+                              out_csv=CASEREVIEW_WORDHIT_OUTPUT, using_re=False)
+    print(scores)
+    # df = pd.read_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/final_corrected_results_with_pred_and_true_label.xlsx')
 
     # 计算指标
-    metrics = cal_metrics_on_ISIC_Medgamma(df)
-    print(metrics)
+    # metrics = cal_metrics_on_ISIC_Medgamma(df)
+    # print(metrics)
     # 保存结果到文件
     # results_df = pd.DataFrame([metrics])
     # results_df.to_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/evaluation_metrics.xlsx', index=False)

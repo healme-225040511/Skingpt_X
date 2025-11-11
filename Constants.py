@@ -29,17 +29,19 @@ ISIC_DISEASE_NAME = [
 ISIC_PRECSV_PATH = './PanDerm_ISIC_predprob.csv'
 
 MEDGAMMA_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/Medgamma/filename_to_medgamma_pred.csv'
-REASONINGLAYER_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_output.csv'
-CASEREVIEW_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_output.csv'
+REASONINGLAYER_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/Reasoning_output.csv'
+CASEREVIEW_EVALUATION_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/CaseReview_output.csv'
 MEDGAMMA_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/filename_to_label.csv'
-REASONING_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels_Reasoning.csv'
-CASEREVIEW_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/filename_to_labels_CaseReview.csv'
+REASONING_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/filename_to_labels_Reasoning.csv'
+CASEREVIEW_LABELS_PATH = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/filename_to_labels_CaseReview.csv'
 BASE_IMAGE_DIRECTORY = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
 
 MEDGAMMA_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/MEDGAMMA_word_hit.csv'
-CASEREVIEW_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/CaseReview_word_hit.csv'
-REASONING_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/REASONING_word_hit.csv'
+CASEREVIEW_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/CaseReview_word_hit.csv'
+REASONING_WORDHIT_OUTPUT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/REASONING_word_hit.csv'
 
 DERMNET_DATASET_ROOT = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
 ISIC_DATASET_ROOT = '/Volumes/T7/SkinGPT-X-Dataset/ISIC_2024_Resize224/test'
 ISIC_EVALUATION_ROOT = '/Volumes/T7/SkinGPT-X-EvaluationResults/ISIC/test'
+
+DERMNET_EVALUATION_ROOT = '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test'

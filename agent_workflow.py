@@ -9,7 +9,7 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from Constants import ISIC_EVALUATION_ROOT
+from Constants import ISIC_EVALUATION_ROOT, DERMNET_EVALUATION_ROOT
 # 假设以下模块已定义并可用
 from rag_agent import RAGAgent
 from web_search_agent import WebSearchAgent
@@ -21,7 +21,7 @@ from prompt_template import get_domain_expert_prompt
 WEB_SEARCH_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/WebSearch_output.json"
 RAG_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/RAG_output.json"
 SKINGPT_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/SkinGPT_output.json"
-REASONING_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/Reasoning_output.json"
+REASONING_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/Reasoning_output.json"
 
 
 async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
@@ -183,7 +183,7 @@ def WorkFlow(
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON: {e}")
             print(f"Invalid JSON received: {treatment_recommend_result}")
-            treatment_recommend_output[folder_name + '/' + image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
+            treatment_recommend_output[image_name] = {"error": str(e), "raw_output": treatment_recommend_result}
 
         save_output(treatment_recommend_output, "TreatmentRecommend", output_folder)
     else:
