@@ -2,10 +2,10 @@ import os
 
 import torch
 
-from Constants import DISEASE_NAME, ISIC_DISEASE_NAME
+from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME
 
 ISIC_judge = 'And you should give a conclusion whether the disease is malignant or benign. Add one line in your answer as "**Malignant/Benign:**".'
-def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
+def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_mapping: str = DERMNET_DISEASE_NAME):
     if domain == "WebSearch":
         prompt = f"""
             You are a highly skilled dermatology expert and research scientist with access to the latest medical advancements and online resources. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
@@ -66,22 +66,19 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
             Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring the integration of evidence-based insights from the knowledge base throughout your analysis.
         """
     elif domain == "SkinGPT":
-        disease_name = ISIC_DISEASE_NAME
-
-
+        disease_name = disease_name_mapping[:-1]
+        print(disease_name)
         def build_prelimary_text(prob_vec: list[float]) -> str:
             """
             prob_vec: 长度为 22 的 softmax 概率列表，顺序与 IDX2DISEASE 严格对应
             返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
             """
+            print(prob_vec)
             prob_vec = torch.tensor(prob_vec)
-            top1 = torch.topk(prob_vec, k=1)
+            topk = torch.topk(prob_vec, k=len(prob_vec))
             lines = ["### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
-            for idx, p in zip(top1.indices.tolist(), top1.values.tolist()):
-                if p > 0.5:
-                    lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
-                else:
-                    lines.append(f"- {disease_name[idx+1]}: {(1-p) * 100:.1f}%")
+            for idx, p in zip(topk.indices.tolist(), topk.values.tolist()):
+                lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
             return "\n".join(lines)
 
         pre = build_prelimary_text(prob_vec)
@@ -93,13 +90,13 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
             
             1. A **preliminary AI probability vector** (already ranked) indicating the three most likely diagnoses.  
             2. A **dermoscopy / clinical photograph** of the patient.
-            
+            This image has one of the following diseases: {", ".join(disease_name)}
             Your task is to **critically integrate** the AI probabilities with your own visual analysis before reaching any conclusion.  
             Do **not** simply repeat the AI ranking; instead, use it as prior evidence that you either confirm, refine, or refute based on image features.
             
             ---
             
-            ## Pre-analysis (use as Bayesian prior)
+            ## Pre-analysis (use as a key knowledge prior)
             {pre}
             Please structure your response as follows:
             ### 1. Image Region
@@ -113,11 +110,10 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None):
                 - Associated symptoms (e.g., itching, pain, scaling).
                 - Rate severity: Normal / Mild / Moderate / Severe.
             ### 3. Diagnostic Assessment
-            - Provide a primary diagnosis with a confidence level (e.g., High/Medium/Low) based on observed evidence.
-            - List differential diagnoses in order of likelihood, considering similar skin conditions.
-            - Support each diagnosis with evidence from the patient's imaging and clinical context.
+            - Provide a primary diagnosis with a confidence probability on each disease of the disease list {disease_name} based on observed evidence.
+            - Support top 5 diagnosis with evidence from the patient's imaging and clinical context. For other diseases, provide the confidence.
             - Highlight any critical or urgent findings that require immediate attention.
-        Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring that your analysis is both evidence-based and patient-centered.
+        Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring that your analysis is both evidence-based and patient-centered. Control your output length to be within 5000 words.
         """
     return prompt
 

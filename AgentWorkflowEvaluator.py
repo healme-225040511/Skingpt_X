@@ -15,7 +15,7 @@ from case_review_agent import CaseReviewAgent
 from rag_agent import RAGAgent
 from read_mispred_ISIC import read_misclassified_filenames
 from reasoning_agent import ReasoningAgent
-from skingpt_openai_agent import SkinGPTOpenAIAgent
+from skingpt_agent import SkingptAgent
 from treatment_recommend_agent import TreatmentRecommendAgent
 from web_search_agent import WebSearchAgent
 
@@ -57,12 +57,15 @@ def EvaluationOnDermnet(
     if is_single_agent:
         if int(agent_type) == 0:
             all_agents = {
-                "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch", searchapi_key='sk-74829ed96e1c4d9793507d546527f5de', temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
+                "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
+                                            searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
+                                            temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
             }
             selected_agent = 'WebSearch'
         if int(agent_type) == 1:
             all_agents = {
-                "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/ISIC/PanDerm_Base_LP_predprob.csv'),
+                "SkinGPT": SkingptAgent(model="gemini-2.5-pro", api_key=api_key,
+                                        pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/ISIC/PanDerm_Base_LP_predprob.csv'),
             }
         elif int(agent_type) == 2:
             all_agents = {
@@ -97,41 +100,41 @@ def EvaluationOnDermnet(
 
     # samples = read_samples_from_file('samples_only_in_reasoning.txt')
     samples = ['Acne and Rosacea Photos/rosacea-25.jpg',
-'Acne and Rosacea Photos/rosacea-nose-16.jpg',
-'Acne and Rosacea Photos/rosacea-nose-65.jpg',
-'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-horn-13.jpg',
-'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-face-22.jpg',
-'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-face-30.jpg',
-'Atopic Dermatitis Photos/05PityriasisAlba.jpg',
-'Atopic Dermatitis Photos/12IMG006.jpg',
-'Atopic Dermatitis Photos/IchthosisIMG030-GP3.jpg',
-'Bullous Disease Photos/bullous-pemphigoid-43.jpg',
-'Exanthems and Drug Eruptions/roseola-infantum-2.jpg',
-'Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-plantar-7.jpg',
-'Tinea Ringworm Candidiasis and other Fungal Infections/tinea-groin-40.jpg',
-'Vascular Tumors/cherry-angioma-16.jpg',
-'Vascular Tumors/cherry-angioma-17.jpg',
-'Vascular Tumors/hemangioma-infancy-3.jpg',
-'Vascular Tumors/hemangioma-infancy-39.jpg',
-'Vascular Tumors/hemangioma-infancy-4.jpg',
-'Vascular Tumors/hemangioma-infancy-6.jpg',
-'Vascular Tumors/hemangioma-infancy-60.jpg',
-'Vascular Tumors/kaposi-sarcoma-41.jpg',
-'Vascular Tumors/kaposi-sarcoma-42.jpg',
-'Vascular Tumors/kaposi-sarcoma-6.jpg',
-'Vascular Tumors/pyogenic-granuloma-112.jpg',
-'Vascular Tumors/pyogenic-granuloma-2.jpg',
-'Vascular Tumors/pyogenic-granuloma-20.jpg',
-'Vascular Tumors/pyogenic-granuloma-35.jpg',
-'Vascular Tumors/pyogenic-granuloma-84.jpg',
-'Vascular Tumors/pyogenic-granuloma-95.jpg',
-'Vascular Tumors/spider-angioma-13.jpg',
-'Vascular Tumors/vascular-anomaly-1.jpg',
-'Vascular Tumors/vascular-anomaly-3.jpg',
-'Vascular Tumors/vascular-anomaly-5.jpg',
-'Vascular Tumors/venous-lake-10.jpg',
-'Vascular Tumors/venous-lake-15.jpg',
-'Vascular Tumors/venous-lake-28.jpg']
+               'Acne and Rosacea Photos/rosacea-nose-16.jpg',
+               'Acne and Rosacea Photos/rosacea-nose-65.jpg',
+               'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-horn-13.jpg',
+               'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-face-22.jpg',
+               'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-face-30.jpg',
+               'Atopic Dermatitis Photos/05PityriasisAlba.jpg',
+               'Atopic Dermatitis Photos/12IMG006.jpg',
+               'Atopic Dermatitis Photos/IchthosisIMG030-GP3.jpg',
+               'Bullous Disease Photos/bullous-pemphigoid-43.jpg',
+               'Exanthems and Drug Eruptions/roseola-infantum-2.jpg',
+               'Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-plantar-7.jpg',
+               'Tinea Ringworm Candidiasis and other Fungal Infections/tinea-groin-40.jpg',
+               'Vascular Tumors/cherry-angioma-16.jpg',
+               'Vascular Tumors/cherry-angioma-17.jpg',
+               'Vascular Tumors/hemangioma-infancy-3.jpg',
+               'Vascular Tumors/hemangioma-infancy-39.jpg',
+               'Vascular Tumors/hemangioma-infancy-4.jpg',
+               'Vascular Tumors/hemangioma-infancy-6.jpg',
+               'Vascular Tumors/hemangioma-infancy-60.jpg',
+               'Vascular Tumors/kaposi-sarcoma-41.jpg',
+               'Vascular Tumors/kaposi-sarcoma-42.jpg',
+               'Vascular Tumors/kaposi-sarcoma-6.jpg',
+               'Vascular Tumors/pyogenic-granuloma-112.jpg',
+               'Vascular Tumors/pyogenic-granuloma-2.jpg',
+               'Vascular Tumors/pyogenic-granuloma-20.jpg',
+               'Vascular Tumors/pyogenic-granuloma-35.jpg',
+               'Vascular Tumors/pyogenic-granuloma-84.jpg',
+               'Vascular Tumors/pyogenic-granuloma-95.jpg',
+               'Vascular Tumors/spider-angioma-13.jpg',
+               'Vascular Tumors/vascular-anomaly-1.jpg',
+               'Vascular Tumors/vascular-anomaly-3.jpg',
+               'Vascular Tumors/vascular-anomaly-5.jpg',
+               'Vascular Tumors/venous-lake-10.jpg',
+               'Vascular Tumors/venous-lake-15.jpg',
+               'Vascular Tumors/venous-lake-28.jpg']
     print(samples)
     print(f"共 {len(samples)} 个样本")
     for imgName in tqdm(samples, desc='samples not contain'):
@@ -153,36 +156,37 @@ def EvaluationOnDermnet(
         except Exception as e:
             # 原句换成下面两行
             print(f"[WARN] 处理失败，跳过：{imgName}")
-            traceback.print_exc()      # ← 打印完整报错堆栈
+            traceback.print_exc()  # ← 打印完整报错堆栈
 
     # for disease_dir in disease_dirs:
-        #     print('⏳ 正在处理疾病：', disease_dir.name)
-        #     diseasePath = os.path.join(dataset_root, disease_dir.name)
-        #     imgList = os.listdir(diseasePath)
-        #
-        #     for imgName in tqdm(imgList, desc='image name'):
-        #         if (disease_dir.name + '/' + imgName ) in processedFiles:
-        #             print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
-        #             continue
-        #         try:
-        #             startTime = time.time()
-        #             WorkFlow(
-        #                 all_agents=all_agents,
-        #                 reasoning_agent=reasoning_agent,
-        #                 output_folder=output_root,
-        #                 image_path=os.path.join(diseasePath, imgName),
-        #                 folder_name=disease_dir.name
-        #             )
-        #             mark_done(os.path.join(diseasePath, imgName),
-        #                       os.path.join(output_root, 'processed.log'))
-        #             endTime = time.time()
-        #             print(f'{imgName}  处理完成，耗时{endTime - startTime}s')
-        #         except Exception as e:
-        #             # 原句换成下面两行
-        #             print(f"[WARN] 处理失败，跳过：{imgName}")
-        #             traceback.print_exc()      # ← 打印完整报错堆栈
+    #     print('⏳ 正在处理疾病：', disease_dir.name)
+    #     diseasePath = os.path.join(dataset_root, disease_dir.name)
+    #     imgList = os.listdir(diseasePath)
+    #
+    #     for imgName in tqdm(imgList, desc='image name'):
+    #         if (disease_dir.name + '/' + imgName ) in processedFiles:
+    #             print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
+    #             continue
+    #         try:
+    #             startTime = time.time()
+    #             WorkFlow(
+    #                 all_agents=all_agents,
+    #                 reasoning_agent=reasoning_agent,
+    #                 output_folder=output_root,
+    #                 image_path=os.path.join(diseasePath, imgName),
+    #                 folder_name=disease_dir.name
+    #             )
+    #             mark_done(os.path.join(diseasePath, imgName),
+    #                       os.path.join(output_root, 'processed.log'))
+    #             endTime = time.time()
+    #             print(f'{imgName}  处理完成，耗时{endTime - startTime}s')
+    #         except Exception as e:
+    #             # 原句换成下面两行
+    #             print(f"[WARN] 处理失败，跳过：{imgName}")
+    #             traceback.print_exc()      # ← 打印完整报错堆栈
 
-def EvaluationOnISIC(
+
+def Evaluation(
         model_name: str = "gemini-2.5-pro",
         dataset_root: str = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test",
         markdown_file_path: str = "./skin_handbook.md",
@@ -192,6 +196,7 @@ def EvaluationOnISIC(
         neo4j_url: str = "neo4j://localhost:7687",
         neo4j_user: str = "neo4j",
         neo4j_password: str = "Czty100165188",
+        pre_predporb_csv_path: str = "",
         is_single_agent: bool = False,
         agent_type: int = 0
 ):
@@ -206,12 +211,15 @@ def EvaluationOnISIC(
     if is_single_agent:
         if int(agent_type) == 0:
             all_agents = {
-                "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch", searchapi_key='sk-74829ed96e1c4d9793507d546527f5de', temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
+                "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
+                                            searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
+                                            temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
             }
             selected_agent = 'WebSearch'
         if int(agent_type) == 1:
             all_agents = {
-                "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='./PanDerm_ISIC_predprob.csv'),
+                "SkinGPT": SkingptAgent(model="gemini-2.5-pro", api_key=api_key,
+                                        pre_csv_path=pre_predporb_csv_path),
             }
         elif int(agent_type) == 2:
             all_agents = {
@@ -235,8 +243,6 @@ def EvaluationOnISIC(
     if not disease_dirs:
         print("⚠️  数据集根目录下没有找到任何疾病文件夹")
         return
-    # logFilePath = os.path.join(output_root, "processed.log")
-    # logFilePathList = load_set(logFilePath)
 
     with open(os.path.join(output_root, f'{selected_agent}_output.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -249,7 +255,7 @@ def EvaluationOnISIC(
         imgList = os.listdir(diseasePath)
 
         for imgName in tqdm(imgList, desc='image name'):
-            if (disease_dir.name + '/' + imgName ) in processedFiles:
+            if (disease_dir.name + '/' + imgName) in processedFiles:
                 print(f'已处理文件 {disease_dir.name}/{imgName}, 跳过')
                 continue
             try:
@@ -269,7 +275,9 @@ def EvaluationOnISIC(
             except Exception as e:
                 # 原句换成下面两行
                 print(f"[WARN] 处理失败，跳过：{imgName}")
-                traceback.print_exc()      # ← 打印完整报错堆栈
+                traceback.print_exc()  # ← 打印完整报错堆栈
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset_root", default="/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test")
@@ -278,7 +286,9 @@ if __name__ == "__main__":
     parser.add_argument("--api_key", default='sk-emhI8AjXfPpIpS1H1mgMm45AWGbMJzxHuJrNYb2WBzCIJgkG')
     parser.add_argument("--is_single_agent", default=False)
     parser.add_argument("--agent_type", default=0)
+    parser.add_argument("--pre_predprob_csv_path", default=0)
     args = parser.parse_args()
-    EvaluationOnISIC(dataset_root=args.dataset_root, output_root=args.output_root,
-                        markdown_file_path=args.markdown_file_path, api_key=args.api_key,
-                        is_single_agent=args.is_single_agent, agent_type=args.agent_type)
+    Evaluation(dataset_root=args.dataset_root, output_root=args.output_root,
+               markdown_file_path=args.markdown_file_path, api_key=args.api_key,
+               is_single_agent=args.is_single_agent, agent_type=args.agent_type,
+               pre_predporb_csv_path=args.pre_predprob_csv_path)
