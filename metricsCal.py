@@ -17,7 +17,7 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 from sklearn.metrics import confusion_matrix, classification_report
 
-from Constants import DISEASE_NAME, REASONINGLAYER_EVALUATION_PATH, REASONING_LABELS_PATH, BASE_IMAGE_DIRECTORY, \
+from Constants import DERMNET_DISEASE_NAME, REASONINGLAYER_EVALUATION_PATH, REASONING_LABELS_PATH, BASE_IMAGE_DIRECTORY, \
     REASONING_WORDHIT_OUTPUT, MEDGAMMA_EVALUATION_PATH, MEDGAMMA_LABELS_PATH, MEDGAMMA_WORDHIT_OUTPUT, \
     CASEREVIEW_LABELS_PATH, CASEREVIEW_WORDHIT_OUTPUT, CASEREVIEW_EVALUATION_PATH
 from dataPreparation.Panderm_Assessment import wCK_ci
@@ -385,7 +385,7 @@ def word_hit_metrics(
     hit_list: List[int] = []
     records = []
 
-    name2id = {name.lower(): i for i, name in enumerate(DISEASE_NAME)}
+    name2id = {name.lower(): i for i, name in enumerate(DERMNET_DISEASE_NAME)}
     y_true_id = []  # 保证传入的是 DISEASE_NAME 里的字符串
     y_pred_id = []
     for f in filenames:
@@ -402,7 +402,7 @@ def word_hit_metrics(
         pred_syn = pred_words
         label_syn = _expand_synonyms(label_words)
         file_syn = _expand_synonyms(filename_words)
-        y_pred_id.append(pred_to_class_id(pred_syn, DISEASE_NAME, file_syn, label_syn, name2id[raw_label]))
+        y_pred_id.append(pred_to_class_id(pred_syn, DERMNET_DISEASE_NAME, file_syn, label_syn, name2id[raw_label]))
         y_true_id.append(name2id[raw_label])
         # print("label_syn",label_syn)
         # print("file_syn", file_syn)
@@ -410,7 +410,7 @@ def word_hit_metrics(
 
         hit = int(bool(pred_syn & label_syn) or bool(pred_syn & file_syn))
         if hit:
-            print(hit, pred_to_class_id(pred_syn, DISEASE_NAME, file_syn, label_syn, name2id[raw_label]), name2id[raw_label])
+            print(hit, pred_to_class_id(pred_syn, DERMNET_DISEASE_NAME, file_syn, label_syn, name2id[raw_label]), name2id[raw_label])
         hit_list.append(hit)
 
         records.append({

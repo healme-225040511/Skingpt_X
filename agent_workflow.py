@@ -13,7 +13,7 @@ from Constants import ISIC_EVALUATION_ROOT, DERMNET_EVALUATION_ROOT
 # 假设以下模块已定义并可用
 from rag_agent import RAGAgent
 from web_search_agent import WebSearchAgent
-from skingpt_openai_agent import SkinGPTOpenAIAgent
+from skingpt_agent import SkingptAgent
 from reasoning_agent import ReasoningAgent
 from case_review_agent import CaseReviewAgent
 from treatment_recommend_agent import TreatmentRecommendAgent
