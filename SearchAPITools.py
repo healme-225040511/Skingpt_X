@@ -81,4 +81,4 @@ class BochaSearchTool(Toolkit):
 # 临时测试
 if __name__ == "__main__":
     tool = BochaSearchTool(api_key="sk-74829ed96e1c4d9793507d546527f5de")
-    print(tool.bocha_search("why the sky is blue？", max_results=5))
+    print(tool.bocha_search("What are the recent new papers and tools in protein sequencing", max_results=5))

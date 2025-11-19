@@ -234,7 +234,7 @@ def Evaluation(
         #                                 searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
         #                                 temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
         # }
-        reasoning_agent = ReasoningAgent(model="gemini-2.5-flash", api_key=api_key)
+        reasoning_agent = ReasoningAgent(model="gemini-3-pro-preview", api_key=api_key)
         selected_agent = 'Reasoning'
         # selected_agent = 'CaseReview'
         # case_review_agent = CaseReviewAgent(model="gemini-2.5-flash", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,

@@ -181,10 +181,10 @@ def UpperFirstWord(file_path: Path):
 
 if __name__ == '__main__':
     base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
-    json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output.json',
-                                  '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/CaseReview_output.csv')
-    get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/CaseReview_output.json',
-                            '/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/DermNet/SkinGPTX/filename_to_labels_CaseReview.csv')
+    json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_results.json',
+                                  '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_results.csv')
+    get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_results.json',
+                            '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_labels.csv')
     # modify_filename(json_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
     #                 out_json='/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_new.json',
     #                 dataset_dir='/Volumes/T7/SkinGPT-X-Dataset/Dermnet/evaluation_split2')

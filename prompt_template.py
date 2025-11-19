@@ -4,12 +4,11 @@ import torch
 
 from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME
 
-ISIC_judge = 'And you should give a conclusion whether the disease is malignant or benign. Add one line in your answer as "**Malignant/Benign:**".'
 def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_mapping: str = DERMNET_DISEASE_NAME):
     if domain == "WebSearch":
         prompt = f"""
             You are a highly skilled dermatology expert and research scientist with access to the latest medical advancements and online resources. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
-            Your primary role is to analyze skin conditions by combining clinical expertise with up-to-date research findings. {ISIC_judge} Structure your response as follows:
+            Your primary role is to analyze skin conditions by combining clinical expertise with up-to-date research findings. Structure your response as follows:
             ### 1. Image Region
             - Identify the affected anatomical region and positioning of the lesion or area of interest.
             - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
@@ -39,7 +38,7 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_
     elif domain == "RAG":
         prompt = f"""
             You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
-            Your primary role is to provide authoritative, structured medical knowledge to support the analysis of skin conditions. {ISIC_judge} Structure your response as follows:
+            Your primary role is to provide authoritative, structured medical knowledge to support the analysis of skin conditions. Structure your response as follows:
             ### 1. Image Region
             - Identify the affected anatomical region and positioning of the lesion or area of interest.
             - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
@@ -67,13 +66,11 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_
         """
     elif domain == "SkinGPT":
         disease_name = disease_name_mapping[:-1]
-        print(disease_name)
         def build_prelimary_text(prob_vec: list[float]) -> str:
             """
             prob_vec: 长度为 22 的 softmax 概率列表，顺序与 IDX2DISEASE 严格对应
             返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
             """
-            print(prob_vec)
             prob_vec = torch.tensor(prob_vec)
             topk = torch.topk(prob_vec, k=len(prob_vec))
             lines = ["### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
@@ -82,7 +79,6 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_
             return "\n".join(lines)
 
         pre = build_prelimary_text(prob_vec)
-        print(pre)
         prompt = f"""
             You are a frontline medical professional specializing in performing initial patient assessments based on images. 
             Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
@@ -205,7 +201,7 @@ def get_synthesized_report_prompt(analyses):
     prompt += f"- **RAGAgent Report**:\n{rag_report}\n"
     prompt += f"- **WebSearchAgent Report**:\n{web_search_report}\n"
     prompt += f"- **SkinGPTAgent Report**:\n{skingpt_report}\n"
-    prompt += f"Your primary task is to **integrate and synthesize** these reports by leveraging the unique strengths of each agent. {ISIC_judge} Follow these steps:\n" \
+    prompt += f"Your primary task is to **integrate and synthesize** these reports by leveraging the unique strengths of each agent.  Follow these steps:\n" \
               f"1. **Understand Each Agent's Contribution**:\n" \
               f"   - **RAGAgent**: Provides authoritative, evidence-based knowledge from trusted sources.\n" \
               f"   - **WebSearchAgent**: Offers the latest research findings and real-time updates from medical literature.\n" \
@@ -221,6 +217,7 @@ def get_synthesized_report_prompt(analyses):
               f"4. **Synthesize a Comprehensive Report**: Integrate the insights from all experts into a cohesive and actionable analysis, including:\n" \
               f"   - A refined primary diagnosis with confidence level (e.g., High/Medium/Low).\n" \
               f"   - A prioritized list of differential diagnoses, supported by evidence from multiple agents.\n" \
+              f"   - Probability distribution over the full {DERMNET_DISEASE_NAME} list, sorted descending.\n" \
               f"   - A summary of key findings and their clinical significance.\n" \
               f"   - **Selective inclusion of knowledge or research** from RAGAgent and WebSearchAgent, ensuring that only the most relevant and authoritative content is included.\n" \
               f"     - For each selected piece of knowledge or research, provide a **brief summary** and include **specific details** such as URLs or references.\n" \
@@ -230,6 +227,7 @@ def get_synthesized_report_prompt(analyses):
               f"  \"PrimaryDiagnosis\": \"[refined primary diagnosis]\",\n" \
               f"  \"ConfidenceLevel\": \"[High/Medium/Low]\",\n" \
               f"  \"DifferentialDiagnoses\": [\"list of differential diagnoses\"],\n" \
+              "\"ProbabilityDistribution\": [\"sorted list: { disease: '...', probability: 0.xx }\"],\n" \
               f"  \"KeyFindings\": \"[summary of key findings]\",\n" \
               f"  \"KnowledgeAndResearch\": \"[A fluent paragraph summarizing selected knowledge and research, including specific details such as URLs or references.]\"\n" \
               f"}}\n" \
@@ -274,6 +272,7 @@ def get_case_review_prompt(current_case, historical_cases):
     prompt += f"- **Knowledge and Research**:{knowledge_and_research}\n\n"
     prompt += f"{historical_cases_text}\n"
     prompt += f"Your primary task is to **validate and assess** this diagnostic information by comparing it with the provided historical cases. The historical cases include two types:\n" \
+            f"You should give the probability of each disease in {DERMNET_DISEASE_NAME}"\
             f"1. **Cases with Highly Similar Key Findings**: These cases have key findings that are semantically similar to the current case.\n" \
             f"2. **Cases with Consistent Primary Diagnosis**: These cases share the same primary diagnosis as the current case, even if their key findings differ.\n\n" \
             f"Follow these steps to analyze and integrate insights:\n" \
@@ -298,6 +297,7 @@ def get_case_review_prompt(current_case, historical_cases):
             f"  \"PrimaryDiagnosis\": \"<validated primary diagnosis>\",\n" \
             f"  \"ConfidenceLevel\": \"<validated confidence level>\",\n" \
             f"  \"DifferentialDiagnoses\": \"<refined list of differential diagnoses>\",\n" \
+            "\"ProbabilityDistribution\": [\"sorted list: { disease: '...', probability: 0.xx }\"],\n"\
             f"  \"KeyFindings\": \"{key_findings}\",\n" \
             f"  \"KnowledgeAndResearch\": \"<validated knowledge and research>\",\n" \
             f"  \"HistoricalCaseComparison\": {{\n" \
@@ -344,7 +344,7 @@ def get_treatment_recommend_prompt(current_case: dict) -> str:
         - **Differential Diagnoses**: {differential_diagnoses_str}
         - **Key Findings**: {key_findings}
         - **Knowledge and Research**: {knowledge_and_research}
-        Your primary role is to provide comprehensive treatment plans for skin conditions by combining clinical expertise with up-to-date research findings. {ISIC_judge} Follow these steps to generate your response:
+        Your primary role is to provide comprehensive treatment plans for skin conditions by combining clinical expertise with up-to-date research findings. Follow these steps to generate your response:
         ### 1. Treatment Overview
         - Summarize the **primary diagnosis** and its clinical significance based on the input case.
         - Highlight the **severity** of the condition (e.g., Mild / Moderate / Severe) based on the provided key findings.

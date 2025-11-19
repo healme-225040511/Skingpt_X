@@ -18,9 +18,9 @@ from reasoning_agent import ReasoningAgent
 from case_review_agent import CaseReviewAgent
 from treatment_recommend_agent import TreatmentRecommendAgent
 from prompt_template import get_domain_expert_prompt
-WEB_SEARCH_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/WebSearch_output.json"
-RAG_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/RAG_output.json"
-SKINGPT_AGENT_OUTPUT_PATH = f"{ISIC_EVALUATION_ROOT}/SkinGPT_output.json"
+WEB_SEARCH_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/WebSearch_output.json"
+RAG_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/RAG_output.json"
+SKINGPT_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/SkinGPT_output.json"
 REASONING_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/Reasoning_output.json"
 
 
