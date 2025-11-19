@@ -4,22 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca57416d-001f-44df-9238-ec2e2efbed96" name="变更" comment="[Description:] util工具上传">
-      <change afterPath="$PROJECT_DIR$/Panderm_Dermnet_predprob.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hulumed_reasoning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_dataset.py" afterDir="false" />
+    <list default="true" id="ca57416d-001f-44df-9238-ec2e2efbed96" name="变更" comment="[Description:] 「新思路」预训练Panderm+SkinGPT推理">
+      <change afterPath="$PROJECT_DIR$/cal_missing_item.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cal_npv_auc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extract_disease_prob_from_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lancedb/text_collection.lance/data/cfa6a6ef-6d58-4fe7-bda5-c3690ea1e48e.lance" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/use.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccessKey.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AccessKey.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgentWorkflowEvaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentWorkflowEvaluator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SearchAPITools.py" beforeDir="false" afterPath="$PROJECT_DIR$/SearchAPITools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinGPT-4/skingpt4/common/dist_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SkinGPT-4/skingpt4/common/dist_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinGPT-4/skingpt4/datasets/datasets/dataloader_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/SkinGPT-4/skingpt4/datasets/datasets/dataloader_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SkinGPT-4/skingpt4/models/eva_vit.py" beforeDir="false" afterPath="$PROJECT_DIR$/SkinGPT-4/skingpt4/models/eva_vit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agent_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent_workflow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agent_workflow_sync.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPreparation/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPreparation/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract_diagnostic_data_fixed.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_diagnostic_data_fixed.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/metricsCal.py" beforeDir="false" afterPath="$PROJECT_DIR$/metricsCal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prompt_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/prompt_template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_agent.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_evaluation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_evaluation.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skingpt_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/skingpt_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skingpt_openai_agent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skin_handbook.md" beforeDir="false" afterPath="$PROJECT_DIR$/skin_handbook.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/case_review_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/openai_apikey_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/web_search_agent_demo.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +83,8 @@
     &quot;Python.agent_workflow.executor&quot;: &quot;Run&quot;,
     &quot;Python.agent_workflow_gpu.executor&quot;: &quot;Run&quot;,
     &quot;Python.agent_workflow_sync.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cal_missing_item.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cal_npv_auc.executor&quot;: &quot;Run&quot;,
     &quot;Python.case_review_agent.executor&quot;: &quot;Run&quot;,
     &quot;Python.case_review_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.csv_highlight.executor&quot;: &quot;Run&quot;,
@@ -83,6 +92,9 @@
     &quot;Python.delete_nan.executor&quot;: &quot;Run&quot;,
     &quot;Python.evaluator.executor&quot;: &quot;Run&quot;,
     &quot;Python.extract_diagnostic_data_fixed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.extract_disease_prob_from_agent.executor&quot;: &quot;Run&quot;,
+    &quot;Python.make_panderm_csv.executor&quot;: &quot;Run&quot;,
+    &quot;Python.merge.executor&quot;: &quot;Run&quot;,
     &quot;Python.metadata_preparation.executor&quot;: &quot;Run&quot;,
     &quot;Python.metricsCal.executor&quot;: &quot;Run&quot;,
     &quot;Python.prompt_template.executor&quot;: &quot;Run&quot;,
@@ -93,13 +105,15 @@
     &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
     &quot;Python.treatment_recommend_agent.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;Python.use.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Debug&quot;,
     &quot;Python.web_search_agent.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHELLCHECK.PATH&quot;: &quot;我会在意&quot;,
+    &quot;Shell Script.run_evaluation.sh.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Volumes/T7/Skingpt_X&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -122,30 +136,8 @@
       <recent name="$PROJECT_DIR$/dataPreparation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Plot">
-    <configuration name="MedgammaSkinDiseaseEvaluator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Skingpt_X" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ComparisonExperiments" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MedgammaSkinDiseaseEvaluator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.cal_missing_item">
+    <configuration name="cal_missing_item" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Skingpt_X" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,7 +150,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cal_missing_item.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,7 +159,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="evaluator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="make_panderm_csv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Skingpt_X" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,11 +168,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../SkinGPT-X-Dataset/HAM10000" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/evaluator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../SkinGPT-X-Dataset/HAM10000/make_panderm_csv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,6 +195,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metricsCal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="use" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/use.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,11 +249,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Plot" />
-        <item itemvalue="Python.evaluator" />
+        <item itemvalue="Python.cal_missing_item" />
+        <item itemvalue="Python.use" />
         <item itemvalue="Python.metricsCal" />
+        <item itemvalue="Python.make_panderm_csv" />
         <item itemvalue="Python.utils" />
-        <item itemvalue="Python.MedgammaSkinDiseaseEvaluator" />
       </list>
     </recent_temporary>
   </component>
@@ -456,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762837851526</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[Description:] 「新思路」预训练Panderm+SkinGPT推理">
+      <option name="closed" value="true" />
+      <created>1763039816639</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1763039816639</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +529,8 @@
     <MESSAGE value="[Description:] 指标计算更新，ISIC数据集实验" />
     <MESSAGE value="[Description:] 指标计算更新，ISIC数据集实验_Colab运行，lancedb数据上传" />
     <MESSAGE value="[Description:] util工具上传" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Description:] util工具上传" />
+    <MESSAGE value="[Description:] 「新思路」预训练Panderm+SkinGPT推理" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Description:] 「新思路」预训练Panderm+SkinGPT推理" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Skingpt_X$skingpt_openai_agent.coverage" NAME="skingpt_openai_agent 覆盖结果" MODIFIED="1757068016839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

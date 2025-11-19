@@ -344,7 +344,7 @@ SYNONYM_DICT = {
     "kerpilarisflorid": {"keratosis", "kerpilarisflorid"},
     "dermatitis": {"dermatitis", "dermatomyositis", "dermatosis"},
     "pemphigoid": {"pemphigoid", "pemphigus"},
-    "palm": {"palms","palm"},
+    "palm": {"palms", "palm"},
     "urticaria": {"urticaria", "urticarial"},
     "lesions": {"lesions", "lesion"},
     "heels": {"heels", "heel"},
@@ -359,7 +359,39 @@ SYNONYM_DICT = {
     "eczema": {"eczematous", "eczema"}
 }
 
+# 7 类 pigmented lesion 同义词词典
+SYNONYM_DICT_HAM10000 = {
+    "akiec": {"akiec", "actinic", "keratosis", "intraepithelial", "bowen", "bowen's", "ak", "solar keratosis"},
+    "bcc":   {"bcc", "basal", "cell", "carcinoma", "basalioma"},
+    "bkl":   {"bkl", "benign keratosis", "solar lentigines", "seborrheic keratosis", "lichen planus-like", "solar lentigo"},
+    "df":    {"df", "dermatofibroma"},
+    "mel":   {"mel", "melanoma", "malignant melanoma"},
+    "nv":    {"nv", "nevus", "nevi", "melanocytic nevus", "mole", "moles"},
+    "vasc":  {"vasc", "vascular", "angioma", "angiomas", "angiokeratoma", "pyogenic granuloma", "hemorrhage", "blood vessel"}
+}
 
+# 反向索引：同义词 → 标准名
+SYNONYM_DICT_HAM10000_REVERSE = {}
+for std, synonyms in SYNONYM_DICT_HAM10000.items():
+    for w in synonyms:
+        SYNONYM_DICT_HAM10000_REVERSE[w] = std
+def pred_to_class_7(pred_words: set, filename_words: set) -> int:
+    """
+    把预测词集映射到 7 类 ID，优先级：
+    1. 预测词直接命中
+    2. 文件名命中
+    3. 未命中返回 'unknown' 对应索引 6
+    """
+    # 1. 预测词命中
+    for w in pred_words:
+        if w in SYNONYM_DICT_HAM10000_REVERSE:
+            return list(SYNONYM_DICT_HAM10000.keys()).index(SYNONYM_DICT_HAM10000_REVERSE[w])
+    # 2. 文件名命中
+    for w in filename_words:
+        if w in SYNONYM_DICT_HAM10000_REVERSE:
+            return list(SYNONYM_DICT_HAM10000.keys()).index(SYNONYM_DICT_HAM10000_REVERSE[w])
+    # 3. 未命中
+    return 6   # 固定把 unknown 放最后一位
 def _expand_synonyms(words: Set[str]) -> Set[str]:
     """把同义词全部展开成一个大集合"""
     expanded = set(words)
@@ -381,7 +413,6 @@ def word_hit_metrics(
     labels = read_label_file_raw(label_file)
 
     filenames = sorted(preds.keys())
-    print(filenames)
     hit_list: List[int] = []
     records = []
 
@@ -402,15 +433,22 @@ def word_hit_metrics(
         pred_syn = pred_words
         label_syn = _expand_synonyms(label_words)
         file_syn = _expand_synonyms(filename_words)
-        y_pred_id.append(pred_to_class_id(pred_syn, DERMNET_DISEASE_NAME, file_syn, label_syn, name2id[raw_label]))
-        y_true_id.append(name2id[raw_label])
+        # Dermnet
+        # y_pred_id.append(pred_to_class_id(pred_syn, DERMNET_DISEASE_NAME, file_syn, label_syn, name2id[raw_label]))
+        # y_true_id.append(name2id[raw_label])
+
+        # HAM10000
+        y_true_id.append(list(SYNONYM_DICT_HAM10000.keys()).index(raw_label.lower()))
+        y_pred_id.append(pred_to_class_7(pred_words, filename_words))
+
         # print("label_syn",label_syn)
         # print("file_syn", file_syn)
         # print("pred_syn", pred_syn)
 
         hit = int(bool(pred_syn & label_syn) or bool(pred_syn & file_syn))
-        if hit:
-            print(hit, pred_to_class_id(pred_syn, DERMNET_DISEASE_NAME, file_syn, label_syn, name2id[raw_label]), name2id[raw_label])
+        # if hit:
+        #     print(hit, pred_to_class_id(pred_syn, DERMNET_DISEASE_NAME, file_syn, label_syn, name2id[raw_label]),
+        #           name2id[raw_label])
         hit_list.append(hit)
 
         records.append({
@@ -600,6 +638,7 @@ def test(FUZZY_THRESHOLD):
     os.remove("filename_to_medgamma_pred.csv")
     os.remove("filename_to_label.csv")
 
+
 def cal_metrics_on_ISIC_Medgamma(df):
     """
     计算评估指标：ACC, BACC, Weighted_F1, Cohen_Kappa, Weighted_NPV
@@ -652,14 +691,15 @@ def cal_metrics_on_ISIC_Medgamma(df):
     bacc_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: balanced_accuracy_score(yt, yp))
     wf1_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: f1_score(yt, yp, average='weighted'))
     wCK_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: cohen_kappa_score(yt, yp))
-    wNPV_ci = boot_ci(true_label_clean, pred_clean, lambda yt, yp: calc_NPV_PNR(confusion_matrix(yt, yp))['NPV_weighted'])
+    wNPV_ci = boot_ci(true_label_clean, pred_clean,
+                      lambda yt, yp: calc_NPV_PNR(confusion_matrix(yt, yp))['NPV_weighted'])
 
     # 输出结果
     results = {"ACC": f'{acc:.3f} ({acc_ci[0]:.3f}, {acc_ci[1]:.3f})',
-              "BACC": f'{bacc:.3f} ({bacc_ci[0]:.3f}, {bacc_ci[1]:.3f})',
-              "Weighted_F1": f"{weighted_f1:.3f} ({wf1_ci[0]:.3f}, {wf1_ci[1]:.3f})",
-              "Cohen_Kappa": f"{cohen_kappa:.3f} ({wCK_ci[0]:.3f}, {wCK_ci[1]:.3f})",
-              "Weighted_NPV": f"{weighted_npv:.3f} ({wNPV_ci[0]:.3f}, {wNPV_ci[1]:.3f})"}
+               "BACC": f'{bacc:.3f} ({bacc_ci[0]:.3f}, {bacc_ci[1]:.3f})',
+               "Weighted_F1": f"{weighted_f1:.3f} ({wf1_ci[0]:.3f}, {wf1_ci[1]:.3f})",
+               "Cohen_Kappa": f"{cohen_kappa:.3f} ({wCK_ci[0]:.3f}, {wCK_ci[1]:.3f})",
+               "Weighted_NPV": f"{weighted_npv:.3f} ({wNPV_ci[0]:.3f}, {wNPV_ci[1]:.3f})"}
 
     # print("\n=== 评估指标结果 ===") ACC BACC Weighted_F1 Cohen_Kappa Weighted_NPV
     # for metric, value in results.items():
@@ -676,6 +716,8 @@ def cal_metrics_on_ISIC_Medgamma(df):
         print(f"{i}\t{precision[i]:.4f}\t\t{recall[i]:.4f}\t{f1[i]:.4f}\t{support[i]}\t{npv_per_class[i]:.4f}")
 
     return results
+
+
 # ---------- 5. 用法示例 (修改以演示模糊匹配) ----------
 if __name__ == "__main__":
     # 示例用法：使用一个阈值来控制模糊匹配的宽松程度
@@ -687,8 +729,10 @@ if __name__ == "__main__":
     #     similarity_threshold=FUZZY_THRESHOLD, base_image_directory=BASE_IMAGE_DIRECTORY, using_re=False,
     #     output_fuzzy_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_fuzzy_output.csv')
     # print(metrics)
-    scores = word_hit_metrics(CASEREVIEW_EVALUATION_PATH, CASEREVIEW_LABELS_PATH, img_dir=BASE_IMAGE_DIRECTORY,
-                              out_csv=CASEREVIEW_WORDHIT_OUTPUT, using_re=False)
+    scores = word_hit_metrics('/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/Hulumed/diagnosis_results.csv',
+                              '/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/Hulumed/diagnosis_results.csv',
+                              img_dir=BASE_IMAGE_DIRECTORY,
+                              out_csv='/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/Hulumed/metrics_results.csv', using_re=False)
     print(scores)
     # df = pd.read_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/final_corrected_results_with_pred_and_true_label.xlsx')
 

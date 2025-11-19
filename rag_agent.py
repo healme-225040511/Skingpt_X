@@ -46,10 +46,10 @@ class RAGAgent:
         )
 
         # Initialize vector stores
-        LOCAL_DB = "/content/lancedb"  # ← 本地可写路径
-        os.makedirs(LOCAL_DB, exist_ok=True)
-        self.text_store = LanceDBVectorStore(uri=LOCAL_DB, table_name="text_collection", mode="create")
-        # self.text_store = LanceDBVectorStore(uri="lancedb", table_name="text_collection")
+        # LOCAL_DB = "/content/lancedb"  # ← 本地可写路径
+        # os.makedirs(LOCAL_DB, exist_ok=True)
+        # self.text_store = LanceDBVectorStore(uri=LOCAL_DB, table_name="text_collection", mode="create")
+        self.text_store = LanceDBVectorStore(uri="lancedb", table_name="text_collection", mode="ro")
         self.storage_context = StorageContext.from_defaults(
             vector_store=self.text_store
         )
@@ -75,7 +75,7 @@ class RAGAgent:
         embed_model = Settings.embed_model
         for node in nodes:
             node.embedding = embed_model.get_text_embedding(node.text)
-        self.text_store.add(nodes)
+        # self.text_store.add(nodes)
         count = self.text_store._table.count_rows()  # ✅ 正确计数
         print(f"【建索引导入完成】共写入 {count} 条向量")
         # Create MultiModalVectorStoreIndex

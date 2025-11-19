@@ -219,5 +219,5 @@ def splitMedgammaResults(input_file):
 # Usage
 
 if __name__ == "__main__":
-    # main()
+    # extract()
     splitMedgammaResults('/Volumes/T7/SkinGPT-X-EvaluationResults/results_medgemma.csv')
