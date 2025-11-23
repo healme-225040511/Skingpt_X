@@ -190,13 +190,27 @@ def get_rag_prompt(pre_analysis):
 #     return revision_prompt
 
 
-def get_synthesized_report_prompt(analyses):
+def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
     synthesizer = "You are a highly skilled dermatologist and medical decision-maker, responsible for synthesizing and integrating reports from multiple specialized agents to generate a comprehensive and accurate diagnostic report."
 
     rag_report = analyses.get("RAG", "No RAGAgent report available.")
     web_search_report = analyses.get("WebSearch", "No WebSearchAgent report available.")
-    skingpt_report = analyses.get("SkinGPT", "No SkinGPTAgent report available.")
-    
+    # skingpt_report = analyses.get("SkinGPT", "No SkinGPTAgent report available.")
+
+    def build_prelimary_text(prob_vec: list[float]) -> str:
+        """
+        prob_vec: 长度为 22 的 softmax 概率列表，顺序与 IDX2DISEASE 严格对应
+        返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
+        """
+        prob_vec = torch.tensor(prob_vec)
+        topk = torch.topk(prob_vec, k=5)
+        lines = [
+            "### You should take account of the preliminary diagnosis of the expert agent and their possibility below, rethink of your Primary Diagnosis"]
+        for idx, p in zip(topk.indices.tolist(), topk.values.tolist()):
+            lines.append(f"- {DERMNET_DISEASE_NAME[idx]}: {p * 100:.1f}%")
+        return "\n".join(lines)
+
+    skingpt_report = build_prelimary_text(prob_vec)
     prompt = "Here are reports from different specialized agents:\n"
     prompt += f"- **RAGAgent Report**:\n{rag_report}\n"
     prompt += f"- **WebSearchAgent Report**:\n{web_search_report}\n"
@@ -224,7 +238,7 @@ def get_synthesized_report_prompt(analyses):
               f"     - Organize these summaries into a **fluent and coherent paragraph** within the report.\n" \
               f"5. **Format Your Response**: Provide your response in the following JSON format:\n" \
               f"{{\n" \
-              f"  \"PrimaryDiagnosis\": \"[refined primary diagnosis]\",\n" \
+              f"  \"PrimaryDiagnosis\": \"[You should take account of the preliminary diagnosis of the expert agent and their possibility below, rethink of your Primary Diagnosis]\",\n" \
               f"  \"ConfidenceLevel\": \"[High/Medium/Low]\",\n" \
               f"  \"DifferentialDiagnoses\": [\"list of differential diagnoses\"],\n" \
               "\"ProbabilityDistribution\": [\"sorted list: { disease: '...', probability: 0.xx }\"],\n" \

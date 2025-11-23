@@ -1,5 +1,7 @@
+import csv
 import os
 import json
+import pathlib
 import sys
 import time
 import hashlib
@@ -9,7 +11,7 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from Constants import ISIC_EVALUATION_ROOT, DERMNET_EVALUATION_ROOT
+from Constants import ISIC_EVALUATION_ROOT, DERMNET_EVALUATION_ROOT, ISIC_PRECSV_PATH
 # 假设以下模块已定义并可用
 from rag_agent import RAGAgent
 from web_search_agent import WebSearchAgent
@@ -149,6 +151,32 @@ def WorkFlow(
     # Generate report
     if reasoning_agent is not None:
         print("Generating report")
+
+        def get_prob_vec(pre_csv_path, image_path: str):
+            """
+            传入本地图片路径，返回对应 n 维概率向量；找不到返回 None
+            """
+            # 1. 把本地路径转成 csv 里的 filename 格式
+            #    例如 ./SkinGPT-X-Dataset/Dermnet/test/xxx/yyy.jpg -> xxx/yyy.jpg
+            path = pathlib.Path(image_path).resolve()
+            # 假设 csv 里存的都是“相对/xxx/yyy.jpg”形式，且目录层级固定
+            # 这里简单取后两级，可按实际调整
+            key = str(pathlib.Path(*path.parts[-2:])).replace("\\", "/")
+            # 2. 读 csv 找行
+            with open(pre_csv_path, newline='', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    feature_dim = len(row) - 3
+                    if row["filename"] == key:
+                        # 3. 提取 prob_cls0 ... prob_cls22
+                        if pre_csv_path == ISIC_PRECSV_PATH:
+                            vec = [float(row[f"prob_cls"])]
+                            return vec
+                        else:
+                            vec = [float(row[f"prob_cls{i}"]) for i in range(feature_dim)]
+                            return vec
+            return None
+        prob_vec = get_prob_vec('./Panderm_Dermnet_predprob.csv', image_path)
         report = reasoning_agent.generate_report({
             "WebSearch": web_search_output.get(image_name, "") if any(web_search_output.values()) else
             getAgentOutputs(WEB_SEARCH_AGENT_OUTPUT_PATH)[image_name],
@@ -156,7 +184,7 @@ def WorkFlow(
             getAgentOutputs(RAG_AGENT_OUTPUT_PATH)[image_name],
             "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
             getAgentOutputs(SKINGPT_AGENT_OUTPUT_PATH)[image_name]
-        })
+        }, prob_vec)
         reasoning_output[image_name] = report
         save_output(reasoning_output, "Reasoning", output_folder)
     if case_review_agent is not None:

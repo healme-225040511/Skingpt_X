@@ -11,6 +11,9 @@ from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.media import Image as AgnoImage
 import logging
 
+from google import genai
+from google.genai import types
+from google.genai.errors import APIError
 
 from SearchAPITools import BochaSearchTool
 from prompt_template import *
@@ -113,10 +116,10 @@ class WebSearchAgent:
 
 if __name__ == "__main__":
     model = "gemini-2.5-pro"
-    api_key = "sk-iCv69YeaJn8TXm9tk6ZUUAqftw51aB2yddvmstNNl7QjkIKB"
+    api_key = "AIzaSyDClRNJkcDgHv2wA90v6TODPvBlu8umIWU"
     query = get_domain_expert_prompt("WebSearch")
     agent = WebSearchAgent(model=model, api_key=api_key, domain="WebSearch", searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
-    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Urticaria Hives/PUPPP-18.jpg"  # Replace with your actual image file path
+    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/rosacea-36.jpg"
 
     async def main():
         analysis_result = await agent.analyze(query, image_file_path)
