@@ -26,7 +26,7 @@ class ReasoningAgent:
         self.model = model
         self.api_key = api_key
 
-    def generate_report(self, current_case: Dict) -> Dict:
+    def generate_report(self, current_case: Dict, prob_vec: list[float] = None) -> Dict:
         """
         Generate a comprehensive diagnostic report for the current case using OpenAI.
         
@@ -37,7 +37,7 @@ class ReasoningAgent:
             Dict: The generated report.
         """
         # Prepare the prompt for OpenAI
-        synthesizer, prompt = self._build_prompt(current_case)
+        synthesizer, prompt = self._build_prompt(current_case, prob_vec)
 
         response = generate_response(
             engine=self.model, 
@@ -53,7 +53,7 @@ class ReasoningAgent:
 
         return safe_load_json(response)
 
-    def _build_prompt(self, analyses):
+    def _build_prompt(self, analyses, prob_vec: list[float] = None):
         """
         Build a prompt for OpenAI based on the current case.
         
@@ -64,7 +64,7 @@ class ReasoningAgent:
             synthesizer (str): The synthesizer role in the conversation.
             prompt (str): The prompt for OpenAI.
         """
-        synthesizer, prompt = get_synthesized_report_prompt(analyses)
+        synthesizer, prompt = get_synthesized_report_prompt(analyses, prob_vec)
         return synthesizer, prompt
 
 

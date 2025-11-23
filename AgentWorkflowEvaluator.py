@@ -1,12 +1,15 @@
 # AgentWorkflowEvaluator.py
 import argparse
+import csv
 import os
 import json
 import time
 import traceback
 from pathlib import Path
 import ssl
+from typing import Any
 
+import pandas as pd
 from tensorflow.python.data.experimental.ops.testing import sleep
 from tqdm import tqdm
 
@@ -185,7 +188,23 @@ def EvaluationOnDermnet(
     #             print(f"[WARN] 处理失败，跳过：{imgName}")
     #             traceback.print_exc()      # ← 打印完整报错堆栈
 
-
+def load_pending_list(csv_path: str) -> list[Any]:
+    """
+    读取 'filename,label,pred_label,prob_max' 格式的 CSV，
+    返回待处理文件名的集合（格式与后续代码保持一致：disease/img.jpg）
+    """
+    if not csv_path or not Path(csv_path).exists():
+        return []      # CSV 不存在就全部处理
+    pending = []
+    with open(csv_path, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            # 兼容带表头或不带表头的写法
+            fname = row.get('filename', '').strip()
+            if fname:
+                pending.append(fname)
+    print(f'[INFO] 从 CSV 加载到 {len(pending)} 张待处理图片')
+    return pending
 def Evaluation(
         model_name: str = "gemini-2.5-pro",
         dataset_root: str = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test",
@@ -277,6 +296,87 @@ def Evaluation(
                 print(f"[WARN] 处理失败，跳过：{imgName}")
                 traceback.print_exc()  # ← 打印完整报错堆栈
 
+def Evaluation_on_wrong(
+        model_name: str = "gemini-2.5-pro",
+        dataset_root: str = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test",
+        markdown_file_path: str = "./skin_handbook.md",
+        output_root: str = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test",
+        api_key: str = "AIzaSyC-9og_9OsxvKZ0rBXeMGboXBrMOpG5-do",
+        openai_api_key: str = "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",
+        neo4j_url: str = "neo4j://localhost:7687",
+        neo4j_user: str = "neo4j",
+        neo4j_password: str = "Czty100165188",
+        pre_predporb_csv_path: str = "",
+        is_single_agent: bool = False,
+        agent_type: int = 0
+):
+    """
+    遍历数据集目录，每个疾病文件夹下的每张图片调用一次 process_images
+    """
+    all_agents = {}
+    reasoning_agent = None
+    case_review_agent = None
+    selected_agent = 'SkinGPT'
+    if is_single_agent:
+        if int(agent_type) == 0:
+            all_agents = {
+                "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
+                                            searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
+                                            temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
+            }
+            selected_agent = 'WebSearch'
+        if int(agent_type) == 1:
+            all_agents = {
+                "SkinGPT": SkingptAgent(model="gemini-2.5-pro", api_key=api_key,
+                                        pre_csv_path=pre_predporb_csv_path),
+            }
+        elif int(agent_type) == 2:
+            all_agents = {
+                "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
+            }
+            selected_agent = 'RAG'
+    else:
+        # all_agents = {
+        #     "SkinGPT": SkinGPTOpenAIAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/Dermnet_predprob.csv'),
+        #     "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
+        #     "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
+        #                                 searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
+        #                                 temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
+        # }
+        reasoning_agent = ReasoningAgent(model="gemini-3-pro-preview", api_key=api_key)
+        selected_agent = 'Reasoning'
+        # selected_agent = 'CaseReview'
+        # case_review_agent = CaseReviewAgent(model="gemini-2.5-flash", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
+        #                                     neo4j_password=neo4j_password, clear_mode=False, api_key=api_key)
+        # treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-flash", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
+
+    with open(os.path.join(output_root, f'{selected_agent}_output.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    pending_set = load_pending_list('./test/incorrect_predictions.csv')
+    # 提取所有以 .jpg 结尾的键名
+    processedFiles = [key for key in data.keys() if key.endswith('.jpg')]
+    for f_index in tqdm(range(len(pending_set)), desc='Pending'):
+        img_path = os.path.join(dataset_root, pending_set[f_index])
+        if pending_set[f_index] in processedFiles:
+            print(f'{pending_set[f_index]} already processed')
+            continue
+        try:
+            startTime = time.time()
+            WorkFlow(
+                all_agents=all_agents,
+                reasoning_agent=reasoning_agent,
+                # case_review_agent=case_review_agent,
+                output_folder=output_root,
+                image_path=img_path,
+                folder_name=pending_set[f_index].split('/')[-2],
+            )
+            endTime = time.time()
+            print(f'{img_path}  处理完成，耗时{endTime - startTime}s')
+        except Exception as e:
+            # 原句换成下面两行
+            print(f"[WARN] 处理失败，跳过：{img_path}, {e}")
+            traceback.print_exc()  # ← 打印完整报错堆栈
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -288,7 +388,7 @@ if __name__ == "__main__":
     parser.add_argument("--agent_type", default=0)
     parser.add_argument("--pre_predprob_csv_path", default=0)
     args = parser.parse_args()
-    Evaluation(dataset_root=args.dataset_root, output_root=args.output_root,
+    Evaluation_on_wrong(dataset_root=args.dataset_root, output_root=args.output_root,
                markdown_file_path=args.markdown_file_path, api_key=args.api_key,
                is_single_agent=args.is_single_agent, agent_type=args.agent_type,
                pre_predporb_csv_path=args.pre_predprob_csv_path)

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 root_dir   = Path(r'/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test')          # 改成你的实际根目录
-json_file  = Path(r'/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output.json')     # 你的 JSON 文件
+json_file  = Path(r'/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output.json')     # 你的 JSON 文件
 missing_list_file = Path(r'missing_files.txt')  # 可选：把缺失列表落地成文件
 
 # 1. 支持的图片后缀（大小写不敏感）

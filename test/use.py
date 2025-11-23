@@ -32,10 +32,10 @@ def save_merged_data(merged_data, output_file):
 
 # 示例：指定要合并的JSON文件路径
 file_paths = [
-    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output.json",
-    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output (1).json",
-    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output（2）.json",
-    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/RAG_output（3）.json"
+    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output (4).json",
+    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output (5).json",
+    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output (6).json",
+    "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output (7).json"
     # 添加更多文件路径
 ]
 
@@ -43,7 +43,7 @@ file_paths = [
 merged_data = merge_json_files(file_paths)
 
 # 保存合并后的数据到新文件
-output_file = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/WebSearch_merged_data.json"
+output_file = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_merge_output.json"
 save_merged_data(merged_data, output_file)
 
 import json
@@ -75,7 +75,7 @@ def check_duplicate_keys(json_file):
 
 
 # 示例：指定要检查的JSON文件路径
-json_file_path ="/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/WebSearch_merged_data.json"
+json_file_path ="/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_merge_output.json"
 
 # 检查JSON文件内部是否有重复的键
 check_duplicate_keys(json_file_path)
