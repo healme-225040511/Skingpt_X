@@ -1,10 +1,10 @@
 import os
 
-import torch
-
 from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME
+from utils import build_prelimary_text
 
-def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_mapping: str = DERMNET_DISEASE_NAME):
+
+def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_mapping: list[str] = DERMNET_DISEASE_NAME):
     if domain == "WebSearch":
         prompt = f"""
             You are a highly skilled dermatology expert and research scientist with access to the latest medical advancements and online resources. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
@@ -66,19 +66,7 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_
         """
     elif domain == "SkinGPT":
         disease_name = disease_name_mapping[:-1]
-        def build_prelimary_text(prob_vec: list[float]) -> str:
-            """
-            prob_vec: 长度为 22 的 softmax 概率列表，顺序与 IDX2DISEASE 严格对应
-            返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
-            """
-            prob_vec = torch.tensor(prob_vec)
-            topk = torch.topk(prob_vec, k=len(prob_vec))
-            lines = ["### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
-            for idx, p in zip(topk.indices.tolist(), topk.values.tolist()):
-                lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
-            return "\n".join(lines)
-
-        pre = build_prelimary_text(prob_vec)
+        pre = build_prelimary_text(prob_vec, disease_name)
         prompt = f"""
             You are a frontline medical professional specializing in performing initial patient assessments based on images. 
             Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
@@ -197,20 +185,7 @@ def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
     web_search_report = analyses.get("WebSearch", "No WebSearchAgent report available.")
     # skingpt_report = analyses.get("SkinGPT", "No SkinGPTAgent report available.")
 
-    def build_prelimary_text(prob_vec: list[float]) -> str:
-        """
-        prob_vec: 长度为 22 的 softmax 概率列表，顺序与 IDX2DISEASE 严格对应
-        返回一段自然语言，告诉 LLM 目前最可能的 3 个诊断及其概率
-        """
-        prob_vec = torch.tensor(prob_vec)
-        topk = torch.topk(prob_vec, k=5)
-        lines = [
-            "### You should take account of the preliminary diagnosis of the expert agent and their possibility below, rethink of your Primary Diagnosis"]
-        for idx, p in zip(topk.indices.tolist(), topk.values.tolist()):
-            lines.append(f"- {DERMNET_DISEASE_NAME[idx]}: {p * 100:.1f}%")
-        return "\n".join(lines)
-
-    skingpt_report = build_prelimary_text(prob_vec)
+    skingpt_report = build_prelimary_text(prob_vec, DERMNET_DISEASE_NAME[:-1])
     prompt = "Here are reports from different specialized agents:\n"
     prompt += f"- **RAGAgent Report**:\n{rag_report}\n"
     prompt += f"- **WebSearchAgent Report**:\n{web_search_report}\n"
@@ -231,7 +206,7 @@ def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
               f"4. **Synthesize a Comprehensive Report**: Integrate the insights from all experts into a cohesive and actionable analysis, including:\n" \
               f"   - A refined primary diagnosis with confidence level (e.g., High/Medium/Low).\n" \
               f"   - A prioritized list of differential diagnoses, supported by evidence from multiple agents.\n" \
-              f"   - Probability distribution over the full {DERMNET_DISEASE_NAME} list, sorted descending.\n" \
+              f"   - Probability distribution over the full {DERMNET_DISEASE_NAME[:-1]} list, sorted descending.\n" \
               f"   - A summary of key findings and their clinical significance.\n" \
               f"   - **Selective inclusion of knowledge or research** from RAGAgent and WebSearchAgent, ensuring that only the most relevant and authoritative content is included.\n" \
               f"     - For each selected piece of knowledge or research, provide a **brief summary** and include **specific details** such as URLs or references.\n" \
