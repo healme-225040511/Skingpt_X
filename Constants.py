@@ -20,8 +20,27 @@ DERMNET_DISEASE_NAME = ['Acne and Rosacea Photos',
                         'Urticaria Hives',
                         'Vascular Tumors',
                         'Vasculitis Photos',
-                        'Warts Molluscum and other Viral Infections']
+                        'Warts Molluscum and other Viral Infections',
+                        'Other Disease']
+HAM10000_DISEASE_NAME = ["akiec", "bcc", "bkl", "df", "mel", "nv", "vasc"]
+HAM10000_DISEASE_MAPPING_NAME = {"akiec": "Actinic keratoses and intraepithelial carcinoma / Bowen's disease",
+                                 "bcc": "basal cell carcinoma",
+                                 "bkl": "benign keratosis-like lesions (solar lentigines / seborrheic keratoses and lichen-planus like keratoses)",
+                                 "df": "dermatofibroma", "mel": "melanoma", "nv": "melanocytic nevi ",
+                                 "vasc": "vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage)"}
 SYNONYM_DICT_HAM10000 = {
+    "akiec": {"akiec", "actinic", "keratosis", "actinic keratosis" "intraepithelial", "bowen", "bowen's", "ak",
+              "solar keratosis"},
+    "bcc": {"bcc", "basal", "cell", "carcinoma", "basalioma"},
+    "bkl": {"bkl", "benign keratosis", "solar lentigines", "seborrheic keratosis", "lichen planus-like",
+            "solar lentigo"},
+    "df": {"df", "dermatofibroma"},
+    "mel": {"mel", "melanoma", "malignant melanoma"},
+    "nv": {"nv", "nevus", "nevi", "melanocytic nevus", "mole", "moles"},
+    "vasc": {"vasc", "vascular", "angioma", "angiomas", "angiokeratoma", "pyogenic granuloma", "hemorrhage",
+             "blood vessel"}
+}
+SYNONYM_DICT_DERMNET = {
     'acne and rosacea photos': {'rosacea acne', 'sebDerem', 'rosacea steroid', 'Forest', 'acne pustular',
                                 'hidradenitis suppurativa', 'fordyce spots', 'acne scar', 'Sebaceous glands Areola',
                                 'SteroidPerioral', 'RosaceaFulFAce', 'nevus comedonicus', 'Perioral Derm Eye',
