@@ -1,33 +1,28 @@
 import csv
+from typing import Dict
+
 import numpy as np
 from pathlib import Path
 
 # ---------------- 1. 23 类固定顺序 ----------------
-DERMNET_DISEASE_NAME = [
-    'Acne and Rosacea Photos',
-    'Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions',
-    'Atopic Dermatitis Photos',
-    'Bullous Disease Photos',
-    'Cellulitis Impetigo and other Bacterial Infections',
-    'Eczema Photos',
-    'Exanthems and Drug Eruptions',
-    'Hair Loss Photos Alopecia and other Hair Diseases',
-    'Herpes HPV and other STDs Photos',
-    'Light Diseases and Disorders of Pigmentation',
-    'Lupus and other Connective Tissue diseases',
-    'Melanoma Skin Cancer Nevi and Moles',
-    'Nail Fungus and other Nail Disease',
-    'Poison Ivy Photos and other Contact Dermatitis',
-    'Psoriasis pictures Lichen Planus and related diseases',
-    'Scabies Lyme Disease and other Infestations and Bites',
-    'Seborrheic Keratoses and other Benign Tumors',
-    'Systemic Disease',
-    'Tinea Ringworm Candidiasis and other Fungal Infections',
-    'Urticaria Hives',
-    'Vascular Tumors',
-    'Vasculitis Photos',
-    'Warts Molluscum and other Viral Infections'
-]
+HAM10000_DISEASE_NAME = ["akiec", "bcc", "bkl", "df", "mel", "nv", "vasc"]
+HAM10000_DISEASE_MAPPING_NAME = {"akiec": "Actinic keratoses and intraepithelial carcinoma / Bowen's disease",
+                                 "bcc": "basal cell carcinoma",
+                                 "bkl": "benign keratosis-like lesions (solar lentigines / seborrheic keratoses and lichen-planus like keratoses)",
+                                 "df": "dermatofibroma", "mel": "melanoma", "nv": "melanocytic nevi ",
+                                 "vasc": "vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage)"}
+REVERSED_MAPPING = {
+    "Actinic keratoses and intraepithelial carcinoma / Bowen's disease": "akiec",
+    "basal cell carcinoma": "bcc",
+    "benign keratosis-like lesions (solar lentigines / seborrheic keratoses and lichen-planus like keratoses)": "bkl",
+    "dermatofibroma": "df",
+    "melanoma": "mel",
+    "melanocytic nevi ": "nv",
+    "vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage)": "vasc"
+}
+MAPPING_NAME = [HAM10000_DISEASE_MAPPING_NAME[abbr] for abbr in HAM10000_DISEASE_NAME]
+TARGET_SET = set(MAPPING_NAME)
+
 
 # ---------------- 2. 自定义归一化函数 ----------------
 def calculate_normalization(row):
@@ -40,45 +35,62 @@ def calculate_normalization(row):
 
     return x / x_sum
 
+
 # ---------------- 3. 提取子文件夹名称 ----------------
 def extract_subfolder(filename: str) -> str:
     """从文件路径中提取子文件夹名称"""
     path = Path(filename)
     return path.parent.name
 
-# ---------------- 4. 主处理函数 ----------------
-def normalize_csv(input_csv_path: Path, output_csv_path: Path):
-    # 读取原始 CSV 文件
-    with open(input_csv_path, mode='r', newline='', encoding='utf-8') as infile:
-        reader = csv.DictReader(infile)
-        headers = reader.fieldnames  # 获取列名
-        rows = list(reader)  # 读取所有行
 
-    # 添加 'label' 列
-    headers.append('label')
+# ---------- 1. 建立 image → 数字标签映射 ---------- #
+# 顺序与 HAM10000_DISEASE_NAME 保持一致
+HAM10000_DISEASE_NAME = ["akiec", "bcc", "bkl", "df", "mel", "nv", "vasc"]
 
-    # 准备输出 CSV 文件
-    with open(output_csv_path, mode='w', newline='', encoding='utf-8') as outfile:
-        writer = csv.DictWriter(outfile, fieldnames=headers)
+
+def build_label_map(ground_truth_csv: Path) -> Dict[str, int]:
+    """返回 {image_id: label_int}"""
+    label_map = {}
+    with open(ground_truth_csv, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            img_id = row['image']  # 如 ISIC_0034524
+            one_hot = [int(row[dis]) for dis in HAM10000_DISEASE_NAME]
+            label = one_hot.index(1)  # 找到 1 所在的下标
+            label_map[img_id] = label
+    return label_map
+
+
+# ---------- 2. 主处理函数（仅新增 label 列，不改概率） ---------- #
+def normalize_csv(
+        prob_csv: Path,
+        ground_truth_csv: Path,
+        out_csv: Path
+):
+    # 读取 label 映射
+    label_map = build_label_map(ground_truth_csv)
+
+    with open(prob_csv, newline='', encoding='utf-8') as in_f, \
+            open(out_csv, 'w', newline='', encoding='utf-8') as out_f:
+        reader = csv.DictReader(in_f)
+        fieldnames = reader.fieldnames + ['label']
+        writer = csv.DictWriter(out_f, fieldnames=fieldnames)
         writer.writeheader()
 
-        for row in rows:
-            # 提取概率值并转换为 numpy 数组
-            probs = [float(row[disease]) for disease in DERMNET_DISEASE_NAME]
-            # 应用自定义归一化
-            normalized_probs = calculate_normalization(probs)
-            # 更新行数据为归一化后的概率
-            for disease, norm_prob in zip(DERMNET_DISEASE_NAME, normalized_probs):
-                row[disease] = round(norm_prob, 4) if not np.isnan(norm_prob) else norm_prob
-            # 提取子文件夹名称并添加到 'label' 列
-            row['label'] = extract_subfolder(row['filename'])
-            # 写入新的 CSV 文件
+        for row in reader:
+            img_id = row.get('image_id') or row.get('filename', '')
+            # 如果找不到对应 label，可设为 -1 或抛异常
+            row['label'] = HAM10000_DISEASE_NAME[label_map.get(img_id.split('.')[0].split('/')[1], -1)]
             writer.writerow(row)
 
-    print(f"✅ 归一化完成，结果已写入 {output_csv_path}")
+    print(f"✅ 已添加 ground-truth label → {out_csv}")
+
 
 # ---------------- 4. 调用主函数 ----------------
-input_csv_path = Path("/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output.csv")  # 替换为之前的 CSV 文件路径
-output_csv_path = Path("/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_softmax.csv")  # 替换为新的 CSV 文件路径
-
-normalize_csv(input_csv_path, output_csv_path)
+input_csv_path = Path(
+    "/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/Reasoning_output.csv")  # 替换为之前的 CSV 文件路径
+output_csv_path = Path(
+    "/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/Reasoning_output_softmax.csv")  # 替换为新的 CSV 文件路径
+label_csv_path = Path(
+    "/Volumes/T7/SkinGPT-X-Dataset/HAM10000/ISIC2018_Task3_Test_GroundTruth.csv")  # 替换为 ground-truth CSV 文件路径
+normalize_csv(input_csv_path, label_csv_path, output_csv_path)

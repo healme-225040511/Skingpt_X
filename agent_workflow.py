@@ -1,3 +1,4 @@
+import argparse
 import csv
 import os
 import json
@@ -63,6 +64,7 @@ def save_output(output_data, agent_name, output_folder):
         folder_name: 文件夹名称(当前函数中未使用)
     """
     # 构建输出文件的完整路径
+
     output_file_path = os.path.join(output_folder, f"{agent_name}_output.json")
     # 如果代理名称是WebSearch、RAG或SkinGPT，对输出数据进行HTML转义处理
     if agent_name in ["WebSearch", "RAG", "SkinGPT"]:
@@ -168,22 +170,17 @@ def WorkFlow(
                 for row in reader:
                     feature_dim = len(row) - 3
                     if row["filename"] == key:
-                        # 3. 提取 prob_cls0 ... prob_cls22
-                        if pre_csv_path == ISIC_PRECSV_PATH:
-                            vec = [float(row[f"prob_cls"])]
-                            return vec
-                        else:
-                            vec = [float(row[f"prob_cls{i}"]) for i in range(feature_dim)]
-                            return vec
+                        vec = [float(row[f"prob_cls{i}"]) for i in range(feature_dim)]
+                        return vec
             return None
-        prob_vec = get_prob_vec('./Panderm_Dermnet_predprob.csv', image_path)
+        prob_vec = get_prob_vec('./Panderm_prepob_HAM10000.csv', image_path)
         report = reasoning_agent.generate_report({
             "WebSearch": web_search_output.get(image_name, "") if any(web_search_output.values()) else
-            getAgentOutputs(WEB_SEARCH_AGENT_OUTPUT_PATH)[image_name],
+            getAgentOutputs(os.path.join(output_folder, 'WebSearch_output.json'))[image_name],
             "RAG": rag_output.get(image_name, "") if any(rag_output.values()) else
-            getAgentOutputs(RAG_AGENT_OUTPUT_PATH)[image_name],
-            "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
-            getAgentOutputs(SKINGPT_AGENT_OUTPUT_PATH)[image_name]
+            getAgentOutputs(os.path.join(output_folder, 'RAG_output.json'))[image_name],
+            # "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
+            # getAgentOutputs(os.path.join(output_folder, 'SkinGPT_output.json'))[image_name]
         }, prob_vec)
         reasoning_output[image_name] = report
         save_output(reasoning_output, "Reasoning", output_folder)

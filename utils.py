@@ -1,5 +1,6 @@
 import base64
 import os
+from typing import List
 
 import markdown
 from markdown.extensions import Extension
@@ -8,6 +9,9 @@ from llama_index.core.schema import ImageNode, TextNode
 import re
 from pathlib import Path
 import aiofiles
+
+from Constants import HAM10000_DISEASE_MAPPING_NAME, HAM10000_DISEASE_NAME
+
 
 class CustomTreeProcessor(Treeprocessor):
     def __init__(self, *args, **kwargs):
@@ -121,3 +125,49 @@ def encode_image_to_base64(image_path):
 
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
+
+
+def build_prelimary_text(prob_vec: List[float], disease_name: List[str]) -> str:
+    """
+    prob_vec: 长度为 N 的 softmax 概率列表。
+    disease_name: 长度为 N 的疾病名称列表，顺序与 prob_vec 严格对应。
+
+    返回一段自然语言，告诉 LLM 目前所有诊断的排名及其概率。
+
+    替代了 torch.topk 的功能，使用标准 Python 排序实现。
+    """
+
+    if len(prob_vec) != len(disease_name):
+        return "[ERROR] 概率向量和疾病名称列表长度不匹配，无法生成报告。"
+
+    # 1. 将概率和它们对应的索引打包成元组列表: [(prob_0, idx_0), (prob_1, idx_1), ...]
+    #    使用 enumerate 生成 (索引, 概率) 对
+    indexed_probs = list(enumerate(prob_vec))
+
+    # 2. 按照概率值（元组的第二个元素 x[1]）降序排列
+    #    reverse=True 表示降序
+    #    新的列表 sorted_probs 格式为 [(idx, prob), (idx, prob), ...]
+    sorted_probs_by_value = sorted(indexed_probs, key=lambda x: x[1], reverse=True)
+
+    # 3. 格式化输出字符串
+    lines = [
+        "### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
+
+    # 遍历排序后的结果
+    for idx, p in sorted_probs_by_value:
+        # idx 是疾病名称在 disease_name 列表中的原始索引
+        lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
+
+    return "\n".join(lines)
+
+def expand_disease_names(short_list=HAM10000_DISEASE_NAME):
+    """
+    将 HAM10000 简写列表转成完整医学描述列表
+    :param short_list: 简写列表，例如 ["mel", "nv"]
+    :return: 完整描述列表，例如 ["melanoma", "melanocytic nevi "]
+    """
+    return [HAM10000_DISEASE_MAPPING_NAME[abbr] for abbr in short_list]
+
+def convert_disease_names(old_dict):
+    new_dict = {HAM10000_DISEASE_MAPPING_NAME[k]: v for k, v in old_dict.items()}
+    return new_dict
