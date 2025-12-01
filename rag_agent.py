@@ -1,5 +1,4 @@
 import os
-import torch
 import asyncio
 from llama_index.core import Settings
 from llama_index.vector_stores.lancedb import LanceDBVectorStore
@@ -38,11 +37,10 @@ class RAGAgent:
         os.environ["GEMINI_APIKEY"] = self.api_key
 
         # ★ 根据开关决定设备
-        device = "cuda" if use_gpu and torch.cuda.is_available() else "cpu"
 
         Settings.embed_model = HuggingFaceEmbedding(
             model_name="BAAI/bge-small-en-v1.5",
-            device=device
+            device='cpu'
         )
 
         # Initialize vector stores

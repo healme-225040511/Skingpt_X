@@ -188,22 +188,35 @@ def EvaluationOnDermnet(
     #             print(f"[WARN] 处理失败，跳过：{imgName}")
     #             traceback.print_exc()      # ← 打印完整报错堆栈
 
-def load_pending_list(csv_path: str) -> list[Any]:
+
+def load_pending_list(txt_path: str) -> list[Any]:
     """
-    读取 'filename,label,pred_label,prob_max' 格式的 CSV，
-    返回待处理文件名的集合（格式与后续代码保持一致：disease/img.jpg）
+    读取包含待处理文件路径的 TXT 文件。
+    假设 TXT 文件中，每行是一个完整的文件路径（例如：disease/img.jpg）。
+    返回待处理文件名的列表。
     """
-    if not csv_path or not Path(csv_path).exists():
-        return []      # CSV 不存在就全部处理
-    pending = []
-    with open(csv_path, newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            # 兼容带表头或不带表头的写法
-            fname = row.get('filename', '').strip()
-            if fname:
-                pending.append(fname)
-    print(f'[INFO] 从 CSV 加载到 {len(pending)} 张待处理图片')
+    path = Path(txt_path)
+    if not txt_path or not path.exists():
+        print('[INFO] 待处理文件列表 TXT 不存在，将处理所有文件。')
+        return []
+
+    try:
+        # --- FIX: 使用标准 Python IO 代替 np.loadtxt，避免 "delimiter cannot be a newline" 错误 ---
+
+        # 使用 Path.read_text() 读取整个文件内容，并使用 splitlines() 按行分割
+        # 这种方法对文件路径列表更加健壮和高效
+        content = path.read_text(encoding='utf-8')
+        pending_list = content.splitlines()
+
+        # 清理空字符串
+        pending = [item.strip() for item in pending_list if item.strip()]
+
+    except Exception as e:
+        print(f"[ERROR] 读取文件 ({txt_path}) 失败: {e}")
+        # 如果读取失败，返回空列表，避免程序中断
+        return []
+
+    print(f'[INFO] 从 TXT 文件加载到 {len(pending)} 张待处理图片')
     return pending
 def Evaluation(
         model_name: str = "gemini-2.5-pro",
@@ -253,7 +266,7 @@ def Evaluation(
         #                                 searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
         #                                 temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
         # }
-        reasoning_agent = ReasoningAgent(model="gemini-3-pro-preview", api_key=api_key)
+        reasoning_agent = ReasoningAgent(model="gemini-2.5-flash", api_key=api_key)
         selected_agent = 'Reasoning'
         # selected_agent = 'CaseReview'
         # case_review_agent = CaseReviewAgent(model="gemini-2.5-flash", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
@@ -296,8 +309,8 @@ def Evaluation(
                 print(f"[WARN] 处理失败，跳过：{imgName}")
                 traceback.print_exc()  # ← 打印完整报错堆栈
 
-def Evaluation_on_wrong(
-        model_name: str = "gemini-2.5-pro",
+def Evaluation_on_txt(
+        model_name: str = "gemini-2.5-flash",
         dataset_root: str = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test",
         markdown_file_path: str = "./skin_handbook.md",
         output_root: str = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test",
@@ -308,7 +321,8 @@ def Evaluation_on_wrong(
         neo4j_password: str = "Czty100165188",
         pre_predporb_csv_path: str = "",
         is_single_agent: bool = False,
-        agent_type: int = 0
+        agent_type: int = 0,
+        pending_set_path: str = ''
 ):
     """
     遍历数据集目录，每个疾病文件夹下的每张图片调用一次 process_images
@@ -322,7 +336,7 @@ def Evaluation_on_wrong(
             all_agents = {
                 "WebSearch": WebSearchAgent(model=model_name, api_key=api_key, domain="WebSearch",
                                             searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
-                                            temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
+                                            temp_image_path=os.path.join(dataset_root, f'temp_resized_image_{pending_set_path.split("/")[-1].split(".")[0]}.png'))
             }
             selected_agent = 'WebSearch'
         if int(agent_type) == 1:
@@ -332,7 +346,7 @@ def Evaluation_on_wrong(
             }
         elif int(agent_type) == 2:
             all_agents = {
-                "RAG": RAGAgent(model=model_name, api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
+                "RAG": RAGAgent(model="gemini-2.5-pro", api_key=api_key, domain="RAG", markdown_file_path=markdown_file_path),
             }
             selected_agent = 'RAG'
     else:
@@ -352,9 +366,9 @@ def Evaluation_on_wrong(
 
     with open(os.path.join(output_root, f'{selected_agent}_output.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
-    pending_set = load_pending_list('./test/incorrect_predictions.csv')
+    pending_set = load_pending_list(pending_set_path)
     # 提取所有以 .jpg 结尾的键名
-    processedFiles = [key for key in data.keys() if key.endswith('.jpg')]
+    processedFiles = [key.split('/')[-1] for key in data.keys() if key.endswith('.jpg')]
     for f_index in tqdm(range(len(pending_set)), desc='Pending'):
         img_path = os.path.join(dataset_root, pending_set[f_index])
         if pending_set[f_index] in processedFiles:
@@ -368,7 +382,7 @@ def Evaluation_on_wrong(
                 # case_review_agent=case_review_agent,
                 output_folder=output_root,
                 image_path=img_path,
-                folder_name=pending_set[f_index].split('/')[-2],
+                folder_name=img_path.split('/')[-2],
             )
             endTime = time.time()
             print(f'{img_path}  处理完成，耗时{endTime - startTime}s')
@@ -380,15 +394,16 @@ def Evaluation_on_wrong(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset_root", default="/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test")
-    parser.add_argument("--output_root", default="/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test")
+    parser.add_argument("--dataset_root", default="/Volumes/T7/SkinGPT-X-Dataset/HAM10000/test")
+    parser.add_argument("--output_root", default="/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/test")
     parser.add_argument("--markdown_file_path", default="./skin_handbook.md")
     parser.add_argument("--api_key", default='sk-emhI8AjXfPpIpS1H1mgMm45AWGbMJzxHuJrNYb2WBzCIJgkG')
     parser.add_argument("--is_single_agent", default=False)
     parser.add_argument("--agent_type", default=0)
     parser.add_argument("--pre_predprob_csv_path", default=0)
+    parser.add_argument("--pending_set_path", default='')
     args = parser.parse_args()
-    Evaluation_on_wrong(dataset_root=args.dataset_root, output_root=args.output_root,
+    Evaluation_on_txt(dataset_root=args.dataset_root, output_root=args.output_root,
                markdown_file_path=args.markdown_file_path, api_key=args.api_key,
                is_single_agent=args.is_single_agent, agent_type=args.agent_type,
-               pre_predporb_csv_path=args.pre_predprob_csv_path)
+               pre_predporb_csv_path=args.pre_predprob_csv_path, pending_set_path=args.pending_set_path)

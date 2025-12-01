@@ -1,7 +1,7 @@
 import os
 
-from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME
-from utils import build_prelimary_text
+from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME, HAM10000_DISEASE_NAME
+from utils import build_prelimary_text, expand_disease_names, convert_disease_names
 
 
 def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_mapping: list[str] = DERMNET_DISEASE_NAME):
@@ -185,7 +185,8 @@ def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
     web_search_report = analyses.get("WebSearch", "No WebSearchAgent report available.")
     # skingpt_report = analyses.get("SkinGPT", "No SkinGPTAgent report available.")
 
-    skingpt_report = build_prelimary_text(prob_vec, DERMNET_DISEASE_NAME[:-1])
+    skingpt_report = build_prelimary_text(prob_vec, expand_disease_names(HAM10000_DISEASE_NAME))
+    print(skingpt_report)
     prompt = "Here are reports from different specialized agents:\n"
     prompt += f"- **RAGAgent Report**:\n{rag_report}\n"
     prompt += f"- **WebSearchAgent Report**:\n{web_search_report}\n"
@@ -206,7 +207,7 @@ def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
               f"4. **Synthesize a Comprehensive Report**: Integrate the insights from all experts into a cohesive and actionable analysis, including:\n" \
               f"   - A refined primary diagnosis with confidence level (e.g., High/Medium/Low).\n" \
               f"   - A prioritized list of differential diagnoses, supported by evidence from multiple agents.\n" \
-              f"   - Probability distribution over the full {DERMNET_DISEASE_NAME[:-1]} list, sorted descending.\n" \
+              f"   - Probability distribution over the full {expand_disease_names(HAM10000_DISEASE_NAME)} list, sorted descending.\n" \
               f"   - A summary of key findings and their clinical significance.\n" \
               f"   - **Selective inclusion of knowledge or research** from RAGAgent and WebSearchAgent, ensuring that only the most relevant and authoritative content is included.\n" \
               f"     - For each selected piece of knowledge or research, provide a **brief summary** and include **specific details** such as URLs or references.\n" \

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 读取CSV文件
-file_path = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test/Reasoning_output_softmax.csv"
+file_path = "/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/Reasoning_output_softmax.csv"
 
 df = pd.read_csv(file_path)
 
