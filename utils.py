@@ -1,18 +1,21 @@
 import base64
 import os
 from typing import List
-
+import pathlib
 import markdown
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from llama_index.core.schema import ImageNode, TextNode
 import re
+import csv
 from pathlib import Path
 import aiofiles
-
-from Constants import HAM10000_DISEASE_MAPPING_NAME, HAM10000_DISEASE_NAME
-
-
+from Constants import HAM10000_DISEASE_MAPPING_NAME,DERMNET_DISEASE_NAME, HAM10000_DISEASE_NAME
+import pandas as pd, json
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+from pathlib import Path
+from Constants import Fitzpatrick17k_DISEASE_NAME
 class CustomTreeProcessor(Treeprocessor):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -117,7 +120,43 @@ def safe_load_json(text: str) -> dict:
         return json.loads(text)
     except json.JSONDecodeError:
         return fallback
+import json
+from pathlib import Path
+from typing import Any, Dict, Union
 
+class SafeLoadError(Exception):
+    """自定义异常，方便调用方统一捕获"""
+    pass
+
+
+def safe_load_json_qwen(src: Union[str, Path]) -> Dict[str, Any]:
+    """
+    安全地把 JSON 读成 Python dict。
+    支持两种输入：
+      1. 文件路径（str 或 Path 对象）
+      2. 已存在的 JSON 字符串（自动检测）
+    失败时抛出 SafeLoadError，而不是默认的 json.JSONDecodeError。
+    """
+    try:
+        # 如果是 Path 对象，先转字符串
+        src_str = str(src).strip()
+
+        # 简单启发式：如果以 { 或 [ 开头，就当成原始 JSON 字符串
+        if src_str.startswith(("{", "[")):
+            return json.loads(src_str)
+
+        # 否则当成文件路径
+        path = Path(src_str)
+        if not path.exists():
+            raise SafeLoadError(f"文件不存在: {path.resolve()}")
+
+        with path.open(encoding="utf-8") as fh:
+            return json.load(fh)
+
+    except json.JSONDecodeError as e:
+        raise SafeLoadError(f"JSON 解析失败: {e}") from e
+    except OSError as e:
+        raise SafeLoadError(f"文件读取失败: {e}") from e
 def encode_image_to_base64(image_path):
 
     if not os.path.exists(image_path):
@@ -126,7 +165,26 @@ def encode_image_to_base64(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-
+def get_prob_vec(pre_csv_path, image_path: str):
+    """
+    传入本地图片路径，返回对应 n 维概率向量；找不到返回 None
+    """
+    # 1. 把本地路径转成 csv 里的 filename 格式
+    #    例如 ./SkinGPT-X-Dataset/Dermnet/test/xxx/yyy.jpg -> xxx/yyy.jpg
+    path = pathlib.Path(image_path).resolve()
+    # 假设 csv 里存的都是“相对/xxx/yyy.jpg”形式，且目录层级固定
+    # 这里简单取后两级，可按实际调整
+    key = str(pathlib.Path(*path.parts[-2:])).replace("\\", "/")
+    # 2. 读 csv 找行
+    with open(pre_csv_path, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            feature_dim = len(row) - 3
+            if row["filename"] == key:
+                # 3. 提取 prob_cls0 ... prob_cls22
+                vec = [float(row[f"prob_cls{i}"]) for i in range(feature_dim)]
+                return vec
+    return None
 def build_prelimary_text(prob_vec: List[float], disease_name: List[str]) -> str:
     """
     prob_vec: 长度为 N 的 softmax 概率列表。
@@ -150,15 +208,19 @@ def build_prelimary_text(prob_vec: List[float], disease_name: List[str]) -> str:
     sorted_probs_by_value = sorted(indexed_probs, key=lambda x: x[1], reverse=True)
 
     # 3. 格式化输出字符串
-    lines = [
-        "### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
-
+    # lines = [
+    #     "### You should take account of the preliminary diagnosis and their possibility below and rethink of your diagnosis:"]
+    lines = []
     # 遍历排序后的结果
+    # for idx, p in sorted_probs_by_value:
+    #     # idx 是疾病名称在 disease_name 列表中的原始索引
+    #     lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
     for idx, p in sorted_probs_by_value:
         # idx 是疾病名称在 disease_name 列表中的原始索引
-        lines.append(f"- {disease_name[idx]}: {p * 100:.1f}%")
+        lines.append(f"{disease_name[idx]}")
 
-    return "\n".join(lines)
+    # return "\n".join(lines)
+    return lines
 
 def expand_disease_names(short_list=HAM10000_DISEASE_NAME):
     """
@@ -171,3 +233,105 @@ def expand_disease_names(short_list=HAM10000_DISEASE_NAME):
 def convert_disease_names(old_dict):
     new_dict = {HAM10000_DISEASE_MAPPING_NAME[k]: v for k, v in old_dict.items()}
     return new_dict
+
+def extract_json_items(json_file_path, filename_list_path, output_file_path):
+    """
+    根据txt文件中的文件名列表，从json文件中提取对应的项，并保存到新的json文件。
+
+    Args:
+        json_file_path (str): 包含所有数据的JSON文件路径。
+        filename_list_path (str): 包含要提取的文件名（键）列表的TXT文件路径。
+        output_file_path (str): 提取结果要保存到的JSON文件路径。
+    """
+
+    # 1. 检查文件是否存在
+    if not os.path.exists(json_file_path):
+        print(f"❌ 错误：JSON 文件不存在于路径: {json_file_path}")
+        return
+    if not os.path.exists(filename_list_path):
+        print(f"❌ 错误：TXT 文件不存在于路径: {filename_list_path}")
+        return
+
+    # 2. 读取要查找的文件名列表 (Keys)
+    print(f"📚 正在读取文件名列表: {filename_list_path}...")
+    filenames_to_find = set()
+    try:
+        with open(filename_list_path, 'r', encoding='utf-8') as f:
+            # 读取每一行，去除首尾空白符（包括换行符）
+            for line in f:
+                stripped_line = line.strip()
+                if stripped_line:
+                    filenames_to_find.add(stripped_line)
+    except Exception as e:
+        print(f"❌ 读取TXT文件时发生错误: {e}")
+        return
+
+    if not filenames_to_find:
+        print("⚠️ 警告：TXT 文件中没有找到任何有效的文件名。")
+        return
+
+    # 3. 读取完整的 JSON 数据
+    print(f"📖 正在读取 JSON 数据: {json_file_path}...")
+    try:
+        with open(json_file_path, 'r', encoding='utf-8') as f:
+            full_data = json.load(f)
+    except json.JSONDecodeError:
+        print(f"❌ 错误：JSON 文件格式不正确。请检查文件: {json_file_path}")
+        return
+    except Exception as e:
+        print(f"❌ 读取JSON文件时发生错误: {e}")
+        return
+
+    # 4. 提取对应的项
+    extracted_data = {}
+    missing_keys = []
+
+    print("🔍 正在提取匹配的项...")
+    for key in filenames_to_find:
+        # 查找 JSON 数据中是否有这个键
+        if key in full_data:
+            extracted_data[key] = full_data[key]
+        else:
+            missing_keys.append(key)
+
+    # 5. 保存提取的结果
+    try:
+        with open(output_file_path, 'w', encoding='utf-8') as f:
+            # 使用 indent=4 使输出的 JSON 文件格式美观易读
+            json.dump(extracted_data, f, ensure_ascii=False, indent=4)
+        print(f"✅ 提取完成！成功将 {len(extracted_data)} 个项保存到: {output_file_path}")
+
+        if missing_keys:
+            print(f"ℹ️ 注意：在JSON中未能找到 {len(missing_keys)} 个键。部分示例：{missing_keys[:5]}")
+
+    except Exception as e:
+        print(f"❌ 保存输出文件时发生错误: {e}")
+
+
+# ---------- 4. 示例 ----------
+def get_pre_diagnosis(fname, pred_csv_path='/225040511/project/Panderm-EvaluationResults/Dermnet/', MAPPING=Fitzpatrick17k_DISEASE_NAME):
+    # 1. 读取CSV
+    pred_df = pd.read_csv(pred_csv_path)
+    
+    # 2. 找到对应 filename 的那一行数据
+    target_row = pred_df[pred_df['filename'] == fname]
+    
+    if target_row.empty:
+        return "Unknown", 0.0  # 如果没找到文件，返回默认值
+    
+    # 3. 获取预测的标签索引 (int)
+    pred_idx = int(target_row['predicted_label'].values[0])
+    # 4. 构造概率列的名字，例如 "probability_class_9"
+    prob_column_name = f'probability_class_{pred_idx}'
+    
+    # 5. 获取该标签对应的概率值
+    prob_value = target_row[prob_column_name].values[0]
+    
+    # 6. 获取映射后的疾病名称
+    # 假设 MAPPING 是列表或字典
+    try:
+        pred_name = MAPPING[pred_idx]
+    except (KeyError, IndexError):
+        pred_name = "Unknown"
+    return pred_name, prob_value
+        # print(count, update_count)

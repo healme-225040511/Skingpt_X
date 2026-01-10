@@ -1,6 +1,6 @@
 import os
 
-from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME, HAM10000_DISEASE_NAME
+from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME, HAM10000_DISEASE_NAME, Fitzpatrick17k_DISEASE_NAME
 from utils import build_prelimary_text, expand_disease_names, convert_disease_names
 
 
@@ -101,40 +101,57 @@ def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_
         """
     return prompt
 
-def get_rag_prompt(pre_analysis):
-    prompt = "Here is the pre-analysis from SkinGPT agent:\n"
-    prompt += f"- **SkinGPTAgent Report**:\n{pre_analysis}\n"
+def get_rag_prompt_with_true_label(pre_analysis, retrieved_knowledge):
+    prompt = "You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base."
+    prompt += f"\nNow you have already known the primary diagnosis is {pre_analysis}\n"
+    prompt += f"Context from medical handbook:\n{retrieved_knowledge}\n"
     prompt += """
-        You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base. You are not to be used as a substitute for a doctor, but only intended to provide a diagnostic reference. 
-        You can refer to the previously analyzed report and determine whether it is correct by consulting the knowledge base.
-        Your primary role is to provide authoritative, structured medical knowledge to support the analysis of skin conditions. Structure your response as follows:
-        ### 1. Image Region
+       You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base. You don't have to give any primary diagnosis about this sample, but need to show the key medical observations.
+        ### ⚠️ CRITICAL INSTRUCTIONS FOR KEY FINDINGS:
         - Identify the affected anatomical region and positioning of the lesion or area of interest.
         - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
-        ### 2. Key Findings
         - Systematically list primary observations focusing on the lesion(s) or skin abnormalities.
         - Describe the lesion(s) in detail, including:
             - Location, size, shape, and distribution.
             - Color variations, textures, borders, and any unique features.
             - Associated symptoms (e.g., itching, pain, scaling).
         - Rate severity: Normal / Mild / Moderate / Severe.
-        ### 3. Diagnostic Assessment
-        - Provide a primary diagnosis with a confidence level (e.g., High/Medium/Low) based on observed evidence and supported by information retrieved from the knowledge base.
-        - List differential diagnoses in order of likelihood, considering similar skin conditions, and back each with evidence from the knowledge base.
-        - Support each diagnosis with observed evidence from the patient's imaging and related studies accessed through the knowledge base.
-        - Highlight any critical or urgent findings that require immediate attention.
-        ### 4. Research Context
-        IMPORTANT: Retrieve the knowledge base to:
-        - Find **diagnostic criteria** and **clinical guidelines** for the diagnosed condition.
-        - Identify **evidence-based insights** from authoritative sources.
-        - Provide a list of **relevant medical resources** from the knowledge base, including:
-            - Key studies or case reports.
-            - Guidelines from reputable organizations.
-        - Include **2-3 key references** to support your analysis and recommendations.
-        Format your response using clear markdown headers and bullet points. Be concise yet thorough, ensuring the integration of evidence-based insights from the knowledge base throughout your analysis.
+       You must return **only** the following JSON object (no markdown code block, no extra text):d as a substitu
+        {
+            "ImageRegion": " ①anatomical location ②positioning ③context (sun-exposed/friction/etc)>",
+            "KeyFindings": " A single cohesive paragraph following the instructions above",
+            "CriticalFeatures": ["urgent feature 1", "feature 2"] or ["None"]
+            "PrimaryDiagnosis": "Provide a primary diagnosis based on observed evidence"
+            "KnowledgeAndResearch": [Fluent summary of relevant knowledge, including references if possible]
+        }
     """
     return prompt
-
+def get_rag_prompt(pred_name, prob_value, retrieved_knowledge, MAPPINGSET):
+    mapping_options = ", ".join(MAPPINGSET)
+    prompt = "You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base."
+    prompt += f"\n[Prior Knowledge] Panderm model suggests: {pred_name} with {prob_value} probability.\n"
+    prompt += f"Context from medical handbook:\n{retrieved_knowledge}\n"
+    prompt += f"You MUST choose the 'PrimaryDiagnosis' ONLY from the following list:\n{mapping_options}\n"
+    prompt += """
+        ### ⚠️ CRITICAL INSTRUCTIONS FOR KEY FINDINGS:
+        - Identify the affected anatomical region and positioning of the lesion or area of interest.
+        - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
+        - Systematically list primary observations focusing on the lesion(s) or skin abnormalities.
+        - Describe the lesion(s) in detail, including:
+            - Location, size, shape, and distribution.
+            - Color variations, textures, borders, and any unique features.
+            - Associated symptoms (e.g., itching, pain, scaling).
+        - Rate severity: Normal / Mild / Moderate / Severe.
+       You must return **only** the following JSON object (no markdown code block, no extra text):d as a substitu
+        {
+            "ImageRegion": " ①anatomical location ②positioning ③context (sun-exposed/friction/etc)>",
+            "KeyFindings": " A single cohesive paragraph following the instructions above",
+            "CriticalFeatures": ["urgent feature 1", "feature 2"] or ["None"]
+            "PrimaryDiagnosis": "STRICTLY ONE FROM THE VALID DIAGNOSIS SET",
+            "KnowledgeAndResearch": [Fluent summary of relevant knowledge, including references if possible]
+        }
+    """
+    return prompt
 # def get_consensus_prompt(domain, syn_report):
 #     cons_prompt = f"You are a medical expert specialized in the {domain} domain.\n"\
 #         f"Here is a medical report: \n{syn_report} \n"\
@@ -183,9 +200,9 @@ def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
 
     rag_report = analyses.get("RAG", "No RAGAgent report available.")
     web_search_report = analyses.get("WebSearch", "No WebSearchAgent report available.")
-    # skingpt_report = analyses.get("SkinGPT", "No SkinGPTAgent report available.")
+    skingpt_report = analyses.get("SkinGPT", "No SkinGPTAgent report available.")
 
-    skingpt_report = build_prelimary_text(prob_vec, expand_disease_names(HAM10000_DISEASE_NAME))
+    # skingpt_report = build_prelimary_text(prob_vec, expand_disease_names(HAM10000_DISEASE_NAME))
     print(skingpt_report)
     prompt = "Here are reports from different specialized agents:\n"
     prompt += f"- **RAGAgent Report**:\n{rag_report}\n"
@@ -226,78 +243,52 @@ def get_synthesized_report_prompt(analyses, prob_vec: list[float] = None):
 
 
 def get_case_review_prompt(current_case, historical_cases):
-    reviewer = "You are a sophisticated peer reviewer responsible for ensuring high-quality medical decisions by validating diagnoses against historical cases and best practices in dermatology."
+    """
+    重构后的 Prompt：引入专家辩论机制
+    """
+    
+    # 格式化历史病例，强调“原型”和“坑”
+    formatted_history = ""
+    for i, hc in enumerate(historical_cases):
+        formatted_history += f"--- Historical Case #{i+1} ---\n"
+        formatted_history += f"Diagnosis: {hc['case']['primary_diagnosis']}\n"
+        formatted_history += f"Key Findings: {hc['case']['key_findings']}\n"
+        if hc.get('prototype'):
+            formatted_history += f"Expert Standard (Prototype): {hc['prototype']}\n"
+        if hc.get('pitfalls'):
+            formatted_history += f"Known Pitfalls: {hc['pitfalls']}\n"
+        formatted_history += "\n"
 
-    # Extract information from current case
-    primary_diagnosis = current_case.get("PrimaryDiagnosis", "No primary diagnosis available.")
-    confidence_level = current_case.get("ConfidenceLevel", "No confidence level provided.")
-    differential_diagnoses = current_case.get("DifferentialDiagnoses", "No differential diagnoses available.")
-    key_findings = current_case.get("KeyFindings", "No key findings available.")
-    knowledge_and_research = current_case.get("KnowledgeAndResearch", "No additional knowledge or research referenced.")
+    system_role = "You are a Senior Dermatological Consultant specializing in differential diagnosis."
     
-    # Format historical cases
-    historical_cases_text = ""
-    if historical_cases and len(historical_cases) > 0:
-        historical_cases_text = "**Historical Similar Cases**:\n"
-        for i, case in enumerate(historical_cases):
-            case_primary_diagnosis = case.get("Primary Diagnosis", "Unknown diagnosis")
-            case_confidence_level = case.get("Confidence Level", "Unknown confidence level")
-            case_differential_diagnoses = case.get("Differential Diagnoses", "No differential diagnoses available.")
-            case_key_findings = case.get("Key Findings", "No findings recorded")
-            case_knowledge_and_research = case.get("Knowledge and Research", "No additional knowledge or research referenced.")
-            historical_cases_text += f"Case {i+1}:\n"
-            historical_cases_text += f"- Primary Diagnosis: {case_primary_diagnosis}\n"
-            historical_cases_text += f"- Confidence Level: {case_confidence_level}\n"
-            historical_cases_text += f"- Differential Diagnoses: {case_differential_diagnoses}\n"
-            historical_cases_text += f"- Key Findings: {case_key_findings}\n"
-            historical_cases_text += f"- Knowledge and Research: {case_knowledge_and_research}\n\n"
-    else:
-        historical_cases_text = "No historical similar cases available for comparison."
-    
-    prompt = "Here is the current case information to review:\n"
-    prompt += f"- **Primary Diagnosis**:{primary_diagnosis}\n"
-    prompt += f"- **Confidence Level**:{confidence_level}\n"
-    prompt += f"- **Differential Diagnoses**:{differential_diagnoses}\n"
-    prompt += f"- **Key Findings**:{key_findings}\n"
-    prompt += f"- **Knowledge and Research**:{knowledge_and_research}\n\n"
-    prompt += f"{historical_cases_text}\n"
-    prompt += f"Your primary task is to **validate and assess** this diagnostic information by comparing it with the provided historical cases. The historical cases include two types:\n" \
-            f"You should give the probability of each disease in {DERMNET_DISEASE_NAME}"\
-            f"1. **Cases with Highly Similar Key Findings**: These cases have key findings that are semantically similar to the current case.\n" \
-            f"2. **Cases with Consistent Primary Diagnosis**: These cases share the same primary diagnosis as the current case, even if their key findings differ.\n\n" \
-            f"Follow these steps to analyze and integrate insights:\n" \
-            f"1. **Compare With Historical Cases**:\n" \
-            f"   - **For Cases with Highly Similar Key Findings**:\n" \
-            f"     - Analyze whether the current diagnosis aligns with the diagnoses of these cases.\n" \
-            f"     - Identify any gaps in knowledge or research that could be filled by evidence from these cases.\n" \
-            f"   - **For Cases with Consistent Primary Diagnosis**:\n" \
-            f"     - Identify any inconsistencies, such as unusual key findings.\n" \
-            f"2. **Integrate Insights**:\n" \
-            f"   - **Diagnosis**:\n" \
-            f"     - If the primary diagnosis is supported by both types of historical cases, retain it with high confidence.\n" \
-            f"     - If there is disagreement, consider refining the diagnosis based on the most consistent evidence.\n" \
-            f"   - **Key Findings**:\n" \
-            f"     - If the key findings are highly similar to historical cases, use their interpretations to strengthen the current case.\n" \
-            f"     - If the key findings differ from typical presentations, flag them for further review.\n" \
-            f"   - **Knowledge and Research**:\n" \
-            f"     - Integrate relevant evidence from both types of historical cases to strengthen the current case.\n" \
-            f"     - Highlight any new research or findings that could improve the diagnostic.\n" \
-            f"3. **Format Your Response**: Provide your review in the following JSON format, retaining the original fields while integrating insights from historical case comparisons:\n" \
-            f"{{\n" \
-            f"  \"PrimaryDiagnosis\": \"<validated primary diagnosis>\",\n" \
-            f"  \"ConfidenceLevel\": \"<validated confidence level>\",\n" \
-            f"  \"DifferentialDiagnoses\": \"<refined list of differential diagnoses>\",\n" \
-            "\"ProbabilityDistribution\": [\"sorted list: { disease: '...', probability: 0.xx }\"],\n"\
-            f"  \"KeyFindings\": \"{key_findings}\",\n" \
-            f"  \"KnowledgeAndResearch\": \"<validated knowledge and research>\",\n" \
-            f"  \"HistoricalCaseComparison\": {{\n" \
-            f"    \"SimilarKeyFindings\": \"[summary of insights from cases with highly similar key findings]\",\n" \
-            f"    \"ConsistentDiagnosis\": \"[summary of insights from cases with consistent primary diagnosis]\"\n" \
-            f"  }},\n" \
-            f"  \"IdentifiedInconsistencies\": [\"list of potential contradictions or issues\"]\n" \
-            f"}}\n" \
-            f"Ensure your review is thorough, constructive, and focused on enhancing diagnostic accuracy by leveraging insights from both types of historical cases."
-    return reviewer, prompt
+    user_prompt = f"""
+[Current Case for Review]
+- Stated Primary Diagnosis: {current_case.get('PrimaryDiagnosis')}
+- Clinical Findings: {current_case.get('KeyFindings')}
+- Critical Features: {current_case.get('CriticalFeatures')}
+
+[Reference Knowledge Base]
+Below are {len(historical_cases)} historical cases that are VISUALLY similar to the current case, including expert-distilled prototypes:
+{formatted_history}
+
+[Task Instruction]
+You must perform a 'Critical Differential Diagnosis'. Do not simply agree with the current diagnosis. 
+Follow these steps:
+1. Compare: Does the current case align better with the 'Expert Prototype' of the stated diagnosis, or does it share more critical features with a DIFFERENT diagnosis from the historical cases?
+2. Contrast: Identify any 'Red Flags' (e.g., the current case has telangiectasias, but the Expert Prototype for this disease says it should have scaling).
+3. Validate or Correct: If the evidence from historical cases strongly suggests an alternative diagnosis, you MUST correct it.
+
+[Output Format]
+Return ONLY a JSON object:
+{{
+    "OriginalDiagnosis": "{current_case.get('PrimaryDiagnosis')}",
+    "RevisedDiagnosis": "The correct diagnosis (may be the same)",
+    "ConfidenceScore": 0-1.0,
+    "Reasoning": "Why did you keep or change the diagnosis? Point out specific feature conflicts.",
+    "KeyFindings": "Updated clinical findings if necessary"
+}}
+"""
+    return system_role, user_prompt
 
 
 def get_treatment_recommend_prompt(current_case: dict) -> str:
@@ -317,7 +308,7 @@ def get_treatment_recommend_prompt(current_case: dict) -> str:
     """
     # Extract information from the current case
     primary_diagnosis = current_case.get("PrimaryDiagnosis", "N/A")
-    confidence_level = current_case.get("ConfidenceLevel", "N/A")
+    image_region = current_case.get("ConfidenceLevel", "N/A")
     differential_diagnoses = current_case.get("DifferentialDiagnoses", [])
     key_findings = current_case.get("KeyFindings", "N/A")
     knowledge_and_research = current_case.get("KnowledgeAndResearch", "N/A")
@@ -326,47 +317,39 @@ def get_treatment_recommend_prompt(current_case: dict) -> str:
     differential_diagnoses_str = ", ".join(differential_diagnoses) if differential_diagnoses else "N/A"
     # Construct the prompt
     prompt = f"""
-        You are a highly skilled pharmacologist and medical consultant with expertise in dermatology and access to the latest medical advancements and online resources. The current case is as follows:
-        ### Input Case Information
-        The current case information is as follows:
-        - **Primary Diagnosis**: {primary_diagnosis}
-        - **Confidence Level**: {confidence_level}
-        - **Differential Diagnoses**: {differential_diagnoses_str}
-        - **Key Findings**: {key_findings}
-        - **Knowledge and Research**: {knowledge_and_research}
-        Your primary role is to provide comprehensive treatment plans for skin conditions by combining clinical expertise with up-to-date research findings. Follow these steps to generate your response:
-        ### 1. Treatment Overview
-        - Summarize the **primary diagnosis** and its clinical significance based on the input case.
-        - Highlight the **severity** of the condition (e.g., Mild / Moderate / Severe) based on the provided key findings.
-        - Briefly describe the **current treatment recommendations** from the input.
-        ### 2. Common Treatment Methods
-        - Provide an **overall summary** of the standard treatment protocols for the diagnosed condition, including:
-        - **First-line treatments**: The most commonly recommended therapies.
-        - **Second-line treatments**: Alternative options if first-line treatments are ineffective or contraindicated.
-        - **Adjunctive therapies**: Supportive treatments to enhance outcomes (e.g., wound care, pain management).
-        - Include a brief discussion of the **mechanisms of action**, **expected outcomes**, and **common side effects or risks**.
-        ### 3. Emerging and Innovative Therapies
-        - Use the DuckDuckGo search tool to:
-        - Identify **emerging treatments** or **innovative therapies** published within the last 5 years.
-        - Highlight any **clinical trials** or **experimental therapies** that show promise for the condition.
-        - Discuss the potential benefits and limitations of these new approaches.
-        - Provide a **summary** of the most relevant findings, including links to key resources such as:
-            - Peer-reviewed articles.
-            - Clinical trial data (if applicable).
-            - Guidelines from reputable organizations (e.g., AAD, WHO).
-        ### 4. Patient-Specific Considerations
-        - Analyze the provided case details (e.g., lesion location, severity, symptoms) to tailor treatment recommendations.
-        - Suggest any **lifestyle modifications** or **skincare routines** that could support treatment outcomes.
-        - Highlight any **contraindications** or **precautions** based on the patient's specific context.
-        ### Output Format
-        Your response must be in the following JSON format:
-        {{
-            "PrimaryDiagnosis": "<primary diagnosis>",
-            "CommonTreatmentMethods": "<overall summary of common treatments>",
-            "EmergingTherapies": "<summary of emerging therapies>",
-            "PatientSpecificConsiderations": "<summary of patient-specific recommendations>"
-        }}
-    """
+            You are a frontline medical professional specializing in performing initial patient assessments based on dermatological images. Now you have known that the correct diagnosis of this image is {skin_disease}
+
+            Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
+            ---
+
+            ### ⚠️ CRITICAL INSTRUCTIONS FOR KEY FINDINGS:
+
+            When writing the "KeyFindings" section, you MUST:
+            Start with anatomical location and context …
+            Describe morphology in clinical terms …
+            Highlight "red flags" or warning signs …
+            Explicitly rate severity at the end …
+            Avoid bullet points or lists …
+            Additionally, immediately after the paragraph, append a separate sentence that begins exactly with:
+            "Critical diagnostic differences:"
+            and then list 1–2 ultra-short phrases that would help distinguish this condition from the most likely differential diagnoses (e.g., "silvery scale on extension, Auspitz-positive" or "spares nasolabial fold, no mucosal involvement").
+            Do not use line breaks or bullets inside this sentence.
+            ---
+
+            ### ✅ FORMAT YOUR RESPONSE STRICTLY AS JSON:
+
+            {{
+                "KeyFindings": "[single cohesive paragraph + Critical diagnostic differences: ...]",
+                "CriticalFeatures": ["phrase1", "phrase2"],
+                "KnowledgeAndResearch": "..."
+            }}
+
+        
+            ---
+
+            Now analyze the provided image and generate your response in the exact JSON format above. You should control you output in 5000 words
+            """
+    
     return prompt
 
 

@@ -180,8 +180,8 @@ def UpperFirstWord(file_path: Path):
     print(f'✅ 已覆盖保存 → {file_path}')
 
 if __name__ == '__main__':
-    base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test'
-    json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_results.json',
+    base_image_path = '/Volumes/T7/SkinGPT-X-Dataset/HAM10000/test'
+    json_to_csv('/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/Reasoning_results.json',
                                   '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_results.csv')
     get_label_from_filename('/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_results.json',
                             '/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/Hulumed/Reasoning_labels.csv')

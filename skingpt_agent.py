@@ -1,19 +1,22 @@
 import csv
 import pathlib
 import tempfile
-
+import re
 import openai
 import base64
 import asyncio
 from typing import Dict, Optional
 from google.genai import types
-
+import json
 from google import genai
 from openai import OpenAI
-
+from local_llm_utils import local_generate_response_vl
 from Constants import ISIC_PRECSV_PATH
 from prompt_template import get_domain_expert_prompt
 from utils import encode_image_to_base64
+from local_llm_utils import parse_skin_disease_path
+from utils import build_prelimary_text
+from Constants import DERMNET_DISEASE_NAME
 safety_settings = [
     types.SafetySetting(
         category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
@@ -72,47 +75,17 @@ class SkingptAgent:
             img_bytes = f.read()
         img_part = types.Part.from_bytes(data=img_bytes, mime_type="image/jpeg")
         try:
-            if self.api_key.startswith('sk-'):
-                client = OpenAI(api_key=self.api_key, base_url="https://hiapi.online/v1")
-                base64_image = encode_image_to_base64(image_path)
-
-                image_mime_type = "image/jpeg"
-                if image_path.lower().endswith(".png"):
-                    image_mime_type = "image/png"
-                elif image_path.lower().endswith(".gif"):
-                    image_mime_type = "image/gif"
-                elif image_path.lower().endswith(".webp"):
-                    image_mime_type = "image/webp"
-                messages = [
-                    {
-                        "role": "user",
-                        "content": [
-                            {
-                                "type": "text",
-                                "text": f"{query}"
-                            },
-                            {
-                                "type": "image_url",
-                                "image_url": dict(url=f"data:{image_mime_type};base64,{base64_image}")
-                            }
-                        ]
-                    }
-                ]
-                resp = await asyncio.to_thread(
-                    client.chat.completions.create,
-                    model=self.model,
-                    messages=messages,
-                )
-                return resp.choices[0].message.content
-            client = genai.Client(api_key=self.api_key)
-            # 官方 SDK 是同步的，扔到线程池
-            resp = await asyncio.to_thread(
-                client.models.generate_content,
-                model=self.model,
-                contents=[img_part, query],
-                config=types.GenerateContentConfig(temperature=0.0, safety_settings=safety_settings)
-            )
-            return resp.text
+           
+            response = local_generate_response_vl(
+                        temperature=0.01,
+                        max_tokens=4096,
+                        prompt=query,
+                        image_path=image_path
+                    )
+            pattern = r'```json\s*(.*?)```'
+            match = re.search(pattern, response, flags=re.S)   # re.S 让 . 匹配换行
+            json_str = match.group(1).strip() if match else response
+            return json.loads(json_str)
         except Exception as e:
             print(f"[SkinGPT Vision] Error: {e}")
             return None
@@ -146,10 +119,85 @@ class SkingptAgent:
 # ------------------- 快速自测 -------------------
 if __name__ == "__main__":
     api_key = "sk-iCv69YeaJn8TXm9tk6ZUUAqftw51aB2yddvmstNNl7QjkIKB"
-    agent = SkingptAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/PanDerm_Base_LP_result/ISIC/PanDerm_Base_LP_predprob.csv')
-    image_file_path = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test/Acne and Rosacea Photos/acne-closed-comedo-36.jpg"  # Replace with your actual image file path
-    prob_vec = agent.get_prob_vec(image_path=image_file_path)
-    query = get_domain_expert_prompt("SkinGPT", prob_vec)
+    agent = SkingptAgent(model="gemini-2.5-pro", api_key=api_key, pre_csv_path='./Panderm_Dermnet_predprob.csv')
+    image_file_path = "/Dermnet_image/V001/test/Light Diseases and Disorders of Pigmentation/phototoxic-reactions-17.jpg"  # Replace with your actual image file path
+    pre_analysis = build_prelimary_text(agent.get_prob_vec(image_file_path),DERMNET_DISEASE_NAME[:-1])
+    print(pre_analysis)
+    # query = f"""
+    #         You are a frontline medical professional specializing in performing initial patient assessments based on dermatological images.  Now you have know that the correct diagnosis of this image is {skin_disease}
+
+    #         Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
+    #         {pre_analysis}
+    #         ---
+
+    #         ### ⚠️ CRITICAL INSTRUCTIONS FOR KEY FINDINGS:
+
+    #         When writing the "KeyFindings" section, you MUST:
+    #         Start with anatomical location and context …
+    #         Describe morphology in clinical terms …
+    #         Highlight "red flags" or warning signs …
+    #         Explicitly rate severity at the end …
+    #         Avoid bullet points or lists …
+    #         Additionally, immediately after the paragraph, append a separate sentence that begins exactly with:
+    #         "Critical diagnostic differences:"
+    #         and then list 1–2 ultra-short phrases that would help distinguish this condition from the most likely differential diagnoses (e.g., "silvery scale on extension, Auspitz-positive" or "spares nasolabial fold, no mucosal involvement").
+    #         Do not use line breaks or bullets inside this sentence.
+    #         ---
+
+    #         ### ✅ FORMAT YOUR RESPONSE STRICTLY AS JSON:
+
+    #         {{
+    #             "DifferentialDiagnoses": [top-10 possible broad disease categories. You should select in {DERMNET_DISEASE_NAME}]
+    #             "KeyFindings": "[single cohesive paragraph + Critical diagnostic differences: ...]",
+    #             "CriticalFeatures": ["phrase1", "phrase2"],
+    #             "KnowledgeAndResearch": "..."
+    #         }}
+
+        
+    #         ---
+
+    #         Now analyze the provided image and generate your response in the exact JSON format above.
+    #         """
+    # skin_disease = parse_skin_disease_path(image_file_path)
+    # print(skin_disease)
+    query = f"""
+        You are a frontline medical professional specializing in performing initial patient assessments based on dermatological images. Now you have know that the correct diagnosis of this image is Light Diseases and Disorders of Pigmentation
+
+        Your primary role is to organize preliminary medical observations from images and provide insights to support further diagnosis and agent collaboration.
+        ---
+
+        ### ⚠️ CRITICAL INSTRUCTIONS:
+
+        ### 1. ImageRegion
+        - Identify the affected anatomical region and positioning of the lesion or area of interest.
+        - Note any contextual details about the region (e.g., sun-exposed area, friction-prone area).
+        ### 2. KeyFindings
+        - Systematically list primary observations focusing on the lesion(s) or skin abnormalities.
+        - Describe the lesion(s) in detail, including:
+            - Location, size, shape, and distribution.
+            - Color variations, textures, borders, and any unique features.
+            - Associated symptoms (e.g., itching, pain, scaling).
+        - Rate severity: Normal / Mild / Moderate / Severe.
+        ### 3. PrimaryDiagnosis
+        - Provide a primary diagnosis with a confidence level (e.g., High/Medium/Low) based on observed evidence and supported by information retrieved from the knowledge base.
+        - List differential diagnoses in order of likelihood, considering similar skin conditions, and back each with evidence from the knowledge base.
+        - Support each diagnosis with observed evidence from the patient's imaging and related studies accessed through the knowledge base.
+        - Highlight any critical or urgent findings that require immediate attention.
+        ---
+
+        ### ✅ FORMAT YOUR RESPONSE STRICTLY AS JSON:
+
+        {{
+            "ImageRegion": "..."
+            "KeyFindings": "",
+            "PrimaryDiagnosis": ["Diagnosis1", "Diagnosis2"],
+        }}
+
+    
+        ---
+
+        Now analyze the provided image and generate your response in the exact JSON format above. You should control you output in 5000 words
+        """
     async def main():
         analysis_result = await agent.analyze(query, image_file_path)
         print(analysis_result)

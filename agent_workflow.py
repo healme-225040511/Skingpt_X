@@ -12,7 +12,7 @@ from pathlib import Path
 
 from tqdm import tqdm
 
-from Constants import ISIC_EVALUATION_ROOT, DERMNET_EVALUATION_ROOT, ISIC_PRECSV_PATH
+from Constants import ISIC_EVALUATION_ROOT, DERMNET_EVALUATION_ROOT, ISIC_PRECSV_PATH, HAM10000_DISEASE_MAPPING_NAME, EVALUATION_ROOT, DERMNET_DISEASE_NAME
 # 假设以下模块已定义并可用
 from rag_agent import RAGAgent
 from web_search_agent import WebSearchAgent
@@ -21,32 +21,45 @@ from reasoning_agent import ReasoningAgent
 from case_review_agent import CaseReviewAgent
 from treatment_recommend_agent import TreatmentRecommendAgent
 from prompt_template import get_domain_expert_prompt
+from local_llm_utils import parse_skin_disease_path
+from utils import build_prelimary_text, get_prob_vec, get_pre_diagnosis
+from Constants import DERMNET_DISEASE_NAME
 WEB_SEARCH_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/WebSearch_output.json"
 RAG_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/RAG_output.json"
 SKINGPT_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/SkinGPT_output.json"
 REASONING_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/Reasoning_output.json"
 
 
-async def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
+def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
                         output_folder, folder_name):
     tasks = []
     prob_vec = []
-    if all_agents.get('SkinGPT'):
-        prob_vec = all_agents['SkinGPT'].get_prob_vec(image_path=image_path)
+    # if all_agents.get('SkinGPT'):
+    #     prob_vec = all_agents['SkinGPT'].get_prob_vec(image_path=image_path)
     for domain, agent in all_agents.items():
-        query = get_domain_expert_prompt(domain, prob_vec=prob_vec)
-        tasks.append(async_analyze(agent, query, image_path))
-    results = await asyncio.gather(*tasks)
-    for domain, result in zip(all_agents.keys(), results):
-        if domain == "WebSearch":
-            web_search_output[image_name] = result
-            save_output(web_search_output, "WebSearch", output_folder)
-        elif domain == "RAG":
-            rag_output[image_name] = result
-            save_output(rag_output, "RAG", output_folder)
-        elif domain == "SkinGPT":
-            skin_gpt_output[image_name] = result
-            save_output(skin_gpt_output, "SkinGPT", output_folder)
+        skin_disease = parse_skin_disease_path(image_path)
+        pre_analysis_root = ''
+        if image_path.split('/')[-5] == 'Dermnet':
+            pre_analysis_root = '/225040511/project/Evaluation_Results/Dermnet/Panderm/1/train.csv'
+        else:
+            return
+        pred_name, prob_value = get_pre_diagnosis('/'+'/'.join(image_path.split('/')[-3:]), pred_csv_path=pre_analysis_root, MAPPING=DERMNET_DISEASE_NAME)
+        # pre_analysis = skin_disease
+        agent.analyze(image_path, mode='train_exercise', pred_name=pred_name, prob_value=prob_value)
+        result = agent.analyze(image_path, mode='train_exercise', pred_name=pred_name, prob_value=prob_value)
+        rag_output[image_name] = result
+        save_output(rag_output, "RAG", output_folder)
+        # for domain, result in zip(all_agents.keys(), results):
+        #     if domain == "WebSearch":
+        #         web_search_output[image_name] = result
+        #         save_output(web_search_output, "WebSearch", output_folder)
+        #     elif domain == "RAG":
+        #         rag_output[image_name] = result
+        #         save_output(rag_output, "RAG", output_folder)
+        #     elif domain == "SkinGPT":
+        #         # result["DifferentialDiagnoses"] = pre_analysis[:5]
+        #         skin_gpt_output[image_name] = result
+        #         save_output(skin_gpt_output, "SkinGPT", output_folder)
 
 
 # 异步分析函数
@@ -67,9 +80,9 @@ def save_output(output_data, agent_name, output_folder):
 
     output_file_path = os.path.join(output_folder, f"{agent_name}_output.json")
     # 如果代理名称是WebSearch、RAG或SkinGPT，对输出数据进行HTML转义处理
-    if agent_name in ["WebSearch", "RAG", "SkinGPT"]:
-        for key, value in output_data.items():
-            output_data[key] = unescape(value)
+    # if agent_name in ["WebSearch", "RAG", "SkinGPT"]:
+    #     for key, value in output_data.items():
+    #         output_data[key] = unescape(value)
     # 初始化现有数据字典
     existing_data = {}
     # 检查文件是否存在
@@ -146,8 +159,10 @@ def WorkFlow(
     case_review_output = {}  # 存储案例审查结果
     treatment_recommend_output = {}  # 存储治疗推荐结果
     # 异步执行图像分析任务
-    asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
-                              output_folder, folder_name))
+    # asyncio.run(analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
+    #                           output_folder, folder_name))
+    analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
+                              output_folder, folder_name)
     # analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gpt_output, image_name,
     #                           output_folder, folder_name)
     # Generate report
@@ -173,28 +188,30 @@ def WorkFlow(
                         vec = [float(row[f"prob_cls{i}"]) for i in range(feature_dim)]
                         return vec
             return None
+
         prob_vec = get_prob_vec('./Panderm_prepob_HAM10000.csv', image_path)
         report = reasoning_agent.generate_report({
             "WebSearch": web_search_output.get(image_name, "") if any(web_search_output.values()) else
             getAgentOutputs(os.path.join(output_folder, 'WebSearch_output.json'))[image_name],
             "RAG": rag_output.get(image_name, "") if any(rag_output.values()) else
             getAgentOutputs(os.path.join(output_folder, 'RAG_output.json'))[image_name],
-            # "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
-            # getAgentOutputs(os.path.join(output_folder, 'SkinGPT_output.json'))[image_name]
+            "SkinGPT": skin_gpt_output.get(image_name, "") if any(skin_gpt_output.values()) else
+            getAgentOutputs(os.path.join(output_folder, 'SkinGPT_output.json'))[image_name]
         }, prob_vec)
         reasoning_output[image_name] = report
         save_output(reasoning_output, "Reasoning", output_folder)
     if case_review_agent is not None:
         # Case review
         print("Case reviewing")
-        report = report if reasoning_agent is not None else getReasoningReport(REASONING_AGENT_OUTPUT_PATH)[image_name]
-        review_report = case_review_agent.review_case(report)
-        # print(review_report)
+        report = reasoning_output.get(image_name, "") if any(reasoning_output.values()) else \
+        getReasoningReport(os.path.join(output_folder, 'RAG_output.json'))[image_name]
+        print('/' + '/'.join(image_path.split('/')[-3:]))
+        review_report = case_review_agent.review_case(report, '/' + '/'.join(image_path.split('/')[-3:]))
         case_review_output[image_name] = review_report
         # Update the case in the database
         ## !!!!!
         ## May need to be optimized, because only good cases could be added
-        case_review_agent._add_case_to_knowledge_graph(review_report)
+        # case_review_agent._add_case_to_knowledge_graph(review_report)
         save_output(case_review_output, "CaseReview", output_folder)
     else:
         return
@@ -202,7 +219,7 @@ def WorkFlow(
         # Treatment recommendation
         print("Treatment recommending")
         try:
-            treatment_recommend_result = treatment_recommend_agent.analyze(review_report)
+            treatment_recommend_recult = treatment_recommend_agent.analyze(review_report)
             treatment_recommend = json.loads(treatment_recommend_result)
             treatment_recommend_output[image_name] = treatment_recommend
         except json.JSONDecodeError as e:

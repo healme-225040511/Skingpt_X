@@ -4,25 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca57416d-001f-44df-9238-ec2e2efbed96" name="变更" comment="[Description:] 批跑reasoning——dermnet修改错误">
-      <change afterPath="$PROJECT_DIR$/Panderm_prepob_HAM10000.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/merge_dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/remove_error_data.py" afterDir="false" />
+    <list default="true" id="ca57416d-001f-44df-9238-ec2e2efbed96" name="变更" comment="[Description:]Fine-turned results">
+      <change afterPath="$PROJECT_DIR$/case_review_agent_qwen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local_llm_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/correct_list.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/process_list_HAM10000.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AccessKey.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AccessKey.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AgentWorkflowEvaluator.py" beforeDir="false" afterPath="$PROJECT_DIR$/AgentWorkflowEvaluator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agent_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/agent_workflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/case_review_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_review_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataPreparation/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataPreparation/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metricsCal7.py" beforeDir="false" afterPath="$PROJECT_DIR$/metricsCal7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prompt_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/prompt_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rag_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/rag_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_evaluation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_evaluation.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/calMetric.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/calMetric.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/convert_prob.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/convert_prob.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/convert_reasoning.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/convert_reasoning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/convert_softmax.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/convert_softmax.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,8 +144,8 @@
       <recent name="$PROJECT_DIR$/dataPreparation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.calMetric">
-    <configuration name="calMetric" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.metricsCal7">
+    <configuration name="case_review_agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Skingpt_X" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,11 +154,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/calMetric.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case_review_agent.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -216,28 +211,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="convert_reasoning" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Skingpt_X" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/convert_reasoning.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="convert_softmax" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Skingpt_X" />
       <option name="ENV_FILES" value="" />
@@ -260,13 +233,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="metricsCal7" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Skingpt_X" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metricsCal7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calMetric" />
+        <item itemvalue="Python.metricsCal7" />
+        <item itemvalue="Python.case_review_agent" />
         <item itemvalue="Python.check" />
         <item itemvalue="Python.convert_softmax" />
         <item itemvalue="Python.convert_prob" />
-        <item itemvalue="Python.convert_reasoning" />
       </list>
     </recent_temporary>
   </component>
@@ -539,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764050915195</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[Description:]Fine-turned results">
+      <option name="closed" value="true" />
+      <created>1764581251395</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1764581251395</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[Description:] change from ollam to OpenAI" />
     <MESSAGE value="[Description:] correct bugs when using SkinGptAgent. change from gpt-4 -&gt; gpt-4o" />
     <MESSAGE value="[Description:] change agent_workflow from sync to async" />
     <MESSAGE value="[Description:] 新增错误兜底，结果处理方法" />
@@ -594,7 +596,8 @@
     <MESSAGE value="[Description:] 补充RAG知识库文件" />
     <MESSAGE value="[Description:] 批跑reasoning——dermnet" />
     <MESSAGE value="[Description:] 批跑reasoning——dermnet修改错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="[Description:] 批跑reasoning——dermnet修改错误" />
+    <MESSAGE value="[Description:]Fine-turned results" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Description:]Fine-turned results" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Skingpt_X$skingpt_openai_agent.coverage" NAME="skingpt_openai_agent 覆盖结果" MODIFIED="1757068016839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
