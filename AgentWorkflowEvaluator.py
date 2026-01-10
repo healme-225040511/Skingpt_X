@@ -13,7 +13,7 @@ import pandas as pd
 from tensorflow.python.data.experimental.ops.testing import sleep
 from tqdm import tqdm
 
-from Constants import DERMNET_DATASET_ROOT
+from Constants import DERMNET_DATASET_ROOT, EVALUATION_ROOT
 from case_review_agent import CaseReviewAgent
 from rag_agent import RAGAgent
 from read_mispred_ISIC import read_misclassified_filenames
@@ -310,7 +310,7 @@ def Evaluation(
                 traceback.print_exc()  # ← 打印完整报错堆栈
 
 def Evaluation_on_txt(
-        model_name: str = "gemini-2.5-flash",
+        model_name: str = "gemini-2.5-pro",
         dataset_root: str = "/Volumes/T7/SkinGPT-X-Dataset/Dermnet/test",
         markdown_file_path: str = "./skin_handbook.md",
         output_root: str = "/Volumes/T7/SkinGPT-X-EvaluationResults/Dermnet/test",
@@ -322,7 +322,8 @@ def Evaluation_on_txt(
         pre_predporb_csv_path: str = "",
         is_single_agent: bool = False,
         agent_type: int = 0,
-        pending_set_path: str = ''
+        pending_set_path: str = '',
+        EVALUATION_ROOT = '/225040511/project/Evaluation_Results/fitzpatrick17k/Panderm/1.0/'
 ):
     """
     遍历数据集目录，每个疾病文件夹下的每张图片调用一次 process_images
@@ -342,7 +343,7 @@ def Evaluation_on_txt(
         if int(agent_type) == 1:
             all_agents = {
                 "SkinGPT": SkingptAgent(model="gemini-2.5-pro", api_key=api_key,
-                                        pre_csv_path=pre_predporb_csv_path),
+                                        pre_csv_path='/225040511/project/Skingpt_X/Panderm_Dermnet_predprob.csv'),
             }
         elif int(agent_type) == 2:
             all_agents = {
@@ -357,18 +358,32 @@ def Evaluation_on_txt(
         #                                 searchapi_key='sk-74829ed96e1c4d9793507d546527f5de',
         #                                 temp_image_path=os.path.join(dataset_root, 'temp_resized_image.png'))
         # }
-        reasoning_agent = ReasoningAgent(model="gemini-3-pro-preview", api_key=api_key)
-        selected_agent = 'Reasoning'
-        # selected_agent = 'CaseReview'
-        # case_review_agent = CaseReviewAgent(model="gemini-2.5-flash", neo4j_uri=neo4j_url, neo4j_user=neo4j_user,
-        #                                     neo4j_password=neo4j_password, clear_mode=False, api_key=api_key)
+        # reasoning_agent = ReasoningAgent(model="gemini-3-pro-preview", api_key=api_key)
+        # selected_agent = 'Reasoning'
+        
+        selected_agent = 'CaseReview'
+        train_feat_file = EVALUATION_ROOT + 'train_feats.npy' 
+        train_json_file = EVALUATION_ROOT + 'train_files.json'
+        test_feat_file = EVALUATION_ROOT + 'test_feats.npy' 
+        test_json_file = EVALUATION_ROOT + 'test_files.json' 
+        case_review_agent = CaseReviewAgent(
+            model='Qwen/Qwen3-32B',
+            neo4j_uri=neo4j_url,
+            neo4j_user=neo4j_user,
+            neo4j_password=neo4j_password,
+            clear_mode=False, api_key='',
+            train_feat_path=train_feat_file, 
+            train_json_path=train_json_file,
+            test_feat_path = test_feat_file,
+            test_json_path = test_json_file
+        )
         # treatment_recommend_agent = TreatmentRecommendAgent(model="gemini-2.5-flash", api_key=api_key, searchapi_key='sk-74829ed96e1c4d9793507d546527f5de')
 
     with open(os.path.join(output_root, f'{selected_agent}_output.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
     pending_set = load_pending_list(pending_set_path)
     # 提取所有以 .jpg 结尾的键名
-    processedFiles = [key.split('/')[-1] for key in data.keys() if key.endswith('.jpg')]
+    processedFiles = [key for key in data.keys() if key.endswith('.jpg')]
     for f_index in tqdm(range(len(pending_set)), desc='Pending'):
         img_path = os.path.join(dataset_root, pending_set[f_index])
         if pending_set[f_index] in processedFiles:
@@ -378,8 +393,8 @@ def Evaluation_on_txt(
             startTime = time.time()
             WorkFlow(
                 all_agents=all_agents,
-                reasoning_agent=reasoning_agent,
-                # case_review_agent=case_review_agent,
+                # reasoning_agent=reasoning_agent,
+                case_review_agent=case_review_agent,
                 output_folder=output_root,
                 image_path=img_path,
                 folder_name=img_path.split('/')[-2],
@@ -396,7 +411,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset_root", default="/Volumes/T7/SkinGPT-X-Dataset/HAM10000/test")
     parser.add_argument("--output_root", default="/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/test")
-    parser.add_argument("--markdown_file_path", default="./skin_handbook.md")
+    parser.add_argument("--markdown_file_path", default="/225040511/project/Skingpt_X/skin_handbook.md")
     parser.add_argument("--api_key", default='sk-emhI8AjXfPpIpS1H1mgMm45AWGbMJzxHuJrNYb2WBzCIJgkG')
     parser.add_argument("--is_single_agent", default=False)
     parser.add_argument("--agent_type", default=0)

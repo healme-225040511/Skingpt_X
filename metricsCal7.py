@@ -21,7 +21,6 @@ from Constants import DERMNET_DISEASE_NAME, REASONINGLAYER_EVALUATION_PATH, REAS
     REASONING_WORDHIT_OUTPUT, MEDGAMMA_EVALUATION_PATH, MEDGAMMA_LABELS_PATH, MEDGAMMA_WORDHIT_OUTPUT, \
     CASEREVIEW_LABELS_PATH, CASEREVIEW_WORDHIT_OUTPUT, CASEREVIEW_EVALUATION_PATH, SYNONYM_DICT_HAM10000
 from dataPreparation.Panderm_Assessment import wCK_ci
-from metricsCal import SYNONYM_DICT_HAM10000
 
 
 # ---------- 2. 读文件 (修改为读取原始标签，不进行预处理) ----------
@@ -119,7 +118,7 @@ def pred_to_class(pred_words) -> int:
     best_match = process.extractOne(pred_str, [value for values in SYNONYM_DICT_HAM10000.values() for value in values], scorer=process.fuzz.token_sort_ratio)
     print(pred_words)
     print(best_match)
-    if best_match and best_match[1] > 50:  # 设置一个阈值，例如 50
+    if best_match and best_match[1] > 10:  # 设置一个阈值，例如 50
         for key, values in SYNONYM_DICT_HAM10000.items():
             if best_match[0] in values:
                 return list(SYNONYM_DICT_HAM10000.keys()).index(key)
@@ -230,10 +229,10 @@ if __name__ == "__main__":
     #     similarity_threshold=FUZZY_THRESHOLD, base_image_directory=BASE_IMAGE_DIRECTORY, using_re=False,
     #     output_fuzzy_csv_path='/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/SkinGPTX/Reasoning_fuzzy_output.csv')
     # print(metrics)
-    scores = word_hit_metrics('/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/Hulumed/diagnosis_results.csv',
-                              '/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/Hulumed/diagnosis_results.csv',
+    scores = word_hit_metrics('/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/non_training_results/diagnosis_results.csv',
+                              '/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/non_training_results/diagnosis_results.csv',
                               img_dir=BASE_IMAGE_DIRECTORY,
-                              out_csv='/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/Hulumed/metrics_results.csv')
+                              out_csv='/Volumes/T7/SkinGPT-X-EvaluationResults/HAM10000/SkinGPT-X/non_training_results/metrics_results.csv')
     print(f"{scores}")
     # df = pd.read_excel('/Volumes/T7/SkinGPT-X-EvaluationResults/Experiments/Diagnosis/ISIC/final_corrected_results_with_pred_and_true_label.xlsx')
 
