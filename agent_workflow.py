@@ -23,7 +23,7 @@ from treatment_recommend_agent import TreatmentRecommendAgent
 from prompt_template import get_domain_expert_prompt
 from local_llm_utils import parse_skin_disease_path
 from utils import build_prelimary_text, get_prob_vec, get_pre_diagnosis
-from Constants import DERMNET_DISEASE_NAME
+from Constants import DERMNET_DISEASE_NAME, SUPERDEMNET_DISEASE_NAME
 WEB_SEARCH_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/WebSearch_output.json"
 RAG_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/RAG_output.json"
 SKINGPT_AGENT_OUTPUT_PATH = f"{DERMNET_EVALUATION_ROOT}/SkinGPT_output.json"
@@ -39,11 +39,17 @@ def analyze_image(all_agents, image_path, web_search_output, rag_output, skin_gp
     for domain, agent in all_agents.items():
         skin_disease = parse_skin_disease_path(image_path)
         pre_analysis_root = ''
-        if image_path.split('/')[-5] == 'Dermnet':
-            pre_analysis_root = '/225040511/project/Evaluation_Results/Dermnet/Panderm/1/train.csv'
+        Mapping_set = []
+        print(image_path.split('/')[-4])
+        if image_path.split('/')[-4] == 'Dermnet':
+            pre_analysis_root = output_folder.replace('SkinGPT-X', 'Panderm') + '/train.csv'
+            Mapping_set = DERMNET_DISEASE_NAME
+        elif image_path.split('/')[-4] == 'SuperDermnet':
+            pre_analysis_root = '/225040511/project/Evaluation_Results/SuperDermnet/Panderm/test.csv'
+            Mapping_set = SUPERDEMNET_DISEASE_NAME
         else:
             return
-        pred_name, prob_value = get_pre_diagnosis('/'+'/'.join(image_path.split('/')[-3:]), pred_csv_path=pre_analysis_root, MAPPING=DERMNET_DISEASE_NAME)
+        pred_name, prob_value = get_pre_diagnosis('/'+'/'.join(image_path.split('/')[-3:]), pred_csv_path=pre_analysis_root, MAPPING=Mapping_set)
         # pre_analysis = skin_disease
         agent.analyze(image_path, mode='train_exercise', pred_name=pred_name, prob_value=prob_value)
         result = agent.analyze(image_path, mode='train_exercise', pred_name=pred_name, prob_value=prob_value)
@@ -203,8 +209,8 @@ def WorkFlow(
     if case_review_agent is not None:
         # Case review
         print("Case reviewing")
-        report = reasoning_output.get(image_name, "") if any(reasoning_output.values()) else \
-        getReasoningReport(os.path.join(output_folder, 'RAG_output.json'))[image_name]
+        print(os.path.join(output_folder, 'RAG_output.json'))
+        report = getReasoningReport(os.path.join(output_folder, 'RAG_output.json'))["psoriasis hiv/Psoriasis-Guttate-107.jpg"]
         print('/' + '/'.join(image_path.split('/')[-3:]))
         review_report = case_review_agent.review_case(report, '/' + '/'.join(image_path.split('/')[-3:]))
         case_review_output[image_name] = review_report

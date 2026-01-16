@@ -3,7 +3,28 @@ import os
 from Constants import DERMNET_DISEASE_NAME, ISIC_DISEASE_NAME, HAM10000_DISEASE_NAME, Fitzpatrick17k_DISEASE_NAME
 from utils import build_prelimary_text, expand_disease_names, convert_disease_names
 
-
+def get_visual_findings_prompt():
+        """
+        专门为皮肤病临床特征提取定制的 Prompt。
+        要求模型模仿高年级皮肤科医生的观察逻辑。
+        """
+        return (
+            "You are a senior clinical dermatologist. Your task is to provide a highly professional, "
+            "comprehensive, and detailed 'Key Findings' report for the provided skin lesion image.\n\n"
+            "Please perform a systematic visual analysis covering the following dimensions:\n"
+            "1. Primary Morphology: Specify if it is a macule, papule, plaque, nodule, vesicle, or bulla.\n"
+            "2. Color & Pigmentation: Describe the shades (erythematous, brown, black, blue-gray, white) "
+            "and the uniformity of distribution.\n"
+            "3. Borders & Margin: Analyze if the borders are regular, irregular, notched, well-defined, or fading into normal skin.\n"
+            "4. Surface & Texture: Look for scaling, crusting, ulceration, atrophy, lichenification, or telangiectasia (visible blood vessels).\n"
+            "5. Global Structure: Evaluate symmetry (bilateral, radial, or asymmetric) and internal structural patterns (e.g., pigment network, globules, or regression areas).\n\n"
+            "Strictly output the result in this JSON format:\n"
+            "{\n"
+            "  \"key_findings\": \"[Insert here a comprehensive, paragraph-style clinical description. "
+            "Use precise medical terminology. Be as descriptive as possible about the lesion's "
+            "visual characteristics as if you are documenting for a medical record.]\"\n"
+            "}"
+        )
 def get_domain_expert_prompt(domain, prob_vec: list[float] = None, disease_name_mapping: list[str] = DERMNET_DISEASE_NAME):
     if domain == "WebSearch":
         prompt = f"""
@@ -127,11 +148,11 @@ def get_rag_prompt_with_true_label(pre_analysis, retrieved_knowledge):
     """
     return prompt
 def get_rag_prompt(pred_name, prob_value, retrieved_knowledge, MAPPINGSET):
-    mapping_options = ", ".join(MAPPINGSET)
+    # mapping_options = ", ".join(MAPPINGSET)
     prompt = "You are a highly skilled dermatology expert specializing in evidence-based medicine, with access to a comprehensive knowledge base."
     prompt += f"\n[Prior Knowledge] Panderm model suggests: {pred_name} with {prob_value} probability.\n"
     prompt += f"Context from medical handbook:\n{retrieved_knowledge}\n"
-    prompt += f"You MUST choose the 'PrimaryDiagnosis' ONLY from the following list:\n{mapping_options}\n"
+    # prompt += f"You MUST choose the 'PrimaryDiagnosis' ONLY from the following list:\n{mapping_options}\n"
     prompt += """
         ### ⚠️ CRITICAL INSTRUCTIONS FOR KEY FINDINGS:
         - Identify the affected anatomical region and positioning of the lesion or area of interest.

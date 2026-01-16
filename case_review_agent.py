@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 # from api_utils import generate_response
 from prompt_template import get_case_review_prompt
-from fuzzywuzzy import fuzz
+from thefuzz import fuzz
 import re
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 import numpy as np
@@ -16,7 +16,8 @@ from local_llm_utils import local_generate_deepseek_chat_response as generate_re
 from utils import safe_load_json_qwen
 import uuid
 import pandas as pd
-from Constants import EVALUATION_ROOT, EVALUATION_ROOT_fitzpatrick17k
+from Constants import EVALUATION_ROOT, EVALUATION_ROOT_fitzpatrick17k, DERMNET_DISEASE_NAME, SUPERDEMNET_DISEASE_NAME
+
 class CaseReviewAgent:
     def __init__(self, model: str, neo4j_uri: str, neo4j_user: str, neo4j_password: str, clear_mode: bool = True,
                  api_key='', train_feat_path:str=None, train_json_path:str = None, test_feat_path:str=None, test_json_path:str=None, evolution_threshold:int=50):
@@ -38,7 +39,7 @@ class CaseReviewAgent:
         self.api_key = api_key
         # Clear all Case nodes in the Neo4j database
         if clear_mode:
-            self.clear_all_case_nodes()
+            self.clear_all_nodes()
         # Initialize feature dataframes and combined map
         self.train_df = None
         self.train_arr = None
@@ -56,6 +57,7 @@ class CaseReviewAgent:
             self.all_files_to_feats_map.update(dict(zip(self.train_df['filename'], self.train_df['feat'])))
         if self.test_df is not None:
             self.all_files_to_feats_map.update(dict(zip(self.test_df['filename'], self.test_df['feat'])))
+        print(f"Combined feature map contains {len(self.all_files_to_feats_map)} entries.")
         
     def _load_features(self, feat_path: str, json_path: str, split_name: str):
         """
@@ -79,59 +81,95 @@ class CaseReviewAgent:
         except Exception as e:
             print(f"Error loading {split_name} features: {e}")
             
-    def clear_all_case_nodes(self):
+    def clear_all_nodes(self):
         """
-        Delete all `Case` nodes from the Neo4j database.
+        删除数据库中所有与本项目相关的节点：Case, Prototype, Pitfall
         """
-        query = "MATCH (c:Case) DETACH DELETE c"
+        # 匹配多种标签并删除
+        query = """
+        MATCH (n) 
+        WHERE n:Case OR n:Prototype OR n:Pitfall 
+        DETACH DELETE n
+        """
         with self.driver.session() as session:
             session.run(query)
-        print("All `Case` nodes have been cleared from the Neo4j database.")
+        print("All Case, Prototype, and Pitfall nodes have been cleared from the Neo4j database.")
+    def initialize_fixed_categories(self, disease_list: List[str]):
+        with self.driver.session() as session:
+            for disease in disease_list:
+                session.run("""
+                    MERGE (p:Prototype {disease: $name})
+                    ON CREATE SET p.summary = 'Initial entry. Awaiting data for evolution.', p.updated_at = timestamp()
+                """, name=disease)
+        print(f"Initialized {len(disease_list)} disease prototypes.")
+
     def distill_prototypes(self, disease_name: str):
         """
-        自我演化逻辑：将该疾病下的 Top 10 高置信度病例提炼为一个 Prototype 节点
+        基于固定类别的演化逻辑：结合正确病例与报错教训，更新诊断标准。
         """
         with self.driver.session() as session:
-            # 修改 distill_prototypes 中的 SQL
-            records = session.run("""
-                MATCH (c:Case {primary_diagnosis: $name})
-                RETURN c.key_findings as kf, c.knowledge_and_research as kr
-                ORDER BY c.confidence DESC  // 改为按置信度排序
-                LIMIT 10
+            # 1. 获取该疾病现有的原型总结（用于参考更新，实现“不断更新”）
+            old_res = session.run(
+                "MATCH (p:Prototype {disease: $name}) RETURN p.summary as s", 
+                name=disease_name
+            ).single()
+            old_summary = old_res["s"] if old_res else "No existing summary."
+
+            # 2. 获取该疾病最新的 10 个正确病例 (Golden Cases)
+            case_records = session.run("""
+                MATCH (c:Case {true_label: $name, is_correct: true})
+                RETURN c.key_findings as kf
+                ORDER BY c.confidence DESC LIMIT 10
             """, name=disease_name)
-        if len(cases) < 3: return # 数据太少不演化
+            golden_cases = [r["kf"] for r in case_records]
 
-        # 调用 LLM 提炼
+            # 3. 获取与该疾病相关的“坑” (Pitfalls) —— 这是提高准确率的关键
+            # 这里的逻辑是：搜集那些本来是这个病，但被看错了，或者别人被看成这个病的记录
+            pitfall_records = session.run("""
+                MATCH (c:Case)-[:HAS_LESSON]->(p:Pitfall)
+                WHERE c.true_label = $name OR c.primary_diagnosis = $name
+                RETURN DISTINCT p.description as desc LIMIT 5
+            """, name=disease_name)
+            pitfalls = [r["desc"] for r in pitfall_records]
+
+        if len(golden_cases) < 3: return # 数据不足
+
+        # 4. 构建“进化” Prompt
         prompt = f"""
-            You are a medical knowledge architect. 
-            Analyze the following {len(cases)} cases of {disease_name} and summarize a standard diagnostic prototype.
-            
-            CASES:
-            {cases}
-            
-            OUTPUT FORMAT:
-            Return ONLY a JSON object with a single key "summary". 
-            The value should be a concise, professional paragraph summarizing the findings.
-            Example: {{"summary": "Clinical features include..."}}
-            """
-            
-        distilled_text = generate_response_chat(engine = self.model, system_role="Medical Knowledge Base Architect", user_input=prompt, max_tokens=4096, temperature=0.2)
-         # --- 健壮性处理：确保我们拿到的是字符串 ---
-        if isinstance(distilled_text, dict):
-            # 如果解析成功，提取 summary 键；如果解析失败（返回了报错字典），提取 raw_output
-            summary_text = distilled_text.get("summary") or distilled_text.get("raw_output")
-        else:
-            summary_text = str(distilled_text)
+        You are a Medical Knowledge Architect. You are updating the diagnostic standard for '{disease_name}'.
+        
+        [Current Standard]: 
+        {old_summary}
 
-        # 如果 summary_text 还是为空，给个兜底
-        if not summary_text:
-            summary_text = f"Standard presentation for {disease_name}."
+        [New Positive Evidence (Correct Cases)]:
+        {golden_cases}
+
+        [Learned Lessons (Common Misdiagnoses/Pitfalls)]:
+        {pitfalls}
+
+        [Task]:
+        Create an updated, more accurate diagnostic prototype. 
+        Your summary MUST include:
+        1. Core visual features (from correct cases).
+        2. A "Warning Section": Based on the Pitfalls, explain how to distinguish '{disease_name}' from the other 22 diseases it is often confused with.
+        
+        [Output Format]:
+        Return ONLY a JSON object: {{"summary": "The updated paragraph..."}}
+        """
+
+        # 调用 LLM 并更新 (逻辑同前)
+        response = generate_response_chat(engine=self.model, system_role="Expert Dermatologist", user_input=prompt, temperature=0.2, max_tokens=4096)
+        
+        # 解析并写入 Neo4j
+        new_summary = response.get("summary") if isinstance(response, dict) else str(response)
+        
         with self.driver.session() as session:
             session.run("""
                 MERGE (p:Prototype {disease: $name})
                 SET p.summary = $summary, p.updated_at = timestamp()
-            """, name=disease_name, summary=summary_text)
-        print(f"Memory Evolved: Prototype created for {disease_name}")
+            """, name=disease_name, summary=new_summary)
+            
+        print(f"--- Evolution Complete: Prototype for '{disease_name}' has been updated with new pitfalls. ---")
     def review_case(self, current_case: Dict, image_path: str = None) -> Dict:
         """
         Review the current case by comparing it with historical cases and best practices.
@@ -158,6 +196,7 @@ class CaseReviewAgent:
         """
         # Check if the current diagnosis is consistent with historical cases
         similar_cases = self._find_similar_diagnoses(current_case, image_path)
+        print("similar_cases:\n"+similar_cases)
         if similar_cases:
             reviewer, prompt = get_case_review_prompt(current_case, similar_cases)
             # Call OpenAI API to generate the report
@@ -363,118 +402,195 @@ class CaseReviewAgent:
 
         with self.driver.session() as session:
             return session.execute_write(_tx, case_id)
+    SIMILARITY_THRESHOLD = 85 
+
+    def bulk_load_exercise_data(self, json_data: Dict):
+        """
+        批量加载演练数据，自动从路径提取 Ground Truth。
+        """
+        print(f"Starting bulk load of {len(json_data)} cases...")
+        
+        for image_path, case_data in json_data.items():
+            # 1. 自动提取 Ground Truth (路径的文件夹名字)
+            # 例如 "Psoriasis pictures.../image.jpg" -> "Psoriasis pictures..."
+            true_label = Path(image_path).parent.name 
+            
+            # 2. 判定对错
+            predicted_label = case_data.get("PrimaryDiagnosis")
+            # 建议使用 fuzz 匹配或者简单的字符串包含，因为文件夹名和模型输出可能略有差异
+            # 这里先用简单的相等判定，如果准确率低可以改用 fuzz.ratio
+            if not predicted_label:
+                is_correct = False
+                similarity_score = 0
+            else:
+                # 清洗字符串：转小写并去除空格
+                pred_clean = str(predicted_label).lower().strip()
+                true_clean = str(true_label).lower().strip()
+                
+                # 计算相似度得分 (0-100)
+                # ratio: 比较整体相似度
+                # partial_ratio: 比较是否存在包含关系（如 "Psoriasis" 在 "Psoriasis pictures" 中得分会很高）
+                similarity_score = fuzz.token_set_ratio(pred_clean, true_clean)
+                
+                # 根据阈值判定是否正确
+                is_correct = (similarity_score >= self.SIMILARITY_THRESHOLD)
+            
+            # 3. 提取文件名用于匹配特征向量
+            filename = Path(image_path).name
+            
+            # 4. 结果记录与 Pitfall 分析
+            if not is_correct:
+                print(f"❌ Mismatch [{filename}]: Score={similarity_score}%")
+                print(f"   Pred: '{predicted_label}' vs GT: '{true_label}'")
+                pitfall_lesson = self._analyze_misdiagnosis(case_data, true_label)
+            else:
+                print(f"✅ Match [{filename}]: Score={similarity_score}%")
+                pitfall_lesson = None
+            
+            # 5. 写入 Neo4j (传入得分以便后续分析)
+            self._save_exercise_node(case_data, image_path, filename, true_label, is_correct, pitfall_lesson)
+            
+            # 6. 检查是否触发演化 (仅针对正确且信心高的病例)
+            if is_correct:
+                self._check_evolution_trigger(true_label)
+
+    def _analyze_misdiagnosis(self, case_data: Dict, true_label: str) -> str:
+        """
+        调用 LLM 分析误诊原因，提取“坑” (Pitfall)
+        """
+        prompt = f"""
+        You are a Dermatological Auditor. An AI model misidentified a case.
+        [AI's Key Findings]: {case_data.get('KeyFindings')}
+        [AI's Incorrect Diagnosis]: {case_data.get('PrimaryDiagnosis')}
+        [The Actual Truth]: {true_label}
+        
+        Task: Analyze the 'Key Findings'. Why would someone confuse this with the incorrect diagnosis? 
+        Identify the specific visual feature that acted as a 'trap'.
+        
+        Output: A single concise sentence starting with "Pitfall:".
+        Example: "Pitfall: The annular erythema was mistaken for Tinea, but the lack of peripheral scaling actually points to Granuloma Annulare."
+        """
+        try:
+            analysis = generate_response_chat(
+                engine=self.model, 
+                system_role="Diagnostic Quality Controller", 
+                user_input=prompt,
+                max_tokens=2000,
+                temperature=0.3
+            )
+            # 处理返回结果格式
+            if isinstance(analysis, dict):
+                return analysis.get("summary") or analysis.get("raw_output", "Unknown trap.")
+            return str(analysis)
+        except Exception as e:
+            return f"Pitfall: Diagnostic confusion between {case_data.get('PrimaryDiagnosis')} and {true_label}."
+
+    def _save_exercise_node(self, data, full_path, filename, true_label, is_correct, pitfall_lesson):
+        uid = str(uuid.uuid4())
+        pitfall_uid = str(uuid.uuid4()) 
+        
+        # 初始化为空列表
+        fv = []
+        
+        # --- 修复：多重路径匹配逻辑，找不到不崩溃 ---
+        # 构造可能的 Key
+        possible_keys = [
+            '/train/' + full_path,
+            '/test/' + full_path,
+            full_path,
+            filename
+        ]
+        
+        for key in possible_keys:
+            if key in self.all_files_to_feats_map:
+                feat = self.all_files_to_feats_map[key]
+                # 确保转为 list (如果是 numpy array)
+                fv = feat.tolist() if hasattr(feat, 'tolist') else list(feat)
+                print(f"✅ Found feature vector using key: {key}")
+                break
+        
+        if not fv:
+            print(f"⚠️ Warning: No feature vector found for {full_path}. Case will be saved with empty vector.")
+        else:
+            print(f"Saving case {uid} with feature vector length: {len(fv)}")
+
+        def _tx(tx):
+            # 创建 Case 节点
+            tx.run("""
+                CREATE (c:Case {
+                    case_id: $uid,
+                    image_path: $path,
+                    primary_diagnosis: $pd,
+                    true_label: $td,
+                    is_correct: $is_correct,
+                    key_findings: $kf,
+                    critical_features: $cf,
+                    knowledge: $kr,
+                    feature_vector: $fv,
+                    created_at: timestamp()
+                })
+            """, uid=uid, path=full_path, pd=data.get("PrimaryDiagnosis"), 
+                td=true_label, is_correct=is_correct, kf=data.get("KeyFindings"),
+                cf=data.get("CriticalFeatures", []), kr=data.get("KnowledgeAndResearch", ""), 
+                fv=fv) # 这里的 fv 可能是 []
+            
+            if pitfall_lesson:
+                tx.run("""
+                    MATCH (c:Case {case_id: $uid})
+                    MERGE (p:Pitfall {description: $desc})
+                    ON CREATE SET p.pitfall_id = $pit_id, p.created_at = timestamp()
+                    MERGE (c)-[:HAS_LESSON]->(p)
+                """, uid=uid, desc=pitfall_lesson, pit_id=pitfall_uid)
+
+        with self.driver.session() as session:
+            session.execute_write(_tx)
+
+    def _check_evolution_trigger(self, disease_name):
+        """检查正确病例数是否达到演化阈值"""
+        with self.driver.session() as session:
+            res = session.run(
+                "MATCH (c:Case {true_label: $name, is_correct: true}) RETURN count(c) as cnt",
+                name=disease_name
+            ).single()
+            if res and res["cnt"] >= self.evolution_threshold and res["cnt"] % self.evolution_threshold == 0:
+                print(f"--- Automatic Evolution Triggered for {disease_name} (Total correct: {res['cnt']}) ---")
+                self.distill_prototypes(disease_name)
 
 
 if __name__ == "__main__":
-    
+    EVALUATION_ROOT = '/225040511/project/Evaluation_Results/SuperDermnet/Panderm/'
     model = "Qwen/Qwen-7B-Chat"
     neo4j_uri = "bolt://localhost:7687"
     neo4j_user = "neo4j"
     neo4j_password = "Czty100165188"
-    train_feat_file = EVALUATION_ROOT_fitzpatrick17k + 'train_feats_clean.npy' 
-    train_json_file = EVALUATION_ROOT_fitzpatrick17k + 'train_files_clean.json'
-    test_feat_file = EVALUATION_ROOT_fitzpatrick17k + 'test_feats.npy' 
-    test_json_file = EVALUATION_ROOT_fitzpatrick17k + 'test_files.json' 
+    train_feat_file = EVALUATION_ROOT + 'train_feats.npy' 
+    train_json_file = EVALUATION_ROOT + 'train_files.json'
+    test_feat_file = EVALUATION_ROOT + 'test_feats.npy' 
+    test_json_file = EVALUATION_ROOT + 'test_files.json' 
 
     case_review_agent = CaseReviewAgent(
         model=model,
         neo4j_uri=neo4j_uri,
         neo4j_user=neo4j_user,
         neo4j_password=neo4j_password,
-        clear_mode=False, # Set to True if you want to clear all cases before re-adding
+        clear_mode=True, # Set to True if you want to clear all cases before re-adding
         api_key='',
         train_feat_path=train_feat_file, 
         train_json_path=train_json_file,
         test_feat_path = test_feat_file,
         test_json_path = test_json_file
     )
-    current_case = {
-        "ImageRegion": "Nose, central and anterior positioning, sun-exposed area",
-        "KeyFindings": "The lesion is localized to the nasal tip and ala, presenting as a markedly enlarged, bulbous, and irregularly contoured structure. The skin exhibits significant thickening, with a rough, warty, and nodular texture, and is hyperpigmented with a reddish-brown hue. The surface is uneven, with visible telangiectasias and multiple small papules. There are no signs of acute inflammation, ulceration, or pain, and no associated scaling or itching. The lesion is symmetrically distributed on the nasal prominence. Severity: Severe.",
-        "CriticalFeatures": [
-            "Severe nasal enlargement with nodular and warty texture",
-            "Hyperpigmentation and telangiectasias"
-        ],
-        "PrimaryDiagnosis": "Rhinophyma",
-        "KnowledgeAndResearch": "Rhinophyma is a subtype of acne rosacea characterized by progressive enlargement of the nasal sebaceous glands, leading to a bulbous, red, and nodular appearance. It predominantly affects middle-aged to elderly individuals, especially males, and is associated with chronic sun exposure and inflammatory skin changes. The condition is often linked to long-standing rosacea and may be exacerbated by environmental factors. Treatment options include laser therapy, electrosurgery, and topical or systemic anti-inflammatory agents, though management is primarily cosmetic. Evidence from dermatology literature supports its association with aging and chronic inflammation, with no direct link to systemic immunosuppression or infection."
-    }
-    # --- Loading history cases and adding them to the graph with features ---
-    # history_cases_json_path = EVALUATION_ROOT_fitzpatrick17k + 'RAG_output_train.json'
-    # if Path(train_json_file).exists():
-    #     with open(train_json_file, 'r') as f:
-    #         allowed_files = set(json.load(f)) # 转换为 set 提高查找速度
-    #     print(f"Loaded filter list with {len(allowed_files)} allowed filenames.")
-    # else:
-    #     allowed_files = None
-    #     print(f"Warning: Filter list {train_json_file} not found. Will process all cases.")
 
-    # if Path(history_cases_json_path).exists():
-    #     with Path(history_cases_json_path).open(encoding="utf-8") as f:
-    #         history_cases = json.load(f)
-        
-    #     # Uncomment the line below if you want to clear all existing cases in Neo4j
-    #     # before adding new ones with features.
-    #     # case_review_agent.clear_all_case_nodes() 
-
-    #     for key, value in history_cases.items():
-    #         if allowed_files is not None and key.split('/')[-1] not in allowed_files:
-    #             continue
-    #         case_filename = key.split('/')[-1]
-    #         if case_filename:
-    #             case_review_agent._add_case_to_knowledge_graph(value, image_filename=case_filename)
-    #         # else:
-    #         #     print(f"Warning: Case {key} from JSON does not have a 'filename'. Skipping feature vector storage for this case.")
-    # else:
-    #     print(f"\nWarning: {history_cases_json_path} not found. No historical cases loaded to Neo4j.")
-
-    # # # --- Reviewing a current case ---
-    example_image_path =  "bdbc05b476c3076ad9ac3b06a3eaded1.jpg"
+    # exercise_json_path = "/225040511/project/Evaluation_Results/SuperDermnet/SkinGPT-X/train/RAG_output_train.json"
     
-    print(f"\nAttempting to review case for image: {example_image_path}")
-    if case_review_agent.all_files_to_feats_map and example_image_path in case_review_agent.all_files_to_feats_map:
-        review_report = case_review_agent.review_case(current_case, image_path=example_image_path)
-        print("\nReview Report:")
-        print(json.dumps(review_report, indent=2))
-    else:
-        print(f"Error: Feature for current case image '{example_image_path}' not found in loaded features. Cannot proceed with review.")
-
-    # case_review_agent.close()
-    # extract_json_items('/225040511/project/SkinGPT-X-EvaluationResults/Dermnet/SkinGPT-X/SkinGPT_output.json', './test/correct_list.txt', './output/CaseReview_output_correct.json')
-    # with Path('/225040511/project/SkinGPT-X-EvaluationResults/Dermnet/new_rag/RAG_output_8B_train.json').open(encoding="utf-8") as f:
-    #     history_cases = json.load(f)
-    # # print(history_cases)
-    # for key, value in history_cases.items():
-    #     case_review_agent._add_case_to_knowledge_graph(value)
-    # 审查当前病例
-    # print(current_case)
-    # similar_cases = case_review_agent._find_similar_diagnoses(current_case)
-    # for case in similar_cases:
-    #     print("Primary_Diagnosis:" + case['Primary_Diagnosis'])
-    #     print("Key_Findings:"+case['Key_Findings'])
+    # with open(exercise_json_path, 'r') as f:
+    #     exercise_data = json.load(f)
     
-    # # path = Path('/225040511/project/Skingpt_X/test/process_wronglist_Dermnet.txt')
-    # # # --- FIX: 使用标准 Python IO 代替 np.loadtxt，避免 "delimiter cannot be a newline" 错误 ---
-
-    # # # 使用 Path.read_text() 读取整个文件内容，并使用 splitlines() 按行分割
-    # # # 这种方法对文件路径列表更加健壮和高效
-    # # content = path.read_text(encoding='utf-8')
-    # # pending_list = content.splitlines()
-
-    # # 清理空字符串
-    # # with Path('/225040511/project/SkinGPT-X-EvaluationResults/Dermnet/new_rag/reasoning/RAG_output.json').open(encoding="utf-8") as f:
-    # #     reasoning_cases = json.load(f)
-    # # pending = [item.strip() for item in pending_list if item.strip()]
-    # # for image_path in pending:
-    # #     similar_cases = case_review_agent._find_similar_diagnoses(current_case, image_path)
-    #     # for case in similar_cases:
-    #     #     print("Primary_Diagnosis:" + case['Primary_Diagnosis'])
-    #     #     print("Key_Findings:"+case['Key_Findings'])
+    # # 执行批量导入
+    # # 注意：确保 clear_mode=True 如果你想重新构建知识库
+    # case_review_agent.initialize_fixed_categories(SUPERDEMNET_DISEASE_NAME)
+    # case_review_agent.bulk_load_exercise_data(exercise_data)
     
-    # review_report = case_review_agent.review_case(current_case,
-    #                                               image_path='Psoriasis pictures Lichen Planus and related diseases/psoriasis-palms-soles-185.jpg')
-    # print(json.dumps(review_report, indent=2))
-    # case_review_agent._add_case_to_knowledge_graph(current_case, image_filename='Psoriasis pictures Lichen Planus and related diseases/psoriasis-palms-soles-185.jpg')
-    # case_review_agent.distill_prototypes("Urticaria Hives")
+    # print("Knowledge Graph construction complete.")
 
-    # case_review_agent.close()
-    # case_review_agent._backfill_case_id()
+    case_review_agent.clear_all_nodes()

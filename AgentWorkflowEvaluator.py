@@ -418,7 +418,9 @@ if __name__ == "__main__":
     parser.add_argument("--pre_predprob_csv_path", default=0)
     parser.add_argument("--pending_set_path", default='')
     args = parser.parse_args()
+
     Evaluation_on_txt(dataset_root=args.dataset_root, output_root=args.output_root,
                markdown_file_path=args.markdown_file_path, api_key=args.api_key,
                is_single_agent=args.is_single_agent, agent_type=args.agent_type,
-               pre_predporb_csv_path=args.pre_predprob_csv_path, pending_set_path=args.pending_set_path)
+               pre_predporb_csv_path=args.pre_predprob_csv_path, pending_set_path=args.pending_set_path,
+               EVALUATION_ROOT='/225040511/project/Evaluation_Results/SuperDermnet/Panderm/')

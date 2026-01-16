@@ -33,28 +33,28 @@ case "$1" in
     #   --output_root /225040511/project/Evaluation_Results/fitzpatrick17k/test4 \
     #   --pending_set_path /225040511/project/Skingpt_X/process_list/fitzpatrick17k/test/process_list4.txt > "$LOG_DIR/gpu4.log" 2>&1 &
     CUDA_VISIBLE_DEVICES=0 nohup python $WORK_DIR/AgentWorkflowEvaluator.py \
-      --dataset_root /Dermnet/V001/train \
+      --dataset_root /225040511/Dataset/SuperDermnet/test \
       --is_single_agent True --agent_type 2 \
-      --output_root /225040511/project/Evaluation_Results/Dermnet/tmp/exercise1 \
-      --pending_set_path /225040511/project/Skingpt_X/process_list/Dermnet/exercise/process_list1.txt > "$LOG_DIR/gpu1.log" 2>&1 &
+      --output_root /225040511/project/Evaluation_Results/SuperDermnet/SkinGPT-X/test/tmp1 \
+      --pending_set_path /225040511/project/Skingpt_X/process_list/SuperDermnet/test_wrong/process_list1.txt > "$LOG_DIR/gpu1.log" 2>&1 &
 
     CUDA_VISIBLE_DEVICES=1 nohup python $WORK_DIR/AgentWorkflowEvaluator.py \
-      --dataset_root /Dermnet/V001/train \
+      --dataset_root /225040511/Dataset/SuperDermnet/test \
       --is_single_agent True --agent_type 2 \
-      --output_root /225040511/project/Evaluation_Results/Dermnet/tmp/exercise2 \
-      --pending_set_path /225040511/project/Skingpt_X/process_list/Dermnet/exercise/process_list2.txt > "$LOG_DIR/gpu2.log" 2>&1 &
+      --output_root /225040511/project/Evaluation_Results/SuperDermnet/SkinGPT-X/test/tmp2 \
+      --pending_set_path /225040511/project/Skingpt_X/process_list/SuperDermnet/test_wrong/process_list2.txt > "$LOG_DIR/gpu2.log" 2>&1 &
 
     CUDA_VISIBLE_DEVICES=2 nohup python $WORK_DIR/AgentWorkflowEvaluator.py \
-      --dataset_root /Dermnet/V001/train \
+      --dataset_root /225040511/Dataset/SuperDermnet/test \
       --is_single_agent True --agent_type 2 \
-      --output_root /225040511/project/Evaluation_Results/Dermnet/tmp/exercise3 \
-      --pending_set_path /225040511/project/Skingpt_X/process_list/Dermnet/exercise/process_list3.txt > "$LOG_DIR/gpu3.log" 2>&1 &
+      --output_root /225040511/project/Evaluation_Results/SuperDermnet/SkinGPT-X/test/tmp3 \
+      --pending_set_path /225040511/project/Skingpt_X/process_list/SuperDermnet/test_wrong/process_list3.txt > "$LOG_DIR/gpu3.log" 2>&1 &
 
     CUDA_VISIBLE_DEVICES=3 nohup python $WORK_DIR/AgentWorkflowEvaluator.py \
-      --dataset_root /Dermnet/V001/train \
+      --dataset_root /225040511/Dataset/SuperDermnet/test \
       --is_single_agent True --agent_type 2 \
-      --output_root /225040511/project/Evaluation_Results/Dermnet/tmp/exercise4 \
-      --pending_set_path /225040511/project/Skingpt_X/process_list/Dermnet/exercise/process_list4.txt > "$LOG_DIR/gpu4.log" 2>&1 &
+      --output_root /225040511/project/Evaluation_Results/SuperDermnet/SkinGPT-X/test/tmp4 \
+      --pending_set_path /225040511/project/Skingpt_X/process_list/SuperDermnet/test_wrong/process_list4.txt > "$LOG_DIR/gpu4.log" 2>&1 &
 
     # echo "⏳ 等待前 4 个任务完成..."
     # wait # <--- 核心修改：等待上述四个后台进程全部结束

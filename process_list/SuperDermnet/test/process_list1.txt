@@ -1,0 +1,940 @@
+/225040511/Dataset/SuperDermnet/test/telangiectasias/polyarteritis-nodosa-1.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/purpura-vomiting-2.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-15.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/livido-reticularis-6.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/erythromelalgia-3.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/unilateral-telangiectasia-3.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-36.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/unilateral-telangiectasia-2.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/livido-reticularis-3.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/livido-reticularis-9.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/erythema-elevatum-diutinum-2.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-58.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/thrombosed-vein-2.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/unilateral-telangiectasia-1.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-22.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-29.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-35.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/erythromelalgia-6.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/phlebitis-superficial-3.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-27.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-52.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/majocchi-purpura-tel-2.jpg
+/225040511/Dataset/SuperDermnet/test/telangiectasias/telangiectasias-26.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-14.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-2.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-17.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-1.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-5.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-3.jpg
+/225040511/Dataset/SuperDermnet/test/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-37.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/post-inflammatory-hyperpigmentation-2.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/minocycline-pigmentation-4.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/post-inflammatory-hyperpigmentation-4.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/05pitAlba012306.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/maculae-cerulea-6.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/minocycline-pigmentation-3.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/maculae-cerulea-5.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/05PityriasisAlba0105041.jpg
+/225040511/Dataset/SuperDermnet/test/post inflammatory hyperpigmentation/ochronosis-2.jpg
+/225040511/Dataset/SuperDermnet/test/clubbing/clubbing-9.jpg
+/225040511/Dataset/SuperDermnet/test/clubbing/clubbing-13.jpg
+/225040511/Dataset/SuperDermnet/test/clubbing/clubbing-8.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-27.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-13.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-92.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-36.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-111.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-142.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-90.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/discoid-lupus-2.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-141.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-59.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-118.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-30.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-117.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-43.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-85.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-135.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-104.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-20.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/candidiasis-chronic-mucocutaneous-2.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-9.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-129.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-123.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-109.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-130.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/Lupus-vulgaris-2.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-55.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-25.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-48.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-17.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-neonatal-2.jpg
+/225040511/Dataset/SuperDermnet/test/lupus chronic cutaneous/lupus-chronic-cutaneous-7.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-27.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-7.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/spitz-nevus-4.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-53.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-19.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-69.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-29.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-18.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-24.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/nevus-repigmented-3.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/blue-nevus-ota-7.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-28.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-90.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-98.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-80.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-3.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/blue-nevus-ota-3.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-42.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/cafe-au-lait-spots-3.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-5.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-32.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-83.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-56.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-1.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-85.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanocytic-nevi-33.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/melanotic-macule-1.jpg
+/225040511/Dataset/SuperDermnet/test/melanocytic nevi/spitz-nevus-3.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-87.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-111.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-114.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-82.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-143.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-96.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-151.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-86.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-124.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-17.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/nail-melanoma-1.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-123.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-156.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-129.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/nail-melanoma-5.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-169.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-155.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-128.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-137.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-83.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-150.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-141.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-157.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-180.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-161.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-13.jpg
+/225040511/Dataset/SuperDermnet/test/nail melanoma/malignant-melanoma-120.jpg
+/225040511/Dataset/SuperDermnet/test/atypical mycobacterium/atypical-mycobacterium-11.jpg
+/225040511/Dataset/SuperDermnet/test/atypical mycobacterium/atypical-mycobacterium-4.jpg
+/225040511/Dataset/SuperDermnet/test/atypical mycobacterium/leishmaniasis-1.jpg
+/225040511/Dataset/SuperDermnet/test/atypical mycobacterium/atypical-mycobacterium-3.jpg
+/225040511/Dataset/SuperDermnet/test/atypical mycobacterium/leishmaniasis-7.jpg
+/225040511/Dataset/SuperDermnet/test/sexlinkichthy/05SexLinkedIcthyosis4.jpg
+/225040511/Dataset/SuperDermnet/test/sexlinkichthy/05SexLinkedEchthyosis02236.jpg
+/225040511/Dataset/SuperDermnet/test/sexlinkichthy/05xlinkedIcthyosis0823041.jpg
+/225040511/Dataset/SuperDermnet/test/sexlinkichthy/05SexLinkedEchthyosis02234.jpg
+/225040511/Dataset/SuperDermnet/test/sweets syndrome/basal-cell-nevus-syndrome-1.jpg
+/225040511/Dataset/SuperDermnet/test/sweets syndrome/sweets-syndrome-6.jpg
+/225040511/Dataset/SuperDermnet/test/sweets syndrome/basal-cell-nevus-syndrome-18.jpg
+/225040511/Dataset/SuperDermnet/test/sweets syndrome/sweets-syndrome-8.jpg
+/225040511/Dataset/SuperDermnet/test/sweets syndrome/basal-cell-nevus-syndrome-17.jpg
+/225040511/Dataset/SuperDermnet/test/sweets syndrome/sweets-syndrome-4.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/flea-bites-2.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/flea-bites-16.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-124.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-134.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-8.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-57.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-149.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-19.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-169.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-91.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-196.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-34.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-197.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-80.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-195.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-12.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-137.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-16.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/flea-bites-13.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-107.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-9.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-49.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-42.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-167.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-174.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/flea-bites-17.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-135.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-154.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-168.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-142.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-140.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-86.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-10.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-108.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-58.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-85.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-1.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-13.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/tick-bite-47.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-150.jpg
+/225040511/Dataset/SuperDermnet/test/scabies/scabies-132.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus foliaceous/pemphigus-foliaceous-22.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus foliaceous/pemphigus-foliaceous-23.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus foliaceous/pemphigus-foliaceous-30.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus foliaceous/pemphigus-foliaceous-33.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus foliaceous/pemphigus-foliaceous-26.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus foliaceous/pemphigus-foliaceous-25.jpg
+/225040511/Dataset/SuperDermnet/test/erythema annulare centrifugum/erythema-annulare-centrifugum-3.jpg
+/225040511/Dataset/SuperDermnet/test/erythema annulare centrifugum/erythema-annulare-centrifugum-14.jpg
+/225040511/Dataset/SuperDermnet/test/erythema annulare centrifugum/erythema-annulare-centrifugum-18.jpg
+/225040511/Dataset/SuperDermnet/test/erythema annulare centrifugum/erythema-annulare-centrifugum-2.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-34.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-30.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-133.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-106.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-20.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-21.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-39.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-50.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-29.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-3.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-29.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-96.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-101.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-108.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-103.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-37.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-127.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-9.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-120.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-30.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-38.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-41.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-34.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-11.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-62.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-88.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-89.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-28.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-8.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-14.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Penis-15.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-16.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-59.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-5.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-42.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-107.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-70.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-57.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosis-Vulva-9.jpg
+/225040511/Dataset/SuperDermnet/test/lichen sclerosus skin/Lichen-Sclerosus-Skin-118.jpg
+/225040511/Dataset/SuperDermnet/test/duck itch/duck-itch-3.jpg
+/225040511/Dataset/SuperDermnet/test/duck itch/duck-itch-6.jpg
+/225040511/Dataset/SuperDermnet/test/duck itch/duck-itch-1.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-177.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-31.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-64.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-110.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-130.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-23.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-171.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-83.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-12.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-3.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-144.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-2.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-166.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-20.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-46.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-62.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-13.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-63.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-122.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-147.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-1.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-153.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-109.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-123.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-180.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-185.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-11.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-16.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-145.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-188.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-150.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-17.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-104.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-146.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-173.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-156.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-86.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-19.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-scalp-70.jpg
+/225040511/Dataset/SuperDermnet/test/tineaankle/tinea-versicolor-117.jpg
+/225040511/Dataset/SuperDermnet/test/lymphangioma circumscriptum/lymphangioma-circumscriptum-5.jpg
+/225040511/Dataset/SuperDermnet/test/lymphangioma circumscriptum/lymphangioma-circumscriptum-9.jpg
+/225040511/Dataset/SuperDermnet/test/lymphangioma circumscriptum/lymphangioma-circumscriptum-10.jpg
+/225040511/Dataset/SuperDermnet/test/lymphangioma circumscriptum/lymphangioma-circumscriptum-19.jpg
+/225040511/Dataset/SuperDermnet/test/lymphangioma circumscriptum/lymphangioma-circumscriptum-23.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-16.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-7.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-20.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-17.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-14.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-24.jpg
+/225040511/Dataset/SuperDermnet/test/spider bite/spider-bite-23.jpg
+/225040511/Dataset/SuperDermnet/test/scarlet fever/scarlet-fever-16.jpg
+/225040511/Dataset/SuperDermnet/test/scarlet fever/scarlet-fever-3.jpg
+/225040511/Dataset/SuperDermnet/test/scarlet fever/scarlet-fever-7.jpg
+/225040511/Dataset/SuperDermnet/test/scarlet fever/scarlet-fever-11.jpg
+/225040511/Dataset/SuperDermnet/test/scarlet fever/scarlet-fever-25.jpg
+/225040511/Dataset/SuperDermnet/test/scarlet fever/scarlet-fever-33.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-27.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-1.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-30.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/calcifying-epithelioma-5.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-5.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-7.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-29.jpg
+/225040511/Dataset/SuperDermnet/test/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-3.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-95.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-5.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-96.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-65.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/rocky-mountain-spotted-fever-2.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/beaus-lines-3.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/orf-4.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-13.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/beaus-lines-5.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-39.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-73.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/beaus-lines-15.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/roseola-infantum-6.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-58.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-16.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/roseola-infantum-2.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/beaus-lines-1.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-29.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-66.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-18.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/small-pox-4.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/beaus-lines-27.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-35.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-38.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/unilateral-laterothoracic-exanthem-4.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-31.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-92.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-34.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/beaus-lines-17.jpg
+/225040511/Dataset/SuperDermnet/test/viral exanthems/viral-exanthems-98.jpg
+/225040511/Dataset/SuperDermnet/test/diabetic bullae/diabetic-bullae-31.jpg
+/225040511/Dataset/SuperDermnet/test/diabetic bullae/diabetic-bullae-4.jpg
+/225040511/Dataset/SuperDermnet/test/diabetic bullae/diabetic-bullae-3.jpg
+/225040511/Dataset/SuperDermnet/test/diabetic bullae/diabetic-bullae-18.jpg
+/225040511/Dataset/SuperDermnet/test/diabetic bullae/diabetic-bullae-21.jpg
+/225040511/Dataset/SuperDermnet/test/diabetic bullae/diabetic-bullae-2.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-121.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-96.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-14.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-22.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-144.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-27.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-1.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-22.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-175.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-4.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-28.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-11.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-beard-3.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-29.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-64.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-beard-1.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-border-6.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-70.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/08TineaAmiantacea1.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-40.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tt-tonsurans-adult-2.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-24.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-61.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-68.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-28.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-69.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-166.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-137.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-101.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-36.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-19.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-167.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-159.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-13.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-169.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-46.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-83.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-194.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-16.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-9.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-25.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-48.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-25.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-106.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-45.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-61.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-171.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-18.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-173.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-14.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-7.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-62.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/13tineaFeet052305.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-87.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-beard-5.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-15.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-4.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-2.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-59.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-38.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-laboratory-55.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-185.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-39.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-188.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-20.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-body-132.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-55.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-face-33.jpg
+/225040511/Dataset/SuperDermnet/test/tineaped/tinea-palm-9.jpg
+/225040511/Dataset/SuperDermnet/test/erysipelas/Erysipelas-11.jpg
+/225040511/Dataset/SuperDermnet/test/erysipelas/Erysipelas-1.jpg
+/225040511/Dataset/SuperDermnet/test/erysipelas/Erysipeloid-3.jpg
+/225040511/Dataset/SuperDermnet/test/erysipelas/Erysipelas-6.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/pretibial-myxedema-14.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/pretibial-myxedema-2.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/pretibial-myxedema-1.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/hypothyroidism-3.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/pretibial-myxedema-9.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/pretibial-myxedema-6.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/lichen-myxedematosus-5.jpg
+/225040511/Dataset/SuperDermnet/test/pretibial myxedema/pretibial-myxedema-22.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/sarcoid-15.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/Relapsing-Polychondritis-2.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/sarcoid-25.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/sarcoid-9.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/sarcoid-7.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/sarcoid-14.jpg
+/225040511/Dataset/SuperDermnet/test/sarcoid/sarcoid-4.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-53.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-60.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-16.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-30.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-15.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-118.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-68.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-25.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-64.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-71.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-6.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-11.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-134.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-nigra-3.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-133.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-1.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-45.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-107.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-62.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-104.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-55.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-21.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-81.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-50.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-groin-127.jpg
+/225040511/Dataset/SuperDermnet/test/tineagroin/tinea-nigra-2.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-62.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-18.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-5.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-94.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-3.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-doxycycline-3.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-116.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-12.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-30.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-46.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-78.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-47.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-91.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-lime-juice-3.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-40.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-72.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-64.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-22.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-43.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-88.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-58.jpg
+/225040511/Dataset/SuperDermnet/test/phototoxic reactions/phototoxic-reactions-13.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-34.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-98.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-114.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-146.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-103.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-139.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-142.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-4.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-119.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-17.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-109.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-20.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-87.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-106.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-168.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-158.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-147.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-170.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-166.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-110.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-26.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-130.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-14.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-24.jpg
+/225040511/Dataset/SuperDermnet/test/molluscum contagiosum/molluscum-contagiosum-29.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-49.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-24.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-35.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-4.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-8.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-18.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-38.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-42.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-59.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/12ChickenPoxBack.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-50.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-36.jpg
+/225040511/Dataset/SuperDermnet/test/varicella/varicella-15.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-16.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-11.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-48.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-46.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-33.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-52.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-17.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-18.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-51.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-50.jpg
+/225040511/Dataset/SuperDermnet/test/pemphigus/pemphigus-6.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFace041706.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic12060414.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicDerm0419042.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic18.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic030203.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic0607042.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFeet0801054.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic0224.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicDerm0419046.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic0607041.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicFaceBaby1.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic0411053.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicChild0828063.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05ATopicAreola.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic0123068.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic1107053.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic021011.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicMouth1216.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic060704.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFeet0801053.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic011011.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicChild082806.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic1206042.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic022805.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic12060423.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic12016.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/acrodermatitis-chronica-atrophicans-1.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/AtopicIMG013-GP3.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicInfection672-GP3.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicFeet.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFeet0823049.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicAreola23.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic10062.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic1206045.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic0313064.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic02164.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic12060413.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic0504058.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic1201.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFoot0801052.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicMouth012306.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFace100305.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/acrodermatitis-enteropathica-6.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicDerm041904.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicFace1.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05AtopicChild030120.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05Atopic0329041.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopic1107054.jpg
+/225040511/Dataset/SuperDermnet/test/atopic/05atopicFeet0823041.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-2.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-101.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-7.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-122.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-84.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-130.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-10.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-38.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-18.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-21.jpg
+/225040511/Dataset/SuperDermnet/test/warts/12WartNitrogen4.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-35.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-14.jpg
+/225040511/Dataset/SuperDermnet/test/warts/lymphomatoid-papulosis-3.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-70.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-3.jpg
+/225040511/Dataset/SuperDermnet/test/warts/bowenoid-papulosis-1.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-20.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-67.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-87.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-15.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-118.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-97.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-76.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-131.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-30.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-56.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-31.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-51.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-25.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-8.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-23.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-83.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-88.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-78.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-28.jpg
+/225040511/Dataset/SuperDermnet/test/warts/warts-7.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-95.jpg
+/225040511/Dataset/SuperDermnet/test/warts/epidermodysplasia-verruciformis-1.jpg
+/225040511/Dataset/SuperDermnet/test/warts/genital-warts-55.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-7.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-41.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-40.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-12.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-16.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/hydroa-aestivale-2.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-39.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/hydroa-vacciniforme-7.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-20.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/hydroa-vacciniforme-5.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-25.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/polymorphous-light-eruption-26.jpg
+/225040511/Dataset/SuperDermnet/test/polymorphous light eruption/erythropoietic-protoporphyria-3.jpg
+/225040511/Dataset/SuperDermnet/test/eczema trunk generalized/eczema-trunk-generalized-32.jpg
+/225040511/Dataset/SuperDermnet/test/eczema trunk generalized/eczema-trunk-generalized-28.jpg
+/225040511/Dataset/SuperDermnet/test/eczema trunk generalized/eczema-trunk-generalized-12.jpg
+/225040511/Dataset/SuperDermnet/test/eczema trunk generalized/eczema-trunk-generalized-5.jpg
+/225040511/Dataset/SuperDermnet/test/eczema trunk generalized/eczema-trunk-generalized-6.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-34.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-4.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-29.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-26.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-2.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-21.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-24.jpg
+/225040511/Dataset/SuperDermnet/test/warts cryotherapy/warts-cryotherapy-17.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-147.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-34.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/cosmetic-fragrance-allergy-4.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-38.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-14.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/systemically-induced-allergic-dermatitis-2.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-36.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-149.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-22.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-173.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-33.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-168.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/natural-rubber-latex-allergy-5.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-96.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-121.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-13.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-24.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/03ContactDerm040127.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-134.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/contact-airborne-3.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-146.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-11.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-116.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/irritant-contact-dermatitis-4.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-153.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/cosmetic-fragrance-allergy-2.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-2.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/irritant-contact-dermatitis-3.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-152.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-12.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-15.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/irritant-contact-dermatitis-1.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/allergic-contact-dermatitis-17.jpg
+/225040511/Dataset/SuperDermnet/test/allergic contact dermatitis/07PerioralDermNose.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-78.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-13.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-11.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-maligna-7.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-88.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-56.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-maligna-13.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-37.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-maligna-20.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-30.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-69.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-39.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-84.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-maligna-24.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-14.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-38.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-65.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-9.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-18.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-68.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-maligna-4.jpg
+/225040511/Dataset/SuperDermnet/test/lentigo adults/lentigo-adults-4.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-23.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-16.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-28.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-20.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-31.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-6.jpg
+/225040511/Dataset/SuperDermnet/test/puppp/PUPPP-10.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/05Ichthyosis1.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/03Icthyosis.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/03Desquamation-035.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/05IchthyosisSexLinked0308042.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/03ichthyosis020127.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/erythrokeratodermia-variabilis-2.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/desquamation-2.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/05icthyosis0124052.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/05IchthyosisSexLinked0308041.jpg
+/225040511/Dataset/SuperDermnet/test/ichthosis/05icthyosis0124051.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-84.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-163.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-100.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-11.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-93.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-28.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-151.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-145.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-12.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-135.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-124.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-140.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-138.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-155.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-131.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/white-superficial-onychomycosis-3.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/proximal-subungual-onychomycosis-2.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/proximal-subungual-onychomycosis-1.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-110.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-137.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/white-superficial-onychomycosis-11.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-122.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-1.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/white-superficial-onychomycosis-16.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-120.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-41.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-157.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-22.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-20.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/distal-subungual-onychomycosis-27.jpg
+/225040511/Dataset/SuperDermnet/test/distal subungual onychomycosis/proximal-subungual-onychomycosis-10.jpg
+/225040511/Dataset/SuperDermnet/test/spiny keratoderma/spiny-keratoderma-4.jpg
+/225040511/Dataset/SuperDermnet/test/spiny keratoderma/Palmoplantar-Keratoderma-2.jpg
+/225040511/Dataset/SuperDermnet/test/spiny keratoderma/spiny-keratoderma-1.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/macular-atrophy-6.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/poikiloderma-civatte-4.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-70.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-95.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/atrophoderma-5.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-132.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-26.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-99.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-93.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-96.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/poikiloderma-civatte-5.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-17.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-60.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/macular-atrophy-1.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-112.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-46.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-12.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/elastosis-perferans-3.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/pellagra-1.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-19.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-1.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-9.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-3.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-116.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sunburn-5.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-5.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-133.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-83.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-34.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/stria-2.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-15.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-68.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-23.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sunburn-8.jpg
+/225040511/Dataset/SuperDermnet/test/sun damaged skin/sun-damaged-skin-40.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-1.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-22.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-34.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-4.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-20.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-8.jpg
+/225040511/Dataset/SuperDermnet/test/halo nevus/halo-nevus-30.jpg
+/225040511/Dataset/SuperDermnet/test/koilonychia/koilonychia-10.jpg
+/225040511/Dataset/SuperDermnet/test/koilonychia/koilonychia-11.jpg
+/225040511/Dataset/SuperDermnet/test/koilonychia/koilonychia-123.jpg
+/225040511/Dataset/SuperDermnet/test/koilonychia/koilonychia-15.jpg
+/225040511/Dataset/SuperDermnet/test/koilonychia/koilonychia-12.jpg
+/225040511/Dataset/SuperDermnet/test/koilonychia/koilonychia-1.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-28.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-ab-igne-11.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-ab-igne-7.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-4.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-ab-igne-3.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-ab-igne-2.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-14.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-12.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-19.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-38.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-ab-igne-12.jpg
+/225040511/Dataset/SuperDermnet/test/erythema ab igne/erythema-infectiosum-23.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-90.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-5.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-51.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-35.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-24.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-55.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-98.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-38.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-95.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-4.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-84.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-29.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-45.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-26.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-37.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-73.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-92.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-147.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-36.jpg
+/225040511/Dataset/SuperDermnet/test/skin tags polyps/skin-tags-polyps-69.jpg
+/225040511/Dataset/SuperDermnet/test/cylindroma/trichoepithelioma-2.jpg
+/225040511/Dataset/SuperDermnet/test/cylindroma/cylindroma-3.jpg
+/225040511/Dataset/SuperDermnet/test/cylindroma/eccrine-spiradenoma-2.jpg
+/225040511/Dataset/SuperDermnet/test/cylindroma/cylindroma-2.jpg
+/225040511/Dataset/SuperDermnet/test/cylindroma/cylindroma-14.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/syphilis-20.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/genital-ulcers-2.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/syphilis-12.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/syphilis-9.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/syphilis-10.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/syphilis-2.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/chancroid-5.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/gonorrhea-7.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/lymphogranuloma-venereum-2.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/08SebDermChest020106.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/gonorrhea-9.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/chancroid-6.jpg
+/225040511/Dataset/SuperDermnet/test/syphilis/gonorrhea-8.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/KeratosisIMG001-GP3.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/KeratosisIMG003-GP3.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05KeratosisPilaris0510042.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05keratosisPilaris020204.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05KeratosisPilaris1013.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05keratosisPilaris23.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/keratosis-punctata-4.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05keratosisPilaris080706.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05keratosisPilaris083004.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05KeratosisPilaris0510045.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05keratosisPilaris010120.jpg
+/225040511/Dataset/SuperDermnet/test/keratosispilaris/05KeratosisPilaris0510044.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-38.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-37.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/08psoriasisIntertrig0206061.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-2.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-11.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-34.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-13.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasisintertrig/psoriasis-erythrodermic-6.jpg
+/225040511/Dataset/SuperDermnet/test/pearly penile papules/pearly-penile-papules-7.jpg
+/225040511/Dataset/SuperDermnet/test/pearly penile papules/pearly-penile-papules-4.jpg
+/225040511/Dataset/SuperDermnet/test/pearly penile papules/pearly-penile-papules-1.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-20.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-51.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-31.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-4.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-34.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-3.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-47.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-15.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-33.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-61.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-42.jpg
+/225040511/Dataset/SuperDermnet/test/eczema herpeticum/eczema-herpeticum-26.jpg
+/225040511/Dataset/SuperDermnet/test/interstitial granulomatous dermatitis/interstitial-granulomatous-dermatitis-3.jpg
+/225040511/Dataset/SuperDermnet/test/interstitial granulomatous dermatitis/interstitial-granulomatous-dermatitis-18.jpg
+/225040511/Dataset/SuperDermnet/test/interstitial granulomatous dermatitis/interstitial-granulomatous-dermatitis-7.jpg
+/225040511/Dataset/SuperDermnet/test/interstitial granulomatous dermatitis/interstitial-granulomatous-dermatitis-14.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-27.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-21.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-45.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-11.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-28.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-35.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-20.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-12.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-2.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onychogryphosis-6.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-42.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-37.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-6.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-23.jpg
+/225040511/Dataset/SuperDermnet/test/onycholysis/onycholysis-62.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-38.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-16.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-153.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-131.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-21.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-165.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/8Psoriasis1-226.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-140.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-144.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-112.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-167.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-108.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-124.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-37.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-118.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-17.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/Psoriasis-Light-Sensative-2.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/08PsoriasisOnycholysis2.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-100.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-18.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-129.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-39.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-4.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-99.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-26.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/Psoriasis-Interferon-Injection-0823042.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/Psoriasis-Light-Sensative-8.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-171.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-159.jpg
+/225040511/Dataset/SuperDermnet/test/psoriasis/psoriasis-115.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-16.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-23.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-89.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/cryoglobulinemia-1.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-9.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/fixed-drug-eruption-7.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-108.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-76.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-106.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-67.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-93.jpg
+/225040511/Dataset/SuperDermnet/test/drug eruptions/drug-eruptions-31.jpg

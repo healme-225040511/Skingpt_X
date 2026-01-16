@@ -275,7 +275,8 @@ def _load_deepseek_chat_model():
         print(f"⏳ 首次加载 DeepSeek-Chat 模型: {MODEL_NAME_7B}...")
         try:
             tokenizer_7b = AutoTokenizer.from_pretrained(MODEL_NAME_7B, trust_remote_code=True)
-            
+            tokenizer_7b.pad_token = tokenizer_7b.eos_token 
+
             # 8-bit 量化足以保持精度并大幅节省显存
             bnb_config = BitsAndBytesConfig(
                 load_in_8bit=True,
