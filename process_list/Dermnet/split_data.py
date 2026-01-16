@@ -28,4 +28,4 @@ def split_text_file(input_file, num_splits=4):
 
 if __name__ == "__main__":
     # 请确保你的文件名正确
-    split_text_file('process_wronglist_Dermnet.txt', 4)
+    split_text_file('test_wrong_case_panderm.txt', 4)

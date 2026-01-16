@@ -1,0 +1,501 @@
+/test/Seborrheic Keratoses and other Benign Tumors/dermatofibroma-108.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/maculae-cerulea-1.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/porokeratosis-31.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-160.jpg
+/test/Eczema Photos/parasitosis-psychogenic-5.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/allergic-contact-dermatitis-83.jpg
+/test/Acne and Rosacea Photos/acne-closed-comedo-21.jpg
+/test/Vascular Tumors/hemangioma-22.jpg
+/test/Acne and Rosacea Photos/rosacea-47.jpg
+/test/Exanthems and Drug Eruptions/kawasaki-syndrome-21.jpg
+/test/Vascular Tumors/pyogenic-granuloma-20.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-145.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/rhus-dermatitis-26.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/keratosis-punctata-2.jpg
+/test/Acne and Rosacea Photos/rosacea-68.jpg
+/test/Bullous Disease Photos/diabetic-bullae-30.jpg
+/test/Eczema Photos/eczema-ears-2.jpg
+/test/Vasculitis Photos/schamberg-disease-48.jpg
+/test/Vascular Tumors/venous-lake-15.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/ctcl-27.jpg
+/test/Nail Fungus and other Nail Disease/exostosis-2.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-24.jpg
+/test/Bullous Disease Photos/diabetic-bullae-24.jpg
+/test/Light Diseases and Disorders of Pigmentation/porphyrias-7.jpg
+/test/Vascular Tumors/venous-lake-2.jpg
+/test/Nail Fungus and other Nail Disease/pseudomonas-19.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Pseudomonas-Cellulitis-24.jpg
+/test/Eczema Photos/id-reaction-1.jpg
+/test/Nail Fungus and other Nail Disease/onycholysis-15.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-167.jpg
+/test/Lupus and other Connective Tissue diseases/dermatomyositis-41.jpg
+/test/Exanthems and Drug Eruptions/enterovirus-16.jpg
+/test/Exanthems and Drug Eruptions/drug-eruptions-45.jpg
+/test/Eczema Photos/stasis-dermatitis-79.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/rhus-dermatitis-8.jpg
+/test/Herpes HPV and other STDs Photos/molluscum-contagiosum-169.jpg
+/test/Nail Fungus and other Nail Disease/ridging-beading-25.jpg
+/test/Eczema Photos/eczema-asteatotic-34.jpg
+/test/Acne and Rosacea Photos/milia-18.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Leprosy-19.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/nevus-spilus-11.jpg
+/test/Nail Fungus and other Nail Disease/clubbing-9.jpg
+/test/Vasculitis Photos/erythema-multiforme-98.jpg
+/test/Nail Fungus and other Nail Disease/distal-subungual-onychomycosis-161.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-lesion-16.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-incognito-47.jpg
+/test/Nail Fungus and other Nail Disease/chronic-paronychia-18.jpg
+/test/Eczema Photos/id-reaction-10.jpg
+/test/Eczema Photos/eczema-chronic-42.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-ear-33.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/duck-itch-1.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/epidermal-cyst-108.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-versicolor-168.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/atypical-nevi-dermoscopy-97.jpg
+/test/Acne and Rosacea Photos/hyperhidrosis-2.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/syringoma-51.jpg
+/test/Acne and Rosacea Photos/rosacea-93.jpg
+/test/Systemic Disease/amyloidosis-11.jpg
+/test/Exanthems and Drug Eruptions/fixed-drug-eruption-5.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-body-156.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-palms-soles-11.jpg
+/test/Warts Molluscum and other Viral Infections/molluscum-contagiosum-144.jpg
+/test/Vasculitis Photos/erythema-nodosum-8.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/metastasis-30.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/ctcl-64.jpg
+/test/Atopic Dermatitis Photos/4th1IMG015.jpg
+/test/Acne and Rosacea Photos/rosacea-38.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Hand-34.jpg
+/test/Acne and Rosacea Photos/rosacea-111.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-128.jpg
+/test/Exanthems and Drug Eruptions/viral-exanthems-93.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-scalp-38.jpg
+/test/Nail Fungus and other Nail Disease/mucous-cyst-95.jpg
+/test/Nail Fungus and other Nail Disease/lichen-planus-129.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/leiomyomata-4.jpg
+/test/Herpes HPV and other STDs Photos/herpes-type-2-primary-22.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-89.jpg
+/test/Systemic Disease/granuloma-annulare-197.jpg
+/test/Bullous Disease Photos/herpes-gestationis-8.jpg
+/test/Eczema Photos/desquamation-4.jpg
+/test/Vasculitis Photos/vasculitis-126.jpg
+/test/Atopic Dermatitis Photos/IchthosisIMG030-GP3.jpg
+/test/Hair Loss Photos Alopecia and other Hair Diseases/alopecia-areata-53.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/08PsoriasisAnalPink1216.jpg
+/test/Bullous Disease Photos/bullous-pemphigoid-68.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-pustular-generalized-44.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-115.jpg
+/test/Exanthems and Drug Eruptions/scarlet-fever-22.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-134.jpg
+/test/Systemic Disease/neurofibromatosis-39.jpg
+/test/Bullous Disease Photos/bullous-pemphigoid-53.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/pityriasis-rosea-135.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/dermatofibroma-18.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-zoster-110.jpg
+/test/Nail Fungus and other Nail Disease/exostosis-5.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-smooth-116.jpg
+/test/Acne and Rosacea Photos/fordyce-spots-3.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-scalp-58.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-ear-1.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-palms-soles-193.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/impetigo-8.jpg
+/test/Systemic Disease/amyloidosis-7.jpg
+/test/Systemic Disease/xanthomas-61.jpg
+/test/Exanthems and Drug Eruptions/viral-exanthems-65.jpg
+/test/Eczema Photos/heels-dry-cracked-4.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/atypical-nevi-dermoscopy-77.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Sclerosus-Skin-2.jpg
+/test/Nail Fungus and other Nail Disease/trauma-24.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-23.jpg
+/test/Hair Loss Photos Alopecia and other Hair Diseases/alopecia-areata-23.jpg
+/test/Eczema Photos/Dyshidrosis-54.jpg
+/test/Bullous Disease Photos/bullous-pemphigoid-45.jpg
+/test/Warts Molluscum and other Viral Infections/warts-flat-21.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/caterpillar-dermatitis-2.jpg
+/test/Acne and Rosacea Photos/rosacea-74.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/patch-testing-10.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-nails-2.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/lichen-planus-133.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/candidiasis-large-skin-folds-172.jpg
+/test/Atopic Dermatitis Photos/4IMG005.jpg
+/test/Vasculitis Photos/vasculitis-30.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-cheilitis-sq-cell-lip-9.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/intertrigo-48.jpg
+/test/Herpes HPV and other STDs Photos/genital-warts-93.jpg
+/test/Eczema Photos/stasis-dermatitis-145.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/perleche-13.jpg
+/test/Urticaria Hives/cholinergic-uriticaria-14.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-83.jpg
+/test/Bullous Disease Photos/bullous-pemphigoid-23.jpg
+/test/Warts Molluscum and other Viral Infections/molluscum-contagiosum-102.jpg
+/test/Vasculitis Photos/erythema-multiforme-12.jpg
+/test/Vascular Tumors/pyogenic-granuloma-35.jpg
+/test/Nail Fungus and other Nail Disease/acute-paronychia-7.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-superficial-50.jpg
+/test/Light Diseases and Disorders of Pigmentation/polymorphous-light-eruption-33.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-146.jpg
+/test/Nail Fungus and other Nail Disease/biting-excoriation-14.jpg
+/test/Eczema Photos/03dermatitisDrug1122051.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/scabies-176.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Sclerosus-Skin-51.jpg
+/test/Nail Fungus and other Nail Disease/chronic-paronychia-34.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-smooth-121.jpg
+/test/Warts Molluscum and other Viral Infections/molluscum-contagiosum-110.jpg
+/test/Lupus and other Connective Tissue diseases/crest-syndrome-19.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/epidermal-nevus-57.jpg
+/test/Atopic Dermatitis Photos/05icththyosis1004041.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/flea-bites-6.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-scalp-46.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/08glutealPinking061906.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/arsenical-keratoses-6.jpg
+/test/Eczema Photos/eczema-subacute-30.jpg
+/test/Light Diseases and Disorders of Pigmentation/phototoxic-reactions-29.jpg
+/test/Warts Molluscum and other Viral Infections/eczema-herpeticum-45.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-webs-36.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/chondrodermatitis-nodularis-38.jpg
+/test/Acne and Rosacea Photos/hidradenitis-suppurativa-43.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/pityriasis-rosea-94.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-smooth-99.jpg
+/test/Eczema Photos/stasis-dermatitis-168.jpg
+/test/Atopic Dermatitis Photos/03DermatitisLids1.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/seborrheic-dermatitis-97.jpg
+/test/Lupus and other Connective Tissue diseases/morphea-5.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/porokeratosis-51.jpg
+/test/Nail Fungus and other Nail Disease/onycholysis-50.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-pigmented-69.jpg
+/test/Exanthems and Drug Eruptions/14desquamationViral34-GP3.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Cellulitis-11.jpg
+/test/Warts Molluscum and other Viral Infections/warts-digitate-33.jpg
+/test/Eczema Photos/phlebitis-superficial-4.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/congenital-nevus-21.jpg
+/test/Vasculitis Photos/interstitial-granulomatous-dermatitis-10.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/sebaceous-hyperplasia-90.jpg
+/test/Vasculitis Photos/vasculitis-80.jpg
+/test/Eczema Photos/fissure-4.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-106.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/keratoacanthoma-8.jpg
+/test/Eczema Photos/eczema-asteatotic-10.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-palms-soles-109.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/pityriasis-rosea-9.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-zoster-188.jpg
+/test/Bullous Disease Photos/dariers-disease-44.jpg
+/test/Herpes HPV and other STDs Photos/molluscum-contagiosum-35.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-lesion-24.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-123.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/fire-ants-111.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-dorsum-42.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-ruff-92.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/lichen-planus-vaginal-9.jpg
+/test/Vasculitis Photos/vasculitis-103.jpg
+/test/Eczema Photos/eczema-areola-5.jpg
+/test/Acne and Rosacea Photos/rosacea-31.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/dermatofibroma-82.jpg
+/test/Nail Fungus and other Nail Disease/pigmented-bands-10.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Cellulitis-1.jpg
+/test/Nail Fungus and other Nail Disease/pigmented-bands-2.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/pityriasis-rosea-197.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-zoster-93.jpg
+/test/Acne and Rosacea Photos/rosacea-nose-5.jpg
+/test/Eczema Photos/neurotic-excoriations-22.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-cutaneous-43.jpg
+/test/Acne and Rosacea Photos/acne-pustular-61.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-scalp-4.jpg
+/test/Nail Fungus and other Nail Disease/chronic-paronychia-19.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-16.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-28.jpg
+/test/Light Diseases and Disorders of Pigmentation/sun-damaged-skin-27.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-165.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/congenital-nevus-31.jpg
+/test/Lupus and other Connective Tissue diseases/crest-syndrome-16.jpg
+/test/Vascular Tumors/vascular-anomaly-1.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/cutaneous-Larva-Migrans-19.jpg
+/test/Acne and Rosacea Photos/rosacea-steroid-8.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Sclerosus-Penis-11.jpg
+/test/Nail Fungus and other Nail Disease/alopecia-areata-22.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/rocky-mountain-spotted-fever-1.jpg
+/test/Vasculitis Photos/vasculitis-93.jpg
+/test/Light Diseases and Disorders of Pigmentation/porphyrias-69.jpg
+/test/Atopic Dermatitis Photos/03ichthyosis050127.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-144.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/atypical-nevi-dermoscopy-109.jpg
+/test/Herpes HPV and other STDs Photos/genital-warts-38.jpg
+/test/Nail Fungus and other Nail Disease/distal-subungual-onychomycosis-40.jpg
+/test/Atopic Dermatitis Photos/1IMG011.jpg
+/test/Acne and Rosacea Photos/acne-excoriated-22.jpg
+/test/Vasculitis Photos/erythema-multiforme-143.jpg
+/test/Atopic Dermatitis Photos/05atopic0124051.jpg
+/test/Warts Molluscum and other Viral Infections/molluscum-contagiosum-123.jpg
+/test/Exanthems and Drug Eruptions/viral-exanthems-86.jpg
+/test/Systemic Disease/sarcoid-10.jpg
+/test/Warts Molluscum and other Viral Infections/molluscum-contagiosum-13.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-body-150.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-inversus-31.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/ctcl-71.jpg
+/test/Vasculitis Photos/vasculitis-42.jpg
+/test/Acne and Rosacea Photos/rosacea-60.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/HotTubIMG001-GP3.jpg
+/test/Bullous Disease Photos/grovers-disease-49.jpg
+/test/Atopic Dermatitis Photos/05AtopicFossa1q.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-113.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-superficial-16.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-138.jpg
+/test/Light Diseases and Disorders of Pigmentation/vitiligo-21.jpg
+/test/Warts Molluscum and other Viral Infections/eczema-vaccinatum-2.jpg
+/test/Eczema Photos/stasis-dermatitis-193.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-mouth-11.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-groin-37.jpg
+/test/Acne and Rosacea Photos/hidradenitis-suppurativa-39.jpg
+/test/Bullous Disease Photos/dermatitis-herpetiformis-96.jpg
+/test/Atopic Dermatitis Photos/05Atopic031011.jpg
+/test/Lupus and other Connective Tissue diseases/dermatomyositis-9.jpg
+/test/Vascular Tumors/hemangioma-infancy-27.jpg
+/test/Hair Loss Photos Alopecia and other Hair Diseases/acne-keloidalis-20.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/kerion-5.jpg
+/test/Eczema Photos/eczema-hand-139.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-lesion-28.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-zoster-182.jpg
+/test/Herpes HPV and other STDs Photos/AIDS-49.jpg
+/test/Atopic Dermatitis Photos/9IMG008.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-type-1-recurrent-38.jpg
+/test/Acne and Rosacea Photos/acne-pustular-13.jpg
+/test/Herpes HPV and other STDs Photos/syphilis-6.jpg
+/test/Vascular Tumors/angiokeratomas-5.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-lesion-56.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-pigmented-71.jpg
+/test/Acne and Rosacea Photos/acne-cystic-40.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-pigmented-63.jpg
+/test/Warts Molluscum and other Viral Infections/eczema-herpeticum-47.jpg
+/test/Atopic Dermatitis Photos/05AtopicChild020120.jpg
+/test/Warts Molluscum and other Viral Infections/warts-common-73.jpg
+/test/Bullous Disease Photos/pemphigus-98.jpg
+/test/Acne and Rosacea Photos/acne-closed-comedo-36.jpg
+/test/Systemic Disease/granuloma-annulare-20.jpg
+/test/Eczema Photos/eczema-nummular-202.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Axillary-Granular-Parakeratosis-9.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/chondrodermatitis-nodularis-48.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Sycosis-Barbae-11.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/patch-testing-56.jpg
+/test/Nail Fungus and other Nail Disease/onycholysis-17.jpg
+/test/Lupus and other Connective Tissue diseases/crest-syndrome-30.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-137.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-face-31.jpg
+/test/Nail Fungus and other Nail Disease/distal-subungual-onychomycosis-89.jpg
+/test/Systemic Disease/acanthosis-nigricans-4.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-trunk-ext-12.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/atypical-nevi-23.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-152.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-170.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-cutaneous-12.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-cheilitis-sq-cell-lip-47.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-penis-4.jpg
+/test/Light Diseases and Disorders of Pigmentation/erythema-ab-igne-8.jpg
+/test/Warts Molluscum and other Viral Infections/warts-cryotherapy-15.jpg
+/test/Warts Molluscum and other Viral Infections/warts-common-41.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-plantar-7.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Pityriasis-Lichenoides-48.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-cutaneous-93.jpg
+/test/Vascular Tumors/lymphangioma-circumscriptum-18.jpg
+/test/Light Diseases and Disorders of Pigmentation/erythema-ab-igne-7.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-scalp-36.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-lip-29.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/systemically-induced-allergic-dermatitis-3.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/atypical-nevi-dermoscopy-101.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Guttate-96.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-nose-42.jpg
+/test/Urticaria Hives/dermagraphism-22.jpg
+/test/Warts Molluscum and other Viral Infections/12PeriungualWart.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-scalp-55.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Furuncles-Carbuncles-21.jpg
+/test/Light Diseases and Disorders of Pigmentation/porphyrias-77.jpg
+/test/Herpes HPV and other STDs Photos/warts-mouth-2.jpg
+/test/Eczema Photos/prurigo-nodularis-9.jpg
+/test/Nail Fungus and other Nail Disease/psoriasis-162.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-groin-54.jpg
+/test/Nail Fungus and other Nail Disease/ingrown-nail-16.jpg
+/test/Urticaria Hives/dermagraphism-24.jpg
+/test/Light Diseases and Disorders of Pigmentation/porphyrias-59.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/13tineaAmiantacea082106.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/chondrodermatitis-nodularis-28.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/hydrocystoma-7.jpg
+/test/Exanthems and Drug Eruptions/drug-eruptions-80.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/stucco-keratoses-37.jpg
+/test/Vascular Tumors/kaposi-sarcoma-14.jpg
+/test/Warts Molluscum and other Viral Infections/warts-plantar-44.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-cutaneous-74.jpg
+/test/Atopic Dermatitis Photos/AtopicIMG002-GP3.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-59.jpg
+/test/Atopic Dermatitis Photos/05Atopic1201.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/impetigo-64.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Chronic-Plaque-131.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Hand-43.jpg
+/test/Acne and Rosacea Photos/acne-open-comedo-58.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-leg-4.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/stucco-keratoses-49.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/otitis-externa-6.jpg
+/test/Light Diseases and Disorders of Pigmentation/phototoxic-reactions-66.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/nevus-spilus-32.jpg
+/test/Acne and Rosacea Photos/acne-open-comedo-16.jpg
+/test/Eczema Photos/eczema-chronic-15.jpg
+/test/Acne and Rosacea Photos/acne-infantile-6.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/bowens-disease-36.jpg
+/test/Vasculitis Photos/erythema-multiforme-175.jpg
+/test/Systemic Disease/amyloidosis-17.jpg
+/test/Herpes HPV and other STDs Photos/genital-herpes-simplex-7.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-lesion-55.jpg
+/test/Acne and Rosacea Photos/acne-primary-lesion-2.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Folliculitis-24.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-arm-2.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Hand-4.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-groin-13.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-32.jpg
+/test/Light Diseases and Disorders of Pigmentation/nevus-anemicus-10.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/lyme-disease-26.jpg
+/test/Acne and Rosacea Photos/rosacea-nose-2.jpg
+/test/Bullous Disease Photos/dermatitis-herpetiformis-29.jpg
+/test/Acne and Rosacea Photos/rosacea-nose-49.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-simplex-30.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-181.jpg
+/test/Atopic Dermatitis Photos/14IMG010.jpg
+/test/Light Diseases and Disorders of Pigmentation/piebaldism-2.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/ctcl-54.jpg
+/test/Acne and Rosacea Photos/acne-cystic-149.jpg
+/test/Nail Fungus and other Nail Disease/pseudomonas-18.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-hand-dorsum-27.jpg
+/test/Lupus and other Connective Tissue diseases/morphea-55.jpg
+/test/Systemic Disease/granuloma-annulare-167.jpg
+/test/Warts Molluscum and other Viral Infections/warts-digitate-45.jpg
+/test/Light Diseases and Disorders of Pigmentation/sun-damaged-skin-46.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-nose-48.jpg
+/test/Atopic Dermatitis Photos/05atopic0313061.jpg
+/test/Atopic Dermatitis Photos/15IMG009.jpg
+/test/Acne and Rosacea Photos/acne-open-comedo-33.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Sclerosus-Skin-14.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/allergic-contact-dermatitis-152.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-face-27.jpg
+/test/Eczema Photos/neurotic-excoriations-26.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Pityriasis-Lichenoides-32.jpg
+/test/Eczema Photos/eczema-fingertips-122.jpg
+/test/Bullous Disease Photos/pemphigus-45.jpg
+/test/Poison Ivy Photos and other Contact Dermatitis/metal-dermatitis-11.jpg
+/test/Nail Fungus and other Nail Disease/alopecia-areata-56.jpg
+/test/Exanthems and Drug Eruptions/viral-exanthems-4.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/perleche-785.jpg
+/test/Acne and Rosacea Photos/rosacea-1.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Chronic-Plaque-14.jpg
+/test/Vasculitis Photos/schamberg-disease-19.jpg
+/test/Urticaria Hives/angioedema-3.jpg
+/test/Atopic Dermatitis Photos/05keratosisPilaris020204.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/melanoma-mimic-2.jpg
+/test/Systemic Disease/neurofibromatosis-52.jpg
+/test/Acne and Rosacea Photos/hidradenitis-suppurativa-14.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-106.jpg
+/test/Nail Fungus and other Nail Disease/mucous-cyst-22.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-88.jpg
+/test/Nail Fungus and other Nail Disease/pachyonychia-congenita-4.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/skin-tags-polyps-66.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/epidermal-nevus-58.jpg
+/test/Warts Molluscum and other Viral Infections/warts-plantar-70.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-ruff-184.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-groin-45.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/nevus-repigmented-3.jpg
+/test/Eczema Photos/eczema-asteatotic-37.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-130.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/epidermal-cyst-106.jpg
+/test/Vascular Tumors/pyogenic-granuloma-6.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/spider-bite-21.jpg
+/test/Eczema Photos/pompholyx-14.jpg
+/test/Atopic Dermatitis Photos/05atopicFoot082205.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/pilar-cyst-11.jpg
+/test/Herpes HPV and other STDs Photos/genital-warts-20.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-lip-33.jpg
+/test/Exanthems and Drug Eruptions/fixed-drug-eruption-17.jpg
+/test/Eczema Photos/eczema-hand-138.jpg
+/test/Acne and Rosacea Photos/rosacea-39.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/melanoma-mimic-15.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/epidermal-cyst-142.jpg
+/test/Light Diseases and Disorders of Pigmentation/hydroa-aestivale-1.jpg
+/test/Exanthems and Drug Eruptions/roseola-infantum-2.jpg
+/test/Systemic Disease/tuberous-sclerosis-52.jpg
+/test/Systemic Disease/lipoid-proteinosis-6.jpg
+/test/Acne and Rosacea Photos/acne-pustular-21.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/keratoacanthoma-136.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-versicolor-82.jpg
+/test/Nail Fungus and other Nail Disease/koilonychia-12.jpg
+/test/Acne and Rosacea Photos/acne-cystic-103.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/lichen-planus-84.jpg
+/test/Urticaria Hives/dermagraphism-14.jpg
+/test/Acne and Rosacea Photos/acne-open-comedo-37.jpg
+/test/Urticaria Hives/Urticaria-Vasculitis-16.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/actinomycosis-1.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/seborrheic-dermatitis-100.jpg
+/test/Bullous Disease Photos/bullous-pemphigoid-52.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/perleche-61.jpg
+/test/Systemic Disease/diabetes-mellitus-13.jpg
+/test/Systemic Disease/tuberous-sclerosis-167.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratosis-irritated-124.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/lichen-planus-10.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-lesion-28.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-scalp-66.jpg
+/test/Light Diseases and Disorders of Pigmentation/sun-damaged-skin-12.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-scalp-65.jpg
+/test/Herpes HPV and other STDs Photos/AIDS-4.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/candida-penis-8.jpg
+/test/Eczema Photos/eczema-fingertips-10.jpg
+/test/Warts Molluscum and other Viral Infections/warts-digitate-36.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-vulva-2.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/reiter-syndrome-5.jpg
+/test/Urticaria Hives/hives-Urticaria-Acute-55.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/candidiasis-vaginal-2.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Planus-Hypertrophic-8.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-345.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-pustular-generalized-26.jpg
+/test/Hair Loss Photos Alopecia and other Hair Diseases/alopecia-areata-44.jpg
+/test/Warts Molluscum and other Viral Infections/warts-plantar-42.jpg
+/test/Systemic Disease/tuberous-sclerosis-23.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-lip-3.jpg
+/test/Bullous Disease Photos/pemphigus-foliaceous-26.jpg
+/test/Acne and Rosacea Photos/rosacea-30.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-16.jpg
+/test/Systemic Disease/acanthosis-nigricans-56.jpg
+/test/Bullous Disease Photos/benign-familial-chronic-pemphigus-1.jpg
+/test/Acne and Rosacea Photos/hidradenitis-suppurativa-12.jpg
+/test/Exanthems and Drug Eruptions/fixed-drug-eruption-58.jpg
+/test/Urticaria Hives/erythema-annulare-centrifugum-9.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Histology-4.jpg
+/test/Warts Molluscum and other Viral Infections/warts-periungual-5.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/scabies-112.jpg
+/test/Exanthems and Drug Eruptions/drug-eruptions-9.jpg
+/test/Exanthems and Drug Eruptions/scarlet-fever-32.jpg
+/test/Light Diseases and Disorders of Pigmentation/pseudo-porphyria-2.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-webs-30.jpg
+/test/Warts Molluscum and other Viral Infections/herpes-type-1-recurrent-82.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/seborrheic-dermatitis-87.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-118.jpg
+/test/Herpes HPV and other STDs Photos/genital-warts-30.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-ruff-116.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/bowens-disease-60.jpg
+/test/Cellulitis Impetigo and other Bacterial Infections/Streptococci-Anal-Penis-5.jpg
+/test/Bullous Disease Photos/bullous-pemphigoid-73.jpg
+/test/Lupus and other Connective Tissue diseases/crest-syndrome-44.jpg
+/test/Bullous Disease Photos/dermatitis-herpetiformis-62.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-172.jpg
+/test/Vasculitis Photos/pyoderma-gangrenosum-12.jpg
+/test/Urticaria Hives/hives-Urticaria-Acute-53.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-incognito-41.jpg
+/test/Vasculitis Photos/vasculitis-34.jpg
+/test/Warts Molluscum and other Viral Infections/warts-digitate-18.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/id-reaction-6.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/jelly-fish-sting7.jpg
+/test/Acne and Rosacea Photos/acne-pustular-20.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/dermatofibroma-9.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-scalp-3.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-106.jpg
+/test/Eczema Photos/eczema-subacute-75.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/pubic-lice-37.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-Anus-18.jpg
+/test/Vasculitis Photos/vasculitis-106.jpg
+/test/Eczema Photos/eczema-nummular-137.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/sebaceous-hyperplasia-43.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-histology-5.jpg
+/test/Atopic Dermatitis Photos/13IMG011.jpg
+/test/

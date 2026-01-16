@@ -1,0 +1,1429 @@
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-172.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/pseudoxanthoma-elasticum-7.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-131.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-183.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05AtopicFossa1.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05atopic0110052.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-100.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-64.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-116.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/chronic-bullous-dermatosis-childhood-1.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-63.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-90.jpg
+/225040511/Dataset/SuperDermnet/train/myiasis/amyloidosis-9.jpg
+/225040511/Dataset/SuperDermnet/train/anal comedones/actinic-comedones-6.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-115.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-85.jpg
+/225040511/Dataset/SuperDermnet/train/syringoma/syringoma-17.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-15.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-dermoscopy-78.jpg
+/225040511/Dataset/SuperDermnet/train/hidradenitis suppurativa/hidradenitis-suppurativa-65.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-beard-17.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-19.jpg
+/225040511/Dataset/SuperDermnet/train/congenital nevus/collagenoma-1.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lip-12.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/dariers-disease-4.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-104.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-82.jpg
+/225040511/Dataset/SuperDermnet/train/granulation tissue/granulation-tissue-39.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/hydrocystoma-9.jpg
+/225040511/Dataset/SuperDermnet/train/urticaria vasculitis/hives-Urticaria-Acute-21.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/13tineaCorporis0808054.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05KeratosisPilar1.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-20.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-63.jpg
+/225040511/Dataset/SuperDermnet/train/chondrodermatitis nodularis/chondrodermatitis-nodularis-27.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angiokeratomas-36.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/07Rhinophyma1a.jpg
+/225040511/Dataset/SuperDermnet/train/dermagraphism/dermagraphism-29.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-121.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-hand-dorsum-64.jpg
+/225040511/Dataset/SuperDermnet/train/cutaneous horn/cutaneous-horn-27.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-11.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-171.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/biting-insects-37.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-22.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-25.jpg
+/225040511/Dataset/SuperDermnet/train/black heel/black-heel-12.jpg
+/225040511/Dataset/SuperDermnet/train/lupus acute/lupus-acute-17.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-41.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-179.jpg
+/225040511/Dataset/SuperDermnet/train/eczema herpeticum/eczema-herpeticum-28.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-open-comedo-29.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-84.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-57.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-121.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-133.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-117.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-109.jpg
+/225040511/Dataset/SuperDermnet/train/cutaneous larva migrans/cutaneous-Larva-Migrans-37.jpg
+/225040511/Dataset/SuperDermnet/train/morphea/morphea-1.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-webs-55.jpg
+/225040511/Dataset/SuperDermnet/train/pompholyx/pompholyx-6.jpg
+/225040511/Dataset/SuperDermnet/train/puppp/PUPPP-8.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-24.jpg
+/225040511/Dataset/SuperDermnet/train/pemphigus/pemphigus-32.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-83.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-56.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-130.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-superficial-38.jpg
+/225040511/Dataset/SuperDermnet/train/erythema ab igne/erythema-ab-igne-9.jpg
+/225040511/Dataset/SuperDermnet/train/granulation tissue/granulation-tissue-18.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-webs-12.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-14.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-8.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-10.jpg
+/225040511/Dataset/SuperDermnet/train/median nail dystrophy/median-nail-dystrophy-6.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/porphyrias-2.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/hemangioma-5.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-smooth-56.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-72.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/becker-nevus-36.jpg
+/225040511/Dataset/SuperDermnet/train/koilonychia/leukonychia-3.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-142.jpg
+/225040511/Dataset/SuperDermnet/train/ridging beading/pigmented-bands-7.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-53.jpg
+/225040511/Dataset/SuperDermnet/train/median nail dystrophy/median-nail-dystrophy-4.jpg
+/225040511/Dataset/SuperDermnet/train/osler node/scleroderma-11.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-43.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-66.jpg
+/225040511/Dataset/SuperDermnet/train/biting excoriation/neurotic-excoriations-1.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-130.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-79.jpg
+/225040511/Dataset/SuperDermnet/train/tuberous sclerosis/tuberous-sclerosis-1.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-18.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-95.jpg
+/225040511/Dataset/SuperDermnet/train/pubic lice/pubic-lice-35.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-hand-dorsum-63.jpg
+/225040511/Dataset/SuperDermnet/train/morphea/morphea-27.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-laboratory-38.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-143.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-32.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/xanthomas-1.jpg
+/225040511/Dataset/SuperDermnet/train/eczema subacute/eczema-subacute-73.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-34.jpg
+/225040511/Dataset/SuperDermnet/train/erythema ab igne/erythema-infectiosum-37.jpg
+/225040511/Dataset/SuperDermnet/train/gianotti crosti/gianotti-crosti-11.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-68.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/acute-paronychia-5.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasis lichenoides/Pityriasis-Lichenoides-46.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-108.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-dorsum-22.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/biting-insects-35.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/acute-paronychia-7.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-10.jpg
+/225040511/Dataset/SuperDermnet/train/acne keloidalis/acne-keloidalis-39.jpg
+/225040511/Dataset/SuperDermnet/train/leprosy/Leprosy-5.jpg
+/225040511/Dataset/SuperDermnet/train/necrobiosis lipoidica/necrobiosis-lipoidica-54.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-102.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-92.jpg
+/225040511/Dataset/SuperDermnet/train/venous lake/venous-lake-1.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/grovers-disease-14.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-53.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-ears-2.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05atopicFeet0823043.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-190.jpg
+/225040511/Dataset/SuperDermnet/train/diabetes mellitus/diabetes-mellitus-3.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-99.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-adenoma-2.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-63.jpg
+/225040511/Dataset/SuperDermnet/train/eczema subacute/eczema-subacute-9.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-15.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-128.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-74.jpg
+/225040511/Dataset/SuperDermnet/train/biting excoriation/neurotic-excoriations-23.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis pustular generalized/psoriasis-pustular-generalized-64.jpg
+/225040511/Dataset/SuperDermnet/train/chilblains perniosis/chilblains-perniosis-22.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-190.jpg
+/225040511/Dataset/SuperDermnet/train/perleche/perleche-55.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-91.jpg
+/225040511/Dataset/SuperDermnet/train/chapped fissured feet/chapped-fissured-feet-21.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-189.jpg
+/225040511/Dataset/SuperDermnet/train/hidradenitis suppurativa/hidradenitis-suppurativa-9.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-leg-10.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/viral-exanthems-3.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-32.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-189.jpg
+/225040511/Dataset/SuperDermnet/train/lentigo adults/lentigo-adults-63.jpg
+/225040511/Dataset/SuperDermnet/train/corns/corns-5.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-135.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angioedema-22.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-00134.jpg
+/225040511/Dataset/SuperDermnet/train/pemphigus/pemphigus-44.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-9.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/porphyrias-31.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/nevoxanthoendothelioma-3.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-172.jpg
+/225040511/Dataset/SuperDermnet/train/eczema herpeticum/eczema-herpeticum-45.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-foot-10.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-174.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-25.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-dermoscopy-72.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-scalp-71.jpg
+/225040511/Dataset/SuperDermnet/train/phototoxic reactions/phototoxic-reactions-56.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Oral-27.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/exfoliative-dermatitis-1.jpg
+/225040511/Dataset/SuperDermnet/train/warts cryotherapy/warts-cryotherapy-27.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-digits-1.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-47.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasis lichenoides/Pityriasis-Lichenoides-19.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/viral-exanthems-68.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-105.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/grovers-disease-36.jpg
+/225040511/Dataset/SuperDermnet/train/benign familial chronic pemphigus/calcifying-epithelioma-2.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-54.jpg
+/225040511/Dataset/SuperDermnet/train/spider bite/spider-bite-27.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpetic-Whitlow-1020.jpg
+/225040511/Dataset/SuperDermnet/train/keloids/keloids-42.jpg
+/225040511/Dataset/SuperDermnet/train/lentigo adults/lentigo-maligna-28.jpg
+/225040511/Dataset/SuperDermnet/train/keratolysis exfoliativa/keratolysis-exfoliativa-50.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/stria-1.jpg
+/225040511/Dataset/SuperDermnet/train/syphilis/gonorrhea-11.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-70.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-primary-19.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/xanthomas-76.jpg
+/225040511/Dataset/SuperDermnet/train/melasma/melasma-35.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-150.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Hand-33.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/periungual-epidermal-cyst-1.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-61.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-187.jpg
+/225040511/Dataset/SuperDermnet/train/scarlet fever/scarlet-fever-2.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-27.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/tick-bite-16.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-149.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/subungual-hematoma-8.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/fibroma-8.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-19.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-96.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angiokeratomas-20.jpg
+/225040511/Dataset/SuperDermnet/train/lentigo adults/lentigo-adults-32.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05keratosisPilaris121304.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-88.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-34.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-91.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05keratosisPilaris032105.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-146.jpg
+/225040511/Dataset/SuperDermnet/train/warts/12WartNitrogen1.jpg
+/225040511/Dataset/SuperDermnet/train/schamberg disease/schamberg-disease-23.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-100.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-face-8.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-82.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-182.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/telangiectasias-32.jpg
+/225040511/Dataset/SuperDermnet/train/erythrasma/erythrasma-19.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-50.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05KeratosisPilaris0510041.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-116.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-46.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/histiocytosis.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/reiter-syndrome-14.jpg
+/225040511/Dataset/SuperDermnet/train/leprosy/Leprosy-6.jpg
+/225040511/Dataset/SuperDermnet/train/ridging beading/splinter-hemorrhage-4.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-face-51.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-face-41.jpg
+/225040511/Dataset/SuperDermnet/train/post inflammatory hyperpigmentation/05PityriasisAlba010504.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-20.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-63.jpg
+/225040511/Dataset/SuperDermnet/train/eczema herpeticum/eczema-herpeticum-6.jpg
+/225040511/Dataset/SuperDermnet/train/herpes gestationis/herpes-gestationis-15.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-42.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-acute-3.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-19.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-face-34.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-187.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-119.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-143.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-71.jpg
+/225040511/Dataset/SuperDermnet/train/melanocytic nevi/melanocytic-nevi-41.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-9.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/tufted-folliculitis-10.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-5FU-51.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-23.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-42.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/Folliculitis-13.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceousCarcinoma.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-186.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-42.jpg
+/225040511/Dataset/SuperDermnet/train/diabetes mellitus/diabetes-mellitus-14.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-97.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-12.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-199.jpg
+/225040511/Dataset/SuperDermnet/train/pretibial myxedema/lichen-myxedematosus-4.jpg
+/225040511/Dataset/SuperDermnet/train/varicella/varicella-43.jpg
+/225040511/Dataset/SuperDermnet/train/ichthosis/03Desquamation1234.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-127.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-flat-37.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/traction-alopecia-3.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-132.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-139.jpg
+/225040511/Dataset/SuperDermnet/train/erythema annulare centrifugum/erythema-annulare-centrifugum-5.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-118.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/crest-syndrome-13.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-ear-7.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-26.jpg
+/225040511/Dataset/SuperDermnet/train/candida/candida-groin-10.jpg
+/225040511/Dataset/SuperDermnet/train/erythema annulare centrifugum/erythema-annulare-centrifugum-1.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-21.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-48.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-11.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-56.jpg
+/225040511/Dataset/SuperDermnet/train/phototoxic reactions/phototoxic-reactions-25.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-11.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-200.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-156.jpg
+/225040511/Dataset/SuperDermnet/train/dry nails/pincer-nails-7.jpg
+/225040511/Dataset/SuperDermnet/train/dermagraphism/dermagraphism-23.jpg
+/225040511/Dataset/SuperDermnet/train/phototoxic reactions/phototoxic-reactions-75.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-67.jpg
+/225040511/Dataset/SuperDermnet/train/osler node/scleroderma-13.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-90.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-recurrent-74.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/chronic-paronychia-34.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-53.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/neurofibromas-14.jpg
+/225040511/Dataset/SuperDermnet/train/pseudomonas/pseudomonas-31.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-98.jpg
+/225040511/Dataset/SuperDermnet/train/koilonychia/koilonychia-13.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-157.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-15.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-171.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-comedonicus-8.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-74.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-18.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-20.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-10.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-20.jpg
+/225040511/Dataset/SuperDermnet/train/pubic lice/pubic-lice-24.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/keratosis-punctata-3.jpg
+/225040511/Dataset/SuperDermnet/train/idiopathic guttate hypomelanosis/idiopathic-guttate-hypomelanosis-12.jpg
+/225040511/Dataset/SuperDermnet/train/schamberg disease/schamberg-disease-51.jpg
+/225040511/Dataset/SuperDermnet/train/impetigo/Ecthyma-1.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-105.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-closed-comedo-5.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-64.jpg
+/225040511/Dataset/SuperDermnet/train/eczema subacute/eczema-subacute-70.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-49.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/acute-paronychia-9.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-aldara-6.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-arthritis-1.jpg
+/225040511/Dataset/SuperDermnet/train/tricholemmoma/trichotillomania-1.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-75.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-120.jpg
+/225040511/Dataset/SuperDermnet/train/hand foot mouth/hand-foot-mouth-disease-12.jpg
+/225040511/Dataset/SuperDermnet/train/black heel/black-heel-16.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-10.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-75.jpg
+/225040511/Dataset/SuperDermnet/train/warts cryotherapy/warts-cryotherapy-32.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-19.jpg
+/225040511/Dataset/SuperDermnet/train/perleche/perleche-788.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-smooth-21.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-91.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angioedema-15.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-52.jpg
+/225040511/Dataset/SuperDermnet/train/impetigo/impetigo-29.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-187.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-19.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/pseudo-porphyria-9.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitisarm/dermatofibrosarcoma-1.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-115.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-158.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-125.jpg
+/225040511/Dataset/SuperDermnet/train/ecthyma gangrenosum/pyoderma-gangrenosum-17.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-hand-dorsum-66.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/stevens-johnson-syndrome-2.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/Coral-Poisoning-1.jpg
+/225040511/Dataset/SuperDermnet/train/acne primary lesion/tinea-primary-lesion-18.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-160.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-197.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-10.jpg
+/225040511/Dataset/SuperDermnet/train/pseudomonas/pseudomonas-33.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-closed-comedo-18.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-112.jpg
+/225040511/Dataset/SuperDermnet/train/actinic cheilitis sq cell lip/actinic-cheilitis-sq-cell-lip-40.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-177.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-78.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-106.jpg
+/225040511/Dataset/SuperDermnet/train/acne histology/eczema-histology-2.jpg
+/225040511/Dataset/SuperDermnet/train/porokeratosis/porokeratosis-59.jpg
+/225040511/Dataset/SuperDermnet/train/porokeratosis/porokeratosis-72.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-141.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-65.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-27.jpg
+/225040511/Dataset/SuperDermnet/train/neurofibromatosis/neurofibromatosis-35.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-treatment-6.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-53.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-127.jpg
+/225040511/Dataset/SuperDermnet/train/pemphigus foliaceous/pemphigus-foliaceous-13.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-webs-2.jpg
+/225040511/Dataset/SuperDermnet/train/varicella/varicella-19.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-recurrent-26.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-91.jpg
+/225040511/Dataset/SuperDermnet/train/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-25.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-96.jpg
+/225040511/Dataset/SuperDermnet/train/actinic cheilitis sq cell lip/actinic-cheilitis-sq-cell-lip-19.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-86.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-137.jpg
+/225040511/Dataset/SuperDermnet/train/dyshidrosis/Dyshidrosis-26.jpg
+/225040511/Dataset/SuperDermnet/train/granulation tissue/granulation-tissue-26.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-83.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-ear-36.jpg
+/225040511/Dataset/SuperDermnet/train/erythema ab igne/erythema-infectiosum-21.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-aldara-2.jpg
+/225040511/Dataset/SuperDermnet/train/hyperkeratosis/hyperkeratosis-3.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-54.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-40.jpg
+/225040511/Dataset/SuperDermnet/train/pubic lice/pubic-lice-48.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-39.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-86.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-180.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-nose-54.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-face-34.jpg
+/225040511/Dataset/SuperDermnet/train/lymphosarcoma/kaposi-sarcoma-35.jpg
+/225040511/Dataset/SuperDermnet/train/acne keloidalis/acne-keloidalis-18.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-20.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/temporal-arteritis-1.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/pseudo-porphyria-4.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis mouth/candidiasis-diaper-27.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-176.jpg
+/225040511/Dataset/SuperDermnet/train/erythema ab igne/erythema-infectiosum-34.jpg
+/225040511/Dataset/SuperDermnet/train/morphea/morphea-78.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-foot-26.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-153.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-9.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-digitate-7.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-8.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-plantar-15.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-9.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-166.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-189.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-110.jpg
+/225040511/Dataset/SuperDermnet/train/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-28.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-106.jpg
+/225040511/Dataset/SuperDermnet/train/pubic lice/pubic-lice-2.jpg
+/225040511/Dataset/SuperDermnet/train/tuberous sclerosis/tuberous-sclerosis-2.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/tick-bite-29.jpg
+/225040511/Dataset/SuperDermnet/train/tineaincognito/tinea-incognito-17.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-80.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/grovers-disease-44.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-122.jpg
+/225040511/Dataset/SuperDermnet/train/porokeratosis/porokeratosis-60.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-nails-13.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/milroy-disease-1.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-86.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-121.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-61.jpg
+/225040511/Dataset/SuperDermnet/train/milia/milia-19.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-24.jpg
+/225040511/Dataset/SuperDermnet/train/osler node/scleroderma-4.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-186.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-19.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-38.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-62.jpg
+/225040511/Dataset/SuperDermnet/train/prurigo nodularis/prurigo-nodularis-6.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis pustular generalized/psoriasis-pustular-generalized-26.jpg
+/225040511/Dataset/SuperDermnet/train/xanthogranuloma/pyogenic-granuloma-22.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/08OilSpotPsoriasis1027.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-67.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-83.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-13.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-155.jpg
+/225040511/Dataset/SuperDermnet/train/eczema herpeticum/eczema-herpeticum-57.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-167.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-sebaceous-7.jpg
+/225040511/Dataset/SuperDermnet/train/post inflammatory hyperpigmentation/maculae-cerulea-3.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-65.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-asteatotic-22.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/dermatosis-papulosa-nigra-8.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-31.jpg
+/225040511/Dataset/SuperDermnet/train/dry nails/terry-nails-1.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-16.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-32.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-10.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-recurrent-48.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitisarm/rhus-dermatitis-53.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/tick-bite-27.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-85.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-4.jpg
+/225040511/Dataset/SuperDermnet/train/epidermolysis bullosa/epidermolysis-bullosa-58.jpg
+/225040511/Dataset/SuperDermnet/train/acne infantile/acne-infantile-2.jpg
+/225040511/Dataset/SuperDermnet/train/pseudomonas/pseudomonas-32.jpg
+/225040511/Dataset/SuperDermnet/train/congenital nevus/accessory-nipple-1.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-14.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-172.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-16.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-122.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onycholysis-55.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-154.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Penis-24.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05atopicDerm040405ok.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-197.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onycholysis-65.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lid-17.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-82.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-25.jpg
+/225040511/Dataset/SuperDermnet/train/sebkerm/08sebdermFace1222069.jpg
+/225040511/Dataset/SuperDermnet/train/hyperkeratosis/hyperkeratosis-6.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-35.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05KeratosisPilaris0510048.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-67.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05AtopicPop1.jpg
+/225040511/Dataset/SuperDermnet/train/actinic cheilitis sq cell lip/actinic-cheilitis-sq-cell-lip-43.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-28.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-88.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-144.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-12.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-89.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-146.jpg
+/225040511/Dataset/SuperDermnet/train/pretibial myxedema/pretibial-myxedema-21.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-54.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-2.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-4.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-leg-18.jpg
+/225040511/Dataset/SuperDermnet/train/pubic lice/pubic-lice-52.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-50.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-46.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-83.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Penis-9.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-31.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-106.jpg
+/225040511/Dataset/SuperDermnet/train/stucco keratoses/stucco-keratoses-61.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-39.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-12.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-12.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-sebaceous-50.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-webs-18.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/trauma-4.jpg
+/225040511/Dataset/SuperDermnet/train/acne keloidalis/acne-keloidalis-13.jpg
+/225040511/Dataset/SuperDermnet/train/post inflammatory hyperpigmentation/05PityriasisAlba041204.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/Folliculitis-3.jpg
+/225040511/Dataset/SuperDermnet/train/erysipelas/Erysipelas-9.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-11.jpg
+/225040511/Dataset/SuperDermnet/train/acne histology/Psoriasis-Histology-23.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05Atopic0712047.jpg
+/225040511/Dataset/SuperDermnet/train/warts cryotherapy/nails-chemotherapy.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-asteatotic-11.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/porphyrias-42.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-189.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/genital-herpes-simplex-3.jpg
+/225040511/Dataset/SuperDermnet/train/koilonychia/koilonychia-3.jpg
+/225040511/Dataset/SuperDermnet/train/chondrodermatitis nodularis/chondrodermatitis-nodularis-2.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-60.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/dariers-disease-15.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-primary-13.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-closed-comedo-26.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/hemangioma-15.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-97.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-48.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-18.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/granular-cell-tumor-2.jpg
+/225040511/Dataset/SuperDermnet/train/eczema herpeticum/eczema-herpeticum-35.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-16.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-45.jpg
+/225040511/Dataset/SuperDermnet/train/enterovirus/enterovirus-26.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-48.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-100.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-open-comedo-57.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-52.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-112.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-30.jpg
+/225040511/Dataset/SuperDermnet/train/lentigo adults/lentigo-adults-25.jpg
+/225040511/Dataset/SuperDermnet/train/melanocytic nevi/blue-nevus-ota-9.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-pigmented-32.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-29.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-20.jpg
+/225040511/Dataset/SuperDermnet/train/eczema trunk generalized/eczema-trunk-generalized-17.jpg
+/225040511/Dataset/SuperDermnet/train/erythema nodosum/erythema-nodosum-6.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-nose-10.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-recurrent-90.jpg
+/225040511/Dataset/SuperDermnet/train/actinic cheilitis sq cell lip/melkersson-rosenthal-1.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-155.jpg
+/225040511/Dataset/SuperDermnet/train/xanthogranuloma/majocchi-granuloma-10.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-44.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-scalp-72.jpg
+/225040511/Dataset/SuperDermnet/train/vitiligo/vitiligo-37.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-15.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/contact-airborne-2.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis pustular generalized/psoriasis-pustular-generalized-9.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-105.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-9.jpg
+/225040511/Dataset/SuperDermnet/train/tineaincognito/tinea-incognito-9.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-9.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/Leser-Trelat-3.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-119.jpg
+/225040511/Dataset/SuperDermnet/train/koilonychia/koilonychia-16.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Palm-Soles-11.jpg
+/225040511/Dataset/SuperDermnet/train/lupus acute/lupus-acute-45.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-digitate-26.jpg
+/225040511/Dataset/SuperDermnet/train/vitiligo/albinism-9.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-52.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angioedema-26.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/caterpillar-dermatitis-6.jpg
+/225040511/Dataset/SuperDermnet/train/lymphosarcoma/kaposi-sarcoma-24.jpg
+/225040511/Dataset/SuperDermnet/train/dry nails/pincer-nails-16.jpg
+/225040511/Dataset/SuperDermnet/train/melanoma mimic/melanoma-mimic-21.jpg
+/225040511/Dataset/SuperDermnet/train/androgenic alopecia men/androgenic-alopecia-women-2.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-111.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-20.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-126.jpg
+/225040511/Dataset/SuperDermnet/train/epidermolysis bullosa/epidermolysis-bullosa-9.jpg
+/225040511/Dataset/SuperDermnet/train/pretibial myxedema/lichen-myxedematosus-3.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onycholysis-39.jpg
+/225040511/Dataset/SuperDermnet/train/pseudomonas/pseudomonas-8.jpg
+/225040511/Dataset/SuperDermnet/train/perleche/perleche-12.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-109.jpg
+/225040511/Dataset/SuperDermnet/train/porokeratosis/follicular-mucinosis-5.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/tufted-folliculitis-1.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-123.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-2.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-face-42.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/12wartCommon040306.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/beaus-lines-10.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-168.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05keratosisPilaris041904.jpg
+/225040511/Dataset/SuperDermnet/train/furuncles carbuncles/Furuncles-Carbuncles-8.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-sebaceous-20.jpg
+/225040511/Dataset/SuperDermnet/train/urticaria vasculitis/hives-Urticaria-Acute-70.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-196.jpg
+/225040511/Dataset/SuperDermnet/train/halo nevus/halo-nevus-32.jpg
+/225040511/Dataset/SuperDermnet/train/necrobiosis lipoidica/necrobiosis-lipoidica-11.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-14.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-94.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-174.jpg
+/225040511/Dataset/SuperDermnet/train/acanthosis nigricans/acanthosis-nigricans-43.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-47.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/proximal-subungual-onychomycosis-7.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-132.jpg
+/225040511/Dataset/SuperDermnet/train/milia/milia-17.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-29.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/Cellulitis-15.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Trunk-0525041.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/acute-paronychia-16.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-85.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-face-30.jpg
+/225040511/Dataset/SuperDermnet/train/morphea/morphea-111.jpg
+/225040511/Dataset/SuperDermnet/train/myiasis/myiasis-14.jpg
+/225040511/Dataset/SuperDermnet/train/scarlet fever/scarlet-fever-23.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05Atopic12060415.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/white-superficial-onychomycosis-1.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-168.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-46.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-10.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/20seborrheicKeratosisCrop.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-72.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-hand-dorsum-35.jpg
+/225040511/Dataset/SuperDermnet/train/clubbing/clubbing-1.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-19.jpg
+/225040511/Dataset/SuperDermnet/train/dyshidrosis/Dyshidrosis-34.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/pinkus-tumor-3.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lid-31.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-186.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-167.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis mouth/candidiasis-mouth-10.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-121.jpg
+/225040511/Dataset/SuperDermnet/train/lupus acute/lupus-subacute-1.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-157.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-111.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-17.jpg
+/225040511/Dataset/SuperDermnet/train/vitiligo/albinism-10.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-29.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-horn-17.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-foot-20.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-163.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-132.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05atopicFoot050806.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-96.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-flat-30.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/dermatosis-papulosa-nigra-1.jpg
+/225040511/Dataset/SuperDermnet/train/congenital nevus/congenital-anomalies-4.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-99.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-16.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-nose-33.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-10.jpg
+/225040511/Dataset/SuperDermnet/train/biting excoriation/neurotic-excoriations-20.jpg
+/225040511/Dataset/SuperDermnet/train/median nail dystrophy/median-nail-dystrophy-13.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-114.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-scalp-54.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-hand-33.jpg
+/225040511/Dataset/SuperDermnet/train/eczema trunk generalized/eczema-trunk-generalized-26.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitisarm/dermatomyositis-59.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-122.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-18.jpg
+/225040511/Dataset/SuperDermnet/train/post inflammatory hyperpigmentation/minocycline-pigmentation-12.jpg
+/225040511/Dataset/SuperDermnet/train/lupus chronic cutaneous/lupus-chronic-cutaneous-16.jpg
+/225040511/Dataset/SuperDermnet/train/leprosy/Leprosy-1.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-46.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-face-65.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-67.jpg
+/225040511/Dataset/SuperDermnet/train/hand foot mouth/hand-foot-mouth-disease-4.jpg
+/225040511/Dataset/SuperDermnet/train/halo nevus/halo-nevus-11.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-180.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-42.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-121.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-42.jpg
+/225040511/Dataset/SuperDermnet/train/ridging beading/pigmented-bands-6.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-106.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/08lichenPlanusTongue112205.jpg
+/225040511/Dataset/SuperDermnet/train/biting excoriation/biting-excoriation-12.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-29.jpg
+/225040511/Dataset/SuperDermnet/train/dry nails/dry-nails-1.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasis lichenoides/Pityriasis-Lichenoides-50.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-arm-2.jpg
+/225040511/Dataset/SuperDermnet/train/puppp/PUPPP-3.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/09EczemaInfected062804.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-aldara-1.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-35.jpg
+/225040511/Dataset/SuperDermnet/train/herpes gestationis/herpes-gestationis-6.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-border-4.jpg
+/225040511/Dataset/SuperDermnet/train/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-19.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-face-15.jpg
+/225040511/Dataset/SuperDermnet/train/keloids/keloids-9.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05AtopicDerm0419044.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-47.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-161.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-penis-3.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-scalp-106.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lid-27.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-asteatotic-30.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/telangiectasias-8.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-areola-4.jpg
+/225040511/Dataset/SuperDermnet/train/syphilis/syphilis-5.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-41.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-169.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-closed-comedo-15.jpg
+/225040511/Dataset/SuperDermnet/train/acne excoriated/acne-excoriated-3.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-155.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-170.jpg
+/225040511/Dataset/SuperDermnet/train/erythrasma/erythrasma-3.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/dariers-disease-65.jpg
+/225040511/Dataset/SuperDermnet/train/acanthosis nigricans/acanthosis-nigricans-29.jpg
+/225040511/Dataset/SuperDermnet/train/warts cryotherapy/warts-cryotherapy-19.jpg
+/225040511/Dataset/SuperDermnet/train/phototoxic reactions/phototoxic-reactions-115.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-dorsum-59.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-28.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/Psoriasis-Light-Sensative-6.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-132.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/Staphylococcal-Folliculitis-16.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-54.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-82.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-188.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-ear-13.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/telangiectasias-31.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-22.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/emersion-foot-2.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onycholysis-54.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-80.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/porphyrias-30.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-face-1.jpg
+/225040511/Dataset/SuperDermnet/train/biting excoriation/biting-excoriation-20.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-ear-20.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/crest-syndrome-43.jpg
+/225040511/Dataset/SuperDermnet/train/acne primary lesion/tinea-primary-lesion-63.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-30.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-smooth-113.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05keratosisPilaris0508062.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-29.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-168.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/reiter-syndrome-2.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitisarm/dermatomyositis-40.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-infant-5.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angiokeratomas-8.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-8.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-47.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-194.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-9.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-123.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/Streptococci-Anal-Penis-6.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-21.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-87.jpg
+/225040511/Dataset/SuperDermnet/train/neurofibromatosis/neurofibromatosis-62.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-178.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-101.jpg
+/225040511/Dataset/SuperDermnet/train/myiasis/amyloidosis-29.jpg
+/225040511/Dataset/SuperDermnet/train/lupus chronic cutaneous/lupus-chronic-cutaneous-37.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/trauma-27.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/13tineaCorporis0609011.jpg
+/225040511/Dataset/SuperDermnet/train/warts periungual/warts-periungual-5.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-lesion-14.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-119.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-107.jpg
+/225040511/Dataset/SuperDermnet/train/acanthosis nigricans/acanthosis-nigricans-65.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-95.jpg
+/225040511/Dataset/SuperDermnet/train/lymphosarcoma/kaposi-sarcoma-29.jpg
+/225040511/Dataset/SuperDermnet/train/acne histology/acne-histology-3.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-47.jpg
+/225040511/Dataset/SuperDermnet/train/actinic cheilitis sq cell lip/erythroplasia-queyrat-5.jpg
+/225040511/Dataset/SuperDermnet/train/porokeratosis/porokeratosis-43.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-steroid-8.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/neurofibromas-4.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-164.jpg
+/225040511/Dataset/SuperDermnet/train/urticaria vasculitis/hives-Urticaria-Acute-47.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-nose-11.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-plantar-23.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-horn-2.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/dariers-disease-39.jpg
+/225040511/Dataset/SuperDermnet/train/cylindroma/cylindroma-11.jpg
+/225040511/Dataset/SuperDermnet/train/duck itch/duck-itch-2.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/pseudo-porphyria-5.jpg
+/225040511/Dataset/SuperDermnet/train/porokeratosis/porokeratosis-48.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/perioral-dermatitis-54.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-111.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Hand-37.jpg
+/225040511/Dataset/SuperDermnet/train/cutaneous larva migrans/cutaneous-Larva-Migrans-46.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-48.jpg
+/225040511/Dataset/SuperDermnet/train/warts oral/warts-mouth-4.jpg
+/225040511/Dataset/SuperDermnet/train/perleche/perleche-11.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-12.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-123.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-inversus-28.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-dorsum-51.jpg
+/225040511/Dataset/SuperDermnet/train/acne infantile/acne-infantile-13.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis mouth/candidiasis-vaginal-3.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-dorsum-5.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/Staphylococcal-Folliculitis-17.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-93.jpg
+/225040511/Dataset/SuperDermnet/train/metastasis/metastasis-18.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-109.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-107.jpg
+/225040511/Dataset/SuperDermnet/train/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-20.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-40.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-27.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-178.jpg
+/225040511/Dataset/SuperDermnet/train/epidermolysis bullosa/epidermolysis-bullosa-20.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-ear-3.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-18.jpg
+/225040511/Dataset/SuperDermnet/train/pearly penile papules/pearly-penile-papules-2.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-103.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/cement-dermatitis-burns-2.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05keratosisPilaris0830041.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-14.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Penis-6.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/26Fibrofolliculoma0906042.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-146.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-recurrent-30.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/chronic-paronychia-2.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-91.jpg
+/225040511/Dataset/SuperDermnet/train/paget disease breast/paget-disease-breast-14.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-digitate-17.jpg
+/225040511/Dataset/SuperDermnet/train/erosio interdigitalis blastomycetica/erosio-interdigitalis-blastomycetica-34.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/Lichen-Nitidus-2.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-52.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-129.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-palm-14.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-151.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-8.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-158.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/Eruptive-Xanthoma-7.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-191.jpg
+/225040511/Dataset/SuperDermnet/train/polymorphous light eruption/polymorphous-light-eruption-11.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-26.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-nail-24.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/cowden-disease-4.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-22.jpg
+/225040511/Dataset/SuperDermnet/train/ridging beading/ridging-beading-19.jpg
+/225040511/Dataset/SuperDermnet/train/osler node/scleroderma-12.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-114.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-79.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Hypertrophic-2.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-laboratory-39.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-180.jpg
+/225040511/Dataset/SuperDermnet/train/myiasis/amyloidosis-20.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-165.jpg
+/225040511/Dataset/SuperDermnet/train/venous lake/venous-lake-8.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-192.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-47.jpg
+/225040511/Dataset/SuperDermnet/train/stucco keratoses/stucco-keratoses-9.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-171.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-hand-29.jpg
+/225040511/Dataset/SuperDermnet/train/warts immunocompromised/warts-immunocompromised-2.jpg
+/225040511/Dataset/SuperDermnet/train/lentigo adults/lentigo-adults-75.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-87.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-69.jpg
+/225040511/Dataset/SuperDermnet/train/duck itch/duck-itch-11.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-penis-21.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/biting-insects-58.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-44.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-face-50.jpg
+/225040511/Dataset/SuperDermnet/train/folliculitis decalvans/HotTubIMG001-GP3.jpg
+/225040511/Dataset/SuperDermnet/train/vitiligo/albinism-5.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-84.jpg
+/225040511/Dataset/SuperDermnet/train/lupus chronic cutaneous/lupus-chronic-cutaneous-4.jpg
+/225040511/Dataset/SuperDermnet/train/granulation tissue/granulation-tissue-28.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-9.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-148.jpg
+/225040511/Dataset/SuperDermnet/train/necrobiosis lipoidica/necrobiosis-lipoidica-17.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-lip-25.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-58.jpg
+/225040511/Dataset/SuperDermnet/train/melasma/melasma-41.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-164.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-smooth-72.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-94.jpg
+/225040511/Dataset/SuperDermnet/train/prurigo nodularis/prurigo-nodularis-53.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-7.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-10.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-12.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/Pseudomonas-Folliculitis-8.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-44.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-14.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05Atopic0322044.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/biting-insects-5.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/rocky-mountain-spotted-fever-1.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/becker-nevus-31.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-37.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-186.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onychogryphosis-7.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-125.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-184.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-96.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-recurrent-32.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/07PerioralSteroid1.jpg
+/225040511/Dataset/SuperDermnet/train/boxmiscimg gp/IchthosisIMG015-GP3.jpg
+/225040511/Dataset/SuperDermnet/train/necrobiosis lipoidica/necrobiosis-lipoidica-10.jpg
+/225040511/Dataset/SuperDermnet/train/median nail dystrophy/median-nail-dystrophy-30.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-182.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-58.jpg
+/225040511/Dataset/SuperDermnet/train/pompholyx/pompholyx-20.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/crest-syndrome-37.jpg
+/225040511/Dataset/SuperDermnet/train/warts/warts-36.jpg
+/225040511/Dataset/SuperDermnet/train/lentigo adults/lentigo-adults-27.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-97.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-88.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-superficial-53.jpg
+/225040511/Dataset/SuperDermnet/train/folliculitis decalvans/folliculitis-decalvans-11.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-13.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/07RosaceaK02163.jpg
+/225040511/Dataset/SuperDermnet/train/dermagraphism/dermagraphism-4.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-ear-6.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-62.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-92.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-169.jpg
+/225040511/Dataset/SuperDermnet/train/schamberg disease/schamberg-disease-65.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-164.jpg
+/225040511/Dataset/SuperDermnet/train/keratolysis exfoliativa/keratolysis-exfoliativa-8.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-138.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-spilus-6.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-158.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-foot-99.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-treatment-2.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-palm-49.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasisintertrig/psoriasis-erythrodermic-24.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/telangiectasias-1.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-69.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-190.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-82.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-92.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-88.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/erythema-dyschromium-perstans-5.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-ear-29.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-17.jpg
+/225040511/Dataset/SuperDermnet/train/erythema nodosum/erythema-nodosum-8.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-17.jpg
+/225040511/Dataset/SuperDermnet/train/chondrodermatitis nodularis/chondrodermatitis-nodularis-25.jpg
+/225040511/Dataset/SuperDermnet/train/hemangioma infancy/hemangioma-infancy-29.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-66.jpg
+/225040511/Dataset/SuperDermnet/train/acne infantile/acne-infantile-12.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Penis-2.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-1.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/nevoxanthoendothelioma-9.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-pigmented-2.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis pustular generalized/psoriasis-pustular-generalized-32.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/Staphylococcal-Folliculitis-19.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-3.jpg
+/225040511/Dataset/SuperDermnet/train/lymphosarcoma/kaposi-sarcoma-9.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-23.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lid-30.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-94.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-closed-comedo-32.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-85.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-1.jpg
+/225040511/Dataset/SuperDermnet/train/pompholyx/pompholyx-18.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/telangiectasias-44.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-44.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-hand-19.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-14.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-nail-13.jpg
+/225040511/Dataset/SuperDermnet/train/urticaria vasculitis/hives-Urticaria-Acute-68.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-147.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-30.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-8.jpg
+/225040511/Dataset/SuperDermnet/train/atypical mycobacterium/atypical-mycobacterium-7.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-59.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/fire-ants-118.jpg
+/225040511/Dataset/SuperDermnet/train/chilblains perniosis/chilblains-perniosis-15.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-4.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-122.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-penis-14.jpg
+/225040511/Dataset/SuperDermnet/train/dermagraphism/dermagraphism-9.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-22.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-17.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-95.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-areola-6.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-43.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-primary-55.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-89.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-palm-34.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitisarm/dermatomyositis-6.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-21.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-130.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-114.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/letterer-siwe-4.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-32.jpg
+/225040511/Dataset/SuperDermnet/train/acne keloidalis/acne-keloidalis-55.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/crest-syndrome-30.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-12.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-nose-42.jpg
+/225040511/Dataset/SuperDermnet/train/gianotti crosti/gianotti-crosti-10.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-94.jpg
+/225040511/Dataset/SuperDermnet/train/xanthogranuloma/pyogenic-granuloma-67.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-64.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-168.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-buttocks-14.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-leg-12.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-lichenoid-eruption-5.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onycholysis-16.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/vascular-anomaly-5.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05Atopic121503.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-89.jpg
+/225040511/Dataset/SuperDermnet/train/tuberous sclerosis/tuberous-sclerosis-49.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-7.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-96.jpg
+/225040511/Dataset/SuperDermnet/train/warts periungual/warts-periungual-10.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-asteatotic-44.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/trauma-153.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-192.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/AtopicIMG005-GP3.jpg
+/225040511/Dataset/SuperDermnet/train/interstitial granulomatous dermatitis/interstitial-granulomatous-dermatitis-6.jpg
+/225040511/Dataset/SuperDermnet/train/dyshidrosis/Dyshidrosis-36.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-116.jpg
+/225040511/Dataset/SuperDermnet/train/mucous cyst/mucous-cyst-62.jpg
+/225040511/Dataset/SuperDermnet/train/anal comedones/actinic-comedones-11.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-flat-40.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-18.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-162.jpg
+/225040511/Dataset/SuperDermnet/train/wartperiungual/12WartPeriungual.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/xanthomas-59.jpg
+/225040511/Dataset/SuperDermnet/train/tricholemmoma/trichotillomania-9.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-102.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/tick-bite-8.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-16.jpg
+/225040511/Dataset/SuperDermnet/train/keratolysis exfoliativa/keratolysis-exfoliativa-12.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-83.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-133.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-80.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-plantar-22.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-96.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-44.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-42.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-104.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Penis-5.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/xanthomas-77.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-168.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-laboratory-19.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-83.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-89.jpg
+/225040511/Dataset/SuperDermnet/train/neurofibromatosis/neurofibromatosis-27.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/poikiloderma-civatte-7.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-17.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-45.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-104.jpg
+/225040511/Dataset/SuperDermnet/train/trauma/subungual-hematoma-5.jpg
+/225040511/Dataset/SuperDermnet/train/schamberg disease/schamberg-disease-16.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-125.jpg
+/225040511/Dataset/SuperDermnet/train/lymphangioma circumscriptum/lymphangioma-circumscriptum-1.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-face-40.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-122.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/stevens-johnson-syndrome-9.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-112.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-17.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-dorsum-40.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-75.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-70.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-23.jpg
+/225040511/Dataset/SuperDermnet/train/dissecting cellulitis/Pseudomonas-Cellulitis-22.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-webs-65.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05atopicFeet0709052.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-1.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-100.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis mouth/candidiasis-diaper-29.jpg
+/225040511/Dataset/SuperDermnet/train/henoch schonlein purpura/henoch-schonlein-purpura-3.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-granulomatous-1.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-69.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-5.jpg
+/225040511/Dataset/SuperDermnet/train/xanthogranuloma/pyogenic-granuloma-73.jpg
+/225040511/Dataset/SuperDermnet/train/acne primary lesion/tinea-primary-lesion-46.jpg
+/225040511/Dataset/SuperDermnet/train/acne primary lesion/tinea-primary-lesion-11.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-102.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-99.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-176.jpg
+/225040511/Dataset/SuperDermnet/train/keratosispilaris/05KeratosisPilaris0510043.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-179.jpg
+/225040511/Dataset/SuperDermnet/train/impetigo/impetigo-33.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-nail-17.jpg
+/225040511/Dataset/SuperDermnet/train/xanthogranuloma/pyogenic-granuloma-91.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-123.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-99.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-47.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/Staphylococcal-Folliculitis-4.jpg
+/225040511/Dataset/SuperDermnet/train/tufted folliculitis/Staphylococcal-Folliculitis-7.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/macular-atrophy-4.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-pigmented-3.jpg
+/225040511/Dataset/SuperDermnet/train/acne keloidalis/acne-keloidalis-35.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-115.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-119.jpg
+/225040511/Dataset/SuperDermnet/train/chilblains perniosis/chilblains-perniosis-25.jpg
+/225040511/Dataset/SuperDermnet/train/necrobiosis lipoidica/necrobiosis-lipoidica-67.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-palms-soles-108.jpg
+/225040511/Dataset/SuperDermnet/train/sebkerm/08sebKerm1122046.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/vasculitis-100.jpg
+/225040511/Dataset/SuperDermnet/train/acne keloidalis/acne-keloidalis-23.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitisarm/rhus-dermatitis-43.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-flat-45.jpg
+/225040511/Dataset/SuperDermnet/train/acne cystic/acne-cystic-38.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-49.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-77.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/flea-bites-8.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-face-31.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-scalp-77.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-flat-57.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-71.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lid-34.jpg
+/225040511/Dataset/SuperDermnet/train/venous lake/venous-lake-23.jpg
+/225040511/Dataset/SuperDermnet/train/erythema ab igne/erythema-ab-igne-8.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/localized-pemphigoid-3.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-lesion-1.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-14.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-85.jpg
+/225040511/Dataset/SuperDermnet/train/tineaincognito/tinea-incognito-23.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-primary-38.jpg
+/225040511/Dataset/SuperDermnet/train/ichthosis/05icthyosis0124053.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/Cellulitis-11.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-20.jpg
+/225040511/Dataset/SuperDermnet/train/ichthosis/desquamation-6.jpg
+/225040511/Dataset/SuperDermnet/train/degos disease/dariers-disease-57.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-72.jpg
+/225040511/Dataset/SuperDermnet/train/patch testing/patch-testing-37.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-scalp-11.jpg
+/225040511/Dataset/SuperDermnet/train/erythrasma/erythrasma-6.jpg
+/225040511/Dataset/SuperDermnet/train/warts periungual/warts-periungual-21.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/becker-nevus-30.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-steroid-6.jpg
+/225040511/Dataset/SuperDermnet/train/corns/corns-19.jpg
+/225040511/Dataset/SuperDermnet/train/hemangioma infancy/hemangioma-infancy-12.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-hand-arm-1.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-trunk-16.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-177.jpg
+/225040511/Dataset/SuperDermnet/train/lupus chronic cutaneous/lupus-chronic-cutaneous-124.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/hemangioma-29.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-113.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-117.jpg
+/225040511/Dataset/SuperDermnet/train/pemphigus/pemphigus-42.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-7.jpg
+/225040511/Dataset/SuperDermnet/train/cold urticaria/cholinergic-uriticaria-11.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-foot-plantar-54.jpg
+/225040511/Dataset/SuperDermnet/train/acanthosis nigricans/acanthosis-nigricans-60.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/livido-reticularis-8.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-8.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosis-Vulva-10.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-superficial-48.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/porphyrias-48.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/white-superficial-onychomycosis-2.jpg
+/225040511/Dataset/SuperDermnet/train/corns/corns-3.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/proximal-subungual-onychomycosis-3.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-119.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-38.jpg
+/225040511/Dataset/SuperDermnet/train/neurofibromatosis/neurofibromatosis-19.jpg
+/225040511/Dataset/SuperDermnet/train/venous lake/venous-lake-34.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-104.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-open-comedo-2.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-34.jpg
+/225040511/Dataset/SuperDermnet/train/onycholysis/onycholysis-1.jpg
+/225040511/Dataset/SuperDermnet/train/furuncles carbuncles/Furuncles-Carbuncles-12.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-laboratory-16.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-lesion-22.jpg
+/225040511/Dataset/SuperDermnet/train/gianotti crosti/gianotti-crosti-6.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-2.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/scabies-147.jpg
+/225040511/Dataset/SuperDermnet/train/acne infantile/acne-infantile-5.jpg
+/225040511/Dataset/SuperDermnet/train/perleche/perleche-52.jpg
+/225040511/Dataset/SuperDermnet/train/erythema nodosum/erythema-nodosum-44.jpg
+/225040511/Dataset/SuperDermnet/train/congenital nevus/congenital-nevus-6.jpg
+/225040511/Dataset/SuperDermnet/train/chapped fissured feet/chapped-fissured-feet-4.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-67.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-superficial-31.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Hand-45.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/meningococcemia-6.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-recurrent-87.jpg
+/225040511/Dataset/SuperDermnet/train/scabies/flea-bites-14.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-32.jpg
+/225040511/Dataset/SuperDermnet/train/hemangioma infancy/hemangioma-infancy-52.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-20.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-86.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasisintertrig/psoriasis-erythrodermic-9.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-153.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/grovers-disease-50.jpg
+/225040511/Dataset/SuperDermnet/train/paget disease breast/extramammary-paget-disease-1.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-12.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-sebaceous-40.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-50.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-horn-10.jpg
+/225040511/Dataset/SuperDermnet/train/wartperiungual/periungual-warts-4.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-recurrent-23.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-152.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-buttocks-27.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-152.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-pigmented-43.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-133.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-184.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-87.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-78.jpg
+/225040511/Dataset/SuperDermnet/train/acne primary lesion/tinea-primary-lesion-28.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-26.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-recurrent-33.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-123.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/genital-herpes-simplex-1.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Oral-25.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-116.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planopilaris-1.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-21.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-89.jpg
+/225040511/Dataset/SuperDermnet/train/pompholyx/pompholyx-4.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-96.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-179.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-113.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/grovers-disease-60.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasis lichenoides/Pityriasis-Lichenoides-38.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-2.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05Atopic03290445.jpg
+/225040511/Dataset/SuperDermnet/train/stucco keratoses/stucco-keratoses-58.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-body-130.jpg
+/225040511/Dataset/SuperDermnet/train/pemphigus/pemphigus-31.jpg
+/225040511/Dataset/SuperDermnet/train/candida/Balanitis-Bacterial-4.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-ear-11.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rubra-pilaris-15.jpg
+/225040511/Dataset/SuperDermnet/train/dermagraphism/dermagraphism-24.jpg
+/225040511/Dataset/SuperDermnet/train/warts/bowenoid-papulosis-3.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-sebaceous-63.jpg
+/225040511/Dataset/SuperDermnet/train/eczema subacute/eczema-subacute-38.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-2.jpg
+/225040511/Dataset/SuperDermnet/train/impetigo/impetigo-11.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-82.jpg
+/225040511/Dataset/SuperDermnet/train/eczema trunk generalized/eczema-trunk-generalized-11.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-buttocks-20.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-dermoscopy-60.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-27.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-199.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-18.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-50.jpg
+/225040511/Dataset/SuperDermnet/train/telangiectasias/erythromelalgia-5.jpg
+/225040511/Dataset/SuperDermnet/train/melanocytic nevi/melanocytic-nevi-8.jpg
+/225040511/Dataset/SuperDermnet/train/pubic lice/pubic-lice-33.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-120.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-lesion-8.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-46.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-95.jpg
+/225040511/Dataset/SuperDermnet/train/hidradenitis suppurativa/hidradenitis-suppurativa-37.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/pellagra-3.jpg
+/225040511/Dataset/SuperDermnet/train/benign familial chronic pemphigus/benign-familial-chronic-pemphigus-9.jpg
+/225040511/Dataset/SuperDermnet/train/melanocytic nevi/melanotic-macule-11.jpg
+/225040511/Dataset/SuperDermnet/train/eczema areola/eczema-areola-12.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-23.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-38.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-111.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-24.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-127.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/xanthomas-72.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-51.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-162.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/becker-nevus-3.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-52.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-85.jpg
+/225040511/Dataset/SuperDermnet/train/crest syndrome/crest-syndrome-18.jpg
+/225040511/Dataset/SuperDermnet/train/pompholyx/pompholyx-8.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-2.jpg
+/225040511/Dataset/SuperDermnet/train/xanthogranuloma/pyogenic-granuloma-90.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-nose-63.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-17.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-primary-9.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/viral-exanthems-6.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-digitate-41.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-palm-35.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-ear-1.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-182.jpg
+/225040511/Dataset/SuperDermnet/train/xanthomas/xanthomas-71.jpg
+/225040511/Dataset/SuperDermnet/train/tinea foot webs/tinea-hand-dorsum-32.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasis lichenoides/Pityriasis-Lichenoides-11.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-lids-10.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Drug-15.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angiokeratomas-23.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-hand-30.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-87.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/metal-dermatitis-6.jpg
+/225040511/Dataset/SuperDermnet/train/necrobiosis lipoidica/necrobiosis-lipoidica-57.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasisintertrig/psoriasis-erythrodermic-25.jpg
+/225040511/Dataset/SuperDermnet/train/pseudomonas/pseudomonas-20.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-digitate-20.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-28.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-182.jpg
+/225040511/Dataset/SuperDermnet/train/eczema fingertips/eczema-fingertips-94.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-13.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-88.jpg
+/225040511/Dataset/SuperDermnet/train/bullous pemphigoid/bullous-pemphigoid-35.jpg
+/225040511/Dataset/SuperDermnet/train/ctcl/ctcl-120.jpg
+/225040511/Dataset/SuperDermnet/train/atypical nevi/atypical-nevi-trunk-19.jpg
+/225040511/Dataset/SuperDermnet/train/granulation tissue/granulation-tissue-32.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-ear-31.jpg
+/225040511/Dataset/SuperDermnet/train/cutaneous larva migrans/cutaneous-Larva-Migrans-5.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-114.jpg
+/225040511/Dataset/SuperDermnet/train/skin tags polyps/skin-tags-polyps-67.jpg
+/225040511/Dataset/SuperDermnet/train/prurigo nodularis/prurigo-nodularis-3.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/drug-eruptions-88.jpg
+/225040511/Dataset/SuperDermnet/train/interstitial granulomatous dermatitis/interstitial-granulomatous-dermatitis-11.jpg
+/225040511/Dataset/SuperDermnet/train/intertrigo/intertrigo-59.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-27.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/squamous-cell-carcinoma-ear-29.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angiokeratomas-41.jpg
+/225040511/Dataset/SuperDermnet/train/ecthyma gangrenosum/pyoderma-gangrenosum-22.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-43.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angiokeratomas-10.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/fire-ants-112.jpg
+/225040511/Dataset/SuperDermnet/train/polymorphous light eruption/polymorphous-light-eruption-18.jpg
+/225040511/Dataset/SuperDermnet/train/pretibial myxedema/pretibial-myxedema-25.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-35.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-nails-6.jpg
+/225040511/Dataset/SuperDermnet/train/herpes zoster/herpes-zoster-122.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-digitate-27.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-11.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-1-recurrent-101.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-128.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-3.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-hand-97.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/neurofibromas-13.jpg
+/225040511/Dataset/SuperDermnet/train/herpes type primary/herpes-type-2-primary-34.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-92.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-119.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/chronic-paronychia-50.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-58.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-29.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-125.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-95.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/tinea-palm-12.jpg
+/225040511/Dataset/SuperDermnet/train/herpes mouth/herpes-cutaneous-89.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Hand-31.jpg
+/225040511/Dataset/SuperDermnet/train/cherry angioma/cherry-angioma-8.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-51.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/epidermal-cyst-173.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/viral-exanthems-22.jpg
+/225040511/Dataset/SuperDermnet/train/angioedema/angioedema-20.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus drug/Lichen-Planus-Oral-32.jpg
+/225040511/Dataset/SuperDermnet/train/warts flat/warts-flat-46.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/bowens-disease-57.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-smooth-85.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/grovers-disease-59.jpg
+/225040511/Dataset/SuperDermnet/train/candida/13Candida040702.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-10.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-154.jpg
+/225040511/Dataset/SuperDermnet/train/eczema/eczema-nail-1.jpg
+/225040511/Dataset/SuperDermnet/train/venous lake/venous-lake-14.jpg
+/225040511/Dataset/SuperDermnet/train/sun damaged skin/sun-damaged-skin-45.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-61.jpg
+/225040511/Dataset/SuperDermnet/train/rosacea/rosacea-109.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/psoriasis-scalp-70.jpg
+/225040511/Dataset/SuperDermnet/train/tineaincognito/tinea-incognito-42.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-115.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-39.jpg
+/225040511/Dataset/SuperDermnet/train/fibroma/dermatofibroma-30.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-closed-comedo-13.jpg
+/225040511/Dataset/SuperDermnet/train/post inflammatory hyperpigmentation/05PityriasisAlba0412042.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasisintertrig/psoriasis-erythrodermic-15.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-164.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-125.jpg
+/225040511/Dataset/SuperDermnet/train/tineaankle/tinea-versicolor-138.jpg
+/225040511/Dataset/SuperDermnet/train/aids/AIDS-14.jpg
+/225040511/Dataset/SuperDermnet/train/granulation tissue/granulation-tissue-9.jpg
+/225040511/Dataset/SuperDermnet/train/erythema nodosum/erythema-nodosum-10.jpg
+/225040511/Dataset/SuperDermnet/train/acne open comedo/acne-open-comedo-7.jpg
+/225040511/Dataset/SuperDermnet/train/allergic contact dermatitis/allergic-contact-dermatitis-148.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-12.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-38.jpg
+/225040511/Dataset/SuperDermnet/train/tineagroin/tinea-groin-28.jpg
+/225040511/Dataset/SuperDermnet/train/kawasaki syndrome/kawasaki-syndrome-28.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-108.jpg
+/225040511/Dataset/SuperDermnet/train/chilblains perniosis/chilblains-perniosis-32.jpg
+/225040511/Dataset/SuperDermnet/train/syringoma/syringoma-36.jpg
+/225040511/Dataset/SuperDermnet/train/drug eruptions/fixed-drug-eruption-21.jpg
+/225040511/Dataset/SuperDermnet/train/epidermolysis bullosa/epidermolysis-bullosa-27.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis chronic plaque/Psoriasis-Chronic-Plaque-173.jpg
+/225040511/Dataset/SuperDermnet/train/distal subungual onychomycosis/distal-subungual-onychomycosis-144.jpg
+/225040511/Dataset/SuperDermnet/train/nail melanoma/malignant-melanoma-104.jpg
+/225040511/Dataset/SuperDermnet/train/atopic/05atopicWrist0828064.jpg
+/225040511/Dataset/SuperDermnet/train/dermatitis swimming/dermatitis-herpetiformis-14.jpg
+/225040511/Dataset/SuperDermnet/train/acute paronychia/chronic-paronychia-33.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-horn-11.jpg
+/225040511/Dataset/SuperDermnet/train/candidiasis large skin folds/candidiasis-large-skin-folds-107.jpg
+/225040511/Dataset/SuperDermnet/train/impetigo/impetigo-65.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-24.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-131.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-107.jpg
+/225040511/Dataset/SuperDermnet/train/lichen planus/lichen-planus-207.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-spilus-25.jpg
+/225040511/Dataset/SuperDermnet/train/warts/genital-warts-77.jpg
+/225040511/Dataset/SuperDermnet/train/impetigo/impetigo-5.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheic dermatitis/seborrheic-dermatitis-155.jpg
+/225040511/Dataset/SuperDermnet/train/sweets syndrome/basal-cell-nevus-syndrome-3.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-16.jpg
+/225040511/Dataset/SuperDermnet/train/cellulitis/cat-scratch-disease-1.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/parasitosis-psychogenic-3.jpg
+/225040511/Dataset/SuperDermnet/train/lyme disease/lyme-disease-21.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-155.jpg
+/225040511/Dataset/SuperDermnet/train/herpes simplex/herpes-simplex-35.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lid-4.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-77.jpg
+/225040511/Dataset/SuperDermnet/train/urticaria vasculitis/hives-Urticaria-Acute-28.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-141.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-nose-71.jpg
+/225040511/Dataset/SuperDermnet/train/paget disease breast/extramammary-paget-disease-8.jpg
+/225040511/Dataset/SuperDermnet/train/cherry angioma/cherry-angioma-15.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratoses-ruff-153.jpg
+/225040511/Dataset/SuperDermnet/train/lichen simplex chronicus/lichen-simplex-chronicus-80.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-122.jpg
+/225040511/Dataset/SuperDermnet/train/granuloma hair/granuloma-annulare-171.jpg
+/225040511/Dataset/SuperDermnet/train/blue nevus/epidermal-nevus-5.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-lesion-114.jpg
+/225040511/Dataset/SuperDermnet/train/av malformation/venous-malformations-23.jpg
+/225040511/Dataset/SuperDermnet/train/tineaincognito/tinea-incognito-20.jpg
+/225040511/Dataset/SuperDermnet/train/sebaceoushyperplasia/sebaceous-hyperplasia-18.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis hiv/Psoriasis-Guttate-58.jpg
+/225040511/Dataset/SuperDermnet/train/tineaped/08TineaAmiantacea.jpg
+/225040511/Dataset/SuperDermnet/train/habit tic deformity/habit-tic-deformity-16.jpg
+/225040511/Dataset/SuperDermnet/train/lichen sclerosus skin/Lichen-Sclerosus-Skin-100.jpg
+/225040511/Dataset/SuperDermnet/train/seborrheickeratosiscrop/seborrheic-keratosis-irritated-148.jpg
+/225040511/Dataset/SuperDermnet/train/warts/warts-24.jpg
+/225040511/Dataset/SuperDermnet/train/erythema nodosum/erythema-nodosum-28.jpg
+/225040511/Dataset/SuperDermnet/train/biting excoriation/neurotic-excoriations-27.jpg
+/225040511/Dataset/SuperDermnet/train/biting insects/biting-insects-29.jpg
+/225040511/Dataset/SuperDermnet/train/warts/warts-22.jpg
+/225040511/Dataset/SuperDermnet/train/erythema multiforme/erythema-multiforme-154.jpg
+/225040511/Dataset/SuperDermnet/train/psoriasis/psoriasis-151.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-9.jpg
+/225040511/Dataset/SuperDermnet/train/porphyrias/porphyrias-27.jpg
+/225040511/Dataset/SuperDermnet/train/metal dermatitis/stasis-dermatitis-79.jpg
+/225040511/Dataset/SuperDermnet/train/keratoacanthoma/keratoacanthoma-118.jpg
+/225040511/Dataset/SuperDermnet/train/basal cell carcinoma arm/basal-cell-carcinoma-superficial-24.jpg
+/225040511/Dataset/SuperDermnet/train/pityriasisalbal/pityriasis-rosea-88.jpg
+/225040511/Dataset/SuperDermnet/train/pilar cyst/pilar-cyst-21.jpg
+/225040511/Dataset/SuperDermnet/train/warts plantar/warts-plantar-63.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-118.jpg
+/225040511/Dataset/SuperDermnet/train/chilblains perniosis/chilblains-perniosis-10.jpg
+/225040511/Dataset/SuperDermnet/train/eczema nummular/eczema-nummular-159.jpg
+/225040511/Dataset/SuperDermnet/train/alopecia areata/alopecia-areata-94.jpg
+/225040511/Dataset/SuperDermnet/train/molluscum contagiosum/molluscum-contagiosum-131.jpg
+/225040511/Dataset/SuperDermnet/train/acne scar/acne-pustular-60.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/beaus-lines-13.jpg
+/225040511/Dataset/SuperDermnet/train/arsenical keratoses/actinic-keratosis-lesion-35.jpg
+/225040511/Dataset/SuperDermnet/train/warts/warts-26.jpg
+/225040511/Dataset/SuperDermnet/train/hidradenitis suppurativa/hidradenitis-suppurativa-58.jpg
+/225040511/Dataset/SuperDermnet/train/viral exanthems/viral-exanthems-61.jpg
+/225040511/Dataset/SuperDermnet/train/cutaneous larva migrans/cutaneous-Larva-Migrans-49.jpg
+/225040511/Dataset/SuperDermnet/train/phototoxic reactions/phototoxic-reactions-19.jpg
+/225040511/Dataset/SuperDermnet/train/wartcommon/warts-common-46.jpg
+/225040511/Dataset/SuperDermnet/train/nevus spilus/nevus-sebaceous-60.jpg
