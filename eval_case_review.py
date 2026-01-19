@@ -16,10 +16,10 @@ from Constants import DERMNET_DISEASE_NAME
 # --- 基础配置路径 ---
 EVAL_DIR = "/225040511/project/Evaluation_Results/Dermnet/SkinGPT-X/"
 PANDERM_CSV_PATH = os.path.join(EVAL_DIR, "panderm_test_predictions.csv")
-IMAGE_BASE_DIR = "/225040511/Dataset/Dermnet"
+IMAGE_BASE_DIR = "/Dermnet/V001"
 
 class EvaluationWorkflow:
-    def __init__(self, panderm_csv_path, disease_names, gpu_id=0):
+    def __init__(self, panderm_csv_path, disease_names, gpu_id=0, neo4j_uri:str="bolt://100.88.67.17:7687", neo4j_user:str="neo4j", neo4j_password:str="Czty100165188"):
         self.gpu_id = gpu_id
         
         # 1. 初始化 Vision Agent，并传入 GPU ID
@@ -35,9 +35,9 @@ class EvaluationWorkflow:
         # 3. 初始化 Case Review Agent
         self.review_agent = CaseReviewAgent(
             model="Qwen2-VL-8B", 
-            neo4j_uri="bolt://127.0.0.1:7687",
-            neo4j_user="neo4j",
-            neo4j_password="Czty100165188", # 👈 请确保密码正确
+            neo4j_uri=neo4j_uri,
+            neo4j_user=neo4j_user,
+            neo4j_password=neo4j_password, # 👈 请确保密码正确
             lancedb_uri="/225040511/project/Skingpt_X/lancedb",
             markdown_path="/225040511/project/Skingpt_X/skin_handbook.md",
             train_feat_path=EVAL_DIR + "train_feats.npy", 
@@ -117,10 +117,9 @@ class EvaluationWorkflow:
                 else:
                     vision_res = self.vision_agent.analyze(full_image_path)
                     key_findings = vision_res.get("key_findings", "")
-                    self.vision_findings_cache[file_rel_path[1:]] = key_findings
+                    self.vision_findings_cache[file_rel_path] = key_findings
                     print(f"[GPU {self.gpu_id}] 🖼️ Processed vision for {file_rel_path}")
                     self._save_vision_cache()
-                print(f"[GPU {self.gpu_id}] Vision Findings for {file_rel_path}: {key_findings}")
                 # 2. 提取 Top-5 并执行 Case Review (取消注释)
                 current_top5 = self._get_top5_from_row(file_rel_path)
                 print(f"[GPU {self.gpu_id}] Panderm Top-5 for {file_rel_path}: {current_top5}")
@@ -129,6 +128,7 @@ class EvaluationWorkflow:
                     panderm_top5=current_top5,
                     image_path=file_rel_path
                 )
+                print(f"[GPU {self.gpu_id}] Prompt for {file_rel_path}: {prompt_text}")
                 print(f"[GPU {self.gpu_id}] Review Report for {file_rel_path}: {review_report}")
                 # 3. 记录结果
                 gt_data = self.pred_df.loc[file_rel_path, 'true_label']
@@ -168,6 +168,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="SkinGPT-X Multi-GPU Case Reviewer")
     parser.add_argument("--task_file", type=str, required=True, help="Path to the .txt file")
     parser.add_argument("--gpu_id", type=int, default=0, help="Target GPU ID")
+    parser.add_argument("--neo4j_uri", type=str, default=0, help="Target GPU ID")
+    parser.add_argument("--neo4j_user", type=str, default=0, help="Target GPU ID")
+    parser.add_argument("--neo4j_password", type=str, default=0, help="Target GPU ID")
 
     args = parser.parse_args()
 
@@ -175,7 +178,10 @@ if __name__ == "__main__":
     workflow = EvaluationWorkflow(
         panderm_csv_path=PANDERM_CSV_PATH, 
         disease_names=DERMNET_DISEASE_NAME[:-1],
-        gpu_id=args.gpu_id
+        gpu_id=args.gpu_id,
+        neo4j_uri=args.neo4j_uri,
+        neo4j_user=args.neo4j_user,
+        neo4j_password=args.neo4j_password,
     )
     
     workflow.run_from_txt(args.task_file)

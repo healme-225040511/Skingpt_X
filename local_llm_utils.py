@@ -289,7 +289,8 @@ def _load_deepseek_chat_model():
                 device_map="auto", # 自动分配到 GPU
                 quantization_config=bnb_config,
                 torch_dtype=torch.float16,
-                trust_remote_code=True
+                trust_remote_code=True,
+                use_safetensors=False  # 👈 强制加载 .bin 权重
             ).eval()
             print("✅ DeepSeek-Chat 加载成功。")
         except Exception as e:
