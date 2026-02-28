@@ -1,0 +1,223 @@
+/test/Nevus/ISIC_0058397.jpg
+/test/Nevus/ISIC_0064870.jpg
+/test/Nevus/ISIC_0068228.jpg
+/test/Nevus/ISIC_0064485.jpg
+/test/Nevus/ISIC_0068863.jpg
+/test/Nevus/ISIC_0063820.jpg
+/test/Nevus/ISIC_0068170.jpg
+/test/Nevus/ISIC_0061590.jpg
+/test/Nevus/ISIC_0057095.jpg
+/test/Nevus/ISIC_0062054.jpg
+/test/Nevus/ISIC_0056439.jpg
+/test/Nevus/ISIC_0057709.jpg
+/test/Nevus/ISIC_0056825.jpg
+/test/Nevus/ISIC_0071063.jpg
+/test/Nevus/ISIC_0063030.jpg
+/test/Nevus/ISIC_0066949.jpg
+/test/Nevus/ISIC_0057992.jpg
+/test/Nevus/ISIC_0054382.jpg
+/test/Nevus/ISIC_0059354.jpg
+/test/Nevus/ISIC_0069844.jpg
+/test/Nevus/ISIC_0071935.jpg
+/test/Nevus/ISIC_0057831.jpg
+/test/Nevus/ISIC_0067877.jpg
+/test/Nevus/ISIC_0065172.jpg
+/test/Nevus/ISIC_0064069.jpg
+/test/Nevus/ISIC_0063365.jpg
+/test/Nevus/ISIC_0068889.jpg
+/test/Nevus/ISIC_0058505.jpg
+/test/Nevus/ISIC_0053623.jpg
+/test/Nevus/ISIC_0070425.jpg
+/test/Nevus/ISIC_0071572.jpg
+/test/Nevus/ISIC_0064902.jpg
+/test/Nevus/ISIC_0062565.jpg
+/test/Nevus/ISIC_0064602.jpg
+/test/Nevus/ISIC_0069760.jpg
+/test/Nevus/ISIC_0056000.jpg
+/test/Nevus/ISIC_0072512.jpg
+/test/Nevus/ISIC_0063128.jpg
+/test/Nevus/ISIC_0066822.jpg
+/test/Nevus/ISIC_0060954.jpg
+/test/Nevus/ISIC_0053760.jpg
+/test/Nevus/ISIC_0066326.jpg
+/test/Nevus/ISIC_0068099.jpg
+/test/Nevus/ISIC_0058635.jpg
+/test/Nevus/ISIC_0068448.jpg
+/test/Nevus/ISIC_0056451.jpg
+/test/Nevus/ISIC_0059614.jpg
+/test/Nevus/ISIC_0071135.jpg
+/test/Nevus/ISIC_0057047.jpg
+/test/Nevus/ISIC_0058053.jpg
+/test/Basal cell carcinoma/ISIC_0065848.jpg
+/test/Basal cell carcinoma/ISIC_0057170.jpg
+/test/Basal cell carcinoma/ISIC_0065751.jpg
+/test/Nevus/ISIC_0066893.jpg
+/test/Nevus/ISIC_0067937.jpg
+/test/Nevus/ISIC_0056569.jpg
+/test/Nevus/ISIC_0066299.jpg
+/test/Nevus/ISIC_0071739.jpg
+/test/Nevus/ISIC_0053861.jpg
+/test/Nevus/ISIC_0056664.jpg
+/test/Nevus/ISIC_0063333.jpg
+/test/Nevus/ISIC_0060631.jpg
+/test/Nevus/ISIC_0059583.jpg
+/test/Nevus/ISIC_0068470.jpg
+/test/Nevus/ISIC_0056618.jpg
+/test/Nevus/ISIC_0070416.jpg
+/test/Nevus/ISIC_0064365.jpg
+/test/Nevus/ISIC_0065117.jpg
+/test/Nevus/ISIC_0061221.jpg
+/test/Nevus/ISIC_0068102.jpg
+/test/Nevus/ISIC_0069985.jpg
+/test/Nevus/ISIC_0064922.jpg
+/test/Nevus/ISIC_0071898.jpg
+/test/Nevus/ISIC_0060448.jpg
+/test/Nevus/ISIC_0061117.jpg
+/test/Nevus/ISIC_0069924.jpg
+/test/Nevus/ISIC_0072091.jpg
+/test/Nevus/ISIC_0053458.jpg
+/test/Nevus/ISIC_0066462.jpg
+/test/Nevus/ISIC_0063484.jpg
+/test/Nevus/ISIC_0065732.jpg
+/test/Nevus/ISIC_0067773.jpg
+/test/Nevus/ISIC_0055778.jpg
+/test/Nevus/ISIC_0062502.jpg
+/test/Nevus/ISIC_0072068.jpg
+/test/Nevus/ISIC_0064216.jpg
+/test/Nevus/ISIC_0071175.jpg
+/test/Nevus/ISIC_0055620.jpg
+/test/Nevus/ISIC_0055851.jpg
+/test/Nevus/ISIC_0064181.jpg
+/test/Nevus/ISIC_0064665.jpg
+/test/Nevus/ISIC_0063935.jpg
+/test/Nevus/ISIC_0068706.jpg
+/test/Nevus/ISIC_0059452.jpg
+/test/Nevus/ISIC_0056316.jpg
+/test/Nevus/ISIC_0068699.jpg
+/test/Nevus/ISIC_0061586.jpg
+/test/Nevus/ISIC_0067145.jpg
+/test/Nevus/ISIC_0068217.jpg
+/test/Nevus/ISIC_0065332.jpg
+/test/Nevus/ISIC_0057021.jpg
+/test/Nevus/ISIC_0064866.jpg
+/test/Nevus/ISIC_0064533.jpg
+/test/Nevus/ISIC_0064806.jpg
+/test/Nevus/ISIC_0061546.jpg
+/test/Nevus/ISIC_0065182.jpg
+/test/Nevus/ISIC_0071822.jpg
+/test/Nevus/ISIC_0057066.jpg
+/test/Nevus/ISIC_0065460.jpg
+/test/Nevus/ISIC_0057378.jpg
+/test/Nevus/ISIC_0057653.jpg
+/test/Nevus/ISIC_0058600.jpg
+/test/Nevus/ISIC_0058429.jpg
+/test/Nevus/ISIC_0069236.jpg
+/test/Nevus/ISIC_0068320.jpg
+/test/Nevus/ISIC_0065756.jpg
+/test/Nevus/ISIC_0067678.jpg
+/test/Nevus/ISIC_0060106.jpg
+/test/Nevus/ISIC_0064991.jpg
+/test/Nevus/ISIC_0063477.jpg
+/test/Nevus/ISIC_0072168.jpg
+/test/Nevus/ISIC_0066607.jpg
+/test/Nevus/ISIC_0058829.jpg
+/test/Nevus/ISIC_0059299.jpg
+/test/Nevus/ISIC_0068134.jpg
+/test/Nevus/ISIC_0058586.jpg
+/test/Nevus/ISIC_0069634.jpg
+/test/Nevus/ISIC_0065841.jpg
+/test/Nevus/ISIC_0059179.jpg
+/test/Nevus/ISIC_0070502.jpg
+/test/Nevus/ISIC_0070668.jpg
+/test/Nevus/ISIC_0071872.jpg
+/test/Nevus/ISIC_0065274.jpg
+/test/Nevus/ISIC_0070637.jpg
+/test/Nevus/ISIC_0057612.jpg
+/test/Nevus/ISIC_0064017.jpg
+/test/Nevus/ISIC_0057699.jpg
+/test/Nevus/ISIC_0072524.jpg
+/test/Nevus/ISIC_0073244.jpg
+/test/Nevus/ISIC_0068173.jpg
+/test/Nevus/ISIC_0053560.jpg
+/test/Nevus/ISIC_0071406.jpg
+/test/Nevus/ISIC_0069992.jpg
+/test/Nevus/ISIC_0067854.jpg
+/test/Nevus/ISIC_0055834.jpg
+/test/Nevus/ISIC_0058998.jpg
+/test/Nevus/ISIC_0054305.jpg
+/test/Nevus/ISIC_0062870.jpg
+/test/Dermatofibroma/ISIC_0055258.jpg
+/test/Dermatofibroma/ISIC_0061493.jpg
+/test/Dermatofibroma/ISIC_0067618.jpg
+/test/Dermatofibroma/ISIC_0072045.jpg
+/test/Dermatofibroma/ISIC_0065534.jpg
+/test/Dermatofibroma/ISIC_0054293.jpg
+/test/Dermatofibroma/ISIC_0061959.jpg
+/test/Dermatofibroma/ISIC_0058581.jpg
+/test/Dermatofibroma/ISIC_0068078.jpg
+/test/Dermatofibroma/ISIC_0061904.jpg
+/test/Dermatofibroma/ISIC_0056996.jpg
+/test/Dermatofibroma/ISIC_0054918.jpg
+/test/Dermatofibroma/ISIC_0064115.jpg
+/test/Dermatofibroma/ISIC_0069438.jpg
+/test/Dermatofibroma/ISIC_0062315.jpg
+/test/Dermatofibroma/ISIC_0072144.jpg
+/test/Dermatofibroma/ISIC_0061232.jpg
+/test/Dermatofibroma/ISIC_0069930.jpg
+/test/Dermatofibroma/ISIC_0071418.jpg
+/test/Dermatofibroma/ISIC_0060024.jpg
+/test/Dermatofibroma/ISIC_0059494.jpg
+/test/Dermatofibroma/ISIC_0066311.jpg
+/test/Dermatofibroma/ISIC_0070730.jpg
+/test/Dermatofibroma/ISIC_0054927.jpg
+/test/Dermatofibroma/ISIC_0054978.jpg
+/test/Dermatofibroma/ISIC_0068803.jpg
+/test/Dermatofibroma/ISIC_0056599.jpg
+/test/Dermatofibroma/ISIC_0066002.jpg
+/test/Dermatofibroma/ISIC_0066632.jpg
+/test/Dermatofibroma/ISIC_0060422.jpg
+/test/Dermatofibroma/ISIC_0067414.jpg
+/test/Dermatofibroma/ISIC_0059504.jpg
+/test/Dermatofibroma/ISIC_0071002.jpg
+/test/Basal cell carcinoma/ISIC_0062487.jpg
+/test/Basal cell carcinoma/ISIC_0056917.jpg
+/test/Basal cell carcinoma/ISIC_0061408.jpg
+/test/Basal cell carcinoma/ISIC_0059986.jpg
+/test/Basal cell carcinoma/ISIC_0071964.jpg
+/test/Basal cell carcinoma/ISIC_0069066.jpg
+/test/Basal cell carcinoma/ISIC_0065386.jpg
+/test/Basal cell carcinoma/ISIC_0069533.jpg
+/test/Basal cell carcinoma/ISIC_0067736.jpg
+/test/Basal cell carcinoma/ISIC_0056929.jpg
+/test/Basal cell carcinoma/ISIC_0058765.jpg
+/test/Basal cell carcinoma/ISIC_0064197.jpg
+/test/Basal cell carcinoma/ISIC_0054820.jpg
+/test/Basal cell carcinoma/ISIC_0066292.jpg
+/test/Basal cell carcinoma/ISIC_0066281.jpg
+/test/Basal cell carcinoma/ISIC_0059324.jpg
+/test/Basal cell carcinoma/ISIC_0071003.jpg
+/test/Basal cell carcinoma/ISIC_0064639.jpg
+/test/Basal cell carcinoma/ISIC_0067839.jpg
+/test/Basal cell carcinoma/ISIC_0059946.jpg
+/test/Basal cell carcinoma/ISIC_0058476.jpg
+/test/Basal cell carcinoma/ISIC_0066380.jpg
+/test/Basal cell carcinoma/ISIC_0065227.jpg
+/test/Basal cell carcinoma/ISIC_0071102.jpg
+/test/Basal cell carcinoma/ISIC_0062129.jpg
+/test/Basal cell carcinoma/ISIC_0059475.jpg
+/test/Basal cell carcinoma/ISIC_0067146.jpg
+/test/Basal cell carcinoma/ISIC_0072361.jpg
+/test/Basal cell carcinoma/ISIC_0062791.jpg
+/test/Basal cell carcinoma/ISIC_0064340.jpg
+/test/Basal cell carcinoma/ISIC_0057662.jpg
+/test/Basal cell carcinoma/ISIC_0072505.jpg
+/test/Basal cell carcinoma/ISIC_0071438.jpg
+/test/Basal cell carcinoma/ISIC_0070295.jpg
+/test/Basal cell carcinoma/ISIC_0062299.jpg
+/test/Basal cell carcinoma/ISIC_0071280.jpg
+/test/Basal cell carcinoma/ISIC_0068169.jpg
+/test/Melanoma NOS/ISIC_0071550.jpg
+/test/Melanoma NOS/ISIC_0071774.jpg
+/test/Melanoma NOS/ISIC_0068315.jpg
+/test/Melanoma NOS/ISIC_0065313.jpg
+/test/Melanoma NOS/ISIC_0059697.jpg

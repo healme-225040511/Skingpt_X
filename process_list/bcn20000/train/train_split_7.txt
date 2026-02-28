@@ -1,0 +1,1176 @@
+/train/Basal cell carcinoma/ISIC_0069228.jpg
+/train/Basal cell carcinoma/ISIC_0068018.jpg
+/train/Basal cell carcinoma/ISIC_0067968.jpg
+/train/Basal cell carcinoma/ISIC_0068949.jpg
+/train/Basal cell carcinoma/ISIC_0068464.jpg
+/train/Basal cell carcinoma/ISIC_0063382.jpg
+/train/Basal cell carcinoma/ISIC_0072462.jpg
+/train/Basal cell carcinoma/ISIC_0063979.jpg
+/train/Basal cell carcinoma/ISIC_0068536.jpg
+/train/Basal cell carcinoma/ISIC_0066205.jpg
+/train/Basal cell carcinoma/ISIC_0067106.jpg
+/train/Basal cell carcinoma/ISIC_0059096.jpg
+/train/Basal cell carcinoma/ISIC_0065797.jpg
+/train/Basal cell carcinoma/ISIC_0070552.jpg
+/train/Basal cell carcinoma/ISIC_0065141.jpg
+/train/Basal cell carcinoma/ISIC_0070390.jpg
+/train/Basal cell carcinoma/ISIC_0073215.jpg
+/train/Basal cell carcinoma/ISIC_0058060.jpg
+/train/Basal cell carcinoma/ISIC_0073094.jpg
+/train/Basal cell carcinoma/ISIC_0057279.jpg
+/train/Basal cell carcinoma/ISIC_0073084.jpg
+/train/Basal cell carcinoma/ISIC_0055772.jpg
+/train/Basal cell carcinoma/ISIC_0068746.jpg
+/train/Basal cell carcinoma/ISIC_0070266.jpg
+/train/Basal cell carcinoma/ISIC_0064353.jpg
+/train/Basal cell carcinoma/ISIC_0066736.jpg
+/train/Basal cell carcinoma/ISIC_0071369.jpg
+/train/Basal cell carcinoma/ISIC_0053621.jpg
+/train/Basal cell carcinoma/ISIC_0064797.jpg
+/train/Basal cell carcinoma/ISIC_0070525.jpg
+/train/Basal cell carcinoma/ISIC_0058482.jpg
+/train/Basal cell carcinoma/ISIC_0066676.jpg
+/train/Basal cell carcinoma/ISIC_0071082.jpg
+/train/Basal cell carcinoma/ISIC_0054448.jpg
+/train/Basal cell carcinoma/ISIC_0058995.jpg
+/train/Basal cell carcinoma/ISIC_0055855.jpg
+/train/Basal cell carcinoma/ISIC_0071599.jpg
+/train/Basal cell carcinoma/ISIC_0057748.jpg
+/train/Basal cell carcinoma/ISIC_0069754.jpg
+/train/Basal cell carcinoma/ISIC_0070385.jpg
+/train/Basal cell carcinoma/ISIC_0059116.jpg
+/train/Basal cell carcinoma/ISIC_0066057.jpg
+/train/Basal cell carcinoma/ISIC_0064644.jpg
+/train/Basal cell carcinoma/ISIC_0054722.jpg
+/train/Basal cell carcinoma/ISIC_0061203.jpg
+/train/Basal cell carcinoma/ISIC_0071163.jpg
+/train/Basal cell carcinoma/ISIC_0061402.jpg
+/train/Basal cell carcinoma/ISIC_0067921.jpg
+/train/Basal cell carcinoma/ISIC_0069362.jpg
+/train/Basal cell carcinoma/ISIC_0061091.jpg
+/train/Basal cell carcinoma/ISIC_0059687.jpg
+/train/Basal cell carcinoma/ISIC_0068162.jpg
+/train/Basal cell carcinoma/ISIC_0062348.jpg
+/train/Basal cell carcinoma/ISIC_0059243.jpg
+/train/Basal cell carcinoma/ISIC_0058268.jpg
+/train/Basal cell carcinoma/ISIC_0069295.jpg
+/train/Basal cell carcinoma/ISIC_0063754.jpg
+/train/Basal cell carcinoma/ISIC_0056157.jpg
+/train/Basal cell carcinoma/ISIC_0069823.jpg
+/train/Basal cell carcinoma/ISIC_0053917.jpg
+/train/Basal cell carcinoma/ISIC_0058997.jpg
+/train/Basal cell carcinoma/ISIC_0065799.jpg
+/train/Basal cell carcinoma/ISIC_0059989.jpg
+/train/Basal cell carcinoma/ISIC_0065979.jpg
+/train/Basal cell carcinoma/ISIC_0059453.jpg
+/train/Basal cell carcinoma/ISIC_0058348.jpg
+/train/Basal cell carcinoma/ISIC_0057979.jpg
+/train/Basal cell carcinoma/ISIC_0056387.jpg
+/train/Basal cell carcinoma/ISIC_0072750.jpg
+/train/Basal cell carcinoma/ISIC_0072325.jpg
+/train/Basal cell carcinoma/ISIC_0063610.jpg
+/train/Basal cell carcinoma/ISIC_0065391.jpg
+/train/Basal cell carcinoma/ISIC_0067520.jpg
+/train/Basal cell carcinoma/ISIC_0053488.jpg
+/train/Basal cell carcinoma/ISIC_0071235.jpg
+/train/Basal cell carcinoma/ISIC_0061309.jpg
+/train/Basal cell carcinoma/ISIC_0056381.jpg
+/train/Basal cell carcinoma/ISIC_0055916.jpg
+/train/Basal cell carcinoma/ISIC_0063553.jpg
+/train/Basal cell carcinoma/ISIC_0065432.jpg
+/train/Basal cell carcinoma/ISIC_0057400.jpg
+/train/Basal cell carcinoma/ISIC_0061696.jpg
+/train/Basal cell carcinoma/ISIC_0063283.jpg
+/train/Basal cell carcinoma/ISIC_0054396.jpg
+/train/Basal cell carcinoma/ISIC_0066682.jpg
+/train/Basal cell carcinoma/ISIC_0063651.jpg
+/train/Basal cell carcinoma/ISIC_0059038.jpg
+/train/Basal cell carcinoma/ISIC_0063720.jpg
+/train/Basal cell carcinoma/ISIC_0071273.jpg
+/train/Basal cell carcinoma/ISIC_0055895.jpg
+/train/Basal cell carcinoma/ISIC_0063036.jpg
+/train/Basal cell carcinoma/ISIC_0056407.jpg
+/train/Basal cell carcinoma/ISIC_0055353.jpg
+/train/Basal cell carcinoma/ISIC_0057343.jpg
+/train/Basal cell carcinoma/ISIC_0070656.jpg
+/train/Basal cell carcinoma/ISIC_0056177.jpg
+/train/Basal cell carcinoma/ISIC_0071199.jpg
+/train/Basal cell carcinoma/ISIC_0054055.jpg
+/train/Basal cell carcinoma/ISIC_0066824.jpg
+/train/Basal cell carcinoma/ISIC_0064439.jpg
+/train/Basal cell carcinoma/ISIC_0063342.jpg
+/train/Basal cell carcinoma/ISIC_0070924.jpg
+/train/Basal cell carcinoma/ISIC_0055389.jpg
+/train/Basal cell carcinoma/ISIC_0053885.jpg
+/train/Basal cell carcinoma/ISIC_0060662.jpg
+/train/Basal cell carcinoma/ISIC_0060298.jpg
+/train/Basal cell carcinoma/ISIC_0059930.jpg
+/train/Basal cell carcinoma/ISIC_0056965.jpg
+/train/Basal cell carcinoma/ISIC_0073033.jpg
+/train/Basal cell carcinoma/ISIC_0059617.jpg
+/train/Basal cell carcinoma/ISIC_0055775.jpg
+/train/Basal cell carcinoma/ISIC_0054552.jpg
+/train/Basal cell carcinoma/ISIC_0054477.jpg
+/train/Basal cell carcinoma/ISIC_0070911.jpg
+/train/Basal cell carcinoma/ISIC_0056972.jpg
+/train/Basal cell carcinoma/ISIC_0059388.jpg
+/train/Basal cell carcinoma/ISIC_0065637.jpg
+/train/Basal cell carcinoma/ISIC_0060712.jpg
+/train/Basal cell carcinoma/ISIC_0059549.jpg
+/train/Basal cell carcinoma/ISIC_0058172.jpg
+/train/Basal cell carcinoma/ISIC_0065428.jpg
+/train/Basal cell carcinoma/ISIC_0069144.jpg
+/train/Basal cell carcinoma/ISIC_0055058.jpg
+/train/Basal cell carcinoma/ISIC_0066837.jpg
+/train/Basal cell carcinoma/ISIC_0065228.jpg
+/train/Basal cell carcinoma/ISIC_0059629.jpg
+/train/Basal cell carcinoma/ISIC_0058037.jpg
+/train/Basal cell carcinoma/ISIC_0053524.jpg
+/train/Basal cell carcinoma/ISIC_0070584.jpg
+/train/Basal cell carcinoma/ISIC_0065607.jpg
+/train/Basal cell carcinoma/ISIC_0069433.jpg
+/train/Basal cell carcinoma/ISIC_0066939.jpg
+/train/Basal cell carcinoma/ISIC_0070761.jpg
+/train/Basal cell carcinoma/ISIC_0057587.jpg
+/train/Basal cell carcinoma/ISIC_0055221.jpg
+/train/Basal cell carcinoma/ISIC_0064292.jpg
+/train/Basal cell carcinoma/ISIC_0061251.jpg
+/train/Basal cell carcinoma/ISIC_0063999.jpg
+/train/Basal cell carcinoma/ISIC_0053956.jpg
+/train/Basal cell carcinoma/ISIC_0063158.jpg
+/train/Basal cell carcinoma/ISIC_0055950.jpg
+/train/Basal cell carcinoma/ISIC_0056942.jpg
+/train/Basal cell carcinoma/ISIC_0073028.jpg
+/train/Basal cell carcinoma/ISIC_0058038.jpg
+/train/Basal cell carcinoma/ISIC_0056411.jpg
+/train/Basal cell carcinoma/ISIC_0063794.jpg
+/train/Basal cell carcinoma/ISIC_0059476.jpg
+/train/Basal cell carcinoma/ISIC_0072549.jpg
+/train/Basal cell carcinoma/ISIC_0061042.jpg
+/train/Basal cell carcinoma/ISIC_0056874.jpg
+/train/Basal cell carcinoma/ISIC_0053526.jpg
+/train/Basal cell carcinoma/ISIC_0054745.jpg
+/train/Basal cell carcinoma/ISIC_0071603.jpg
+/train/Basal cell carcinoma/ISIC_0057139.jpg
+/train/Basal cell carcinoma/ISIC_0073229.jpg
+/train/Basal cell carcinoma/ISIC_0053972.jpg
+/train/Basal cell carcinoma/ISIC_0057129.jpg
+/train/Basal cell carcinoma/ISIC_0063074.jpg
+/train/Basal cell carcinoma/ISIC_0071008.jpg
+/train/Basal cell carcinoma/ISIC_0069111.jpg
+/train/Basal cell carcinoma/ISIC_0059559.jpg
+/train/Basal cell carcinoma/ISIC_0070504.jpg
+/train/Basal cell carcinoma/ISIC_0069574.jpg
+/train/Basal cell carcinoma/ISIC_0055722.jpg
+/train/Basal cell carcinoma/ISIC_0056685.jpg
+/train/Basal cell carcinoma/ISIC_0054481.jpg
+/train/Basal cell carcinoma/ISIC_0055890.jpg
+/train/Basal cell carcinoma/ISIC_0055402.jpg
+/train/Basal cell carcinoma/ISIC_0065929.jpg
+/train/Basal cell carcinoma/ISIC_0062108.jpg
+/train/Basal cell carcinoma/ISIC_0060392.jpg
+/train/Basal cell carcinoma/ISIC_0057500.jpg
+/train/Basal cell carcinoma/ISIC_0062070.jpg
+/train/Basal cell carcinoma/ISIC_0058549.jpg
+/train/Basal cell carcinoma/ISIC_0070072.jpg
+/train/Basal cell carcinoma/ISIC_0055409.jpg
+/train/Basal cell carcinoma/ISIC_0071053.jpg
+/train/Basal cell carcinoma/ISIC_0061909.jpg
+/train/Basal cell carcinoma/ISIC_0060205.jpg
+/train/Basal cell carcinoma/ISIC_0068142.jpg
+/train/Basal cell carcinoma/ISIC_0060914.jpg
+/train/Basal cell carcinoma/ISIC_0066630.jpg
+/train/Basal cell carcinoma/ISIC_0065908.jpg
+/train/Basal cell carcinoma/ISIC_0055174.jpg
+/train/Basal cell carcinoma/ISIC_0062391.jpg
+/train/Basal cell carcinoma/ISIC_0062218.jpg
+/train/Basal cell carcinoma/ISIC_0067572.jpg
+/train/Basal cell carcinoma/ISIC_0064324.jpg
+/train/Basal cell carcinoma/ISIC_0069261.jpg
+/train/Basal cell carcinoma/ISIC_0056895.jpg
+/train/Basal cell carcinoma/ISIC_0069503.jpg
+/train/Basal cell carcinoma/ISIC_0069153.jpg
+/train/Basal cell carcinoma/ISIC_0067110.jpg
+/train/Basal cell carcinoma/ISIC_0057804.jpg
+/train/Basal cell carcinoma/ISIC_0064185.jpg
+/train/Basal cell carcinoma/ISIC_0053878.jpg
+/train/Basal cell carcinoma/ISIC_0071993.jpg
+/train/Basal cell carcinoma/ISIC_0062194.jpg
+/train/Basal cell carcinoma/ISIC_0061268.jpg
+/train/Basal cell carcinoma/ISIC_0068147.jpg
+/train/Basal cell carcinoma/ISIC_0065303.jpg
+/train/Basal cell carcinoma/ISIC_0067714.jpg
+/train/Basal cell carcinoma/ISIC_0070827.jpg
+/train/Basal cell carcinoma/ISIC_0062378.jpg
+/train/Basal cell carcinoma/ISIC_0062492.jpg
+/train/Basal cell carcinoma/ISIC_0054075.jpg
+/train/Basal cell carcinoma/ISIC_0068346.jpg
+/train/Basal cell carcinoma/ISIC_0069052.jpg
+/train/Basal cell carcinoma/ISIC_0061923.jpg
+/train/Basal cell carcinoma/ISIC_0065481.jpg
+/train/Basal cell carcinoma/ISIC_0054740.jpg
+/train/Basal cell carcinoma/ISIC_0055768.jpg
+/train/Basal cell carcinoma/ISIC_0067229.jpg
+/train/Basal cell carcinoma/ISIC_0063802.jpg
+/train/Basal cell carcinoma/ISIC_0054975.jpg
+/train/Basal cell carcinoma/ISIC_0071555.jpg
+/train/Basal cell carcinoma/ISIC_0056220.jpg
+/train/Basal cell carcinoma/ISIC_0064310.jpg
+/train/Basal cell carcinoma/ISIC_0067876.jpg
+/train/Basal cell carcinoma/ISIC_0062232.jpg
+/train/Basal cell carcinoma/ISIC_0055762.jpg
+/train/Basal cell carcinoma/ISIC_0058787.jpg
+/train/Basal cell carcinoma/ISIC_0072270.jpg
+/train/Basal cell carcinoma/ISIC_0069799.jpg
+/train/Basal cell carcinoma/ISIC_0071730.jpg
+/train/Basal cell carcinoma/ISIC_0070331.jpg
+/train/Basal cell carcinoma/ISIC_0062244.jpg
+/train/Basal cell carcinoma/ISIC_0063865.jpg
+/train/Basal cell carcinoma/ISIC_0073165.jpg
+/train/Basal cell carcinoma/ISIC_0066745.jpg
+/train/Basal cell carcinoma/ISIC_0067508.jpg
+/train/Basal cell carcinoma/ISIC_0069577.jpg
+/train/Basal cell carcinoma/ISIC_0073059.jpg
+/train/Basal cell carcinoma/ISIC_0070156.jpg
+/train/Basal cell carcinoma/ISIC_0067303.jpg
+/train/Basal cell carcinoma/ISIC_0058714.jpg
+/train/Basal cell carcinoma/ISIC_0060209.jpg
+/train/Basal cell carcinoma/ISIC_0059254.jpg
+/train/Basal cell carcinoma/ISIC_0068716.jpg
+/train/Basal cell carcinoma/ISIC_0053537.jpg
+/train/Basal cell carcinoma/ISIC_0069926.jpg
+/train/Basal cell carcinoma/ISIC_0059050.jpg
+/train/Basal cell carcinoma/ISIC_0066363.jpg
+/train/Basal cell carcinoma/ISIC_0070883.jpg
+/train/Basal cell carcinoma/ISIC_0071515.jpg
+/train/Basal cell carcinoma/ISIC_0065021.jpg
+/train/Basal cell carcinoma/ISIC_0054316.jpg
+/train/Basal cell carcinoma/ISIC_0072155.jpg
+/train/Basal cell carcinoma/ISIC_0071867.jpg
+/train/Basal cell carcinoma/ISIC_0063338.jpg
+/train/Basal cell carcinoma/ISIC_0066922.jpg
+/train/Basal cell carcinoma/ISIC_0054609.jpg
+/train/Basal cell carcinoma/ISIC_0072984.jpg
+/train/Basal cell carcinoma/ISIC_0059449.jpg
+/train/Basal cell carcinoma/ISIC_0065876.jpg
+/train/Basal cell carcinoma/ISIC_0069840.jpg
+/train/Basal cell carcinoma/ISIC_0058447.jpg
+/train/Basal cell carcinoma/ISIC_0063580.jpg
+/train/Basal cell carcinoma/ISIC_0060043.jpg
+/train/Basal cell carcinoma/ISIC_0073093.jpg
+/train/Basal cell carcinoma/ISIC_0057916.jpg
+/train/Basal cell carcinoma/ISIC_0064774.jpg
+/train/Basal cell carcinoma/ISIC_0061062.jpg
+/train/Basal cell carcinoma/ISIC_0054313.jpg
+/train/Basal cell carcinoma/ISIC_0072138.jpg
+/train/Basal cell carcinoma/ISIC_0060791.jpg
+/train/Basal cell carcinoma/ISIC_0058006.jpg
+/train/Basal cell carcinoma/ISIC_0068004.jpg
+/train/Basal cell carcinoma/ISIC_0062281.jpg
+/train/Basal cell carcinoma/ISIC_0064109.jpg
+/train/Basal cell carcinoma/ISIC_0055891.jpg
+/train/Basal cell carcinoma/ISIC_0066558.jpg
+/train/Basal cell carcinoma/ISIC_0061617.jpg
+/train/Basal cell carcinoma/ISIC_0055806.jpg
+/train/Basal cell carcinoma/ISIC_0072108.jpg
+/train/Basal cell carcinoma/ISIC_0065031.jpg
+/train/Basal cell carcinoma/ISIC_0061088.jpg
+/train/Basal cell carcinoma/ISIC_0055850.jpg
+/train/Basal cell carcinoma/ISIC_0063108.jpg
+/train/Basal cell carcinoma/ISIC_0059329.jpg
+/train/Basal cell carcinoma/ISIC_0056774.jpg
+/train/Basal cell carcinoma/ISIC_0065440.jpg
+/train/Basal cell carcinoma/ISIC_0070714.jpg
+/train/Basal cell carcinoma/ISIC_0060180.jpg
+/train/Basal cell carcinoma/ISIC_0067341.jpg
+/train/Basal cell carcinoma/ISIC_0067765.jpg
+/train/Basal cell carcinoma/ISIC_0067332.jpg
+/train/Basal cell carcinoma/ISIC_0060303.jpg
+/train/Basal cell carcinoma/ISIC_0054064.jpg
+/train/Basal cell carcinoma/ISIC_0065589.jpg
+/train/Basal cell carcinoma/ISIC_0071873.jpg
+/train/Basal cell carcinoma/ISIC_0061901.jpg
+/train/Basal cell carcinoma/ISIC_0056916.jpg
+/train/Basal cell carcinoma/ISIC_0072480.jpg
+/train/Basal cell carcinoma/ISIC_0065049.jpg
+/train/Basal cell carcinoma/ISIC_0065971.jpg
+/train/Basal cell carcinoma/ISIC_0069709.jpg
+/train/Basal cell carcinoma/ISIC_0073049.jpg
+/train/Basal cell carcinoma/ISIC_0056144.jpg
+/train/Basal cell carcinoma/ISIC_0061303.jpg
+/train/Basal cell carcinoma/ISIC_0066210.jpg
+/train/Basal cell carcinoma/ISIC_0055773.jpg
+/train/Basal cell carcinoma/ISIC_0055758.jpg
+/train/Basal cell carcinoma/ISIC_0067264.jpg
+/train/Basal cell carcinoma/ISIC_0063083.jpg
+/train/Basal cell carcinoma/ISIC_0070853.jpg
+/train/Basal cell carcinoma/ISIC_0065056.jpg
+/train/Basal cell carcinoma/ISIC_0062904.jpg
+/train/Basal cell carcinoma/ISIC_0068356.jpg
+/train/Basal cell carcinoma/ISIC_0072761.jpg
+/train/Basal cell carcinoma/ISIC_0059673.jpg
+/train/Basal cell carcinoma/ISIC_0070021.jpg
+/train/Basal cell carcinoma/ISIC_0058996.jpg
+/train/Basal cell carcinoma/ISIC_0072293.jpg
+/train/Basal cell carcinoma/ISIC_0054190.jpg
+/train/Basal cell carcinoma/ISIC_0055444.jpg
+/train/Basal cell carcinoma/ISIC_0054723.jpg
+/train/Basal cell carcinoma/ISIC_0066010.jpg
+/train/Basal cell carcinoma/ISIC_0059775.jpg
+/train/Basal cell carcinoma/ISIC_0069697.jpg
+/train/Basal cell carcinoma/ISIC_0056146.jpg
+/train/Basal cell carcinoma/ISIC_0069777.jpg
+/train/Basal cell carcinoma/ISIC_0054817.jpg
+/train/Basal cell carcinoma/ISIC_0062962.jpg
+/train/Basal cell carcinoma/ISIC_0057839.jpg
+/train/Basal cell carcinoma/ISIC_0063640.jpg
+/train/Basal cell carcinoma/ISIC_0054940.jpg
+/train/Basal cell carcinoma/ISIC_0065279.jpg
+/train/Basal cell carcinoma/ISIC_0063923.jpg
+/train/Basal cell carcinoma/ISIC_0056951.jpg
+/train/Basal cell carcinoma/ISIC_0055075.jpg
+/train/Basal cell carcinoma/ISIC_0072935.jpg
+/train/Basal cell carcinoma/ISIC_0064998.jpg
+/train/Basal cell carcinoma/ISIC_0070206.jpg
+/train/Basal cell carcinoma/ISIC_0061979.jpg
+/train/Basal cell carcinoma/ISIC_0065874.jpg
+/train/Basal cell carcinoma/ISIC_0060370.jpg
+/train/Basal cell carcinoma/ISIC_0069215.jpg
+/train/Basal cell carcinoma/ISIC_0061984.jpg
+/train/Basal cell carcinoma/ISIC_0053474.jpg
+/train/Basal cell carcinoma/ISIC_0054960.jpg
+/train/Basal cell carcinoma/ISIC_0066155.jpg
+/train/Basal cell carcinoma/ISIC_0066071.jpg
+/train/Basal cell carcinoma/ISIC_0064021.jpg
+/train/Basal cell carcinoma/ISIC_0064968.jpg
+/train/Basal cell carcinoma/ISIC_0059017.jpg
+/train/Basal cell carcinoma/ISIC_0071885.jpg
+/train/Basal cell carcinoma/ISIC_0055681.jpg
+/train/Basal cell carcinoma/ISIC_0063400.jpg
+/train/Basal cell carcinoma/ISIC_0067764.jpg
+/train/Basal cell carcinoma/ISIC_0061483.jpg
+/train/Basal cell carcinoma/ISIC_0054161.jpg
+/train/Basal cell carcinoma/ISIC_0063844.jpg
+/train/Basal cell carcinoma/ISIC_0059664.jpg
+/train/Basal cell carcinoma/ISIC_0071522.jpg
+/train/Basal cell carcinoma/ISIC_0061337.jpg
+/train/Basal cell carcinoma/ISIC_0058928.jpg
+/train/Basal cell carcinoma/ISIC_0058817.jpg
+/train/Basal cell carcinoma/ISIC_0061328.jpg
+/train/Basal cell carcinoma/ISIC_0057309.jpg
+/train/Basal cell carcinoma/ISIC_0056516.jpg
+/train/Basal cell carcinoma/ISIC_0057915.jpg
+/train/Basal cell carcinoma/ISIC_0060602.jpg
+/train/Basal cell carcinoma/ISIC_0056383.jpg
+/train/Basal cell carcinoma/ISIC_0066039.jpg
+/train/Basal cell carcinoma/ISIC_0055180.jpg
+/train/Basal cell carcinoma/ISIC_0064226.jpg
+/train/Basal cell carcinoma/ISIC_0053840.jpg
+/train/Basal cell carcinoma/ISIC_0061548.jpg
+/train/Basal cell carcinoma/ISIC_0066727.jpg
+/train/Basal cell carcinoma/ISIC_0057427.jpg
+/train/Basal cell carcinoma/ISIC_0056099.jpg
+/train/Basal cell carcinoma/ISIC_0061739.jpg
+/train/Basal cell carcinoma/ISIC_0070437.jpg
+/train/Basal cell carcinoma/ISIC_0061348.jpg
+/train/Basal cell carcinoma/ISIC_0055158.jpg
+/train/Basal cell carcinoma/ISIC_0060790.jpg
+/train/Basal cell carcinoma/ISIC_0069287.jpg
+/train/Basal cell carcinoma/ISIC_0056087.jpg
+/train/Basal cell carcinoma/ISIC_0069345.jpg
+/train/Basal cell carcinoma/ISIC_0069332.jpg
+/train/Basal cell carcinoma/ISIC_0053876.jpg
+/train/Basal cell carcinoma/ISIC_0054467.jpg
+/train/Basal cell carcinoma/ISIC_0057998.jpg
+/train/Basal cell carcinoma/ISIC_0070832.jpg
+/train/Basal cell carcinoma/ISIC_0061174.jpg
+/train/Basal cell carcinoma/ISIC_0068674.jpg
+/train/Basal cell carcinoma/ISIC_0070102.jpg
+/train/Basal cell carcinoma/ISIC_0071116.jpg
+/train/Basal cell carcinoma/ISIC_0068047.jpg
+/train/Basal cell carcinoma/ISIC_0065088.jpg
+/train/Basal cell carcinoma/ISIC_0054836.jpg
+/train/Basal cell carcinoma/ISIC_0073061.jpg
+/train/Basal cell carcinoma/ISIC_0053501.jpg
+/train/Basal cell carcinoma/ISIC_0060008.jpg
+/train/Basal cell carcinoma/ISIC_0065237.jpg
+/train/Basal cell carcinoma/ISIC_0067291.jpg
+/train/Basal cell carcinoma/ISIC_0065401.jpg
+/train/Basal cell carcinoma/ISIC_0068492.jpg
+/train/Basal cell carcinoma/ISIC_0066569.jpg
+/train/Basal cell carcinoma/ISIC_0057190.jpg
+/train/Basal cell carcinoma/ISIC_0071414.jpg
+/train/Basal cell carcinoma/ISIC_0055330.jpg
+/train/Basal cell carcinoma/ISIC_0066894.jpg
+/train/Basal cell carcinoma/ISIC_0066683.jpg
+/train/Basal cell carcinoma/ISIC_0058466.jpg
+/train/Basal cell carcinoma/ISIC_0060117.jpg
+/train/Basal cell carcinoma/ISIC_0068489.jpg
+/train/Basal cell carcinoma/ISIC_0069319.jpg
+/train/Basal cell carcinoma/ISIC_0055951.jpg
+/train/Basal cell carcinoma/ISIC_0059255.jpg
+/train/Basal cell carcinoma/ISIC_0057111.jpg
+/train/Basal cell carcinoma/ISIC_0065790.jpg
+/train/Basal cell carcinoma/ISIC_0071308.jpg
+/train/Basal cell carcinoma/ISIC_0058104.jpg
+/train/Basal cell carcinoma/ISIC_0071757.jpg
+/train/Basal cell carcinoma/ISIC_0064415.jpg
+/train/Basal cell carcinoma/ISIC_0054905.jpg
+/train/Basal cell carcinoma/ISIC_0063859.jpg
+/train/Basal cell carcinoma/ISIC_0053599.jpg
+/train/Basal cell carcinoma/ISIC_0057205.jpg
+/train/Basal cell carcinoma/ISIC_0059644.jpg
+/train/Basal cell carcinoma/ISIC_0068109.jpg
+/train/Basal cell carcinoma/ISIC_0070909.jpg
+/train/Basal cell carcinoma/ISIC_0055510.jpg
+/train/Basal cell carcinoma/ISIC_0063166.jpg
+/train/Basal cell carcinoma/ISIC_0061202.jpg
+/train/Basal cell carcinoma/ISIC_0072034.jpg
+/train/Basal cell carcinoma/ISIC_0054881.jpg
+/train/Basal cell carcinoma/ISIC_0069359.jpg
+/train/Basal cell carcinoma/ISIC_0056607.jpg
+/train/Basal cell carcinoma/ISIC_0057404.jpg
+/train/Basal cell carcinoma/ISIC_0053809.jpg
+/train/Basal cell carcinoma/ISIC_0072112.jpg
+/train/Basal cell carcinoma/ISIC_0072951.jpg
+/train/Basal cell carcinoma/ISIC_0068856.jpg
+/train/Basal cell carcinoma/ISIC_0061906.jpg
+/train/Basal cell carcinoma/ISIC_0068878.jpg
+/train/Basal cell carcinoma/ISIC_0058240.jpg
+/train/Basal cell carcinoma/ISIC_0072759.jpg
+/train/Basal cell carcinoma/ISIC_0068909.jpg
+/train/Basal cell carcinoma/ISIC_0069553.jpg
+/train/Basal cell carcinoma/ISIC_0060040.jpg
+/train/Basal cell carcinoma/ISIC_0056775.jpg
+/train/Basal cell carcinoma/ISIC_0068339.jpg
+/train/Basal cell carcinoma/ISIC_0060133.jpg
+/train/Basal cell carcinoma/ISIC_0061671.jpg
+/train/Basal cell carcinoma/ISIC_0069737.jpg
+/train/Basal cell carcinoma/ISIC_0071676.jpg
+/train/Basal cell carcinoma/ISIC_0058384.jpg
+/train/Basal cell carcinoma/ISIC_0059080.jpg
+/train/Basal cell carcinoma/ISIC_0054144.jpg
+/train/Basal cell carcinoma/ISIC_0069807.jpg
+/train/Basal cell carcinoma/ISIC_0056718.jpg
+/train/Basal cell carcinoma/ISIC_0058062.jpg
+/train/Basal cell carcinoma/ISIC_0073137.jpg
+/train/Basal cell carcinoma/ISIC_0059063.jpg
+/train/Basal cell carcinoma/ISIC_0054140.jpg
+/train/Basal cell carcinoma/ISIC_0054524.jpg
+/train/Basal cell carcinoma/ISIC_0062448.jpg
+/train/Basal cell carcinoma/ISIC_0055961.jpg
+/train/Basal cell carcinoma/ISIC_0061020.jpg
+/train/Basal cell carcinoma/ISIC_0060608.jpg
+/train/Basal cell carcinoma/ISIC_0060166.jpg
+/train/Basal cell carcinoma/ISIC_0058576.jpg
+/train/Basal cell carcinoma/ISIC_0070222.jpg
+/train/Basal cell carcinoma/ISIC_0065282.jpg
+/train/Basal cell carcinoma/ISIC_0055245.jpg
+/train/Basal cell carcinoma/ISIC_0061270.jpg
+/train/Basal cell carcinoma/ISIC_0054235.jpg
+/train/Basal cell carcinoma/ISIC_0068287.jpg
+/train/Basal cell carcinoma/ISIC_0059064.jpg
+/train/Basal cell carcinoma/ISIC_0063419.jpg
+/train/Basal cell carcinoma/ISIC_0073109.jpg
+/train/Basal cell carcinoma/ISIC_0068987.jpg
+/train/Basal cell carcinoma/ISIC_0060777.jpg
+/train/Basal cell carcinoma/ISIC_0056088.jpg
+/train/Basal cell carcinoma/ISIC_0054539.jpg
+/train/Basal cell carcinoma/ISIC_0056153.jpg
+/train/Basal cell carcinoma/ISIC_0059793.jpg
+/train/Basal cell carcinoma/ISIC_0070721.jpg
+/train/Basal cell carcinoma/ISIC_0063925.jpg
+/train/Basal cell carcinoma/ISIC_0058775.jpg
+/train/Basal cell carcinoma/ISIC_0061074.jpg
+/train/Basal cell carcinoma/ISIC_0056362.jpg
+/train/Basal cell carcinoma/ISIC_0060095.jpg
+/train/Basal cell carcinoma/ISIC_0066816.jpg
+/train/Basal cell carcinoma/ISIC_0057757.jpg
+/train/Basal cell carcinoma/ISIC_0063446.jpg
+/train/Basal cell carcinoma/ISIC_0055111.jpg
+/train/Basal cell carcinoma/ISIC_0065146.jpg
+/train/Basal cell carcinoma/ISIC_0061577.jpg
+/train/Basal cell carcinoma/ISIC_0063933.jpg
+/train/Basal cell carcinoma/ISIC_0070036.jpg
+/train/Basal cell carcinoma/ISIC_0072677.jpg
+/train/Basal cell carcinoma/ISIC_0064725.jpg
+/train/Basal cell carcinoma/ISIC_0066979.jpg
+/train/Basal cell carcinoma/ISIC_0071843.jpg
+/train/Basal cell carcinoma/ISIC_0059758.jpg
+/train/Basal cell carcinoma/ISIC_0064901.jpg
+/train/Basal cell carcinoma/ISIC_0057020.jpg
+/train/Basal cell carcinoma/ISIC_0066107.jpg
+/train/Basal cell carcinoma/ISIC_0071899.jpg
+/train/Basal cell carcinoma/ISIC_0060868.jpg
+/train/Basal cell carcinoma/ISIC_0070191.jpg
+/train/Basal cell carcinoma/ISIC_0065116.jpg
+/train/Basal cell carcinoma/ISIC_0069734.jpg
+/train/Basal cell carcinoma/ISIC_0063227.jpg
+/train/Basal cell carcinoma/ISIC_0059752.jpg
+/train/Basal cell carcinoma/ISIC_0070264.jpg
+/train/Basal cell carcinoma/ISIC_0071366.jpg
+/train/Basal cell carcinoma/ISIC_0059634.jpg
+/train/Basal cell carcinoma/ISIC_0054390.jpg
+/train/Basal cell carcinoma/ISIC_0068270.jpg
+/train/Basal cell carcinoma/ISIC_0064588.jpg
+/train/Basal cell carcinoma/ISIC_0065147.jpg
+/train/Basal cell carcinoma/ISIC_0062527.jpg
+/train/Basal cell carcinoma/ISIC_0065112.jpg
+/train/Basal cell carcinoma/ISIC_0065368.jpg
+/train/Basal cell carcinoma/ISIC_0058735.jpg
+/train/Basal cell carcinoma/ISIC_0059012.jpg
+/train/Basal cell carcinoma/ISIC_0067374.jpg
+/train/Basal cell carcinoma/ISIC_0069724.jpg
+/train/Basal cell carcinoma/ISIC_0066725.jpg
+/train/Basal cell carcinoma/ISIC_0054782.jpg
+/train/Basal cell carcinoma/ISIC_0064642.jpg
+/train/Basal cell carcinoma/ISIC_0061615.jpg
+/train/Basal cell carcinoma/ISIC_0061146.jpg
+/train/Basal cell carcinoma/ISIC_0059912.jpg
+/train/Basal cell carcinoma/ISIC_0070537.jpg
+/train/Basal cell carcinoma/ISIC_0054240.jpg
+/train/Basal cell carcinoma/ISIC_0066540.jpg
+/train/Basal cell carcinoma/ISIC_0067529.jpg
+/train/Basal cell carcinoma/ISIC_0055812.jpg
+/train/Basal cell carcinoma/ISIC_0065564.jpg
+/train/Melanoma NOS/ISIC_0056511.jpg
+/train/Melanoma NOS/ISIC_0061152.jpg
+/train/Melanoma NOS/ISIC_0065869.jpg
+/train/Melanoma NOS/ISIC_0059415.jpg
+/train/Melanoma NOS/ISIC_0056392.jpg
+/train/Melanoma NOS/ISIC_0065813.jpg
+/train/Melanoma NOS/ISIC_0065525.jpg
+/train/Melanoma NOS/ISIC_0070347.jpg
+/train/Melanoma NOS/ISIC_0071712.jpg
+/train/Melanoma NOS/ISIC_0054024.jpg
+/train/Melanoma NOS/ISIC_0068234.jpg
+/train/Melanoma NOS/ISIC_0066382.jpg
+/train/Melanoma NOS/ISIC_0068961.jpg
+/train/Melanoma NOS/ISIC_0069705.jpg
+/train/Melanoma NOS/ISIC_0071492.jpg
+/train/Melanoma NOS/ISIC_0064270.jpg
+/train/Melanoma NOS/ISIC_0065622.jpg
+/train/Melanoma NOS/ISIC_0071559.jpg
+/train/Melanoma NOS/ISIC_0059046.jpg
+/train/Melanoma NOS/ISIC_0056652.jpg
+/train/Melanoma NOS/ISIC_0067798.jpg
+/train/Melanoma NOS/ISIC_0066268.jpg
+/train/Melanoma NOS/ISIC_0053702.jpg
+/train/Melanoma NOS/ISIC_0067908.jpg
+/train/Melanoma NOS/ISIC_0056614.jpg
+/train/Melanoma NOS/ISIC_0065714.jpg
+/train/Melanoma NOS/ISIC_0060315.jpg
+/train/Melanoma NOS/ISIC_0068460.jpg
+/train/Melanoma NOS/ISIC_0058577.jpg
+/train/Melanoma NOS/ISIC_0070815.jpg
+/train/Melanoma NOS/ISIC_0063568.jpg
+/train/Melanoma NOS/ISIC_0067359.jpg
+/train/Melanoma NOS/ISIC_0071865.jpg
+/train/Melanoma NOS/ISIC_0063469.jpg
+/train/Melanoma NOS/ISIC_0072989.jpg
+/train/Melanoma NOS/ISIC_0054492.jpg
+/train/Melanoma NOS/ISIC_0056345.jpg
+/train/Melanoma NOS/ISIC_0060741.jpg
+/train/Melanoma NOS/ISIC_0066532.jpg
+/train/Melanoma NOS/ISIC_0063930.jpg
+/train/Melanoma NOS/ISIC_0060159.jpg
+/train/Melanoma NOS/ISIC_0064653.jpg
+/train/Melanoma NOS/ISIC_0059264.jpg
+/train/Melanoma NOS/ISIC_0056170.jpg
+/train/Melanoma NOS/ISIC_0067902.jpg
+/train/Melanoma NOS/ISIC_0072571.jpg
+/train/Melanoma NOS/ISIC_0062994.jpg
+/train/Melanoma NOS/ISIC_0061799.jpg
+/train/Melanoma NOS/ISIC_0072339.jpg
+/train/Melanoma NOS/ISIC_0063325.jpg
+/train/Melanoma NOS/ISIC_0063114.jpg
+/train/Melanoma NOS/ISIC_0057149.jpg
+/train/Melanoma NOS/ISIC_0068012.jpg
+/train/Melanoma NOS/ISIC_0060132.jpg
+/train/Melanoma NOS/ISIC_0054713.jpg
+/train/Melanoma NOS/ISIC_0055900.jpg
+/train/Melanoma NOS/ISIC_0056247.jpg
+/train/Melanoma NOS/ISIC_0061833.jpg
+/train/Melanoma NOS/ISIC_0071245.jpg
+/train/Melanoma NOS/ISIC_0055175.jpg
+/train/Melanoma NOS/ISIC_0066756.jpg
+/train/Melanoma NOS/ISIC_0058754.jpg
+/train/Melanoma NOS/ISIC_0065025.jpg
+/train/Melanoma NOS/ISIC_0055293.jpg
+/train/Melanoma NOS/ISIC_0071815.jpg
+/train/Melanoma NOS/ISIC_0061158.jpg
+/train/Melanoma NOS/ISIC_0056201.jpg
+/train/Melanoma NOS/ISIC_0069381.jpg
+/train/Melanoma NOS/ISIC_0053804.jpg
+/train/Melanoma NOS/ISIC_0072330.jpg
+/train/Melanoma NOS/ISIC_0066001.jpg
+/train/Melanoma NOS/ISIC_0065045.jpg
+/train/Melanoma NOS/ISIC_0060583.jpg
+/train/Melanoma NOS/ISIC_0071208.jpg
+/train/Melanoma NOS/ISIC_0055876.jpg
+/train/Melanoma NOS/ISIC_0068979.jpg
+/train/Melanoma NOS/ISIC_0066845.jpg
+/train/Melanoma NOS/ISIC_0063324.jpg
+/train/Melanoma NOS/ISIC_0072109.jpg
+/train/Melanoma NOS/ISIC_0062509.jpg
+/train/Melanoma NOS/ISIC_0054141.jpg
+/train/Melanoma NOS/ISIC_0063026.jpg
+/train/Melanoma NOS/ISIC_0056770.jpg
+/train/Melanoma NOS/ISIC_0057306.jpg
+/train/Melanoma NOS/ISIC_0070442.jpg
+/train/Melanoma NOS/ISIC_0069253.jpg
+/train/Melanoma NOS/ISIC_0058332.jpg
+/train/Melanoma NOS/ISIC_0053945.jpg
+/train/Melanoma NOS/ISIC_0060616.jpg
+/train/Melanoma NOS/ISIC_0058164.jpg
+/train/Melanoma NOS/ISIC_0069591.jpg
+/train/Melanoma NOS/ISIC_0054734.jpg
+/train/Melanoma NOS/ISIC_0061244.jpg
+/train/Melanoma NOS/ISIC_0068382.jpg
+/train/Melanoma NOS/ISIC_0066520.jpg
+/train/Melanoma NOS/ISIC_0057048.jpg
+/train/Melanoma NOS/ISIC_0058918.jpg
+/train/Melanoma NOS/ISIC_0073038.jpg
+/train/Melanoma NOS/ISIC_0056644.jpg
+/train/Melanoma NOS/ISIC_0072568.jpg
+/train/Melanoma NOS/ISIC_0068227.jpg
+/train/Melanoma NOS/ISIC_0054290.jpg
+/train/Melanoma NOS/ISIC_0063271.jpg
+/train/Melanoma NOS/ISIC_0053843.jpg
+/train/Melanoma NOS/ISIC_0065382.jpg
+/train/Melanoma NOS/ISIC_0055254.jpg
+/train/Melanoma NOS/ISIC_0064279.jpg
+/train/Melanoma NOS/ISIC_0064559.jpg
+/train/Melanoma NOS/ISIC_0067274.jpg
+/train/Melanoma NOS/ISIC_0063998.jpg
+/train/Melanoma NOS/ISIC_0064294.jpg
+/train/Melanoma NOS/ISIC_0063295.jpg
+/train/Melanoma NOS/ISIC_0059987.jpg
+/train/Melanoma NOS/ISIC_0064307.jpg
+/train/Melanoma NOS/ISIC_0072531.jpg
+/train/Melanoma NOS/ISIC_0057848.jpg
+/train/Melanoma NOS/ISIC_0070432.jpg
+/train/Melanoma NOS/ISIC_0057841.jpg
+/train/Melanoma NOS/ISIC_0054070.jpg
+/train/Melanoma NOS/ISIC_0054912.jpg
+/train/Melanoma NOS/ISIC_0063426.jpg
+/train/Melanoma NOS/ISIC_0056298.jpg
+/train/Melanoma NOS/ISIC_0057779.jpg
+/train/Melanoma NOS/ISIC_0065235.jpg
+/train/Melanoma NOS/ISIC_0071563.jpg
+/train/Melanoma NOS/ISIC_0066213.jpg
+/train/Melanoma NOS/ISIC_0066422.jpg
+/train/Melanoma NOS/ISIC_0061945.jpg
+/train/Melanoma NOS/ISIC_0072069.jpg
+/train/Melanoma NOS/ISIC_0063926.jpg
+/train/Melanoma NOS/ISIC_0055517.jpg
+/train/Melanoma NOS/ISIC_0058597.jpg
+/train/Melanoma NOS/ISIC_0071470.jpg
+/train/Melanoma NOS/ISIC_0068696.jpg
+/train/Melanoma NOS/ISIC_0065932.jpg
+/train/Melanoma NOS/ISIC_0058569.jpg
+/train/Melanoma NOS/ISIC_0067043.jpg
+/train/Melanoma NOS/ISIC_0069511.jpg
+/train/Melanoma NOS/ISIC_0063792.jpg
+/train/Melanoma NOS/ISIC_0054078.jpg
+/train/Melanoma NOS/ISIC_0071204.jpg
+/train/Melanoma NOS/ISIC_0059840.jpg
+/train/Melanoma NOS/ISIC_0066156.jpg
+/train/Melanoma NOS/ISIC_0059631.jpg
+/train/Melanoma NOS/ISIC_0059330.jpg
+/train/Melanoma NOS/ISIC_0063109.jpg
+/train/Melanoma NOS/ISIC_0056225.jpg
+/train/Melanoma NOS/ISIC_0064672.jpg
+/train/Melanoma NOS/ISIC_0065523.jpg
+/train/Melanoma NOS/ISIC_0069156.jpg
+/train/Melanoma NOS/ISIC_0064619.jpg
+/train/Melanoma NOS/ISIC_0062318.jpg
+/train/Melanoma NOS/ISIC_0069466.jpg
+/train/Melanoma NOS/ISIC_0071904.jpg
+/train/Melanoma NOS/ISIC_0073127.jpg
+/train/Melanoma NOS/ISIC_0060597.jpg
+/train/Melanoma NOS/ISIC_0071916.jpg
+/train/Melanoma NOS/ISIC_0060693.jpg
+/train/Melanoma NOS/ISIC_0064517.jpg
+/train/Melanoma NOS/ISIC_0061544.jpg
+/train/Melanoma NOS/ISIC_0055519.jpg
+/train/Melanoma NOS/ISIC_0054251.jpg
+/train/Melanoma NOS/ISIC_0064592.jpg
+/train/Melanoma NOS/ISIC_0062991.jpg
+/train/Melanoma NOS/ISIC_0070253.jpg
+/train/Melanoma NOS/ISIC_0060665.jpg
+/train/Melanoma NOS/ISIC_0067655.jpg
+/train/Melanoma NOS/ISIC_0067200.jpg
+/train/Melanoma NOS/ISIC_0066519.jpg
+/train/Melanoma NOS/ISIC_0072173.jpg
+/train/Melanoma NOS/ISIC_0065419.jpg
+/train/Melanoma NOS/ISIC_0063839.jpg
+/train/Melanoma NOS/ISIC_0071596.jpg
+/train/Melanoma NOS/ISIC_0061953.jpg
+/train/Melanoma NOS/ISIC_0061928.jpg
+/train/Melanoma NOS/ISIC_0070477.jpg
+/train/Melanoma NOS/ISIC_0067744.jpg
+/train/Melanoma NOS/ISIC_0059490.jpg
+/train/Melanoma NOS/ISIC_0072523.jpg
+/train/Melanoma NOS/ISIC_0066863.jpg
+/train/Melanoma NOS/ISIC_0063182.jpg
+/train/Melanoma NOS/ISIC_0067167.jpg
+/train/Melanoma NOS/ISIC_0069775.jpg
+/train/Melanoma NOS/ISIC_0070032.jpg
+/train/Melanoma NOS/ISIC_0064201.jpg
+/train/Melanoma NOS/ISIC_0067452.jpg
+/train/Melanoma NOS/ISIC_0063067.jpg
+/train/Melanoma NOS/ISIC_0055056.jpg
+/train/Melanoma NOS/ISIC_0071109.jpg
+/train/Melanoma NOS/ISIC_0065173.jpg
+/train/Melanoma NOS/ISIC_0054848.jpg
+/train/Melanoma NOS/ISIC_0058391.jpg
+/train/Melanoma NOS/ISIC_0064732.jpg
+/train/Melanoma NOS/ISIC_0063190.jpg
+/train/Melanoma NOS/ISIC_0053824.jpg
+/train/Melanoma NOS/ISIC_0070427.jpg
+/train/Melanoma NOS/ISIC_0070313.jpg
+/train/Melanoma NOS/ISIC_0070118.jpg
+/train/Melanoma NOS/ISIC_0072396.jpg
+/train/Melanoma NOS/ISIC_0059804.jpg
+/train/Melanoma NOS/ISIC_0059065.jpg
+/train/Melanoma NOS/ISIC_0059671.jpg
+/train/Melanoma NOS/ISIC_0058840.jpg
+/train/Melanoma NOS/ISIC_0054410.jpg
+/train/Melanoma NOS/ISIC_0056725.jpg
+/train/Melanoma NOS/ISIC_0057532.jpg
+/train/Melanoma NOS/ISIC_0057370.jpg
+/train/Melanoma NOS/ISIC_0055193.jpg
+/train/Melanoma NOS/ISIC_0053839.jpg
+/train/Melanoma NOS/ISIC_0067008.jpg
+/train/Melanoma NOS/ISIC_0056113.jpg
+/train/Melanoma NOS/ISIC_0054337.jpg
+/train/Melanoma NOS/ISIC_0057823.jpg
+/train/Melanoma NOS/ISIC_0069361.jpg
+/train/Melanoma NOS/ISIC_0061362.jpg
+/train/Melanoma NOS/ISIC_0064360.jpg
+/train/Melanoma NOS/ISIC_0068673.jpg
+/train/Melanoma NOS/ISIC_0054626.jpg
+/train/Melanoma NOS/ISIC_0061580.jpg
+/train/Melanoma NOS/ISIC_0057234.jpg
+/train/Melanoma NOS/ISIC_0057963.jpg
+/train/Melanoma NOS/ISIC_0067731.jpg
+/train/Melanoma NOS/ISIC_0065142.jpg
+/train/Melanoma NOS/ISIC_0061067.jpg
+/train/Melanoma NOS/ISIC_0065215.jpg
+/train/Melanoma NOS/ISIC_0056436.jpg
+/train/Melanoma NOS/ISIC_0066423.jpg
+/train/Melanoma NOS/ISIC_0062919.jpg
+/train/Melanoma NOS/ISIC_0059387.jpg
+/train/Melanoma NOS/ISIC_0063018.jpg
+/train/Melanoma NOS/ISIC_0060094.jpg
+/train/Melanoma NOS/ISIC_0055709.jpg
+/train/Melanoma NOS/ISIC_0068727.jpg
+/train/Melanoma NOS/ISIC_0059093.jpg
+/train/Melanoma NOS/ISIC_0058643.jpg
+/train/Melanoma NOS/ISIC_0072375.jpg
+/train/Melanoma NOS/ISIC_0067438.jpg
+/train/Melanoma NOS/ISIC_0073231.jpg
+/train/Melanoma NOS/ISIC_0058237.jpg
+/train/Melanoma NOS/ISIC_0066399.jpg
+/train/Melanoma NOS/ISIC_0059141.jpg
+/train/Melanoma NOS/ISIC_0065229.jpg
+/train/Melanoma NOS/ISIC_0062423.jpg
+/train/Melanoma NOS/ISIC_0060968.jpg
+/train/Melanoma NOS/ISIC_0064549.jpg
+/train/Melanoma NOS/ISIC_0055340.jpg
+/train/Melanoma NOS/ISIC_0059992.jpg
+/train/Melanoma NOS/ISIC_0063102.jpg
+/train/Melanoma NOS/ISIC_0059316.jpg
+/train/Melanoma NOS/ISIC_0055355.jpg
+/train/Melanoma NOS/ISIC_0070419.jpg
+/train/Melanoma NOS/ISIC_0057083.jpg
+/train/Melanoma NOS/ISIC_0054079.jpg
+/train/Melanoma NOS/ISIC_0070931.jpg
+/train/Melanoma NOS/ISIC_0069819.jpg
+/train/Melanoma NOS/ISIC_0063202.jpg
+/train/Melanoma NOS/ISIC_0061699.jpg
+/train/Melanoma NOS/ISIC_0055417.jpg
+/train/Melanoma NOS/ISIC_0067846.jpg
+/train/Melanoma NOS/ISIC_0055550.jpg
+/train/Melanoma NOS/ISIC_0057539.jpg
+/train/Melanoma NOS/ISIC_0061060.jpg
+/train/Melanoma NOS/ISIC_0057209.jpg
+/train/Melanoma NOS/ISIC_0056350.jpg
+/train/Melanoma NOS/ISIC_0071045.jpg
+/train/Melanoma NOS/ISIC_0060621.jpg
+/train/Melanoma NOS/ISIC_0067248.jpg
+/train/Melanoma NOS/ISIC_0072021.jpg
+/train/Melanoma NOS/ISIC_0059597.jpg
+/train/Melanoma NOS/ISIC_0056271.jpg
+/train/Melanoma NOS/ISIC_0071632.jpg
+/train/Melanoma NOS/ISIC_0067843.jpg
+/train/Melanoma NOS/ISIC_0068153.jpg
+/train/Melanoma NOS/ISIC_0061532.jpg
+/train/Melanoma NOS/ISIC_0055562.jpg
+/train/Melanoma NOS/ISIC_0070020.jpg
+/train/Melanoma NOS/ISIC_0066568.jpg
+/train/Melanoma NOS/ISIC_0057716.jpg
+/train/Melanoma NOS/ISIC_0066744.jpg
+/train/Melanoma NOS/ISIC_0064180.jpg
+/train/Melanoma NOS/ISIC_0065402.jpg
+/train/Melanoma NOS/ISIC_0072535.jpg
+/train/Melanoma NOS/ISIC_0059089.jpg
+/train/Melanoma NOS/ISIC_0056740.jpg
+/train/Melanoma NOS/ISIC_0069193.jpg
+/train/Melanoma NOS/ISIC_0067347.jpg
+/train/Melanoma NOS/ISIC_0056485.jpg
+/train/Melanoma NOS/ISIC_0070913.jpg
+/train/Melanoma NOS/ISIC_0070198.jpg
+/train/Melanoma NOS/ISIC_0071995.jpg
+/train/Melanoma NOS/ISIC_0069736.jpg
+/train/Melanoma NOS/ISIC_0062864.jpg
+/train/Melanoma NOS/ISIC_0066367.jpg
+/train/Melanoma NOS/ISIC_0070258.jpg
+/train/Melanoma NOS/ISIC_0060898.jpg
+/train/Melanoma NOS/ISIC_0068309.jpg
+/train/Melanoma NOS/ISIC_0057550.jpg
+/train/Melanoma NOS/ISIC_0068936.jpg
+/train/Melanoma NOS/ISIC_0060736.jpg
+/train/Melanoma NOS/ISIC_0068273.jpg
+/train/Melanoma NOS/ISIC_0069479.jpg
+/train/Melanoma NOS/ISIC_0064010.jpg
+/train/Melanoma NOS/ISIC_0065106.jpg
+/train/Melanoma NOS/ISIC_0056546.jpg
+/train/Melanoma NOS/ISIC_0058177.jpg
+/train/Melanoma NOS/ISIC_0062181.jpg
+/train/Melanoma NOS/ISIC_0069638.jpg
+/train/Melanoma NOS/ISIC_0070285.jpg
+/train/Melanoma NOS/ISIC_0063131.jpg
+/train/Melanoma NOS/ISIC_0059766.jpg
+/train/Melanoma NOS/ISIC_0071913.jpg
+/train/Melanoma NOS/ISIC_0063634.jpg
+/train/Melanoma NOS/ISIC_0071666.jpg
+/train/Melanoma NOS/ISIC_0061127.jpg
+/train/Melanoma NOS/ISIC_0064476.jpg
+/train/Melanoma NOS/ISIC_0063394.jpg
+/train/Melanoma NOS/ISIC_0070727.jpg
+/train/Melanoma NOS/ISIC_0071316.jpg
+/train/Melanoma NOS/ISIC_0057702.jpg
+/train/Melanoma NOS/ISIC_0070968.jpg
+/train/Melanoma NOS/ISIC_0071335.jpg
+/train/Melanoma NOS/ISIC_0061334.jpg
+/train/Melanoma NOS/ISIC_0068206.jpg
+/train/Melanoma NOS/ISIC_0066320.jpg
+/train/Melanoma NOS/ISIC_0058458.jpg
+/train/Melanoma NOS/ISIC_0063913.jpg
+/train/Melanoma NOS/ISIC_0071939.jpg
+/train/Melanoma NOS/ISIC_0058028.jpg
+/train/Melanoma NOS/ISIC_0064229.jpg
+/train/Melanoma NOS/ISIC_0072924.jpg
+/train/Melanoma NOS/ISIC_0072641.jpg
+/train/Melanoma NOS/ISIC_0061155.jpg
+/train/Melanoma NOS/ISIC_0058492.jpg
+/train/Melanoma NOS/ISIC_0056202.jpg
+/train/Melanoma NOS/ISIC_0067690.jpg
+/train/Melanoma NOS/ISIC_0061625.jpg
+/train/Melanoma NOS/ISIC_0063826.jpg
+/train/Melanoma NOS/ISIC_0072825.jpg
+/train/Melanoma NOS/ISIC_0070045.jpg
+/train/Melanoma NOS/ISIC_0069214.jpg
+/train/Melanoma NOS/ISIC_0071740.jpg
+/train/Melanoma NOS/ISIC_0060221.jpg
+/train/Melanoma NOS/ISIC_0063981.jpg
+/train/Melanoma NOS/ISIC_0065788.jpg
+/train/Melanoma NOS/ISIC_0071006.jpg
+/train/Melanoma NOS/ISIC_0062756.jpg
+/train/Melanoma NOS/ISIC_0072151.jpg
+/train/Melanoma NOS/ISIC_0061581.jpg
+/train/Melanoma NOS/ISIC_0059541.jpg
+/train/Melanoma NOS/ISIC_0066918.jpg
+/train/Melanoma NOS/ISIC_0055091.jpg
+/train/Melanoma NOS/ISIC_0069920.jpg
+/train/Melanoma NOS/ISIC_0059218.jpg
+/train/Melanoma NOS/ISIC_0072743.jpg
+/train/Melanoma NOS/ISIC_0055871.jpg
+/train/Melanoma NOS/ISIC_0072612.jpg
+/train/Melanoma NOS/ISIC_0068819.jpg
+/train/Melanoma NOS/ISIC_0063077.jpg
+/train/Melanoma NOS/ISIC_0065305.jpg
+/train/Melanoma NOS/ISIC_0070724.jpg
+/train/Melanoma NOS/ISIC_0063797.jpg
+/train/Melanoma NOS/ISIC_0058319.jpg
+/train/Melanoma NOS/ISIC_0055143.jpg
+/train/Melanoma NOS/ISIC_0055540.jpg
+/train/Melanoma NOS/ISIC_0072574.jpg
+/train/Melanoma NOS/ISIC_0072494.jpg
+/train/Melanoma NOS/ISIC_0067191.jpg
+/train/Melanoma NOS/ISIC_0071997.jpg
+/train/Melanoma NOS/ISIC_0071800.jpg
+/train/Melanoma NOS/ISIC_0062944.jpg
+/train/Melanoma NOS/ISIC_0061751.jpg
+/train/Melanoma NOS/ISIC_0069277.jpg
+/train/Melanoma NOS/ISIC_0057172.jpg
+/train/Melanoma NOS/ISIC_0055453.jpg
+/train/Melanoma NOS/ISIC_0070784.jpg
+/train/Melanoma NOS/ISIC_0065577.jpg
+/train/Melanoma NOS/ISIC_0072288.jpg
+/train/Melanoma NOS/ISIC_0068178.jpg
+/train/Melanoma NOS/ISIC_0058909.jpg
+/train/Melanoma NOS/ISIC_0060713.jpg
+/train/Melanoma NOS/ISIC_0058334.jpg
+/train/Melanoma NOS/ISIC_0061626.jpg
+/train/Melanoma NOS/ISIC_0056604.jpg
+/train/Melanoma NOS/ISIC_0067757.jpg
+/train/Melanoma NOS/ISIC_0056364.jpg
+/train/Melanoma NOS/ISIC_0054220.jpg
+/train/Melanoma NOS/ISIC_0059353.jpg
+/train/Melanoma NOS/ISIC_0063952.jpg
+/train/Melanoma NOS/ISIC_0056988.jpg
+/train/Melanoma NOS/ISIC_0059866.jpg
+/train/Melanoma NOS/ISIC_0064694.jpg
+/train/Melanoma NOS/ISIC_0054213.jpg
+/train/Melanoma NOS/ISIC_0059074.jpg
+/train/Melanoma NOS/ISIC_0072286.jpg
+/train/Melanoma NOS/ISIC_0063521.jpg
+/train/Melanoma NOS/ISIC_0071642.jpg
+/train/Melanoma NOS/ISIC_0070166.jpg
+/train/Melanoma NOS/ISIC_0067933.jpg
+/train/Melanoma NOS/ISIC_0065921.jpg
+/train/Melanoma NOS/ISIC_0072714.jpg
+/train/Melanoma NOS/ISIC_0059042.jpg
+/train/Melanoma NOS/ISIC_0063908.jpg
+/train/Melanoma NOS/ISIC_0062793.jpg
+/train/Melanoma NOS/ISIC_0071430.jpg
+/train/Melanoma NOS/ISIC_0069660.jpg
+/train/Melanoma NOS/ISIC_0069154.jpg
+/train/Melanoma NOS/ISIC_0069179.jpg
+/train/Melanoma NOS/ISIC_0072976.jpg
+/train/Melanoma NOS/ISIC_0061166.jpg
+/train/Melanoma NOS/ISIC_0059943.jpg
+/train/Melanoma NOS/ISIC_0061141.jpg
+/train/Melanoma NOS/ISIC_0072730.jpg
+/train/Melanoma NOS/ISIC_0064060.jpg
+/train/Melanoma NOS/ISIC_0061195.jpg
+/train/Melanoma NOS/ISIC_0061106.jpg
+/train/Melanoma NOS/ISIC_0069668.jpg
+/train/Melanoma NOS/ISIC_0068838.jpg
+/train/Melanoma NOS/ISIC_0073143.jpg
+/train/Melanoma NOS/ISIC_0056814.jpg
+/train/Melanoma NOS/ISIC_0070009.jpg
+/train/Melanoma NOS/ISIC_0055276.jpg
+/train/Melanoma NOS/ISIC_0053854.jpg
+/train/Melanoma NOS/ISIC_0064871.jpg
+/train/Melanoma NOS/ISIC_0072733.jpg
+/train/Melanoma NOS/ISIC_0055690.jpg
+/train/Melanoma NOS/ISIC_0061281.jpg
+/train/Melanoma NOS/ISIC_0071936.jpg
+/train/Melanoma NOS/ISIC_0062042.jpg
+/train/Melanoma NOS/ISIC_0068393.jpg
+/train/Melanoma NOS/ISIC_0054377.jpg
+/train/Melanoma NOS/ISIC_0071035.jpg
+/train/Melanoma NOS/ISIC_0055359.jpg
+/train/Melanoma NOS/ISIC_0054971.jpg
+/train/Melanoma NOS/ISIC_0053960.jpg
+/train/Melanoma NOS/ISIC_0060893.jpg
+/train/Melanoma NOS/ISIC_0064427.jpg
+/train/Melanoma NOS/ISIC_0067489.jpg
+/train/Melanoma NOS/ISIC_0069988.jpg
+/train/Melanoma NOS/ISIC_0055031.jpg
+/train/Melanoma NOS/ISIC_0060228.jpg
+/train/Melanoma NOS/ISIC_0062196.jpg
+/train/Melanoma NOS/ISIC_0062762.jpg
+/train/Melanoma NOS/ISIC_0059325.jpg
+/train/Melanoma NOS/ISIC_0059206.jpg
+/train/Melanoma NOS/ISIC_0062063.jpg
+/train/Melanoma NOS/ISIC_0062985.jpg
+/train/Melanoma NOS/ISIC_0068152.jpg
+/train/Melanoma NOS/ISIC_0056063.jpg
+/train/Melanoma NOS/ISIC_0058943.jpg
+/train/Melanoma NOS/ISIC_0066085.jpg
+/train/Melanoma NOS/ISIC_0067325.jpg
+/train/Melanoma NOS/ISIC_0061411.jpg
+/train/Melanoma NOS/ISIC_0059082.jpg
+/train/Melanoma NOS/ISIC_0072004.jpg
+/train/Melanoma NOS/ISIC_0067972.jpg
+/train/Melanoma NOS/ISIC_0061886.jpg
+/train/Melanoma NOS/ISIC_0069860.jpg
+/train/Melanoma NOS/ISIC_0054289.jpg
+/train/Melanoma NOS/ISIC_0063655.jpg
+/train/Melanoma NOS/ISIC_0060519.jpg
+/train/Melanoma NOS/ISIC_0056663.jpg
+/train/Melanoma NOS/ISIC_0068189.jpg
+/train/Melanoma NOS/ISIC_0066855.jpg
+/train/Melanoma NOS/ISIC_0068677.jpg
+/train/Melanoma NOS/ISIC_0068962.jpg
+/train/Melanoma NOS/ISIC_0061914.jpg
+/train/Melanoma NOS/ISIC_0068116.jpg
+/train/Melanoma NOS/ISIC_0059628.jpg
+/train/Melanoma NOS/ISIC_0059904.jpg
+/train/Melanoma NOS/ISIC_0060256.jpg
+/train/Melanoma NOS/ISIC_0061566.jpg
+/train/Melanoma NOS/ISIC_0067487.jpg
+/train/Melanoma NOS/ISIC_0073074.jpg
+/train/Melanoma NOS/ISIC_0060297.jpg
+/train/Melanoma NOS/ISIC_0055062.jpg
+/train/Melanoma NOS/ISIC_0063145.jpg
+/train/Melanoma NOS/ISIC_0062716.jpg
+/train/Melanoma NOS/ISIC_0057947.jpg
+/train/Melanoma NOS/ISIC_0054645.jpg
+/train/Melanoma NOS/ISIC_0071778.jpg
+/train/Melanoma NOS/ISIC_0072003.jpg
+/train/Melanoma NOS/ISIC_0061010.jpg
+/train/Melanoma NOS/ISIC_0057113.jpg
+/train/Melanoma NOS/ISIC_0068488.jpg
+/train/Melanoma NOS/ISIC_0056337.jpg
+/train/Melanoma NOS/ISIC_0061960.jpg
+/train/Melanoma NOS/ISIC_0064746.jpg
+/train/Melanoma NOS/ISIC_0072285.jpg
+/train/Melanoma NOS/ISIC_0058720.jpg
+/train/Melanoma NOS/ISIC_0067296.jpg
+/train/Melanoma NOS/ISIC_0063425.jpg
+/train/Melanoma NOS/ISIC_0056873.jpg
+/train/Melanoma NOS/ISIC_0063216.jpg
+/train/Melanoma NOS/ISIC_0067893.jpg
+/train/Melanoma NOS/ISIC_0071681.jpg
+/train/Melanoma NOS/ISIC_0064349.jpg
+/train/Melanoma NOS/ISIC_0059569.jpg
+/train/Melanoma NOS/ISIC_0055425.jpg
+/train/Melanoma NOS/ISIC_0072348.jpg
+/train/Melanoma NOS/ISIC_0055454.jpg
+/train/Melanoma NOS/ISIC_0053827.jpg
+/train/Melanoma NOS/ISIC_0069264.jpg
+/train/Melanoma NOS/ISIC_0057949.jpg
+/train/Melanoma NOS/ISIC_0054629.jpg
+/train/Melanoma NOS/ISIC_0063695.jpg
+/train/Melanoma NOS/ISIC_0058721.jpg
+/train/Melanoma NOS/ISIC_0062280.jpg
+/train/Melanoma NOS/ISIC_0067985.jpg
+/train/Melanoma NOS/ISIC_0063723.jpg
+/train/Melanoma NOS/ISIC_0056684.jpg
+/train/Melanoma NOS/ISIC_0061735.jpg
+/train/Melanoma NOS/ISIC_0062471.jpg
+/train/Melanoma NOS/ISIC_0064004.jpg
+/train/Melanoma NOS/ISIC_0062551.jpg
+/train/Melanoma NOS/ISIC_0071706.jpg
+/train/Melanoma NOS/ISIC_0068884.jpg
+/train/Melanoma NOS/ISIC_0061916.jpg
+/train/Melanoma NOS/ISIC_0065374.jpg
+/train/Melanoma NOS/ISIC_0064247.jpg
+/train/Melanoma NOS/ISIC_0064167.jpg
+/train/Melanoma NOS/ISIC_0072542.jpg
+/train/Melanoma NOS/ISIC_0057704.jpg
+/train/Melanoma NOS/ISIC_0061575.jpg
+/train/Melanoma NOS/ISIC_0065156.jpg
+/train/Melanoma NOS/ISIC_0072694.jpg
+/train/Melanoma NOS/ISIC_0066633.jpg
+/train/Melanoma NOS/ISIC_0055337.jpg
+/train/Melanoma NOS/ISIC_0055309.jpg
+/train/Melanoma NOS/ISIC_0062553.jpg
+/train/Melanoma NOS/ISIC_0072156.jpg
+/train/Melanoma NOS/ISIC_0058644.jpg
+/train/Melanoma NOS/ISIC_0059092.jpg
+/train/Melanoma NOS/ISIC_0069747.jpg
+/train/Melanoma NOS/ISIC_0059209.jpg
+/train/Melanoma NOS/ISIC_0055582.jpg
+/train/Melanoma NOS/ISIC_0060556.jpg
+/train/Melanoma NOS/ISIC_0070046.jpg
+/train/Melanoma NOS/ISIC_0063660.jpg
+/train/Melanoma NOS/ISIC_0056820.jpg
+/train/Melanoma NOS/ISIC_0064023.jpg
+/train/Melanoma NOS/ISIC_0064066.jpg
+/train/Melanoma NOS/ISIC_0071197.jpg
+/train/Melanoma NOS/ISIC_0064129.jpg
+/train/Melanoma NOS/ISIC_0070566.jpg
+/train/Melanoma NOS/ISIC_0064058.jpg
+/train/Melanoma NOS/ISIC_0065985.jpg
+/train/Melanoma NOS/ISIC_0053620.jpg
+/train/Melanoma NOS/ISIC_0065571.jpg
+/train/Melanoma NOS/ISIC_0059523.jpg
+/train/Melanoma NOS/ISIC_0069385.jpg
+/train/Melanoma NOS/ISIC_0070172.jpg
+/train/Melanoma NOS/ISIC_0056330.jpg
+/train/Melanoma NOS/ISIC_0071357.jpg
+/train/Melanoma NOS/ISIC_0069523.jpg
+/train/Melanoma NOS/ISIC_0062234.jpg
+/train/Melanoma NOS/ISIC_0072626.jpg
+/train/Melanoma NOS/ISIC_0072104.jpg
+/train/Melanoma NOS/ISIC_0063915.jpg
+/train/Melanoma NOS/ISIC_0072909.jpg
+/train/Melanoma NOS/ISIC_0059284.jpg
+/train/Melanoma NOS/ISIC_0062792.jpg
+/train/Melanoma NOS/ISIC_0070992.jpg
+/train/Melanoma NOS/ISIC_0055699.jpg
+/train/Melanoma NOS/ISIC_0057983.jpg
+/train/Melanoma NOS/ISIC_0072174.jpg
+/train/Melanoma NOS/ISIC_0062935.jpg
+/train/Melanoma NOS/ISIC_0062606.jpg
+/train/Melanoma NOS/ISIC_0071580.jpg
+/train/Melanoma NOS/ISIC_0066109.jpg
+/train/Melanoma NOS/ISIC_0072280.jpg
+/train/Melanoma NOS/ISIC_0064393.jpg
+/train/Melanoma NOS/ISIC_0066102.jpg
+/train/Melanoma NOS/ISIC_0070220.jpg
+/train/Melanoma NOS/ISIC_0057556.jpg
+/train/Melanoma NOS/ISIC_0058255.jpg
+/train/Melanoma NOS/ISIC_0064444.jpg
+/train/Melanoma NOS/ISIC_0067897.jpg
+/train/Melanoma NOS/ISIC_0057884.jpg
+/train/Melanoma NOS/ISIC_0054744.jpg
+/train/Melanoma NOS/ISIC_0066136.jpg
+/train/Melanoma NOS/ISIC_0066626.jpg
+/train/Melanoma NOS/ISIC_0062382.jpg
+/train/Melanoma NOS/ISIC_0072868.jpg
+/train/Melanoma NOS/ISIC_0054747.jpg
+/train/Melanoma NOS/ISIC_0062340.jpg
+/train/Melanoma NOS/ISIC_0067776.jpg
+/train/Melanoma NOS/ISIC_0053640.jpg
+/train/Melanoma NOS/ISIC_0071132.jpg
+/train/Melanoma NOS/ISIC_0068396.jpg
+/train/Melanoma NOS/ISIC_0065062.jpg
+/train/Melanoma NOS/ISIC_0058792.jpg
+/train/Melanoma NOS/ISIC_0063496.jpg
+/train/Melanoma NOS/ISIC_0059178.jpg
+/train/Melanoma NOS/ISIC_0063980.jpg
+/train/Melanoma NOS/ISIC_0059171.jpg
+/train/Melanoma NOS/ISIC_0065213.jpg
+/train/Melanoma NOS/ISIC_0068049.jpg
+/train/Melanoma NOS/ISIC_0070070.jpg
+/train/Melanoma NOS/ISIC_0070400.jpg
+/train/Melanoma NOS/ISIC_0073227.jpg
+/train/Melanoma NOS/ISIC_0061516.jpg
+/train/Melanoma NOS/ISIC_0070743.jpg
+/train/Melanoma NOS/ISIC_0064107.jpg
+/train/Melanoma NOS/ISIC_0065408.jpg
+/train/Melanoma NOS/ISIC_0069689.jpg
+/train/Melanoma NOS/ISIC_0071017.jpg
+/train/Melanoma NOS/ISIC_0054110.jpg
+/train/Melanoma NOS/ISIC_0061265.jpg
+/train/Melanoma NOS/ISIC_0062134.jpg
+/train/Melanoma NOS/ISIC_0064625.jpg
+/train/Melanoma NOS/ISIC_0065872.jpg
+/train/Melanoma NOS/ISIC_0053481.jpg
+/train/Melanoma NOS/ISIC_0054691.jpg
+/train/Melanoma NOS/ISIC_0070837.jpg
+/train/Melanoma NOS/ISIC_0067353.jpg
+/train/Melanoma NOS/ISIC_0058564.jpg
+/train/Melanoma NOS/ISIC_0072773.jpg
+/train/Melanoma NOS/ISIC_0059448.jpg
+/train/Melanoma NOS/ISIC_0065029.jpg
+/train/Melanoma NOS/ISIC_0068280.jpg
+/train/Melanoma NOS/ISIC_0062442.jpg
+/train/Melanoma NOS/ISIC_0053796.jpg
+/train/Melanoma NOS/ISIC_0058647.jpg
+/train/Melanoma NOS/ISIC_0072292.jpg
+/train/Melanoma NOS/ISIC_0057628.jpg
+/train/Melanoma NOS/ISIC_0069042.jpg
+/train/Melanoma NOS/ISIC_0066910.jpg
+/train/Melanoma NOS/ISIC_0068917.jpg
+/train/Melanoma NOS/ISIC_0071476.jpg
+/train/Melanoma NOS/ISIC_0061125.jpg
+/train/Melanoma NOS/ISIC_0059768.jpg
+/train/Melanoma NOS/ISIC_0069313.jpg
+/train/Melanoma NOS/ISIC_0067805.jpg
+/train/Melanoma NOS/ISIC_0059349.jpg
+/train/Melanoma NOS/ISIC_0061297.jpg
+/train/Melanoma NOS/ISIC_0064342.jpg
+/train/Melanoma NOS/ISIC_0054087.jpg
+/train/Melanoma NOS/ISIC_0068295.jpg
+/train/Melanoma NOS/ISIC_0065311.jpg
+/train/Melanoma NOS/ISIC_0071765.jpg
+/train/Melanoma NOS/ISIC_0072439.jpg

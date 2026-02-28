@@ -1,0 +1,222 @@
+/test/Seborrheic keratosis/ISIC_0055415.jpg
+/test/Seborrheic keratosis/ISIC_0054965.jpg
+/test/Seborrheic keratosis/ISIC_0068194.jpg
+/test/Seborrheic keratosis/ISIC_0071166.jpg
+/test/Seborrheic keratosis/ISIC_0061528.jpg
+/test/Seborrheic keratosis/ISIC_0068550.jpg
+/test/Seborrheic keratosis/ISIC_0070812.jpg
+/test/Seborrheic keratosis/ISIC_0054491.jpg
+/test/Seborrheic keratosis/ISIC_0053552.jpg
+/test/Seborrheic keratosis/ISIC_0066753.jpg
+/test/Seborrheic keratosis/ISIC_0055411.jpg
+/test/Seborrheic keratosis/ISIC_0063132.jpg
+/test/Seborrheic keratosis/ISIC_0063810.jpg
+/test/Seborrheic keratosis/ISIC_0066646.jpg
+/test/Seborrheic keratosis/ISIC_0070084.jpg
+/test/Seborrheic keratosis/ISIC_0057789.jpg
+/test/Seborrheic keratosis/ISIC_0057064.jpg
+/test/Seborrheic keratosis/ISIC_0073021.jpg
+/test/Seborrheic keratosis/ISIC_0058848.jpg
+/test/Seborrheic keratosis/ISIC_0061589.jpg
+/test/Seborrheic keratosis/ISIC_0064906.jpg
+/test/Seborrheic keratosis/ISIC_0072834.jpg
+/test/Seborrheic keratosis/ISIC_0058277.jpg
+/test/Seborrheic keratosis/ISIC_0059463.jpg
+/test/Seborrheic keratosis/ISIC_0059378.jpg
+/test/Seborrheic keratosis/ISIC_0071952.jpg
+/test/Seborrheic keratosis/ISIC_0068686.jpg
+/test/Seborrheic keratosis/ISIC_0072736.jpg
+/test/Seborrheic keratosis/ISIC_0059205.jpg
+/test/Seborrheic keratosis/ISIC_0059192.jpg
+/test/Seborrheic keratosis/ISIC_0055166.jpg
+/test/Seborrheic keratosis/ISIC_0070503.jpg
+/test/Seborrheic keratosis/ISIC_0065892.jpg
+/test/Seborrheic keratosis/ISIC_0065862.jpg
+/test/Seborrheic keratosis/ISIC_0070241.jpg
+/test/Seborrheic keratosis/ISIC_0059363.jpg
+/test/Seborrheic keratosis/ISIC_0059598.jpg
+/test/Seborrheic keratosis/ISIC_0065135.jpg
+/test/Seborrheic keratosis/ISIC_0060305.jpg
+/test/Seborrheic keratosis/ISIC_0057802.jpg
+/test/Seborrheic keratosis/ISIC_0066562.jpg
+/test/Seborrheic keratosis/ISIC_0063134.jpg
+/test/Seborrheic keratosis/ISIC_0067596.jpg
+/test/Seborrheic keratosis/ISIC_0066264.jpg
+/test/Seborrheic keratosis/ISIC_0053990.jpg
+/test/Seborrheic keratosis/ISIC_0065115.jpg
+/test/Seborrheic keratosis/ISIC_0070742.jpg
+/test/Seborrheic keratosis/ISIC_0065629.jpg
+/test/Seborrheic keratosis/ISIC_0057552.jpg
+/test/Seborrheic keratosis/ISIC_0055365.jpg
+/test/Seborrheic keratosis/ISIC_0056521.jpg
+/test/Seborrheic keratosis/ISIC_0056763.jpg
+/test/Seborrheic keratosis/ISIC_0061658.jpg
+/test/Seborrheic keratosis/ISIC_0065588.jpg
+/test/Seborrheic keratosis/ISIC_0061688.jpg
+/test/Seborrheic keratosis/ISIC_0061063.jpg
+/test/Seborrheic keratosis/ISIC_0057004.jpg
+/test/Seborrheic keratosis/ISIC_0066989.jpg
+/test/Seborrheic keratosis/ISIC_0054781.jpg
+/test/Seborrheic keratosis/ISIC_0067381.jpg
+/test/Seborrheic keratosis/ISIC_0055795.jpg
+/test/Seborrheic keratosis/ISIC_0073142.jpg
+/test/Seborrheic keratosis/ISIC_0070859.jpg
+/test/Seborrheic keratosis/ISIC_0073140.jpg
+/test/Seborrheic keratosis/ISIC_0071978.jpg
+/test/Seborrheic keratosis/ISIC_0054543.jpg
+/test/Seborrheic keratosis/ISIC_0061335.jpg
+/test/Seborrheic keratosis/ISIC_0065639.jpg
+/test/Seborrheic keratosis/ISIC_0062110.jpg
+/test/Seborrheic keratosis/ISIC_0058111.jpg
+/test/Seborrheic keratosis/ISIC_0059414.jpg
+/test/Seborrheic keratosis/ISIC_0067477.jpg
+/test/Seborrheic keratosis/ISIC_0055514.jpg
+/test/Seborrheic keratosis/ISIC_0058810.jpg
+/test/Seborrheic keratosis/ISIC_0066132.jpg
+/test/Seborrheic keratosis/ISIC_0066914.jpg
+/test/Seborrheic keratosis/ISIC_0062835.jpg
+/test/Seborrheic keratosis/ISIC_0071629.jpg
+/test/Seborrheic keratosis/ISIC_0060639.jpg
+/test/Seborrheic keratosis/ISIC_0054210.jpg
+/test/Seborrheic keratosis/ISIC_0069982.jpg
+/test/Seborrheic keratosis/ISIC_0061985.jpg
+/test/Seborrheic keratosis/ISIC_0061168.jpg
+/test/Seborrheic keratosis/ISIC_0069099.jpg
+/test/Seborrheic keratosis/ISIC_0068398.jpg
+/test/Seborrheic keratosis/ISIC_0068103.jpg
+/test/Seborrheic keratosis/ISIC_0069472.jpg
+/test/Seborrheic keratosis/ISIC_0054888.jpg
+/test/Seborrheic keratosis/ISIC_0055560.jpg
+/test/Seborrheic keratosis/ISIC_0060013.jpg
+/test/Seborrheic keratosis/ISIC_0063156.jpg
+/test/Seborrheic keratosis/ISIC_0059323.jpg
+/test/Seborrheic keratosis/ISIC_0071038.jpg
+/test/Seborrheic keratosis/ISIC_0058589.jpg
+/test/Seborrheic keratosis/ISIC_0060808.jpg
+/test/Solar or actinic keratosis/ISIC_0060814.jpg
+/test/Solar or actinic keratosis/ISIC_0063442.jpg
+/test/Solar or actinic keratosis/ISIC_0063161.jpg
+/test/Solar or actinic keratosis/ISIC_0058988.jpg
+/test/Solar or actinic keratosis/ISIC_0069925.jpg
+/test/Solar or actinic keratosis/ISIC_0054666.jpg
+/test/Solar or actinic keratosis/ISIC_0059843.jpg
+/test/Solar or actinic keratosis/ISIC_0057929.jpg
+/test/Solar or actinic keratosis/ISIC_0058416.jpg
+/test/Solar or actinic keratosis/ISIC_0066556.jpg
+/test/Solar or actinic keratosis/ISIC_0064959.jpg
+/test/Solar or actinic keratosis/ISIC_0068626.jpg
+/test/Solar or actinic keratosis/ISIC_0069818.jpg
+/test/Solar or actinic keratosis/ISIC_0072018.jpg
+/test/Solar or actinic keratosis/ISIC_0060708.jpg
+/test/Solar or actinic keratosis/ISIC_0068571.jpg
+/test/Solar or actinic keratosis/ISIC_0066819.jpg
+/test/Solar or actinic keratosis/ISIC_0065054.jpg
+/test/Solar or actinic keratosis/ISIC_0059073.jpg
+/test/Solar or actinic keratosis/ISIC_0058162.jpg
+/test/Solar or actinic keratosis/ISIC_0064222.jpg
+/test/Solar or actinic keratosis/ISIC_0070643.jpg
+/test/Solar or actinic keratosis/ISIC_0068885.jpg
+/test/Solar or actinic keratosis/ISIC_0053826.jpg
+/test/Solar or actinic keratosis/ISIC_0072948.jpg
+/test/Solar or actinic keratosis/ISIC_0057721.jpg
+/test/Solar or actinic keratosis/ISIC_0068812.jpg
+/test/Solar or actinic keratosis/ISIC_0054255.jpg
+/test/Solar or actinic keratosis/ISIC_0056469.jpg
+/test/Solar or actinic keratosis/ISIC_0073130.jpg
+/test/Solar or actinic keratosis/ISIC_0067787.jpg
+/test/Solar or actinic keratosis/ISIC_0062238.jpg
+/test/Solar or actinic keratosis/ISIC_0065196.jpg
+/test/Solar or actinic keratosis/ISIC_0060747.jpg
+/test/Solar or actinic keratosis/ISIC_0057157.jpg
+/test/Solar or actinic keratosis/ISIC_0055989.jpg
+/test/Solar or actinic keratosis/ISIC_0065984.jpg
+/test/Solar or actinic keratosis/ISIC_0056016.jpg
+/test/Solar or actinic keratosis/ISIC_0053892.jpg
+/test/Solar or actinic keratosis/ISIC_0054698.jpg
+/test/Solar or actinic keratosis/ISIC_0056302.jpg
+/test/Solar or actinic keratosis/ISIC_0070505.jpg
+/test/Solar or actinic keratosis/ISIC_0064484.jpg
+/test/Solar or actinic keratosis/ISIC_0060385.jpg
+/test/Solar or actinic keratosis/ISIC_0072986.jpg
+/test/Solar or actinic keratosis/ISIC_0070143.jpg
+/test/Solar or actinic keratosis/ISIC_0067150.jpg
+/test/Solar or actinic keratosis/ISIC_0068441.jpg
+/test/Solar or actinic keratosis/ISIC_0060779.jpg
+/test/Solar or actinic keratosis/ISIC_0055609.jpg
+/test/Solar or actinic keratosis/ISIC_0054531.jpg
+/test/Solar or actinic keratosis/ISIC_0064951.jpg
+/test/Solar or actinic keratosis/ISIC_0062593.jpg
+/test/Solar or actinic keratosis/ISIC_0062692.jpg
+/test/Solar or actinic keratosis/ISIC_0063890.jpg
+/test/Solar or actinic keratosis/ISIC_0061524.jpg
+/test/Solar or actinic keratosis/ISIC_0066245.jpg
+/test/Solar or actinic keratosis/ISIC_0053899.jpg
+/test/Solar or actinic keratosis/ISIC_0068695.jpg
+/test/Solar or actinic keratosis/ISIC_0060060.jpg
+/test/Solar or actinic keratosis/ISIC_0056529.jpg
+/test/Solar or actinic keratosis/ISIC_0071889.jpg
+/test/Solar or actinic keratosis/ISIC_0057225.jpg
+/test/Solar or actinic keratosis/ISIC_0065329.jpg
+/test/Solar or actinic keratosis/ISIC_0054432.jpg
+/test/Solar or actinic keratosis/ISIC_0056147.jpg
+/test/Solar or actinic keratosis/ISIC_0053595.jpg
+/test/Solar or actinic keratosis/ISIC_0070311.jpg
+/test/Solar or actinic keratosis/ISIC_0071984.jpg
+/test/Solar or actinic keratosis/ISIC_0055865.jpg
+/test/Solar or actinic keratosis/ISIC_0061769.jpg
+/test/Solar or actinic keratosis/ISIC_0057130.jpg
+/test/Solar or actinic keratosis/ISIC_0069408.jpg
+/test/Solar or actinic keratosis/ISIC_0071609.jpg
+/test/Solar or actinic keratosis/ISIC_0069994.jpg
+/test/Solar or actinic keratosis/ISIC_0059087.jpg
+/test/Solar or actinic keratosis/ISIC_0073163.jpg
+/test/Solar or actinic keratosis/ISIC_0061331.jpg
+/test/Solar or actinic keratosis/ISIC_0069751.jpg
+/test/Solar or actinic keratosis/ISIC_0064972.jpg
+/test/Solar or actinic keratosis/ISIC_0067246.jpg
+/test/Solar or actinic keratosis/ISIC_0070768.jpg
+/test/Solar or actinic keratosis/ISIC_0060733.jpg
+/test/Solar or actinic keratosis/ISIC_0054271.jpg
+/test/Solar or actinic keratosis/ISIC_0060729.jpg
+/test/Solar or actinic keratosis/ISIC_0059759.jpg
+/test/Solar or actinic keratosis/ISIC_0066913.jpg
+/test/Solar or actinic keratosis/ISIC_0055686.jpg
+/test/Solar or actinic keratosis/ISIC_0071320.jpg
+/test/Solar or actinic keratosis/ISIC_0070085.jpg
+/test/Solar or actinic keratosis/ISIC_0067887.jpg
+/test/Solar or actinic keratosis/ISIC_0058924.jpg
+/test/Solar or actinic keratosis/ISIC_0072584.jpg
+/test/Solar or actinic keratosis/ISIC_0055159.jpg
+/test/Solar or actinic keratosis/ISIC_0066180.jpg
+/test/Solar or actinic keratosis/ISIC_0065628.jpg
+/test/Solar or actinic keratosis/ISIC_0053728.jpg
+/test/Solar or actinic keratosis/ISIC_0064243.jpg
+/test/Solar or actinic keratosis/ISIC_0059827.jpg
+/test/Solar or actinic keratosis/ISIC_0063100.jpg
+/test/Solar or actinic keratosis/ISIC_0059182.jpg
+/test/Solar or actinic keratosis/ISIC_0065538.jpg
+/test/Solar or actinic keratosis/ISIC_0058902.jpg
+/test/Solar or actinic keratosis/ISIC_0060410.jpg
+/test/Solar or actinic keratosis/ISIC_0059389.jpg
+/test/Solar or actinic keratosis/ISIC_0069614.jpg
+/test/Solar or actinic keratosis/ISIC_0067604.jpg
+/test/Solar or actinic keratosis/ISIC_0067046.jpg
+/test/Solar or actinic keratosis/ISIC_0069195.jpg
+/test/Solar or actinic keratosis/ISIC_0061285.jpg
+/test/Solar or actinic keratosis/ISIC_0071423.jpg
+/test/Solar or actinic keratosis/ISIC_0062508.jpg
+/test/Solar or actinic keratosis/ISIC_0066507.jpg
+/test/Solar or actinic keratosis/ISIC_0063956.jpg
+/test/Solar or actinic keratosis/ISIC_0055817.jpg
+/test/Solar or actinic keratosis/ISIC_0060670.jpg
+/test/Solar or actinic keratosis/ISIC_0058967.jpg
+/test/Solar or actinic keratosis/ISIC_0063588.jpg
+/test/Solar or actinic keratosis/ISIC_0062878.jpg
+/test/Solar or actinic keratosis/ISIC_0055790.jpg
+/test/Solar or actinic keratosis/ISIC_0058460.jpg
+/test/Solar or actinic keratosis/ISIC_0067490.jpg
+/test/Solar or actinic keratosis/ISIC_0070195.jpg
+/test/Solar or actinic keratosis/ISIC_0054794.jpg
+/test/Solar or actinic keratosis/ISIC_0054335.jpg
+/test/Solar or actinic keratosis/ISIC_0054899.jpg
+/test/Solar or actinic keratosis/ISIC_0068824.jpg

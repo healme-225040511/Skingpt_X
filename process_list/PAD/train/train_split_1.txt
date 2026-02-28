@@ -1,0 +1,230 @@
+/train/Squamous Cell Carcinoma/PAT_677_1349_541.png
+/train/Squamous Cell Carcinoma/PAT_600_1141_988.png
+/train/Squamous Cell Carcinoma/PAT_397_798_482.png
+/train/Squamous Cell Carcinoma/PAT_321_682_236.png
+/train/Squamous Cell Carcinoma/PAT_834_1574_276.png
+/train/Squamous Cell Carcinoma/PAT_386_784_470.png
+/train/Squamous Cell Carcinoma/PAT_387_786_213.png
+/train/Squamous Cell Carcinoma/PAT_219_336_376.png
+/train/Squamous Cell Carcinoma/PAT_380_1540_959.png
+/train/Squamous Cell Carcinoma/PAT_633_1199_745.png
+/train/Squamous Cell Carcinoma/PAT_653_1234_311.png
+/train/Squamous Cell Carcinoma/PAT_387_786_782.png
+/train/Squamous Cell Carcinoma/PAT_20_30_44.png
+/train/Squamous Cell Carcinoma/PAT_338_710_319.png
+/train/Squamous Cell Carcinoma/PAT_713_1336_159.png
+/train/Squamous Cell Carcinoma/PAT_302_650_477.png
+/train/Squamous Cell Carcinoma/PAT_908_1726_939.png
+/train/Squamous Cell Carcinoma/PAT_686_1355_168.png
+/train/Squamous Cell Carcinoma/PAT_698_1319_166.png
+/train/Squamous Cell Carcinoma/PAT_108_161_423.png
+/train/Squamous Cell Carcinoma/PAT_834_1572_430.png
+/train/Squamous Cell Carcinoma/PAT_390_790_505.png
+/train/Squamous Cell Carcinoma/PAT_51_78_959.png
+/train/Squamous Cell Carcinoma/PAT_400_801_376.png
+/train/Squamous Cell Carcinoma/PAT_874_1672_287.png
+/train/Squamous Cell Carcinoma/PAT_712_1335_359.png
+/train/Squamous Cell Carcinoma/PAT_215_330_341.png
+/train/Squamous Cell Carcinoma/PAT_549_1043_676.png
+/train/Squamous Cell Carcinoma/PAT_349_724_750.png
+/train/Squamous Cell Carcinoma/PAT_860_1641_998.png
+/train/Squamous Cell Carcinoma/PAT_369_756_130.png
+/train/Squamous Cell Carcinoma/PAT_768_1449_842.png
+/train/Squamous Cell Carcinoma/PAT_93_142_269.png
+/train/Squamous Cell Carcinoma/PAT_953_1806_845.png
+/train/Squamous Cell Carcinoma/PAT_963_1817_593.png
+/train/Squamous Cell Carcinoma/PAT_492_937_958.png
+/train/Squamous Cell Carcinoma/PAT_824_1560_801.png
+/train/Squamous Cell Carcinoma/PAT_990_1860_478.png
+/train/Squamous Cell Carcinoma/PAT_612_1163_833.png
+/train/Squamous Cell Carcinoma/PAT_591_1126_21.png
+/train/Squamous Cell Carcinoma/PAT_448_875_81.png
+/train/Squamous Cell Carcinoma/PAT_131_197_974.png
+/train/Squamous Cell Carcinoma/PAT_945_1796_583.png
+/train/Squamous Cell Carcinoma/PAT_155_240_211.png
+/train/Squamous Cell Carcinoma/PAT_770_1451_136.png
+/train/Squamous Cell Carcinoma/PAT_834_1572_973.png
+/train/Squamous Cell Carcinoma/PAT_360_742_768.png
+/train/Squamous Cell Carcinoma/PAT_219_337_358.png
+/train/Squamous Cell Carcinoma/PAT_259_399_801.png
+/train/Squamous Cell Carcinoma/PAT_771_1488_562.png
+/train/Squamous Cell Carcinoma/PAT_537_1014_961.png
+/train/Squamous Cell Carcinoma/PAT_527_1359_165.png
+/train/Squamous Cell Carcinoma/PAT_216_331_678.png
+/train/Squamous Cell Carcinoma/PAT_325_689_528.png
+/train/Squamous Cell Carcinoma/PAT_183_283_602.png
+/train/Squamous Cell Carcinoma/PAT_419_833_148.png
+/train/Squamous Cell Carcinoma/PAT_150_1799_644.png
+/train/Squamous Cell Carcinoma/PAT_240_366_768.png
+/train/Squamous Cell Carcinoma/PAT_989_1861_156.png
+/train/Squamous Cell Carcinoma/PAT_600_1141_542.png
+/train/Squamous Cell Carcinoma/PAT_751_1497_215.png
+/train/Squamous Cell Carcinoma/PAT_679_1286_933.png
+/train/Squamous Cell Carcinoma/PAT_882_1678_192.png
+/train/Squamous Cell Carcinoma/PAT_271_418_14.png
+/train/Squamous Cell Carcinoma/PAT_397_797_742.png
+/train/Squamous Cell Carcinoma/PAT_689_1307_354.png
+/train/Squamous Cell Carcinoma/PAT_633_1199_218.png
+/train/Squamous Cell Carcinoma/PAT_75_113_165.png
+/train/Squamous Cell Carcinoma/PAT_491_934_46.png
+/train/Squamous Cell Carcinoma/PAT_131_197_260.png
+/train/Squamous Cell Carcinoma/PAT_383_777_129.png
+/train/Squamous Cell Carcinoma/PAT_935_1785_530.png
+/train/Squamous Cell Carcinoma/PAT_369_755_733.png
+/train/Squamous Cell Carcinoma/PAT_330_1440_532.png
+/train/Squamous Cell Carcinoma/PAT_490_933_352.png
+/train/Squamous Cell Carcinoma/PAT_940_1774_962.png
+/train/Squamous Cell Carcinoma/PAT_304_653_446.png
+/train/Squamous Cell Carcinoma/PAT_935_1786_482.png
+/train/Squamous Cell Carcinoma/PAT_48_74_309.png
+/train/Squamous Cell Carcinoma/PAT_43_61_210.png
+/train/Squamous Cell Carcinoma/PAT_805_1517_154.png
+/train/Squamous Cell Carcinoma/PAT_492_937_43.png
+/train/Squamous Cell Carcinoma/PAT_679_1286_677.png
+/train/Squamous Cell Carcinoma/PAT_359_741_973.png
+/train/Squamous Cell Carcinoma/PAT_380_1540_432.png
+/train/Squamous Cell Carcinoma/PAT_857_1627_310.png
+/train/Squamous Cell Carcinoma/PAT_359_741_966.png
+/train/Squamous Cell Carcinoma/PAT_771_1488_922.png
+/train/Squamous Cell Carcinoma/PAT_338_710_93.png
+/train/Squamous Cell Carcinoma/PAT_632_1206_637.png
+/train/Squamous Cell Carcinoma/PAT_361_1568_456.png
+/train/Squamous Cell Carcinoma/PAT_714_1337_914.png
+/train/Squamous Cell Carcinoma/PAT_859_1638_598.png
+/train/Squamous Cell Carcinoma/PAT_678_1298_396.png
+/train/Squamous Cell Carcinoma/PAT_714_1337_709.png
+/train/Squamous Cell Carcinoma/PAT_192_296_824.png
+/train/Squamous Cell Carcinoma/PAT_787_1482_328.png
+/train/Squamous Cell Carcinoma/PAT_963_1819_298.png
+/train/Squamous Cell Carcinoma/PAT_490_933_17.png
+/train/Squamous Cell Carcinoma/PAT_323_687_169.png
+/train/Squamous Cell Carcinoma/PAT_487_930_973.png
+/train/Squamous Cell Carcinoma/PAT_978_1844_715.png
+/train/Squamous Cell Carcinoma/PAT_164_255_130.png
+/train/Squamous Cell Carcinoma/PAT_561_1069_418.png
+/train/Squamous Cell Carcinoma/PAT_800_1514_512.png
+/train/Squamous Cell Carcinoma/PAT_307_659_85.png
+/train/Squamous Cell Carcinoma/PAT_338_709_306.png
+/train/Squamous Cell Carcinoma/PAT_181_280_417.png
+/train/Squamous Cell Carcinoma/PAT_369_755_391.png
+/train/Squamous Cell Carcinoma/PAT_48_74_402.png
+/train/Squamous Cell Carcinoma/PAT_780_1473_791.png
+/train/Squamous Cell Carcinoma/PAT_271_418_92.png
+/train/Squamous Cell Carcinoma/PAT_349_724_133.png
+/train/Squamous Cell Carcinoma/PAT_454_884_28.png
+/train/Squamous Cell Carcinoma/PAT_365_750_854.png
+/train/Squamous Cell Carcinoma/PAT_574_1081_628.png
+/train/Squamous Cell Carcinoma/PAT_76_1039_269.png
+/train/Squamous Cell Carcinoma/PAT_367_753_130.png
+/train/Squamous Cell Carcinoma/PAT_49_75_326.png
+/train/Squamous Cell Carcinoma/PAT_888_1685_268.png
+/train/Squamous Cell Carcinoma/PAT_590_1121_504.png
+/train/Squamous Cell Carcinoma/PAT_215_330_224.png
+/train/Squamous Cell Carcinoma/PAT_705_1326_82.png
+/train/Squamous Cell Carcinoma/PAT_844_1605_308.png
+/train/Squamous Cell Carcinoma/PAT_56_86_802.png
+/train/Squamous Cell Carcinoma/PAT_655_1245_807.png
+/train/Squamous Cell Carcinoma/PAT_809_1527_202.png
+/train/Squamous Cell Carcinoma/PAT_113_172_610.png
+/train/Squamous Cell Carcinoma/PAT_570_1084_637.png
+/train/Squamous Cell Carcinoma/PAT_881_1681_462.png
+/train/Squamous Cell Carcinoma/PAT_974_1842_574.png
+/train/Squamous Cell Carcinoma/PAT_380_1540_525.png
+/train/Squamous Cell Carcinoma/PAT_365_751_709.png
+/train/Squamous Cell Carcinoma/PAT_570_1084_939.png
+/train/Squamous Cell Carcinoma/PAT_624_1179_323.png
+/train/Squamous Cell Carcinoma/PAT_108_161_878.png
+/train/Squamous Cell Carcinoma/PAT_503_949_409.png
+/train/Squamous Cell Carcinoma/PAT_637_1434_570.png
+/train/Squamous Cell Carcinoma/PAT_860_1641_440.png
+/train/Squamous Cell Carcinoma/PAT_882_1677_789.png
+/train/Squamous Cell Carcinoma/PAT_874_1672_743.png
+/train/Squamous Cell Carcinoma/PAT_605_1152_536.png
+/train/Squamous Cell Carcinoma/PAT_227_347_19.png
+/train/Squamous Cell Carcinoma/PAT_183_283_495.png
+/train/Squamous Cell Carcinoma/PAT_377_1580_429.png
+/train/Squamous Cell Carcinoma/PAT_629_1192_362.png
+/train/Squamous Cell Carcinoma/PAT_492_937_126.png
+/train/Squamous Cell Carcinoma/PAT_689_1306_772.png
+/train/Squamous Cell Carcinoma/PAT_108_161_575.png
+/train/Squamous Cell Carcinoma/PAT_924_1757_784.png
+/train/Squamous Cell Carcinoma/PAT_809_1527_902.png
+/train/Squamous Cell Carcinoma/PAT_397_797_638.png
+/train/Squamous Cell Carcinoma/PAT_311_666_191.png
+/train/Nevus/PAT_1288_1003_553.png
+/train/Nevus/PAT_621_1183_56.png
+/train/Nevus/PAT_281_1518_571.png
+/train/Nevus/PAT_1784_3416_507.png
+/train/Nevus/PAT_1401_1374_593.png
+/train/Nevus/PAT_281_1517_293.png
+/train/Nevus/PAT_1837_3608_851.png
+/train/Nevus/PAT_1451_1561_100.png
+/train/Nevus/PAT_465_901_106.png
+/train/Nevus/PAT_1718_3202_152.png
+/train/Nevus/PAT_1161_578_233.png
+/train/Nevus/PAT_1484_1682_240.png
+/train/Nevus/PAT_2080_4484_997.png
+/train/Nevus/PAT_793_1512_513.png
+/train/Nevus/PAT_1928_3876_437.png
+/train/Nevus/PAT_471_909_394.png
+/train/Nevus/PAT_2125_4653_497.png
+/train/Nevus/PAT_1842_3615_850.png
+/train/Nevus/PAT_439_859_84.png
+/train/Nevus/PAT_1731_3237_197.png
+/train/Nevus/PAT_352_729_947.png
+/train/Nevus/PAT_1344_1222_456.png
+/train/Nevus/PAT_1215_752_707.png
+/train/Nevus/PAT_1364_1246_927.png
+/train/Nevus/PAT_433_2650_417.png
+/train/Nevus/PAT_1624_2807_679.png
+/train/Nevus/PAT_1217_762_198.png
+/train/Nevus/PAT_1401_1373_881.png
+/train/Nevus/PAT_1451_1562_545.png
+/train/Nevus/PAT_1298_1050_519.png
+/train/Nevus/PAT_1229_794_274.png
+/train/Nevus/PAT_1273_952_89.png
+/train/Nevus/PAT_1591_2648_855.png
+/train/Nevus/PAT_1881_3717_785.png
+/train/Nevus/PAT_1257_887_828.png
+/train/Nevus/PAT_2161_4819_719.png
+/train/Nevus/PAT_890_1694_29.png
+/train/Nevus/PAT_1614_2747_533.png
+/train/Nevus/PAT_627_1188_755.png
+/train/Nevus/PAT_100_393_898.png
+/train/Nevus/PAT_244_374_726.png
+/train/Nevus/PAT_2006_4123_719.png
+/train/Nevus/PAT_839_1591_204.png
+/train/Nevus/PAT_1754_3308_390.png
+/train/Nevus/PAT_665_1262_774.png
+/train/Nevus/PAT_2144_4738_120.png
+/train/Nevus/PAT_1754_3308_783.png
+/train/Nevus/PAT_100_393_595.png
+/train/Nevus/PAT_341_715_180.png
+/train/Nevus/PAT_439_859_283.png
+/train/Nevus/PAT_2042_4301_636.png
+/train/Nevus/PAT_897_1704_988.png
+/train/Nevus/PAT_2162_4820_913.png
+/train/Nevus/PAT_1753_3305_385.png
+/train/Nevus/PAT_425_841_644.png
+/train/Nevus/PAT_1534_1809_366.png
+/train/Nevus/PAT_333_1469_499.png
+/train/Nevus/PAT_1334_1178_413.png
+/train/Nevus/PAT_1304_3507_308.png
+/train/Nevus/PAT_1648_2902_292.png
+/train/Nevus/PAT_1903_3791_14.png
+/train/Nevus/PAT_1197_713_520.png
+/train/Nevus/PAT_1770_3344_274.png
+/train/Nevus/PAT_1735_3241_207.png
+/train/Nevus/PAT_621_1182_456.png
+/train/Nevus/PAT_1671_3008_622.png
+/train/Nevus/PAT_1186_680_578.png
+/train/Nevus/PAT_1388_3513_146.png
+/train/Nevus/PAT_2127_4662_596.png
+/train/Nevus/PAT_672_1272_705.png
+/train/Nevus/PAT_21_31_965.png
+/train/Nevus/PAT_1597_2666_130.png
+/train/Nevus/PAT_1772_3346_66.png
+/train/Nevus/PAT_1345_1223_175.png
+/train/Nevus/PAT_1350_1230_878.png
+/train/Nevus/PAT_345_719_815.png
+/train/Nevus/PAT_1186_681_457.png

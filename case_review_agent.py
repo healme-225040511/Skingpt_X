@@ -560,7 +560,7 @@ class CaseReviewAgent:
 if __name__ == "__main__":
     EVALUATION_ROOT = '/225040511/project/Evaluation_Results/SuperDermnet/Panderm/'
     model = "Qwen/Qwen-7B-Chat"
-    neo4j_uri = "bolt://localhost:7687"
+    neo4j_uri = "bolt://100.91.219.86:7687"
     neo4j_user = "neo4j"
     neo4j_password = "Czty100165188"
     train_feat_file = EVALUATION_ROOT + 'train_feats.npy' 

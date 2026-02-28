@@ -1,0 +1,64 @@
+/test/Squamous Cell Carcinoma/PAT_296_640_206.png
+/test/Squamous Cell Carcinoma/PAT_771_1489_345.png
+/test/Squamous Cell Carcinoma/PAT_497_943_580.png
+/test/Squamous Cell Carcinoma/PAT_834_1574_397.png
+/test/Squamous Cell Carcinoma/PAT_319_680_166.png
+/test/Squamous Cell Carcinoma/PAT_482_924_134.png
+/test/Squamous Cell Carcinoma/PAT_663_1254_732.png
+/test/Squamous Cell Carcinoma/PAT_549_1043_36.png
+/test/Squamous Cell Carcinoma/PAT_637_1217_274.png
+/test/Squamous Cell Carcinoma/PAT_664_1263_781.png
+/test/Squamous Cell Carcinoma/PAT_263_403_966.png
+/test/Squamous Cell Carcinoma/PAT_447_873_329.png
+/test/Squamous Cell Carcinoma/PAT_500_947_77.png
+/test/Squamous Cell Carcinoma/PAT_537_1014_452.png
+/test/Squamous Cell Carcinoma/PAT_953_1806_326.png
+/test/Squamous Cell Carcinoma/PAT_677_1349_851.png
+/test/Squamous Cell Carcinoma/PAT_771_1489_70.png
+/test/Squamous Cell Carcinoma/PAT_56_86_479.png
+/test/Squamous Cell Carcinoma/PAT_324_1465_43.png
+/test/Squamous Cell Carcinoma/PAT_10_18_830.png
+/test/Squamous Cell Carcinoma/PAT_395_795_43.png
+/test/Squamous Cell Carcinoma/PAT_277_426_825.png
+/test/Squamous Cell Carcinoma/PAT_934_1778_140.png
+/test/Squamous Cell Carcinoma/PAT_933_1766_191.png
+/test/Squamous Cell Carcinoma/PAT_891_1701_36.png
+/test/Nevus/PAT_2103_4581_72.png
+/test/Nevus/PAT_220_1343_489.png
+/test/Nevus/PAT_417_828_723.png
+/test/Nevus/PAT_1570_2472_418.png
+/test/Nevus/PAT_1276_957_406.png
+/test/Nevus/PAT_61_299_74.png
+/test/Basal Cell Carcinoma/PAT_40_1026_312.png
+/test/Basal Cell Carcinoma/PAT_812_1625_430.png
+/test/Basal Cell Carcinoma/PAT_104_1756_151.png
+/test/Basal Cell Carcinoma/PAT_911_1728_101.png
+/test/Basal Cell Carcinoma/PAT_314_672_909.png
+/test/Basal Cell Carcinoma/PAT_841_1603_667.png
+/test/Basal Cell Carcinoma/PAT_782_1492_890.png
+/test/Basal Cell Carcinoma/PAT_316_674_924.png
+/test/Basal Cell Carcinoma/PAT_570_1085_344.png
+/test/Basal Cell Carcinoma/PAT_138_205_296.png
+/test/Basal Cell Carcinoma/PAT_692_1308_364.png
+/test/Basal Cell Carcinoma/PAT_926_1758_714.png
+/test/Basal Cell Carcinoma/PAT_86_1109_164.png
+/test/Basal Cell Carcinoma/PAT_138_206_507.png
+/test/Basal Cell Carcinoma/PAT_981_1848_906.png
+/test/Basal Cell Carcinoma/PAT_722_1376_280.png
+/test/Basal Cell Carcinoma/PAT_570_1085_429.png
+/test/Basal Cell Carcinoma/PAT_172_267_557.png
+/test/Basal Cell Carcinoma/PAT_985_1856_397.png
+/test/Basal Cell Carcinoma/PAT_562_1110_360.png
+/test/Basal Cell Carcinoma/PAT_473_911_610.png
+/test/Basal Cell Carcinoma/PAT_255_388_77.png
+/test/Basal Cell Carcinoma/PAT_34_47_108.png
+/test/Basal Cell Carcinoma/PAT_170_264_785.png
+/test/Basal Cell Carcinoma/PAT_128_194_28.png
+/test/Basal Cell Carcinoma/PAT_359_740_46.png
+/test/Basal Cell Carcinoma/PAT_207_1280_15.png
+/test/Basal Cell Carcinoma/PAT_683_1296_237.png
+/test/Basal Cell Carcinoma/PAT_872_1707_638.png
+/test/Basal Cell Carcinoma/PAT_788_1503_541.png
+/test/Basal Cell Carcinoma/PAT_267_1062_418.png
+/test/Basal Cell Carcinoma/PAT_994_1866_913.png
+/test/Basal Cell Carcinoma/PAT_645_1223_124.png

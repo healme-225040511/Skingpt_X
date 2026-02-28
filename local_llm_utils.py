@@ -4,14 +4,14 @@ from Constants import DERMNET_DISEASE_NAME
 from typing import Dict, List
 import json
 import os
-# 必须在任何 transformers 导入前执行
+# # 必须在任何 transformers 导入前执行
 os.environ["HF_HOME"] = "/225040511/project/hf_cache"
 from PIL import Image  # 仅用于多模态模型 (如 Qwen-VL)
 
 # 全局变量：用于缓存模型和分词器，避免每次调用都重新加载
 # 请确保您的环境中安装了 'Qwen/Qwen-7B-Chat' 模型
 # MODEL_NAME = "/225040511/project/hf_cache/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137"
-MODEL_NAME = "/225040511/project/hf_cache/Qwen3-30B-A3B"
+MODEL_NAME = "/225040511/project/hf_cache/Qwen3-VL-30B"
 # MODEL_NAME = "/225040511/project/hf_cache/DeepSeek-R1-67B-chat"
 max_mem = {i: "30GiB" for i in range(torch.cuda.device_count())}
 max_mem["cpu"] = "50GiB"          # 溢出部分放内存，避免直接炸显存
@@ -19,47 +19,37 @@ max_mem["cpu"] = "50GiB"          # 溢出部分放内存，避免直接炸显�
 model = None
 tokenizer = None
 def _load_qwen_model():
-    """初始化并缓存 Qwen 模型和 Tokenizer"""
-    global model, tokenizer
-    if model is None or tokenizer is None:
-        print(f"⏳ 首次加载本地模型: {MODEL_NAME}...")
+    """初始化并缓存 Qwen-VL 模型和 Tokenizer轻量版"""
+    global vl_model, vl_processor
+    if vl_model is None or vl_processor is None:
+        print(f"⏳ 首次加载轻量多模态模型: {os.path.basename(MODEL_NAME)}...")
         try:
-            tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
+            vl_processor = AutoProcessor.from_pretrained(
+                VL_MODEL_NAME,
+                trust_remote_code=True,
+                use_fast=False  # Qwen-VL 推荐关闭 fast tokenizer
+            )
+
             bnb_config = BitsAndBytesConfig(
                 load_in_4bit=True,
-                bnb_4bit_compute_dtype=torch.float16,
+                bnb_4bit_compute_dtype=torch.bfloat16,
                 bnb_4bit_use_double_quant=True,
                 bnb_4bit_quant_type="nf4",
             )
-            # bnb_config = BitsAndBytesConfig(
-            #     load_in_8bit=True,
-            # )
-            # max_memory 同上
-            # if tokenizer.chat_template is None:
-            #     # Qwen-Chat 模板（与官方 repo 一致）
-            #     tokenizer.chat_template = (
-            #         "{% for message in messages %}"
-            #         "{{ '<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n' }}"
-            #         "{% endfor %}"
-            #         "{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}"
-            #     )
-            model = AutoModelForCausalLM.from_pretrained(
-                MODEL_NAME,
-                # torch_dtype=torch.float16,  # 建议使用 float16 减少显存占用
-                local_files_only=True,
-                device_map="auto",               # 会识别 X 张 32 GB
-                # max_memory=max_mem,
-                quantization_config=bnb_config,
-                # load_in_4bit=True
+
+            vl_model = AutoModelForImageTextToText.from_pretrained(
+                VL_MODEL_NAME,
+                torch_dtype='auto',
+                device_map="auto",
+                trust_remote_code=True,
             ).eval()
-            print("✅ 模型加载成功。")
+            print("✅ 轻量 VL 模型加载成功（2B/7B）。")
         except Exception as e:
-            print(f"❌ 模型加载失败，请检查模型名称和环境配置（如 PyTorch、GPU 驱动）: {e}")
+            print(f"❌ VL 模型加载失败: {e}")
             raise
 
 
 def local_generate_response(
-        engine: str,
         temperature: float,
         max_tokens: int,
         system_role: str,
@@ -67,65 +57,168 @@ def local_generate_response(
         image_path: str = None  # Qwen-7B-Chat 不支持图像，但为兼容接口保留
 ) -> str:
     """
-    使用本地 Qwen 模型生成响应。
-
-    Args:
-        engine (str): 模型名称（本地加载时可能不使用）。
-        temperature (float): 控制生成随机性。
-        max_tokens (int): 最大生成 Token 数。
-        system_role (str): 系统角色设定。
-        user_input (str): 用户输入的提示词。
-        image_path (str): 图像路径（仅适用于 Qwen-VL 等多模态模型）。
-
-    Returns:
-        str: 模型的 JSON 格式响应文本。
+    使用本地轻量 Qwen-VL 模型（2B/7B）生成响应，支持图像输入。
+    
+    注意：当 image_path 为空时，退化为纯文本推理（但不如纯文本模型高效）。
     """
     _load_qwen_model()
+    image = Image.open(image_path).convert("RGB")
 
-    # 将输入打包成 Qwen-Chat 的对话历史格式
+    # 构造 messages：Qwen2-VL 支持混合 content
     messages = [
-        {"role": "user", "content": system_role + '\n' + user_input}
+        {
+            "role": "user",
+            "content": [
+                {"type": "image"},
+                {"type": "text", "text": user_input},
+            ],
+        }
     ]
-
-    text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True, enable_thinking=False)
-
-    # 2. 模型推理
-    input_ids = tokenizer([text], return_tensors="pt").to(model.device)
-
+    
+    # 使用 processor 格式化输入
+    text = vl_processor.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
+    
+    inputs = vl_processor(
+        text=[text], images=[image], return_tensors="pt"
+    ).to(vl_model.device)
+    
+    # 生成
     with torch.no_grad():
-        outputs = model.generate(
-            **input_ids,
+        generated_ids = vl_model.generate(
+            **inputs,
             max_new_tokens=max_tokens,
-            # do_sample=False,
-            # temperature=temperature,
-            # pad_token_id=tokenizer.eos_token_id,
-            # 由于 Qwen 模型可能需要更多参数来稳定生成 JSON
-            # top_p=0.8,
-            # repetition_penalty=1.05,
+            do_sample=False,
+            top_p=1,
+            temperature=temperature
         )
-    # 3. 解析和清理输出
-    response_text = tokenizer.decode(outputs[0][input_ids.input_ids.shape[-1]:], skip_special_tokens=True)
-    # print(response_text)
-    # 重要的后处理：清理输出，确保它是有效的 JSON
-    # Qwen 输出可能包含额外的文本，需要提取第一个 JSON 块
-    try:
-        json_str = None
-        m = re.search(r'```json\s*(\{.*?\})\s*```', response_text, flags=re.S)
-        if m:
-            json_str = m.group(1)
-        else:
-            # 2. 兜底：直接找最外层 {}
-            json_str = re.sub(r'<think>.*?</think>', '', response_text, flags=re.S).strip()
-        return json.loads(json_str)
+    
+    # 解码输出（去掉输入部分）
+    generated_ids = [
+        output_ids[len(input_ids):] 
+        for input_ids, output_ids in zip(inputs.input_ids, generated_ids)
+    ]
+    
+    response = vl_processor.batch_decode(
+        generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True
+    )[0]
+    return response.strip()
 
-    except Exception as e:
-        print(f"⚠️ 无法解析模型输出为 JSON，返回原始输出。错误: {e}")
 
-    return response_text
+# import torch
+# import re
+# import json
+# import os
+# from transformers import (
+#     AutoModelForCausalLM, 
+#     AutoTokenizer, 
+#     BitsAndBytesConfig,
+#     AutoModelForImageTextToText
+# )
+
+# # 必须在任何 transformers 导入前执行环境路径设置
+# os.environ["HF_HOME"] = "/225040511/project/hf_cache"
+
+# # ================= 配置区域 =================
+# # 更换为 MedGemma-27B 的本地路径
+# MODEL_NAME = "/225040511/project/hf_cache/medgemma-27b-it"
+
+# # 全局变量缓存
+# model = None
+# tokenizer = None
+
+# def _load_medgemma_model():
+#     global model, tokenizer
+#     if model is None or tokenizer is None:
+#         print(f"⏳ 正在加载 MedGemma-27B...")
+#         bnb_config = BitsAndBytesConfig(
+#             load_in_4bit=True,                    # 开启 4-bit 量化
+#             bnb_4bit_quant_type="nf4",            # 使用 NF4 (Normal Float 4) 格式，适合训练和推理
+#             bnb_4bit_use_double_quant=True,       # 二次量化，进一步节省约 0.4 bits/param
+#             bnb_4bit_compute_dtype=torch.bfloat16 # 计算时使用的精度，MedGemma 建议使用 bf16
+#         )
+
+#         try:
+#             model = AutoModelForImageTextToText.from_pretrained(
+#                 MODEL_NAME,
+#                 quantization_config=bnb_config,
+#                 device_map="auto",
+#                 trust_remote_code=True,
+#             )
+#             tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+#         except Exception as e:
+#             print(f"❌ 加载失败: {e}")
+#             raise
+# def local_generate_response(
+#         temperature: float,
+#         max_tokens: int,
+#         system_role: str,
+#         user_input: str,
+#         image_path: str = None 
+# ) -> str:
+#     """
+#     使用本地 MedGemma-27B 生成医疗诊断响应。
+#     """
+#     _load_medgemma_model()
+
+#     # MedGemma-it (Instruction Tuned) 对 Prompt 格式敏感
+#     # 注意：Gemma 手册建议将系统指令与用户输入合并，
+#     # 因为 Gemma 原生模板对 'system' role 的支持因版本而异。
+#     image = Image.open(image_path)
+
+#     messages = [
+#         {"role": "system", "content": system_role},
+#         {"role": "user", 
+#          "content": [
+#              {"type": "image", "data": image},
+#              {"type": "text", "text": user_input}
+#              ]
+#         }
+#     ]
+
+
+#     inputs = tokenizer.apply_chat_template(
+#         messages,
+#         add_generation_prompt=True,
+#         tokenize=True,
+#         return_dict=True,
+#         return_tensors="pt",
+#     ).to(model.device)
+
+#     input_len = inputs["input_ids"].shape[-1]
+    
+#     with torch.inference_mode():
+#         generation = model.generate(**inputs, max_new_tokens=max_tokens, do_sample=False)
+#         generation = generation[0][input_len:]
+
+#     response_text = tokenizer.decode(generation, skip_special_tokens=True)
+#     print(response_text)
+
+#     # 医疗模型有时会输出比较长的分析，这里精准提取 JSON 段落
+#     try:
+#         # 1. 尝试寻找 Markdown 代码块形式的 JSON
+#         m = re.search(r'```json\s*(\{.*?\})\s*```', response_text, flags=re.S)
+#         if m:
+#             return json.loads(m.group(1))
+        
+#         # 2. 尝试寻找最外层花括号
+#         # 使用更稳健的正向查找
+#         start_idx = response_text.find('{')
+#         end_idx = response_text.rfind('}')
+#         if start_idx != -1 and end_idx != -1:
+#             json_str = response_text[start_idx:end_idx+1]
+#             return json.loads(json_str)
+
+#         return response_text # 如果没解析出 JSON 则返回纯文本内容
+
+#     except Exception as e:
+#         print(f"⚠️ 解析 JSON 失败: {e}")
+#         return response_text
 
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, AutoProcessor
 from transformers.image_utils import load_image  # 👈 新增：用于安全加载图像（支持路径 & URL）
 from typing import Dict, List, Optional  # 👈 修改：补充 Optional
 import json
@@ -133,7 +226,7 @@ import os
 
 # 必须在任何 transformers 导入前执行
 os.environ["HF_HOME"] = "/225040511/project/hf_cache"
-# from PIL import Image  # 不再需要单独导入（transformers 内部已封装）
+from PIL import Image  # 不再需要单独导入（transformers 内部已封装）
 
 # =============== 【新增】轻量 VL 模型配置 ===============
 # 👇 替换为你的本地 2B VL 模型路径（推荐！）

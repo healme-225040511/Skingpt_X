@@ -1,0 +1,1176 @@
+/train/Seborrheic keratosis/ISIC_0072898.jpg
+/train/Seborrheic keratosis/ISIC_0061017.jpg
+/train/Seborrheic keratosis/ISIC_0057197.jpg
+/train/Seborrheic keratosis/ISIC_0056622.jpg
+/train/Seborrheic keratosis/ISIC_0072070.jpg
+/train/Seborrheic keratosis/ISIC_0070618.jpg
+/train/Seborrheic keratosis/ISIC_0054324.jpg
+/train/Seborrheic keratosis/ISIC_0066305.jpg
+/train/Seborrheic keratosis/ISIC_0058102.jpg
+/train/Seborrheic keratosis/ISIC_0071041.jpg
+/train/Seborrheic keratosis/ISIC_0069291.jpg
+/train/Seborrheic keratosis/ISIC_0059932.jpg
+/train/Seborrheic keratosis/ISIC_0062165.jpg
+/train/Seborrheic keratosis/ISIC_0065321.jpg
+/train/Seborrheic keratosis/ISIC_0073181.jpg
+/train/Seborrheic keratosis/ISIC_0068087.jpg
+/train/Seborrheic keratosis/ISIC_0070284.jpg
+/train/Seborrheic keratosis/ISIC_0053954.jpg
+/train/Seborrheic keratosis/ISIC_0069079.jpg
+/train/Seborrheic keratosis/ISIC_0068479.jpg
+/train/Seborrheic keratosis/ISIC_0056854.jpg
+/train/Seborrheic keratosis/ISIC_0065631.jpg
+/train/Seborrheic keratosis/ISIC_0057446.jpg
+/train/Seborrheic keratosis/ISIC_0066978.jpg
+/train/Seborrheic keratosis/ISIC_0065632.jpg
+/train/Seborrheic keratosis/ISIC_0061030.jpg
+/train/Seborrheic keratosis/ISIC_0064106.jpg
+/train/Seborrheic keratosis/ISIC_0056564.jpg
+/train/Seborrheic keratosis/ISIC_0067505.jpg
+/train/Seborrheic keratosis/ISIC_0068079.jpg
+/train/Seborrheic keratosis/ISIC_0071638.jpg
+/train/Seborrheic keratosis/ISIC_0069069.jpg
+/train/Seborrheic keratosis/ISIC_0069010.jpg
+/train/Seborrheic keratosis/ISIC_0067559.jpg
+/train/Seborrheic keratosis/ISIC_0054810.jpg
+/train/Seborrheic keratosis/ISIC_0061723.jpg
+/train/Seborrheic keratosis/ISIC_0059075.jpg
+/train/Seborrheic keratosis/ISIC_0056420.jpg
+/train/Seborrheic keratosis/ISIC_0071090.jpg
+/train/Seborrheic keratosis/ISIC_0059155.jpg
+/train/Seborrheic keratosis/ISIC_0068214.jpg
+/train/Seborrheic keratosis/ISIC_0064383.jpg
+/train/Seborrheic keratosis/ISIC_0065498.jpg
+/train/Seborrheic keratosis/ISIC_0071662.jpg
+/train/Seborrheic keratosis/ISIC_0066303.jpg
+/train/Seborrheic keratosis/ISIC_0059544.jpg
+/train/Seborrheic keratosis/ISIC_0056903.jpg
+/train/Seborrheic keratosis/ISIC_0062369.jpg
+/train/Seborrheic keratosis/ISIC_0067125.jpg
+/train/Seborrheic keratosis/ISIC_0069478.jpg
+/train/Seborrheic keratosis/ISIC_0064144.jpg
+/train/Seborrheic keratosis/ISIC_0058083.jpg
+/train/Seborrheic keratosis/ISIC_0072451.jpg
+/train/Seborrheic keratosis/ISIC_0072683.jpg
+/train/Seborrheic keratosis/ISIC_0065087.jpg
+/train/Seborrheic keratosis/ISIC_0062687.jpg
+/train/Seborrheic keratosis/ISIC_0065335.jpg
+/train/Seborrheic keratosis/ISIC_0070007.jpg
+/train/Seborrheic keratosis/ISIC_0068285.jpg
+/train/Seborrheic keratosis/ISIC_0065753.jpg
+/train/Seborrheic keratosis/ISIC_0071241.jpg
+/train/Seborrheic keratosis/ISIC_0062094.jpg
+/train/Seborrheic keratosis/ISIC_0060405.jpg
+/train/Seborrheic keratosis/ISIC_0064883.jpg
+/train/Seborrheic keratosis/ISIC_0066065.jpg
+/train/Seborrheic keratosis/ISIC_0064750.jpg
+/train/Seborrheic keratosis/ISIC_0062961.jpg
+/train/Seborrheic keratosis/ISIC_0065389.jpg
+/train/Seborrheic keratosis/ISIC_0055215.jpg
+/train/Seborrheic keratosis/ISIC_0053614.jpg
+/train/Seborrheic keratosis/ISIC_0065834.jpg
+/train/Seborrheic keratosis/ISIC_0058113.jpg
+/train/Seborrheic keratosis/ISIC_0065530.jpg
+/train/Seborrheic keratosis/ISIC_0070300.jpg
+/train/Seborrheic keratosis/ISIC_0054325.jpg
+/train/Seborrheic keratosis/ISIC_0055182.jpg
+/train/Seborrheic keratosis/ISIC_0060173.jpg
+/train/Seborrheic keratosis/ISIC_0070775.jpg
+/train/Seborrheic keratosis/ISIC_0067136.jpg
+/train/Seborrheic keratosis/ISIC_0061367.jpg
+/train/Seborrheic keratosis/ISIC_0070854.jpg
+/train/Seborrheic keratosis/ISIC_0058524.jpg
+/train/Seborrheic keratosis/ISIC_0060072.jpg
+/train/Seborrheic keratosis/ISIC_0058266.jpg
+/train/Seborrheic keratosis/ISIC_0067863.jpg
+/train/Seborrheic keratosis/ISIC_0073011.jpg
+/train/Seborrheic keratosis/ISIC_0070967.jpg
+/train/Seborrheic keratosis/ISIC_0061840.jpg
+/train/Seborrheic keratosis/ISIC_0069876.jpg
+/train/Seborrheic keratosis/ISIC_0070498.jpg
+/train/Seborrheic keratosis/ISIC_0059383.jpg
+/train/Seborrheic keratosis/ISIC_0062258.jpg
+/train/Seborrheic keratosis/ISIC_0063448.jpg
+/train/Seborrheic keratosis/ISIC_0061978.jpg
+/train/Seborrheic keratosis/ISIC_0060359.jpg
+/train/Seborrheic keratosis/ISIC_0059972.jpg
+/train/Seborrheic keratosis/ISIC_0056431.jpg
+/train/Seborrheic keratosis/ISIC_0070970.jpg
+/train/Seborrheic keratosis/ISIC_0067657.jpg
+/train/Seborrheic keratosis/ISIC_0065299.jpg
+/train/Seborrheic keratosis/ISIC_0056514.jpg
+/train/Seborrheic keratosis/ISIC_0053663.jpg
+/train/Seborrheic keratosis/ISIC_0066618.jpg
+/train/Seborrheic keratosis/ISIC_0065194.jpg
+/train/Seborrheic keratosis/ISIC_0061503.jpg
+/train/Seborrheic keratosis/ISIC_0055185.jpg
+/train/Seborrheic keratosis/ISIC_0069521.jpg
+/train/Seborrheic keratosis/ISIC_0069516.jpg
+/train/Seborrheic keratosis/ISIC_0073235.jpg
+/train/Seborrheic keratosis/ISIC_0072910.jpg
+/train/Seborrheic keratosis/ISIC_0067387.jpg
+/train/Seborrheic keratosis/ISIC_0073254.jpg
+/train/Seborrheic keratosis/ISIC_0056711.jpg
+/train/Seborrheic keratosis/ISIC_0060802.jpg
+/train/Seborrheic keratosis/ISIC_0066828.jpg
+/train/Seborrheic keratosis/ISIC_0071831.jpg
+/train/Seborrheic keratosis/ISIC_0063460.jpg
+/train/Seborrheic keratosis/ISIC_0064817.jpg
+/train/Seborrheic keratosis/ISIC_0064971.jpg
+/train/Seborrheic keratosis/ISIC_0063758.jpg
+/train/Seborrheic keratosis/ISIC_0057156.jpg
+/train/Seborrheic keratosis/ISIC_0060838.jpg
+/train/Seborrheic keratosis/ISIC_0069953.jpg
+/train/Seborrheic keratosis/ISIC_0066235.jpg
+/train/Seborrheic keratosis/ISIC_0073048.jpg
+/train/Seborrheic keratosis/ISIC_0072343.jpg
+/train/Seborrheic keratosis/ISIC_0066162.jpg
+/train/Seborrheic keratosis/ISIC_0058938.jpg
+/train/Seborrheic keratosis/ISIC_0060161.jpg
+/train/Seborrheic keratosis/ISIC_0064810.jpg
+/train/Seborrheic keratosis/ISIC_0072397.jpg
+/train/Seborrheic keratosis/ISIC_0066602.jpg
+/train/Seborrheic keratosis/ISIC_0061391.jpg
+/train/Seborrheic keratosis/ISIC_0057750.jpg
+/train/Seborrheic keratosis/ISIC_0067116.jpg
+/train/Seborrheic keratosis/ISIC_0071849.jpg
+/train/Seborrheic keratosis/ISIC_0070995.jpg
+/train/Seborrheic keratosis/ISIC_0057904.jpg
+/train/Seborrheic keratosis/ISIC_0064702.jpg
+/train/Seborrheic keratosis/ISIC_0060678.jpg
+/train/Seborrheic keratosis/ISIC_0070925.jpg
+/train/Seborrheic keratosis/ISIC_0064301.jpg
+/train/Seborrheic keratosis/ISIC_0068264.jpg
+/train/Seborrheic keratosis/ISIC_0058856.jpg
+/train/Seborrheic keratosis/ISIC_0072740.jpg
+/train/Seborrheic keratosis/ISIC_0069118.jpg
+/train/Seborrheic keratosis/ISIC_0060620.jpg
+/train/Seborrheic keratosis/ISIC_0063818.jpg
+/train/Seborrheic keratosis/ISIC_0071902.jpg
+/train/Seborrheic keratosis/ISIC_0064741.jpg
+/train/Seborrheic keratosis/ISIC_0062852.jpg
+/train/Seborrheic keratosis/ISIC_0062379.jpg
+/train/Seborrheic keratosis/ISIC_0053721.jpg
+/train/Seborrheic keratosis/ISIC_0057640.jpg
+/train/Seborrheic keratosis/ISIC_0066812.jpg
+/train/Seborrheic keratosis/ISIC_0057493.jpg
+/train/Seborrheic keratosis/ISIC_0069312.jpg
+/train/Seborrheic keratosis/ISIC_0064758.jpg
+/train/Seborrheic keratosis/ISIC_0065657.jpg
+/train/Seborrheic keratosis/ISIC_0069764.jpg
+/train/Seborrheic keratosis/ISIC_0071344.jpg
+/train/Seborrheic keratosis/ISIC_0058080.jpg
+/train/Seborrheic keratosis/ISIC_0054879.jpg
+/train/Seborrheic keratosis/ISIC_0072999.jpg
+/train/Seborrheic keratosis/ISIC_0067670.jpg
+/train/Seborrheic keratosis/ISIC_0066288.jpg
+/train/Seborrheic keratosis/ISIC_0071421.jpg
+/train/Seborrheic keratosis/ISIC_0072224.jpg
+/train/Seborrheic keratosis/ISIC_0064842.jpg
+/train/Seborrheic keratosis/ISIC_0057746.jpg
+/train/Seborrheic keratosis/ISIC_0067599.jpg
+/train/Seborrheic keratosis/ISIC_0072725.jpg
+/train/Seborrheic keratosis/ISIC_0058041.jpg
+/train/Seborrheic keratosis/ISIC_0064786.jpg
+/train/Seborrheic keratosis/ISIC_0065387.jpg
+/train/Seborrheic keratosis/ISIC_0056329.jpg
+/train/Seborrheic keratosis/ISIC_0072042.jpg
+/train/Seborrheic keratosis/ISIC_0055708.jpg
+/train/Seborrheic keratosis/ISIC_0061917.jpg
+/train/Seborrheic keratosis/ISIC_0060490.jpg
+/train/Seborrheic keratosis/ISIC_0054882.jpg
+/train/Seborrheic keratosis/ISIC_0065259.jpg
+/train/Seborrheic keratosis/ISIC_0070589.jpg
+/train/Seborrheic keratosis/ISIC_0055473.jpg
+/train/Seborrheic keratosis/ISIC_0069877.jpg
+/train/Seborrheic keratosis/ISIC_0056517.jpg
+/train/Seborrheic keratosis/ISIC_0062482.jpg
+/train/Seborrheic keratosis/ISIC_0071545.jpg
+/train/Seborrheic keratosis/ISIC_0067587.jpg
+/train/Seborrheic keratosis/ISIC_0064136.jpg
+/train/Seborrheic keratosis/ISIC_0062124.jpg
+/train/Seborrheic keratosis/ISIC_0072726.jpg
+/train/Seborrheic keratosis/ISIC_0066159.jpg
+/train/Seborrheic keratosis/ISIC_0060567.jpg
+/train/Seborrheic keratosis/ISIC_0069563.jpg
+/train/Seborrheic keratosis/ISIC_0063523.jpg
+/train/Seborrheic keratosis/ISIC_0058664.jpg
+/train/Seborrheic keratosis/ISIC_0056149.jpg
+/train/Seborrheic keratosis/ISIC_0066991.jpg
+/train/Seborrheic keratosis/ISIC_0069354.jpg
+/train/Seborrheic keratosis/ISIC_0070176.jpg
+/train/Seborrheic keratosis/ISIC_0069848.jpg
+/train/Seborrheic keratosis/ISIC_0065344.jpg
+/train/Seborrheic keratosis/ISIC_0072622.jpg
+/train/Seborrheic keratosis/ISIC_0068794.jpg
+/train/Seborrheic keratosis/ISIC_0056174.jpg
+/train/Seborrheic keratosis/ISIC_0070907.jpg
+/train/Seborrheic keratosis/ISIC_0059760.jpg
+/train/Seborrheic keratosis/ISIC_0056620.jpg
+/train/Seborrheic keratosis/ISIC_0057085.jpg
+/train/Seborrheic keratosis/ISIC_0067411.jpg
+/train/Seborrheic keratosis/ISIC_0061980.jpg
+/train/Seborrheic keratosis/ISIC_0064896.jpg
+/train/Seborrheic keratosis/ISIC_0064609.jpg
+/train/Seborrheic keratosis/ISIC_0063276.jpg
+/train/Seborrheic keratosis/ISIC_0070610.jpg
+/train/Seborrheic keratosis/ISIC_0062521.jpg
+/train/Seborrheic keratosis/ISIC_0063763.jpg
+/train/Seborrheic keratosis/ISIC_0058571.jpg
+/train/Seborrheic keratosis/ISIC_0056818.jpg
+/train/Seborrheic keratosis/ISIC_0057819.jpg
+/train/Seborrheic keratosis/ISIC_0059163.jpg
+/train/Seborrheic keratosis/ISIC_0066005.jpg
+/train/Seborrheic keratosis/ISIC_0065887.jpg
+/train/Seborrheic keratosis/ISIC_0060398.jpg
+/train/Seborrheic keratosis/ISIC_0057738.jpg
+/train/Seborrheic keratosis/ISIC_0069232.jpg
+/train/Seborrheic keratosis/ISIC_0058847.jpg
+/train/Seborrheic keratosis/ISIC_0068226.jpg
+/train/Seborrheic keratosis/ISIC_0072972.jpg
+/train/Seborrheic keratosis/ISIC_0058778.jpg
+/train/Seborrheic keratosis/ISIC_0061526.jpg
+/train/Seborrheic keratosis/ISIC_0063183.jpg
+/train/Seborrheic keratosis/ISIC_0065647.jpg
+/train/Seborrheic keratosis/ISIC_0056934.jpg
+/train/Seborrheic keratosis/ISIC_0064740.jpg
+/train/Seborrheic keratosis/ISIC_0070310.jpg
+/train/Seborrheic keratosis/ISIC_0067996.jpg
+/train/Seborrheic keratosis/ISIC_0056813.jpg
+/train/Seborrheic keratosis/ISIC_0071930.jpg
+/train/Seborrheic keratosis/ISIC_0063955.jpg
+/train/Seborrheic keratosis/ISIC_0070807.jpg
+/train/Seborrheic keratosis/ISIC_0072617.jpg
+/train/Seborrheic keratosis/ISIC_0056175.jpg
+/train/Seborrheic keratosis/ISIC_0065866.jpg
+/train/Seborrheic keratosis/ISIC_0069875.jpg
+/train/Seborrheic keratosis/ISIC_0070733.jpg
+/train/Seborrheic keratosis/ISIC_0071445.jpg
+/train/Seborrheic keratosis/ISIC_0066046.jpg
+/train/Seborrheic keratosis/ISIC_0056586.jpg
+/train/Seborrheic keratosis/ISIC_0070560.jpg
+/train/Seborrheic keratosis/ISIC_0067912.jpg
+/train/Seborrheic keratosis/ISIC_0057159.jpg
+/train/Seborrheic keratosis/ISIC_0059693.jpg
+/train/Seborrheic keratosis/ISIC_0056240.jpg
+/train/Seborrheic keratosis/ISIC_0058560.jpg
+/train/Seborrheic keratosis/ISIC_0072370.jpg
+/train/Seborrheic keratosis/ISIC_0060262.jpg
+/train/Seborrheic keratosis/ISIC_0054632.jpg
+/train/Seborrheic keratosis/ISIC_0061370.jpg
+/train/Seborrheic keratosis/ISIC_0062711.jpg
+/train/Seborrheic keratosis/ISIC_0061899.jpg
+/train/Seborrheic keratosis/ISIC_0066457.jpg
+/train/Seborrheic keratosis/ISIC_0065569.jpg
+/train/Seborrheic keratosis/ISIC_0072737.jpg
+/train/Seborrheic keratosis/ISIC_0072895.jpg
+/train/Seborrheic keratosis/ISIC_0064295.jpg
+/train/Seborrheic keratosis/ISIC_0059071.jpg
+/train/Seborrheic keratosis/ISIC_0056193.jpg
+/train/Seborrheic keratosis/ISIC_0068859.jpg
+/train/Seborrheic keratosis/ISIC_0061098.jpg
+/train/Seborrheic keratosis/ISIC_0071801.jpg
+/train/Seborrheic keratosis/ISIC_0056445.jpg
+/train/Seborrheic keratosis/ISIC_0072629.jpg
+/train/Seborrheic keratosis/ISIC_0058359.jpg
+/train/Seborrheic keratosis/ISIC_0057794.jpg
+/train/Seborrheic keratosis/ISIC_0066258.jpg
+/train/Seborrheic keratosis/ISIC_0056456.jpg
+/train/Seborrheic keratosis/ISIC_0056906.jpg
+/train/Seborrheic keratosis/ISIC_0057863.jpg
+/train/Seborrheic keratosis/ISIC_0054720.jpg
+/train/Seborrheic keratosis/ISIC_0065770.jpg
+/train/Seborrheic keratosis/ISIC_0070592.jpg
+/train/Seborrheic keratosis/ISIC_0064225.jpg
+/train/Seborrheic keratosis/ISIC_0059613.jpg
+/train/Seborrheic keratosis/ISIC_0067740.jpg
+/train/Seborrheic keratosis/ISIC_0072322.jpg
+/train/Seborrheic keratosis/ISIC_0061820.jpg
+/train/Seborrheic keratosis/ISIC_0060057.jpg
+/train/Seborrheic keratosis/ISIC_0059242.jpg
+/train/Seborrheic keratosis/ISIC_0056231.jpg
+/train/Seborrheic keratosis/ISIC_0069015.jpg
+/train/Seborrheic keratosis/ISIC_0071076.jpg
+/train/Seborrheic keratosis/ISIC_0065701.jpg
+/train/Seborrheic keratosis/ISIC_0055800.jpg
+/train/Seborrheic keratosis/ISIC_0067582.jpg
+/train/Seborrheic keratosis/ISIC_0072484.jpg
+/train/Seborrheic keratosis/ISIC_0062581.jpg
+/train/Seborrheic keratosis/ISIC_0073126.jpg
+/train/Seborrheic keratosis/ISIC_0056096.jpg
+/train/Seborrheic keratosis/ISIC_0067096.jpg
+/train/Seborrheic keratosis/ISIC_0070245.jpg
+/train/Seborrheic keratosis/ISIC_0057201.jpg
+/train/Seborrheic keratosis/ISIC_0055894.jpg
+/train/Seborrheic keratosis/ISIC_0067393.jpg
+/train/Seborrheic keratosis/ISIC_0068237.jpg
+/train/Seborrheic keratosis/ISIC_0054981.jpg
+/train/Seborrheic keratosis/ISIC_0055234.jpg
+/train/Seborrheic keratosis/ISIC_0063799.jpg
+/train/Seborrheic keratosis/ISIC_0062768.jpg
+/train/Seborrheic keratosis/ISIC_0056841.jpg
+/train/Seborrheic keratosis/ISIC_0061871.jpg
+/train/Seborrheic keratosis/ISIC_0060902.jpg
+/train/Seborrheic keratosis/ISIC_0071694.jpg
+/train/Seborrheic keratosis/ISIC_0066896.jpg
+/train/Seborrheic keratosis/ISIC_0059918.jpg
+/train/Seborrheic keratosis/ISIC_0056241.jpg
+/train/Seborrheic keratosis/ISIC_0063502.jpg
+/train/Seborrheic keratosis/ISIC_0071900.jpg
+/train/Seborrheic keratosis/ISIC_0067623.jpg
+/train/Seborrheic keratosis/ISIC_0054724.jpg
+/train/Seborrheic keratosis/ISIC_0063303.jpg
+/train/Seborrheic keratosis/ISIC_0065678.jpg
+/train/Seborrheic keratosis/ISIC_0071356.jpg
+/train/Seborrheic keratosis/ISIC_0064356.jpg
+/train/Seborrheic keratosis/ISIC_0067023.jpg
+/train/Seborrheic keratosis/ISIC_0062013.jpg
+/train/Seborrheic keratosis/ISIC_0062999.jpg
+/train/Seborrheic keratosis/ISIC_0071190.jpg
+/train/Seborrheic keratosis/ISIC_0071268.jpg
+/train/Seborrheic keratosis/ISIC_0063136.jpg
+/train/Seborrheic keratosis/ISIC_0063868.jpg
+/train/Seborrheic keratosis/ISIC_0056882.jpg
+/train/Seborrheic keratosis/ISIC_0070329.jpg
+/train/Seborrheic keratosis/ISIC_0069655.jpg
+/train/Seborrheic keratosis/ISIC_0055980.jpg
+/train/Seborrheic keratosis/ISIC_0059841.jpg
+/train/Seborrheic keratosis/ISIC_0065399.jpg
+/train/Seborrheic keratosis/ISIC_0069613.jpg
+/train/Seborrheic keratosis/ISIC_0056500.jpg
+/train/Seborrheic keratosis/ISIC_0069797.jpg
+/train/Seborrheic keratosis/ISIC_0062119.jpg
+/train/Seborrheic keratosis/ISIC_0059620.jpg
+/train/Seborrheic keratosis/ISIC_0062888.jpg
+/train/Seborrheic keratosis/ISIC_0062432.jpg
+/train/Seborrheic keratosis/ISIC_0054389.jpg
+/train/Seborrheic keratosis/ISIC_0066178.jpg
+/train/Seborrheic keratosis/ISIC_0073228.jpg
+/train/Seborrheic keratosis/ISIC_0061225.jpg
+/train/Seborrheic keratosis/ISIC_0053750.jpg
+/train/Seborrheic keratosis/ISIC_0057062.jpg
+/train/Seborrheic keratosis/ISIC_0069418.jpg
+/train/Seborrheic keratosis/ISIC_0067712.jpg
+/train/Seborrheic keratosis/ISIC_0054855.jpg
+/train/Seborrheic keratosis/ISIC_0062595.jpg
+/train/Seborrheic keratosis/ISIC_0057622.jpg
+/train/Seborrheic keratosis/ISIC_0060482.jpg
+/train/Seborrheic keratosis/ISIC_0057127.jpg
+/train/Seborrheic keratosis/ISIC_0066389.jpg
+/train/Seborrheic keratosis/ISIC_0062964.jpg
+/train/Seborrheic keratosis/ISIC_0062374.jpg
+/train/Seborrheic keratosis/ISIC_0062083.jpg
+/train/Seborrheic keratosis/ISIC_0054897.jpg
+/train/Seborrheic keratosis/ISIC_0071145.jpg
+/train/Seborrheic keratosis/ISIC_0064285.jpg
+/train/Seborrheic keratosis/ISIC_0071402.jpg
+/train/Seborrheic keratosis/ISIC_0068029.jpg
+/train/Seborrheic keratosis/ISIC_0061361.jpg
+/train/Seborrheic keratosis/ISIC_0058044.jpg
+/train/Seborrheic keratosis/ISIC_0065291.jpg
+/train/Seborrheic keratosis/ISIC_0056074.jpg
+/train/Seborrheic keratosis/ISIC_0060651.jpg
+/train/Seborrheic keratosis/ISIC_0061663.jpg
+/train/Seborrheic keratosis/ISIC_0056732.jpg
+/train/Seborrheic keratosis/ISIC_0069103.jpg
+/train/Seborrheic keratosis/ISIC_0062629.jpg
+/train/Seborrheic keratosis/ISIC_0060217.jpg
+/train/Seborrheic keratosis/ISIC_0061708.jpg
+/train/Seborrheic keratosis/ISIC_0064083.jpg
+/train/Seborrheic keratosis/ISIC_0064041.jpg
+/train/Seborrheic keratosis/ISIC_0068922.jpg
+/train/Seborrheic keratosis/ISIC_0068426.jpg
+/train/Seborrheic keratosis/ISIC_0056769.jpg
+/train/Seborrheic keratosis/ISIC_0065966.jpg
+/train/Seborrheic keratosis/ISIC_0062574.jpg
+/train/Seborrheic keratosis/ISIC_0068181.jpg
+/train/Seborrheic keratosis/ISIC_0055537.jpg
+/train/Seborrheic keratosis/ISIC_0053716.jpg
+/train/Seborrheic keratosis/ISIC_0055085.jpg
+/train/Seborrheic keratosis/ISIC_0062126.jpg
+/train/Seborrheic keratosis/ISIC_0073177.jpg
+/train/Seborrheic keratosis/ISIC_0061844.jpg
+/train/Seborrheic keratosis/ISIC_0065857.jpg
+/train/Seborrheic keratosis/ISIC_0058212.jpg
+/train/Seborrheic keratosis/ISIC_0054128.jpg
+/train/Seborrheic keratosis/ISIC_0067283.jpg
+/train/Seborrheic keratosis/ISIC_0070230.jpg
+/train/Seborrheic keratosis/ISIC_0058815.jpg
+/train/Seborrheic keratosis/ISIC_0072607.jpg
+/train/Seborrheic keratosis/ISIC_0069461.jpg
+/train/Seborrheic keratosis/ISIC_0068249.jpg
+/train/Seborrheic keratosis/ISIC_0061993.jpg
+/train/Seborrheic keratosis/ISIC_0066195.jpg
+/train/Seborrheic keratosis/ISIC_0069251.jpg
+/train/Seborrheic keratosis/ISIC_0058942.jpg
+/train/Seborrheic keratosis/ISIC_0058927.jpg
+/train/Seborrheic keratosis/ISIC_0067913.jpg
+/train/Seborrheic keratosis/ISIC_0072721.jpg
+/train/Seborrheic keratosis/ISIC_0070683.jpg
+/train/Seborrheic keratosis/ISIC_0069263.jpg
+/train/Seborrheic keratosis/ISIC_0062773.jpg
+/train/Seborrheic keratosis/ISIC_0061802.jpg
+/train/Seborrheic keratosis/ISIC_0056132.jpg
+/train/Seborrheic keratosis/ISIC_0061229.jpg
+/train/Seborrheic keratosis/ISIC_0063740.jpg
+/train/Seborrheic keratosis/ISIC_0072071.jpg
+/train/Seborrheic keratosis/ISIC_0057278.jpg
+/train/Seborrheic keratosis/ISIC_0054466.jpg
+/train/Seborrheic keratosis/ISIC_0070949.jpg
+/train/Seborrheic keratosis/ISIC_0054833.jpg
+/train/Seborrheic keratosis/ISIC_0069389.jpg
+/train/Seborrheic keratosis/ISIC_0069861.jpg
+/train/Seborrheic keratosis/ISIC_0056368.jpg
+/train/Seborrheic keratosis/ISIC_0054931.jpg
+/train/Seborrheic keratosis/ISIC_0055146.jpg
+/train/Seborrheic keratosis/ISIC_0060995.jpg
+/train/Seborrheic keratosis/ISIC_0072904.jpg
+/train/Seborrheic keratosis/ISIC_0072928.jpg
+/train/Seborrheic keratosis/ISIC_0065850.jpg
+/train/Seborrheic keratosis/ISIC_0057346.jpg
+/train/Seborrheic keratosis/ISIC_0053930.jpg
+/train/Seborrheic keratosis/ISIC_0054507.jpg
+/train/Seborrheic keratosis/ISIC_0063259.jpg
+/train/Seborrheic keratosis/ISIC_0070790.jpg
+/train/Seborrheic keratosis/ISIC_0063849.jpg
+/train/Seborrheic keratosis/ISIC_0068521.jpg
+/train/Seborrheic keratosis/ISIC_0069588.jpg
+/train/Seborrheic keratosis/ISIC_0064695.jpg
+/train/Seborrheic keratosis/ISIC_0058283.jpg
+/train/Seborrheic keratosis/ISIC_0055685.jpg
+/train/Seborrheic keratosis/ISIC_0053932.jpg
+/train/Seborrheic keratosis/ISIC_0063317.jpg
+/train/Seborrheic keratosis/ISIC_0060105.jpg
+/train/Seborrheic keratosis/ISIC_0065359.jpg
+/train/Seborrheic keratosis/ISIC_0071502.jpg
+/train/Seborrheic keratosis/ISIC_0057879.jpg
+/train/Seborrheic keratosis/ISIC_0065859.jpg
+/train/Seborrheic keratosis/ISIC_0062805.jpg
+/train/Seborrheic keratosis/ISIC_0059110.jpg
+/train/Seborrheic keratosis/ISIC_0069606.jpg
+/train/Seborrheic keratosis/ISIC_0054690.jpg
+/train/Seborrheic keratosis/ISIC_0059623.jpg
+/train/Seborrheic keratosis/ISIC_0066679.jpg
+/train/Seborrheic keratosis/ISIC_0065800.jpg
+/train/Seborrheic keratosis/ISIC_0069683.jpg
+/train/Seborrheic keratosis/ISIC_0053581.jpg
+/train/Seborrheic keratosis/ISIC_0061692.jpg
+/train/Seborrheic keratosis/ISIC_0061167.jpg
+/train/Seborrheic keratosis/ISIC_0067496.jpg
+/train/Seborrheic keratosis/ISIC_0059665.jpg
+/train/Seborrheic keratosis/ISIC_0054761.jpg
+/train/Seborrheic keratosis/ISIC_0054779.jpg
+/train/Seborrheic keratosis/ISIC_0060857.jpg
+/train/Seborrheic keratosis/ISIC_0059975.jpg
+/train/Seborrheic keratosis/ISIC_0056759.jpg
+/train/Seborrheic keratosis/ISIC_0059035.jpg
+/train/Seborrheic keratosis/ISIC_0057290.jpg
+/train/Seborrheic keratosis/ISIC_0063260.jpg
+/train/Seborrheic keratosis/ISIC_0065003.jpg
+/train/Seborrheic keratosis/ISIC_0066126.jpg
+/train/Seborrheic keratosis/ISIC_0056650.jpg
+/train/Seborrheic keratosis/ISIC_0056699.jpg
+/train/Seborrheic keratosis/ISIC_0064654.jpg
+/train/Seborrheic keratosis/ISIC_0072913.jpg
+/train/Seborrheic keratosis/ISIC_0061698.jpg
+/train/Seborrheic keratosis/ISIC_0056654.jpg
+/train/Seborrheic keratosis/ISIC_0057850.jpg
+/train/Seborrheic keratosis/ISIC_0057245.jpg
+/train/Seborrheic keratosis/ISIC_0069675.jpg
+/train/Seborrheic keratosis/ISIC_0069957.jpg
+/train/Seborrheic keratosis/ISIC_0067879.jpg
+/train/Seborrheic keratosis/ISIC_0071013.jpg
+/train/Seborrheic keratosis/ISIC_0056803.jpg
+/train/Seborrheic keratosis/ISIC_0066021.jpg
+/train/Seborrheic keratosis/ISIC_0061416.jpg
+/train/Seborrheic keratosis/ISIC_0057524.jpg
+/train/Seborrheic keratosis/ISIC_0070117.jpg
+/train/Seborrheic keratosis/ISIC_0063571.jpg
+/train/Seborrheic keratosis/ISIC_0066037.jpg
+/train/Seborrheic keratosis/ISIC_0069673.jpg
+/train/Seborrheic keratosis/ISIC_0064398.jpg
+/train/Seborrheic keratosis/ISIC_0055472.jpg
+/train/Seborrheic keratosis/ISIC_0069487.jpg
+/train/Seborrheic keratosis/ISIC_0063163.jpg
+/train/Seborrheic keratosis/ISIC_0062949.jpg
+/train/Seborrheic keratosis/ISIC_0065042.jpg
+/train/Seborrheic keratosis/ISIC_0056107.jpg
+/train/Seborrheic keratosis/ISIC_0054165.jpg
+/train/Seborrheic keratosis/ISIC_0060345.jpg
+/train/Seborrheic keratosis/ISIC_0066721.jpg
+/train/Seborrheic keratosis/ISIC_0065064.jpg
+/train/Seborrheic keratosis/ISIC_0066925.jpg
+/train/Seborrheic keratosis/ISIC_0066168.jpg
+/train/Seborrheic keratosis/ISIC_0065886.jpg
+/train/Seborrheic keratosis/ISIC_0066680.jpg
+/train/Seborrheic keratosis/ISIC_0068952.jpg
+/train/Seborrheic keratosis/ISIC_0066345.jpg
+/train/Seborrheic keratosis/ISIC_0068436.jpg
+/train/Seborrheic keratosis/ISIC_0064826.jpg
+/train/Seborrheic keratosis/ISIC_0068284.jpg
+/train/Seborrheic keratosis/ISIC_0063042.jpg
+/train/Seborrheic keratosis/ISIC_0067298.jpg
+/train/Seborrheic keratosis/ISIC_0065302.jpg
+/train/Seborrheic keratosis/ISIC_0072692.jpg
+/train/Seborrheic keratosis/ISIC_0056672.jpg
+/train/Seborrheic keratosis/ISIC_0069083.jpg
+/train/Seborrheic keratosis/ISIC_0054309.jpg
+/train/Seborrheic keratosis/ISIC_0066472.jpg
+/train/Seborrheic keratosis/ISIC_0070936.jpg
+/train/Seborrheic keratosis/ISIC_0064388.jpg
+/train/Seborrheic keratosis/ISIC_0053467.jpg
+/train/Seborrheic keratosis/ISIC_0057024.jpg
+/train/Seborrheic keratosis/ISIC_0063237.jpg
+/train/Seborrheic keratosis/ISIC_0055217.jpg
+/train/Seborrheic keratosis/ISIC_0054207.jpg
+/train/Seborrheic keratosis/ISIC_0070272.jpg
+/train/Seborrheic keratosis/ISIC_0058825.jpg
+/train/Seborrheic keratosis/ISIC_0061089.jpg
+/train/Seborrheic keratosis/ISIC_0055164.jpg
+/train/Seborrheic keratosis/ISIC_0056829.jpg
+/train/Seborrheic keratosis/ISIC_0067584.jpg
+/train/Seborrheic keratosis/ISIC_0056693.jpg
+/train/Seborrheic keratosis/ISIC_0065459.jpg
+/train/Seborrheic keratosis/ISIC_0072139.jpg
+/train/Seborrheic keratosis/ISIC_0069974.jpg
+/train/Seborrheic keratosis/ISIC_0072614.jpg
+/train/Seborrheic keratosis/ISIC_0065757.jpg
+/train/Seborrheic keratosis/ISIC_0055755.jpg
+/train/Seborrheic keratosis/ISIC_0064900.jpg
+/train/Seborrheic keratosis/ISIC_0054336.jpg
+/train/Seborrheic keratosis/ISIC_0063911.jpg
+/train/Seborrheic keratosis/ISIC_0072840.jpg
+/train/Seborrheic keratosis/ISIC_0061426.jpg
+/train/Seborrheic keratosis/ISIC_0072682.jpg
+/train/Seborrheic keratosis/ISIC_0062598.jpg
+/train/Seborrheic keratosis/ISIC_0063814.jpg
+/train/Seborrheic keratosis/ISIC_0062017.jpg
+/train/Seborrheic keratosis/ISIC_0058811.jpg
+/train/Seborrheic keratosis/ISIC_0063646.jpg
+/train/Seborrheic keratosis/ISIC_0062630.jpg
+/train/Seborrheic keratosis/ISIC_0066108.jpg
+/train/Seborrheic keratosis/ISIC_0065772.jpg
+/train/Seborrheic keratosis/ISIC_0072947.jpg
+/train/Solar or actinic keratosis/ISIC_0062614.jpg
+/train/Solar or actinic keratosis/ISIC_0071617.jpg
+/train/Solar or actinic keratosis/ISIC_0062608.jpg
+/train/Solar or actinic keratosis/ISIC_0072205.jpg
+/train/Solar or actinic keratosis/ISIC_0061814.jpg
+/train/Solar or actinic keratosis/ISIC_0062586.jpg
+/train/Solar or actinic keratosis/ISIC_0057431.jpg
+/train/Solar or actinic keratosis/ISIC_0069904.jpg
+/train/Solar or actinic keratosis/ISIC_0062245.jpg
+/train/Solar or actinic keratosis/ISIC_0072788.jpg
+/train/Solar or actinic keratosis/ISIC_0072404.jpg
+/train/Solar or actinic keratosis/ISIC_0065470.jpg
+/train/Solar or actinic keratosis/ISIC_0058738.jpg
+/train/Solar or actinic keratosis/ISIC_0068522.jpg
+/train/Solar or actinic keratosis/ISIC_0070116.jpg
+/train/Solar or actinic keratosis/ISIC_0058324.jpg
+/train/Solar or actinic keratosis/ISIC_0066306.jpg
+/train/Solar or actinic keratosis/ISIC_0071714.jpg
+/train/Solar or actinic keratosis/ISIC_0057987.jpg
+/train/Solar or actinic keratosis/ISIC_0063320.jpg
+/train/Solar or actinic keratosis/ISIC_0055173.jpg
+/train/Solar or actinic keratosis/ISIC_0071205.jpg
+/train/Solar or actinic keratosis/ISIC_0068086.jpg
+/train/Solar or actinic keratosis/ISIC_0053866.jpg
+/train/Solar or actinic keratosis/ISIC_0060609.jpg
+/train/Solar or actinic keratosis/ISIC_0069612.jpg
+/train/Solar or actinic keratosis/ISIC_0053900.jpg
+/train/Solar or actinic keratosis/ISIC_0059985.jpg
+/train/Solar or actinic keratosis/ISIC_0067218.jpg
+/train/Solar or actinic keratosis/ISIC_0054533.jpg
+/train/Solar or actinic keratosis/ISIC_0066785.jpg
+/train/Solar or actinic keratosis/ISIC_0062563.jpg
+/train/Solar or actinic keratosis/ISIC_0062123.jpg
+/train/Solar or actinic keratosis/ISIC_0070737.jpg
+/train/Solar or actinic keratosis/ISIC_0069872.jpg
+/train/Solar or actinic keratosis/ISIC_0061519.jpg
+/train/Solar or actinic keratosis/ISIC_0062207.jpg
+/train/Solar or actinic keratosis/ISIC_0060122.jpg
+/train/Solar or actinic keratosis/ISIC_0067632.jpg
+/train/Solar or actinic keratosis/ISIC_0061307.jpg
+/train/Solar or actinic keratosis/ISIC_0061774.jpg
+/train/Solar or actinic keratosis/ISIC_0070507.jpg
+/train/Solar or actinic keratosis/ISIC_0055153.jpg
+/train/Solar or actinic keratosis/ISIC_0053666.jpg
+/train/Solar or actinic keratosis/ISIC_0072192.jpg
+/train/Solar or actinic keratosis/ISIC_0059445.jpg
+/train/Solar or actinic keratosis/ISIC_0066360.jpg
+/train/Solar or actinic keratosis/ISIC_0065832.jpg
+/train/Solar or actinic keratosis/ISIC_0072163.jpg
+/train/Solar or actinic keratosis/ISIC_0072038.jpg
+/train/Solar or actinic keratosis/ISIC_0072979.jpg
+/train/Solar or actinic keratosis/ISIC_0067394.jpg
+/train/Solar or actinic keratosis/ISIC_0062024.jpg
+/train/Solar or actinic keratosis/ISIC_0056211.jpg
+/train/Solar or actinic keratosis/ISIC_0057316.jpg
+/train/Solar or actinic keratosis/ISIC_0059945.jpg
+/train/Solar or actinic keratosis/ISIC_0063674.jpg
+/train/Solar or actinic keratosis/ISIC_0054689.jpg
+/train/Solar or actinic keratosis/ISIC_0065661.jpg
+/train/Solar or actinic keratosis/ISIC_0057679.jpg
+/train/Solar or actinic keratosis/ISIC_0068845.jpg
+/train/Solar or actinic keratosis/ISIC_0071213.jpg
+/train/Solar or actinic keratosis/ISIC_0072328.jpg
+/train/Solar or actinic keratosis/ISIC_0057740.jpg
+/train/Solar or actinic keratosis/ISIC_0066973.jpg
+/train/Solar or actinic keratosis/ISIC_0067013.jpg
+/train/Solar or actinic keratosis/ISIC_0072180.jpg
+/train/Solar or actinic keratosis/ISIC_0065416.jpg
+/train/Solar or actinic keratosis/ISIC_0070499.jpg
+/train/Solar or actinic keratosis/ISIC_0062940.jpg
+/train/Solar or actinic keratosis/ISIC_0068797.jpg
+/train/Solar or actinic keratosis/ISIC_0072206.jpg
+/train/Solar or actinic keratosis/ISIC_0054598.jpg
+/train/Solar or actinic keratosis/ISIC_0072572.jpg
+/train/Solar or actinic keratosis/ISIC_0072013.jpg
+/train/Solar or actinic keratosis/ISIC_0066082.jpg
+/train/Solar or actinic keratosis/ISIC_0071449.jpg
+/train/Solar or actinic keratosis/ISIC_0058452.jpg
+/train/Solar or actinic keratosis/ISIC_0059198.jpg
+/train/Solar or actinic keratosis/ISIC_0068377.jpg
+/train/Solar or actinic keratosis/ISIC_0055639.jpg
+/train/Solar or actinic keratosis/ISIC_0057432.jpg
+/train/Solar or actinic keratosis/ISIC_0053657.jpg
+/train/Solar or actinic keratosis/ISIC_0062036.jpg
+/train/Solar or actinic keratosis/ISIC_0072618.jpg
+/train/Solar or actinic keratosis/ISIC_0055724.jpg
+/train/Solar or actinic keratosis/ISIC_0066188.jpg
+/train/Solar or actinic keratosis/ISIC_0057638.jpg
+/train/Solar or actinic keratosis/ISIC_0069640.jpg
+/train/Solar or actinic keratosis/ISIC_0064573.jpg
+/train/Solar or actinic keratosis/ISIC_0059789.jpg
+/train/Solar or actinic keratosis/ISIC_0068823.jpg
+/train/Solar or actinic keratosis/ISIC_0063038.jpg
+/train/Solar or actinic keratosis/ISIC_0053689.jpg
+/train/Solar or actinic keratosis/ISIC_0062159.jpg
+/train/Solar or actinic keratosis/ISIC_0065952.jpg
+/train/Solar or actinic keratosis/ISIC_0057517.jpg
+/train/Solar or actinic keratosis/ISIC_0061730.jpg
+/train/Solar or actinic keratosis/ISIC_0069939.jpg
+/train/Solar or actinic keratosis/ISIC_0062622.jpg
+/train/Solar or actinic keratosis/ISIC_0056278.jpg
+/train/Solar or actinic keratosis/ISIC_0062184.jpg
+/train/Solar or actinic keratosis/ISIC_0057986.jpg
+/train/Solar or actinic keratosis/ISIC_0062305.jpg
+/train/Solar or actinic keratosis/ISIC_0071606.jpg
+/train/Solar or actinic keratosis/ISIC_0066466.jpg
+/train/Solar or actinic keratosis/ISIC_0057051.jpg
+/train/Solar or actinic keratosis/ISIC_0062109.jpg
+/train/Solar or actinic keratosis/ISIC_0069863.jpg
+/train/Solar or actinic keratosis/ISIC_0064250.jpg
+/train/Solar or actinic keratosis/ISIC_0061836.jpg
+/train/Solar or actinic keratosis/ISIC_0067468.jpg
+/train/Solar or actinic keratosis/ISIC_0069789.jpg
+/train/Solar or actinic keratosis/ISIC_0056114.jpg
+/train/Solar or actinic keratosis/ISIC_0062346.jpg
+/train/Solar or actinic keratosis/ISIC_0072258.jpg
+/train/Solar or actinic keratosis/ISIC_0065271.jpg
+/train/Solar or actinic keratosis/ISIC_0058114.jpg
+/train/Solar or actinic keratosis/ISIC_0065312.jpg
+/train/Solar or actinic keratosis/ISIC_0065052.jpg
+/train/Solar or actinic keratosis/ISIC_0060926.jpg
+/train/Solar or actinic keratosis/ISIC_0056183.jpg
+/train/Solar or actinic keratosis/ISIC_0053775.jpg
+/train/Solar or actinic keratosis/ISIC_0070379.jpg
+/train/Solar or actinic keratosis/ISIC_0067698.jpg
+/train/Solar or actinic keratosis/ISIC_0060412.jpg
+/train/Solar or actinic keratosis/ISIC_0054259.jpg
+/train/Solar or actinic keratosis/ISIC_0061967.jpg
+/train/Solar or actinic keratosis/ISIC_0066265.jpg
+/train/Solar or actinic keratosis/ISIC_0062051.jpg
+/train/Solar or actinic keratosis/ISIC_0066293.jpg
+/train/Solar or actinic keratosis/ISIC_0067688.jpg
+/train/Solar or actinic keratosis/ISIC_0069898.jpg
+/train/Solar or actinic keratosis/ISIC_0057586.jpg
+/train/Solar or actinic keratosis/ISIC_0063361.jpg
+/train/Solar or actinic keratosis/ISIC_0072352.jpg
+/train/Solar or actinic keratosis/ISIC_0069802.jpg
+/train/Solar or actinic keratosis/ISIC_0069629.jpg
+/train/Solar or actinic keratosis/ISIC_0058762.jpg
+/train/Solar or actinic keratosis/ISIC_0054035.jpg
+/train/Solar or actinic keratosis/ISIC_0058983.jpg
+/train/Solar or actinic keratosis/ISIC_0063024.jpg
+/train/Solar or actinic keratosis/ISIC_0056115.jpg
+/train/Solar or actinic keratosis/ISIC_0072563.jpg
+/train/Solar or actinic keratosis/ISIC_0062654.jpg
+/train/Solar or actinic keratosis/ISIC_0063341.jpg
+/train/Solar or actinic keratosis/ISIC_0060269.jpg
+/train/Solar or actinic keratosis/ISIC_0061422.jpg
+/train/Solar or actinic keratosis/ISIC_0061068.jpg
+/train/Solar or actinic keratosis/ISIC_0061431.jpg
+/train/Solar or actinic keratosis/ISIC_0072814.jpg
+/train/Solar or actinic keratosis/ISIC_0070895.jpg
+/train/Solar or actinic keratosis/ISIC_0058239.jpg
+/train/Solar or actinic keratosis/ISIC_0056272.jpg
+/train/Solar or actinic keratosis/ISIC_0072847.jpg
+/train/Solar or actinic keratosis/ISIC_0068354.jpg
+/train/Solar or actinic keratosis/ISIC_0065938.jpg
+/train/Solar or actinic keratosis/ISIC_0066395.jpg
+/train/Solar or actinic keratosis/ISIC_0065880.jpg
+/train/Solar or actinic keratosis/ISIC_0056662.jpg
+/train/Solar or actinic keratosis/ISIC_0072927.jpg
+/train/Solar or actinic keratosis/ISIC_0064617.jpg
+/train/Solar or actinic keratosis/ISIC_0054127.jpg
+/train/Solar or actinic keratosis/ISIC_0067297.jpg
+/train/Solar or actinic keratosis/ISIC_0069769.jpg
+/train/Solar or actinic keratosis/ISIC_0070877.jpg
+/train/Solar or actinic keratosis/ISIC_0063210.jpg
+/train/Solar or actinic keratosis/ISIC_0066990.jpg
+/train/Solar or actinic keratosis/ISIC_0059875.jpg
+/train/Solar or actinic keratosis/ISIC_0069923.jpg
+/train/Solar or actinic keratosis/ISIC_0058688.jpg
+/train/Solar or actinic keratosis/ISIC_0061593.jpg
+/train/Solar or actinic keratosis/ISIC_0071524.jpg
+/train/Solar or actinic keratosis/ISIC_0064330.jpg
+/train/Solar or actinic keratosis/ISIC_0070462.jpg
+/train/Solar or actinic keratosis/ISIC_0072992.jpg
+/train/Solar or actinic keratosis/ISIC_0053879.jpg
+/train/Solar or actinic keratosis/ISIC_0062039.jpg
+/train/Solar or actinic keratosis/ISIC_0061582.jpg
+/train/Solar or actinic keratosis/ISIC_0071686.jpg
+/train/Solar or actinic keratosis/ISIC_0054081.jpg
+/train/Solar or actinic keratosis/ISIC_0053798.jpg
+/train/Solar or actinic keratosis/ISIC_0062345.jpg
+/train/Solar or actinic keratosis/ISIC_0056773.jpg
+/train/Solar or actinic keratosis/ISIC_0055387.jpg
+/train/Solar or actinic keratosis/ISIC_0055589.jpg
+/train/Solar or actinic keratosis/ISIC_0070256.jpg
+/train/Solar or actinic keratosis/ISIC_0053566.jpg
+/train/Solar or actinic keratosis/ISIC_0068072.jpg
+/train/Solar or actinic keratosis/ISIC_0055099.jpg
+/train/Solar or actinic keratosis/ISIC_0063287.jpg
+/train/Solar or actinic keratosis/ISIC_0057499.jpg
+/train/Solar or actinic keratosis/ISIC_0064067.jpg
+/train/Solar or actinic keratosis/ISIC_0058971.jpg
+/train/Solar or actinic keratosis/ISIC_0064745.jpg
+/train/Solar or actinic keratosis/ISIC_0068989.jpg
+/train/Solar or actinic keratosis/ISIC_0060467.jpg
+/train/Solar or actinic keratosis/ISIC_0059489.jpg
+/train/Solar or actinic keratosis/ISIC_0065811.jpg
+/train/Solar or actinic keratosis/ISIC_0057022.jpg
+/train/Solar or actinic keratosis/ISIC_0068892.jpg
+/train/Solar or actinic keratosis/ISIC_0066762.jpg
+/train/Solar or actinic keratosis/ISIC_0068014.jpg
+/train/Solar or actinic keratosis/ISIC_0061521.jpg
+/train/Solar or actinic keratosis/ISIC_0069719.jpg
+/train/Solar or actinic keratosis/ISIC_0063293.jpg
+/train/Solar or actinic keratosis/ISIC_0067761.jpg
+/train/Solar or actinic keratosis/ISIC_0069784.jpg
+/train/Solar or actinic keratosis/ISIC_0061667.jpg
+/train/Solar or actinic keratosis/ISIC_0070691.jpg
+/train/Solar or actinic keratosis/ISIC_0064566.jpg
+/train/Solar or actinic keratosis/ISIC_0065048.jpg
+/train/Solar or actinic keratosis/ISIC_0060755.jpg
+/train/Solar or actinic keratosis/ISIC_0066686.jpg
+/train/Solar or actinic keratosis/ISIC_0058320.jpg
+/train/Solar or actinic keratosis/ISIC_0058939.jpg
+/train/Solar or actinic keratosis/ISIC_0053764.jpg
+/train/Solar or actinic keratosis/ISIC_0068419.jpg
+/train/Solar or actinic keratosis/ISIC_0063023.jpg
+/train/Solar or actinic keratosis/ISIC_0056898.jpg
+/train/Solar or actinic keratosis/ISIC_0064322.jpg
+/train/Solar or actinic keratosis/ISIC_0054921.jpg
+/train/Solar or actinic keratosis/ISIC_0066391.jpg
+/train/Solar or actinic keratosis/ISIC_0063927.jpg
+/train/Solar or actinic keratosis/ISIC_0058431.jpg
+/train/Solar or actinic keratosis/ISIC_0064811.jpg
+/train/Solar or actinic keratosis/ISIC_0062830.jpg
+/train/Solar or actinic keratosis/ISIC_0067676.jpg
+/train/Solar or actinic keratosis/ISIC_0061787.jpg
+/train/Solar or actinic keratosis/ISIC_0067180.jpg
+/train/Solar or actinic keratosis/ISIC_0063187.jpg
+/train/Solar or actinic keratosis/ISIC_0071762.jpg
+/train/Solar or actinic keratosis/ISIC_0070243.jpg
+/train/Solar or actinic keratosis/ISIC_0059899.jpg
+/train/Solar or actinic keratosis/ISIC_0068973.jpg
+/train/Solar or actinic keratosis/ISIC_0058273.jpg
+/train/Solar or actinic keratosis/ISIC_0053882.jpg
+/train/Solar or actinic keratosis/ISIC_0072854.jpg
+/train/Solar or actinic keratosis/ISIC_0069027.jpg
+/train/Solar or actinic keratosis/ISIC_0057280.jpg
+/train/Solar or actinic keratosis/ISIC_0057575.jpg
+/train/Solar or actinic keratosis/ISIC_0061059.jpg
+/train/Solar or actinic keratosis/ISIC_0065547.jpg
+/train/Solar or actinic keratosis/ISIC_0058884.jpg
+/train/Solar or actinic keratosis/ISIC_0062742.jpg
+/train/Solar or actinic keratosis/ISIC_0071256.jpg
+/train/Solar or actinic keratosis/ISIC_0073035.jpg
+/train/Solar or actinic keratosis/ISIC_0063016.jpg
+/train/Solar or actinic keratosis/ISIC_0071440.jpg
+/train/Solar or actinic keratosis/ISIC_0069869.jpg
+/train/Solar or actinic keratosis/ISIC_0057806.jpg
+/train/Solar or actinic keratosis/ISIC_0069211.jpg
+/train/Solar or actinic keratosis/ISIC_0059588.jpg
+/train/Solar or actinic keratosis/ISIC_0070260.jpg
+/train/Solar or actinic keratosis/ISIC_0061588.jpg
+/train/Solar or actinic keratosis/ISIC_0062408.jpg
+/train/Solar or actinic keratosis/ISIC_0060273.jpg
+/train/Solar or actinic keratosis/ISIC_0060522.jpg
+/train/Solar or actinic keratosis/ISIC_0062405.jpg
+/train/Solar or actinic keratosis/ISIC_0072514.jpg
+/train/Solar or actinic keratosis/ISIC_0068547.jpg
+/train/Solar or actinic keratosis/ISIC_0063577.jpg
+/train/Solar or actinic keratosis/ISIC_0061499.jpg
+/train/Solar or actinic keratosis/ISIC_0062212.jpg
+/train/Solar or actinic keratosis/ISIC_0059401.jpg
+/train/Solar or actinic keratosis/ISIC_0060121.jpg
+/train/Solar or actinic keratosis/ISIC_0054687.jpg
+/train/Solar or actinic keratosis/ISIC_0066142.jpg
+/train/Solar or actinic keratosis/ISIC_0072861.jpg
+/train/Solar or actinic keratosis/ISIC_0063567.jpg
+/train/Solar or actinic keratosis/ISIC_0055374.jpg
+/train/Solar or actinic keratosis/ISIC_0070979.jpg
+/train/Solar or actinic keratosis/ISIC_0055637.jpg
+/train/Solar or actinic keratosis/ISIC_0059886.jpg
+/train/Solar or actinic keratosis/ISIC_0054737.jpg
+/train/Solar or actinic keratosis/ISIC_0067647.jpg
+/train/Solar or actinic keratosis/ISIC_0057042.jpg
+/train/Solar or actinic keratosis/ISIC_0061039.jpg
+/train/Solar or actinic keratosis/ISIC_0067855.jpg
+/train/Solar or actinic keratosis/ISIC_0067153.jpg
+/train/Solar or actinic keratosis/ISIC_0072940.jpg
+/train/Solar or actinic keratosis/ISIC_0059578.jpg
+/train/Solar or actinic keratosis/ISIC_0057852.jpg
+/train/Solar or actinic keratosis/ISIC_0059344.jpg
+/train/Solar or actinic keratosis/ISIC_0065375.jpg
+/train/Solar or actinic keratosis/ISIC_0066885.jpg
+/train/Solar or actinic keratosis/ISIC_0065741.jpg
+/train/Solar or actinic keratosis/ISIC_0063122.jpg
+/train/Solar or actinic keratosis/ISIC_0056273.jpg
+/train/Solar or actinic keratosis/ISIC_0063482.jpg
+/train/Solar or actinic keratosis/ISIC_0061805.jpg
+/train/Solar or actinic keratosis/ISIC_0057739.jpg
+/train/Solar or actinic keratosis/ISIC_0060098.jpg
+/train/Solar or actinic keratosis/ISIC_0066546.jpg
+/train/Solar or actinic keratosis/ISIC_0056159.jpg
+/train/Solar or actinic keratosis/ISIC_0057888.jpg
+/train/Solar or actinic keratosis/ISIC_0064526.jpg
+/train/Solar or actinic keratosis/ISIC_0054433.jpg
+/train/Solar or actinic keratosis/ISIC_0053819.jpg
+/train/Solar or actinic keratosis/ISIC_0056724.jpg
+/train/Solar or actinic keratosis/ISIC_0063854.jpg
+/train/Solar or actinic keratosis/ISIC_0072044.jpg
+/train/Solar or actinic keratosis/ISIC_0059146.jpg
+/train/Solar or actinic keratosis/ISIC_0064151.jpg
+/train/Solar or actinic keratosis/ISIC_0069384.jpg
+/train/Solar or actinic keratosis/ISIC_0057135.jpg
+/train/Solar or actinic keratosis/ISIC_0058494.jpg
+/train/Solar or actinic keratosis/ISIC_0056109.jpg
+/train/Solar or actinic keratosis/ISIC_0057778.jpg
+/train/Solar or actinic keratosis/ISIC_0071866.jpg
+/train/Solar or actinic keratosis/ISIC_0068232.jpg
+/train/Solar or actinic keratosis/ISIC_0053736.jpg
+/train/Solar or actinic keratosis/ISIC_0054858.jpg
+/train/Solar or actinic keratosis/ISIC_0054209.jpg
+/train/Solar or actinic keratosis/ISIC_0059799.jpg
+/train/Solar or actinic keratosis/ISIC_0062893.jpg
+/train/Solar or actinic keratosis/ISIC_0060989.jpg
+/train/Solar or actinic keratosis/ISIC_0059572.jpg
+/train/Solar or actinic keratosis/ISIC_0055273.jpg
+/train/Solar or actinic keratosis/ISIC_0053597.jpg
+/train/Solar or actinic keratosis/ISIC_0059655.jpg
+/train/Solar or actinic keratosis/ISIC_0060306.jpg
+/train/Solar or actinic keratosis/ISIC_0061942.jpg
+/train/Solar or actinic keratosis/ISIC_0053616.jpg
+/train/Solar or actinic keratosis/ISIC_0057477.jpg
+/train/Solar or actinic keratosis/ISIC_0057410.jpg
+/train/Solar or actinic keratosis/ISIC_0058119.jpg
+/train/Solar or actinic keratosis/ISIC_0069294.jpg
+/train/Solar or actinic keratosis/ISIC_0056643.jpg
+/train/Solar or actinic keratosis/ISIC_0065150.jpg
+/train/Solar or actinic keratosis/ISIC_0055250.jpg
+/train/Solar or actinic keratosis/ISIC_0069884.jpg
+/train/Solar or actinic keratosis/ISIC_0057616.jpg
+/train/Solar or actinic keratosis/ISIC_0059602.jpg
+/train/Solar or actinic keratosis/ISIC_0064231.jpg
+/train/Solar or actinic keratosis/ISIC_0065078.jpg
+/train/Solar or actinic keratosis/ISIC_0069942.jpg
+/train/Solar or actinic keratosis/ISIC_0060546.jpg
+/train/Solar or actinic keratosis/ISIC_0069699.jpg
+/train/Solar or actinic keratosis/ISIC_0059108.jpg
+/train/Solar or actinic keratosis/ISIC_0070321.jpg
+/train/Solar or actinic keratosis/ISIC_0060078.jpg
+/train/Solar or actinic keratosis/ISIC_0058864.jpg
+/train/Solar or actinic keratosis/ISIC_0070607.jpg
+/train/Solar or actinic keratosis/ISIC_0069688.jpg
+/train/Solar or actinic keratosis/ISIC_0056037.jpg
+/train/Solar or actinic keratosis/ISIC_0069120.jpg
+/train/Solar or actinic keratosis/ISIC_0059250.jpg
+/train/Solar or actinic keratosis/ISIC_0059637.jpg
+/train/Solar or actinic keratosis/ISIC_0062351.jpg
+/train/Solar or actinic keratosis/ISIC_0053738.jpg
+/train/Solar or actinic keratosis/ISIC_0056616.jpg
+/train/Solar or actinic keratosis/ISIC_0071619.jpg
+/train/Solar or actinic keratosis/ISIC_0066563.jpg
+/train/Solar or actinic keratosis/ISIC_0056004.jpg
+/train/Solar or actinic keratosis/ISIC_0061376.jpg
+/train/Solar or actinic keratosis/ISIC_0057595.jpg
+/train/Solar or actinic keratosis/ISIC_0073014.jpg
+/train/Solar or actinic keratosis/ISIC_0070764.jpg
+/train/Solar or actinic keratosis/ISIC_0056701.jpg
+/train/Solar or actinic keratosis/ISIC_0057072.jpg
+/train/Solar or actinic keratosis/ISIC_0067799.jpg
+/train/Solar or actinic keratosis/ISIC_0059800.jpg
+/train/Solar or actinic keratosis/ISIC_0063894.jpg
+/train/Solar or actinic keratosis/ISIC_0071830.jpg
+/train/Solar or actinic keratosis/ISIC_0062739.jpg
+/train/Solar or actinic keratosis/ISIC_0065118.jpg
+/train/Solar or actinic keratosis/ISIC_0067142.jpg
+/train/Solar or actinic keratosis/ISIC_0068507.jpg
+/train/Solar or actinic keratosis/ISIC_0055259.jpg
+/train/Solar or actinic keratosis/ISIC_0069845.jpg
+/train/Solar or actinic keratosis/ISIC_0054223.jpg
+/train/Solar or actinic keratosis/ISIC_0055628.jpg
+/train/Solar or actinic keratosis/ISIC_0072231.jpg
+/train/Solar or actinic keratosis/ISIC_0071186.jpg
+/train/Solar or actinic keratosis/ISIC_0064524.jpg
+/train/Solar or actinic keratosis/ISIC_0065955.jpg
+/train/Solar or actinic keratosis/ISIC_0073224.jpg
+/train/Solar or actinic keratosis/ISIC_0067755.jpg
+/train/Solar or actinic keratosis/ISIC_0066684.jpg
+/train/Solar or actinic keratosis/ISIC_0067945.jpg
+/train/Solar or actinic keratosis/ISIC_0067388.jpg
+/train/Solar or actinic keratosis/ISIC_0057847.jpg
+/train/Solar or actinic keratosis/ISIC_0059720.jpg
+/train/Solar or actinic keratosis/ISIC_0066512.jpg
+/train/Solar or actinic keratosis/ISIC_0061813.jpg
+/train/Solar or actinic keratosis/ISIC_0062641.jpg
+/train/Solar or actinic keratosis/ISIC_0072532.jpg
+/train/Solar or actinic keratosis/ISIC_0072932.jpg
+/train/Solar or actinic keratosis/ISIC_0060783.jpg
+/train/Solar or actinic keratosis/ISIC_0057351.jpg
+/train/Solar or actinic keratosis/ISIC_0063778.jpg
+/train/Solar or actinic keratosis/ISIC_0071490.jpg
+/train/Solar or actinic keratosis/ISIC_0066825.jpg
+/train/Solar or actinic keratosis/ISIC_0068551.jpg
+/train/Solar or actinic keratosis/ISIC_0053749.jpg
+/train/Solar or actinic keratosis/ISIC_0065476.jpg
+/train/Solar or actinic keratosis/ISIC_0072326.jpg
+/train/Solar or actinic keratosis/ISIC_0066595.jpg
+/train/Solar or actinic keratosis/ISIC_0058940.jpg
+/train/Solar or actinic keratosis/ISIC_0068395.jpg
+/train/Solar or actinic keratosis/ISIC_0062609.jpg
+/train/Solar or actinic keratosis/ISIC_0072169.jpg
+/train/Solar or actinic keratosis/ISIC_0067519.jpg
+/train/Solar or actinic keratosis/ISIC_0063068.jpg
+/train/Solar or actinic keratosis/ISIC_0068653.jpg
+/train/Solar or actinic keratosis/ISIC_0065724.jpg
+/train/Solar or actinic keratosis/ISIC_0055196.jpg
+/train/Solar or actinic keratosis/ISIC_0073153.jpg
+/train/Solar or actinic keratosis/ISIC_0067563.jpg
+/train/Solar or actinic keratosis/ISIC_0066789.jpg
+/train/Solar or actinic keratosis/ISIC_0069283.jpg
+/train/Solar or actinic keratosis/ISIC_0054118.jpg
+/train/Solar or actinic keratosis/ISIC_0055596.jpg
+/train/Solar or actinic keratosis/ISIC_0058325.jpg
+/train/Solar or actinic keratosis/ISIC_0064438.jpg
+/train/Solar or actinic keratosis/ISIC_0054137.jpg
+/train/Solar or actinic keratosis/ISIC_0070288.jpg
+/train/Solar or actinic keratosis/ISIC_0066699.jpg
+/train/Solar or actinic keratosis/ISIC_0060183.jpg
+/train/Solar or actinic keratosis/ISIC_0065612.jpg
+/train/Solar or actinic keratosis/ISIC_0064022.jpg
+/train/Solar or actinic keratosis/ISIC_0060900.jpg
+/train/Solar or actinic keratosis/ISIC_0058994.jpg
+/train/Solar or actinic keratosis/ISIC_0066786.jpg
+/train/Solar or actinic keratosis/ISIC_0064789.jpg
+/train/Solar or actinic keratosis/ISIC_0056645.jpg
+/train/Solar or actinic keratosis/ISIC_0062426.jpg
+/train/Solar or actinic keratosis/ISIC_0063331.jpg
+/train/Solar or actinic keratosis/ISIC_0060157.jpg
+/train/Solar or actinic keratosis/ISIC_0054808.jpg
+/train/Solar or actinic keratosis/ISIC_0056867.jpg
+/train/Solar or actinic keratosis/ISIC_0071417.jpg
+/train/Solar or actinic keratosis/ISIC_0055732.jpg
+/train/Solar or actinic keratosis/ISIC_0054592.jpg
+/train/Solar or actinic keratosis/ISIC_0062738.jpg
+/train/Solar or actinic keratosis/ISIC_0069139.jpg
+/train/Solar or actinic keratosis/ISIC_0066123.jpg
+/train/Solar or actinic keratosis/ISIC_0072152.jpg
+/train/Solar or actinic keratosis/ISIC_0059662.jpg
+/train/Solar or actinic keratosis/ISIC_0060167.jpg
+/train/Solar or actinic keratosis/ISIC_0059032.jpg
+/train/Solar or actinic keratosis/ISIC_0061385.jpg
+/train/Solar or actinic keratosis/ISIC_0056904.jpg
+/train/Solar or actinic keratosis/ISIC_0067343.jpg
+/train/Solar or actinic keratosis/ISIC_0070515.jpg
+/train/Solar or actinic keratosis/ISIC_0060136.jpg
+/train/Solar or actinic keratosis/ISIC_0071669.jpg
+/train/Solar or actinic keratosis/ISIC_0059561.jpg
+/train/Solar or actinic keratosis/ISIC_0066720.jpg
+/train/Solar or actinic keratosis/ISIC_0054424.jpg
+/train/Solar or actinic keratosis/ISIC_0064624.jpg
+/train/Solar or actinic keratosis/ISIC_0065404.jpg
+/train/Solar or actinic keratosis/ISIC_0064950.jpg
+/train/Solar or actinic keratosis/ISIC_0058756.jpg
+/train/Solar or actinic keratosis/ISIC_0067522.jpg
+/train/Solar or actinic keratosis/ISIC_0067377.jpg
+/train/Solar or actinic keratosis/ISIC_0053612.jpg
+/train/Solar or actinic keratosis/ISIC_0056920.jpg
+/train/Solar or actinic keratosis/ISIC_0055838.jpg
+/train/Solar or actinic keratosis/ISIC_0062814.jpg
+/train/Solar or actinic keratosis/ISIC_0057437.jpg
+/train/Solar or actinic keratosis/ISIC_0071932.jpg
+/train/Solar or actinic keratosis/ISIC_0057547.jpg
+/train/Solar or actinic keratosis/ISIC_0069289.jpg
+/train/Solar or actinic keratosis/ISIC_0058103.jpg
+/train/Solar or actinic keratosis/ISIC_0059408.jpg
+/train/Solar or actinic keratosis/ISIC_0070188.jpg
+/train/Solar or actinic keratosis/ISIC_0055932.jpg
+/train/Solar or actinic keratosis/ISIC_0066577.jpg
+/train/Solar or actinic keratosis/ISIC_0062971.jpg
+/train/Solar or actinic keratosis/ISIC_0072741.jpg
+/train/Solar or actinic keratosis/ISIC_0053950.jpg
+/train/Solar or actinic keratosis/ISIC_0063306.jpg
+/train/Solar or actinic keratosis/ISIC_0070999.jpg
+/train/Solar or actinic keratosis/ISIC_0071274.jpg
+/train/Solar or actinic keratosis/ISIC_0055331.jpg
+/train/Solar or actinic keratosis/ISIC_0066903.jpg
+/train/Solar or actinic keratosis/ISIC_0072754.jpg
+/train/Solar or actinic keratosis/ISIC_0057018.jpg
+/train/Solar or actinic keratosis/ISIC_0069352.jpg
+/train/Solar or actinic keratosis/ISIC_0064674.jpg
+/train/Solar or actinic keratosis/ISIC_0065418.jpg
+/train/Solar or actinic keratosis/ISIC_0065925.jpg
+/train/Solar or actinic keratosis/ISIC_0071614.jpg
+/train/Solar or actinic keratosis/ISIC_0059058.jpg
+/train/Solar or actinic keratosis/ISIC_0065680.jpg
+/train/Solar or actinic keratosis/ISIC_0056002.jpg
+/train/Solar or actinic keratosis/ISIC_0066509.jpg
+/train/Solar or actinic keratosis/ISIC_0054272.jpg
+/train/Solar or actinic keratosis/ISIC_0070713.jpg
+/train/Solar or actinic keratosis/ISIC_0057706.jpg
+/train/Solar or actinic keratosis/ISIC_0061809.jpg
+/train/Solar or actinic keratosis/ISIC_0060413.jpg
+/train/Solar or actinic keratosis/ISIC_0069044.jpg
+/train/Solar or actinic keratosis/ISIC_0063037.jpg
+/train/Solar or actinic keratosis/ISIC_0065095.jpg
+/train/Solar or actinic keratosis/ISIC_0059872.jpg
+/train/Solar or actinic keratosis/ISIC_0063296.jpg
+/train/Solar or actinic keratosis/ISIC_0056419.jpg
+/train/Solar or actinic keratosis/ISIC_0064190.jpg
+/train/Solar or actinic keratosis/ISIC_0071055.jpg
+/train/Solar or actinic keratosis/ISIC_0058034.jpg
+/train/Solar or actinic keratosis/ISIC_0067314.jpg
+/train/Solar or actinic keratosis/ISIC_0066464.jpg
+/train/Solar or actinic keratosis/ISIC_0055908.jpg
+/train/Solar or actinic keratosis/ISIC_0055163.jpg
+/train/Solar or actinic keratosis/ISIC_0058623.jpg
+/train/Solar or actinic keratosis/ISIC_0071535.jpg
+/train/Solar or actinic keratosis/ISIC_0066272.jpg
+/train/Solar or actinic keratosis/ISIC_0054594.jpg
+/train/Solar or actinic keratosis/ISIC_0071529.jpg
+/train/Solar or actinic keratosis/ISIC_0061154.jpg
+/train/Solar or actinic keratosis/ISIC_0063359.jpg
+/train/Solar or actinic keratosis/ISIC_0058776.jpg
+/train/Solar or actinic keratosis/ISIC_0062272.jpg
+/train/Solar or actinic keratosis/ISIC_0056590.jpg
+/train/Solar or actinic keratosis/ISIC_0058788.jpg
+/train/Solar or actinic keratosis/ISIC_0068879.jpg
+/train/Solar or actinic keratosis/ISIC_0072107.jpg
+/train/Solar or actinic keratosis/ISIC_0063250.jpg
+/train/Solar or actinic keratosis/ISIC_0065611.jpg
+/train/Solar or actinic keratosis/ISIC_0062800.jpg
+/train/Solar or actinic keratosis/ISIC_0068722.jpg
+/train/Solar or actinic keratosis/ISIC_0053538.jpg
+/train/Solar or actinic keratosis/ISIC_0066858.jpg
+/train/Solar or actinic keratosis/ISIC_0070697.jpg
+/train/Solar or actinic keratosis/ISIC_0065450.jpg
+/train/Solar or actinic keratosis/ISIC_0064232.jpg
+/train/Solar or actinic keratosis/ISIC_0062877.jpg
+/train/Solar or actinic keratosis/ISIC_0070510.jpg
+/train/Solar or actinic keratosis/ISIC_0057502.jpg
+/train/Solar or actinic keratosis/ISIC_0069906.jpg
+/train/Solar or actinic keratosis/ISIC_0054333.jpg
+/train/Solar or actinic keratosis/ISIC_0066972.jpg
+/train/Solar or actinic keratosis/ISIC_0064704.jpg
+/train/Solar or actinic keratosis/ISIC_0070981.jpg
+/train/Solar or actinic keratosis/ISIC_0056862.jpg
+/train/Solar or actinic keratosis/ISIC_0061247.jpg
+/train/Solar or actinic keratosis/ISIC_0071690.jpg
+/train/Solar or actinic keratosis/ISIC_0071982.jpg
+/train/Solar or actinic keratosis/ISIC_0060116.jpg
+/train/Solar or actinic keratosis/ISIC_0065413.jpg
+/train/Solar or actinic keratosis/ISIC_0055452.jpg
+/train/Solar or actinic keratosis/ISIC_0060055.jpg
+/train/Solar or actinic keratosis/ISIC_0070993.jpg
+/train/Solar or actinic keratosis/ISIC_0069932.jpg
+/train/Solar or actinic keratosis/ISIC_0058163.jpg
+/train/Solar or actinic keratosis/ISIC_0069544.jpg
+/train/Solar or actinic keratosis/ISIC_0062127.jpg
+/train/Solar or actinic keratosis/ISIC_0065992.jpg
+/train/Solar or actinic keratosis/ISIC_0060257.jpg
+/train/Solar or actinic keratosis/ISIC_0061051.jpg
+/train/Solar or actinic keratosis/ISIC_0062116.jpg
+/train/Solar or actinic keratosis/ISIC_0058593.jpg
+/train/Solar or actinic keratosis/ISIC_0069685.jpg
+/train/Solar or actinic keratosis/ISIC_0066189.jpg
+/train/Solar or actinic keratosis/ISIC_0062953.jpg
+/train/Solar or actinic keratosis/ISIC_0067895.jpg
+/train/Solar or actinic keratosis/ISIC_0066514.jpg
+/train/Solar or actinic keratosis/ISIC_0069755.jpg
+/train/Solar or actinic keratosis/ISIC_0061767.jpg
+/train/Solar or actinic keratosis/ISIC_0061044.jpg
+/train/Solar or actinic keratosis/ISIC_0068843.jpg
+/train/Solar or actinic keratosis/ISIC_0054635.jpg
+/train/Solar or actinic keratosis/ISIC_0066452.jpg
+/train/Solar or actinic keratosis/ISIC_0068325.jpg
+/train/Solar or actinic keratosis/ISIC_0062743.jpg
+/train/Solar or actinic keratosis/ISIC_0071711.jpg
+/train/Solar or actinic keratosis/ISIC_0054556.jpg
+/train/Solar or actinic keratosis/ISIC_0063798.jpg
+/train/Solar or actinic keratosis/ISIC_0057449.jpg
+/train/Solar or actinic keratosis/ISIC_0063520.jpg
+/train/Solar or actinic keratosis/ISIC_0068607.jpg
+/train/Solar or actinic keratosis/ISIC_0067364.jpg
+/train/Solar or actinic keratosis/ISIC_0069483.jpg
+/train/Solar or actinic keratosis/ISIC_0058153.jpg
+/train/Solar or actinic keratosis/ISIC_0054181.jpg
+/train/Solar or actinic keratosis/ISIC_0069338.jpg
+/train/Solar or actinic keratosis/ISIC_0056630.jpg
+/train/Solar or actinic keratosis/ISIC_0054583.jpg
+/train/Solar or actinic keratosis/ISIC_0067837.jpg
+/train/Solar or actinic keratosis/ISIC_0065584.jpg
+/train/Solar or actinic keratosis/ISIC_0056071.jpg
+/train/Solar or actinic keratosis/ISIC_0071108.jpg
+/train/Solar or actinic keratosis/ISIC_0062820.jpg
+/train/Solar or actinic keratosis/ISIC_0054584.jpg
+/train/Solar or actinic keratosis/ISIC_0062329.jpg
+/train/Solar or actinic keratosis/ISIC_0061193.jpg
+/train/Solar or actinic keratosis/ISIC_0055176.jpg
+/train/Solar or actinic keratosis/ISIC_0060014.jpg
+/train/Solar or actinic keratosis/ISIC_0072364.jpg
+/train/Solar or actinic keratosis/ISIC_0055689.jpg
+/train/Solar or actinic keratosis/ISIC_0064735.jpg
+/train/Solar or actinic keratosis/ISIC_0060775.jpg
+/train/Solar or actinic keratosis/ISIC_0065552.jpg
+/train/Solar or actinic keratosis/ISIC_0060460.jpg
+/train/Solar or actinic keratosis/ISIC_0067594.jpg
+/train/Solar or actinic keratosis/ISIC_0071658.jpg
+/train/Solar or actinic keratosis/ISIC_0057455.jpg
+/train/Solar or actinic keratosis/ISIC_0070486.jpg
+/train/Solar or actinic keratosis/ISIC_0063536.jpg
+/train/Solar or actinic keratosis/ISIC_0069950.jpg
+/train/Solar or actinic keratosis/ISIC_0057258.jpg
+/train/Solar or actinic keratosis/ISIC_0068805.jpg
+/train/Solar or actinic keratosis/ISIC_0068790.jpg
+/train/Solar or actinic keratosis/ISIC_0067931.jpg
+/train/Solar or actinic keratosis/ISIC_0065203.jpg
+/train/Solar or actinic keratosis/ISIC_0065169.jpg
+/train/Solar or actinic keratosis/ISIC_0062104.jpg
+/train/Solar or actinic keratosis/ISIC_0066056.jpg
+/train/Solar or actinic keratosis/ISIC_0060230.jpg
+/train/Solar or actinic keratosis/ISIC_0073214.jpg
+/train/Solar or actinic keratosis/ISIC_0058620.jpg
+/train/Solar or actinic keratosis/ISIC_0072277.jpg
+/train/Solar or actinic keratosis/ISIC_0067978.jpg
+/train/Solar or actinic keratosis/ISIC_0056905.jpg
+/train/Solar or actinic keratosis/ISIC_0057485.jpg
+/train/Solar or actinic keratosis/ISIC_0072716.jpg
+/train/Solar or actinic keratosis/ISIC_0071081.jpg
+/train/Solar or actinic keratosis/ISIC_0065125.jpg
+/train/Solar or actinic keratosis/ISIC_0065188.jpg
+/train/Solar or actinic keratosis/ISIC_0062665.jpg

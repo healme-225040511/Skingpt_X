@@ -1,0 +1,63 @@
+/test/Basal Cell Carcinoma/PAT_143_213_489.png
+/test/Basal Cell Carcinoma/PAT_458_891_709.png
+/test/Basal Cell Carcinoma/PAT_154_236_800.png
+/test/Basal Cell Carcinoma/PAT_827_1600_1000.png
+/test/Basal Cell Carcinoma/PAT_309_662_737.png
+/test/Basal Cell Carcinoma/PAT_78_118_164.png
+/test/Basal Cell Carcinoma/PAT_252_383_31.png
+/test/Basal Cell Carcinoma/PAT_256_394_449.png
+/test/Basal Cell Carcinoma/PAT_645_1223_443.png
+/test/Basal Cell Carcinoma/PAT_55_85_884.png
+/test/Basal Cell Carcinoma/PAT_906_1722_328.png
+/test/Basal Cell Carcinoma/PAT_53_81_194.png
+/test/Melanoma/PAT_45_66_822.png
+/test/Melanoma/PAT_966_1825_546.png
+/test/Melanoma/PAT_115_1138_970.png
+/test/Melanoma/PAT_233_354_828.png
+/test/Melanoma/PAT_894_1679_640.png
+/test/Actinic Keratosis/PAT_104_1755_320.png
+/test/Actinic Keratosis/PAT_366_2448_563.png
+/test/Actinic Keratosis/PAT_987_1859_724.png
+/test/Actinic Keratosis/PAT_1481_1674_735.png
+/test/Actinic Keratosis/PAT_691_3994_671.png
+/test/Actinic Keratosis/PAT_300_648_84.png
+/test/Actinic Keratosis/PAT_1019_110_194.png
+/test/Actinic Keratosis/PAT_202_308_692.png
+/test/Actinic Keratosis/PAT_1710_3160_488.png
+/test/Actinic Keratosis/PAT_27_38_240.png
+/test/Actinic Keratosis/PAT_414_822_420.png
+/test/Actinic Keratosis/PAT_1031_148_29.png
+/test/Actinic Keratosis/PAT_1280_972_605.png
+/test/Actinic Keratosis/PAT_880_1673_410.png
+/test/Actinic Keratosis/PAT_857_1628_916.png
+/test/Actinic Keratosis/PAT_651_1232_950.png
+/test/Actinic Keratosis/PAT_1906_3798_588.png
+/test/Actinic Keratosis/PAT_309_663_812.png
+/test/Actinic Keratosis/PAT_1020_111_593.png
+/test/Actinic Keratosis/PAT_792_1498_936.png
+/test/Actinic Keratosis/PAT_645_4042_489.png
+/test/Actinic Keratosis/PAT_691_3994_791.png
+/test/Actinic Keratosis/PAT_698_1150_881.png
+/test/Actinic Keratosis/PAT_1464_1612_284.png
+/test/Actinic Keratosis/PAT_937_1768_126.png
+/test/Actinic Keratosis/PAT_693_1313_304.png
+/test/Actinic Keratosis/PAT_757_1431_696.png
+/test/Actinic Keratosis/PAT_782_1493_140.png
+/test/Actinic Keratosis/PAT_886_4635_304.png
+/test/Actinic Keratosis/PAT_420_834_948.png
+/test/Actinic Keratosis/PAT_1688_3066_491.png
+/test/Actinic Keratosis/PAT_276_425_539.png
+/test/Actinic Keratosis/PAT_289_442_43.png
+/test/Actinic Keratosis/PAT_1278_967_599.png
+/test/Actinic Keratosis/PAT_1036_169_687.png
+/test/Actinic Keratosis/PAT_163_254_719.png
+/test/Actinic Keratosis/PAT_883_1682_256.png
+/test/Seborrheic Keratosis/PAT_1411_1415_723.png
+/test/Seborrheic Keratosis/PAT_1708_3157_518.png
+/test/Seborrheic Keratosis/PAT_1453_1565_529.png
+/test/Seborrheic Keratosis/PAT_715_1339_508.png
+/test/Seborrheic Keratosis/PAT_1586_2624_615.png
+/test/Seborrheic Keratosis/PAT_1874_3687_799.png
+/test/Seborrheic Keratosis/PAT_411_815_692.png
+/test/Seborrheic Keratosis/PAT_2049_4348_485.png
+/test/Seborrheic Keratosis/PAT_1871_3666_675.png
