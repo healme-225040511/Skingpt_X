@@ -1,0 +1,230 @@
+/train/Nevus/PAT_1264_907_674.png
+/train/Nevus/PAT_1591_2648_723.png
+/train/Nevus/PAT_1731_3237_919.png
+/train/Nevus/PAT_2088_4525_507.png
+/train/Nevus/PAT_1364_1246_583.png
+/train/Nevus/PAT_198_853_778.png
+/train/Nevus/PAT_1273_953_510.png
+/train/Nevus/PAT_1364_1246_420.png
+/train/Nevus/PAT_201_306_781.png
+/train/Nevus/PAT_1297_1048_353.png
+/train/Nevus/PAT_1335_1181_21.png
+/train/Nevus/PAT_627_1188_503.png
+/train/Nevus/PAT_1333_1177_434.png
+/train/Nevus/PAT_957_1814_77.png
+/train/Nevus/PAT_1810_3484_347.png
+/train/Nevus/PAT_1801_3461_351.png
+/train/Nevus/PAT_1350_1230_925.png
+/train/Nevus/PAT_2017_4164_500.png
+/train/Nevus/PAT_522_3168_747.png
+/train/Nevus/PAT_1138_520_154.png
+/train/Nevus/PAT_793_1512_327.png
+/train/Nevus/PAT_398_799_163.png
+/train/Nevus/PAT_1733_3239_389.png
+/train/Nevus/PAT_2013_4148_303.png
+/train/Nevus/PAT_798_1529_282.png
+/train/Nevus/PAT_1326_1156_783.png
+/train/Nevus/PAT_1516_1765_530.png
+/train/Nevus/PAT_2097_4557_241.png
+/train/Nevus/PAT_577_1107_61.png
+/train/Nevus/PAT_2099_4562_100.png
+/train/Nevus/PAT_1219_764_111.png
+/train/Nevus/PAT_756_1496_480.png
+/train/Nevus/PAT_1351_1231_203.png
+/train/Nevus/PAT_72_110_647.png
+/train/Nevus/PAT_917_1735_936.png
+/train/Nevus/PAT_1904_3794_215.png
+/train/Nevus/PAT_2161_4818_501.png
+/train/Nevus/PAT_2062_4397_39.png
+/train/Nevus/PAT_1520_1777_935.png
+/train/Nevus/PAT_2088_4523_400.png
+/train/Nevus/PAT_1984_4038_265.png
+/train/Nevus/PAT_1349_1229_828.png
+/train/Nevus/PAT_1477_1660_226.png
+/train/Nevus/PAT_1657_2932_680.png
+/train/Nevus/PAT_1326_1156_163.png
+/train/Nevus/PAT_793_1512_382.png
+/train/Nevus/PAT_1136_517_92.png
+/train/Nevus/PAT_1611_2725_680.png
+/train/Nevus/PAT_1107_427_352.png
+/train/Nevus/PAT_621_3591_171.png
+/train/Nevus/PAT_1179_641_735.png
+/train/Nevus/PAT_1694_3110_213.png
+/train/Nevus/PAT_759_1433_973.png
+/train/Nevus/PAT_1208_736_599.png
+/train/Nevus/PAT_665_1261_17.png
+/train/Nevus/PAT_1153_555_98.png
+/train/Nevus/PAT_2159_4792_718.png
+/train/Nevus/PAT_403_804_994.png
+/train/Nevus/PAT_333_1468_620.png
+/train/Nevus/PAT_471_909_353.png
+/train/Nevus/PAT_1735_3242_27.png
+/train/Nevus/PAT_665_1260_16.png
+/train/Nevus/PAT_1305_1082_88.png
+/train/Nevus/PAT_759_1433_914.png
+/train/Nevus/PAT_72_110_944.png
+/train/Nevus/PAT_1391_1351_396.png
+/train/Nevus/PAT_1680_3038_587.png
+/train/Nevus/PAT_1755_3310_986.png
+/train/Nevus/PAT_1699_3126_673.png
+/train/Nevus/PAT_1216_759_542.png
+/train/Nevus/PAT_1639_2879_744.png
+/train/Nevus/PAT_1364_1246_447.png
+/train/Nevus/PAT_1326_1156_139.png
+/train/Nevus/PAT_1780_3381_999.png
+/train/Nevus/PAT_615_1168_968.png
+/train/Nevus/PAT_1109_436_141.png
+/train/Nevus/PAT_1907_3801_88.png
+/train/Nevus/PAT_1914_3821_427.png
+/train/Nevus/PAT_1648_2904_523.png
+/train/Nevus/PAT_641_1211_321.png
+/train/Nevus/PAT_1148_542_708.png
+/train/Nevus/PAT_1588_2629_296.png
+/train/Nevus/PAT_900_1711_622.png
+/train/Nevus/PAT_1914_3823_180.png
+/train/Nevus/PAT_1448_1551_366.png
+/train/Nevus/PAT_1947_3926_165.png
+/train/Nevus/PAT_898_1706_496.png
+/train/Nevus/PAT_1568_2454_468.png
+/train/Nevus/PAT_1180_651_559.png
+/train/Nevus/PAT_1249_862_658.png
+/train/Nevus/PAT_1453_1567_250.png
+/train/Nevus/PAT_1223_770_120.png
+/train/Nevus/PAT_975_4734_783.png
+/train/Nevus/PAT_1603_2704_969.png
+/train/Nevus/PAT_791_1487_906.png
+/train/Nevus/PAT_1245_845_32.png
+/train/Nevus/PAT_1089_375_60.png
+/train/Nevus/PAT_2142_4733_13.png
+/train/Nevus/PAT_1587_2625_226.png
+/train/Nevus/PAT_205_311_255.png
+/train/Nevus/PAT_1698_3122_83.png
+/train/Nevus/PAT_615_1167_722.png
+/train/Nevus/PAT_1846_3622_35.png
+/train/Nevus/PAT_344_718_206.png
+/train/Nevus/PAT_1216_759_365.png
+/train/Nevus/PAT_958_1812_62.png
+/train/Nevus/PAT_471_909_344.png
+/train/Nevus/PAT_1129_498_930.png
+/train/Nevus/PAT_286_1459_926.png
+/train/Nevus/PAT_2088_4524_465.png
+/train/Nevus/PAT_297_4307_924.png
+/train/Nevus/PAT_1940_3902_876.png
+/train/Nevus/PAT_173_268_1000.png
+/train/Nevus/PAT_213_328_117.png
+/train/Nevus/PAT_1451_1560_616.png
+/train/Nevus/PAT_1934_3890_306.png
+/train/Nevus/PAT_756_1495_858.png
+/train/Nevus/PAT_1787_3421_516.png
+/train/Basal Cell Carcinoma/PAT_324_1464_266.png
+/train/Basal Cell Carcinoma/PAT_247_378_484.png
+/train/Basal Cell Carcinoma/PAT_876_1665_386.png
+/train/Basal Cell Carcinoma/PAT_721_1365_142.png
+/train/Basal Cell Carcinoma/PAT_53_1370_288.png
+/train/Basal Cell Carcinoma/PAT_747_1408_742.png
+/train/Basal Cell Carcinoma/PAT_728_1381_63.png
+/train/Basal Cell Carcinoma/PAT_806_1519_527.png
+/train/Basal Cell Carcinoma/PAT_467_904_235.png
+/train/Basal Cell Carcinoma/PAT_752_1426_714.png
+/train/Basal Cell Carcinoma/PAT_667_1264_8.png
+/train/Basal Cell Carcinoma/PAT_645_1222_140.png
+/train/Basal Cell Carcinoma/PAT_38_54_234.png
+/train/Basal Cell Carcinoma/PAT_378_769_36.png
+/train/Basal Cell Carcinoma/PAT_835_1577_938.png
+/train/Basal Cell Carcinoma/PAT_573_1090_660.png
+/train/Basal Cell Carcinoma/PAT_845_1604_313.png
+/train/Basal Cell Carcinoma/PAT_540_1016_644.png
+/train/Basal Cell Carcinoma/PAT_753_1428_451.png
+/train/Basal Cell Carcinoma/PAT_827_1601_859.png
+/train/Basal Cell Carcinoma/PAT_301_649_533.png
+/train/Basal Cell Carcinoma/PAT_42_58_13.png
+/train/Basal Cell Carcinoma/PAT_146_217_187.png
+/train/Basal Cell Carcinoma/PAT_380_773_362.png
+/train/Basal Cell Carcinoma/PAT_786_1480_914.png
+/train/Basal Cell Carcinoma/PAT_582_1363_358.png
+/train/Basal Cell Carcinoma/PAT_626_1186_898.png
+/train/Basal Cell Carcinoma/PAT_63_1075_498.png
+/train/Basal Cell Carcinoma/PAT_764_1448_499.png
+/train/Basal Cell Carcinoma/PAT_658_1266_149.png
+/train/Basal Cell Carcinoma/PAT_788_1503_168.png
+/train/Basal Cell Carcinoma/PAT_666_1271_645.png
+/train/Basal Cell Carcinoma/PAT_115_177_622.png
+/train/Basal Cell Carcinoma/PAT_970_1833_270.png
+/train/Basal Cell Carcinoma/PAT_666_1268_870.png
+/train/Basal Cell Carcinoma/PAT_684_1302_934.png
+/train/Basal Cell Carcinoma/PAT_814_1532_265.png
+/train/Basal Cell Carcinoma/PAT_950_1804_64.png
+/train/Basal Cell Carcinoma/PAT_524_987_738.png
+/train/Basal Cell Carcinoma/PAT_950_1804_334.png
+/train/Basal Cell Carcinoma/PAT_823_1558_870.png
+/train/Basal Cell Carcinoma/PAT_455_885_115.png
+/train/Basal Cell Carcinoma/PAT_494_939_518.png
+/train/Basal Cell Carcinoma/PAT_814_1532_545.png
+/train/Basal Cell Carcinoma/PAT_55_84_506.png
+/train/Basal Cell Carcinoma/PAT_660_1249_469.png
+/train/Basal Cell Carcinoma/PAT_432_851_386.png
+/train/Basal Cell Carcinoma/PAT_645_1300_463.png
+/train/Basal Cell Carcinoma/PAT_691_1311_686.png
+/train/Basal Cell Carcinoma/PAT_901_1716_497.png
+/train/Basal Cell Carcinoma/PAT_413_819_550.png
+/train/Basal Cell Carcinoma/PAT_67_104_695.png
+/train/Basal Cell Carcinoma/PAT_63_99_189.png
+/train/Basal Cell Carcinoma/PAT_738_1397_966.png
+/train/Basal Cell Carcinoma/PAT_512_962_998.png
+/train/Basal Cell Carcinoma/PAT_928_1764_426.png
+/train/Basal Cell Carcinoma/PAT_478_916_806.png
+/train/Basal Cell Carcinoma/PAT_516_966_57.png
+/train/Basal Cell Carcinoma/PAT_185_285_97.png
+/train/Basal Cell Carcinoma/PAT_927_1759_749.png
+/train/Basal Cell Carcinoma/PAT_145_216_110.png
+/train/Basal Cell Carcinoma/PAT_46_881_939.png
+/train/Basal Cell Carcinoma/PAT_962_1823_942.png
+/train/Basal Cell Carcinoma/PAT_128_194_144.png
+/train/Basal Cell Carcinoma/PAT_119_181_684.png
+/train/Basal Cell Carcinoma/PAT_645_1461_111.png
+/train/Basal Cell Carcinoma/PAT_50_76_728.png
+/train/Basal Cell Carcinoma/PAT_224_343_782.png
+/train/Basal Cell Carcinoma/PAT_550_1045_81.png
+/train/Basal Cell Carcinoma/PAT_315_673_227.png
+/train/Basal Cell Carcinoma/PAT_375_764_705.png
+/train/Basal Cell Carcinoma/PAT_202_307_927.png
+/train/Basal Cell Carcinoma/PAT_853_1642_497.png
+/train/Basal Cell Carcinoma/PAT_168_262_74.png
+/train/Basal Cell Carcinoma/PAT_135_202_105.png
+/train/Basal Cell Carcinoma/PAT_720_1362_700.png
+/train/Basal Cell Carcinoma/PAT_464_899_646.png
+/train/Basal Cell Carcinoma/PAT_255_388_231.png
+/train/Basal Cell Carcinoma/PAT_527_1360_225.png
+/train/Basal Cell Carcinoma/PAT_356_736_188.png
+/train/Basal Cell Carcinoma/PAT_200_304_139.png
+/train/Basal Cell Carcinoma/PAT_827_1599_248.png
+/train/Basal Cell Carcinoma/PAT_159_244_102.png
+/train/Basal Cell Carcinoma/PAT_368_1652_525.png
+/train/Basal Cell Carcinoma/PAT_822_1550_826.png
+/train/Basal Cell Carcinoma/PAT_475_913_874.png
+/train/Basal Cell Carcinoma/PAT_158_243_947.png
+/train/Basal Cell Carcinoma/PAT_796_1510_130.png
+/train/Basal Cell Carcinoma/PAT_810_1526_639.png
+/train/Basal Cell Carcinoma/PAT_196_300_749.png
+/train/Basal Cell Carcinoma/PAT_718_1358_919.png
+/train/Basal Cell Carcinoma/PAT_506_957_377.png
+/train/Basal Cell Carcinoma/PAT_794_1507_723.png
+/train/Basal Cell Carcinoma/PAT_759_1538_566.png
+/train/Basal Cell Carcinoma/PAT_564_1079_430.png
+/train/Basal Cell Carcinoma/PAT_771_1491_390.png
+/train/Basal Cell Carcinoma/PAT_850_1611_332.png
+/train/Basal Cell Carcinoma/PAT_96_150_743.png
+/train/Basal Cell Carcinoma/PAT_413_819_268.png
+/train/Basal Cell Carcinoma/PAT_106_159_325.png
+/train/Basal Cell Carcinoma/PAT_185_285_862.png
+/train/Basal Cell Carcinoma/PAT_247_1293_449.png
+/train/Basal Cell Carcinoma/PAT_126_191_304.png
+/train/Basal Cell Carcinoma/PAT_381_775_253.png
+/train/Basal Cell Carcinoma/PAT_82_125_525.png
+/train/Basal Cell Carcinoma/PAT_741_1400_780.png
+/train/Basal Cell Carcinoma/PAT_46_880_308.png
+/train/Basal Cell Carcinoma/PAT_53_82_657.png
+/train/Basal Cell Carcinoma/PAT_513_964_447.png
+/train/Basal Cell Carcinoma/PAT_547_1033_445.png
+/train/Basal Cell Carcinoma/PAT_206_312_595.png
+/train/Basal Cell Carcinoma/PAT_535_1011_567.png

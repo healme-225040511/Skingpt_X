@@ -1,0 +1,1171 @@
+/train/Solar or actinic keratosis/ISIC_0067844.jpg
+/train/Solar or actinic keratosis/ISIC_0057126.jpg
+/train/Solar or actinic keratosis/ISIC_0065120.jpg
+/train/Solar or actinic keratosis/ISIC_0063175.jpg
+/train/Solar or actinic keratosis/ISIC_0071015.jpg
+/train/Solar or actinic keratosis/ISIC_0065802.jpg
+/train/Solar or actinic keratosis/ISIC_0060354.jpg
+/train/Solar or actinic keratosis/ISIC_0071610.jpg
+/train/Solar or actinic keratosis/ISIC_0055889.jpg
+/train/Solar or actinic keratosis/ISIC_0059991.jpg
+/train/Solar or actinic keratosis/ISIC_0064796.jpg
+/train/Solar or actinic keratosis/ISIC_0070211.jpg
+/train/Solar or actinic keratosis/ISIC_0061256.jpg
+/train/Solar or actinic keratosis/ISIC_0065166.jpg
+/train/Solar or actinic keratosis/ISIC_0055830.jpg
+/train/Solar or actinic keratosis/ISIC_0061968.jpg
+/train/Solar or actinic keratosis/ISIC_0059151.jpg
+/train/Solar or actinic keratosis/ISIC_0062255.jpg
+/train/Solar or actinic keratosis/ISIC_0055400.jpg
+/train/Solar or actinic keratosis/ISIC_0069043.jpg
+/train/Solar or actinic keratosis/ISIC_0057458.jpg
+/train/Solar or actinic keratosis/ISIC_0071444.jpg
+/train/Solar or actinic keratosis/ISIC_0065395.jpg
+/train/Solar or actinic keratosis/ISIC_0063261.jpg
+/train/Solar or actinic keratosis/ISIC_0069656.jpg
+/train/Solar or actinic keratosis/ISIC_0058427.jpg
+/train/Solar or actinic keratosis/ISIC_0056437.jpg
+/train/Solar or actinic keratosis/ISIC_0058192.jpg
+/train/Solar or actinic keratosis/ISIC_0065306.jpg
+/train/Solar or actinic keratosis/ISIC_0057357.jpg
+/train/Solar or actinic keratosis/ISIC_0061327.jpg
+/train/Solar or actinic keratosis/ISIC_0066220.jpg
+/train/Solar or actinic keratosis/ISIC_0066895.jpg
+/train/Solar or actinic keratosis/ISIC_0068648.jpg
+/train/Solar or actinic keratosis/ISIC_0064553.jpg
+/train/Solar or actinic keratosis/ISIC_0064587.jpg
+/train/Solar or actinic keratosis/ISIC_0070302.jpg
+/train/Solar or actinic keratosis/ISIC_0065606.jpg
+/train/Solar or actinic keratosis/ISIC_0073045.jpg
+/train/Solar or actinic keratosis/ISIC_0057049.jpg
+/train/Solar or actinic keratosis/ISIC_0063335.jpg
+/train/Solar or actinic keratosis/ISIC_0055574.jpg
+/train/Solar or actinic keratosis/ISIC_0064690.jpg
+/train/Solar or actinic keratosis/ISIC_0066988.jpg
+/train/Solar or actinic keratosis/ISIC_0056166.jpg
+/train/Solar or actinic keratosis/ISIC_0057520.jpg
+/train/Solar or actinic keratosis/ISIC_0070232.jpg
+/train/Solar or actinic keratosis/ISIC_0063052.jpg
+/train/Solar or actinic keratosis/ISIC_0069282.jpg
+/train/Solar or actinic keratosis/ISIC_0056610.jpg
+/train/Solar or actinic keratosis/ISIC_0072275.jpg
+/train/Solar or actinic keratosis/ISIC_0070305.jpg
+/train/Solar or actinic keratosis/ISIC_0054908.jpg
+/train/Solar or actinic keratosis/ISIC_0060207.jpg
+/train/Solar or actinic keratosis/ISIC_0066006.jpg
+/train/Solar or actinic keratosis/ISIC_0067113.jpg
+/train/Solar or actinic keratosis/ISIC_0064196.jpg
+/train/Solar or actinic keratosis/ISIC_0056476.jpg
+/train/Solar or actinic keratosis/ISIC_0057387.jpg
+/train/Solar or actinic keratosis/ISIC_0073068.jpg
+/train/Solar or actinic keratosis/ISIC_0066296.jpg
+/train/Solar or actinic keratosis/ISIC_0072307.jpg
+/train/Solar or actinic keratosis/ISIC_0062059.jpg
+/train/Solar or actinic keratosis/ISIC_0069772.jpg
+/train/Solar or actinic keratosis/ISIC_0069125.jpg
+/train/Solar or actinic keratosis/ISIC_0067432.jpg
+/train/Solar or actinic keratosis/ISIC_0058769.jpg
+/train/Solar or actinic keratosis/ISIC_0057077.jpg
+/train/Solar or actinic keratosis/ISIC_0056311.jpg
+/train/Solar or actinic keratosis/ISIC_0071953.jpg
+/train/Solar or actinic keratosis/ISIC_0053708.jpg
+/train/Solar or actinic keratosis/ISIC_0058639.jpg
+/train/Solar or actinic keratosis/ISIC_0071020.jpg
+/train/Solar or actinic keratosis/ISIC_0056005.jpg
+/train/Solar or actinic keratosis/ISIC_0055809.jpg
+/train/Solar or actinic keratosis/ISIC_0059397.jpg
+/train/Solar or actinic keratosis/ISIC_0057031.jpg
+/train/Solar or actinic keratosis/ISIC_0054447.jpg
+/train/Solar or actinic keratosis/ISIC_0066315.jpg
+/train/Solar or actinic keratosis/ISIC_0072652.jpg
+/train/Solar or actinic keratosis/ISIC_0068852.jpg
+/train/Solar or actinic keratosis/ISIC_0069630.jpg
+/train/Solar or actinic keratosis/ISIC_0061121.jpg
+/train/Solar or actinic keratosis/ISIC_0063751.jpg
+/train/Solar or actinic keratosis/ISIC_0059709.jpg
+/train/Solar or actinic keratosis/ISIC_0072621.jpg
+/train/Solar or actinic keratosis/ISIC_0061214.jpg
+/train/Solar or actinic keratosis/ISIC_0068506.jpg
+/train/Solar or actinic keratosis/ISIC_0068092.jpg
+/train/Solar or actinic keratosis/ISIC_0058562.jpg
+/train/Solar or actinic keratosis/ISIC_0058598.jpg
+/train/Solar or actinic keratosis/ISIC_0061687.jpg
+/train/Solar or actinic keratosis/ISIC_0056745.jpg
+/train/Solar or actinic keratosis/ISIC_0072265.jpg
+/train/Solar or actinic keratosis/ISIC_0067592.jpg
+/train/Solar or actinic keratosis/ISIC_0058312.jpg
+/train/Solar or actinic keratosis/ISIC_0063178.jpg
+/train/Solar or actinic keratosis/ISIC_0068930.jpg
+/train/Solar or actinic keratosis/ISIC_0062741.jpg
+/train/Solar or actinic keratosis/ISIC_0060810.jpg
+/train/Solar or actinic keratosis/ISIC_0069916.jpg
+/train/Solar or actinic keratosis/ISIC_0053664.jpg
+/train/Solar or actinic keratosis/ISIC_0055977.jpg
+/train/Solar or actinic keratosis/ISIC_0053679.jpg
+/train/Solar or actinic keratosis/ISIC_0071772.jpg
+/train/Solar or actinic keratosis/ISIC_0062043.jpg
+/train/Solar or actinic keratosis/ISIC_0062766.jpg
+/train/Solar or actinic keratosis/ISIC_0072053.jpg
+/train/Solar or actinic keratosis/ISIC_0057388.jpg
+/train/Solar or actinic keratosis/ISIC_0060108.jpg
+/train/Solar or actinic keratosis/ISIC_0062253.jpg
+/train/Solar or actinic keratosis/ISIC_0057052.jpg
+/train/Solar or actinic keratosis/ISIC_0068175.jpg
+/train/Solar or actinic keratosis/ISIC_0057038.jpg
+/train/Solar or actinic keratosis/ISIC_0070200.jpg
+/train/Solar or actinic keratosis/ISIC_0061365.jpg
+/train/Solar or actinic keratosis/ISIC_0057965.jpg
+/train/Solar or actinic keratosis/ISIC_0054878.jpg
+/train/Solar or actinic keratosis/ISIC_0071007.jpg
+/train/Solar or actinic keratosis/ISIC_0064211.jpg
+/train/Solar or actinic keratosis/ISIC_0053563.jpg
+/train/Solar or actinic keratosis/ISIC_0069265.jpg
+/train/Solar or actinic keratosis/ISIC_0059031.jpg
+/train/Solar or actinic keratosis/ISIC_0059540.jpg
+/train/Solar or actinic keratosis/ISIC_0056052.jpg
+/train/Solar or actinic keratosis/ISIC_0067425.jpg
+/train/Solar or actinic keratosis/ISIC_0055487.jpg
+/train/Solar or actinic keratosis/ISIC_0063045.jpg
+/train/Solar or actinic keratosis/ISIC_0068360.jpg
+/train/Solar or actinic keratosis/ISIC_0056075.jpg
+/train/Solar or actinic keratosis/ISIC_0057040.jpg
+/train/Solar or actinic keratosis/ISIC_0064490.jpg
+/train/Solar or actinic keratosis/ISIC_0072089.jpg
+/train/Solar or actinic keratosis/ISIC_0066586.jpg
+/train/Solar or actinic keratosis/ISIC_0060509.jpg
+/train/Solar or actinic keratosis/ISIC_0065284.jpg
+/train/Solar or actinic keratosis/ISIC_0056756.jpg
+/train/Solar or actinic keratosis/ISIC_0069194.jpg
+/train/Solar or actinic keratosis/ISIC_0066864.jpg
+/train/Solar or actinic keratosis/ISIC_0067204.jpg
+/train/Solar or actinic keratosis/ISIC_0061464.jpg
+/train/Solar or actinic keratosis/ISIC_0057110.jpg
+/train/Solar or actinic keratosis/ISIC_0066644.jpg
+/train/Solar or actinic keratosis/ISIC_0073120.jpg
+/train/Solar or actinic keratosis/ISIC_0064076.jpg
+/train/Solar or actinic keratosis/ISIC_0065070.jpg
+/train/Solar or actinic keratosis/ISIC_0063898.jpg
+/train/Solar or actinic keratosis/ISIC_0065301.jpg
+/train/Solar or actinic keratosis/ISIC_0060041.jpg
+/train/Solar or actinic keratosis/ISIC_0070164.jpg
+/train/Solar or actinic keratosis/ISIC_0067177.jpg
+/train/Solar or actinic keratosis/ISIC_0061845.jpg
+/train/Solar or actinic keratosis/ISIC_0071339.jpg
+/train/Solar or actinic keratosis/ISIC_0059337.jpg
+/train/Solar or actinic keratosis/ISIC_0060404.jpg
+/train/Solar or actinic keratosis/ISIC_0057602.jpg
+/train/Solar or actinic keratosis/ISIC_0070545.jpg
+/train/Solar or actinic keratosis/ISIC_0053688.jpg
+/train/Solar or actinic keratosis/ISIC_0069460.jpg
+/train/Solar or actinic keratosis/ISIC_0061691.jpg
+/train/Solar or actinic keratosis/ISIC_0063878.jpg
+/train/Solar or actinic keratosis/ISIC_0056582.jpg
+/train/Solar or actinic keratosis/ISIC_0053506.jpg
+/train/Solar or actinic keratosis/ISIC_0059360.jpg
+/train/Solar or actinic keratosis/ISIC_0058640.jpg
+/train/Solar or actinic keratosis/ISIC_0058404.jpg
+/train/Solar or actinic keratosis/ISIC_0061410.jpg
+/train/Solar or actinic keratosis/ISIC_0058143.jpg
+/train/Solar or actinic keratosis/ISIC_0061170.jpg
+/train/Solar or actinic keratosis/ISIC_0063712.jpg
+/train/Solar or actinic keratosis/ISIC_0070297.jpg
+/train/Solar or actinic keratosis/ISIC_0066278.jpg
+/train/Solar or actinic keratosis/ISIC_0064154.jpg
+/train/Solar or actinic keratosis/ISIC_0062706.jpg
+/train/Solar or actinic keratosis/ISIC_0063107.jpg
+/train/Solar or actinic keratosis/ISIC_0070484.jpg
+/train/Solar or actinic keratosis/ISIC_0071093.jpg
+/train/Solar or actinic keratosis/ISIC_0069752.jpg
+/train/Solar or actinic keratosis/ISIC_0060593.jpg
+/train/Solar or actinic keratosis/ISIC_0058816.jpg
+/train/Solar or actinic keratosis/ISIC_0056504.jpg
+/train/Solar or actinic keratosis/ISIC_0073198.jpg
+/train/Solar or actinic keratosis/ISIC_0063884.jpg
+/train/Solar or actinic keratosis/ISIC_0061542.jpg
+/train/Solar or actinic keratosis/ISIC_0056128.jpg
+/train/Solar or actinic keratosis/ISIC_0067500.jpg
+/train/Solar or actinic keratosis/ISIC_0059139.jpg
+/train/Solar or actinic keratosis/ISIC_0058951.jpg
+/train/Solar or actinic keratosis/ISIC_0064769.jpg
+/train/Solar or actinic keratosis/ISIC_0070002.jpg
+/train/Solar or actinic keratosis/ISIC_0056973.jpg
+/train/Solar or actinic keratosis/ISIC_0060807.jpg
+/train/Solar or actinic keratosis/ISIC_0055260.jpg
+/train/Solar or actinic keratosis/ISIC_0060480.jpg
+/train/Solar or actinic keratosis/ISIC_0061116.jpg
+/train/Solar or actinic keratosis/ISIC_0069759.jpg
+/train/Solar or actinic keratosis/ISIC_0056343.jpg
+/train/Solar or actinic keratosis/ISIC_0060357.jpg
+/train/Solar or actinic keratosis/ISIC_0059874.jpg
+/train/Solar or actinic keratosis/ISIC_0065276.jpg
+/train/Solar or actinic keratosis/ISIC_0067900.jpg
+/train/Solar or actinic keratosis/ISIC_0070014.jpg
+/train/Solar or actinic keratosis/ISIC_0062611.jpg
+/train/Solar or actinic keratosis/ISIC_0069532.jpg
+/train/Solar or actinic keratosis/ISIC_0071698.jpg
+/train/Solar or actinic keratosis/ISIC_0066370.jpg
+/train/Solar or actinic keratosis/ISIC_0067078.jpg
+/train/Solar or actinic keratosis/ISIC_0057811.jpg
+/train/Solar or actinic keratosis/ISIC_0066892.jpg
+/train/Solar or actinic keratosis/ISIC_0068546.jpg
+/train/Solar or actinic keratosis/ISIC_0058506.jpg
+/train/Solar or actinic keratosis/ISIC_0053944.jpg
+/train/Solar or actinic keratosis/ISIC_0059596.jpg
+/train/Solar or actinic keratosis/ISIC_0070493.jpg
+/train/Solar or actinic keratosis/ISIC_0059372.jpg
+/train/Solar or actinic keratosis/ISIC_0060636.jpg
+/train/Solar or actinic keratosis/ISIC_0063019.jpg
+/train/Solar or actinic keratosis/ISIC_0061396.jpg
+/train/Solar or actinic keratosis/ISIC_0063322.jpg
+/train/Solar or actinic keratosis/ISIC_0065960.jpg
+/train/Solar or actinic keratosis/ISIC_0063435.jpg
+/train/Solar or actinic keratosis/ISIC_0057145.jpg
+/train/Solar or actinic keratosis/ISIC_0064214.jpg
+/train/Solar or actinic keratosis/ISIC_0065633.jpg
+/train/Solar or actinic keratosis/ISIC_0062896.jpg
+/train/Solar or actinic keratosis/ISIC_0067066.jpg
+/train/Solar or actinic keratosis/ISIC_0057284.jpg
+/train/Solar or actinic keratosis/ISIC_0071062.jpg
+/train/Solar or actinic keratosis/ISIC_0053818.jpg
+/train/Solar or actinic keratosis/ISIC_0070056.jpg
+/train/Solar or actinic keratosis/ISIC_0070922.jpg
+/train/Solar or actinic keratosis/ISIC_0064395.jpg
+/train/Solar or actinic keratosis/ISIC_0060776.jpg
+/train/Solar or actinic keratosis/ISIC_0067759.jpg
+/train/Solar or actinic keratosis/ISIC_0071500.jpg
+/train/Solar or actinic keratosis/ISIC_0067585.jpg
+/train/Solar or actinic keratosis/ISIC_0069269.jpg
+/train/Solar or actinic keratosis/ISIC_0065939.jpg
+/train/Solar or actinic keratosis/ISIC_0059211.jpg
+/train/Solar or actinic keratosis/ISIC_0057526.jpg
+/train/Solar or actinic keratosis/ISIC_0073042.jpg
+/train/Solar or actinic keratosis/ISIC_0068977.jpg
+/train/Solar or actinic keratosis/ISIC_0053799.jpg
+/train/Solar or actinic keratosis/ISIC_0070175.jpg
+/train/Solar or actinic keratosis/ISIC_0067728.jpg
+/train/Solar or actinic keratosis/ISIC_0070754.jpg
+/train/Solar or actinic keratosis/ISIC_0055578.jpg
+/train/Scar/ISIC_0068702.jpg
+/train/Scar/ISIC_0068443.jpg
+/train/Scar/ISIC_0065983.jpg
+/train/Scar/ISIC_0061227.jpg
+/train/Scar/ISIC_0072562.jpg
+/train/Scar/ISIC_0065913.jpg
+/train/Scar/ISIC_0065762.jpg
+/train/Scar/ISIC_0068774.jpg
+/train/Scar/ISIC_0065252.jpg
+/train/Scar/ISIC_0067852.jpg
+/train/Scar/ISIC_0057599.jpg
+/train/Scar/ISIC_0066083.jpg
+/train/Scar/ISIC_0061094.jpg
+/train/Scar/ISIC_0061514.jpg
+/train/Scar/ISIC_0055113.jpg
+/train/Scar/ISIC_0057461.jpg
+/train/Scar/ISIC_0060691.jpg
+/train/Scar/ISIC_0065867.jpg
+/train/Scar/ISIC_0066667.jpg
+/train/Scar/ISIC_0068612.jpg
+/train/Scar/ISIC_0062759.jpg
+/train/Scar/ISIC_0067473.jpg
+/train/Scar/ISIC_0053822.jpg
+/train/Scar/ISIC_0057325.jpg
+/train/Scar/ISIC_0068518.jpg
+/train/Scar/ISIC_0064834.jpg
+/train/Scar/ISIC_0066241.jpg
+/train/Scar/ISIC_0073107.jpg
+/train/Scar/ISIC_0054469.jpg
+/train/Scar/ISIC_0068123.jpg
+/train/Scar/ISIC_0059901.jpg
+/train/Scar/ISIC_0069176.jpg
+/train/Scar/ISIC_0063431.jpg
+/train/Scar/ISIC_0057733.jpg
+/train/Scar/ISIC_0058706.jpg
+/train/Scar/ISIC_0057667.jpg
+/train/Scar/ISIC_0060199.jpg
+/train/Scar/ISIC_0059084.jpg
+/train/Scar/ISIC_0056471.jpg
+/train/Scar/ISIC_0053955.jpg
+/train/Scar/ISIC_0059279.jpg
+/train/Scar/ISIC_0059508.jpg
+/train/Scar/ISIC_0057181.jpg
+/train/Scar/ISIC_0056367.jpg
+/train/Scar/ISIC_0056932.jpg
+/train/Scar/ISIC_0061308.jpg
+/train/Scar/ISIC_0063781.jpg
+/train/Scar/ISIC_0062798.jpg
+/train/Scar/ISIC_0068841.jpg
+/train/Scar/ISIC_0064775.jpg
+/train/Scar/ISIC_0055651.jpg
+/train/Scar/ISIC_0061992.jpg
+/train/Scar/ISIC_0059238.jpg
+/train/Scar/ISIC_0072039.jpg
+/train/Scar/ISIC_0063665.jpg
+/train/Scar/ISIC_0064876.jpg
+/train/Scar/ISIC_0059021.jpg
+/train/Scar/ISIC_0066712.jpg
+/train/Scar/ISIC_0071922.jpg
+/train/Scar/ISIC_0060090.jpg
+/train/Scar/ISIC_0063248.jpg
+/train/Scar/ISIC_0072954.jpg
+/train/Scar/ISIC_0066596.jpg
+/train/Scar/ISIC_0064332.jpg
+/train/Scar/ISIC_0068542.jpg
+/train/Scar/ISIC_0068002.jpg
+/train/Scar/ISIC_0064749.jpg
+/train/Scar/ISIC_0069708.jpg
+/train/Scar/ISIC_0063370.jpg
+/train/Scar/ISIC_0066287.jpg
+/train/Scar/ISIC_0059225.jpg
+/train/Scar/ISIC_0059355.jpg
+/train/Scar/ISIC_0055023.jpg
+/train/Scar/ISIC_0072801.jpg
+/train/Scar/ISIC_0063522.jpg
+/train/Scar/ISIC_0068662.jpg
+/train/Scar/ISIC_0068833.jpg
+/train/Scar/ISIC_0070810.jpg
+/train/Scar/ISIC_0058516.jpg
+/train/Scar/ISIC_0065695.jpg
+/train/Scar/ISIC_0061033.jpg
+/train/Scar/ISIC_0056148.jpg
+/train/Scar/ISIC_0059048.jpg
+/train/Scar/ISIC_0071265.jpg
+/train/Scar/ISIC_0058082.jpg
+/train/Scar/ISIC_0057766.jpg
+/train/Scar/ISIC_0072349.jpg
+/train/Scar/ISIC_0059667.jpg
+/train/Scar/ISIC_0066276.jpg
+/train/Scar/ISIC_0064049.jpg
+/train/Scar/ISIC_0070393.jpg
+/train/Scar/ISIC_0060103.jpg
+/train/Scar/ISIC_0065474.jpg
+/train/Scar/ISIC_0066537.jpg
+/train/Scar/ISIC_0061665.jpg
+/train/Scar/ISIC_0069046.jpg
+/train/Scar/ISIC_0070655.jpg
+/train/Scar/ISIC_0066677.jpg
+/train/Scar/ISIC_0062403.jpg
+/train/Scar/ISIC_0055045.jpg
+/train/Scar/ISIC_0072402.jpg
+/train/Scar/ISIC_0072644.jpg
+/train/Scar/ISIC_0071014.jpg
+/train/Scar/ISIC_0057265.jpg
+/train/Scar/ISIC_0054617.jpg
+/train/Scar/ISIC_0068739.jpg
+/train/Scar/ISIC_0063177.jpg
+/train/Scar/ISIC_0071282.jpg
+/train/Scar/ISIC_0067880.jpg
+/train/Scar/ISIC_0057243.jpg
+/train/Scar/ISIC_0058488.jpg
+/train/Scar/ISIC_0055011.jpg
+/train/Scar/ISIC_0068641.jpg
+/train/Scar/ISIC_0056910.jpg
+/train/Scar/ISIC_0055978.jpg
+/train/Scar/ISIC_0053938.jpg
+/train/Scar/ISIC_0071894.jpg
+/train/Scar/ISIC_0058365.jpg
+/train/Scar/ISIC_0065568.jpg
+/train/Scar/ISIC_0054812.jpg
+/train/Scar/ISIC_0057229.jpg
+/train/Scar/ISIC_0056086.jpg
+/train/Scar/ISIC_0068720.jpg
+/train/Scar/ISIC_0060075.jpg
+/train/Scar/ISIC_0054733.jpg
+/train/Scar/ISIC_0054984.jpg
+/train/Scar/ISIC_0069022.jpg
+/train/Scar/ISIC_0066591.jpg
+/train/Scar/ISIC_0054638.jpg
+/train/Scar/ISIC_0061537.jpg
+/train/Scar/ISIC_0061264.jpg
+/train/Scar/ISIC_0068608.jpg
+/train/Scar/ISIC_0053962.jpg
+/train/Scar/ISIC_0072510.jpg
+/train/Scar/ISIC_0056361.jpg
+/train/Scar/ISIC_0067748.jpg
+/train/Scar/ISIC_0071577.jpg
+/train/Scar/ISIC_0057191.jpg
+/train/Scar/ISIC_0067372.jpg
+/train/Scar/ISIC_0071387.jpg
+/train/Scar/ISIC_0064302.jpg
+/train/Scar/ISIC_0066286.jpg
+/train/Scar/ISIC_0070556.jpg
+/train/Scar/ISIC_0053608.jpg
+/train/Scar/ISIC_0060364.jpg
+/train/Scar/ISIC_0058175.jpg
+/train/Scar/ISIC_0056386.jpg
+/train/Scar/ISIC_0059271.jpg
+/train/Scar/ISIC_0053964.jpg
+/train/Scar/ISIC_0066599.jpg
+/train/Scar/ISIC_0063095.jpg
+/train/Scar/ISIC_0057846.jpg
+/train/Scar/ISIC_0065244.jpg
+/train/Scar/ISIC_0064215.jpg
+/train/Scar/ISIC_0055782.jpg
+/train/Scar/ISIC_0057350.jpg
+/train/Scar/ISIC_0057788.jpg
+/train/Scar/ISIC_0056352.jpg
+/train/Scar/ISIC_0057176.jpg
+/train/Scar/ISIC_0060545.jpg
+/train/Scar/ISIC_0066266.jpg
+/train/Scar/ISIC_0059406.jpg
+/train/Scar/ISIC_0057830.jpg
+/train/Scar/ISIC_0056744.jpg
+/train/Scar/ISIC_0070906.jpg
+/train/Scar/ISIC_0058725.jpg
+/train/Scar/ISIC_0058614.jpg
+/train/Scar/ISIC_0060913.jpg
+/train/Scar/ISIC_0054136.jpg
+/train/Scar/ISIC_0062038.jpg
+/train/Scar/ISIC_0058093.jpg
+/train/Scar/ISIC_0060547.jpg
+/train/Scar/ISIC_0057598.jpg
+/train/Scar/ISIC_0064600.jpg
+/train/Scar/ISIC_0062916.jpg
+/train/Scar/ISIC_0065124.jpg
+/train/Scar/ISIC_0065286.jpg
+/train/Scar/ISIC_0067640.jpg
+/train/Scar/ISIC_0060805.jpg
+/train/Scar/ISIC_0071829.jpg
+/train/Scar/ISIC_0065522.jpg
+/train/Scar/ISIC_0061731.jpg
+/train/Scar/ISIC_0061635.jpg
+/train/Scar/ISIC_0054750.jpg
+/train/Scar/ISIC_0069223.jpg
+/train/Scar/ISIC_0072580.jpg
+/train/Scar/ISIC_0060598.jpg
+/train/Scar/ISIC_0065763.jpg
+/train/Scar/ISIC_0064363.jpg
+/train/Scar/ISIC_0061237.jpg
+/train/Scar/ISIC_0068719.jpg
+/train/Scar/ISIC_0058441.jpg
+/train/Scar/ISIC_0057226.jpg
+/train/Scar/ISIC_0062811.jpg
+/train/Scar/ISIC_0056028.jpg
+/train/Scar/ISIC_0063548.jpg
+/train/Scar/ISIC_0053687.jpg
+/train/Scar/ISIC_0071983.jpg
+/train/Scar/ISIC_0069019.jpg
+/train/Scar/ISIC_0061262.jpg
+/train/Scar/ISIC_0065257.jpg
+/train/Scar/ISIC_0061162.jpg
+/train/Scar/ISIC_0072884.jpg
+/train/Scar/ISIC_0063996.jpg
+/train/Scar/ISIC_0072323.jpg
+/train/Scar/ISIC_0061024.jpg
+/train/Scar/ISIC_0069993.jpg
+/train/Scar/ISIC_0064208.jpg
+/train/Scar/ISIC_0054699.jpg
+/train/Scar/ISIC_0069340.jpg
+/train/Scar/ISIC_0069580.jpg
+/train/Scar/ISIC_0056792.jpg
+/train/Scar/ISIC_0064577.jpg
+/train/Scar/ISIC_0057301.jpg
+/train/Scar/ISIC_0058498.jpg
+/train/Scar/ISIC_0062573.jpg
+/train/Scar/ISIC_0070750.jpg
+/train/Scar/ISIC_0054646.jpg
+/train/Scar/ISIC_0062489.jpg
+/train/Scar/ISIC_0069166.jpg
+/train/Scar/ISIC_0065092.jpg
+/train/Scar/ISIC_0070314.jpg
+/train/Scar/ISIC_0060247.jpg
+/train/Scar/ISIC_0067768.jpg
+/train/Scar/ISIC_0066590.jpg
+/train/Scar/ISIC_0068120.jpg
+/train/Scar/ISIC_0056746.jpg
+/train/Scar/ISIC_0068745.jpg
+/train/Scar/ISIC_0070112.jpg
+/train/Scar/ISIC_0060395.jpg
+/train/Scar/ISIC_0068785.jpg
+/train/Scar/ISIC_0055757.jpg
+/train/Scar/ISIC_0057608.jpg
+/train/Scar/ISIC_0059197.jpg
+/train/Scar/ISIC_0063396.jpg
+/train/Scar/ISIC_0060692.jpg
+/train/Scar/ISIC_0066183.jpg
+/train/Scar/ISIC_0070334.jpg
+/train/Scar/ISIC_0072148.jpg
+/train/Scar/ISIC_0056513.jpg
+/train/Scar/ISIC_0061160.jpg
+/train/Scar/ISIC_0072681.jpg
+/train/Scar/ISIC_0065958.jpg
+/train/Scar/ISIC_0066284.jpg
+/train/Scar/ISIC_0069757.jpg
+/train/Scar/ISIC_0058396.jpg
+/train/Scar/ISIC_0059817.jpg
+/train/Scar/ISIC_0071191.jpg
+/train/Scar/ISIC_0070470.jpg
+/train/Scar/ISIC_0070648.jpg
+/train/Scar/ISIC_0072460.jpg
+/train/Solar lentigo/ISIC_0057103.jpg
+/train/Solar lentigo/ISIC_0068328.jpg
+/train/Solar lentigo/ISIC_0070622.jpg
+/train/Solar lentigo/ISIC_0070055.jpg
+/train/Solar lentigo/ISIC_0058101.jpg
+/train/Solar lentigo/ISIC_0054234.jpg
+/train/Solar lentigo/ISIC_0057250.jpg
+/train/Solar lentigo/ISIC_0055569.jpg
+/train/Solar lentigo/ISIC_0054076.jpg
+/train/Solar lentigo/ISIC_0061725.jpg
+/train/Solar lentigo/ISIC_0065865.jpg
+/train/Solar lentigo/ISIC_0065464.jpg
+/train/Solar lentigo/ISIC_0063510.jpg
+/train/Solar lentigo/ISIC_0058411.jpg
+/train/Solar lentigo/ISIC_0070261.jpg
+/train/Solar lentigo/ISIC_0054804.jpg
+/train/Solar lentigo/ISIC_0066793.jpg
+/train/Solar lentigo/ISIC_0058230.jpg
+/train/Solar lentigo/ISIC_0062361.jpg
+/train/Solar lentigo/ISIC_0066072.jpg
+/train/Solar lentigo/ISIC_0065553.jpg
+/train/Solar lentigo/ISIC_0056888.jpg
+/train/Solar lentigo/ISIC_0068366.jpg
+/train/Solar lentigo/ISIC_0063188.jpg
+/train/Solar lentigo/ISIC_0065935.jpg
+/train/Solar lentigo/ISIC_0064025.jpg
+/train/Solar lentigo/ISIC_0073114.jpg
+/train/Solar lentigo/ISIC_0054461.jpg
+/train/Solar lentigo/ISIC_0058179.jpg
+/train/Solar lentigo/ISIC_0057646.jpg
+/train/Solar lentigo/ISIC_0071847.jpg
+/train/Solar lentigo/ISIC_0069965.jpg
+/train/Solar lentigo/ISIC_0064793.jpg
+/train/Solar lentigo/ISIC_0055972.jpg
+/train/Solar lentigo/ISIC_0069016.jpg
+/train/Solar lentigo/ISIC_0067035.jpg
+/train/Solar lentigo/ISIC_0055256.jpg
+/train/Solar lentigo/ISIC_0071511.jpg
+/train/Solar lentigo/ISIC_0066571.jpg
+/train/Solar lentigo/ISIC_0055915.jpg
+/train/Solar lentigo/ISIC_0053462.jpg
+/train/Solar lentigo/ISIC_0069327.jpg
+/train/Solar lentigo/ISIC_0071054.jpg
+/train/Solar lentigo/ISIC_0071297.jpg
+/train/Solar lentigo/ISIC_0054047.jpg
+/train/Solar lentigo/ISIC_0065554.jpg
+/train/Solar lentigo/ISIC_0061149.jpg
+/train/Solar lentigo/ISIC_0056606.jpg
+/train/Solar lentigo/ISIC_0058932.jpg
+/train/Solar lentigo/ISIC_0054368.jpg
+/train/Solar lentigo/ISIC_0067273.jpg
+/train/Solar lentigo/ISIC_0061789.jpg
+/train/Solar lentigo/ISIC_0058960.jpg
+/train/Solar lentigo/ISIC_0069968.jpg
+/train/Solar lentigo/ISIC_0061338.jpg
+/train/Solar lentigo/ISIC_0059186.jpg
+/train/Solar lentigo/ISIC_0060704.jpg
+/train/Solar lentigo/ISIC_0072527.jpg
+/train/Solar lentigo/ISIC_0055100.jpg
+/train/Solar lentigo/ISIC_0058323.jpg
+/train/Solar lentigo/ISIC_0068504.jpg
+/train/Solar lentigo/ISIC_0057541.jpg
+/train/Solar lentigo/ISIC_0067856.jpg
+/train/Solar lentigo/ISIC_0055602.jpg
+/train/Solar lentigo/ISIC_0058449.jpg
+/train/Solar lentigo/ISIC_0055579.jpg
+/train/Solar lentigo/ISIC_0053782.jpg
+/train/Solar lentigo/ISIC_0070917.jpg
+/train/Solar lentigo/ISIC_0068986.jpg
+/train/Solar lentigo/ISIC_0058590.jpg
+/train/Solar lentigo/ISIC_0058974.jpg
+/train/Solar lentigo/ISIC_0070512.jpg
+/train/Solar lentigo/ISIC_0072901.jpg
+/train/Solar lentigo/ISIC_0057253.jpg
+/train/Solar lentigo/ISIC_0063076.jpg
+/train/Solar lentigo/ISIC_0068526.jpg
+/train/Solar lentigo/ISIC_0056179.jpg
+/train/Solar lentigo/ISIC_0062424.jpg
+/train/Solar lentigo/ISIC_0057293.jpg
+/train/Solar lentigo/ISIC_0061757.jpg
+/train/Solar lentigo/ISIC_0054237.jpg
+/train/Solar lentigo/ISIC_0062587.jpg
+/train/Solar lentigo/ISIC_0065232.jpg
+/train/Solar lentigo/ISIC_0071104.jpg
+/train/Solar lentigo/ISIC_0066706.jpg
+/train/Solar lentigo/ISIC_0062590.jpg
+/train/Solar lentigo/ISIC_0064518.jpg
+/train/Solar lentigo/ISIC_0062368.jpg
+/train/Solar lentigo/ISIC_0066385.jpg
+/train/Solar lentigo/ISIC_0058684.jpg
+/train/Solar lentigo/ISIC_0059970.jpg
+/train/Solar lentigo/ISIC_0072057.jpg
+/train/Solar lentigo/ISIC_0060920.jpg
+/train/Solar lentigo/ISIC_0064942.jpg
+/train/Solar lentigo/ISIC_0068075.jpg
+/train/Solar lentigo/ISIC_0073070.jpg
+/train/Solar lentigo/ISIC_0067408.jpg
+/train/Solar lentigo/ISIC_0057068.jpg
+/train/Solar lentigo/ISIC_0057063.jpg
+/train/Solar lentigo/ISIC_0054345.jpg
+/train/Solar lentigo/ISIC_0071399.jpg
+/train/Solar lentigo/ISIC_0057326.jpg
+/train/Solar lentigo/ISIC_0055973.jpg
+/train/Solar lentigo/ISIC_0062754.jpg
+/train/Solar lentigo/ISIC_0058873.jpg
+/train/Solar lentigo/ISIC_0065296.jpg
+/train/Solar lentigo/ISIC_0053968.jpg
+/train/Solar lentigo/ISIC_0069605.jpg
+/train/Solar lentigo/ISIC_0071753.jpg
+/train/Solar lentigo/ISIC_0064228.jpg
+/train/Solar lentigo/ISIC_0057368.jpg
+/train/Solar lentigo/ISIC_0073095.jpg
+/train/Solar lentigo/ISIC_0056636.jpg
+/train/Solar lentigo/ISIC_0071380.jpg
+/train/Solar lentigo/ISIC_0068596.jpg
+/train/Solar lentigo/ISIC_0061785.jpg
+/train/Solar lentigo/ISIC_0061129.jpg
+/train/Solar lentigo/ISIC_0062145.jpg
+/train/Solar lentigo/ISIC_0057036.jpg
+/train/Solar lentigo/ISIC_0070040.jpg
+/train/Solar lentigo/ISIC_0059564.jpg
+/train/Solar lentigo/ISIC_0054911.jpg
+/train/Solar lentigo/ISIC_0060204.jpg
+/train/Solar lentigo/ISIC_0064571.jpg
+/train/Solar lentigo/ISIC_0059150.jpg
+/train/Solar lentigo/ISIC_0062672.jpg
+/train/Solar lentigo/ISIC_0061321.jpg
+/train/Solar lentigo/ISIC_0062247.jpg
+/train/Solar lentigo/ISIC_0061646.jpg
+/train/Solar lentigo/ISIC_0056768.jpg
+/train/Solar lentigo/ISIC_0063729.jpg
+/train/Solar lentigo/ISIC_0069663.jpg
+/train/Solar lentigo/ISIC_0066946.jpg
+/train/Solar lentigo/ISIC_0060123.jpg
+/train/Solar lentigo/ISIC_0062071.jpg
+/train/Solar lentigo/ISIC_0059333.jpg
+/train/Solar lentigo/ISIC_0070467.jpg
+/train/Solar lentigo/ISIC_0063718.jpg
+/train/Solar lentigo/ISIC_0065514.jpg
+/train/Solar lentigo/ISIC_0057298.jpg
+/train/Solar lentigo/ISIC_0070332.jpg
+/train/Solar lentigo/ISIC_0068261.jpg
+/train/Solar lentigo/ISIC_0073108.jpg
+/train/Solar lentigo/ISIC_0072815.jpg
+/train/Solar lentigo/ISIC_0067419.jpg
+/train/Solar lentigo/ISIC_0066764.jpg
+/train/Solar lentigo/ISIC_0062570.jpg
+/train/Solar lentigo/ISIC_0053635.jpg
+/train/Solar lentigo/ISIC_0062905.jpg
+/train/Solar lentigo/ISIC_0069849.jpg
+/train/Solar lentigo/ISIC_0055583.jpg
+/train/Solar lentigo/ISIC_0066373.jpg
+/train/Solar lentigo/ISIC_0070980.jpg
+/train/Solar lentigo/ISIC_0063972.jpg
+/train/Solar lentigo/ISIC_0070963.jpg
+/train/Solar lentigo/ISIC_0059616.jpg
+/train/Solar lentigo/ISIC_0068691.jpg
+/train/Solar lentigo/ISIC_0063201.jpg
+/train/Solar lentigo/ISIC_0068575.jpg
+/train/Solar lentigo/ISIC_0062283.jpg
+/train/Solar lentigo/ISIC_0054788.jpg
+/train/Solar lentigo/ISIC_0063856.jpg
+/train/Solar lentigo/ISIC_0065317.jpg
+/train/Solar lentigo/ISIC_0060523.jpg
+/train/Solar lentigo/ISIC_0067962.jpg
+/train/Solar lentigo/ISIC_0069879.jpg
+/train/Solar lentigo/ISIC_0058293.jpg
+/train/Solar lentigo/ISIC_0071211.jpg
+/train/Solar lentigo/ISIC_0059863.jpg
+/train/Solar lentigo/ISIC_0069307.jpg
+/train/Solar lentigo/ISIC_0058872.jpg
+/train/Solar lentigo/ISIC_0058219.jpg
+/train/Solar lentigo/ISIC_0058195.jpg
+/train/Solar lentigo/ISIC_0068467.jpg
+/train/Solar lentigo/ISIC_0061640.jpg
+/train/Solar lentigo/ISIC_0061610.jpg
+/train/Solar lentigo/ISIC_0067992.jpg
+/train/Solar lentigo/ISIC_0058056.jpg
+/train/Solar lentigo/ISIC_0063398.jpg
+/train/Solar lentigo/ISIC_0055231.jpg
+/train/Solar lentigo/ISIC_0058265.jpg
+/train/Solar lentigo/ISIC_0072782.jpg
+/train/Solar lentigo/ISIC_0062699.jpg
+/train/Solar lentigo/ISIC_0063706.jpg
+/train/Solar lentigo/ISIC_0067039.jpg
+/train/Solar lentigo/ISIC_0055203.jpg
+/train/Solar lentigo/ISIC_0058785.jpg
+/train/Solar lentigo/ISIC_0072075.jpg
+/train/Solar lentigo/ISIC_0064445.jpg
+/train/Solar lentigo/ISIC_0063075.jpg
+/train/Solar lentigo/ISIC_0059850.jpg
+/train/Solar lentigo/ISIC_0070238.jpg
+/train/Solar lentigo/ISIC_0062561.jpg
+/train/Solar lentigo/ISIC_0071919.jpg
+/train/Solar lentigo/ISIC_0061924.jpg
+/train/Solar lentigo/ISIC_0071615.jpg
+/train/Solar lentigo/ISIC_0066313.jpg
+/train/Solar lentigo/ISIC_0060966.jpg
+/train/Solar lentigo/ISIC_0072436.jpg
+/train/Solar lentigo/ISIC_0061689.jpg
+/train/Solar lentigo/ISIC_0065964.jpg
+/train/Solar lentigo/ISIC_0069496.jpg
+/train/Solar lentigo/ISIC_0055036.jpg
+/train/Solar lentigo/ISIC_0061550.jpg
+/train/Solar lentigo/ISIC_0059706.jpg
+/train/Solar lentigo/ISIC_0064984.jpg
+/train/Solar lentigo/ISIC_0069853.jpg
+/train/Solar lentigo/ISIC_0073039.jpg
+/train/Solar lentigo/ISIC_0069425.jpg
+/train/Solar lentigo/ISIC_0064037.jpg
+/train/Solar lentigo/ISIC_0067664.jpg
+/train/Solar lentigo/ISIC_0056523.jpg
+/train/Solar lentigo/ISIC_0057210.jpg
+/train/Solar lentigo/ISIC_0067255.jpg
+/train/Solar lentigo/ISIC_0053889.jpg
+/train/Solar lentigo/ISIC_0059022.jpg
+/train/Solar lentigo/ISIC_0057576.jpg
+/train/Solar lentigo/ISIC_0053865.jpg
+/train/Solar lentigo/ISIC_0053849.jpg
+/train/Solar lentigo/ISIC_0053965.jpg
+/train/Solar lentigo/ISIC_0067739.jpg
+/train/Solar lentigo/ISIC_0054754.jpg
+/train/Solar lentigo/ISIC_0060566.jpg
+/train/Solar lentigo/ISIC_0069057.jpg
+/train/Solar lentigo/ISIC_0056715.jpg
+/train/Solar lentigo/ISIC_0060002.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058515.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057361.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071659.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069949.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068203.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063217.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065838.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059152.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062336.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0073236.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055218.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069887.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058632.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055929.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057510.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065343.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064267.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057182.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060182.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066030.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065326.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056154.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062519.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070445.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058026.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071795.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059102.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067868.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065018.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068380.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064386.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055469.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071411.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057538.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060478.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065491.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072263.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069428.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055982.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072024.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068756.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059953.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057353.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063144.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064358.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053684.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062479.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060663.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061599.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061142.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054057.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058318.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067122.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062095.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061394.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070772.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057492.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064169.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069497.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055312.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072869.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067044.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070155.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059940.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064522.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067800.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059277.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064016.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055692.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056150.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071905.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055112.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060291.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060767.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066898.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064582.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055815.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061238.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058051.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068615.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072499.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057096.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060353.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060549.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062493.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068390.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070641.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054378.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067803.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061243.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061759.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071202.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062494.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066801.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056734.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0073022.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058622.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066482.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069636.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069388.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057899.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060059.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061388.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060356.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058972.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0073195.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071077.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058185.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067115.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058327.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071023.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055449.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060786.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055116.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071887.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061240.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058355.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064218.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054606.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056956.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057730.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055478.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067957.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053860.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059403.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066377.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060908.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068334.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062409.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059203.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070377.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057415.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070041.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060800.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060830.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053475.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059700.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066695.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068496.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060077.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057224.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071509.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069746.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054949.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059458.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061041.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058636.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060721.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067982.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072546.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0073223.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061794.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072395.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068676.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054893.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061804.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069086.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063047.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070290.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057043.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071999.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063621.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068304.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059660.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064893.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067544.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069005.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060331.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063540.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068148.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059749.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070870.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068229.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067944.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061192.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060396.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072765.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061181.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064593.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070497.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067643.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060366.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069615.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068666.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071433.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061896.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053926.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063278.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059342.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059002.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066664.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054644.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058893.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070224.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070704.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064985.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072114.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063113.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056821.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057314.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067948.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054703.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064938.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053561.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053685.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067626.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057584.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055064.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063855.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059819.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068842.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056522.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070890.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069201.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055302.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053903.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066259.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058120.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071969.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063669.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058690.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068647.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069266.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057675.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070350.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060774.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071976.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065888.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062558.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067709.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063994.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056913.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062347.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064579.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054472.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053653.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060206.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068636.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054641.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065604.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057041.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060711.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071775.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064760.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070338.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056290.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071393.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065455.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071756.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072158.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062903.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060333.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055102.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058934.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072911.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070483.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068664.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059091.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054163.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057163.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061988.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053602.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072347.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056611.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069677.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057124.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054052.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064287.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068369.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062117.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066781.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062959.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058659.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057678.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066274.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070286.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055107.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063746.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062261.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054030.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064546.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061099.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062182.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071318.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061016.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058920.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060131.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059952.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067212.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067971.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064977.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059164.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057046.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057962.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063671.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053715.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058741.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054515.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057198.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062143.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059835.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068556.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063401.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060489.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058435.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071817.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060944.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061148.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068955.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068498.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055328.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069419.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059395.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056195.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057398.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065484.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066625.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063085.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055920.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068997.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057610.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059405.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069551.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071164.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063527.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066936.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059765.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057131.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072250.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068482.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055195.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069181.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066787.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054315.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071688.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066158.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058904.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062362.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063206.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072829.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0059451.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070669.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054394.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072808.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067052.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062662.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058949.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069943.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071351.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063564.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058451.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065778.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057294.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061322.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054342.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070083.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057579.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055956.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056621.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053914.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056925.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067527.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063297.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071948.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063363.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057890.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062518.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069446.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0073030.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057930.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072135.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064143.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066201.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071322.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061047.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055131.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065816.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063730.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061451.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065103.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070602.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057121.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066951.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064878.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0066656.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060623.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072969.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056927.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071151.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070349.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058525.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069948.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071424.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058074.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057670.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068367.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071222.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069502.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054111.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062233.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071058.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056295.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057426.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068589.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0072833.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0055150.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068481.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062568.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069220.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067275.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069914.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0062354.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064584.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056493.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061455.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070863.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069695.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061690.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063559.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067935.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065759.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071462.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058029.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0064347.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058152.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057414.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071727.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0068067.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067950.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069539.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0070421.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0058646.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061197.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0054935.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0056059.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0071786.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063982.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0067081.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060434.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0060035.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0061046.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0073197.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0053573.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0057421.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0069820.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0063661.jpg
+/train/Squamous cell carcinoma NOS/ISIC_0065101.jpg

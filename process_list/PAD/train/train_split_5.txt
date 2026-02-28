@@ -1,0 +1,230 @@
+/train/Basal Cell Carcinoma/PAT_291_446_704.png
+/train/Basal Cell Carcinoma/PAT_122_185_957.png
+/train/Basal Cell Carcinoma/PAT_46_879_225.png
+/train/Basal Cell Carcinoma/PAT_98_152_562.png
+/train/Basal Cell Carcinoma/PAT_160_249_76.png
+/train/Basal Cell Carcinoma/PAT_517_971_88.png
+/train/Basal Cell Carcinoma/PAT_101_1041_658.png
+/train/Basal Cell Carcinoma/PAT_172_266_950.png
+/train/Basal Cell Carcinoma/PAT_290_445_686.png
+/train/Basal Cell Carcinoma/PAT_294_638_564.png
+/train/Basal Cell Carcinoma/PAT_724_1369_896.png
+/train/Basal Cell Carcinoma/PAT_73_111_609.png
+/train/Basal Cell Carcinoma/PAT_856_1626_523.png
+/train/Basal Cell Carcinoma/PAT_505_951_710.png
+/train/Basal Cell Carcinoma/PAT_300_647_501.png
+/train/Basal Cell Carcinoma/PAT_165_256_460.png
+/train/Basal Cell Carcinoma/PAT_817_1537_643.png
+/train/Basal Cell Carcinoma/PAT_248_379_695.png
+/train/Basal Cell Carcinoma/PAT_123_187_164.png
+/train/Basal Cell Carcinoma/PAT_211_319_777.png
+/train/Basal Cell Carcinoma/PAT_330_695_90.png
+/train/Basal Cell Carcinoma/PAT_197_301_198.png
+/train/Basal Cell Carcinoma/PAT_237_363_344.png
+/train/Basal Cell Carcinoma/PAT_330_1437_458.png
+/train/Basal Cell Carcinoma/PAT_867_1650_901.png
+/train/Basal Cell Carcinoma/PAT_875_1669_946.png
+/train/Basal Cell Carcinoma/PAT_810_1526_67.png
+/train/Basal Cell Carcinoma/PAT_762_1436_414.png
+/train/Basal Cell Carcinoma/PAT_645_1500_364.png
+/train/Basal Cell Carcinoma/PAT_208_314_741.png
+/train/Basal Cell Carcinoma/PAT_299_1452_1.png
+/train/Basal Cell Carcinoma/PAT_257_395_866.png
+/train/Basal Cell Carcinoma/PAT_373_761_708.png
+/train/Basal Cell Carcinoma/PAT_134_201_587.png
+/train/Basal Cell Carcinoma/PAT_363_745_516.png
+/train/Basal Cell Carcinoma/PAT_88_133_64.png
+/train/Basal Cell Carcinoma/PAT_154_235_30.png
+/train/Basal Cell Carcinoma/PAT_330_698_211.png
+/train/Basal Cell Carcinoma/PAT_431_850_472.png
+/train/Basal Cell Carcinoma/PAT_967_1827_247.png
+/train/Basal Cell Carcinoma/PAT_796_1509_400.png
+/train/Basal Cell Carcinoma/PAT_247_1294_292.png
+/train/Basal Cell Carcinoma/PAT_177_274_865.png
+/train/Basal Cell Carcinoma/PAT_99_153_636.png
+/train/Basal Cell Carcinoma/PAT_737_1394_936.png
+/train/Basal Cell Carcinoma/PAT_402_803_739.png
+/train/Basal Cell Carcinoma/PAT_530_999_696.png
+/train/Basal Cell Carcinoma/PAT_386_1554_362.png
+/train/Basal Cell Carcinoma/PAT_915_1738_667.png
+/train/Basal Cell Carcinoma/PAT_161_250_197.png
+/train/Basal Cell Carcinoma/PAT_905_1721_327.png
+/train/Basal Cell Carcinoma/PAT_386_1554_455.png
+/train/Basal Cell Carcinoma/PAT_8_15_820.png
+/train/Basal Cell Carcinoma/PAT_918_1742_629.png
+/train/Basal Cell Carcinoma/PAT_295_639_240.png
+/train/Basal Cell Carcinoma/PAT_211_319_810.png
+/train/Basal Cell Carcinoma/PAT_526_991_109.png
+/train/Basal Cell Carcinoma/PAT_918_1742_456.png
+/train/Basal Cell Carcinoma/PAT_191_293_699.png
+/train/Basal Cell Carcinoma/PAT_613_1164_827.png
+/train/Basal Cell Carcinoma/PAT_677_1348_51.png
+/train/Basal Cell Carcinoma/PAT_478_916_979.png
+/train/Basal Cell Carcinoma/PAT_988_1858_944.png
+/train/Basal Cell Carcinoma/PAT_445_871_524.png
+/train/Basal Cell Carcinoma/PAT_837_1583_124.png
+/train/Basal Cell Carcinoma/PAT_375_763_980.png
+/train/Basal Cell Carcinoma/PAT_282_433_934.png
+/train/Basal Cell Carcinoma/PAT_112_168_360.png
+/train/Basal Cell Carcinoma/PAT_364_748_278.png
+/train/Basal Cell Carcinoma/PAT_459_892_804.png
+/train/Basal Cell Carcinoma/PAT_674_1277_9.png
+/train/Basal Cell Carcinoma/PAT_237_363_858.png
+/train/Basal Cell Carcinoma/PAT_531_1004_189.png
+/train/Basal Cell Carcinoma/PAT_545_1029_650.png
+/train/Basal Cell Carcinoma/PAT_864_1646_822.png
+/train/Basal Cell Carcinoma/PAT_83_126_820.png
+/train/Basal Cell Carcinoma/PAT_976_1837_503.png
+/train/Basal Cell Carcinoma/PAT_311_667_416.png
+/train/Basal Cell Carcinoma/PAT_31_42_680.png
+/train/Basal Cell Carcinoma/PAT_217_1290_283.png
+/train/Basal Cell Carcinoma/PAT_265_406_276.png
+/train/Basal Cell Carcinoma/PAT_919_1744_318.png
+/train/Basal Cell Carcinoma/PAT_53_82_940.png
+/train/Basal Cell Carcinoma/PAT_147_219_206.png
+/train/Basal Cell Carcinoma/PAT_101_1041_898.png
+/train/Basal Cell Carcinoma/PAT_409_812_974.png
+/train/Basal Cell Carcinoma/PAT_453_883_719.png
+/train/Basal Cell Carcinoma/PAT_912_1729_244.png
+/train/Basal Cell Carcinoma/PAT_38_1002_34.png
+/train/Basal Cell Carcinoma/PAT_396_796_394.png
+/train/Basal Cell Carcinoma/PAT_268_413_643.png
+/train/Basal Cell Carcinoma/PAT_837_1584_745.png
+/train/Basal Cell Carcinoma/PAT_272_420_10.png
+/train/Basal Cell Carcinoma/PAT_212_327_532.png
+/train/Basal Cell Carcinoma/PAT_457_889_346.png
+/train/Basal Cell Carcinoma/PAT_267_411_513.png
+/train/Basal Cell Carcinoma/PAT_430_848_476.png
+/train/Basal Cell Carcinoma/PAT_899_1702_32.png
+/train/Basal Cell Carcinoma/PAT_53_1144_892.png
+/train/Basal Cell Carcinoma/PAT_773_1459_554.png
+/train/Basal Cell Carcinoma/PAT_723_1396_338.png
+/train/Basal Cell Carcinoma/PAT_168_262_292.png
+/train/Basal Cell Carcinoma/PAT_198_302_44.png
+/train/Basal Cell Carcinoma/PAT_378_770_302.png
+/train/Melanoma/PAT_340_714_314.png
+/train/Melanoma/PAT_801_1518_574.png
+/train/Melanoma/PAT_890_1693_904.png
+/train/Melanoma/PAT_270_417_257.png
+/train/Melanoma/PAT_691_1312_389.png
+/train/Melanoma/PAT_622_1185_922.png
+/train/Melanoma/PAT_680_1289_182.png
+/train/Melanoma/PAT_890_1693_454.png
+/train/Melanoma/PAT_975_1834_152.png
+/train/Melanoma/PAT_495_941_26.png
+/train/Melanoma/PAT_320_681_410.png
+/train/Melanoma/PAT_340_714_68.png
+/train/Melanoma/PAT_486_929_274.png
+/train/Melanoma/PAT_433_852_20.png
+/train/Melanoma/PAT_486_929_317.png
+/train/Melanoma/PAT_262_402_265.png
+/train/Melanoma/PAT_109_868_113.png
+/train/Melanoma/PAT_262_402_14.png
+/train/Melanoma/PAT_902_1718_852.png
+/train/Melanoma/PAT_719_1361_234.png
+/train/Melanoma/PAT_611_1158_156.png
+/train/Melanoma/PAT_270_417_728.png
+/train/Melanoma/PAT_109_868_723.png
+/train/Melanoma/PAT_801_1518_78.png
+/train/Melanoma/PAT_70_107_155.png
+/train/Melanoma/PAT_115_1138_870.png
+/train/Melanoma/PAT_895_1699_872.png
+/train/Melanoma/PAT_333_702_840.png
+/train/Melanoma/PAT_995_1867_5.png
+/train/Melanoma/PAT_719_1361_160.png
+/train/Melanoma/PAT_949_1802_582.png
+/train/Melanoma/PAT_710_1330_243.png
+/train/Melanoma/PAT_972_1843_756.png
+/train/Melanoma/PAT_656_1246_489.png
+/train/Melanoma/PAT_656_1246_483.png
+/train/Melanoma/PAT_233_354_935.png
+/train/Melanoma/PAT_320_681_724.png
+/train/Melanoma/PAT_680_1289_585.png
+/train/Melanoma/PAT_966_1825_584.png
+/train/Melanoma/PAT_936_1772_886.png
+/train/Melanoma/PAT_754_1429_380.png
+/train/Actinic Keratosis/PAT_1814_3564_609.png
+/train/Actinic Keratosis/PAT_1421_1464_297.png
+/train/Actinic Keratosis/PAT_1393_1355_316.png
+/train/Actinic Keratosis/PAT_1374_1285_735.png
+/train/Actinic Keratosis/PAT_1545_1867_547.png
+/train/Actinic Keratosis/PAT_224_1340_142.png
+/train/Actinic Keratosis/PAT_1593_2651_122.png
+/train/Actinic Keratosis/PAT_1127_496_945.png
+/train/Actinic Keratosis/PAT_2026_4230_141.png
+/train/Actinic Keratosis/PAT_1505_1733_128.png
+/train/Actinic Keratosis/PAT_1402_1377_799.png
+/train/Actinic Keratosis/PAT_236_1071_810.png
+/train/Actinic Keratosis/PAT_1631_2837_667.png
+/train/Actinic Keratosis/PAT_1981_4023_673.png
+/train/Actinic Keratosis/PAT_1547_1875_436.png
+/train/Actinic Keratosis/PAT_1406_1397_669.png
+/train/Actinic Keratosis/PAT_673_3928_888.png
+/train/Actinic Keratosis/PAT_1707_3146_743.png
+/train/Actinic Keratosis/PAT_1392_1353_161.png
+/train/Actinic Keratosis/PAT_1819_3569_217.png
+/train/Actinic Keratosis/PAT_2010_4136_318.png
+/train/Actinic Keratosis/PAT_873_1661_178.png
+/train/Actinic Keratosis/PAT_1722_3214_672.png
+/train/Actinic Keratosis/PAT_492_4723_890.png
+/train/Actinic Keratosis/PAT_1428_1489_454.png
+/train/Actinic Keratosis/PAT_236_361_180.png
+/train/Actinic Keratosis/PAT_880_1674_223.png
+/train/Actinic Keratosis/PAT_2043_4308_681.png
+/train/Actinic Keratosis/PAT_886_1684_103.png
+/train/Actinic Keratosis/PAT_1094_381_85.png
+/train/Actinic Keratosis/PAT_639_3676_760.png
+/train/Actinic Keratosis/PAT_1950_3932_655.png
+/train/Actinic Keratosis/PAT_1042_187_746.png
+/train/Actinic Keratosis/PAT_1294_1031_466.png
+/train/Actinic Keratosis/PAT_1498_1719_816.png
+/train/Actinic Keratosis/PAT_86_131_107.png
+/train/Actinic Keratosis/PAT_851_1623_815.png
+/train/Actinic Keratosis/PAT_1427_1485_15.png
+/train/Actinic Keratosis/PAT_281_1516_753.png
+/train/Actinic Keratosis/PAT_1402_1376_507.png
+/train/Actinic Keratosis/PAT_263_1480_753.png
+/train/Actinic Keratosis/PAT_1581_2570_738.png
+/train/Actinic Keratosis/PAT_2153_4782_321.png
+/train/Actinic Keratosis/PAT_1955_3946_319.png
+/train/Actinic Keratosis/PAT_795_1508_925.png
+/train/Actinic Keratosis/PAT_1051_220_356.png
+/train/Actinic Keratosis/PAT_579_1099_551.png
+/train/Actinic Keratosis/PAT_38_1003_226.png
+/train/Actinic Keratosis/PAT_1550_1886_849.png
+/train/Actinic Keratosis/PAT_999_20_401.png
+/train/Actinic Keratosis/PAT_1918_3836_82.png
+/train/Actinic Keratosis/PAT_1572_2494_224.png
+/train/Actinic Keratosis/PAT_1573_2497_736.png
+/train/Actinic Keratosis/PAT_1222_767_519.png
+/train/Actinic Keratosis/PAT_1067_284_533.png
+/train/Actinic Keratosis/PAT_1690_3082_117.png
+/train/Actinic Keratosis/PAT_85_129_980.png
+/train/Actinic Keratosis/PAT_1070_305_907.png
+/train/Actinic Keratosis/PAT_1145_534_524.png
+/train/Actinic Keratosis/PAT_155_238_413.png
+/train/Actinic Keratosis/PAT_1029_135_239.png
+/train/Actinic Keratosis/PAT_356_4511_960.png
+/train/Actinic Keratosis/PAT_1385_1323_100.png
+/train/Actinic Keratosis/PAT_317_675_144.png
+/train/Actinic Keratosis/PAT_85_129_896.png
+/train/Actinic Keratosis/PAT_380_774_185.png
+/train/Actinic Keratosis/PAT_1374_1286_494.png
+/train/Actinic Keratosis/PAT_1551_1889_948.png
+/train/Actinic Keratosis/PAT_639_3674_452.png
+/train/Actinic Keratosis/PAT_1821_3575_920.png
+/train/Actinic Keratosis/PAT_2020_4176_865.png
+/train/Actinic Keratosis/PAT_1249_861_810.png
+/train/Actinic Keratosis/PAT_1818_3570_577.png
+/train/Actinic Keratosis/PAT_389_2600_833.png
+/train/Actinic Keratosis/PAT_1407_1402_500.png
+/train/Actinic Keratosis/PAT_1133_510_956.png
+/train/Actinic Keratosis/PAT_249_380_366.png
+/train/Actinic Keratosis/PAT_2090_4532_178.png
+/train/Actinic Keratosis/PAT_91_356_273.png
+/train/Actinic Keratosis/PAT_1439_1521_868.png
+/train/Actinic Keratosis/PAT_1469_1627_109.png
+/train/Actinic Keratosis/PAT_824_1561_796.png
+/train/Actinic Keratosis/PAT_763_1439_668.png
+/train/Actinic Keratosis/PAT_886_1684_297.png
+/train/Actinic Keratosis/PAT_104_1754_276.png

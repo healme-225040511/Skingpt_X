@@ -1,0 +1,59 @@
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/bowens-disease-62.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Sclerosus-Skin-19.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/pityriasis-rosea-156.jpg
+/test/Acne and Rosacea Photos/acne-cystic-98.jpg
+/test/Vasculitis Photos/erythema-multiforme-100.jpg
+/test/Bullous Disease Photos/epidermolysis-bullosa-4.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/atypical-nevi-18.jpg
+/test/Light Diseases and Disorders of Pigmentation/lentigo-adults-71.jpg
+/test/Acne and Rosacea Photos/acne-cystic-52.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/psoriasis-scalp-79.jpg
+/test/Acne and Rosacea Photos/07VascularFace0120.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/seborrheic-dermatitis-82.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Lichen-Nitidus-22.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/skin-tags-polyps-26.jpg
+/test/Atopic Dermatitis Photos/05atopicAdult1118051.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/skin-tags-polyps-69.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-14.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-chronic-cutaneous-129.jpg
+/test/Eczema Photos/eczema-subacute-84.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/skin-tags-polyps-76.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/candida-groin-4.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/keloids-47.jpg
+/test/Bullous Disease Photos/dariers-disease-56.jpg
+/test/Eczema Photos/stasis-dermatitis-101.jpg
+/test/Acne and Rosacea Photos/rosacea-nose-37.jpg
+/test/Lupus and other Connective Tissue diseases/raynaud-disease-3.jpg
+/test/Herpes HPV and other STDs Photos/molluscum-contagiosum-111.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-incognito-22.jpg
+/test/Exanthems and Drug Eruptions/drug-eruptions-92.jpg
+/test/Psoriasis pictures Lichen Planus and related diseases/Psoriasis-nails-3.jpg
+/test/Light Diseases and Disorders of Pigmentation/milia-11.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/pilar-cyst-22.jpg
+/test/Eczema Photos/lichen-simplex-chronicus-94.jpg
+/test/Vasculitis Photos/erythema-multiforme-13.jpg
+/test/Acne and Rosacea Photos/acne-closed-comedo-25.jpg
+/test/Lupus and other Connective Tissue diseases/lupus-acute-24.jpg
+/test/Tinea Ringworm Candidiasis and other Fungal Infections/tinea-foot-webs-48.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/actinic-keratosis-5FU-61.jpg
+/test/Vascular Tumors/cherry-angioma-23.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/basal-cell-carcinoma-nose-25.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/epidermal-cyst-134.jpg
+/test/Eczema Photos/pompholyx-7.jpg
+/test/Lupus and other Connective Tissue diseases/morphea-58.jpg
+/test/Nail Fungus and other Nail Disease/acute-paronychia-26.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/squamous-cell-carcinoma-ear-5.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/malignant-melanoma-100.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/pediculosis-lids-1.jpg
+/test/Eczema Photos/eczema-nummular-133.jpg
+/test/Warts Molluscum and other Viral Infections/warts-plantar-54.jpg
+/test/Actinic Keratosis Basal Cell Carcinoma and other Malignant Lesions/arsenical-keratoses-15.jpg
+/test/Melanoma Skin Cancer Nevi and Moles/becker-nevus-36.jpg
+/test/Seborrheic Keratoses and other Benign Tumors/seborrheic-keratoses-smooth-44.jpg
+/test/Vasculitis Photos/schamberg-disease-20.jpg
+/test/Light Diseases and Disorders of Pigmentation/vitiligo-4.jpg
+/test/Warts Molluscum and other Viral Infections/warts-flat-26.jpg
+/test/Herpes HPV and other STDs Photos/genital-ulcers-2.jpg
+/test/Acne and Rosacea Photos/perioral-dermatitis-115.jpg
+/test/Lupus and other Connective Tissue diseases/erythromelalgia-1.jpg
+/test/Scabies Lyme Disease and other Infestations and Bites/cutaneous-Larva-Migrans-45.jpg

@@ -1,0 +1,222 @@
+/test/Solar or actinic keratosis/ISIC_0066368.jpg
+/test/Solar or actinic keratosis/ISIC_0058379.jpg
+/test/Solar or actinic keratosis/ISIC_0056613.jpg
+/test/Solar or actinic keratosis/ISIC_0068370.jpg
+/test/Solar or actinic keratosis/ISIC_0064244.jpg
+/test/Solar or actinic keratosis/ISIC_0073096.jpg
+/test/Solar or actinic keratosis/ISIC_0067100.jpg
+/test/Solar or actinic keratosis/ISIC_0056073.jpg
+/test/Solar or actinic keratosis/ISIC_0072261.jpg
+/test/Solar or actinic keratosis/ISIC_0067570.jpg
+/test/Solar or actinic keratosis/ISIC_0056421.jpg
+/test/Solar or actinic keratosis/ISIC_0056101.jpg
+/test/Solar or actinic keratosis/ISIC_0071671.jpg
+/test/Solar or actinic keratosis/ISIC_0069518.jpg
+/test/Solar or actinic keratosis/ISIC_0070650.jpg
+/test/Solar or actinic keratosis/ISIC_0056830.jpg
+/test/Solar or actinic keratosis/ISIC_0067450.jpg
+/test/Solar or actinic keratosis/ISIC_0055475.jpg
+/test/Solar or actinic keratosis/ISIC_0053515.jpg
+/test/Solar or actinic keratosis/ISIC_0063246.jpg
+/test/Solar or actinic keratosis/ISIC_0056520.jpg
+/test/Solar or actinic keratosis/ISIC_0072646.jpg
+/test/Solar or actinic keratosis/ISIC_0064583.jpg
+/test/Solar or actinic keratosis/ISIC_0064262.jpg
+/test/Solar or actinic keratosis/ISIC_0068995.jpg
+/test/Solar or actinic keratosis/ISIC_0064969.jpg
+/test/Solar or actinic keratosis/ISIC_0056176.jpg
+/test/Solar or actinic keratosis/ISIC_0055844.jpg
+/test/Solar or actinic keratosis/ISIC_0064063.jpg
+/test/Solar or actinic keratosis/ISIC_0059014.jpg
+/test/Solar or actinic keratosis/ISIC_0056948.jpg
+/test/Solar or actinic keratosis/ISIC_0066133.jpg
+/test/Solar or actinic keratosis/ISIC_0065304.jpg
+/test/Solar or actinic keratosis/ISIC_0071065.jpg
+/test/Solar or actinic keratosis/ISIC_0058459.jpg
+/test/Solar or actinic keratosis/ISIC_0066861.jpg
+/test/Solar or actinic keratosis/ISIC_0055784.jpg
+/test/Solar or actinic keratosis/ISIC_0060706.jpg
+/test/Solar or actinic keratosis/ISIC_0061947.jpg
+/test/Solar or actinic keratosis/ISIC_0054178.jpg
+/test/Solar or actinic keratosis/ISIC_0054805.jpg
+/test/Solar or actinic keratosis/ISIC_0055761.jpg
+/test/Solar or actinic keratosis/ISIC_0061294.jpg
+/test/Solar or actinic keratosis/ISIC_0054359.jpg
+/test/Solar or actinic keratosis/ISIC_0065495.jpg
+/test/Solar or actinic keratosis/ISIC_0057943.jpg
+/test/Solar or actinic keratosis/ISIC_0064638.jpg
+/test/Solar or actinic keratosis/ISIC_0071946.jpg
+/test/Solar or actinic keratosis/ISIC_0071760.jpg
+/test/Solar or actinic keratosis/ISIC_0061298.jpg
+/test/Solar or actinic keratosis/ISIC_0067304.jpg
+/test/Solar or actinic keratosis/ISIC_0063573.jpg
+/test/Solar or actinic keratosis/ISIC_0065758.jpg
+/test/Solar or actinic keratosis/ISIC_0058443.jpg
+/test/Solar or actinic keratosis/ISIC_0063380.jpg
+/test/Solar or actinic keratosis/ISIC_0057618.jpg
+/test/Solar or actinic keratosis/ISIC_0070397.jpg
+/test/Solar or actinic keratosis/ISIC_0058890.jpg
+/test/Solar or actinic keratosis/ISIC_0057995.jpg
+/test/Solar or actinic keratosis/ISIC_0059852.jpg
+/test/Solar or actinic keratosis/ISIC_0062646.jpg
+/test/Solar or actinic keratosis/ISIC_0054634.jpg
+/test/Solar or actinic keratosis/ISIC_0053613.jpg
+/test/Solar or actinic keratosis/ISIC_0053478.jpg
+/test/Solar or actinic keratosis/ISIC_0071313.jpg
+/test/Solar or actinic keratosis/ISIC_0071605.jpg
+/test/Solar or actinic keratosis/ISIC_0060485.jpg
+/test/Solar or actinic keratosis/ISIC_0063883.jpg
+/test/Solar or actinic keratosis/ISIC_0058653.jpg
+/test/Solar or actinic keratosis/ISIC_0072823.jpg
+/test/Solar or actinic keratosis/ISIC_0066374.jpg
+/test/Solar or actinic keratosis/ISIC_0063504.jpg
+/test/Solar or actinic keratosis/ISIC_0067266.jpg
+/test/Scar/ISIC_0071839.jpg
+/test/Scar/ISIC_0068873.jpg
+/test/Scar/ISIC_0070388.jpg
+/test/Scar/ISIC_0063657.jpg
+/test/Scar/ISIC_0055644.jpg
+/test/Scar/ISIC_0065423.jpg
+/test/Scar/ISIC_0058953.jpg
+/test/Scar/ISIC_0066343.jpg
+/test/Scar/ISIC_0060363.jpg
+/test/Scar/ISIC_0056944.jpg
+/test/Scar/ISIC_0065609.jpg
+/test/Scar/ISIC_0056300.jpg
+/test/Scar/ISIC_0068937.jpg
+/test/Scar/ISIC_0070908.jpg
+/test/Scar/ISIC_0056161.jpg
+/test/Scar/ISIC_0054786.jpg
+/test/Scar/ISIC_0054636.jpg
+/test/Scar/ISIC_0060554.jpg
+/test/Scar/ISIC_0070099.jpg
+/test/Scar/ISIC_0066291.jpg
+/test/Scar/ISIC_0062871.jpg
+/test/Scar/ISIC_0058455.jpg
+/test/Scar/ISIC_0071363.jpg
+/test/Scar/ISIC_0062883.jpg
+/test/Scar/ISIC_0068605.jpg
+/test/Scar/ISIC_0057376.jpg
+/test/Scar/ISIC_0059586.jpg
+/test/Scar/ISIC_0060563.jpg
+/test/Scar/ISIC_0057452.jpg
+/test/Scar/ISIC_0062619.jpg
+/test/Scar/ISIC_0056091.jpg
+/test/Scar/ISIC_0072541.jpg
+/test/Scar/ISIC_0056760.jpg
+/test/Scar/ISIC_0067865.jpg
+/test/Scar/ISIC_0058844.jpg
+/test/Scar/ISIC_0059282.jpg
+/test/Scar/ISIC_0058287.jpg
+/test/Scar/ISIC_0067018.jpg
+/test/Scar/ISIC_0060759.jpg
+/test/Scar/ISIC_0063339.jpg
+/test/Scar/ISIC_0066752.jpg
+/test/Scar/ISIC_0054152.jpg
+/test/Scar/ISIC_0067413.jpg
+/test/Scar/ISIC_0054195.jpg
+/test/Scar/ISIC_0058002.jpg
+/test/Scar/ISIC_0063772.jpg
+/test/Scar/ISIC_0066402.jpg
+/test/Scar/ISIC_0056375.jpg
+/test/Scar/ISIC_0068704.jpg
+/test/Scar/ISIC_0066353.jpg
+/test/Scar/ISIC_0065454.jpg
+/test/Scar/ISIC_0065652.jpg
+/test/Scar/ISIC_0062277.jpg
+/test/Scar/ISIC_0061576.jpg
+/test/Scar/ISIC_0062376.jpg
+/test/Scar/ISIC_0059249.jpg
+/test/Scar/ISIC_0063531.jpg
+/test/Scar/ISIC_0054124.jpg
+/test/Scar/ISIC_0059734.jpg
+/test/Scar/ISIC_0064429.jpg
+/test/Scar/ISIC_0062069.jpg
+/test/Scar/ISIC_0070919.jpg
+/test/Solar lentigo/ISIC_0062968.jpg
+/test/Solar lentigo/ISIC_0054907.jpg
+/test/Solar lentigo/ISIC_0059191.jpg
+/test/Solar lentigo/ISIC_0071317.jpg
+/test/Solar lentigo/ISIC_0065909.jpg
+/test/Solar lentigo/ISIC_0068733.jpg
+/test/Solar lentigo/ISIC_0072752.jpg
+/test/Solar lentigo/ISIC_0058821.jpg
+/test/Solar lentigo/ISIC_0054300.jpg
+/test/Solar lentigo/ISIC_0067065.jpg
+/test/Solar lentigo/ISIC_0063542.jpg
+/test/Solar lentigo/ISIC_0060879.jpg
+/test/Solar lentigo/ISIC_0059168.jpg
+/test/Solar lentigo/ISIC_0064564.jpg
+/test/Solar lentigo/ISIC_0068216.jpg
+/test/Solar lentigo/ISIC_0060579.jpg
+/test/Solar lentigo/ISIC_0070187.jpg
+/test/Solar lentigo/ISIC_0063358.jpg
+/test/Solar lentigo/ISIC_0069790.jpg
+/test/Solar lentigo/ISIC_0069333.jpg
+/test/Solar lentigo/ISIC_0067501.jpg
+/test/Solar lentigo/ISIC_0060933.jpg
+/test/Solar lentigo/ISIC_0062421.jpg
+/test/Solar lentigo/ISIC_0063635.jpg
+/test/Solar lentigo/ISIC_0071684.jpg
+/test/Solar lentigo/ISIC_0065991.jpg
+/test/Solar lentigo/ISIC_0071329.jpg
+/test/Solar lentigo/ISIC_0053484.jpg
+/test/Solar lentigo/ISIC_0062411.jpg
+/test/Solar lentigo/ISIC_0054895.jpg
+/test/Solar lentigo/ISIC_0066089.jpg
+/test/Solar lentigo/ISIC_0069406.jpg
+/test/Solar lentigo/ISIC_0066731.jpg
+/test/Solar lentigo/ISIC_0060600.jpg
+/test/Solar lentigo/ISIC_0063783.jpg
+/test/Solar lentigo/ISIC_0065744.jpg
+/test/Solar lentigo/ISIC_0059678.jpg
+/test/Solar lentigo/ISIC_0061235.jpg
+/test/Solar lentigo/ISIC_0072098.jpg
+/test/Solar lentigo/ISIC_0060833.jpg
+/test/Solar lentigo/ISIC_0055063.jpg
+/test/Solar lentigo/ISIC_0067557.jpg
+/test/Solar lentigo/ISIC_0064264.jpg
+/test/Solar lentigo/ISIC_0056576.jpg
+/test/Solar lentigo/ISIC_0054042.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0067075.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0055712.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0061937.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0053457.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0068938.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0065692.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0068729.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0054265.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0067663.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0068266.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0072795.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0053593.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0063851.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0058543.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0067260.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0058305.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0060302.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0066908.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0054660.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0061817.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0068572.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0072933.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0065472.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0056629.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0064338.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0062156.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0066840.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0060280.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0072599.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0067481.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0057590.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0066856.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0056886.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0053943.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0058370.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0072628.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0061830.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0060580.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0055700.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0068779.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0066491.jpg
+/test/Squamous cell carcinoma NOS/ISIC_0064543.jpg

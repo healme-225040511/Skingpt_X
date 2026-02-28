@@ -1,0 +1,223 @@
+/test/Melanoma NOS/ISIC_0068051.jpg
+/test/Basal cell carcinoma/ISIC_0061178.jpg
+/test/Basal cell carcinoma/ISIC_0069477.jpg
+/test/Basal cell carcinoma/ISIC_0072406.jpg
+/test/Basal cell carcinoma/ISIC_0062188.jpg
+/test/Basal cell carcinoma/ISIC_0058806.jpg
+/test/Basal cell carcinoma/ISIC_0067894.jpg
+/test/Basal cell carcinoma/ISIC_0068523.jpg
+/test/Basal cell carcinoma/ISIC_0064885.jpg
+/test/Basal cell carcinoma/ISIC_0056024.jpg
+/test/Basal cell carcinoma/ISIC_0068363.jpg
+/test/Basal cell carcinoma/ISIC_0055957.jpg
+/test/Basal cell carcinoma/ISIC_0063452.jpg
+/test/Basal cell carcinoma/ISIC_0059105.jpg
+/test/Basal cell carcinoma/ISIC_0067720.jpg
+/test/Basal cell carcinoma/ISIC_0064354.jpg
+/test/Basal cell carcinoma/ISIC_0067157.jpg
+/test/Basal cell carcinoma/ISIC_0067674.jpg
+/test/Basal cell carcinoma/ISIC_0065044.jpg
+/test/Basal cell carcinoma/ISIC_0061683.jpg
+/test/Basal cell carcinoma/ISIC_0062356.jpg
+/test/Basal cell carcinoma/ISIC_0068112.jpg
+/test/Basal cell carcinoma/ISIC_0060139.jpg
+/test/Basal cell carcinoma/ISIC_0056631.jpg
+/test/Basal cell carcinoma/ISIC_0054595.jpg
+/test/Basal cell carcinoma/ISIC_0072134.jpg
+/test/Basal cell carcinoma/ISIC_0066431.jpg
+/test/Basal cell carcinoma/ISIC_0067354.jpg
+/test/Basal cell carcinoma/ISIC_0064685.jpg
+/test/Basal cell carcinoma/ISIC_0065972.jpg
+/test/Basal cell carcinoma/ISIC_0056843.jpg
+/test/Basal cell carcinoma/ISIC_0063274.jpg
+/test/Basal cell carcinoma/ISIC_0054435.jpg
+/test/Basal cell carcinoma/ISIC_0070461.jpg
+/test/Basal cell carcinoma/ISIC_0054662.jpg
+/test/Basal cell carcinoma/ISIC_0061471.jpg
+/test/Basal cell carcinoma/ISIC_0057073.jpg
+/test/Basal cell carcinoma/ISIC_0071136.jpg
+/test/Basal cell carcinoma/ISIC_0064210.jpg
+/test/Basal cell carcinoma/ISIC_0067154.jpg
+/test/Basal cell carcinoma/ISIC_0072211.jpg
+/test/Basal cell carcinoma/ISIC_0069513.jpg
+/test/Basal cell carcinoma/ISIC_0065849.jpg
+/test/Basal cell carcinoma/ISIC_0069235.jpg
+/test/Basal cell carcinoma/ISIC_0071979.jpg
+/test/Basal cell carcinoma/ISIC_0053757.jpg
+/test/Basal cell carcinoma/ISIC_0072434.jpg
+/test/Basal cell carcinoma/ISIC_0070608.jpg
+/test/Basal cell carcinoma/ISIC_0072511.jpg
+/test/Basal cell carcinoma/ISIC_0068138.jpg
+/test/Basal cell carcinoma/ISIC_0063111.jpg
+/test/Basal cell carcinoma/ISIC_0073128.jpg
+/test/Basal cell carcinoma/ISIC_0060823.jpg
+/test/Basal cell carcinoma/ISIC_0057104.jpg
+/test/Basal cell carcinoma/ISIC_0069886.jpg
+/test/Basal cell carcinoma/ISIC_0071742.jpg
+/test/Basal cell carcinoma/ISIC_0054232.jpg
+/test/Basal cell carcinoma/ISIC_0059562.jpg
+/test/Basal cell carcinoma/ISIC_0072470.jpg
+/test/Basal cell carcinoma/ISIC_0066717.jpg
+/test/Basal cell carcinoma/ISIC_0061824.jpg
+/test/Basal cell carcinoma/ISIC_0070896.jpg
+/test/Basal cell carcinoma/ISIC_0062475.jpg
+/test/Basal cell carcinoma/ISIC_0072973.jpg
+/test/Basal cell carcinoma/ISIC_0070101.jpg
+/test/Basal cell carcinoma/ISIC_0066997.jpg
+/test/Basal cell carcinoma/ISIC_0057853.jpg
+/test/Basal cell carcinoma/ISIC_0064605.jpg
+/test/Basal cell carcinoma/ISIC_0071291.jpg
+/test/Basal cell carcinoma/ISIC_0058309.jpg
+/test/Basal cell carcinoma/ISIC_0064271.jpg
+/test/Basal cell carcinoma/ISIC_0063090.jpg
+/test/Basal cell carcinoma/ISIC_0064131.jpg
+/test/Basal cell carcinoma/ISIC_0053714.jpg
+/test/Basal cell carcinoma/ISIC_0066804.jpg
+/test/Basal cell carcinoma/ISIC_0055718.jpg
+/test/Basal cell carcinoma/ISIC_0063044.jpg
+/test/Basal cell carcinoma/ISIC_0069966.jpg
+/test/Basal cell carcinoma/ISIC_0062172.jpg
+/test/Basal cell carcinoma/ISIC_0057799.jpg
+/test/Basal cell carcinoma/ISIC_0060917.jpg
+/test/Basal cell carcinoma/ISIC_0061631.jpg
+/test/Basal cell carcinoma/ISIC_0054405.jpg
+/test/Basal cell carcinoma/ISIC_0055993.jpg
+/test/Basal cell carcinoma/ISIC_0071170.jpg
+/test/Basal cell carcinoma/ISIC_0054771.jpg
+/test/Basal cell carcinoma/ISIC_0061740.jpg
+/test/Basal cell carcinoma/ISIC_0070150.jpg
+/test/Basal cell carcinoma/ISIC_0070386.jpg
+/test/Basal cell carcinoma/ISIC_0072342.jpg
+/test/Basal cell carcinoma/ISIC_0069407.jpg
+/test/Basal cell carcinoma/ISIC_0059121.jpg
+/test/Basal cell carcinoma/ISIC_0057439.jpg
+/test/Basal cell carcinoma/ISIC_0066654.jpg
+/test/Basal cell carcinoma/ISIC_0060425.jpg
+/test/Basal cell carcinoma/ISIC_0068355.jpg
+/test/Basal cell carcinoma/ISIC_0068642.jpg
+/test/Basal cell carcinoma/ISIC_0061867.jpg
+/test/Basal cell carcinoma/ISIC_0060400.jpg
+/test/Basal cell carcinoma/ISIC_0058567.jpg
+/test/Basal cell carcinoma/ISIC_0063066.jpg
+/test/Basal cell carcinoma/ISIC_0055766.jpg
+/test/Basal cell carcinoma/ISIC_0059157.jpg
+/test/Basal cell carcinoma/ISIC_0056840.jpg
+/test/Basal cell carcinoma/ISIC_0065846.jpg
+/test/Basal cell carcinoma/ISIC_0065205.jpg
+/test/Basal cell carcinoma/ISIC_0063806.jpg
+/test/Basal cell carcinoma/ISIC_0062984.jpg
+/test/Basal cell carcinoma/ISIC_0072548.jpg
+/test/Basal cell carcinoma/ISIC_0067746.jpg
+/test/Basal cell carcinoma/ISIC_0066881.jpg
+/test/Basal cell carcinoma/ISIC_0059755.jpg
+/test/Basal cell carcinoma/ISIC_0071385.jpg
+/test/Basal cell carcinoma/ISIC_0068898.jpg
+/test/Basal cell carcinoma/ISIC_0072735.jpg
+/test/Basal cell carcinoma/ISIC_0059650.jpg
+/test/Basal cell carcinoma/ISIC_0067409.jpg
+/test/Basal cell carcinoma/ISIC_0055325.jpg
+/test/Basal cell carcinoma/ISIC_0056365.jpg
+/test/Basal cell carcinoma/ISIC_0067148.jpg
+/test/Basal cell carcinoma/ISIC_0057117.jpg
+/test/Basal cell carcinoma/ISIC_0068980.jpg
+/test/Basal cell carcinoma/ISIC_0067706.jpg
+/test/Basal cell carcinoma/ISIC_0057220.jpg
+/test/Basal cell carcinoma/ISIC_0058304.jpg
+/test/Basal cell carcinoma/ISIC_0056503.jpg
+/test/Basal cell carcinoma/ISIC_0057384.jpg
+/test/Basal cell carcinoma/ISIC_0073200.jpg
+/test/Basal cell carcinoma/ISIC_0059374.jpg
+/test/Basal cell carcinoma/ISIC_0067595.jpg
+/test/Basal cell carcinoma/ISIC_0054929.jpg
+/test/Basal cell carcinoma/ISIC_0067182.jpg
+/test/Basal cell carcinoma/ISIC_0060120.jpg
+/test/Basal cell carcinoma/ISIC_0059690.jpg
+/test/Melanoma NOS/ISIC_0072619.jpg
+/test/Melanoma NOS/ISIC_0062359.jpg
+/test/Melanoma NOS/ISIC_0068576.jpg
+/test/Melanoma NOS/ISIC_0060367.jpg
+/test/Melanoma NOS/ISIC_0066069.jpg
+/test/Melanoma NOS/ISIC_0055999.jpg
+/test/Melanoma NOS/ISIC_0054020.jpg
+/test/Melanoma NOS/ISIC_0060658.jpg
+/test/Melanoma NOS/ISIC_0072369.jpg
+/test/Melanoma NOS/ISIC_0070380.jpg
+/test/Melanoma NOS/ISIC_0062000.jpg
+/test/Melanoma NOS/ISIC_0070731.jpg
+/test/Melanoma NOS/ISIC_0064056.jpg
+/test/Melanoma NOS/ISIC_0054894.jpg
+/test/Melanoma NOS/ISIC_0070342.jpg
+/test/Melanoma NOS/ISIC_0057980.jpg
+/test/Melanoma NOS/ISIC_0064161.jpg
+/test/Melanoma NOS/ISIC_0072923.jpg
+/test/Melanoma NOS/ISIC_0067953.jpg
+/test/Melanoma NOS/ISIC_0059294.jpg
+/test/Melanoma NOS/ISIC_0071612.jpg
+/test/Melanoma NOS/ISIC_0069851.jpg
+/test/Melanoma NOS/ISIC_0063148.jpg
+/test/Melanoma NOS/ISIC_0069622.jpg
+/test/Melanoma NOS/ISIC_0071717.jpg
+/test/Melanoma NOS/ISIC_0067202.jpg
+/test/Melanoma NOS/ISIC_0064764.jpg
+/test/Melanoma NOS/ISIC_0067666.jpg
+/test/Melanoma NOS/ISIC_0068145.jpg
+/test/Melanoma NOS/ISIC_0059129.jpg
+/test/Melanoma NOS/ISIC_0059532.jpg
+/test/Melanoma NOS/ISIC_0066869.jpg
+/test/Melanoma NOS/ISIC_0060672.jpg
+/test/Melanoma NOS/ISIC_0058496.jpg
+/test/Melanoma NOS/ISIC_0071443.jpg
+/test/Melanoma NOS/ISIC_0069140.jpg
+/test/Melanoma NOS/ISIC_0070387.jpg
+/test/Melanoma NOS/ISIC_0068895.jpg
+/test/Melanoma NOS/ISIC_0063414.jpg
+/test/Melanoma NOS/ISIC_0061756.jpg
+/test/Melanoma NOS/ISIC_0061424.jpg
+/test/Melanoma NOS/ISIC_0056871.jpg
+/test/Melanoma NOS/ISIC_0055236.jpg
+/test/Melanoma NOS/ISIC_0068310.jpg
+/test/Melanoma NOS/ISIC_0061333.jpg
+/test/Melanoma NOS/ISIC_0065825.jpg
+/test/Melanoma NOS/ISIC_0057450.jpg
+/test/Melanoma NOS/ISIC_0056551.jpg
+/test/Melanoma NOS/ISIC_0067722.jpg
+/test/Melanoma NOS/ISIC_0055701.jpg
+/test/Melanoma NOS/ISIC_0056433.jpg
+/test/Melanoma NOS/ISIC_0063528.jpg
+/test/Melanoma NOS/ISIC_0054802.jpg
+/test/Melanoma NOS/ISIC_0061670.jpg
+/test/Melanoma NOS/ISIC_0066505.jpg
+/test/Melanoma NOS/ISIC_0066338.jpg
+/test/Melanoma NOS/ISIC_0070214.jpg
+/test/Melanoma NOS/ISIC_0055595.jpg
+/test/Melanoma NOS/ISIC_0072122.jpg
+/test/Melanoma NOS/ISIC_0059219.jpg
+/test/Melanoma NOS/ISIC_0060629.jpg
+/test/Melanoma NOS/ISIC_0059026.jpg
+/test/Melanoma NOS/ISIC_0061257.jpg
+/test/Melanoma NOS/ISIC_0057661.jpg
+/test/Melanoma NOS/ISIC_0066185.jpg
+/test/Melanoma NOS/ISIC_0066526.jpg
+/test/Melanoma NOS/ISIC_0053520.jpg
+/test/Melanoma NOS/ISIC_0063457.jpg
+/test/Melanoma NOS/ISIC_0059981.jpg
+/test/Melanoma NOS/ISIC_0063056.jpg
+/test/Melanoma NOS/ISIC_0068137.jpg
+/test/Melanoma NOS/ISIC_0059188.jpg
+/test/Melanoma NOS/ISIC_0060148.jpg
+/test/Melanoma NOS/ISIC_0069065.jpg
+/test/Melanoma NOS/ISIC_0071541.jpg
+/test/Melanoma NOS/ISIC_0069583.jpg
+/test/Melanoma NOS/ISIC_0069248.jpg
+/test/Melanoma NOS/ISIC_0070846.jpg
+/test/Melanoma NOS/ISIC_0066225.jpg
+/test/Melanoma NOS/ISIC_0056319.jpg
+/test/Melanoma NOS/ISIC_0059855.jpg
+/test/Melanoma NOS/ISIC_0060508.jpg
+/test/Melanoma NOS/ISIC_0054254.jpg
+/test/Melanoma NOS/ISIC_0061323.jpg
+/test/Melanoma NOS/ISIC_0072353.jpg
+/test/Melanoma NOS/ISIC_0056481.jpg
+/test/Melanoma NOS/ISIC_0063636.jpg
+/test/Melanoma NOS/ISIC_0072136.jpg
+/test/Melanoma NOS/ISIC_0061911.jpg

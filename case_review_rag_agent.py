@@ -1,33 +1,33 @@
-
-
 import os
 import json
 import re
 import uuid
 import numpy as np
-import pandas as pd
 from pathlib import Path
 from typing import Dict, List, Any
 from neo4j import GraphDatabase
 from sklearn.metrics.pairwise import cosine_similarity
-from thefuzz import fuzz # 确保安装了 thefuzz
+from thefuzz import fuzz
+from collections import defaultdict
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 # LlamaIndex 相关
 from llama_index.core import Settings, QueryBundle
 from llama_index.vector_stores.lancedb import LanceDBVectorStore
 from llama_index.core.indices import VectorStoreIndex
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-
+from Constants import RDD_DISEASE_NAME, DDI_DISEASE_NAME
 # 工具函数
 from local_llm_utils import local_generate_response as generate_response
-from local_llm_utils import local_generate_deepseek_chat_response as generate_response_chat # 假设演化用chat接口效果更好
+from local_llm_utils import local_generate_deepseek_chat_response as generate_response_chat
 from utils import process_markdown
 
 class CaseReviewAgent:
     def __init__(self, 
                  model: str, 
                  neo4j_uri: str, neo4j_user: str, neo4j_password: str,
-                 lancedb_uri: str,markdown_path: str,
+                 lancedb_uri: str, markdown_path: str,
                  train_feat_path: str, train_json_path: str,
                  test_feat_path: str=None, test_json_path: str=None,
                  evolution_threshold: int = 5):
@@ -49,168 +49,14 @@ class CaseReviewAgent:
 
         self.evolution_threshold = evolution_threshold
 
-    # ================= 1. 节点存入与演化逻辑 (新) =================
+    # ================= 辅助函数 =================
 
-    def save_case_and_evolve(self, image_path: str, case_data: Dict, true_label: str = None):
-        """
-        保存病例到 Neo4j，建立与 Prototype 的关联，并检查是否触发知识演化。
-        """
-        filename = Path(image_path).name
-        feat = self._get_feat_by_path(image_path)
-        fv = feat.tolist() if feat is not None else []
-        
-        uid = str(uuid.uuid4())
-        # 如果没有 true_label，说明是预测阶段，用预测的 label
-        target_label = true_label if true_label else case_data.get("PrimaryDiagnosis")
-        
-        # 判定是否正确 (逻辑同第一个代码片段)
-        is_correct = False
-        if true_label and case_data.get("PrimaryDiagnosis"):
-            is_correct = (fuzz.token_set_ratio(case_data.get("PrimaryDiagnosis").lower(), true_label.lower()) >= 85)
-
-        def _save_tx(tx):
-            # MERGE Prototype 并 CREATE Case
-            tx.run("""
-                MERGE (p:Prototype {disease: $td})
-                ON CREATE SET p.summary = 'Initial entry. Awaiting evolution.', p.updated_at = timestamp()
-                CREATE (c:Case {
-                    case_id: $uid,
-                    primary_diagnosis: $pd,
-                    true_label: $td,
-                    is_correct: $is_correct,
-                    key_findings: $kf,
-                    feature_vector: $fv,
-                    created_at: timestamp()
-                })
-                MERGE (c)-[:BELONGS_TO]->(p)
-            """, uid=uid, pd=case_data.get("PrimaryDiagnosis"), td=target_label, 
-                is_correct=is_correct, kf=case_data.get("KeyFindings"), fv=fv)
-
-        with self.driver.session() as session:
-            session.execute_write(_save_tx)
-            
-            # 检查是否触发演化 (仅针对正确的病例累计)
-            if target_label:
-                res = session.run("MATCH (c:Case {true_label: $name, is_correct: true}) RETURN count(c) as cnt", name=target_label).single()
-                if res and res["cnt"] >= self.evolution_threshold and res["cnt"] % self.evolution_threshold == 0:
-                    print(f"--- Triggering Evolution for {target_label} ---")
-                    self.distill_prototypes(target_label)
-
-    def distill_prototypes(self, disease_name: str):
-        """
-        知识蒸馏：从正确病例中总结出“动态原型” (Evolved Prototype)
-        """
-        with self.driver.session() as session:
-            # 获取历史病例
-            case_records = session.run("""
-                MATCH (c:Case {true_label: $name, is_correct: true})
-                RETURN c.key_findings as kf LIMIT 10
-            """, name=disease_name)
-            golden_cases = [r["kf"] for r in case_records]
-            
-            # 获取现有的 summary
-            old_res = session.run("MATCH (p:Prototype {disease: $name}) RETURN p.summary as s", name=disease_name).single()
-            old_summary = old_res["s"] if old_res else ""
-
-        if len(golden_cases) < 3: return
-
-        prompt = f"Update the diagnostic summary for {disease_name}.\nOld Standard: {old_summary}\nNew Cases: {golden_cases}\nOutput JSON: {{'summary': '...'}}"
-        
-        response = generate_response_chat(engine=self.model, system_role="Expert Dermatologist", user_input=prompt)
-        new_summary = response.get("summary") if isinstance(response, dict) else str(response)
-
-        with self.driver.session() as session:
-            session.run("MATCH (p:Prototype {disease: $name}) SET p.summary = $s, p.updated_at = timestamp()", name=disease_name, s=new_summary)
-
-    # ================= 2. 修改后的 Review 逻辑 (关联 Prototype) =================
-
-    def review_case(self, 
-                    vision_key_findings: str, 
-                    panderm_top5: List[Dict[str, Any]], 
-                    image_path: str) -> Dict:
-        """
-        综合诊断审查
-        """
-        # 1. 提取 Panderm Top-1 疾病名
-        top1_disease = panderm_top5[0]['disease'] if panderm_top5 else "N/A"
-
-        # 2. 检索历史相似病例
-        current_feat = self._get_feat_by_path(image_path)
-        hybrid_cases = self._find_hybrid_historical_cases(current_feat, vision_key_findings)
-
-        # 3. 检索静态知识 (Handbook)
-        expert_knowledge_context = ""
-        for item in panderm_top5[:5]: # 取前5个
-            knowledge = self._retrieve_static_knowledge(item['disease'])
-            expert_knowledge_context += f"\n[Handbook: {item['disease']}]\n{knowledge}\n"
-
-        # 4. 【核心新增】从 Neo4j 检索 Top-1 疾病对应的 Evolved Prototype
-        evolved_prototype = "No evolved knowledge yet."
-        with self.driver.session() as session:
-            res = session.run("MATCH (p:Prototype {disease: $name}) RETURN p.summary as s", name=top1_disease).single()
-            if res and res["s"]:
-                evolved_prototype = res["s"]
-
-        # 5. 构建增强版 Prompt
-        prompt = self._build_comprehensive_prompt(
-            vision_findings=vision_key_findings,
-            top5=panderm_top5,
-            similar_cases=hybrid_cases,
-            expert_knowledge=expert_knowledge_context,
-            evolved_prototype=evolved_prototype, # 传入动态原型
-            top1_name=top1_disease
-        )
-
-        response_raw = generate_response(
-            engine=self.model,
-            temperature=0.1,
-            max_tokens=4096,
-            system_role="Senior Clinical Dermatologist & Auditor",
-            user_input=prompt
-        )
-        
-        parsed_res = self._parse_json_response(response_raw)
-        return parsed_res, prompt
-
-    # ================= 3. Prompt 构建优化 =================
-
-    def _build_comprehensive_prompt(self, vision_findings, top5, similar_cases, expert_knowledge, evolved_prototype, top1_name):
-        # 整理参考案例
-        history_str = ""
-        for c in similar_cases:
-            history_str += f"- Past Case: {c['diagnosis']} | Score: {c['score']:.2f}\n  Findings: {c['findings']}\n"
-
-        top5_str = "\n".join([f"- {i['disease']}: {i['probability']:.2%}" for i in top5])
-
-        return f"""
-        [Clinical Task]: Final Diagnosis Review.
-
-        [1. Current Visual Findings (from Vision Agent)]:
-        {vision_findings}
-
-        [2. Model Prediction Probability (Panderm)]:
-        {top5_str}
-
-        [3. Precedent Cases (Physical & Semantic Retrieval)]:
-        {history_str if history_str else "No direct precedents found."}
-
-        [4. Medical Standard (Static Handbook Knowledge)]:
-        {expert_knowledge}
-
-        [Instructions]:
-        - Evaluate Evidence 1 & 4 for 'Structural Consistency'.
-        - Check Evidence 3: Does this patient's presentation match the descriptors of past confirmed cases? 
-        - Reconcile Evidence 2: Does the model's confidence align with the visual facts? 
-        
-        [Output Format (JSON)]:
-        {{
-            "KeyFindings": "Final clinical descriptor summary.",
-            "PrimaryDiagnosis": "The finalized name.",
-            "Evidence": "Detailed derivation logic citing visual cues and historical matches."
-        }}
-        """
-
-    # --- 以下辅助函数基本保持不变 ---
+    def _extract_sub_label(self, path: str) -> str:
+        """从文件名提取子类标签 (例如: acne-cystic-10.jpg -> acne cystic)"""
+        filename = Path(path).stem
+        name = filename.replace('-', ' ')
+        name = re.sub(r'\d+', '', name)
+        return " ".join(name.split()).strip()
 
     def _load_reference_features(self, feat_path, json_path, split_name="Train"):
         if not feat_path or not os.path.exists(feat_path): return
@@ -221,15 +67,506 @@ class CaseReviewAgent:
         print(f"✅ Loaded {len(files)} {split_name} features.")
 
     def _get_feat_by_path(self, path):
-        # 兼容处理：有些路径可能是全路径，有些是文件名
         if path in self.all_files_to_feats_map:
             return self.all_files_to_feats_map[path]
-        fname = Path(path).name
-        return self.all_files_to_feats_map.get(fname)
+        return self.all_files_to_feats_map.get(path)
+
+    
+    # ================= 2. 主审查逻辑 =================
+    def review_sub_class(self, 
+                        vision_key_findings: str, 
+                        main_top5: List[Dict[str, Any]],  
+                        sub_top5: List[Dict[str, Any]],   
+                        image_path: str) -> Dict:
+        # 新增：参数校验
+        if not main_top5:
+            return {"error": "main_top5 cannot be empty"}, ""
+        if not sub_top5:
+            return {"error": "sub_top5 cannot be empty"}, ""
+
+        # 1. 检索历史病例（含子类标签）
+        current_feat = self._get_feat_by_path(image_path)
+        print(f"Current feature shape: {current_feat.shape if current_feat is not None else 'N/A'}")
+        historical_cases = self._find_sub_historical_cases(current_feat, sub_top5)
+
+        # 2. 检索大类知识（静态手册 + 动态原型）
+        top1_main = main_top5[0]['disease']
+        static_knowledge = self._retrieve_static_knowledge(top1_main)
+        evolved_prototype = "No evolved knowledge yet."
+        with self.driver.session() as session:
+            res = session.run("MATCH (p:Prototype {disease: $name}) RETURN p.summary as s", name=top1_main).single()
+            if res and res["s"]:
+                evolved_prototype = res["s"]
+
+        # 3. 调用独立的子类Prompt构建函数
+        prompt = self._build_subclass_prompt(
+            vision_findings=vision_key_findings,
+            main_top5=main_top5,
+            sub_top5=sub_top5,
+            historical_cases=historical_cases,
+            static_knowledge=static_knowledge
+        )
+        print("=== Sub-class Prompt ===")
+        print(prompt)
+        print(image_path)
+        # 4. 调用LLM生成子类诊断结果（新增异常捕获）
+        try:
+            response_raw = generate_response(
+                engine=self.model,
+                temperature=0.1,
+                max_tokens=4096,
+                system_role="Dermatology Sub-category Specialist",
+                user_input=prompt
+            )
+            parsed_res = self._parse_json_response(response_raw)
+            # 新增：校验输出格式
+            required_keys = ["PrimaryDiagnosis", "SubDiagnosis", "Reasoning"]
+            if not all(key in parsed_res for key in required_keys):
+                parsed_res["error"] = "Missing required keys in response"
+            return parsed_res, prompt
+        except Exception as e:
+            return {"error": f"LLM inference failed: {str(e)}"}, prompt
+    def _find_historical_cases_in(self, current_feat, top_predictions, total_k=6):
+        """
+        修改后的检索逻辑：
+        1. 按照 Top 3 的 sub_label 从数据库中粗筛候选集。
+        2. 计算所有候选病例与当前特征的相似度。
+        3. 统一排序，选出相似度最高的 Top 6 个病例。
+        
+        :param current_feat: 当前图像的特征向量
+        :param top_predictions: AI预测的子分类列表 (sorted by prob)
+        :param total_k: 最终选取的总病例数 (默认 6)
+        """
+        if current_feat is None or not top_predictions:
+            return []
+
+        # 1. 提取预测概率最高的 Top 3 子分类名称
+        target_sub_classes = [p['disease'] for p in top_predictions[:3]]
+        query_feat = np.array(current_feat).reshape(1, -1)
+        
+        # 存放所有候选病例的相似度计算结果
+        all_candidates = []
+
+        with self.driver.session() as session:
+            # 2. 粗筛：拉取属于这 3 个子分类的所有病例
+            cypher = """
+            MATCH (c:Case) 
+            WHERE c.true_label IN $classes AND c.feature_vector IS NOT NULL 
+            RETURN c
+            """
+            records = list(session.run(cypher, classes=target_sub_classes))
+            
+            if not records:
+                return []
+
+            # 3. 对粗筛出的所有记录进行相似度计算
+            for r in records:
+                node = r['c']
+                db_vec = np.array(node['feature_vector']).reshape(1, -1)
+                
+                # 确保向量维度匹配
+                if db_vec.shape == query_feat.shape:
+                    score = float(cosine_similarity(query_feat, db_vec)[0][0])
+                    
+                    # 将结果存入大列表，不分桶
+                    all_candidates.append({
+                        "score": score,
+                        "diagnosis": node.get('true_label') or node.get('primary_diagnosis', 'N/A'),
+                        "sub_diagnosis": node.get('sub_label', 'N/A'),
+                        "findings": node.get('key_findings', 'No description available.')
+                    })
+
+        # 4. 全局排序：按照相似度分数降序排列
+        all_candidates.sort(key=lambda x: x['score'], reverse=True)
+
+        # 5. 提取相似度最高的 Top k 个病例
+        # 对 score 进行格式化处理
+        retrieved_results = []
+        for item in all_candidates[:total_k]:
+            item["score"] = round(item["score"], 5)
+            retrieved_results.append(item)
+
+        return retrieved_results
+    def _find_sub_historical_cases(self, current_feat, top_sub_predictions, total_k=6):
+        """
+        修改后的检索逻辑：
+        1. 按照 Top 3 的 sub_label 从数据库中粗筛候选集。
+        2. 计算所有候选病例与当前特征的相似度。
+        3. 统一排序，选出相似度最高的 Top 6 个病例。
+        
+        :param current_feat: 当前图像的特征向量
+        :param top_sub_predictions: AI预测的子分类列表 (sorted by prob)
+        :param total_k: 最终选取的总病例数 (默认 6)
+        """
+        if current_feat is None or not top_sub_predictions:
+            return []
+
+        # 1. 提取预测概率最高的 Top 3 子分类名称
+        target_sub_classes = [p['disease'] for p in top_sub_predictions[:3]]
+        query_feat = np.array(current_feat).reshape(1, -1)
+        
+        # 存放所有候选病例的相似度计算结果
+        all_candidates = []
+
+        with self.driver.session() as session:
+            # 2. 粗筛：拉取属于这 3 个子分类的所有病例
+            cypher = """
+            MATCH (c:Case) 
+            WHERE c.sub_label IN $classes AND c.feature_vector IS NOT NULL 
+            RETURN c
+            """
+            records = list(session.run(cypher, classes=target_sub_classes))
+            
+            if not records:
+                return []
+
+            # 3. 对粗筛出的所有记录进行相似度计算
+            for r in records:
+                node = r['c']
+                db_vec = np.array(node['feature_vector']).reshape(1, -1)
+                
+                # 确保向量维度匹配
+                if db_vec.shape == query_feat.shape:
+                    score = float(cosine_similarity(query_feat, db_vec)[0][0])
+                    
+                    # 将结果存入大列表，不分桶
+                    all_candidates.append({
+                        "score": score,
+                        "diagnosis": node.get('true_label') or node.get('primary_diagnosis', 'N/A'),
+                        "sub_diagnosis": node.get('sub_label', 'N/A'),
+                        "findings": node.get('key_findings', 'No description available.')
+                    })
+
+        # 4. 全局排序：按照相似度分数降序排列
+        all_candidates.sort(key=lambda x: x['score'], reverse=True)
+
+        # 5. 提取相似度最高的 Top k 个病例
+        # 对 score 进行格式化处理
+        retrieved_results = []
+        for item in all_candidates[:total_k]:
+            item["score"] = round(item["score"], 5)
+            retrieved_results.append(item)
+
+        return retrieved_results
+    def _get_prototype_summary(self, disease_name: str) -> str:
+        """
+        根据疾病名称从 Neo4j 检索原型总结
+        """
+        try:
+            with self.driver.session() as session:
+                # 使用你提供的查询逻辑
+                res = session.run(
+                    "MATCH (p:Prototype {disease: $name}) RETURN p.summary as s", 
+                    name=disease_name
+                ).single()
+                
+                if res and res["s"]:
+                    return res["s"]
+        except Exception as e:
+            print(f"Error querying Neo4j for {disease_name}: {e}")
+        return ""
+    def review_case(self, 
+                    vision_key_findings: str, 
+                    panderm_top5: List[Dict[str, Any]], 
+                    image_path: str, full_image_path: str) -> Dict:
+        """
+        综合诊断审查
+        """
+        # 1. 提取 Panderm Top-1 疾病名
+        top1_disease = panderm_top5[0]['disease'] if panderm_top5 else "N/A"
+
+        # 2. 检索历史相似病例
+        current_feat = self._get_feat_by_path(image_path)
+        hybrid_cases = self._find_historical_cases_in(current_feat, top_predictions=panderm_top5)
+
+        # 3. 检索静态知识 (Handbook)
+        expert_knowledge_context = ""
+        prototypes_info = []
+        for item in panderm_top5[:5]: # 取前5个
+            disease_name = item['disease']
+
+            knowledge = self._retrieve_static_knowledge(item['disease'])
+            expert_knowledge_context += f"\n[Handbook: {item['disease']}]\n{knowledge}\n"
+            prototype_summary = self._get_prototype_summary(disease_name)        
+            if prototype_summary:    
+                prototypes_info.append({            
+                    "disease": disease_name,            
+                    "summary": prototype_summary,            
+                    "prob": item['probability']            
+                })
+        # 5. 构建增强版 Prompt
+        prompt = self._build_comprehensive_prompt_withoutmemory(
+            vision_findings=vision_key_findings,
+            top5=panderm_top5,
+            similar_cases=hybrid_cases,
+            expert_knowledge=expert_knowledge_context,
+            prototypes=prototypes_info
+        )
+        full_prompt = prompt
+        print("=== Comprehensive Prompt ===")
+        print(full_prompt)
+        response_raw = generate_response(
+            temperature=0.1,
+            max_tokens=8181,
+            system_role="Senior Clinical Dermatologist & Visual Auditor",
+            user_input=full_prompt,
+            image_path=full_image_path  # <--- 关键修改：传入图片路径
+        )
+        parsed_res = self._parse_json_response(response_raw)
+        return parsed_res, prompt
+
+    # ================= 3. Prompt 构建优化 =================
+    def _build_comprehensive_prompt_without_pre(self, vision_findings, top5, similar_cases, expert_knowledge, prototypes):
+        """
+        重构说明：
+        1. 移除了 top5 概率分布和置信度提示（Confidence Gap）。
+        2. 核心逻辑转为“特征匹配”与“排他性诊断”。
+        3. candidate_diseases 仅作为选项列表提供，不包含分数值。
+        """
+        
+        # 1. 整理参考信息
+        prototypes_str = ""    
+        for p in prototypes:        
+            prototypes_str += f"- [{p['disease']} Standard]: {p['summary']}\n"
+        
+        history_str = ""
+        for c in similar_cases:
+            # 只保留既往病例的诊断结果和表现，移除相似度分数，避免分数产生干扰
+            history_str += f"- Past Confirmed Case [{c['diagnosis']}]:\n  Findings: {c['findings']}\n"
+
+        # 选项列表（纯文字）
+        # candidates_list = ", ".join(top5)
+
+        # 2. 返回增强版 Prompt
+        return f"""
+        [Clinical Task]: Evidence-Based Dermatological Diagnosis.
+        You are acting as a Senior Dermatologist. Your goal is to provide a final diagnosis by cross-referencing visual observations with medical standards and historical precedents, without relying on any pre-calculated model probabilities.
+
+        [1. Current Visual Findings (from Vision Agent)]:
+        {vision_findings}
+
+        [2. Diagnostic Prototypes (Standard Reference)]:
+        {prototypes_str if prototypes_str else "No standard prototypes available."}
+
+        [3. Precedent Cases (Similar Confirmed Cases)]:
+        {history_str if history_str else "No direct precedents found."}
+
+        [4. Medical Standard (Static Handbook Knowledge)]:
+        {expert_knowledge}
+
+        [Reasoning Instructions]:
+        1. **Primary Observation Analysis**: 
+        - Carefully evaluate the visual findings in [1]. Identify the "primary lesion" (e.g., color, border, symmetry) and "secondary features" (e.g., scale, crust, blue-white veil).
+        
+        2. **Pattern Matching (Prototypes)**:
+        - Compare [1] against [2]. Which standard disease profile does the current lesion most closely align with? 
+        - Note: Atypical presentations (e.g., a Blue Nevus without a typical network) should still be considered if the color and circumscription match the standard.
+
+        3. **Differential Exclusion (Rule-Out)**:
+        - Use [4] to actively rule out candidates. 
+        - For example: If the lesion lacks any pigment network, dots, or globules, 'Melanocytic Nevi' is less likely unless it's a specific variant. If the surface is smooth/waxy, 'Actinic Keratoses (AKIEC)' can likely be ruled out.
+
+        4. **Historical Consistency**:
+        - Review [3]. Do the morphological features of this patient mirror confirmed historical cases of a specific disease? Use these precedents to confirm or challenge your hypothesis.
+
+        5. **Final Decision**:
+        - Synthesize all evidence. You must select the most probable diagnosis from the following list: {DDI_DISEASE_NAME}.
+
+        [Output Format (JSON)]:
+        {{
+            "KeyFindings": "A refined summary of critical morphological features found in the image.",
+            "DifferentialDiagnosis": "Briefly mention 1-2 diseases you ruled out and why.",
+            "PrimaryDiagnosis": "The single most likely diagnosis from the provided list.",
+            "Evidence": "A logical derivation: 'Matches X standard due to Y features; Z ruled out due to lack of A'."
+        }}
+        """
+    def _build_comprehensive_prompt_withoutmemory(self, vision_findings, top5, similar_cases, expert_knowledge, prototypes):
+                # 1. 将名称从 Prototypes 修改为 Guidelines，并优化格式
+                # 1. 结构化数据准备
+        guidelines_str = ""    
+        for p in prototypes:        
+            guidelines_str += f"- [Guideline for {p['disease']}]: {p['summary']}\n"
+        
+        history_str = ""
+        for c in similar_cases:
+            # 强化历史病例的描述，包含诊断和核心视觉特征
+            history_str += f"- Past Confirmed Case: {c['diagnosis']} (Similarity: {c['score']:.2f})\n  Findings in that case: {c['findings']}\n"
+
+        top5_str = "\n".join([f"- {i['disease']}: {i['probability']:.2%}" for i in top5])
+
+        # 2. 综合推理 Prompt
+        return f"""
+        [Clinical Task]: Final Multi-Modal Diagnosis Audit.
+        Role: Senior Dermatologist. 
+        Context: You are reconciling raw visual data [1], clinical standards [2, 5], statistical AI predictions [3], and empirical evidence from past cases [4].
+
+        [1. Current Visual Findings (from Vision Agent)]:
+        {vision_findings}
+
+        [2. Diagnostic Guidelines (Standard Criteria)]:
+        No specific guidelines available.
+
+        [3. Model Prediction Probabilities (Panderm)]:
+        {top5_str}
+
+        [4. Precedent Cases (Similar Confirmed History)]:
+        No direct precedents found.
+
+        [5. Medical Standard (General Handbook Knowledge)]:
+        {expert_knowledge}
+
+        [Comprehensive Reasoning Instructions]:
+        
+        STEP 1: Visual Validation (Audit [1])
+        - Independently verify the visual description in [1]. If you see features (e.g. 'telangiectasia' or 'blue-white veil') not mentioned in [1], add them to your reasoning.
+
+        STEP 2: Guideline & Encyclopedia Cross-Check (Sync [1] with [2] & [5])
+        - Compare the current findings against the [Diagnostic Guidelines] for the top candidates. 
+        - Does the lesion meet the "must-have" criteria for the high-probability diseases?
+
+        STEP 3: Empirical Comparison (Sync [1] with [4])
+        - Analyze the [Precedent Cases]. If a Past Case of 'Disease X' looks very similar to the Current Case [1], it provides strong empirical support for that diagnosis, even if it contradicts the statistical model [3].
+
+        STEP 4: Conflict Resolution & Synthesis
+        - **If [1] & [2] align with [4]**: This is a high-confidence diagnosis.
+        - **If [3] is high, but [1] & [2] strongly suggest another diagnosis**: Prioritize the Guidelines [2]. Acknowledge that the visual model [3] might be reacting to non-diagnostic noise.
+        - **If the lesion is atypical**: Use [4] to see if such an atypical presentation has been confirmed as a specific disease before.
+
+        STEP 5: Final Conclusion
+        - Select the most likely diagnosis exclusively from: {", ".join([i['disease'] for i in top5])}.
+
+        [Output Format (JSON)]:
+        {{
+            "VisualFindings": "Refined description after auditing [1].",
+            "PrimaryDiagnosis": "Exact name from the top5 list.",
+            "Evidence": "A logical synthesis of why this diagnosis was chosen, citing specific guideline matches and historical case similarities."
+        }}
+        """
+    def _build_comprehensive_prompt(self, vision_findings, top5, similar_cases, expert_knowledge, prototypes):
+                # 1. 将名称从 Prototypes 修改为 Guidelines，并优化格式
+                # 1. 结构化数据准备
+        guidelines_str = ""    
+        for p in prototypes:        
+            guidelines_str += f"- [Guideline for {p['disease']}]: {p['summary']}\n"
+        
+        history_str = ""
+        for c in similar_cases:
+            # 强化历史病例的描述，包含诊断和核心视觉特征
+            history_str += f"- Past Confirmed Case: {c['diagnosis']} (Similarity: {c['score']:.2f})\n  Findings in that case: {c['findings']}\n"
+
+        top5_str = "\n".join([f"- {i['disease']}: {i['probability']:.2%}" for i in top5])
+
+        # 2. 综合推理 Prompt
+        return f"""
+        [Clinical Task]: Final Multi-Modal Diagnosis Audit.
+        Role: Senior Dermatologist. 
+        Context: You are reconciling raw visual data [1], clinical standards [2, 5], statistical AI predictions [3], and empirical evidence from past cases [4].
+
+        [1. Current Visual Findings (from Vision Agent)]:
+        {vision_findings}
+
+        [2. Diagnostic Guidelines (Standard Criteria)]:
+        {guidelines_str if guidelines_str else "No specific guidelines available."}
+
+        [3. Model Prediction Probabilities (Panderm)]:
+        {top5_str}
+
+        [4. Precedent Cases (Similar Confirmed History)]:
+        {history_str if history_str else "No direct precedents found."}
+
+        [5. Medical Standard (General Handbook Knowledge)]:
+        {expert_knowledge}
+
+        [Comprehensive Reasoning Instructions]:
+        
+        STEP 1: Visual Validation (Audit [1])
+        - Independently verify the visual description in [1]. If you see features (e.g. 'telangiectasia' or 'blue-white veil') not mentioned in [1], add them to your reasoning.
+
+        STEP 2: Guideline & Encyclopedia Cross-Check (Sync [1] with [2] & [5])
+        - Compare the current findings against the [Diagnostic Guidelines] for the top candidates. 
+        - Does the lesion meet the "must-have" criteria for the high-probability diseases?
+
+        STEP 3: Empirical Comparison (Sync [1] with [4])
+        - Analyze the [Precedent Cases]. If a Past Case of 'Disease X' looks very similar to the Current Case [1], it provides strong empirical support for that diagnosis, even if it contradicts the statistical model [3].
+
+        STEP 4: Conflict Resolution & Synthesis
+        - **If [1] & [2] align with [4]**: This is a high-confidence diagnosis.
+        - **If [3] is high, but [1] & [2] strongly suggest another diagnosis**: Prioritize the Guidelines [2]. Acknowledge that the visual model [3] might be reacting to non-diagnostic noise.
+        - **If the lesion is atypical**: Use [4] to see if such an atypical presentation has been confirmed as a specific disease before.
+
+        STEP 5: Final Conclusion
+        - Select the most likely diagnosis exclusively from: {", ".join([i['disease'] for i in top5])}.
+
+        [Output Format (JSON)]:
+        {{
+            "VisualFindings": "Refined description after auditing [1].",
+            "GuidelineCompliance": "Assessment of how well the case fits the [Guidelines] in [2].",
+            "PrimaryDiagnosis": "Exact name from the top5 list.",
+            "Evidence": "A logical synthesis of why this diagnosis was chosen, citing specific guideline matches and historical case similarities."
+        }}
+        """
+
+    def _build_subclass_prompt(self, vision_findings, main_top5, sub_top5, historical_cases, static_knowledge):
+        # 1. 格式化历史病例（突出子类标签和特征）
+        history_str = ""
+        for c in historical_cases:
+            # 新增：过滤无意义的子类标签
+            sub_label = c['sub_diagnosis'] if c['sub_diagnosis'] not in ["N/A", ""] else "Unlabeled"
+            history_str += f"""
+            [Past Case {c['score']:.2f}]
+            - Main Category: {c['diagnosis']}
+            - Sub Category: {sub_label}
+            - Key Findings: {c['findings']}
+            """
+
+        # 2. 格式化预测概率（新增概率排序）
+        main_str = "\n".join([f"- {i['disease']} ({i['probability']:.1%})" for i in main_top5[:3]])
+        sub_str = "\n".join([f"- {i['disease']} ({i['probability']:.1%})" for i in sorted(sub_top5[:5], key=lambda x: x['probability'], reverse=True)])  # 按概率排序
+
+        # 3. 构造最终Prompt（修复动态原型显示问题）
+        return f"""
+        # Clinical Task: Dermnet Sub-category Classification
+        You are a dermatology expert specializing in fine-grained sub-category diagnosis.
+        Your goal is to determine the precise sub-type of skin lesion based on visual findings and medical knowledge.
+
+        ## 1. Current Patient Presentation
+        {vision_findings}
+
+        ## 2. AI Prediction Candidates
+        ### Main Categories (Top 3):
+        {main_str}
+        ### Sub-category Candidates (Top 5, Sorted by Probability):
+        {sub_str}
+
+        ## 3. Historical Reference Cases
+        {history_str if history_str else "No similar cases found in database."}
+
+        ## 4. Knowledge Base
+        ### Static Handbook Knowledge:
+        {static_knowledge}... 
+
+        ## Diagnostic Requirements:
+        1. **Sub-type Specificity**: Focus on subtle visual cues (scale type, color gradient, distribution) that distinguish sub-categories.
+        2. **Category Consistency**: The selected sub-category must logically belong to one of the main categories.
+        3. **Evidence Alignment**: Cite specific findings from Section 1 that match historical cases in Section 3.
+
+        ## Output Format (JSON ONLY):
+        {{
+            "KeyFindings": "Concise summary of subtype-defining visual features",
+            "PrimaryDiagnosis": "Selected main category",
+            "SubDiagnosis": "Precise sub-category name",
+            "Confidence": "High/Medium/Low",
+            "Reasoning": "Step-by-step comparison with historical cases and knowledge"
+        }}
+        """
+
+    # ================= 辅助函数 =================
 
     def _retrieve_static_knowledge(self, disease_name: str):
-        nodes = self.static_retriever.retrieve(QueryBundle(f"Features of {disease_name}"))
-        return "\n".join([n.node.text for n in nodes[:2]])
+        try:
+            nodes = self.static_retriever.retrieve(QueryBundle(f"Features of {disease_name}"))
+            return "\n".join([n.node.text for n in nodes[:5]])
+        except: return "N/A"
 
     def _find_hybrid_historical_cases(self, current_feat, findings_text, k=5):
         if current_feat is None: return []
@@ -246,10 +583,13 @@ class CaseReviewAgent:
                     score = cosine_similarity(query_feat, db_vec)[0][0]
                     phys_scored.append((score, node))
             phys_scored.sort(key=lambda x: x[0], reverse=True)
-            for score, node in phys_scored[:k]:
+            print(query_feat.shape, len(phys_scored), phys_scored[0][0] if phys_scored else 'N/A')
+            for score, node in phys_scored[0:k]:
                 all_retrieved_cases[node['case_id']] = {
-                    "score": score, "diagnosis": node['true_label'] or node['primary_diagnosis'],
-                    "findings": node['key_findings'], "type": "History"
+                    "score": score, 
+                    "diagnosis": node['true_label'] or node['primary_diagnosis'],
+                    "sub_diagnosis": node.get('sub_label', 'N/A'),  # 子类标签
+                    "findings": node['key_findings']
                 }
         return list(all_retrieved_cases.values())
 
@@ -258,71 +598,7 @@ class CaseReviewAgent:
         try:
             match = re.search(r'\{.*\}', text, re.DOTALL)
             return json.loads(match.group()) if match else {"error": "parse failed"}
-        except:
-            return {"error": "parse failed"}
+        except: return {"error": "parse failed"}
 
     def close(self):
         self.driver.close()
-# 使用示例
-if __name__ == "__main__":
-    # 配置参数
-    agent = CaseReviewAgent(
-        model="Qwen/Qwen2-8B-Instruct", # 或者你本地的推理接口
-        neo4j_uri="bolt://localhost:7687",
-        neo4j_user="neo4j",
-        neo4j_password="password",
-        lancedb_uri="./test_lancedb",
-        train_feat_path="./train_feats.npy", # 确保有这个文件或 mock 它
-        train_json_path="./train_files.json"
-    )
-
-    try:
-        print("--- Step 1: 模拟历史知识积累 (预置 Prototype) ---")
-        # 我们手动在 Neo4j 中插入一个银屑病的原型，设定其“金标准”
-        with agent.driver.session() as session:
-            session.run("""
-                MERGE (p:Prototype {disease: 'Psoriasis'})
-                SET p.summary = 'Classic Psoriasis presents with thick, silvery-white micaceous scales on well-demarcated erythematous plaques. Auspitz sign is positive. Commonly affects extensors. It NEVER presents with greasy yellow scales.'
-            """)
-        print("✅ Prototype for Psoriasis seeded.")
-
-        print("\n--- Step 2: 模拟一个冲突案例 ---")
-        # 视觉描述：故意描述成脂溢性皮炎的特征
-        vision_findings = (
-            "The image shows poorly defined erythematous patches covered with greasy, "
-            "yellowish scales located in the seborrheic areas. "
-            "There are NO silvery scales or micaceous plating."
-        )
-
-        # PanDerm 预测：由于某种原因，模型错误地把 Psoriasis 排在第一
-        panderm_top5 = [
-            {"disease": "Psoriasis", "probability": 0.82},
-            {"disease": "Seborrheic Dermatitis", "probability": 0.12},
-            {"disease": "Eczema", "probability": 0.04},
-            {"disease": "Tinea Corporis", "probability": 0.02}
-        ]
-
-        # 模拟图片路径（需要在 all_files_to_feats_map 中有对应，或者你能获取 feat）
-        img_path = "test_image_conflict.jpg" 
-        
-        # 如果没有真实特征向量，我们可以临时 mock 一个
-        agent.all_files_to_feats_map[img_path] = np.random.rand(1024).astype('float32')
-
-        print(f"Vision Findings: {vision_findings}")
-        print(f"AI Top-1: {panderm_top5[0]['disease']} ({panderm_top5[0]['probability']:.2%})")
-
-        print("\n--- Step 3: 执行审计审查 ---")
-        # 执行 Review
-        report, full_prompt = agent.review_case(vision_findings, panderm_top5, img_path)
-
-        print("\n--- Final Report (JSON) ---")
-        print(json.dumps(report, indent=4))
-
-        # 逻辑检查
-        if report.get("PrimaryDiagnosis") == "Seborrheic Dermatitis":
-            print("\n🔥 Test Result: SUCCESS! Agent rejected the incorrect Top-1 and pivoted to the correct diagnosis based on Prototype.")
-        else:
-            print("\n⚠️ Test Result: Agent followed the AI probability. Audit logic may need strengthening.")
-
-    finally:
-        agent.close()

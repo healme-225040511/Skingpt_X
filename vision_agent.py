@@ -25,7 +25,7 @@ class VisionAgent:
         # 1. 获取专用 Prompt
         prompt = get_visual_findings_prompt()
 
-        print(f"🚀 Analyzing image: {os.path.basename(image_path)} using Qwen-30B...")
+        print(f"🚀 Analyzing image: {os.path.basename(image_path)} using Qwen-8B...")
 
         try:
             # 2. 调用 Qwen-30B 本地 API (参考之前写的函数)

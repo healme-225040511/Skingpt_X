@@ -1,0 +1,263 @@
+/test/erythema annulare centrifigum/3f4b66b231b7bb968d332b8a6bdf023e.jpg
+/test/erythema annulare centrifigum/481b7fd06d28d94b4d5d3c61fab44232.jpg
+/test/scabies/1ac0e3c9b31905e8460042d59cdeb234.jpg
+/test/scabies/126ba4ed48561892ebe1e3405c9f685c.jpg
+/test/scabies/acc5c7d22fb46617a7092334d9ce14ac.jpg
+/test/scabies/3455eed74a1cb1950fe493246e86fe95.jpg
+/test/scabies/994dbe062e304afd2dc474451b3d348a.jpg
+/test/porphyria/ece08368af61b745fb8c54bdc72feb72.jpg
+/test/porphyria/39ebebd7ea458ef13cc2fee424d4c328.jpg
+/test/porphyria/b1ab09c50736d2d3e74ead126aaf0ccb.jpg
+/test/porphyria/fb48e3fa66d108bdb469f4792dd39899.jpg
+/test/scleroderma/49b9b2859dc1693be461fa496a30ba22.jpg
+/test/scleroderma/aa5a43b11014146e92a309ce37eaddfc.jpg
+/test/scleroderma/449d63bec3a88dc28c458d338c41cd0a.jpg
+/test/scleroderma/8e9277073f83ec16b5b0599820913015.jpg
+/test/scleroderma/e030688e3ee3d4745e365adc204055f9.jpg
+/test/scleroderma/fe9485247be893e6cf030687757a5eda.jpg
+/test/scleroderma/a379801a871b668c360f23e4c0245292.jpg
+/test/scleroderma/e6c55613aa613e34c0452c313b46009f.jpg
+/test/scleroderma/3ec2621dd2e6d4fbd80e58ffbe2e8daf.jpg
+/test/scleroderma/06bd459d2dec18187c16822171ec9302.jpg
+/test/scleroderma/759d40ba8fec3a5b9f092b2616b7989b.jpg
+/test/dermatomyositis/ccd9f62f3909891ba3e98d5cf9863f9f.jpg
+/test/dermatomyositis/d7433886ae13c055122ef9921eb2ef9c.jpg
+/test/dermatomyositis/6a3640f5914cf269372e4e28f7df12c4.jpg
+/test/dermatomyositis/6c324c3f793408f1bbed60f75617c84d.jpg
+/test/dermatomyositis/bd0efa0c07c323b4b12ad2bb5cee927a.jpg
+/test/dermatomyositis/0baf926f3983cc51160208c3af29106c.jpg
+/test/dermatomyositis/f9507ee68ab6fa32b8f4695747523bfa.jpg
+/test/dermatomyositis/192c8a174e6f594b44cdd00dd9f73d44.jpg
+/test/acne/5c956a39683a5f39cfa81a010b5bd774.jpg
+/test/acne/0d1eb56fcd67699b9d277c7c0b3f8a1d.jpg
+/test/acne/280d3e95238a4e4ff042cf63637a3513.jpg
+/test/acne/ed425f19c21c5540fa5ed6303737ab83.jpg
+/test/acne/fac5f49bb4eeff20db505d78025178f4.jpg
+/test/acne/7d0afc8f76c352f1d55559c7f80b24f6.jpg
+/test/acne/baedc531fe85571096a215e3f052d7c7.jpg
+/test/acne/2ed5843cc88e0bf7c199a2cf811acec9.jpg
+/test/acne/bda3a4932fc1ac8de4c8a4fd146bb503.jpg
+/test/acne/27b90df80041990f4aa15c5d0b1c5746.jpg
+/test/urticaria pigmentosa/9631fcf44ae5d956f62132cd3890b29b.jpg
+/test/urticaria pigmentosa/1131942a5d2325f87b92add20243a148.jpg
+/test/urticaria pigmentosa/2cc6a7b8604bfffe414b347a8808ba5b.jpg
+/test/urticaria pigmentosa/f38ef800ff2e091ad6af7e233c0afa29.jpg
+/test/urticaria pigmentosa/5116926e862d611d604387d2eff4c881.jpg
+/test/urticaria pigmentosa/7f792c9ecd7e0a97d09424b85adc0fee.jpg
+/test/urticaria pigmentosa/f572eb5920663d85ba8e334852415277.jpg
+/test/urticaria pigmentosa/c24a9dd32368bac8b4e00c880c177e48.jpg
+/test/cheilitis/29cfb297d6a32b470e792fb45ca93ee1.jpg
+/test/cheilitis/3da2bb8fb11b649fd460c955b4a09bba.jpg
+/test/cheilitis/46f705ac29c232a65ebb666fab07abc0.jpg
+/test/malignant melanoma/70e5ffc51b9d4dc96616b52ded3ea665.jpg
+/test/malignant melanoma/05eae8b3cf51683f62e9dcedd403c9ac.jpg
+/test/malignant melanoma/b2413c3578edf4a33ab4f56e9c7d0aa1.jpg
+/test/malignant melanoma/248f9241c4e76abbf049ba8b06e968ff.jpg
+/test/granuloma annulare/91a8f5704576ad4c2998f0a894a273cc.jpg
+/test/granuloma annulare/48e1d04f21b4bb0fa04349fd1eb6af0c.jpg
+/test/granuloma annulare/0cf5b1941e8c7250e0b7dc188096fbfb.jpg
+/test/allergic contact dermatitis/52a632d8d04ee30e8e733e99322772fe.jpg
+/test/allergic contact dermatitis/2bbc57077c22ba3bc5a33ec2191cdc3f.jpg
+/test/allergic contact dermatitis/c339ae49f32566d2fc318eb190d0b7a1.jpg
+/test/allergic contact dermatitis/2e03634f404f78e42f59c3926570eb88.jpg
+/test/allergic contact dermatitis/621e3bf338b5f526919f5987f0d593df.jpg
+/test/allergic contact dermatitis/2f3ec777d8f2af1a89f86ef3cef7a409.jpg
+/test/allergic contact dermatitis/68fbf5da7fe2a0e372d359284b49109b.jpg
+/test/allergic contact dermatitis/d56ba633ceb813221c53efdf640b2ae9.jpg
+/test/allergic contact dermatitis/6b362c6741c1dcfbb52459a47ce4e44b.jpg
+/test/allergic contact dermatitis/6da1799d026302b988edd549c2bb6600.jpg
+/test/allergic contact dermatitis/81e861e4d20fbe2b9df74ae5b834a856.jpg
+/test/allergic contact dermatitis/396dfa96af2998668ab6cc2c287dc302.jpg
+/test/allergic contact dermatitis/5a84df23f592092fd1ec83f168ac7282.jpg
+/test/allergic contact dermatitis/249f77d7a1ee220aa8abd7425dafd874.jpg
+/test/allergic contact dermatitis/cedbbcc9ea4c1062857b88384f418540.jpg
+/test/allergic contact dermatitis/5386c627e9c71645d0b8d482947e72bc.jpg
+/test/allergic contact dermatitis/06da798e65e2b0ae45a7ae3e14b344f0.jpg
+/test/allergic contact dermatitis/b431d89b3f47973bed06200e775a35b5.jpg
+/test/allergic contact dermatitis/d821f5673f94063815e20f8db5e9501f.jpg
+/test/allergic contact dermatitis/bd3048ee1a8150295940a7556357ad9e.jpg
+/test/allergic contact dermatitis/506e30b9e4836d74bf9c467a739bc886.jpg
+/test/allergic contact dermatitis/ea34dc72c3af6639a8384c6772e732ca.jpg
+/test/mycosis fungoides/25f0ba43f506d7f3912b8ca4d396cb4c.jpg
+/test/mycosis fungoides/0d138dfc5437475a31a7718a53be001a.jpg
+/test/mycosis fungoides/61d0e40071c675db6da228de6c04e292.jpg
+/test/mycosis fungoides/6822f9362f5560a53dfdf79fb77d48b4.jpg
+/test/mycosis fungoides/3e389f35749339cb3f001c51dbd02d09.jpg
+/test/neurodermatitis/8720e29e064aaae73c8fea6f5b2fce28.jpg
+/test/neurodermatitis/d25efbd101a2564d647521beb0ed95f1.jpg
+/test/sun damaged skin/6947108ca3cd113aded6d70b9d95107e.jpg
+/test/sun damaged skin/b1dc652793c6fd4f08ed382959d3aaa5.jpg
+/test/sun damaged skin/74b87c161ecd268300f46d31937af4cd.jpg
+/test/sun damaged skin/5709ba79d918d91296c308c334e05b4c.jpg
+/test/sun damaged skin/78cdc95d817a9c8e5cbe32a481673125.jpg
+/test/halo nevus/5df724c6d38885cf245b8413cffab3f7.jpg
+/test/nevocytic nevus/e5ca79ad2e29216d3e105ad65a959921.jpg
+/test/nevocytic nevus/de49050472666ae8573048c5d768c8b7.jpg
+/test/fixed eruptions/ec3482d734302b4ad12d362602cdbb1a.jpg
+/test/fixed eruptions/d63610fa5e886e4b2e84c2eb7b1e0f5d.jpg
+/test/disseminated actinic porokeratosis/c11bdd58d3f0d7ad525ef81e07bca3e5.jpg
+/test/squamous cell carcinoma/6577604c65e6e13cd25f6d9726c409a6.jpg
+/test/squamous cell carcinoma/102765ff09884862ea2f911b29a9b14d.jpg
+/test/squamous cell carcinoma/bee428af68657ff702c769092b1998c6.jpg
+/test/squamous cell carcinoma/50c5fdef946e0cd8ef022a82c6167381.jpg
+/test/squamous cell carcinoma/0f5dc1d7b8e73e0b2df7bd1da6039dd0.jpg
+/test/squamous cell carcinoma/9fe7369e9cd9a468a2feb65a81c4bb13.jpg
+/test/squamous cell carcinoma/475f92468d27947b2ecda27fbbc1e141.jpg
+/test/squamous cell carcinoma/7729a485abc264b1c58a995a49ec7f5b.jpg
+/test/squamous cell carcinoma/1310cc8b1b8c42def1258073b85b99d4.jpg
+/test/squamous cell carcinoma/fedcb4729515d8c9a11d2dbe88576773.jpg
+/test/squamous cell carcinoma/0b035e5709e08c96e471bf050c805697.jpg
+/test/squamous cell carcinoma/a50b0037bf32e070914a5740f8db7a8b.jpg
+/test/squamous cell carcinoma/da967a336c8f7a8a8f0ee71ecc61a7cb.jpg
+/test/squamous cell carcinoma/25d23d51892cbe61aa9ec03457b6fad4.jpg
+/test/squamous cell carcinoma/08c8a2a16296e358c839f3bbc79820ad.jpg
+/test/squamous cell carcinoma/e2881d63260ae0e2dc9d4269a9e349af.jpg
+/test/squamous cell carcinoma/bbe2ba6d1c72c477dc514277aa950a6e.jpg
+/test/port wine stain/5658d956fc167e1cfda3d1e9048c221c.jpg
+/test/port wine stain/8448465e199de9bce2662cf133c703e8.jpg
+/test/port wine stain/a655a59abef2fdb8d3f7b7ee5fa042a2.jpg
+/test/naevus comedonicus/3caec8f065c0e4fca0e99961f4cc75a0.jpg
+/test/naevus comedonicus/1b3454c802df9803cf3a6a789f768831.jpg
+/test/naevus comedonicus/ffc0b9df6696def6015d4eca3090118e.jpg
+/test/psoriasis/1159f75d3e7306c18dc279ff377d493e.jpg
+/test/psoriasis/0b84b453dc9c779e4131ec24f9c1f9a5.jpg
+/test/psoriasis/977f45c4acee2b3293274925aa9d9ed2.jpg
+/test/psoriasis/0642bcf521c505cbf7f2968c9f18ba8d.jpg
+/test/psoriasis/e79535703990d010134d60bde7afcf50.jpg
+/test/psoriasis/4a7899d4771ae20576cc83e5c45cfdaf.jpg
+/test/psoriasis/5cab9fcd7388d2579ad279923c8c1b1b.jpg
+/test/psoriasis/753b6698a0444ec3878f174864f88161.jpg
+/test/psoriasis/72425b50cd9e8658f118ff4156c5b3b5.jpg
+/test/psoriasis/a73c5ecd524b5510f0b7892b3b7d1801.jpg
+/test/psoriasis/98b94213a834c040f5e887ba5d21d4bc.jpg
+/test/psoriasis/36dd4bc35a43dae47e085dc51a70fa61.jpg
+/test/psoriasis/58b4bc079ca94e6e9377a42ca7564b40.jpg
+/test/striae/346858837883159d96aee22fe0a548ee.jpg
+/test/factitial dermatitis/9e537072e4ea46c34fbf78959f2f71af.jpg
+/test/factitial dermatitis/0dd4fb7e120caac9f1f7db96eae103f6.jpg
+/test/factitial dermatitis/7cc8a08a8e6ca3267bdbea494f204877.jpg
+/test/factitial dermatitis/79a410424bb0f116b1871bdc817e01e5.jpg
+/test/dyshidrotic eczema/142cf402ecda22abae480a3866444796.jpg
+/test/dyshidrotic eczema/90e0fa1b97f1294f112f2a60c0cd415c.jpg
+/test/dyshidrotic eczema/a93ef9b088e39bb7fe7e37205f0a3084.jpg
+/test/dyshidrotic eczema/fad23596c7ee19192b39a1328b2d0c2b.jpg
+/test/dyshidrotic eczema/ab9863dd8d8da8c8259f7783f6d57e12.jpg
+/test/fordyce spots/aa4cec561d77dd60dc4476a0e0d61992.jpg
+/test/fordyce spots/782b4fbbebe47fc5535187b65d0b96b7.jpg
+/test/fordyce spots/c8e7f9739bd62e3219c12d9f567456a8.jpg
+/test/fordyce spots/2fb803247ab7e23e4cc616079c04afde.jpg
+/test/fordyce spots/6d5dacc378b1328e0acf3070cb2b03b7.jpg
+/test/nematode infection/195973a8ed4bd6320ecb4813f8a9dc99.jpg
+/test/porokeratosis of mibelli/96fec92b4635d407429bf99b37b56b50.jpg
+/test/porokeratosis of mibelli/ce4c8e9da697d3c54e08dffcf44bb492.jpg
+/test/porokeratosis of mibelli/1ac32fd4d37811f356201fc9a5d42ee6.jpg
+/test/porokeratosis of mibelli/5b079b3f2b3a8c075728094228f551c0.jpg
+/test/acrodermatitis enteropathica/f35bd556bc48dabad3f7543d6b790077.jpg
+/test/acrodermatitis enteropathica/e0217158ff1dd904d880ae4290125ba8.jpg
+/test/acrodermatitis enteropathica/d82aeffe880d398d2e5c91d40632a629.jpg
+/test/acrodermatitis enteropathica/4dcb209480ca83a454e8b609795395e7.jpg
+/test/acrodermatitis enteropathica/93117ae601093834e9d8ef00b0279c9f.jpg
+/test/tick bite/807e7342032ceb6e794f8fbc5cedb7a0.jpg
+/test/tick bite/0c368ee795e209af1be81f5af4b4cc20.jpg
+/test/tick bite/c287e154d40834eca091ac2562635e3d.jpg
+/test/lichen planus/10d4265c96e4d55d3846aa932976228f.jpg
+/test/lichen planus/4e5fe64a16454b962b99547663d10a57.jpg
+/test/lichen planus/075edbe96335e1425fe9b5ccb64682e8.jpg
+/test/lichen planus/1790aa365d77f0c439ebfd66bfe1383e.jpg
+/test/lichen planus/8b2ea916f0ee04fb32a29475287e78de.jpg
+/test/lichen planus/22837c721fba2274136875122682e15e.jpg
+/test/lichen planus/06927894daf158c5fafc52b5558dcc85.jpg
+/test/lichen planus/98ff73ee4eb91145624e599d1bd68554.jpg
+/test/lichen planus/4358c4f50f7c2101213335d8008aea4a.jpg
+/test/lichen planus/4c8678438d49cc88964230c8747e77ea.jpg
+/test/lichen planus/9a9430468ce46f6ff46de600627a140b.jpg
+/test/lichen planus/aa9c5c94b82027d1df70ebd711b81314.jpg
+/test/lichen planus/5b49758b834de470205e7ae175103ca2.jpg
+/test/lichen planus/1e78dd4694ea86cfe05ffd344f68c14c.jpg
+/test/lichen planus/246ac8f7a9013f82f027e338b46e40b9.jpg
+/test/lichen planus/d6a87758ca1e4e76980e93cc9835a949.jpg
+/test/lichen planus/88120c7205b89a78b87fd9fe53a8246f.jpg
+/test/lichen planus/8a0cc2ab76a950608dbfe232fcf5b89b.jpg
+/test/lichen planus/2ed32135a76da1f26008722d5bb7161d.jpg
+/test/pityriasis rosea/e6c84701c4e2a4e7b9b161aa6b0fa665.jpg
+/test/pityriasis rosea/cd230500816d55addbbecd89a969d851.jpg
+/test/pityriasis rosea/9143f8bebf6d2090dc39fbb4ffb28bda.jpg
+/test/pityriasis rosea/e4909a22e58126fde89c47528db9199b.jpg
+/test/pityriasis rosea/ccd8a6beabc8d6a5c8557316d31330cd.jpg
+/test/tuberous sclerosis/6c6acb312e710162094cba6fd6445d77.jpg
+/test/tuberous sclerosis/df317c5a21716642644d519effed73dc.jpg
+/test/tuberous sclerosis/f1b8877f37c5e47c702521711a6ca3d2.jpg
+/test/tuberous sclerosis/4457650f9fc240abdd7deb844d90d1a8.jpg
+/test/tuberous sclerosis/464fed2d218b587e2dafc48fbd4b49fc.jpg
+/test/dermatofibroma/374de2215f3eb571d87207e5d5089354.jpg
+/test/dermatofibroma/a1a88ed01d7bb83af84d8f4df1f72744.jpg
+/test/dermatofibroma/ee1ac615e11be8151e056da0b12a4ac2.jpg
+/test/dermatofibroma/01bebaa9dd8897bcab5aa8b16a5bfce3.jpg
+/test/basal cell carcinoma/375fb0b667a132850089bb99ab896972.jpg
+/test/basal cell carcinoma/e2ec3ed300a3bae68e03b1a3f5992c5f.jpg
+/test/basal cell carcinoma/42bb46cb779b95f10e531e2b6181e439.jpg
+/test/basal cell carcinoma/6323e7bf168cb3f170902b24cd05e8c4.jpg
+/test/basal cell carcinoma/f08034a69a57680dbe4521f6e913ba22.jpg
+/test/basal cell carcinoma/2d924a5a87ebe16ae171aa19ae304f5b.jpg
+/test/basal cell carcinoma/bf50a7b1441576de64d5a5cd44c75c48.jpg
+/test/basal cell carcinoma/1bbe4519608f606a18adf1811fd1c051.jpg
+/test/basal cell carcinoma/dc02b8bab10a4ce35a00ee4dba2b51ea.jpg
+/test/basal cell carcinoma/6472c26e82d307a0929503604f91bcac.jpg
+/test/basal cell carcinoma/11ff0a5d68ae06faa047fe33425b6953.jpg
+/test/basal cell carcinoma/06447e1b664fcc93d61c9a0effc50f27.jpg
+/test/basal cell carcinoma/cb9baa2c3e0255370714b9736e24d3a6.jpg
+/test/melanoma/c8e15692cc70579b3ca3b0cf8236ac0d.jpg
+/test/melanoma/7041e0d82e0d554237bd1e6dc886a81f.jpg
+/test/melanoma/a177a5fc4b0e7033c39fb4f2503279ab.jpg
+/test/melanoma/d4bc1c91b2d568108d77e93011564a6c.jpg
+/test/melanoma/22951972e56cf7574ccd1bbe6a45765a.jpg
+/test/melanoma/9d994f1278a9788612fa2af179328c31.jpg
+/test/melanoma/1bbb8898bb34295f884ba8d726809800.jpg
+/test/melanoma/85bfb7325d93bac71fcbc08ae0a9ba23.jpg
+/test/melanoma/7738a1fedc6181dd976623470feaffd4.jpg
+/test/melanoma/ff5fbdbf0d3221c3ba5628b50fc0aa41.jpg
+/test/melanoma/aebfb4a4b7eaeb406195faf9c997a5ea.jpg
+/test/melanoma/2cb3ff37c40ccf6614c4e23c4ed0d91a.jpg
+/test/melanoma/4fab663ca875d7ce04524182c53aa4cc.jpg
+/test/scleromyxedema/4957ad50095871123350505d48117331.jpg
+/test/scleromyxedema/7ba6fcc96127c32e52a3567db0897d92.jpg
+/test/scleromyxedema/fd141d6799899ee809e359e04ab67f18.jpg
+/test/scleromyxedema/fb61f1f927bb8cea5b1ac66f35f00355.jpg
+/test/scleromyxedema/194dcf73dc223bc0a88fb8ba5d13d5a9.jpg
+/test/scleromyxedema/e95c96ecd1e539e06f51861debf7792f.jpg
+/test/xanthomas/f120dba32fa476a85945f6d41291ec14.jpg
+/test/scabies/23760f03d46ee88b3e83b4afd39532f8.jpg
+/test/scabies/ad6fc63396860e9daab0f01ef786d211.jpg
+/test/scabies/157fb65cf4fe1704e595eb564e1c1512.jpg
+/test/scleroderma/982d9985b663598b30cc2f8b3e92f5de.jpg
+/test/scleroderma/ab37badbc5c21da383387155944fb131.jpg
+/test/dermatomyositis/0715f4136941f5e5a013490810d4395d.jpg
+/test/dermatomyositis/822399318bab37501f44db0c3316a295.jpg
+/test/urticaria pigmentosa/f300026d49011e179941a1312978f669.jpg
+/test/malignant melanoma/dc2a400c943a17772ea55dc50e376435.jpg
+/test/granuloma annulare/0c6695335edb59409519761fe3c3cfbb.jpg
+/test/allergic contact dermatitis/51a8e47ae9579b9d0311c9e415d60bb1.jpg
+/test/allergic contact dermatitis/61f9b1dddd5979a6ed5459a329aca0a3.jpg
+/test/allergic contact dermatitis/a077227085e3311080bae83c61d23511.jpg
+/test/mycosis fungoides/cb163e80bb075dda20d28f7eb1131c8a.jpg
+/test/mycosis fungoides/c127912e9efdc0da2cca4273dadbb4f3.jpg
+/test/naevus comedonicus/b3030d83c996e303faccd462495bc6e8.jpg
+/test/naevus comedonicus/3fe39fb0cdde5bb5ff0d0c6a70b6e3da.jpg
+/test/psoriasis/bbc6fddf7d5fa46379739a50e2b30dc9.jpg
+/test/psoriasis/ecfbdbcc21c8869d788c9b24f4e28399.jpg
+/test/psoriasis/74d48c265b80c322bef41a88464836ab.jpg
+/test/psoriasis/e9d67eb5805c582b4194e05a30d7c3fb.jpg
+/test/striae/68f858a8974da83b28c86da4793f45be.jpg
+/test/fordyce spots/34becf085bc7a8e0a42fe577e90d10d9.jpg
+/test/porokeratosis of mibelli/399ea58b75abf85e53e452ee516a6347.jpg
+/test/porokeratosis of mibelli/ea15f1a2374930c5125b2e8f16206b18.jpg
+/test/acrodermatitis enteropathica/6652189f86998a78e9f3181b9e54c6f0.jpg
+/test/rhinophyma/b6349594c6c050d07daf5ad57a96329e.jpg
+/test/lichen planus/e2211feaccfd1bf07b4852601c37f9b6.jpg
+/test/dermatofibroma/ce926e8153b5920e1529b6b11c5c3e86.jpg
+/test/basal cell carcinoma/c8e35e39c4662af6d64bb1d937ab048b.jpg
+/test/basal cell carcinoma/45faa12ef71900861d9a6d3d448035f2.jpg
+/test/basal cell carcinoma/fb7c974e189e0dc9cbd83e2d22835e94.jpg
+/test/granuloma pyogenic/1914e3c00a7d0bb468c53a67c18165b8.jpg
+/test/xanthomas/140e9d672b46741ec3666f88abdd735e.jpg
+/test/xanthomas/d4a1f83cf9e8cc1b47db9525af9d663d.jpg
