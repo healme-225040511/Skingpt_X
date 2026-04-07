@@ -1,0 +1,10 @@
+nohup: ignoring input
+🚀 Starting 4 parallel processes for Knowledge Base construction...
+✅ Finished Part 1. Log: ./training_logs/gpu7.log
+✅ Finished Part 2. Log: ./training_logs/gpu8.log
+✅ Finished Part 3. Log: ./training_logs/gpu3.log
+✅ Finished Part 4. Log: ./training_logs/gpu4.log
+--------------------------------------------------------
+All processes are running in background.
+Use 'tail -f ./training_logs/gpu0.log' to check progress.
+Use 'nvidia-smi' to monitor GPU usage.

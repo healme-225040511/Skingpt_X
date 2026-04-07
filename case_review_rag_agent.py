@@ -77,7 +77,7 @@ class CaseReviewAgent:
                         vision_key_findings: str, 
                         main_top5: List[Dict[str, Any]],  
                         sub_top5: List[Dict[str, Any]],   
-                        image_path: str) -> Dict:
+                        image_path: str, full_image_path: str) -> Dict:
         # 新增：参数校验
         if not main_top5:
             return {"error": "main_top5 cannot be empty"}, ""
@@ -112,11 +112,11 @@ class CaseReviewAgent:
         # 4. 调用LLM生成子类诊断结果（新增异常捕获）
         try:
             response_raw = generate_response(
-                engine=self.model,
                 temperature=0.1,
                 max_tokens=4096,
                 system_role="Dermatology Sub-category Specialist",
-                user_input=prompt
+                user_input=prompt,
+                image_path=full_image_path
             )
             parsed_res = self._parse_json_response(response_raw)
             # 新增：校验输出格式
@@ -295,6 +295,7 @@ class CaseReviewAgent:
                     "prob": item['probability']            
                 })
         # 5. 构建增强版 Prompt
+        print(hybrid_cases)
         prompt = self._build_comprehensive_prompt_withoutmemory(
             vision_findings=vision_key_findings,
             top5=panderm_top5,
@@ -410,7 +411,7 @@ class CaseReviewAgent:
         {top5_str}
 
         [4. Precedent Cases (Similar Confirmed History)]:
-        No direct precedents found.
+        {history_str if history_str else "No direct precedents found."}
 
         [5. Medical Standard (General Handbook Knowledge)]:
         {expert_knowledge}
@@ -506,7 +507,7 @@ class CaseReviewAgent:
         }}
         """
 
-    def _build_subclass_prompt(self, vision_findings, main_top5, sub_top5, historical_cases, static_knowledge):
+    def _build_subclass_prompt_withoutmemory(self, vision_findings, main_top5, sub_top5, historical_cases, static_knowledge):
         # 1. 格式化历史病例（突出子类标签和特征）
         history_str = ""
         for c in historical_cases:
@@ -557,6 +558,63 @@ class CaseReviewAgent:
             "SubDiagnosis": "Precise sub-category name",
             "Confidence": "High/Medium/Low",
             "Reasoning": "Step-by-step comparison with historical cases and knowledge"
+        }}
+        """
+
+    def _build_subclass_prompt(self, vision_findings, main_top5, sub_top5, historical_cases, static_knowledge):
+        history_str = ""
+        for c in historical_cases:
+            sub_label = c['sub_diagnosis'] if c['sub_diagnosis'] not in ["N/A", ""] else "Unlabeled"
+            history_str += f"""
+            [Past Case {c['score']:.2f}]
+            - Main Category: {c['diagnosis']}
+            - Sub Category: {sub_label}
+            - Key Findings: {c['findings']}
+            """
+        main_str = "\n".join([f"- {i['disease']} ({i['probability']:.1%})" for i in main_top5[:3]])
+        sub_str = "\n".join([f"- {i['disease']} ({i['probability']:.1%})" for i in sorted(sub_top5[:5], key=lambda x: x['probability'], reverse=True)])
+        guidelines_str = ""
+        for item in sub_top5[:5]:
+            summary = self._get_prototype_summary(item['disease'])
+            if summary:
+                guidelines_str += f"- [Guideline for {item['disease']}]: {summary}\n"
+        return f"""
+        # Clinical Task: Dermnet Sub-category Classification
+        You are a dermatology expert specializing in fine-grained sub-category diagnosis.
+        Your goal is to determine the precise sub-type of skin lesion based on visual findings and medical knowledge.
+
+        ## 1. Current Patient Presentation
+        {vision_findings}
+
+        ## 2. AI Prediction Candidates
+        ### Main Categories (Top 3):
+        {main_str}
+        ### Sub-category Candidates (Top 5, Sorted by Probability):
+        {sub_str}
+
+        ## 3. Diagnostic Guidelines (Standard Criteria)
+        {guidelines_str if guidelines_str else "No specific guidelines available."}
+
+        ## 4. Historical Reference Cases
+        {history_str if history_str else "No similar cases found in database."}
+
+        ## 5. Knowledge Base
+        ### Static Handbook Knowledge:
+        {static_knowledge}... 
+
+        ## Diagnostic Requirements:
+        1. **Sub-type Specificity**: Focus on subtle visual cues (scale type, color gradient, distribution) that distinguish sub-categories.
+        2. **Guideline Cross-Check**: Compare Section 1 against Section 3 and Section 5 to confirm criteria match.
+        3. **Category Consistency**: Ensure the selected sub-category logically belongs to one of the main categories in Section 2.
+        4. **Evidence Alignment**: Cite specific findings from Section 1 that match historical cases in Section 4.
+
+        ## Output Format (JSON ONLY):
+        {{
+            "KeyFindings": "Concise summary of subtype-defining visual features",
+            "GuidelineCompliance": "Assessment of how the case fits Section 3 guidelines",
+            "SubDiagnosis": "Precise sub-category name",
+            "Confidence": "High/Medium/Low",
+            "Reasoning": "Step-by-step synthesis using guidelines, knowledge, and historical cases"
         }}
         """
 

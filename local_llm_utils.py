@@ -351,43 +351,39 @@ def local_generate_response_vl(
     )[0]
     return response.strip()
 
-# 模型路径
-MODEL_NAME_7B = "/225040511/project/hf_cache/DeepSeek-R1-7B-chat" 
+MODEL_NAME_MEDGEMMA = "/225040511/project/hf_cache/medgemma-27b-it"
 
-# 显存配置（7B 模型 8-bit 量化仅占用约 8-9GB 显存，32GB 环境非常轻松）
 max_mem = {i: "30GiB" for i in range(torch.cuda.device_count())}
 max_mem["cpu"] = "50GiB"
 
-model_7b = None
-tokenizer_7b = None
+med_model = None
+med_processor = None
 
-def _load_deepseek_chat_model():
-    """初始化并缓存 DeepSeek-Chat 模型"""
-    global model_7b, tokenizer_7b
-    if model_7b is None or tokenizer_7b is None:
-        print(f"⏳ 首次加载 DeepSeek-Chat 模型: {MODEL_NAME_7B}...")
+def _load_medgemma_model():
+    global med_model, med_processor
+    if med_model is None or med_processor is None:
+        print(f"⏳ 首次加载 MedGemma-27B-it: {MODEL_NAME_MEDGEMMA}...")
         try:
-            tokenizer_7b = AutoTokenizer.from_pretrained(MODEL_NAME_7B, trust_remote_code=True)
-            tokenizer_7b.pad_token = tokenizer_7b.eos_token 
-
-            # 8-bit 量化足以保持精度并大幅节省显存
-            bnb_config = BitsAndBytesConfig(
-                load_in_8bit=True,
-                llm_int8_enable_fp32_cpu_offload=True
+            med_processor = AutoProcessor.from_pretrained(
+                MODEL_NAME_MEDGEMMA,
+                trust_remote_code=True
             )
-
-            model_7b = AutoModelForCausalLM.from_pretrained(
-                MODEL_NAME_7B,
-                local_files_only=True,
-                device_map="auto", # 自动分配到 GPU
-                quantization_config=bnb_config,
-                torch_dtype=torch.float16,
+            bnb_config = BitsAndBytesConfig(
+                load_in_4bit=True,
+                bnb_4bit_compute_dtype=torch.bfloat16,
+                bnb_4bit_use_double_quant=True,
+                bnb_4bit_quant_type="nf4",
+            )
+            med_model = AutoModelForImageTextToText.from_pretrained(
+                MODEL_NAME_MEDGEMMA,
+                device_map="auto",
                 trust_remote_code=True,
-                use_safetensors=False  # 👈 强制加载 .bin 权重
+                quantization_config=bnb_config,
+                torch_dtype=torch.bfloat16,
             ).eval()
-            print("✅ DeepSeek-Chat 加载成功。")
+            print("✅ MedGemma-27B-it 加载成功。")
         except Exception as e:
-            print(f"❌ 模型加载失败: {e}")
+            print(f"❌ MedGemma 模型加载失败: {e}")
             raise
 
 def local_generate_deepseek_chat_response(
@@ -399,61 +395,79 @@ def local_generate_deepseek_chat_response(
         image_path: str = None 
 ) -> dict:
     """
-    使用本地 DeepSeek-Chat 模型生成标准 JSON 响应。
     """
-    _load_deepseek_chat_model()
+    _load_medgemma_model()
 
-    # 1. 组装对话格式
-    # DeepSeek-Chat 对 system_role 比较敏感，建议清晰隔离
-    messages = [
-        {"role": "system", "content": system_role},
-        {"role": "user", "content": user_input}
-    ]
+    if image_path:
+        image = Image.open(image_path).convert("RGB")
+    else:
+        image = None
 
-    # 使用模型自带的 chat_template
-    input_text = tokenizer_7b.apply_chat_template(
-        messages, 
-        tokenize=False, 
-        add_generation_prompt=True
+    enhanced_prompt = (
+        f"{system_role}\n\n"
+        "You are reviewing and synthesizing several recent dermatology cases. Please:\n"
+        "- Summarize commonalities and key differences across cases (anatomic site + morphological terminology);\n"
+        "- Emphasize the most heuristic diagnostic clues and clinical 'red flags';\n"
+        "- Highlight differential diagnostic pearls for common misinterpretations and suggest next-step investigations;\n"
+        "- Actively integrate new observations into prototype representations to establish more robust global characteristics.\n\n"
+        "User Input:\n"
+        f"{user_input}\n\n"
+        "Output ONLY in the following JSON format:\n"
+        "{\"summary\": \"A single-paragraph, information-dense clinical narrative synthesizing cross-case insights.\"}\n"
     )
 
-    input_ids = tokenizer_7b([input_text], return_tensors="pt").to(model_7b.device)
+    if image is not None:
+        messages = [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image"},
+                    {"type": "text", "text": enhanced_prompt},
+                ],
+            }
+        ]
+        text = med_processor.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        inputs = med_processor(text=[text], images=[image], return_tensors="pt").to(med_model.device)
+    else:
+        messages = [
+            {"role": "user", "content": [{"type": "text", "text": enhanced_prompt}]}
+        ]
+        text = med_processor.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+        inputs = med_processor(text=[text], return_tensors="pt").to(med_model.device)
 
-    # 2. 模型生成
     with torch.no_grad():
-        outputs = model_7b.generate(
-            **input_ids,
+        generated_ids = med_model.generate(
+            **inputs,
             max_new_tokens=max_tokens,
             do_sample=True,
-            temperature=temperature if temperature > 0 else 0.1,
+            temperature=max(temperature, 0.1),
             top_p=0.9,
-            repetition_penalty=1.1, # 7B 模型容易出现重复，稍微加一点惩罚
-            eos_token_id=tokenizer_7b.eos_token_id,
+            repetition_penalty=1.1,
         )
 
-    # 3. 解析输出文本
-    # 只提取模型新生成的 token
-    generated_text = tokenizer_7b.decode(outputs[0][input_ids.input_ids.shape[-1]:], skip_special_tokens=True)
+    generated_ids = [
+        output_ids[len(input_ids):]
+        for input_ids, output_ids in zip(inputs.input_ids, generated_ids)
+    ]
+    generated_text = med_processor.batch_decode(
+        generated_ids, skip_special_tokens=True, clean_up_tokenization_spaces=True
+    )[0]
 
-    # 4. 健壮的 JSON 提取逻辑
     try:
-        # 1. 寻找 JSON 块
         json_match = re.search(r'```json\s*(\{.*?\})\s*```', generated_text, flags=re.S)
         if json_match:
             return json.loads(json_match.group(1))
-        
-        # 2. 寻找最外层的 {}
         json_match = re.search(r'(\{.*\})', generated_text, flags=re.S)
         if json_match:
             return json.loads(json_match.group(1))
-            
-        # 3. 如果实在找不到 {}，说明模型输出了纯文本，抛出异常进入下面的 except
         raise ValueError("No JSON found")
-
-    except Exception as e:
-        # 关键点：如果解析失败，直接返回包含原始文本的字典，外层函数会处理它
+    except Exception:
         return {
-            "summary": generated_text, # 假设模型直接输出了总结内容
+            "summary": generated_text,
             "raw_output": generated_text,
             "status": "error_parsed_as_raw"
         }

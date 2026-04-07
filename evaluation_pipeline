@@ -1,1 +1,0 @@
-python3 agent_workflow.py --model_name "gpt-4o-mini" --image_folder "/Volumes/T7/SkinGPT-X-Dataset/DDI/" --markdown_file_path "skin_handbook.md" --output_folder "/Volumes/T7/SkinGPT-X-EvaluationResults/DDI/output/"
