@@ -22,7 +22,7 @@ SkinGPT-X addresses two fundamental limitations of standalone LLMs in clinical d
 
 By simulating the cognitive workflow of expert dermatologists, SkinGPT-X combines visual reasoning, textbook knowledge retrieval, and a **self-evolving agent memory (EvoDerma-Mem)** that continuously refines diagnostic guidelines through accumulated clinical experience — without parameter retraining.
 
-![Fig1](5_Figure_file/Fig1.pdf)
+![Fig1](images/Fig1.png)
 
 *Figure 1. (a) Clinicians formulate diagnosis reports by integrating three pillars: personal clinical experience, standard medical literature, and recall of similar historical cases. (b) SkinGPT-X architecture: the Vision Agent extracts visual findings, the Pre-Diagnosis Agent generates hypotheses, and the RAG module retrieves handbook knowledge. The Case-Review Agent synthesizes all evidence with EvoDerma-Mem (top-5 similar cases + evolved guidelines) to produce a validated report. The Summarize Agent continuously updates the dynamic repository.*
 
@@ -44,7 +44,7 @@ SkinGPT-X orchestrates six specialized agents across two phases.
 
 SkinGPT-X consistently outperforms MedGemma, Hulu-Med, Qwen3-VL, and fine-tuned PanDerm across all four evaluation metrics (ACC, Weighted F1, MCC, Cohen's Kappa) on all benchmarks (p < 0.001, two-sided t-test).
 
-![Fig2](Fig2.png)
+![Fig2](images/Fig2.png)
 
 *Figure 2. (a) Performance comparison across four public benchmark datasets. SkinGPT-X achieves +13.0% Weighted F1 on DermNet and +9.6% ACC on DDI31 over the second-best model. (b) Case study: MedGemma and Hulu-Med both misdiagnose a porphyria case as psoriasis, while SkinGPT-X correctly identifies the rare condition by cross-referencing evolved guidelines with visual findings.*
 
@@ -54,7 +54,7 @@ SkinGPT-X consistently outperforms MedGemma, Hulu-Med, Qwen3-VL, and fine-tuned 
 
 To stress-test SkinGPT-X under realistic fine-grained diagnostic complexity, we constructed **DermNet498**, re-categorizing DermNet from 23 broad super-classes into 498 clinically distinct sub-classes. For example, *Psoriasis pictures Lichen Planus and related diseases* is decoupled into 27 distinct classes (17 Psoriasis subtypes + 6 Lichen Planus variants). Intermediate-scale variants (DermNet225, DermNet272, DermNet353) enable controlled granularity ablation.
 
-![Fig3](Fig3.png)
+![Fig3](images/Fig3.png)
 
 *Figure 3. (a) Hierarchical Sankey diagram showing category expansion from DermNet (23 classes) through DermNet225/272/353 to DermNet498 (498 classes, 18,317 samples). (b) SkinGPT-X achieves +5.4% ACC and +8.2% MCC over PanDerm on DermNet498 (p < 0.001). (c) As diagnostic granularity scales from 23 to 498 categories, SkinGPT-X consistently maintains a robust margin over PanDerm, preserving ACC / Weighted F1 / Kappa above 60%.*
 
@@ -66,7 +66,7 @@ We curated the **Rare Skin Disease Dataset (RSDD)** — the first benchmark spec
 
 The 8 categories: Cutaneous Neuroendocrine Carcinoma (n=115), Generalized Pustular Psoriasis (n=110), Behcet's Disease (n=81), Blue Rubber Bleb Nevus Syndrome (n=73), Dermatofibrosarcoma Protuberans (n=59), Gorlin Syndrome (n=58), Epithelioid Sarcoma (n=46), Cryopyrin-associated Periodic Syndrome (n=22).
 
-![Fig4](Fig4.png)
+![Fig4](images/Fig4.png)
 
 *Figure 4. (a) RSDD construction pipeline integrating diverse medical sources. (b) SkinGPT-X achieves +9.8% ACC, +7.1% Weighted F1, +9.7% MCC, +10% Kappa over fine-tuned PanDerm on RSDD (p < 0.001). (c) Representative rare disease case studies: EvoDerma-Mem enables correct identification of Blue Rubber Bleb Nevus Syndrome and Behcet's Disease by cross-referencing evolved guidelines with past cases, where competing models fail.*
 
@@ -89,7 +89,7 @@ EvoDerma-Mem is a graph-native clinical memory stored in Neo4j. Each case is sto
                                                  └──[USED_CASE]──► (Case)
 ```
 
-![Fig5](Fig5.png)
+![Fig5](images/Fig5.png)
 
 *Figure 5. (a) Ablation study: EvoDerma-Mem yields +10.1% ACC and +11.0% Weighted F1 on DermNet498 over the memory-free baseline (p < 0.001). (b) Guidelines Evolution Timeline showing iterative refinement across 50+ versions for 100+ disease categories — deeper color intensity indicates larger knowledge updates. (c) Lichen Planus guideline evolution example: the current version extends beyond the classic "6 P's" to cover atypical anatomical sites and morphological mimics of psoriasis/eczema. (d) Physician validation (n=100 cases, 5-point scale): Rigorousness of Medical Logic 4.889, Completeness of Guidelines 4.904, Rationality of Manifestation Refinement 4.914.*
 
