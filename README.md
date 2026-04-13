@@ -22,7 +22,7 @@ SkinGPT-X addresses two fundamental limitations of standalone LLMs in clinical d
 
 By simulating the cognitive workflow of expert dermatologists, SkinGPT-X combines visual reasoning, textbook knowledge retrieval, and a **self-evolving agent memory (EvoDerma-Mem)** that continuously refines diagnostic guidelines through accumulated clinical experience — without parameter retraining.
 
-![Fig1](Fig1.png)
+![Fig1](5_Figure_file/Fig1.pdf)
 
 *Figure 1. (a) Clinicians formulate diagnosis reports by integrating three pillars: personal clinical experience, standard medical literature, and recall of similar historical cases. (b) SkinGPT-X architecture: the Vision Agent extracts visual findings, the Pre-Diagnosis Agent generates hypotheses, and the RAG module retrieves handbook knowledge. The Case-Review Agent synthesizes all evidence with EvoDerma-Mem (top-5 similar cases + evolved guidelines) to produce a validated report. The Summarize Agent continuously updates the dynamic repository.*
 
