@@ -138,6 +138,15 @@ python build_knowledge_base_evolve.py \
 
 ---
 
+## Demo
+
+
+https://github.com/user-attachments/assets/d3cd82cd-6fc0-46d4-b3bc-65738a1a34e9
+
+
+
+---
+
 ## Implementation Details
 
 Fine-tuning Pre-Diagnosis Agent and PanDerm: `epochs=30`, `warmup=10`, `lr=5e-4`, `batch=128`. LLM agents: Qwen3 series, `max_tokens=4096`, `temperature=0.3`. Vision Agent: Qwen3-VL. Case-Review Agent: Qwen3-30B-A3B. Embedding model: BGE-small-en-v1.5 (local path). Vector store: LanceDB (read-only in CaseReviewAgent). Graph database: Neo4j. Stack: Python 3.10, PyTorch 2.9.1+cu128, CUDA 12.8.
