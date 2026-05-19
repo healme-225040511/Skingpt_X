@@ -237,4 +237,3 @@ Code in this repository is licensed under the MIT License. See [LICENSE](./LICEN
 
 Documentation, README content, and other non-code materials in this repository are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See [LICENSE-docs](./LICENSE-docs) or visit https://creativecommons.org/licenses/by/4.0/.
 
-**Funding:** The Chinese University of Hong Kong, Shenzhen, Award No. UDF01004172.
