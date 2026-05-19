@@ -107,7 +107,69 @@ pip install -r requirements.txt
 
 Dependencies: Neo4j, LanceDB (local), Qwen3-VL, Qwen3-30B-A3B, BGE-small-en-v1.5, LlamaIndex.
 
-### 2. Full Multi-Agent Inference
+### 2. Download Hugging Face Models
+
+The current code resolves model paths in this order: `SKINGPT_HF_HOME` -> `HF_HOME` -> `../hf_cache` relative to the repository root. If your project lives in a non-default location, you can also set `SKINGPT_PROJECT_ROOT` to the repository root. Download the minimal demo models first:
+
+```bash
+export SKINGPT_PROJECT_ROOT="$PWD"
+export SKINGPT_HF_HOME="$PWD/../hf_cache"
+export HF_HOME="$SKINGPT_HF_HOME"
+# export HF_TOKEN=hf_xxx  # Optional: only needed for gated/private models
+python scripts/download_hf_models.py --profile minimal
+```
+
+`--profile minimal` downloads:
+
+- `BAAI/bge-small-en-v1.5` to `$HF_HOME/bge-small-en-v1.5/BAAI/bge-small-en-v1___5`
+- `Qwen/Qwen2-VL-7B-Instruct` to `$HF_HOME/Qwen-VL-8B-Instruct`
+
+For the larger README-level local deployment, use:
+
+```bash
+python scripts/download_hf_models.py --profile full
+```
+
+`--profile full` additionally downloads:
+
+- `Qwen/Qwen3-VL-30B-A3B-Instruct-FP8` to `$HF_HOME/Qwen3-VL-30B`
+- `Qwen/Qwen3-30B-A3B` to `$HF_HOME/Qwen3-30B-A3B`
+
+### 3. Neo4j Setup For Fitzpatrick17k Case-Review Demo
+
+This repository now includes a local `NEO4J_HOME/` copy inside the project root, so the Fitzpatrick17k demo can run end-to-end inside the repository. The demo script connects to the running `neo4j` database from this local copy.
+
+```bash
+cd /path/to/Skingpt_X
+export NEO4J_HOME="$PWD/NEO4J_HOME"
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+export PATH="$JAVA_HOME/bin:$PATH"
+$JAVA_HOME/bin/java -version
+cd "$NEO4J_HOME/bin"
+./neo4j start
+```
+
+If Neo4j prints `Unsupported Java 17 ... Please use Java(TM) 21`, the `JAVA_HOME` above is required. If you want the Fit17k backup store, make sure the local Neo4j copy is started against the store prepared as the active `neo4j` database, then connect with database name `neo4j` rather than `neo4j_backup_for_fit17k`.
+
+### 4. A Quick Start Demo
+
+This repository includes a small three-image demo that only runs `case_review_rag_agent.py` and reuses cached Fitzpatrick17k vision findings plus existing Panderm predictions.
+
+```bash
+cd /path/to/Skingpt_X
+export SKINGPT_PROJECT_ROOT="$PWD"
+export SKINGPT_HF_HOME="$PWD/../hf_cache"
+python scripts/run_fit17k_case_review_demo.py
+```
+
+The script will:
+
+- create a demo manifest and task file under `../Evaluation_Results/fitzpatrick17k/SkinGPT-X/case_review_rag_demo/`
+- reuse an already-running Neo4j server when available
+- read Fitzpatrick17k features from `../Evaluation_Results/fitzpatrick17k/SkinGPT-X/`
+- write `case_review_results.json` and `case_review_prompts.json` into the demo output directory
+
+### 5. Full Multi-Agent Inference
 
 ```bash
 python agent_workflow.py \
@@ -117,7 +179,9 @@ python agent_workflow.py \
   --output_folder      "output/"
 ```
 
-### 3. Build / Evolve Knowledge Base
+Current checkout status: the command above is the intended demo entrypoint, but this repository snapshot is not yet runnable in a clean environment without additional files/services. `agent_workflow.py` imports `case_review_agent.py`, `reasoning_agent.py`, `skingpt_agent.py`, and `web_search_agent.py`, but only compiled `__pycache__` artifacts are present. It also requires installed Python dependencies, a local LanceDB directory, Neo4j, input image data, and PanDerm prediction CSVs at the configured paths.
+
+### 6. Build / Evolve Knowledge Base
 
 ```bash
 # Initial build from labelled image split

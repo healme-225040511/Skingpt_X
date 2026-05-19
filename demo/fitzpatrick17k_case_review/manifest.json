@@ -1,0 +1,23 @@
+[
+  {
+    "relative_path": "/test/erythema annulare centrifigum/910b6e79d1e4cb38c6d86294fa0c9786.jpg",
+    "source": "/225040511/Dataset/fitzpatrick17k/dataset/test/erythema annulare centrifigum/910b6e79d1e4cb38c6d86294fa0c9786.jpg",
+    "runtime_image": "/225040511/project/Evaluation_Results/fitzpatrick17k/SkinGPT-X/case_review_rag_demo/images/test/erythema annulare centrifigum/910b6e79d1e4cb38c6d86294fa0c9786.jpg",
+    "demo_image": "/225040511/project/Skingpt_X/demo/fitzpatrick17k_case_review/images/test/erythema annulare centrifigum/910b6e79d1e4cb38c6d86294fa0c9786.jpg",
+    "label": "erythema annulare centrifigum"
+  },
+  {
+    "relative_path": "/test/scabies/1ac0e3c9b31905e8460042d59cdeb234.jpg",
+    "source": "/225040511/Dataset/fitzpatrick17k/dataset/test/scabies/1ac0e3c9b31905e8460042d59cdeb234.jpg",
+    "runtime_image": "/225040511/project/Evaluation_Results/fitzpatrick17k/SkinGPT-X/case_review_rag_demo/images/test/scabies/1ac0e3c9b31905e8460042d59cdeb234.jpg",
+    "demo_image": "/225040511/project/Skingpt_X/demo/fitzpatrick17k_case_review/images/test/scabies/1ac0e3c9b31905e8460042d59cdeb234.jpg",
+    "label": "scabies"
+  },
+  {
+    "relative_path": "/test/pyogenic granuloma/82d51006e6d32b5d5471b13010d425aa.jpg",
+    "source": "/225040511/Dataset/fitzpatrick17k/dataset/test/pyogenic granuloma/82d51006e6d32b5d5471b13010d425aa.jpg",
+    "runtime_image": "/225040511/project/Evaluation_Results/fitzpatrick17k/SkinGPT-X/case_review_rag_demo/images/test/pyogenic granuloma/82d51006e6d32b5d5471b13010d425aa.jpg",
+    "demo_image": "/225040511/project/Skingpt_X/demo/fitzpatrick17k_case_review/images/test/pyogenic granuloma/82d51006e6d32b5d5471b13010d425aa.jpg",
+    "label": "pyogenic granuloma"
+  }
+]

@@ -4,15 +4,28 @@ from Constants import DERMNET_DISEASE_NAME
 from typing import Dict, List
 import json
 import os
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(os.environ.get("SKINGPT_PROJECT_ROOT", Path(__file__).resolve().parent))
+DEFAULT_HF_HOME = PROJECT_ROOT.parent / "hf_cache"
+HF_HOME_PATH = Path(
+    os.environ.get("SKINGPT_HF_HOME", os.environ.get("HF_HOME", str(DEFAULT_HF_HOME)))
+).expanduser().resolve()
+BGE_MODEL_PATH = HF_HOME_PATH / "bge-small-en-v1.5" / "BAAI" / "bge-small-en-v1___5"
+QWEN3_VL_MODEL_PATH = HF_HOME_PATH / "Qwen3-VL-30B"
+QWEN_VL_MODEL_PATH = HF_HOME_PATH / "Qwen-VL-8B-Instruct"
+MEDGEMMA_MODEL_PATH = HF_HOME_PATH / "medgemma-27b-it"
+
 # # 必须在任何 transformers 导入前执行
-os.environ["HF_HOME"] = "/225040511/project/hf_cache"
+os.environ["HF_HOME"] = str(HF_HOME_PATH)
 from PIL import Image  # 仅用于多模态模型 (如 Qwen-VL)
 
 # 全局变量：用于缓存模型和分词器，避免每次调用都重新加载
 # 请确保您的环境中安装了 'Qwen/Qwen-7B-Chat' 模型
-# MODEL_NAME = "/225040511/project/hf_cache/models--Qwen--Qwen3-32B/snapshots/9216db5781bf21249d130ec9da846c4624c16137"
-MODEL_NAME = "/225040511/project/hf_cache/Qwen3-VL-30B"
-# MODEL_NAME = "/225040511/project/hf_cache/DeepSeek-R1-67B-chat"
+# MODEL_NAME = str(HF_HOME_PATH / "models--Qwen--Qwen3-32B" / "snapshots" / "9216db5781bf21249d130ec9da846c4624c16137")
+MODEL_NAME = str(QWEN3_VL_MODEL_PATH)
+# MODEL_NAME = str(HF_HOME_PATH / "DeepSeek-R1-67B-chat")
 max_mem = {i: "30GiB" for i in range(torch.cuda.device_count())}
 max_mem["cpu"] = "50GiB"          # 溢出部分放内存，避免直接炸显存
 
@@ -118,11 +131,11 @@ def local_generate_response(
 # )
 
 # # 必须在任何 transformers 导入前执行环境路径设置
-# os.environ["HF_HOME"] = "/225040511/project/hf_cache"
+# os.environ["HF_HOME"] = str(HF_HOME_PATH)
 
 # # ================= 配置区域 =================
 # # 更换为 MedGemma-27B 的本地路径
-# MODEL_NAME = "/225040511/project/hf_cache/medgemma-27b-it"
+# MODEL_NAME = str(HF_HOME_PATH / "medgemma-27b-it")
 
 # # 全局变量缓存
 # model = None
@@ -225,14 +238,14 @@ import json
 import os
 
 # 必须在任何 transformers 导入前执行
-os.environ["HF_HOME"] = "/225040511/project/hf_cache"
+os.environ["HF_HOME"] = str(HF_HOME_PATH)
 from PIL import Image  # 不再需要单独导入（transformers 内部已封装）
 
 # =============== 【新增】轻量 VL 模型配置 ===============
 # 👇 替换为你的本地 2B VL 模型路径（推荐！）
 # 从 HF 下载命令：huggingface-cli download Qwen/Qwen2-VL-2B-Instruct --local-dir ./qwen2-vl-2b
-VL_MODEL_NAME = "/225040511/project/hf_cache/Qwen-VL-8B-Instruct"
-# 若想用 7B：VL_MODEL_NAME = "/225040511/project/hf_cache/models--Qwen--Qwen2-VL-7B-Instruct/snapshots/latest"
+VL_MODEL_NAME = str(QWEN_VL_MODEL_PATH)
+# 若想用 7B：VL_MODEL_NAME = str(HF_HOME_PATH / "models--Qwen--Qwen2-VL-7B-Instruct" / "snapshots" / "latest")
 
 vl_model = None      # 👈 新增：VL 模型全局缓存
 vl_processor = None  # 👈 新增：VL tokenizer 全局缓存
@@ -273,7 +286,6 @@ def _load_qwen_vl_model():
 
 
 import re
-from pathlib import Path
 
 def parse_skin_disease_path(image_path):
     p = Path(image_path)
@@ -351,7 +363,7 @@ def local_generate_response_vl(
     )[0]
     return response.strip()
 
-MODEL_NAME_MEDGEMMA = "/225040511/project/hf_cache/medgemma-27b-it"
+MODEL_NAME_MEDGEMMA = str(MEDGEMMA_MODEL_PATH)
 
 max_mem = {i: "30GiB" for i in range(torch.cuda.device_count())}
 max_mem["cpu"] = "50GiB"

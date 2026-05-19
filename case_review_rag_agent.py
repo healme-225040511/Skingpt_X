@@ -19,6 +19,7 @@ from llama_index.core.indices import VectorStoreIndex
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from Constants import RDD_DISEASE_NAME, DDI_DISEASE_NAME
 # 工具函数
+from local_llm_utils import BGE_MODEL_PATH
 from local_llm_utils import local_generate_response as generate_response
 from local_llm_utils import local_generate_deepseek_chat_response as generate_response_chat
 from utils import process_markdown
@@ -36,7 +37,7 @@ class CaseReviewAgent:
         self.driver = GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
         
         Settings.embed_model = HuggingFaceEmbedding(
-            model_name="/225040511/project/hf_cache/bge-small-en-v1.5/BAAI/bge-small-en-v1___5"
+            model_name=str(BGE_MODEL_PATH)
         )
         self.text_store = LanceDBVectorStore(uri=lancedb_uri, table_name="text_collection", mode="ro")
         self.vector_index = VectorStoreIndex.from_vector_store(self.text_store)
