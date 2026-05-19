@@ -216,14 +216,14 @@ https://github.com/user-attachments/assets/d3cd82cd-6fc0-46d4-b3bc-65738a1a34e9
 If this project is helpful for you.
 
 ```bibtex
-@article{chen2025skingptx,
-  title   = {SkinGPT-X: A Self-Evolving Collaborative Multi-Agent System
-             for Transparent and Trustworthy Dermatological Diagnosis},
-  author  = {Chen, Zhangtianyi and Shen, Yuhao and Widjaja, Florensia
-             and Xu, Yan and Sun, Liyuan and Wang, Zijian and Chen, Hongyi
-             and Dai, Wufei and Wang, Ziwen and Zhang, Xinyuan and Zhou, Juexiao},
-  year    = {2025},
-  note    = {CUHK-Shenzhen, Award No. UDF01004172}
+@misc{chen2026skingptxselfevolvingcollaborativemultiagent,
+      title={SkinGPT-X: A Self-Evolving Collaborative Multi-Agent System for Transparent and Trustworthy Dermatological Diagnosis}, 
+      author={Zhangtianyi Chen and Yuhao Shen and Florensia Widjaja and Yan Xu and Liyuan Sun and Zijian Wang and Hongyi Chen and Wufei Dai and Juexiao Zhou},
+      year={2026},
+      eprint={2603.26122},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.26122}, 
 }
 ```
 
