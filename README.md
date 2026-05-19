@@ -10,7 +10,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-Preprint-b31b1b)](https://arxiv.org/abs/2304.10674)
 [![GitHub](https://img.shields.io/badge/Code-GitHub-181717)](https://github.com/healme-225040511/Skingpt_X)
-[![License](https://img.shields.io/badge/License-Non--commercial-blue)](#license)
+[![License](https://img.shields.io/badge/License-MIT%20%2B%20CC%20BY%204.0-blue)](#license)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776ab)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.9.1-ee4c2c)](https://pytorch.org)
 
@@ -96,7 +96,10 @@ EvoDerma-Mem is a graph-native clinical memory stored in Neo4j. Each case is sto
 ---
 
 ## Quick Start
+### 0. Reproduction Instructions
+Shared data include the HAM10000, DDI, Fitzpatrick-17k, and Dermnet datasets. The HAM10000 dataset is accessible via the Harvard Dataverse at https: //doi.org/10.7910/DVN/DBW86T; the DDI dataset can be accessed through its official project repository at https://ddi-dataset.github.io/; the Fitzpatrick-17k dataset is available via its GitHub repository at https://github.com/mravuri/fitzpatrick17k; and the Dermnet dataset can be accessed at https://www.kaggle.com/datasets/shubhamgoel27/dermnet. 
 
+Follow the steps below to run the pipeline on your own machine.
 ### 1. Environment
 
 ```bash
@@ -249,6 +252,8 @@ Related work: [SkinGPT-R1](https://arxiv.org/abs/2511.15242) · [SkinGPT-4](http
 
 ## License
 
-Non-commercial use only. Researchers may sign the license at the [code repository](https://github.com/healme-225040511/Skingpt_X) and contact J.Z. or Z.C. for access.
+Code in this repository is licensed under the MIT License. See [LICENSE](./LICENSE).
+
+Documentation, README content, and other non-code materials in this repository are licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0). See [LICENSE-docs](./LICENSE-docs) or visit https://creativecommons.org/licenses/by/4.0/.
 
 **Funding:** The Chinese University of Hong Kong, Shenzhen, Award No. UDF01004172.
