@@ -212,27 +212,8 @@ https://github.com/user-attachments/assets/d3cd82cd-6fc0-46d4-b3bc-65738a1a34e9
 
 
 
----
-
-## Implementation Details
-
-Fine-tuning Pre-Diagnosis Agent and PanDerm: `epochs=30`, `warmup=10`, `lr=5e-4`, `batch=128`. LLM agents: Qwen3 series, `max_tokens=4096`, `temperature=0.3`. Vision Agent: Qwen3-VL. Case-Review Agent: Qwen3-30B-A3B. Embedding model: BGE-small-en-v1.5 (local path). Vector store: LanceDB (read-only in CaseReviewAgent). Graph database: Neo4j. Stack: Python 3.10, PyTorch 2.9.1+cu128, CUDA 12.8.
-
-**Data conventions:** `train_files.json` — list of relative image paths. `train_feats.npy` — feature vectors aligned with `train_files.json`. Disease label inferred from parent folder name. `sub_label` extracted from filename stem (digits removed, `-` → spaces).
-
----
-
-## Known Limitations
-
-**Computational overhead:** Multi-agent orchestration has higher latency than monolithic models; may challenge high-throughput real-time settings. Future work targets optimized agent communication protocols.
-
-**Image acquisition heterogeneity:** Sensor calibration and lighting variations across medical centers can degrade EvoDerma-Mem retrieval accuracy via distribution shift in the latent feature space.
-
-**Incomplete:** `skingpt_agent.py` currently simulates outputs via `ollama3.2-vision`; can be upgraded to a true SkinGPT-4 model integration. Move DB/API credentials to environment variables before deployment.
-
----
-
 ## Citation
+If this project is helpful for you.
 
 ```bibtex
 @article{chen2025skingptx,
