@@ -61,7 +61,15 @@ PYTHONPATH=. python -m pytest -q
 PYTHONPATH=. python -m self_evolving_v1.pipeline --help
 PYTHONPATH=. python -m self_evolving_v1.audit_initialization --help
 PYTHONPATH=. python -m self_evolving_v1.controls --help
+PYTHONPATH=. python -m self_evolving_v1.smoke --help
 ```
+
+Before a full inference run, `self_evolving_v1.smoke rules` selects two frozen
+rule proposals per dataset by a deterministic stable hash. After
+`build-cohort`, `self_evolving_v1.smoke diagnosis` selects at most 96 cases by
+dataset and rule round-robin without using the ground-truth label. Both commands
+write two unchanged-record shards and a `smoke_manifest_audit.json` containing
+all input/output file, content, record, coverage, and self-audit hashes.
 
 `self_evolving_v1.run_inference` is append-only and resumable by `global_index`.
 Run one manifest shard per GPU. Keep model ID, checkpoint files, input manifests,
