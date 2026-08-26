@@ -8,6 +8,13 @@ from pathlib import Path
 
 import numpy as np
 
+from self_evolving_v1.concepts import (
+    CONCEPT_LEXICON_SHA256,
+    CONCEPT_MATCHER_ALGORITHM_REVISION,
+    CONCEPT_MATCHER_SHA256,
+    CONCEPT_PROTOCOL,
+    build_concept_ledger,
+)
 from self_evolving_v1.core import rule_applicability, strict_rule_from_response
 from self_evolving_v1.pipeline import (
     density_proxy,
@@ -141,6 +148,95 @@ old
 
 [4. Precedent Cases from the Same Frozen Training Checkpoint]:
 cases"""
+
+
+def _canonical_record_and_payload() -> tuple[dict, dict]:
+    roles = [
+        "representative",
+        "diverse",
+        "quality_screened_embedding_hard",
+    ]
+    cases_a = [
+        {
+            "case_id": f"ca{index}",
+            "selection_role": role,
+            "findings": (
+                "The lesion has an irregular border, a blue-white veil, and radial streaks."
+            ),
+        }
+        for index, role in enumerate(roles, 1)
+    ]
+    cases_b = [
+        {
+            "case_id": f"cb{index}",
+            "selection_role": role,
+            "findings": (
+                "Honey-colored crust covers a symmetrical plaque with a well-defined border."
+            ),
+        }
+        for index, role in enumerate(roles, 1)
+    ]
+    ledger = build_concept_ledger(cases_a, cases_b, minimum_support=3)
+    ids_a = {entry["concept_id"] for entry in ledger["candidate_a"]}
+    ids_b = {entry["concept_id"] for entry in ledger["candidate_b"]}
+    assert {"blue_white_veil", "irregular_border"} <= ids_a
+    assert {"honey_colored_crust", "plaque"} <= ids_b
+
+    record = {
+        "schema_version": "v1.1",
+        "matching_protocol": CONCEPT_PROTOCOL,
+        "concept_lexicon_sha256": CONCEPT_LEXICON_SHA256,
+        "matcher_algorithm_revision": CONCEPT_MATCHER_ALGORITHM_REVISION,
+        "matcher_sha256": CONCEPT_MATCHER_SHA256,
+        "concept_ledger": ledger,
+        "concept_ledger_sha256": ledger["content_sha256"],
+        "rule_id": "canonical_rule_v11",
+        "dataset": "ToyDataset",
+        "disease_a": "Disease Alpha",
+        "disease_b": "Disease Beta",
+        "source_case_ids_a": [case["case_id"] for case in cases_a],
+        "source_case_ids_b": [case["case_id"] for case in cases_b],
+        "source_cases_a": [
+            {
+                "case_id": case["case_id"],
+                "findings_excerpt": case["findings"],
+            }
+            for case in cases_a
+        ],
+        "source_cases_b": [
+            {
+                "case_id": case["case_id"],
+                "findings_excerpt": case["findings"],
+            }
+            for case in cases_b
+        ],
+        "source_selection_a": [
+            {"case_id": case["case_id"], "selection_role": case["selection_role"]}
+            for case in cases_a
+        ],
+        "source_selection_b": [
+            {"case_id": case["case_id"], "selection_role": case["selection_role"]}
+            for case in cases_b
+        ],
+        "minimum_feature_support": 3,
+    }
+    payload = {
+        "schema_version": "v1.1",
+        "matching_protocol": CONCEPT_PROTOCOL,
+        "concept_ledger_sha256": ledger["content_sha256"],
+        "publishable": True,
+        "disease_a": "Disease Alpha",
+        "disease_b": "Disease Beta",
+        "feature_ids_a": ["blue_white_veil", "irregular_border"],
+        "feature_ids_b": ["honey_colored_crust", "plaque"],
+        "nondiscriminative_concept_ids": [],
+        "required_context": [],
+        "limitations": ["Abstain unless two compiled visual concepts agree."],
+        "abstention_codes": [],
+        "source_case_ids_a": record["source_case_ids_a"],
+        "source_case_ids_b": record["source_case_ids_b"],
+    }
+    return record, payload
 
 
 def _write_json(path: Path, payload: dict) -> None:
@@ -285,6 +381,134 @@ def test_v11_rejects_incomplete_sources_and_unverifiable_quotes() -> None:
     assert error == "invalid_feature_evidence"
 
 
+def test_canonical_rule_is_recomputed_and_executes_synonyms_fail_closed() -> None:
+    record, payload = _canonical_record_and_payload()
+
+    rule, error = strict_rule_from_response(record, json.dumps(payload))
+
+    assert error is None
+    assert rule is not None
+    assert rule.trigger_concepts_a == ("blue_white_veil", "irregular_border")
+    assert rule.trigger_concepts_b == ("honey_colored_crust", "plaque")
+    assert all(item["cases"] for item in rule.evidence_a + rule.evidence_b)
+
+    applicable, reason, matches = rule_applicability(
+        _diagnosis_prompt("A blue-whitish veil lies beneath an uneven border."),
+        rule.to_dict(),
+    )
+    assert applicable
+    assert reason == "trigger_supports_a"
+    assert matches == {"a": 2, "b": 0}
+
+    negated = _diagnosis_prompt(
+        "No blue-white veil or irregular border is present on this otherwise bland lesion."
+    )
+    assert rule_applicability(negated, rule.to_dict())[1] == "insufficient_trigger_match"
+
+    ambiguous = _diagnosis_prompt(
+        "An irregular margin and blue-white veil accompany a honey-coloured crust and plaque."
+    )
+    assert rule_applicability(ambiguous, rule.to_dict())[1] == "ambiguous_trigger_match"
+
+
+def test_canonical_rule_rejects_tampering_unknown_ids_and_unexecutable_context() -> None:
+    record, payload = _canonical_record_and_payload()
+
+    tampered_record = copy.deepcopy(record)
+    tampered_record["concept_ledger"]["candidate_a"][0]["own_count"] = 99
+    rule, error = strict_rule_from_response(tampered_record, json.dumps(payload))
+    assert rule is None
+    assert error == "concept_ledger_recompute_mismatch"
+
+    unknown = copy.deepcopy(payload)
+    unknown["feature_ids_a"][0] = "invented_feature"
+    rule, error = strict_rule_from_response(record, json.dumps(unknown))
+    assert rule is None
+    assert error == "unknown_concept_id_a"
+
+    unsafe_context = copy.deepcopy(payload)
+    unsafe_context["required_context"] = ["Known pathology result"]
+    rule, error = strict_rule_from_response(record, json.dumps(unsafe_context))
+    assert rule is None
+    assert error == "invalid_concept_rule_fields"
+
+
+def test_canonical_abstention_is_strictly_pinned_before_being_accepted() -> None:
+    record, payload = _canonical_record_and_payload()
+    abstention = copy.deepcopy(payload)
+    abstention.update(
+        {
+            "publishable": False,
+            "feature_ids_a": [],
+            "feature_ids_b": [],
+            "nondiscriminative_concept_ids": [],
+            "required_context": [],
+            "limitations": [],
+            "abstention_codes": ["overlapping_appearance"],
+        }
+    )
+
+    rule, error = strict_rule_from_response(record, json.dumps(abstention))
+    assert rule is None
+    assert error == "evidence_abstained"
+
+    wrong_schema = copy.deepcopy(abstention)
+    wrong_schema["schema_version"] = "v0"
+    assert strict_rule_from_response(record, json.dumps(wrong_schema))[1] == "schema_version_mismatch"
+
+    missing_source = copy.deepcopy(abstention)
+    missing_source["source_case_ids_a"] = missing_source["source_case_ids_a"][:-1]
+    assert strict_rule_from_response(record, json.dumps(missing_source))[1] == "incomplete_source_coverage"
+
+    invalid_code = copy.deepcopy(abstention)
+    invalid_code["abstention_codes"] = [123]
+    assert strict_rule_from_response(record, json.dumps(invalid_code))[1] == "invalid_abstention_codes"
+
+    invented_field = copy.deepcopy(abstention)
+    invented_field["explanation"] = "unverifiable"
+    assert strict_rule_from_response(record, json.dumps(invented_field))[1] == "invalid_concept_response_schema"
+
+    true_with_code = copy.deepcopy(payload)
+    true_with_code["abstention_codes"] = ["other_conservative_abstention"]
+    assert strict_rule_from_response(record, json.dumps(true_with_code))[1] == "invalid_abstention_codes"
+
+
+def test_canonical_trigger_counts_independent_families_not_sibling_subtypes() -> None:
+    rule = {
+        "matching_protocol": CONCEPT_PROTOCOL,
+        "matcher_algorithm_revision": CONCEPT_MATCHER_ALGORITHM_REVISION,
+        "matcher_sha256": CONCEPT_MATCHER_SHA256,
+        "trigger_concepts_a": ["greasy_scale", "silvery_scale"],
+        "trigger_concepts_b": ["plaque", "well_defined_border"],
+    }
+
+    applicable, reason, matches = rule_applicability(
+        _diagnosis_prompt("Greasy scaling and a silvery scale cover the scalp."),
+        rule,
+    )
+
+    assert not applicable
+    assert reason == "insufficient_trigger_match"
+    assert matches == {"a": 1, "b": 0}
+
+
+def test_canonical_trigger_abstains_on_any_opposite_side_signal() -> None:
+    record, payload = _canonical_record_and_payload()
+    rule, error = strict_rule_from_response(record, json.dumps(payload))
+    assert error is None and rule is not None
+
+    applicable, reason, matches = rule_applicability(
+        _diagnosis_prompt(
+            "A blue-white veil and irregular border are visible on a background plaque."
+        ),
+        rule.to_dict(),
+    )
+
+    assert not applicable
+    assert reason == "ambiguous_trigger_match"
+    assert matches == {"a": 2, "b": 1}
+
+
 def test_rule_applicability_executes_context_triggers_and_abstention() -> None:
     rule = {
         "trigger_terms_a": ["blue radial streaks", "dark asymmetric center"],
@@ -335,6 +559,32 @@ def test_v11_third_class_output_falls_back_to_c100_anchor() -> None:
     row["response"] = json.dumps({"PrimaryDiagnosis": "Disease Beta"})
     prediction, reason = pair_constrained_prediction(row, "Disease Alpha")
     assert prediction == "Disease Beta"
+    assert reason == "pair_constrained_output"
+
+
+def test_v11_output_opposite_to_trigger_direction_falls_back_to_c100() -> None:
+    row = {
+        "arm": "structured_evolving_memory_v1_1",
+        "dataset": "ToyDataset",
+        "candidate_probabilities": [
+            ["Disease Alpha", 0.60],
+            ["Disease Beta", 0.30],
+        ],
+        "rule_disease_a": "Disease Alpha",
+        "rule_disease_b": "Disease Beta",
+        "trigger_supported_side": "a",
+        "trigger_supported_disease": "Disease Alpha",
+        "response": json.dumps({"PrimaryDiagnosis": "Disease Beta"}),
+    }
+
+    prediction, reason = pair_constrained_prediction(row, "Disease Beta")
+
+    assert prediction == "Disease Beta"
+    assert reason == "trigger_direction_fallback"
+
+    row["response"] = json.dumps({"PrimaryDiagnosis": "Disease Alpha"})
+    prediction, reason = pair_constrained_prediction(row, "Disease Beta")
+    assert prediction == "Disease Alpha"
     assert reason == "pair_constrained_output"
 
 

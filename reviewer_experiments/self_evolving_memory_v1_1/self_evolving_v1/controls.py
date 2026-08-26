@@ -414,13 +414,26 @@ def _condition_row(
         if not key.startswith("_source_manifest_") and key != "prompt"
     }
     original_trigger_matches = source.get("trigger_matches", {"a": 0, "b": 0})
+    source_supported_side = str(source.get("trigger_supported_side", ""))
     if control_arm == "neutral":
         control_trigger_matches = {"a": 0, "b": 0}
+        control_supported_side = ""
+        control_supported_disease = ""
     else:
         control_trigger_matches = {
             "a": int(original_trigger_matches.get("b", 0)),
             "b": int(original_trigger_matches.get("a", 0)),
         }
+        control_supported_side = (
+            "b" if source_supported_side == "a" else "a" if source_supported_side == "b" else ""
+        )
+        control_supported_disease = (
+            str(source.get("rule_disease_a", ""))
+            if control_supported_side == "a"
+            else str(source.get("rule_disease_b", ""))
+            if control_supported_side == "b"
+            else ""
+        )
     transform = {
         "schema_version": CONTROL_SCHEMA_VERSION,
         "control_arm": control_arm,
@@ -461,8 +474,12 @@ def _condition_row(
             ],
             "source_applicability_reason": source.get("applicability_reason", ""),
             "source_trigger_matches": original_trigger_matches,
+            "source_trigger_supported_side": source_supported_side,
+            "source_trigger_supported_disease": source.get("trigger_supported_disease", ""),
             "applicability_reason": "paired_control_from_true_rule_applicable",
             "trigger_matches": control_trigger_matches,
+            "trigger_supported_side": control_supported_side,
+            "trigger_supported_disease": control_supported_disease,
             "control_transform_sha256": canonical_hash(transform),
             "source_rule_block_characters": source_characters,
             "control_rule_block_characters": control_characters,

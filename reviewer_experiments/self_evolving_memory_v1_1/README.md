@@ -12,9 +12,16 @@ legacy Neo4j graph or overwrite the original v1 experiment.
   quality-screened positive-margin embedding-hard cases. Exact/near duplicates,
   repeated findings, low-quality findings, and cross-label near duplicates are
   excluded.
-- Generated rules must be strict JSON, quote immutable source evidence, use all
-  supplied source IDs, keep the three feature fields mutually exclusive, and
-  provide literal query-side triggers. Unsupported pairs may abstain.
+- A fixed disease-independent observable-morphology compiler normalizes a
+  versioned synonym lexicon with token-boundary, negation, and mutual-exclusion
+  handling. It builds prevalence-normalized candidates only when at least three
+  cases and two source-selection roles support them; embedding-hard cases can
+  never establish a candidate alone.
+- The generator may select only canonical IDs from the frozen ledger. The
+  parser recomputes the complete ledger and reconstructs all 2--24-word exact
+  source quotes, spans, counts, triggers, and evidence hashes. Unsupported pairs
+  may abstain; invented concepts, altered evidence, and unexecutable free-text
+  context requirements fail closed.
 - A rule can act only when its disease pair matches the frozen top two, the
   frozen C100 diagnosis is inside that pair, and query-side trigger/context
   checks pass. Third-class or invalid generations fall back to C100.
@@ -27,7 +34,8 @@ legacy Neo4j graph or overwrite the original v1 experiment.
 
 1. `initialize`: build generator-only source sets and a frozen C100 snapshot.
 2. `audit_initialization`: strictly parse every JSON record, verify hashes and
-   source coverage, and exactly recompute every prompt and cross-label similarity.
+   source coverage, and exactly recompute every prompt, concept ledger, exact
+   evidence span, and cross-label similarity.
 3. Generate rule JSON with the frozen Qwen3-VL-8B-Instruct checkpoint.
 4. `finalize-rules`: accept only fully grounded, strictly parsed candidates.
 5. `build-cohort` and `validate-rules`: validate each rule on `rule_acceptance`.
@@ -61,6 +69,8 @@ PYTHONPATH=. python -m pytest -q
 PYTHONPATH=. python -m self_evolving_v1.pipeline --help
 PYTHONPATH=. python -m self_evolving_v1.audit_initialization --help
 PYTHONPATH=. python -m self_evolving_v1.controls --help
+PYTHONPATH=. python -m self_evolving_v1.result_audit --help
+PYTHONPATH=. python -m self_evolving_v1.control_analysis --help
 PYTHONPATH=. python -m self_evolving_v1.smoke --help
 ```
 
@@ -74,6 +84,14 @@ all input/output file, content, record, coverage, and self-audit hashes.
 `self_evolving_v1.run_inference` is append-only and resumable by `global_index`.
 Run one manifest shard per GPU. Keep model ID, checkpoint files, input manifests,
 outputs, release pointers, and all SHA-256 audit artifacts frozen together.
+
+The frozen canonical matcher protocol is
+`canonical_observable_concepts_v1`; the current implementation revision is
+`canonical_matcher_r2_20260826`. Its lexicon and matcher hashes are embedded
+in every proposal, ledger, initialization audit, parsed rule, and formal bundle.
+Changing any vocabulary, synonym, negation, prevalence, role, or evidence rule
+therefore creates a new protocol revision rather than silently changing an
+existing result.
 
 `RESULTS_20260825.md` records the historical v1 result and must not be presented
 as a v1.1 result.

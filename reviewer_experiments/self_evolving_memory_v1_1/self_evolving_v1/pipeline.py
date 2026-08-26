@@ -16,6 +16,13 @@ from typing import Any
 
 import numpy as np
 
+from .concepts import (
+    CONCEPT_LEXICON_SHA256,
+    CONCEPT_MATCHER_ALGORITHM_REVISION,
+    CONCEPT_MATCHER_SHA256,
+    CONCEPT_PROTOCOL,
+    build_concept_ledger,
+)
 from .core import (
     GatePolicy,
     MemoryRelease,
@@ -339,16 +346,39 @@ def select_pair_sources(
     return result
 
 
-def rule_prompt(dataset: str, disease_a: str, disease_b: str, cases_a: list[dict[str, Any]], cases_b: list[dict[str, Any]]) -> str:
-    def compact(rows: list[dict[str, Any]]) -> list[dict[str, str]]:
-        return [
-            {
-                "case_id": str(row["case_id"]),
-                "selection_role": str(row["selection_role"]),
-                "findings": sentence_aware_excerpt(str(row["findings"])),
-            }
-            for row in rows
-        ]
+def prompt_source_cases(rows: list[dict[str, Any]]) -> list[dict[str, str]]:
+    """Freeze the exact source representation shown to the rule generator."""
+
+    return [
+        {
+            "case_id": str(row["case_id"]),
+            "selection_role": str(row["selection_role"]),
+            "findings": str(
+                row.get("findings_excerpt")
+                or sentence_aware_excerpt(str(row["findings"]))
+            ),
+        }
+        for row in rows
+    ]
+
+
+def rule_prompt(
+    dataset: str,
+    disease_a: str,
+    disease_b: str,
+    cases_a: list[dict[str, Any]],
+    cases_b: list[dict[str, Any]],
+    *,
+    concept_ledger: dict[str, Any] | None = None,
+    minimum_feature_support: int = 3,
+) -> str:
+    compact_a = prompt_source_cases(cases_a)
+    compact_b = prompt_source_cases(cases_b)
+    ledger = concept_ledger or build_concept_ledger(
+        compact_a,
+        compact_b,
+        minimum_support=minimum_feature_support,
+    )
 
     return f"""You are proposing an evidence-traceable contrastive dermatology memory rule.
 
@@ -357,34 +387,52 @@ Dataset-internal closed-set labels:
 - Disease B: {disease_b}
 
 Immutable training cases for Disease A:
-{json.dumps(compact(cases_a), ensure_ascii=False, indent=2)}
+{json.dumps(compact_a, ensure_ascii=False, indent=2)}
 
 Immutable training cases for Disease B:
-{json.dumps(compact(cases_b), ensure_ascii=False, indent=2)}
+{json.dumps(compact_b, ensure_ascii=False, indent=2)}
 
 The cases were selected with balanced representative, diverse, and quality-screened embedding-hard proxy roles. Create a conservative A-versus-B rule only when the supplied evidence supports a stable contrast across these roles. The embedding-hard cases are not doctor-verified clean labels and cannot support a feature on their own. Do not force a rule for synonymous labels, broad heterogeneous categories, or overlapping appearances.
 
-For every discriminative feature, cite at least three different same-class cases and copy one exact contiguous 2-24 word quote from each cited finding. Use all supplied source IDs in source_case_ids_a/source_case_ids_b; feature-level citations may use subsets. A feature seen on both sides must be nondiscriminative. Keep each feature under 24 words.
+The deterministic, disease-name-independent evidence compiler below has already normalized observable morphology synonyms, handled negation and token boundaries, counted each concept once per case, used prevalence rather than raw counts when source-set sizes differ, required support across at least two selection roles, and copied exact source excerpts. Its hash is frozen. Do not redo these counts and do not invent a concept or citation.
 
-Executable trigger terms must be exact, observable phrases copied from the findings, occur in at least three cases on that side, and occur in at least two fewer cases on the opposite side. Required-context and abstention terms must also be literal phrases that can be matched in a current frozen finding description. If these requirements cannot be met, return publishable=false rather than inventing a contrast.
+Canonical evidence ledger:
+{json.dumps(ledger, ensure_ascii=False, indent=2)}
+
+Select 2-4 distinct IDs from candidate_a and 2-4 distinct IDs from candidate_b only when they form a clinically coherent contrast. You may select 0-6 IDs from nondiscriminative. Exactness applies to the compiler-owned evidence quotes, while the selected IDs are canonical observable concepts that can match synonymous query wording. The parser reconstructs all feature text, triggers, and citations from the frozen ledger; you are not allowed to supply or alter them. Use all supplied source IDs. This version can execute only evidence visible in the frozen findings, so required_context must be an empty list; if safe use would require age, site, history, pathology, or another unavailable context, return publishable=false. If either side has fewer than two credible candidates, the labels are too heterogeneous, or the compiled contrast is medically incoherent, return publishable=false with one or more audit codes: insufficient_a, insufficient_b, heterogeneous_label, conflicting_evidence, overlapping_appearance, unavailable_required_context, or other_conservative_abstention.
 
 Return valid JSON only:
 {{
   "schema_version": "v1.1",
+  "matching_protocol": {json.dumps(CONCEPT_PROTOCOL)},
+  "concept_ledger_sha256": {json.dumps(str(ledger['content_sha256']))},
   "publishable": true,
   "disease_a": {json.dumps(disease_a, ensure_ascii=False)},
   "disease_b": {json.dumps(disease_b, ensure_ascii=False)},
-  "supports_a": ["2-4 pair-specific features"],
-  "supports_b": ["2-4 pair-specific features"],
-  "nondiscriminative": ["2-6 shared/generic features"],
-  "trigger_terms_a": ["2-6 exact observable phrases"],
-  "trigger_terms_b": ["2-6 exact observable phrases"],
-  "required_context_terms": ["0-4 literal context phrases"],
-  "abstain_terms": ["0-4 literal abstention phrases"],
-  "required_context": ["0-4 required image or clinical contexts"],
+  "feature_ids_a": ["2-4 IDs copied from candidate_a"],
+  "feature_ids_b": ["2-4 IDs copied from candidate_b"],
+  "nondiscriminative_concept_ids": ["0-6 IDs copied from nondiscriminative"],
+  "required_context": [],
   "limitations": ["1-4 limitations or abstention conditions"],
-  "evidence_a": [{{"feature": "exact supports_a feature", "cases": [{{"case_id": "A ID", "quote": "exact quote"}}]}}],
-  "evidence_b": [{{"feature": "exact supports_b feature", "cases": [{{"case_id": "B ID", "quote": "exact quote"}}]}}],
+  "abstention_codes": [],
+  "source_case_ids_a": {json.dumps([str(row['case_id']) for row in cases_a], ensure_ascii=False)},
+  "source_case_ids_b": {json.dumps([str(row['case_id']) for row in cases_b], ensure_ascii=False)}
+}}
+
+If abstaining, return the same exact keys with no additions, preserve the frozen labels/hash/source IDs, make all evidence-selection fields empty, and use one or more allowed audit codes. For example:
+{{
+  "schema_version": "v1.1",
+  "matching_protocol": {json.dumps(CONCEPT_PROTOCOL)},
+  "concept_ledger_sha256": {json.dumps(str(ledger['content_sha256']))},
+  "publishable": false,
+  "disease_a": {json.dumps(disease_a, ensure_ascii=False)},
+  "disease_b": {json.dumps(disease_b, ensure_ascii=False)},
+  "feature_ids_a": [],
+  "feature_ids_b": [],
+  "nondiscriminative_concept_ids": [],
+  "required_context": [],
+  "limitations": [],
+  "abstention_codes": ["other_conservative_abstention"],
   "source_case_ids_a": {json.dumps([str(row['case_id']) for row in cases_a], ensure_ascii=False)},
   "source_case_ids_b": {json.dumps([str(row['case_id']) for row in cases_b], ensure_ascii=False)}
 }}"""
@@ -484,6 +532,8 @@ def initialize(args: argparse.Namespace) -> None:
 
     proposal_records = []
     selection_role_counts = Counter()
+    concept_candidate_counts = Counter()
+    concept_eligible_proposals = 0
     for global_index, (dataset, disease_a, disease_b) in enumerate(sorted(pair_set, key=lambda row: (row[0], label_key(row[1]), label_key(row[2]))), 300000):
         prepared_a = generator[dataset].get(disease_a)
         prepared_b = generator[dataset].get(disease_b)
@@ -517,12 +567,46 @@ def initialize(args: argparse.Namespace) -> None:
             "schema_version": "v1.1",
             "key": key,
             "selection_protocol": "representative_cluster_medoids+diverse_mmr+quality_screened_positive_margin_embedding_hard",
+            "matching_protocol": CONCEPT_PROTOCOL,
+            "concept_lexicon_sha256": CONCEPT_LEXICON_SHA256,
+            "matcher_algorithm_revision": CONCEPT_MATCHER_ALGORITHM_REVISION,
+            "matcher_sha256": CONCEPT_MATCHER_SHA256,
             "a": [{"case_id": row["case_id"], "role": row["selection_role"]} for row in cases_a],
             "b": [{"case_id": row["case_id"], "role": row["selection_role"]} for row in cases_b],
         }
-        rule_id = "cr11_" + canonical_hash(selection_payload)[:16]
-        source_cases_a = [{"case_id": row["case_id"], "findings": row["findings"]} for row in cases_a]
-        source_cases_b = [{"case_id": row["case_id"], "findings": row["findings"]} for row in cases_b]
+        rule_id = "cr11c_" + canonical_hash(selection_payload)[:16]
+
+        def frozen_source_cases(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+            result = []
+            for row in rows:
+                full = str(row["findings"])
+                excerpt = sentence_aware_excerpt(full)
+                result.append(
+                    {
+                        "case_id": row["case_id"],
+                        "findings": full,
+                        "findings_excerpt": excerpt,
+                        "full_findings_sha256": canonical_hash(full),
+                        "excerpt_sha256": canonical_hash(excerpt),
+                    }
+                )
+            return result
+
+        source_cases_a = frozen_source_cases(cases_a)
+        source_cases_b = frozen_source_cases(cases_b)
+        prompt_cases_a = prompt_source_cases(cases_a)
+        prompt_cases_b = prompt_source_cases(cases_b)
+        concept_ledger = build_concept_ledger(
+            prompt_cases_a,
+            prompt_cases_b,
+            minimum_support=args.minimum_feature_support,
+        )
+        candidate_count_a = len(concept_ledger.get("candidate_a", []))
+        candidate_count_b = len(concept_ledger.get("candidate_b", []))
+        concept_candidate_counts[f"{dataset}::A"] += candidate_count_a
+        concept_candidate_counts[f"{dataset}::B"] += candidate_count_b
+        generation_eligible = candidate_count_a >= 2 and candidate_count_b >= 2
+        concept_eligible_proposals += int(generation_eligible)
         source_selection_a = [
             {
                 **{key2: value for key2, value in row.items() if key2 not in {"findings", "image_path"}},
@@ -543,6 +627,10 @@ def initialize(args: argparse.Namespace) -> None:
             "global_index": global_index,
             "record_type": "rule_proposal",
             "schema_version": "v1.1",
+            "matching_protocol": CONCEPT_PROTOCOL,
+            "concept_lexicon_sha256": CONCEPT_LEXICON_SHA256,
+            "matcher_algorithm_revision": CONCEPT_MATCHER_ALGORITHM_REVISION,
+            "matcher_sha256": CONCEPT_MATCHER_SHA256,
             "rule_id": rule_id,
             "rule_key": key,
             "dataset": dataset,
@@ -555,11 +643,22 @@ def initialize(args: argparse.Namespace) -> None:
             "source_selection_a": source_selection_a,
             "source_selection_b": source_selection_b,
             "minimum_feature_support": args.minimum_feature_support,
+            "concept_ledger": concept_ledger,
+            "concept_ledger_sha256": concept_ledger["content_sha256"],
+            "rule_generation_eligible": generation_eligible,
             "selection_policy": "representative_cluster_medoids+diverse_mmr+quality_screened_positive_margin_embedding_hard",
             "maximum_cross_label_source_similarity": round(maximum_cross_similarity, 6),
             "source_pool_sha256": canonical_hash(selection_payload),
             "source_stream_sha256": source_hashes[dataset],
-            "prompt": rule_prompt(dataset, disease_a, disease_b, cases_a, cases_b),
+            "prompt": rule_prompt(
+                dataset,
+                disease_a,
+                disease_b,
+                cases_a,
+                cases_b,
+                concept_ledger=concept_ledger,
+                minimum_feature_support=args.minimum_feature_support,
+            ),
         })
     manifests = output / "rule_manifests"
     manifests.mkdir(exist_ok=True)
@@ -572,7 +671,11 @@ def initialize(args: argparse.Namespace) -> None:
             handle.close()
     audit = {
         "schema_version": "v1.1",
-        "protocol": "generator-only immutable cases; row-normalized embeddings; representative/diverse/pair-embedding-hard sources; label-blind deterministic evaluation split",
+        "protocol": "generator-only immutable cases; row-normalized embeddings; representative/diverse/pair-embedding-hard sources; deterministic canonical observable-concept evidence compiler; label-blind deterministic evaluation split",
+        "matching_protocol": CONCEPT_PROTOCOL,
+        "concept_lexicon_sha256": CONCEPT_LEXICON_SHA256,
+        "matcher_algorithm_revision": CONCEPT_MATCHER_ALGORITHM_REVISION,
+        "matcher_sha256": CONCEPT_MATCHER_SHA256,
         "seed": args.seed,
         "generator_fraction": args.generator_fraction,
         "neighbor_pairs": args.neighbor_pairs,
@@ -586,6 +689,8 @@ def initialize(args: argparse.Namespace) -> None:
         "source_stream_hashes": source_hashes,
         "source_audit": source_audit,
         "selection_role_counts": dict(selection_role_counts),
+        "concept_candidate_counts": dict(concept_candidate_counts),
+        "concept_eligible_proposals": concept_eligible_proposals,
         "skipped_pair_reasons": dict(skipped_pair_reasons),
         "rule_proposals": len(proposal_records),
         "role_counts": {f"{dataset}::{role}": count for (dataset, role), count in sorted(role_counts.items())},
@@ -641,7 +746,22 @@ def finalize_rules(args: argparse.Namespace) -> None:
             continue
         rule, error = strict_rule_from_response(proposal, result.get("response", ""))
         if error == "evidence_abstained":
-            abstentions.append({"global_index": index, "rule_id": proposal["rule_id"], "reason": error})
+            try:
+                abstained_payload = json.loads(str(result.get("response", "")).strip())
+            except json.JSONDecodeError:
+                abstained_payload = {}
+            codes = abstained_payload.get("abstention_codes", [])
+            if not isinstance(codes, list) or any(not isinstance(code, str) for code in codes):
+                codes = []
+            abstentions.append(
+                {
+                    "global_index": index,
+                    "rule_id": proposal["rule_id"],
+                    "reason": error,
+                    "abstention_codes": codes,
+                    "generation_eligible": bool(proposal.get("rule_generation_eligible")),
+                }
+            )
             continue
         if error:
             issues.append({"global_index": index, "rule_id": proposal["rule_id"], "reason": error})
@@ -698,16 +818,29 @@ def build_rule_retry(args: argparse.Namespace) -> None:
             continue
         reasons[reason] += 1
         previous_response = "" if result is None else str(result.get("response", ""))
-        correction = (
-            f"\n\nTHE PREVIOUS RESPONSE WAS REJECTED FOR: {reason}. "
-            "Return one corrected, complete JSON object and no other text. "
-            "Each finding must appear in exactly one of supports_a, supports_b, or nondiscriminative; "
-            "shared findings belong only to nondiscriminative. "
-            "For v1.1, every supports feature needs at least three valid exact-quote citations, and executable trigger terms must satisfy the source-frequency constraints. "
-            f"source_case_ids_a must contain only these IDs: {json.dumps(proposal['source_case_ids_a'], ensure_ascii=False)}. "
-            f"source_case_ids_b must contain only these IDs: {json.dumps(proposal['source_case_ids_b'], ensure_ascii=False)}. "
-            f"Correct this rejected response without repeating its defect:\n{previous_response}"
-        )
+        if proposal.get("matching_protocol") == CONCEPT_PROTOCOL:
+            correction = (
+                f"\n\nTHE PREVIOUS RESPONSE WAS REJECTED FOR: {reason}. "
+                "Return one corrected, complete JSON object and no other text. "
+                "Select only concept IDs already present in candidate_a, candidate_b, and nondiscriminative; "
+                "do not generate feature prose, trigger prose, citations, counts, or new IDs. "
+                "Use 2-4 distinct IDs per disease side or conservatively return publishable=false with abstention_codes. "
+                f"concept_ledger_sha256 must remain {proposal.get('concept_ledger_sha256')}. "
+                f"source_case_ids_a must contain exactly these IDs: {json.dumps(proposal['source_case_ids_a'], ensure_ascii=False)}. "
+                f"source_case_ids_b must contain exactly these IDs: {json.dumps(proposal['source_case_ids_b'], ensure_ascii=False)}. "
+                f"Correct this rejected response without repeating its defect:\n{previous_response}"
+            )
+        else:
+            correction = (
+                f"\n\nTHE PREVIOUS RESPONSE WAS REJECTED FOR: {reason}. "
+                "Return one corrected, complete JSON object and no other text. "
+                "Each finding must appear in exactly one of supports_a, supports_b, or nondiscriminative; "
+                "shared findings belong only to nondiscriminative. "
+                "For v1.1, every supports feature needs at least three valid exact-quote citations, and executable trigger terms must satisfy the source-frequency constraints. "
+                f"source_case_ids_a must contain only these IDs: {json.dumps(proposal['source_case_ids_a'], ensure_ascii=False)}. "
+                f"source_case_ids_b must contain only these IDs: {json.dumps(proposal['source_case_ids_b'], ensure_ascii=False)}. "
+                f"Correct this rejected response without repeating its defect:\n{previous_response}"
+            )
         retry_rows.append({**proposal, "prompt": proposal["prompt"] + correction, "retry_reason": reason})
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8") as handle:
@@ -823,12 +956,36 @@ def build_diagnosis_retry(args: argparse.Namespace) -> None:
 
 def load_release(path: Path, statuses: set[str]) -> dict[str, dict[str, Any]]:
     payload = json.loads(path.read_text(encoding="utf-8"))
-    release_id = payload["release_id"]
+    if not isinstance(payload, dict) or not isinstance(payload.get("rules"), list):
+        raise ValueError("release must be a JSON object with a rules list")
+    frozen_hash = str(payload.get("content_sha256", ""))
+    unhashed = dict(payload)
+    unhashed.pop("content_sha256", None)
+    if not frozen_hash or canonical_hash(unhashed) != frozen_hash:
+        raise ValueError("release content hash mismatch")
+    release_id = str(payload.get("release_id", ""))
+    if not release_id:
+        raise ValueError("release is missing release_id")
     rules = {}
     for row in payload["rules"]:
+        if not isinstance(row, dict):
+            raise ValueError("release contains a non-object rule")
         if row.get("status") in statuses:
+            expected_key = rule_key(str(row.get("dataset", "")), str(row.get("disease_a", "")), str(row.get("disease_b", "")))
+            if row.get("rule_key") != expected_key:
+                raise ValueError(f"rule key mismatch: {row.get('rule_id', '')}")
+            if row.get("matching_protocol") == CONCEPT_PROTOCOL:
+                if row.get("matcher_algorithm_revision") != CONCEPT_MATCHER_ALGORITHM_REVISION:
+                    raise ValueError(f"matcher algorithm revision mismatch: {row.get('rule_id', '')}")
+                if row.get("matcher_sha256") != CONCEPT_MATCHER_SHA256:
+                    raise ValueError(f"matcher hash mismatch: {row.get('rule_id', '')}")
+                ledger_hash = str(row.get("concept_ledger_sha256", ""))
+                if not re.fullmatch(r"[0-9a-f]{64}", ledger_hash):
+                    raise ValueError(f"invalid concept ledger hash: {row.get('rule_id', '')}")
             value = {**row, "release_id": release_id}
-            rules[row["rule_key"]] = value
+            if expected_key in rules:
+                raise ValueError(f"duplicate active rule key: {expected_key}")
+            rules[expected_key] = value
     return rules
 
 
@@ -886,9 +1043,15 @@ def build_cohort(args: argparse.Namespace) -> None:
                     missing += 1
                     reason_counts[applicability_reason] += 1
                     continue
+                trigger_supported_side = applicability_reason.rsplit("_", 1)[-1]
+                trigger_supported_disease = (
+                    rule["disease_a"] if trigger_supported_side == "a" else rule["disease_b"]
+                )
             else:
                 applicability_reason = "legacy_pair_match"
                 trigger_matches = {"a": 0, "b": 0}
+                trigger_supported_side = ""
+                trigger_supported_disease = ""
             global_index = args.global_index_offset + included
             prompt = inject_rule(row["prompt"], rule, baseline_prediction=baseline_prediction)
             record = {
@@ -908,6 +1071,9 @@ def build_cohort(args: argparse.Namespace) -> None:
                 "c100_anchor_prediction": baseline_prediction,
                 "applicability_reason": applicability_reason,
                 "trigger_matches": trigger_matches,
+                "trigger_supported_side": trigger_supported_side,
+                "trigger_supported_disease": trigger_supported_disease,
+                "matching_protocol": str(rule.get("matching_protocol", "literal_v1")),
                 "prompt_sha256": canonical_hash(prompt),
                 "prompt": prompt,
             }
@@ -969,6 +1135,9 @@ def pair_constrained_prediction(row: dict[str, Any], c_prediction: str) -> tuple
     }
     if evaluation_label(row["dataset"], proposal) not in pair:
         return c_prediction, "third_class_fallback"
+    supported = str(row.get("trigger_supported_disease", "")).strip()
+    if supported and evaluation_label(row["dataset"], proposal) != evaluation_label(row["dataset"], supported):
+        return c_prediction, "trigger_direction_fallback"
     return proposal, "pair_constrained_output"
 
 
@@ -1002,6 +1171,8 @@ def validate_rules(args: argparse.Namespace) -> None:
         e_prediction, constraint_reason = pair_constrained_prediction(row, c_prediction)
         if constraint_reason == "third_class_fallback":
             stats[rule_id]["third_class_fallbacks"] += 1
+        if constraint_reason == "trigger_direction_fallback":
+            stats[rule_id]["trigger_direction_fallbacks"] += 1
         c_correct = int(c["correct"])
         e_correct = int(evaluation_label(row["dataset"], e_prediction) == evaluation_label(row["dataset"], row["ground_truth"]))
         changed = evaluation_label(row["dataset"], c_prediction) != evaluation_label(row["dataset"], e_prediction)
@@ -1076,6 +1247,7 @@ def validate_rules(args: argparse.Namespace) -> None:
             "validation_changed_wrong": int(item["changed_wrong"]),
             "validation_invalid": int(item["invalid"]),
             "validation_third_class_fallbacks": int(item["third_class_fallbacks"]),
+            "validation_trigger_direction_fallbacks": int(item["trigger_direction_fallbacks"]),
             "validation_restore_top1_gains": int(item["restore_top1_gains"]),
             "validation_beyond_top1_gains": int(item["beyond_top1_gains"]),
             "validation_high_confidence_regressions": int(item["high_confidence_regressions"]),

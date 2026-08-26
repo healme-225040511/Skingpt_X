@@ -47,6 +47,17 @@ FEATURE_STOPWORDS = {
     "with",
     "without",
 }
+CANONICAL_ABSTENTION_CODES = frozenset(
+    {
+        "conflicting_evidence",
+        "heterogeneous_label",
+        "insufficient_a",
+        "insufficient_b",
+        "other_conservative_abstention",
+        "overlapping_appearance",
+        "unavailable_required_context",
+    }
+)
 
 
 def canonical_hash(value: Any) -> str:
@@ -168,12 +179,18 @@ class StructuredRule:
     source_case_count: int
     trigger_terms_a: tuple[str, ...] = ()
     trigger_terms_b: tuple[str, ...] = ()
+    trigger_concepts_a: tuple[str, ...] = ()
+    trigger_concepts_b: tuple[str, ...] = ()
     required_context_terms: tuple[str, ...] = ()
     abstain_terms: tuple[str, ...] = ()
     evidence_a: tuple[dict[str, Any], ...] = ()
     evidence_b: tuple[dict[str, Any], ...] = ()
     source_selection_a: tuple[dict[str, Any], ...] = ()
     source_selection_b: tuple[dict[str, Any], ...] = ()
+    matching_protocol: str = "literal_v1"
+    matcher_algorithm_revision: str = ""
+    matcher_sha256: str = ""
+    concept_ledger_sha256: str = ""
     schema_version: str = "v1"
     status: str = "candidate"
     validation_exposures: int = 0
@@ -281,6 +298,11 @@ def inject_rule(prompt: str, rule: dict[str, Any] | None, baseline_prediction: s
             f"- This memory may compare only {rule['disease_a']} and {rule['disease_b']}.\n"
             "- It must not justify changing to any third diagnosis.\n"
         )
+    trigger_contract = (
+        "- Any override must be supported by at least two independently matched validated concepts.\n"
+        if rule and rule.get("matching_protocol") == "canonical_observable_concepts_v1"
+        else "- Any override must cite at least two executable trigger terms found in the frozen findings.\n"
+    )
     replacement = (
         "\\g<head>"
         + block
@@ -290,7 +312,7 @@ def inject_rule(prompt: str, rule: dict[str, Any] | None, baseline_prediction: s
         + "- Treat model probabilities as numerical priors.\n"
         + "- A non-discriminative feature cannot justify changing the leading diagnosis.\n"
         + "- If the supplied rule lacks its required context, retain the better-supported prior diagnosis.\n"
-        + "- Any override must cite at least two executable trigger terms found in the frozen findings.\n"
+        + trigger_contract
         + "- If these conditions are not satisfied, retain the frozen C100 final diagnosis."
         + "\\g<tail>"
     )
@@ -310,6 +332,36 @@ def rule_applicability(
     findings = visual_findings_from_prompt(prompt)
     if not findings:
         return False, "missing_visual_findings", {"a": 0, "b": 0}
+    if rule.get("matching_protocol") == "canonical_observable_concepts_v1":
+        from .concepts import (
+            CONCEPT_MATCHER_ALGORITHM_REVISION,
+            CONCEPT_MATCHER_SHA256,
+            concept_family,
+            extract_concept_ids,
+        )
+
+        if (
+            rule.get("matcher_algorithm_revision") != CONCEPT_MATCHER_ALGORITHM_REVISION
+            or rule.get("matcher_sha256") != CONCEPT_MATCHER_SHA256
+        ):
+            return False, "matcher_revision_mismatch", {"a": 0, "b": 0}
+
+        observed = extract_concept_ids(findings)
+        concepts_a = set(str(value) for value in rule.get("trigger_concepts_a", []))
+        concepts_b = set(str(value) for value in rule.get("trigger_concepts_b", []))
+        matched_a = concepts_a & observed
+        matched_b = concepts_b & observed
+        counts = {
+            "a": len({concept_family(value) for value in matched_a}),
+            "b": len({concept_family(value) for value in matched_b}),
+        }
+        if counts["a"] > 0 and counts["b"] > 0:
+            return False, "ambiguous_trigger_match", counts
+        if counts["a"] < minimum_trigger_matches and counts["b"] < minimum_trigger_matches:
+            return False, "insufficient_trigger_match", counts
+        side = "a" if counts["a"] >= minimum_trigger_matches else "b"
+        return True, f"trigger_supports_{side}", counts
+
     missing_context = [
         term for term in rule.get("required_context_terms", []) if not phrase_in_text(str(term), findings)
     ]
@@ -328,6 +380,226 @@ def rule_applicability(
     return True, f"trigger_supports_{side}", counts
 
 
+def _strict_concept_rule_from_payload(
+    record: dict[str, Any],
+    parsed: dict[str, Any],
+) -> tuple[StructuredRule | None, str | None]:
+    """Build a rule only from a deterministically compiled evidence ledger.
+
+    The generator is allowed to select or reject precomputed concepts, but it
+    cannot invent a feature, citation, frequency, or query-side trigger.  This
+    separates verbatim provenance from deterministic semantic normalization.
+    """
+
+    from .concepts import (
+        CONCEPT_MATCHER_ALGORITHM_REVISION,
+        CONCEPT_MATCHER_SHA256,
+        CONCEPT_PROTOCOL,
+        build_concept_ledger,
+        concept_family,
+    )
+
+    expected_fields = {
+        "schema_version",
+        "matching_protocol",
+        "concept_ledger_sha256",
+        "publishable",
+        "disease_a",
+        "disease_b",
+        "feature_ids_a",
+        "feature_ids_b",
+        "nondiscriminative_concept_ids",
+        "required_context",
+        "limitations",
+        "abstention_codes",
+        "source_case_ids_a",
+        "source_case_ids_b",
+    }
+    if set(parsed) != expected_fields:
+        return None, "invalid_concept_response_schema"
+    if parsed.get("schema_version") != "v1.1":
+        return None, "schema_version_mismatch"
+    if parsed.get("matching_protocol") != CONCEPT_PROTOCOL:
+        return None, "matching_protocol_mismatch"
+    if not isinstance(parsed.get("publishable"), bool):
+        return None, "invalid_publishable_flag"
+
+    def string_list(key: str, minimum: int, maximum: int) -> tuple[str, ...] | None:
+        value = parsed.get(key)
+        if not isinstance(value, list) or any(not isinstance(item, str) for item in value):
+            return None
+        cleaned = tuple(dict.fromkeys(item.strip() for item in value if item.strip()))
+        if len(cleaned) < minimum or len(cleaned) > maximum:
+            return None
+        return cleaned
+
+    allowed_a = tuple(str(value) for value in record.get("source_case_ids_a", []))
+    allowed_b = tuple(str(value) for value in record.get("source_case_ids_b", []))
+    ids_a = string_list("source_case_ids_a", len(allowed_a), len(allowed_a))
+    ids_b = string_list("source_case_ids_b", len(allowed_b), len(allowed_b))
+    if ids_a is None or ids_b is None or set(ids_a) != set(allowed_a) or set(ids_b) != set(allowed_b):
+        return None, "incomplete_source_coverage"
+
+    selections_a = {
+        str(item.get("case_id", "")): str(item.get("selection_role", ""))
+        for item in record.get("source_selection_a", [])
+    }
+    selections_b = {
+        str(item.get("case_id", "")): str(item.get("selection_role", ""))
+        for item in record.get("source_selection_b", [])
+    }
+
+    def prompt_cases(key: str, roles: dict[str, str]) -> list[dict[str, str]]:
+        result = []
+        for item in record.get(key, []):
+            case_id = str(item.get("case_id", ""))
+            findings = str(item.get("findings_excerpt") or item.get("findings") or "")
+            result.append(
+                {
+                    "case_id": case_id,
+                    "selection_role": roles.get(case_id, ""),
+                    "findings": findings,
+                }
+            )
+        return result
+
+    cases_a = prompt_cases("source_cases_a", selections_a)
+    cases_b = prompt_cases("source_cases_b", selections_b)
+    stored_ledger = record.get("concept_ledger")
+    if not isinstance(stored_ledger, dict):
+        return None, "missing_concept_ledger"
+    recomputed_ledger = build_concept_ledger(
+        cases_a,
+        cases_b,
+        minimum_support=int(record.get("minimum_feature_support", 3)),
+    )
+    if stored_ledger != recomputed_ledger:
+        return None, "concept_ledger_recompute_mismatch"
+    ledger_sha256 = str(stored_ledger.get("content_sha256", ""))
+    if not ledger_sha256 or record.get("concept_ledger_sha256") != ledger_sha256:
+        return None, "concept_ledger_hash_mismatch"
+    if parsed.get("concept_ledger_sha256") != ledger_sha256:
+        return None, "response_ledger_hash_mismatch"
+    if record.get("matcher_sha256") != CONCEPT_MATCHER_SHA256:
+        return None, "matcher_hash_mismatch"
+    if record.get("matcher_algorithm_revision") != CONCEPT_MATCHER_ALGORITHM_REVISION:
+        return None, "matcher_algorithm_revision_mismatch"
+
+    if parsed["publishable"] is False:
+        codes = string_list("abstention_codes", 1, 4)
+        if codes is None or any(code not in CANONICAL_ABSTENTION_CODES for code in codes):
+            return None, "invalid_abstention_codes"
+        empty_fields = (
+            "feature_ids_a",
+            "feature_ids_b",
+            "nondiscriminative_concept_ids",
+            "required_context",
+            "limitations",
+        )
+        if any(parsed.get(key) != [] for key in empty_fields):
+            return None, "invalid_abstention_fields"
+        return None, "evidence_abstained"
+
+    if parsed.get("abstention_codes") != []:
+        return None, "invalid_abstention_codes"
+    feature_ids_a = string_list("feature_ids_a", 2, 4)
+    feature_ids_b = string_list("feature_ids_b", 2, 4)
+    shared_ids = string_list("nondiscriminative_concept_ids", 0, 6)
+    # v1.1-canonical is intentionally executable from frozen visual findings
+    # alone. Free-text clinical requirements cannot be checked by the fixed
+    # concept matcher, so accepting them here would silently ignore a safety
+    # condition proposed by the generator.
+    required_context = string_list("required_context", 0, 0)
+    limitations = string_list("limitations", 1, 4)
+    if None in (feature_ids_a, feature_ids_b, shared_ids, required_context, limitations):
+        return None, "invalid_concept_rule_fields"
+
+    candidates_a = {
+        str(item.get("concept_id", "")): item
+        for item in stored_ledger.get("candidate_a", [])
+        if isinstance(item, dict)
+    }
+    candidates_b = {
+        str(item.get("concept_id", "")): item
+        for item in stored_ledger.get("candidate_b", [])
+        if isinstance(item, dict)
+    }
+    nondiscriminative = {
+        str(item.get("concept_id", "")): item
+        for item in stored_ledger.get("nondiscriminative", [])
+        if isinstance(item, dict)
+    }
+    if any(value not in candidates_a for value in feature_ids_a or ()):
+        return None, "unknown_concept_id_a"
+    if any(value not in candidates_b for value in feature_ids_b or ()):
+        return None, "unknown_concept_id_b"
+    if any(value not in nondiscriminative for value in shared_ids or ()):
+        return None, "unknown_nondiscriminative_concept_id"
+    selected_sets = (set(feature_ids_a or ()), set(feature_ids_b or ()), set(shared_ids or ()))
+    if any(selected_sets[left] & selected_sets[right] for left in range(3) for right in range(left + 1, 3)):
+        return None, "overlapping_concept_ids"
+    selected_families = tuple(
+        {concept_family(identifier) for identifier in identifiers}
+        for identifiers in selected_sets
+    )
+    if any(len(families) != len(identifiers) for families, identifiers in zip(selected_families, selected_sets)):
+        return None, "redundant_concept_family"
+    if any(
+        selected_families[left] & selected_families[right]
+        for left in range(3)
+        for right in range(left + 1, 3)
+    ):
+        return None, "overlapping_concept_families"
+
+    supports_a = tuple(str(candidates_a[value]["display"]) for value in feature_ids_a or ())
+    supports_b = tuple(str(candidates_b[value]["display"]) for value in feature_ids_b or ())
+    shared = tuple(str(nondiscriminative[value]["display"]) for value in shared_ids or ())
+
+    def compiled_evidence(
+        identifiers: tuple[str, ...],
+        candidates: dict[str, dict[str, Any]],
+    ) -> tuple[dict[str, Any], ...]:
+        return tuple(
+            {
+                "concept_id": identifier,
+                "feature": str(candidates[identifier]["display"]),
+                "cases": [dict(item) for item in candidates[identifier]["evidence"]],
+            }
+            for identifier in identifiers
+        )
+
+    return (
+        StructuredRule(
+            rule_id=str(record["rule_id"]),
+            dataset=str(record["dataset"]),
+            disease_a=str(record["disease_a"]),
+            disease_b=str(record["disease_b"]),
+            supports_a=supports_a,
+            supports_b=supports_b,
+            nondiscriminative=shared,
+            required_context=required_context or (),
+            limitations=limitations or (),
+            source_case_ids_a=ids_a,
+            source_case_ids_b=ids_b,
+            source_case_count=len(set(ids_a + ids_b)),
+            trigger_terms_a=supports_a,
+            trigger_terms_b=supports_b,
+            trigger_concepts_a=feature_ids_a or (),
+            trigger_concepts_b=feature_ids_b or (),
+            evidence_a=compiled_evidence(feature_ids_a or (), candidates_a),
+            evidence_b=compiled_evidence(feature_ids_b or (), candidates_b),
+            source_selection_a=tuple(record.get("source_selection_a", [])),
+            source_selection_b=tuple(record.get("source_selection_b", [])),
+            matching_protocol=CONCEPT_PROTOCOL,
+            matcher_algorithm_revision=CONCEPT_MATCHER_ALGORITHM_REVISION,
+            matcher_sha256=CONCEPT_MATCHER_SHA256,
+            concept_ledger_sha256=ledger_sha256,
+            schema_version=str(record.get("schema_version", "v1.1")),
+        ),
+        None,
+    )
+
+
 def strict_rule_from_response(record: dict[str, Any], response: str) -> tuple[StructuredRule | None, str | None]:
     try:
         parsed = json.loads(str(response or "").strip())
@@ -335,14 +607,16 @@ def strict_rule_from_response(record: dict[str, Any], response: str) -> tuple[St
         parsed = None
     if not isinstance(parsed, dict):
         return None, "invalid_json"
-    if record.get("schema_version") == "v1.1" and parsed.get("publishable") is False:
-        return None, "evidence_abstained"
     expected_a = str(record["disease_a"])
     expected_b = str(record["disease_b"])
     if label_key(parsed.get("disease_a", "")) != label_key(expected_a):
         return None, "disease_a_mismatch"
     if label_key(parsed.get("disease_b", "")) != label_key(expected_b):
         return None, "disease_b_mismatch"
+    if record.get("matching_protocol") == "canonical_observable_concepts_v1":
+        return _strict_concept_rule_from_payload(record, parsed)
+    if record.get("schema_version") == "v1.1" and parsed.get("publishable") is False:
+        return None, "evidence_abstained"
 
     def strings(key: str, minimum: int = 1, maximum: int = 8) -> tuple[str, ...] | None:
         value = parsed.get(key)

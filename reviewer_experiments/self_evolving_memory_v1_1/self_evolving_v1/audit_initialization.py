@@ -14,8 +14,21 @@ from typing import Any
 
 import numpy as np
 
+from .concepts import (
+    CONCEPT_LEXICON_SHA256,
+    CONCEPT_MATCHER_ALGORITHM_REVISION,
+    CONCEPT_MATCHER_SHA256,
+    CONCEPT_PROTOCOL,
+    build_concept_ledger,
+)
 from .core import canonical_hash, probabilities_from_prompt, rule_key, split_role, write_json
-from .pipeline import DATASETS, q100_controls, rule_prompt, sentence_aware_excerpt
+from .pipeline import (
+    DATASETS,
+    prompt_source_cases,
+    q100_controls,
+    rule_prompt,
+    sentence_aware_excerpt,
+)
 
 
 def file_sha256(path: Path) -> str:
@@ -73,6 +86,14 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
     initialization = json.loads(audit_path.read_text(encoding="utf-8"))
     if initialization.get("content_sha256") != hash_without_content_sha256(initialization):
         add_issue(issues, "initialization_audit_hash_mismatch")
+    if initialization.get("matching_protocol") != CONCEPT_PROTOCOL:
+        add_issue(issues, "initialization_matching_protocol_mismatch")
+    if initialization.get("concept_lexicon_sha256") != CONCEPT_LEXICON_SHA256:
+        add_issue(issues, "initialization_concept_lexicon_hash_mismatch")
+    if initialization.get("matcher_algorithm_revision") != CONCEPT_MATCHER_ALGORITHM_REVISION:
+        add_issue(issues, "initialization_matcher_algorithm_revision_mismatch")
+    if initialization.get("matcher_sha256") != CONCEPT_MATCHER_SHA256:
+        add_issue(issues, "initialization_matcher_hash_mismatch")
 
     streams: dict[str, dict[str, Any]] = {}
     case_lookups: dict[str, dict[tuple[str, str], dict[str, Any]]] = {}
@@ -149,6 +170,7 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
     seen_rule_keys: set[str] = set()
     source_roles: Counter[str] = Counter()
     exact_prompt_recomputations = 0
+    exact_concept_ledger_recomputations = 0
     embedding_recomputations = 0
     fully_preserved_source_findings = 0
     source_findings = 0
@@ -205,6 +227,7 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
                 case_id = str(case.get("case_id", ""))
                 selection = selections[case_id]
                 finding = str(case.get("findings", ""))
+                finding_excerpt = sentence_aware_excerpt(finding)
                 original = case_lookups.get(dataset, {}).get((disease, case_id))
                 if original is None:
                     add_issue(issues, "source_case_not_in_frozen_stream", global_index=index, side=side, case_id=case_id)
@@ -219,6 +242,12 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
                     add_issue(issues, "source_finding_hash_mismatch", global_index=index, side=side, case_id=case_id)
                 if canonical_hash(original.get("image_path", "")) != selection.get("image_path_sha256"):
                     add_issue(issues, "source_path_hash_mismatch", global_index=index, side=side, case_id=case_id)
+                if case.get("findings_excerpt") != finding_excerpt:
+                    add_issue(issues, "source_excerpt_recompute_mismatch", global_index=index, side=side, case_id=case_id)
+                if case.get("full_findings_sha256") != canonical_hash(finding):
+                    add_issue(issues, "source_full_finding_hash_mismatch", global_index=index, side=side, case_id=case_id)
+                if case.get("excerpt_sha256") != canonical_hash(finding_excerpt):
+                    add_issue(issues, "source_excerpt_hash_mismatch", global_index=index, side=side, case_id=case_id)
                 role = str(selection.get("selection_role", ""))
                 source_roles[f"{dataset}::{side}::{role}"] += 1
                 rebuilt.append({"case_id": case_id, "findings": finding, "selection_role": role})
@@ -236,7 +265,25 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
                 else:
                     vectors.append(matrix[feature_index])
         if len(cases_a) == len(source_cases_a) and len(cases_b) == len(source_cases_b):
-            expected_prompt = rule_prompt(dataset, disease_a, disease_b, cases_a, cases_b)
+            expected_ledger = build_concept_ledger(
+                prompt_source_cases(cases_a),
+                prompt_source_cases(cases_b),
+                minimum_support=int(row.get("minimum_feature_support", 3)),
+            )
+            exact_concept_ledger_recomputations += 1
+            if row.get("concept_ledger") != expected_ledger:
+                add_issue(issues, "concept_ledger_recompute_mismatch", global_index=index)
+            if row.get("concept_ledger_sha256") != expected_ledger.get("content_sha256"):
+                add_issue(issues, "concept_ledger_hash_mismatch", global_index=index)
+            expected_prompt = rule_prompt(
+                dataset,
+                disease_a,
+                disease_b,
+                cases_a,
+                cases_b,
+                concept_ledger=expected_ledger,
+                minimum_feature_support=int(row.get("minimum_feature_support", 3)),
+            )
             exact_prompt_recomputations += 1
             if row.get("prompt") != expected_prompt:
                 add_issue(issues, "rule_prompt_recompute_mismatch", global_index=index)
@@ -245,14 +292,26 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
             "schema_version": "v1.1",
             "key": key,
             "selection_protocol": "representative_cluster_medoids+diverse_mmr+quality_screened_positive_margin_embedding_hard",
+            "matching_protocol": CONCEPT_PROTOCOL,
+            "concept_lexicon_sha256": CONCEPT_LEXICON_SHA256,
+            "matcher_algorithm_revision": CONCEPT_MATCHER_ALGORITHM_REVISION,
+            "matcher_sha256": CONCEPT_MATCHER_SHA256,
             "a": [{"case_id": case_id, "role": selection_by_id_a[case_id].get("selection_role")} for case_id in ids_a],
             "b": [{"case_id": case_id, "role": selection_by_id_b[case_id].get("selection_role")} for case_id in ids_b],
         }
         expected_pool_hash = canonical_hash(selection_payload)
         if row.get("source_pool_sha256") != expected_pool_hash:
             add_issue(issues, "source_pool_hash_mismatch", global_index=index)
-        if rule_id != "cr11_" + expected_pool_hash[:16]:
+        if rule_id != "cr11c_" + expected_pool_hash[:16]:
             add_issue(issues, "rule_id_recompute_mismatch", global_index=index)
+        if row.get("matching_protocol") != CONCEPT_PROTOCOL:
+            add_issue(issues, "matching_protocol_mismatch", global_index=index)
+        if row.get("concept_lexicon_sha256") != CONCEPT_LEXICON_SHA256:
+            add_issue(issues, "concept_lexicon_hash_mismatch", global_index=index)
+        if row.get("matcher_algorithm_revision") != CONCEPT_MATCHER_ALGORITHM_REVISION:
+            add_issue(issues, "matcher_algorithm_revision_mismatch", global_index=index)
+        if row.get("matcher_sha256") != CONCEPT_MATCHER_SHA256:
+            add_issue(issues, "matcher_hash_mismatch", global_index=index)
         if vectors_a and vectors_b:
             # Take the maximum over the complete A-by-B matrix.
             recomputed_similarity = float((np.asarray(vectors_a) @ np.asarray(vectors_b).T).max())
@@ -292,13 +351,14 @@ def audit(args: argparse.Namespace) -> dict[str, Any]:
         add_issue(issues, "active_release_pointer_mismatch")
 
     output = {
-        "schema_version": "v1.1-initialization-full-audit-v1",
+        "schema_version": "v1.1-initialization-full-audit-v2",
         "status": "PASS" if not issues else "FAIL",
         "root": str(root),
         "base_records": len(base_rows),
         "rule_proposals": len(proposals),
         "manifest_files": len(manifest_paths),
         "exact_prompt_recomputations": exact_prompt_recomputations,
+        "exact_concept_ledger_recomputations": exact_concept_ledger_recomputations,
         "embedding_similarity_recomputations": embedding_recomputations,
         "source_findings": source_findings,
         "fully_preserved_source_findings": fully_preserved_source_findings,
