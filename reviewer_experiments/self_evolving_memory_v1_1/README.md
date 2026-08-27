@@ -95,3 +95,30 @@ existing result.
 
 `RESULTS_20260825.md` records the historical v1 result and must not be presented
 as a v1.1 result.
+
+## Utility-aware v2 experiment
+
+`self_evolving_v1.v2` is an additive experiment over the immutable V1.1 rule
+snapshot.  It does not overwrite V1/V1.1 releases.  V2 adds item-level beta
+utility, staging/active/quarantine lifecycle states, top-k rule retrieval,
+conflict abstention, and a pre-registered controller selected on the disjoint
+`gate_development` split.  The controller supports direct structured-memory
+recommendations and conservative Final-Reviewer consensus.  Held-out labels
+are read only by `finalize-evaluation`.
+
+```bash
+PYTHONPATH=. python -m self_evolving_v1.v2 close-invalid-results --help
+PYTHONPATH=. python -m self_evolving_v1.v2 compile-ledger-release --help
+PYTHONPATH=. python -m self_evolving_v1.v2 compile-failure-memory --help
+PYTHONPATH=. python -m self_evolving_v1.v2 build-cohort --help
+PYTHONPATH=. python -m self_evolving_v1.v2 govern --help
+PYTHONPATH=. python -m self_evolving_v1.v2 tune-controller --help
+PYTHONPATH=. python -m self_evolving_v1.v2 finalize-evaluation --help
+PYTHONPATH=. python -m self_evolving_v1.case_depth --help
+```
+
+`close-invalid-results` is fail-closed: it converts only residual malformed
+generator outputs to schema-valid abstentions and never invents or repairs a
+clinical rule. `case_depth` learns whether C0/C25/C50/C75/C100 is safer for a
+dataset/predicted-class group on rule acceptance, governs that choice on the
+development gate, and applies only active choices during evaluation.
