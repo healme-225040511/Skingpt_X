@@ -122,3 +122,19 @@ generator outputs to schema-valid abstentions and never invents or repairs a
 clinical rule. `case_depth` learns whether C0/C25/C50/C75/C100 is safer for a
 dataset/predicted-class group on rule acceptance, governs that choice on the
 development gate, and applies only active choices during evaluation.
+
+## Clinical memory router v3 pilot
+
+`self_evolving_v1.clinical_router` tests an additive two-dataset pilot without
+SkinHandbook. It learns item utility and query routing on `rule_acceptance`,
+compares relevance-only, utility-reranked, and contrastive label-balanced case
+memory on `gate_development`, and permits only a gate-selected arm to proceed
+to `heldout_evaluation`. It never treats similarity or memory popularity as
+diagnostic proof and automatically falls back to the frozen S0 result when no
+arm has positive pooled net benefit with nonnegative benefit in each dataset.
+
+```bash
+PYTHONPATH=. python -m self_evolving_v1.clinical_router fit --help
+PYTHONPATH=. python -m self_evolving_v1.clinical_router build-manifest --help
+PYTHONPATH=. python -m self_evolving_v1.clinical_router evaluate --help
+```
