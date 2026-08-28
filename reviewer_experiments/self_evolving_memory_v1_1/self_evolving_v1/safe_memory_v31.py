@@ -593,7 +593,17 @@ def evaluate(args: argparse.Namespace) -> None:
         stats = rule_stats[str(rule["rule_id"])]
         status = str(rule["status"])
         if args.role == "v31_gate":
-            status = "active" if stats["gains"] > 0 and stats["regressions"] == 0 else "quarantine" if stats["regressions"] else "staging"
+            enough_evidence = (
+                stats["exposures"] >= args.minimum_rule_exposures
+                and stats["changes"] >= args.minimum_rule_changes
+            )
+            status = (
+                "active"
+                if enough_evidence and stats["gains"] > stats["regressions"] and stats["regressions"] == 0
+                else "quarantine"
+                if stats["regressions"]
+                else "staging"
+            )
         governed_rules.append({**rule, "status": status, "gate": {key: int(value) for key, value in stats.items()}})
     pass_gate = (
         args.role != "v31_gate"
@@ -603,18 +613,35 @@ def evaluate(args: argparse.Namespace) -> None:
             and any(rule["status"] == "active" for rule in governed_rules)
         )
     )
+    if args.role == "v31_gate":
+        evaluation_status = "GATE_PASS" if pass_gate else "GATE_ROLLBACK"
+        governed_status = "active" if pass_gate else "rolled_back"
+    elif not results:
+        evaluation_status = "NO_ELIGIBLE_CASES"
+        governed_status = str(release.get("status", "staging"))
+    elif gains > regressions and all(value >= 0 for value in dataset_net.values()):
+        evaluation_status = "EVALUATION_POSITIVE"
+        governed_status = str(release.get("status", "staging"))
+    else:
+        evaluation_status = "EVALUATION_NON_POSITIVE"
+        governed_status = str(release.get("status", "staging"))
     governed = {
         **{key: value for key, value in release.items() if key not in {"rules", "content_sha256"}},
         "release_id": "safe_memory_v31_governed" if args.role == "v31_gate" else release["release_id"],
         "parent_release_id": release["release_id"],
         "rules": governed_rules,
-        "status": "active" if pass_gate else "rolled_back",
+        "status": governed_status,
         "selection_split": args.role,
-        "selection_policy": "positive pooled net; nonnegative per dataset; zero high-confidence regressions; at least one positive zero-regression rule",
+        "selection_policy": (
+            "positive pooled net; nonnegative per dataset; zero high-confidence regressions; "
+            f"per-rule exposures>={args.minimum_rule_exposures}; per-rule accepted changes>={args.minimum_rule_changes}; "
+            "at least one positive zero-regression rule"
+        ),
+        "evaluation_status": evaluation_status,
     }
     governed["content_sha256"] = canonical_hash(governed)
     write_json(args.output / "governed_release.json", governed)
-    audit = {"schema_version": SCHEMA_VERSION, "status": "PASS", "role": args.role, "confirmatory": False, "scope": "exploratory_nested_split_of_previously_inspected_cohort", "paired": paired, "release_status": governed["status"]}
+    audit = {"schema_version": SCHEMA_VERSION, "status": "PASS", "role": args.role, "confirmatory": False, "scope": "exploratory_nested_split_of_previously_inspected_cohort", "paired": paired, "release_status": governed["status"], "evaluation_status": evaluation_status}
     write_json(args.output / "audit.json", audit)
     print(json.dumps(audit, ensure_ascii=False, indent=2))
 
@@ -657,6 +684,8 @@ def parser() -> argparse.ArgumentParser:
     evaluate_parser.add_argument("--datasets", nargs="+", default=list(DATASETS))
     evaluate_parser.add_argument("--bootstraps", type=int, default=10000)
     evaluate_parser.add_argument("--seed", type=int, default=20260828)
+    evaluate_parser.add_argument("--minimum-rule-exposures", type=int, default=3)
+    evaluate_parser.add_argument("--minimum-rule-changes", type=int, default=2)
     evaluate_parser.set_defaults(function=evaluate)
     return result
 
