@@ -1,0 +1,49 @@
+{
+  "hf_dataset_repo": "czty/SkinGPTX-Images",
+  "hf_dataset_revision": "0590d59f07a94009f318fbdf51a86ad00110e176",
+  "scope": "fixed-evidence CaseReview only",
+  "datasets": {
+    "DermNet-Curated-A": {
+      "status": "PASS",
+      "name": "DermNet-Curated-A",
+      "legacy_name": "DermNet225_OntologyV1",
+      "num_classes": 197,
+      "train_images": 8512,
+      "test_images": 2343,
+      "jobs": 2343,
+      "exact_train_test_overlap": 0,
+      "source_manifest_sha256": "fbead1e2f63e9f772bae74f17f82314c7defad07413890a3611929efb8b27f5b",
+      "prompt_policy": "byte-identical historical 8B case_jobs prompts",
+      "scope": "fixed evidence CaseReview only",
+      "dermatologist_review": "pending"
+    },
+    "DermNet-Curated-B": {
+      "status": "PASS",
+      "name": "DermNet-Curated-B",
+      "legacy_name": "DermNet353_OntologyV1",
+      "num_classes": 333,
+      "train_images": 13438,
+      "test_images": 3812,
+      "jobs": 3812,
+      "exact_train_test_overlap": 0,
+      "source_manifest_sha256": "67478d1ed4065e1a728cfe4d3e363febb04a2e6f758391ec3f6662643fedbbe3",
+      "prompt_policy": "byte-identical historical 8B case_jobs prompts",
+      "scope": "fixed evidence CaseReview only",
+      "dermatologist_review": "pending"
+    },
+    "DermNet-Curated-C": {
+      "status": "PASS",
+      "name": "DermNet-Curated-C",
+      "legacy_name": "DermNet498_OntologyV1",
+      "num_classes": 385,
+      "train_images": 13089,
+      "test_images": 3718,
+      "jobs": 3718,
+      "exact_train_test_overlap": 0,
+      "source_manifest_sha256": "b9777c43fb510ec9eaa1e1d3a6e4cdf5e17b54bad9c1ad109356291d7f6c53ea",
+      "prompt_policy": "byte-identical historical 8B case_jobs prompts",
+      "scope": "fixed evidence CaseReview only",
+      "dermatologist_review": "pending"
+    }
+  }
+}

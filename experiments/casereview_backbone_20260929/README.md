@@ -90,6 +90,8 @@ python prepare_data.py --data-root ./data --revision "$DATA_REVISION"
 
 只下载本实验三个目录，不下载仓库其他历史数据。归档解包时拒绝目录穿越与链接项。
 已经有完整本地包可用 `--local-only` 代替下载。
+如目标网络上的Xet传输反复超时，可在下载命令前加 `HF_HUB_DISABLE_XET=1` 使用常规传输；
+数据revision和SHA-256校验不变。不要通过跳过校验来处理下载错误。
 
 ```bash
 python run.py --data-root ./data --dataset DermNet-Curated-A \

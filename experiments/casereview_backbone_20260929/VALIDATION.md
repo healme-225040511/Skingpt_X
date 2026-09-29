@@ -8,6 +8,7 @@
 - Independent archive scan passed for all **44,912 image entries**: Curated-A 10,855; Curated-B 17,250; Curated-C 16,807. Each entry is a regular file whose SHA-256 equals its manifest record. These are per-cohort entries, not unique images across the three cohorts.
 - Export asserts exact refined class and split counts, matches every job to its original manifest and historical candidates, preserves prompt bytes, and checks image SHA-256 identity. It rejects byte-identical train/test overlap within each cohort.
 - Only the dedicated experiment folder is added to the Git repository. No credentials, model weights or image archives are committed to Git.
+- All three Hugging Face folders were published and independently checked against local files: exact file sets, sizes, LFS SHA-256 values and Git blob hashes for non-LFS files all matched. Pinned dataset commit: `0590d59f07a94009f318fbdf51a86ad00110e176`.
 
 ## Not validated / not claimed
 
